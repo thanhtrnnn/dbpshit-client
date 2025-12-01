@@ -21,7 +21,6 @@ class PTITSolver:
         self.password = os.getenv('QLDT_PASSWORD')
         self.login_url = os.getenv('LOGIN_URL')
         self.base_api_url = os.getenv('BASE_API_URL')
-        self.default_db_type = os.getenv('DEFAULT_DB_TYPE')
         self.user_id = None
         
         if not all([self.username, self.password, self.login_url]):
