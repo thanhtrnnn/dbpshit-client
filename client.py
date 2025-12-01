@@ -21,7 +21,6 @@ class PTITSolver:
         self.password = os.getenv('QLDT_PASSWORD')
         self.login_url = os.getenv('LOGIN_URL')
         self.base_api_url = os.getenv('BASE_API_URL')
-        self.default_db_type = os.getenv('DEFAULT_DB_TYPE')
         self.user_id = None
         
         if not all([self.username, self.password, self.login_url]):
@@ -500,9 +499,6 @@ class PTITSolver:
         
         # In bảng
         print(header_fmt.format(*headers))
-            "page": 0, "size": 1, "questionId": question_id, "sort": "created_at,desc"
-        }
-        
         print("[*] Đang kiểm tra kết quả...")
         for i in range(15): # Thử 15 lần
             time.sleep(2)
