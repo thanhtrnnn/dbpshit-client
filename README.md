@@ -24,8 +24,20 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
 
 1.  **Clone repository** (nếu có) hoặc tải mã nguồn.
 
-2.  **Cài đặt các thư viện phụ thuộc**:
+2.  **Thiết lập môi trường ảo và cài đặt thư viện**:
+    Khuyến nghị sử dụng môi trường ảo để tránh xung đột thư viện.
+
     ```bash
+    # Tạo môi trường ảo
+    python -m venv .venv
+
+    # Kích hoạt môi trường ảo
+    # Trên Windows:
+    .venv\Scripts\activate
+    # Trên macOS/Linux:
+    # source .venv/bin/activate
+
+    # Cài đặt các thư viện phụ thuộc
     pip install -r requirements.txt
     ```
     *Các thư viện bao gồm: `requests`, `beautifulsoup4`, `selenium`, `python-dotenv`.*
