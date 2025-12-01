@@ -1,0 +1,8 @@
+ID: SQL2273
+Tiêu đề: Thời gian phản hồi trung bình cho các cuộc gọi khẩn cấp và sự cố hỏa hoạn ở mỗi quận là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/98d4c8ed-7026-4f57-8495-fba26faad57b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/98d4c8ed-7026-4f57-8495-fba26faad57b
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng:</strong> emergency_calls – Thông tin về các cuộc gọi khẩn cấp</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi cuộc gọi khẩn cấp</li><li>district (VARCHAR(20)): Khu vực (quận/huyện) xảy ra cuộc gọi</li><li>response_time (INT): Thời gian phản ứng đối với cuộc gọi (tính theo phút)</li></ul><p><strong>Bảng:</strong> fire_incidents – Thông tin về các sự cố cháy</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi sự cố cháy</li><li>district (VARCHAR(20)): Khu vực (quận/huyện) xảy ra sự cố</li><li>response_time (INT): Thời gian phản ứng đối với sự cố cháy (tính theo phút)</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong> Tính thời gian phản hồi trung bình cho các cuộc gọi khẩn cấp và các sự cố cháy ở mỗi quận. Phân loại kết quả theo loại (</strong>emergency calls hoặc fire incidents).</p><p><strong>Output:</strong></p><ul><li>district: Tên quận/huyện</li><li>type: Loại dữ liệu (emergency calls hoặc fire incidents)</li><li>avg: Thời gian phản hồi trung bình (theo phút)</li></ul><p><br></p>

@@ -1,0 +1,13 @@
+ID: SQL2193
+Tiêu đề: Những quốc gia nào đã phóng hơn 5 vệ tinh trong một năm?
+URL WEB: https://db.ptit.edu.vn/question-detail/c7d25dac-7266-4715-9f4e-acf3f9e2fef3
+URL API: https://dbapi.ptit.edu.vn/api/app/question/c7d25dac-7266-4715-9f4e-acf3f9e2fef3
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có một bảng dữ liệu như sau:</strong></p><h4><strong>Bảng international_satellite_launches</strong> – Ghi nhận các lần phóng vệ tinh quốc tế:</h4><ul><li>id (INT): Mã định danh duy nhất cho mỗi lần ghi nhận</li><li>launch_year (INT): Năm diễn ra lần phóng</li><li>country (VARCHAR(50)): Quốc gia thực hiện lần phóng</li><li>satellites (INT): Số lượng vệ tinh được phóng trong lần đó</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Những quốc gia nào đã phóng hơn 5 vệ tinh trong một năm?</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+---------+------------------+
+| country | total_satellites |
++---------+------------------+
+| USA     | 8                |
++---------+------------------+
+</pre>

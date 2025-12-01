@@ -1,0 +1,8 @@
+ID: SQL2438
+Tiêu đề: Tổng số nhân viên trong 'mining_company' và 'drilling_company' là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/a062ad5c-f8f7-44d8-b0d3-4cef2f3b9203
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a062ad5c-f8f7-44d8-b0d3-4cef2f3b9203
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng mining_company</strong></h3><p>Chứa thông tin về nhân viên trong <strong>công ty khai thác mỏ</strong>.</p><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi nhân viên (khóa chính của bảng).</li><li>name (VARCHAR): Tên của nhân viên.</li><li>position (VARCHAR): Chức vụ của nhân viên trong công ty (ví dụ: "Engineer", "Technician").</li><li>department (VARCHAR): Phòng ban của nhân viên (ví dụ: "Mining").</li><li>salary (DECIMAL): Mức lương của nhân viên.</li></ul><h3><strong>Bảng drilling_company</strong></h3><p>Chứa thông tin về nhân viên trong <strong>công ty khoan</strong>.</p><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi nhân viên (khóa chính của bảng).</li><li>name (VARCHAR): Tên của nhân viên.</li><li>position (VARCHAR): Chức vụ của nhân viên trong công ty (ví dụ: "Supervisor", "Operator").</li><li>department (VARCHAR): Phòng ban của nhân viên (ví dụ: "Drilling").</li><li>salary (DECIMAL): Mức lương của nhân viên.</li></ul><p><strong>Yêu cầu:</strong></p><p> Tính <strong>tổng số nhân viên</strong> trong cả hai bảng mining_company và drilling_company.</p><p><br></p><p>Output: <span style="font-size: 14px;">COUNT(*)</span></p>

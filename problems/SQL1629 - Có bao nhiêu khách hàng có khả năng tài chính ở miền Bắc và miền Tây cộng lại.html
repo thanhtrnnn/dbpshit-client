@@ -1,0 +1,29 @@
+ID: SQL1629
+Tiêu đề: Có bao nhiêu khách hàng có khả năng tài chính ở miền Bắc và miền Tây cộng lại?
+URL WEB: https://db.ptit.edu.vn/question-detail/a917523c-be30-4ccf-866a-876aa419300f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a917523c-be30-4ccf-866a-876aa419300f
+Loại Database: Sql Server
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng financially_capable</strong></p><p><strong> Bảng này lưu trữ thông tin về khách hàng tài chính có khả năng</strong>, bao gồm <strong>ID khách hàng</strong> và <strong>khu vực</strong> của họ.</p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+---------------------------------------------+
+| Tên cột      | Kiểu dữ liệu | Mô tả                                       |
++--------------+--------------+---------------------------------------------+
+| customer_id  | INT          | Mã số duy nhất cho mỗi khách hàng           |
+| region       | VARCHAR(10)  | Khu vực của khách hàng (North, South, ...)  |
++--------------+--------------+---------------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Tính <strong>tổng số khách hàng có khả năng tài chính</strong> ở <strong>miền Bắc (North)</strong> và <strong>miền Tây (West)</strong> cộng lại.</p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">+-------------+--------+
+| customer_id | region |
++-------------+--------+
+| 1           | North  |
+| 2           | South  |
+| 3           | West   |
+| 4           | East   |
+| 5           | West   |
+| 6           | North  |
++-------------+--------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+-------+
+| count |
++-------+
+| 4     |
++-------+
+</pre><p><br></p>

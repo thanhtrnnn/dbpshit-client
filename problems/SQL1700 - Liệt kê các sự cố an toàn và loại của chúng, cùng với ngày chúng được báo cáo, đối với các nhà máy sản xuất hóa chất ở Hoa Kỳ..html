@@ -1,0 +1,26 @@
+ID: SQL1700
+Tiêu đề: Liệt kê các sự cố an toàn và loại của chúng, cùng với ngày chúng được báo cáo, đối với các nhà máy sản xuất hóa chất ở Hoa Kỳ.
+URL WEB: https://db.ptit.edu.vn/question-detail/0f493f83-ebc2-4ff7-8480-37a30845bc37
+URL API: https://dbapi.ptit.edu.vn/api/app/question/0f493f83-ebc2-4ff7-8480-37a30845bc37
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `Safety_Incidents`: Bảng này lưu trữ thông tin về các sự cố an toàn trong nhà máy, bao gồm tên nhà máy, loại sự cố và ngày báo cáo.</strong></p><ul><li>`Plant (VARCHAR(255))`: Tên nhà máy nơi xảy ra sự cố.</li><li>`Incident_Type (VARCHAR(255))`: Loại sự cố (Leak, Explosion, Fire, v.v.).</li><li>`Report_Date (DATE)`: Ngày báo cáo sự cố.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Liệt kê <strong>tên nhà máy</strong>, <strong>loại sự cố</strong>, và <strong>ngày báo cáo</strong></p><p>→ chỉ đối với <strong>các nhà máy hóa chất ở Hoa Kỳ</strong>, tức là những nhà máy có tên chứa 'US'.</p><p><br></p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">
++--------------------+----------------+-------------+
+| Plant              | Incident_Type  | Report_Date |
++--------------------+----------------+-------------+
+| ChemPlant_USA_01   | Leak           | 2024-06-01  |
+| ChemPlant_UK_02    | Fire           | 2024-06-03  |
+| RefinePlant_US_05  | Explosion      | 2024-06-10  |
+| BioLab_CA_01       | Leak           | 2024-06-11  |
+| OilPlant_US_WEST   | Fire           | 2024-06-12  |
++--------------------+----------------+-------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++--------------------+----------------+-------------+
+| Plant              | Incident_Type  | Report_Date |
++--------------------+----------------+-------------+
+| ChemPlant_USA_01   | Leak           | 2024-06-01  |
+| RefinePlant_US_05  | Explosion      | 2024-06-10  |
+| OilPlant_US_WEST   | Fire           | 2024-06-12  |
++--------------------+----------------+-------------+
+</pre><p><br></p>

@@ -1,0 +1,8 @@
+ID: SQL2449
+Tiêu đề: Xóa tất cả các nghệ sĩ không liên quan đến bất kỳ tác phẩm nghệ thuật nào.
+URL WEB: https://db.ptit.edu.vn/question-detail/c7e538e9-69d4-4f18-a5fe-93e9eb4f24ef
+URL API: https://dbapi.ptit.edu.vn/api/app/question/c7e538e9-69d4-4f18-a5fe-93e9eb4f24ef
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng Artists</strong></h3><p>Chứa thông tin về <strong>các nghệ sĩ</strong>.</p><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi nghệ sĩ (khóa chính của bảng).</li><li>name (VARCHAR(255)): Tên của nghệ sĩ.</li><li>gender (VARCHAR(255)): Giới tính của nghệ sĩ (ví dụ: 'Male', 'Female').</li><li>period (VARCHAR(255)): Thời kỳ nghệ thuật mà nghệ sĩ thuộc về (ví dụ: 'Expressionism').</li></ul><h3><strong>Bảng Artworks</strong></h3><p>Chứa thông tin về <strong>các tác phẩm nghệ thuật</strong>.</p><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi tác phẩm nghệ thuật (khóa chính của bảng).</li><li>title (VARCHAR(255)): Tên của tác phẩm nghệ thuật.</li><li>artist (INT): Mã định danh của nghệ sĩ sáng tác tác phẩm (liên kết với id trong bảng Artists).</li><li>period (VARCHAR(255)): Thời kỳ nghệ thuật của tác phẩm.</li><li>price (FLOAT): Giá trị của tác phẩm nghệ thuật.</li></ul><p><strong>Yêu cầu:</strong></p><p> Xóa <strong>tất cả các nghệ sĩ</strong> <strong>không có bất kỳ tác phẩm nghệ thuật nào</strong> trong bảng Artworks.</p>

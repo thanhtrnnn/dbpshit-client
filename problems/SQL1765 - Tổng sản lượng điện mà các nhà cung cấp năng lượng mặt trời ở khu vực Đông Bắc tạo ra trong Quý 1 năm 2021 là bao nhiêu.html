@@ -1,0 +1,8 @@
+ID: SQL1765
+Tiêu đề: Tổng sản lượng điện mà các nhà cung cấp năng lượng mặt trời ở khu vực Đông Bắc tạo ra trong Quý 1 năm 2021 là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/8408aa41-2fcb-437d-9ecc-87dc2ab75d02
+URL API: https://dbapi.ptit.edu.vn/api/app/question/8408aa41-2fcb-437d-9ecc-87dc2ab75d02
+Loại Database: Mysql
+------------------------------
+
+<h3>Cấu trúc bảng:</h3><h4><strong>Bảng region</strong></h4><ul><li>id (INT): Mã khu vực</li><li>name (VARCHAR(50)): Tên khu vực</li></ul><h4><strong>Bảng provider</strong></h4><ul><li>id (INT): Mã nhà cung cấp</li><li>name (VARCHAR(50)): Tên nhà cung cấp</li><li>region_id (INT): Mã khu vực nơi nhà cung cấp hoạt động</li></ul><h4><strong>Bảng renewable_source</strong></h4><ul><li>id (INT): Mã nguồn năng lượng tái tạo</li><li>name (VARCHAR(50)): Tên nguồn năng lượng tái tạo (ví dụ: 'Solar')</li><li>provider_id (INT): Mã nhà cung cấp năng lượng</li></ul><h4><strong>Bảng power_generation</strong></h4><ul><li>id (INT): Mã sản lượng điện</li><li>date (DATE): Ngày sản xuất điện</li><li>source_id (INT): Mã nguồn năng lượng tái tạo</li><li>power_generated (INT): Sản lượng điện được tạo ra </li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tổng sản lượng điện mà các nhà cung cấp năng lượng mặt trời ở khu vực Đông Bắc tạo ra trong Quý 1 năm 2021 là bao nhiêu?</p>

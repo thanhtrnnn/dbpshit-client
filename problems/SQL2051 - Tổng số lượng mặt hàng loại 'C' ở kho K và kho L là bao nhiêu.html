@@ -1,0 +1,8 @@
+ID: SQL2051
+Tiêu đề: Tổng số lượng mặt hàng loại 'C' ở kho K và kho L là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/db68aab2-d88d-4eae-be2f-e4bcd79b6232
+URL API: https://dbapi.ptit.edu.vn/api/app/question/db68aab2-d88d-4eae-be2f-e4bcd79b6232
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng warehouse_k</strong>: Lưu trữ thông tin về hàng hóa trong kho K.</p><ul><li>item_id (INT): Mã số hàng hóa.</li><li>item_type (VARCHAR(10)): Loại hàng hóa.</li><li>quantity (INT): Số lượng hàng hóa trong kho K.</li></ul><p><strong>Bảng warehouse_l</strong>: Lưu trữ thông tin về hàng hóa trong kho L.</p><ul><li>item_id (INT): Mã số hàng hóa.</li><li>item_type (VARCHAR(10)): Loại hàng hóa.</li><li>quantity (INT): Số lượng hàng hóa trong kho L.</li></ul><p><strong>Nhiệm vụ</strong></p><p>Liệt kê số lượng mặt hàng loại 'C' ở kho K và kho L là bao nhiêu?</p><p><strong>Output:</strong></p><p><strong>Một danh sách một cột</strong> chứa các giá trị số nguyên: <strong>Số lượng</strong> (quantity).</p><p>Danh sách này bao gồm <strong>tất cả</strong> các giá trị số lượng của các mặt hàng loại <strong>'C'</strong> được lấy từ cả hai bảng:</p><ol><li>Tất cả số lượng mặt hàng loại 'C' từ bảng <strong>warehouse_k</strong>.</li><li>Tất cả số lượng mặt hàng loại 'C' từ bảng <strong>warehouse_l</strong>.</li></ol><p>Mỗi số lượng nằm trên một hàng</p>

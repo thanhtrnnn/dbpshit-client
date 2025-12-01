@@ -1,0 +1,8 @@
+ID: SQL2366
+Tiêu đề: Tìm số lượng loài sinh vật biển ở mỗi đại dương và tổng số loài sinh vật biển trong bảng oceanography.
+URL WEB: https://db.ptit.edu.vn/question-detail/33f3bc78-7a20-4ae4-aab2-f27de694870f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/33f3bc78-7a20-4ae4-aab2-f27de694870f
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng marine_species_status</strong>: Chứa thông tin về tình trạng bảo tồn của các loài sinh vật biển.</h3><ul><li>id (INT): Mã định danh duy nhất cho mỗi bản ghi.</li><li>species_name (VARCHAR(255)): Tên loài biển.</li><li>conservation_status (VARCHAR(255)): Tình trạng bảo tồn (ví dụ: “Endangered”).</li><li>ocean (VARCHAR(255)): Tên đại dương nơi ghi nhận loài (ví dụ: “Atlantic Ocean”).</li></ul><h3><strong>Bảng oceanography</strong>: Chứa thông tin về vị trí phân bố các loài sinh vật biển.</h3><ul><li>id (INT): Mã định danh duy nhất cho mỗi bản ghi.</li><li>species_name (VARCHAR(255)): Tên loài biển.</li><li>location (VARCHAR(255)): Vị trí quan sát hoặc nghiên cứu loài (ví dụ: “Atlantic Ocean”).</li></ul><h3><strong>Nhiệm vụ</strong>:</h3><p>Tìm số lượng loài sinh vật biển ở mỗi đại dương và tổng số loài sinh vật biển trong bảng oceanography.</p>

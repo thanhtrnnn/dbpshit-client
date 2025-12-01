@@ -1,0 +1,8 @@
+ID: SQL2375
+Tiêu đề: Tổng số khách hàng đã đầu tư hoặc quyên góp ở Ai Cập là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/d5ed56a6-592f-43a9-8f39-e79c44523919
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d5ed56a6-592f-43a9-8f39-e79c44523919
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng investments</strong></h3><p>Chứa thông tin về các khoản đầu tư của khách hàng.</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi khoản đầu tư.</li><li>client_name (VARCHAR(50)): Tên khách hàng thực hiện đầu tư.</li><li>country (VARCHAR(50)): Quốc gia của khách hàng.</li><li>type (VARCHAR(50)): Loại đầu tư (stocks, bonds, real estate, …).</li><li>value (DECIMAL(10,2)): Giá trị đầu tư.</li><li>date (DATE): Ngày thực hiện đầu tư.</li></ul><h3><strong>Bảng donations</strong></h3><p>Chứa thông tin về các khoản quyên góp.</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi khoản quyên góp.</li><li>client_name (VARCHAR(50)): Tên khách hàng thực hiện quyên góp.</li><li>country (VARCHAR(50)): Quốc gia của khách hàng.</li><li>amount (DECIMAL(10,2)): Số tiền quyên góp.</li><li>date (DATE): Ngày thực hiện quyên góp.</li></ul><h3><strong>Nhiệm vụ</strong></h3><p>Tìm tổng số khách hàng duy nhất đã đầu tư hoặc quyên góp ở Ai Cập (Egypt).</p>

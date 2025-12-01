@@ -1,0 +1,26 @@
+ID: SQL1664
+Tiêu đề: Tổng doanh số bán hàng của từng danh mục là bao nhiêu, với một cột riêng cho doanh số bán hàng của từng mùa?
+URL WEB: https://db.ptit.edu.vn/question-detail/b2fdc4ef-7440-4096-8de3-897e04788054
+URL API: https://dbapi.ptit.edu.vn/api/app/question/b2fdc4ef-7440-4096-8de3-897e04788054
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng `Trends`: Bảng này lưu trữ thông tin về các xu hướng bán hàng theo từng mùa, bao gồm ID, danh mục, mùa và doanh thu. </strong></p><ul><li>`id (INT)`: Mã định danh của xu hướng.</li><li>`category (VARCHAR(20))`: Danh mục sản phẩm (Tops, Bottoms, v.v.).</li><li>`season (VARCHAR(20))`: Mùa trong năm (Spring, Summer, v.v.).</li><li>`sales (INT)`: Doanh thu từ sản phẩm trong mùa đó.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Tổng doanh số bán hàng của từng danh mục là bao nhiêu, với một cột riêng cho doanh số bán hàng của từng mùa?</p><p><br></p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">+----+-----------+--------+--------+
+| id | category  | season | sales  |
++----+-----------+--------+--------+
+| 1  | Tops      | Spring | 5000   |
+| 2  | Tops      | Summer | 6000   |
+| 3  | Tops      | Winter | 3000   |
+| 4  | Bottoms   | Summer | 4000   |
+| 5  | Bottoms   | Fall   | 3500   |
+| 6  | Shoes     | Spring | 2500   |
+| 7  | Shoes     | Winter | 2000   |
++----+-----------+--------+--------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+-----------+--------------+--------------+------------+--------------+
+| category  | spring_sales | summer_sales | fall_sales | winter_sales |
++-----------+--------------+--------------+------------+--------------+
+| Tops      | 5000         | 6000         | 0          | 3000         |
+| Bottoms   | 0            | 4000         | 3500       | 0            |
+| Shoes     | 2500         | 0            | 0          | 2000         |
++-----------+--------------+--------------+------------+--------------+
+</pre>

@@ -1,0 +1,16 @@
+ID: SQL2185
+Tiêu đề: Hiển thị tất cả thiết bị quân sự và số lượng tương ứng đã được bán cho Ấn Độ từ bảng AirForce_Equipment hoặc Army_Equipment.
+URL WEB: https://db.ptit.edu.vn/question-detail/1c163f74-0617-4003-80d8-2a76be2057b5
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1c163f74-0617-4003-80d8-2a76be2057b5
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có 2 bảng dữ liệu:</strong></p><h4><strong>1. Bảng AirForce_Equipment</strong> – Thiết bị của Không quân:</h4><ul><li>country (VARCHAR(50)): Tên quốc gia sở hữu thiết bị</li><li>equipment (VARCHAR(50)): Tên thiết bị</li><li>quantity (INT): Số lượng thiết bị</li><li>date (DATE): Ngày ghi nhận dữ liệu thiết bị</li></ul><h4><strong>2. Bảng Army_Equipment</strong> – Thiết bị của Lục quân:</h4><ul><li>country (VARCHAR(50)): Tên quốc gia sở hữu thiết bị</li><li>equipment (VARCHAR(50)): Tên thiết bị</li><li>quantity (INT): Số lượng thiết bị</li><li>date (DATE): Ngày ghi nhận dữ liệu thiết bị</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Hiển thị tất cả thiết bị quân sự và số lượng tương ứng đã được bán cho Ấn Độ từ bảng AirForce_Equipment hoặc Army_Equipment.</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+-----------------+----------+
+| equipment       | quantity |
++-----------------+----------+
+| Rafale          | 36       |
+| Tejas           | 83       |
+| Tank T-90       | 100      |
+| Artillery Gun   | 250      |
++-----------------+----------+
+</pre>

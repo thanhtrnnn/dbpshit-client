@@ -1,0 +1,8 @@
+ID: SQL2385
+Tiêu đề: Những hóa chất nào có chỉ số an toàn thấp hơn 7 và được sản xuất ở khu vực Châu Âu?
+URL WEB: https://db.ptit.edu.vn/question-detail/52bfb411-5cc1-4ec9-a31f-205702fd65ea
+URL API: https://dbapi.ptit.edu.vn/api/app/question/52bfb411-5cc1-4ec9-a31f-205702fd65ea
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng chemical_production</strong></h3><p>Chứa thông tin về sản lượng hóa chất theo vùng:</p><ul><li>region (VARCHAR(20)): Tên vùng (ví dụ: "Europe")</li><li>chemical (VARCHAR(30)): Tên loại hóa chất</li><li>quantity (INT): Số lượng hóa chất sản xuất</li></ul><h3><strong>Bảng chemical_safety</strong></h3><p>Chứa thông tin về đánh giá an toàn của hóa chất:</p><ul><li>chemical (VARCHAR(30)): Tên loại hóa chất</li><li>safety_rating (INT): Chỉ số an toàn (ví dụ: 1–10)</li></ul><h3><strong>Nhiệm vụ</strong></h3><p>Tìm các hóa chất có chỉ số an toàn dưới 7 và được sản xuất tại Châu Âu (Europe).</p>

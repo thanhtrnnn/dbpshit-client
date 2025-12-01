@@ -1,0 +1,14 @@
+ID: SQL2030
+Tiêu đề: Liệt kê tất cả các dự án thích ứng trong bảng 'adaptation_projects'
+URL WEB: https://db.ptit.edu.vn/question-detail/5d3ec4ec-3c58-4565-9581-05a68993db9c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5d3ec4ec-3c58-4565-9581-05a68993db9c
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng adaptation_projects</strong>:</p><p>Lưu trữ thông tin về các dự án thích ứng với biến đổi khí hậu, bao gồm ID dự án, tên dự án, vị trí, ngân sách, ngày bắt đầu và ngày kết thúc.</p><ul><li>id (INT): Mã số định danh duy nhất cho dự án.</li><li>name (VARCHAR(255)): Tên dự án.</li><li>location (VARCHAR(255)): Vị trí của dự án.</li><li>budget (FLOAT): Ngân sách dự án.</li><li>start_date (DATE): Ngày bắt đầu dự án.</li><li>end_date (DATE): Ngày kết thúc dự án.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Liệt kê tất cả các dự án thích ứng trong bảng 'adaptation_projects'</p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+----+-------------------------+-------------------------+---------+------------+------------+
+| id | name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | location&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | budget&nbsp; | start_date | end_date&nbsp; &nbsp;|
++----+-------------------------+-------------------------+---------+------------+------------+
+| 1&nbsp; | Seawall Construction&nbsp; &nbsp; | New York City, USA&nbsp; &nbsp; &nbsp; | 2179610 | 2022-01-16 | 2023-12-18 |
+| 2&nbsp; | Drought Resistant Crops | Cape Town, South Africa | 816353&nbsp; | 2022-05-28 | 2024-04-20 |
++----+-------------------------+-------------------------+---------+------------+------------+
+</pre>

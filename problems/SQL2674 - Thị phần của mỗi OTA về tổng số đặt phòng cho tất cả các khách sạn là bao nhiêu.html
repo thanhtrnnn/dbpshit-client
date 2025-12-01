@@ -1,0 +1,8 @@
+ID: SQL2674
+Tiêu đề: Thị phần của mỗi OTA về tổng số đặt phòng cho tất cả các khách sạn là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/0a059f7c-ebf6-4a31-b6e1-02cce9cf3199
+URL API: https://dbapi.ptit.edu.vn/api/app/question/0a059f7c-ebf6-4a31-b6e1-02cce9cf3199
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `hotels`: Quản lý thông tin khách sạn. </strong></p><ul><li><span style="font-size: 14px;">`hotel_id (INT)`: Mã khách sạn.</span></li><li><span style="font-size: 14px;">`hotel_name (TEXT)`: Tên khách sạn.</span></li><li><span style="font-size: 14px;">`country (TEXT)`: Quốc gia nơi khách sạn tọa lạc.</span></li></ul><p><strong style="font-size: 14px;">Bảng `ota_bookings`: Quản lý thông tin đặt phòng qua OTA (Online Travel Agent). </strong></p><ul><li><span style="font-size: 14px;">`booking_id (INT)`: Mã đặt phòng.</span></li><li><span style="font-size: 14px;">`hotel_id (INT)`: Mã khách sạn (liên kết với `hotels`).</span></li><li><span style="font-size: 14px;">`ota_name (TEXT)`: Tên OTA (ví dụ: Booking.com, Agoda).</span></li><li><span style="font-size: 14px;">`revenue (FLOAT)`: Doanh thu từ đặt phòng.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Tính thị phần của mỗi OTA dựa trên tổng doanh thu đặt phòng cho tất cả các khách sạn.</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">ota_name, total_revenue, market_share</span></p>

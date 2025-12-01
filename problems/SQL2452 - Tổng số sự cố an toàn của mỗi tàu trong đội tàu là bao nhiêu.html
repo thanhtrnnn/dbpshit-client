@@ -1,0 +1,8 @@
+ID: SQL2452
+Tiêu đề: Tổng số sự cố an toàn của mỗi tàu trong đội tàu là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/60bd7569-26ee-4e07-baf2-1052365c078f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/60bd7569-26ee-4e07-baf2-1052365c078f
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng vessel_incident_count</strong></h3><p>Chứa thông tin về <strong>số lượng sự cố</strong> của các tàu.</p><p><strong>Cấu trúc:</strong></p><ul><li>vessel_id (INT): Mã định danh duy nhất cho mỗi tàu (khóa chính của bảng).</li><li>incident_count (INT): Số lượng sự cố đã xảy ra với tàu.</li></ul><p><br></p><p>Bảng vessel_incident_count</p><p><span class="ql-font-monospace">+----------------+------+</span></p><p><span class="ql-font-monospace">| Column Name&nbsp;&nbsp;  | Type |</span></p><p><span class="ql-font-monospace">+----------------+------+</span></p><p><span class="ql-font-monospace">| vessel_id&nbsp;&nbsp;&nbsp;   | INT&nbsp; |</span></p><p><span class="ql-font-monospace">| incident_count | INT&nbsp; |</span></p><p><span class="ql-font-monospace">+----------------+------+</span></p><p><br></p><h3><strong>Bảng safety_incidents</strong></h3><p>Chứa thông tin chi tiết về <strong>các sự cố an toàn</strong> xảy ra với các tàu.</p><p><strong>Cấu trúc:</strong></p><ul><li>vessel_id (INT): Mã định danh của tàu gặp sự cố (liên kết với vessel_id trong bảng vessel_incident_count).</li><li>incident_date (DATE): Ngày xảy ra sự cố an toàn.</li></ul><p><br></p><p><strong>Yêu cầu:</strong></p><p>Tính <strong>tổng số sự cố an toàn của mỗi tàu</strong> trong toàn đội tàu.</p><p><br></p><p>Output: vessel_id, COUNT(*)</p>

@@ -1,0 +1,8 @@
+ID: SQL2204
+Tiêu đề: Số giao dịch tối đa được phép cho hợp đồng thông minh 'ETH-20' trong một ngày là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/1852dd82-a194-4d57-9ea0-722493edb564
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1852dd82-a194-4d57-9ea0-722493edb564
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có 2 bảng dữ liệu như sau:</p><ol><li><strong>Bảng smart_contracts</strong> – Lưu trữ thông tin về các hợp đồng thông minh:</li></ol><ul><li class="ql-indent-1">id (INT): Mã định danh duy nhất của hợp đồng.</li><li class="ql-indent-1">name (VARCHAR(255)): Tên của hợp đồng thông minh.</li></ul><ol><li><strong>Bảng daily_limits</strong> – Lưu trữ giới hạn giao dịch hàng ngày:</li></ol><ul><li class="ql-indent-1">smart_contract_id (INT): Mã hợp đồng thông minh (liên kết với smart_contracts.id).</li><li class="ql-indent-1">max_transactions (INT): Số giao dịch tối đa được phép mỗi ngày.</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong> Tìm số giao dịch tối đa được phép trong một ngày cho hợp đồng thông minh có tên là </strong>'ETH-20'.</p><p>Output: max_transactions</p>

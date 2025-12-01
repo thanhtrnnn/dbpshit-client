@@ -1,0 +1,41 @@
+ID: SQL1844
+Tiêu đề: Những công ty khởi nghiệp công nghệ sinh học nào ở New York đã nhận được nguồn tài trợ trên 2 triệu đô la nhưng vẫn chưa bắt đầu bất kỳ nghiên cứu di truyền nào?
+URL WEB: https://db.ptit.edu.vn/question-detail/915f44cb-70ab-47aa-8cd9-0d619a5d777c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/915f44cb-70ab-47aa-8cd9-0d619a5d777c
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng biotech_startups: </strong></p><p>Bảng này lưu trữ thông tin về các startup công nghệ sinh học, bao gồm ID startup, tên và vị trí.</p><ul><li>startup_id (INT): Mã định danh của startup.</li><li>name (VARCHAR(255)): Tên của startup.</li><li>location (VARCHAR(255)): Vị trí của startup.</li></ul><p><strong>Bảng funding: </strong></p><p>Bảng này lưu trữ thông tin về các khoản tài trợ cho startup, bao gồm ID startup và số tiền tài trợ.</p><ul><li>startup_id (INT): Mã định danh của startup.</li><li>amount (FLOAT): Số tiền tài trợ.</li></ul><p><strong>Bảng genetic_research: </strong></p><p>Bảng này lưu trữ thông tin về các đề tài nghiên cứu di truyền của các startup, bao gồm ID startup và chủ đề nghiên cứu.</p><ul><li>startup_id (INT): Mã startup.</li><li>research_topic (VARCHAR(255)): Chủ đề nghiên cứu di truyền.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tìm <strong>các startup công nghệ sinh học ở New York </strong>đã nhận <strong>tài trợ trên 2 triệu USD nhưng chưa bắt đầu bất kỳ nghiên cứu di truyền nào.</strong></p><p><br></p><h3>Input mẫu</h3><p><strong>Bảng biotech_startups</strong></p><pre class="ql-syntax" spellcheck="false">
++-------------+------------------+-----------+
+| startup_id  | name             | location  |
++-------------+------------------+-----------+
+| 1           | GeneWorks        | New York  |
+| 2           | BioFuture Labs   | Boston    |
+| 3           | CellRevive       | New York  |
+| 4           | DNAlyze          | New York  |
+| 5           | NeuroBio         | Chicago   |
++-------------+------------------+-----------+
+</pre><p><strong>Bảng funding</strong></p><pre class="ql-syntax" spellcheck="false">
++-------------+----------+
+| startup_id  | amount   |
++-------------+----------+
+| 1           | 2500000  |
+| 2           | 3000000  |
+| 3           | 1500000  |
+| 4           | 4000000  |
+| 5           | 1800000  |
++-------------+----------+
+</pre><p><strong>Bảng genetic_research</strong></p><pre class="ql-syntax" spellcheck="false">
++-------------+----------------------+
+| startup_id  | research_topic       |
++-------------+----------------------+
+| 3           | CRISPR Optimization  |
+| 4           | Gene Therapy Trials  |
++-------------+----------------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++-------------+
+| startup_id  |
++-------------+
+| 1           |
++-------------+
+</pre><p><br></p>

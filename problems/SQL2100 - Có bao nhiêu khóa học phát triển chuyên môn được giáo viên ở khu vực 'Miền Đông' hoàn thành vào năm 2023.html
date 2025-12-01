@@ -1,0 +1,8 @@
+ID: SQL2100
+Tiêu đề: Có bao nhiêu khóa học phát triển chuyên môn được giáo viên ở khu vực 'Miền Đông' hoàn thành vào năm 2023?
+URL WEB: https://db.ptit.edu.vn/question-detail/a183ce0e-196a-4437-b748-964befa6351b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a183ce0e-196a-4437-b748-964befa6351b
+Loại Database: Mysql
+------------------------------
+
+<h4><strong>Bảng regions</strong></h4><p>Lưu trữ thông tin về các khu vực.</p><ul><li>region (VARCHAR(20)): Tên khu vực.</li></ul><h4><strong>Bảng teachers</strong></h4><p>Lưu trữ thông tin về các giáo viên, bao gồm mã giáo viên và khu vực.</p><ul><li>teacher_id (INT): Mã giáo viên.</li><li>region (VARCHAR(20)): Khu vực của giáo viên.</li></ul><h4><strong>Bảng courses</strong></h4><p>Lưu trữ thông tin về các khóa học, bao gồm mã khóa học, mã giáo viên và ngày hoàn thành khóa học.</p><ul><li>course_id (INT): Mã khóa học.</li><li>teacher_id (INT): Mã giáo viên (foreign key từ teachers).</li><li>completion_date (DATE): Ngày hoàn thành khóa học.</li></ul><p>Có bao nhiêu khóa học phát triển chuyên môn được giáo viên ở khu vực 'Miền Đông' hoàn thành vào năm 2023?</p><p><br></p><p><strong>Output:</strong></p><p><strong>Một số nguyên </strong>duy nhất, đại diện cho <strong>tổng số lượng khóa học</strong> thỏa mãn đồng thời hai điều kiện: Khóa học đó được hoàn thành vào <strong>Năm 2023</strong>. Khóa học đó được giảng dạy bởi một giáo viên thuộc khu vực <strong>'East'</strong> (Miền Đông).</p>

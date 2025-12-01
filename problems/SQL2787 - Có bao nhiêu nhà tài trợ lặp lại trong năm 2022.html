@@ -1,0 +1,8 @@
+ID: SQL2787
+Tiêu đề: Có bao nhiêu nhà tài trợ lặp lại trong năm 2022?
+URL WEB: https://db.ptit.edu.vn/question-detail/97d3313f-82c1-4b03-9244-fe1b4cd4a5eb
+URL API: https://dbapi.ptit.edu.vn/api/app/question/97d3313f-82c1-4b03-9244-fe1b4cd4a5eb
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `donors`: Lưu trữ thông tin người quyên góp. </strong></p><ul><li><span style="font-size: 14px;">`donor_id` (INT): Mã người quyên góp.</span></li><li><span style="font-size: 14px;">`donation_date` (DATE): Ngày quyên góp.</span></li><li><span style="font-size: 14px;">`donation_amount` (DECIMAL(10,2)): Số tiền quyên góp.</span></li><li><span style="font-size: 14px;">`country` (VARCHAR(50)): Quốc gia người quyên góp.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Tìm số lượng nhà tài trợ có nhiều hơn 1 lần quyên góp trong năm 2022.</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">COUNT(DISTINCT donor_id)</span></p>

@@ -1,0 +1,8 @@
+ID: SQL2320
+Tiêu đề: Tên của các nhà máy có công nhân ở bộ phận 'textile' và 'electronics' là gì?
+URL WEB: https://db.ptit.edu.vn/question-detail/cab064aa-49f0-4bb6-ba93-7da4c8c555ca
+URL API: https://dbapi.ptit.edu.vn/api/app/question/cab064aa-49f0-4bb6-ba93-7da4c8c555ca
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng factories</strong>: Chứa thông tin về các nhà máy.</p><ul><li> factory_id (INT): Mã định danh duy nhất cho mỗi nhà máy (khóa chính của bảng).</li><li> factory_name (VARCHAR(20): Tên của nhà máy.</li></ul><p><strong>Bảng departments</strong>: Chứa thông tin về các phòng ban trong các nhà máy.</p><ul><li> department_id (INT): Mã định danh duy nhất cho mỗi phòng ban (khóa chính của bảng).</li><li> department (VARCHAR(20): Tên của phòng ban (ví dụ: textile, metal, electronics).</li></ul><p><strong>Bảng workers</strong>: Chứa thông tin về các công nhân làm việc tại các nhà máy và phòng ban.</p><ul><li> worker_id (INT): Mã định danh duy nhất cho mỗi công nhân (khóa chính của bảng).</li><li> factory_id (INT): Mã định danh của nhà máy nơi công nhân làm việc (liên kết với bảng factories).</li><li> department_id (INT): Mã định danh của phòng ban nơi công nhân làm việc (liên kết với bảng departments).</li></ul><p><strong>Nhiệm vụ</strong>:</p><p> Tên của các nhà máy có công nhân ở <strong>cả hai</strong> bộ phận 'textile' <strong>và</strong> 'electronics' là gì?</p>

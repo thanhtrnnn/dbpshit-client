@@ -1,0 +1,8 @@
+ID: SQL2421
+Tiêu đề: Tổng số học viên đã từng đăng ký vào mỗi khóa học là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/729d271c-9f2e-47b4-9ff6-540d29ecb848
+URL API: https://dbapi.ptit.edu.vn/api/app/question/729d271c-9f2e-47b4-9ff6-540d29ecb848
+Loại Database: Mysql
+------------------------------
+
+<h4><strong>Bảng courses</strong></h4><p>Chứa thông tin về các khóa học.</p><p><strong>Cấu trúc:</strong></p><ul><li>course_id (INT): Mã định danh duy nhất cho mỗi khóa học <em>(khóa chính của bảng)</em>.</li><li>course_name (TEXT): Tên của khóa học <em>(ví dụ: "Algebra I", "Geometry")</em>.</li></ul><h4><strong>Bảng enrollments</strong></h4><p>Chứa thông tin về việc ghi danh của sinh viên vào các khóa học.</p><p><strong>Cấu trúc:</strong></p><ul><li>enrollment_id (INT): Mã định danh duy nhất cho mỗi lần ghi danh <em>(khóa chính của bảng)</em>.</li><li>student_id (INT): Mã định danh của sinh viên ghi danh.</li><li>course_id (INT): Mã định danh của khóa học <em>(liên kết với course_id trong bảng courses)</em>.</li><li>enrollment_date (DATE): Ngày ghi danh vào khóa học.</li></ul><p><br></p><p>Tổng số học viên đã từng đăng ký vào <strong>mỗi khóa học</strong> là bao nhiêu?</p><p><br></p><p>Output: course_name, student_count</p>

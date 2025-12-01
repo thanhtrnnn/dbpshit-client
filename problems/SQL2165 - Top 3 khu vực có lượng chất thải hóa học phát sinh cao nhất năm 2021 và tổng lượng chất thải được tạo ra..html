@@ -1,0 +1,14 @@
+ID: SQL2165
+Tiêu đề: Top 3 khu vực có lượng chất thải hóa học phát sinh cao nhất năm 2021 và tổng lượng chất thải được tạo ra.
+URL WEB: https://db.ptit.edu.vn/question-detail/5d31683d-c2ba-453e-85fa-59bd13a06b37
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5d31683d-c2ba-453e-85fa-59bd13a06b37
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng region_waste</strong> – Lưu trữ thông tin về lượng rác thải theo khu vực và năm:</p><ul><li>region (VARCHAR): Khu vực.</li><li>year (INT): Năm.</li><li>waste_amount (FLOAT): Lượng rác thải (giả định là rác thải hóa học).</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Top 3 khu vực có lượng chất thải hóa học phát sinh cao nhất năm 2021 và tổng lượng chất thải được tạo ra.</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+----------------+---------------+ 
+| region           | total_waste   |
++----------------+---------------+ 
+| Asia             | 500.0         |
+| Europe           | 450.0         |
+| Africa           | 290.0         |
++----------------+---------------+</pre>

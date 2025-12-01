@@ -1,0 +1,35 @@
+ID: SQL1615
+Tiêu đề: Cập nhật vốn hóa thị trường của 'Asset3' lên 9000000.
+URL WEB: https://db.ptit.edu.vn/question-detail/6b8671d6-ddd4-4646-9ff5-9442244d1830
+URL API: https://dbapi.ptit.edu.vn/api/app/question/6b8671d6-ddd4-4646-9ff5-9442244d1830
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng `digital_asset` và `market_capitalization`: </strong></p><ul><li>`digital_asset`:</li><li>`id (INT)`: Mã số duy nhất cho tài sản kỹ thuật số.</li><li>`name (VARCHAR(255))`: Tên của tài sản kỹ thuật số.</li><li>`category (VARCHAR(255))`: Danh mục của tài sản kỹ thuật số (ví dụ: "Crypto", "Security").</li></ul><p><br></p><ul><li>`market_capitalization`:</li><li>`id (INT)`: Mã số duy nhất cho thông tin vốn hóa thị trường.</li><li>`asset_id (INT)`: ID của tài sản kỹ thuật số.</li><li>`value (INT)`: Giá trị vốn hóa thị trường của tài sản kỹ thuật số.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Cập nhật giá trị vốn hóa thị trường của tài sản kỹ thuật số của tài sản kỹ thuật số 'Asset3' là 9000000.</p><p><br></p><h3>Input mẫu</h3><p><strong>Bảng digital_asset</strong></p><pre class="ql-syntax" spellcheck="false">
++----+--------+-----------+
+| id | name   | category  |
++----+--------+-----------+
+| 1  | Asset1 | Crypto    |
+| 2  | Asset2 | Security  |
+| 3  | Asset3 | Crypto    |
+| 4  | Asset4 | Security  |
++----+--------+-----------+
+</pre><p><strong>Bảng market_capitalization</strong></p><pre class="ql-syntax" spellcheck="false">
++----+----------+---------+
+| id | asset_id | value   |
++----+----------+---------+
+| 1  | 1        | 5000000 |
+| 2  | 2        | 7000000 |
+| 3  | 3        | 8000000 |
+| 4  | 4        | 6000000 |
++----+----------+---------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----+----------+---------+
+| id | asset_id | value   |
++----+----------+---------+
+| 1  | 1        | 5000000 |
+| 2  | 2        | 7000000 |
+| 3  | 3        | 9000000 |
+| 4  | 4        | 6000000 |
++----+----------+---------+
+</pre><p><br></p>

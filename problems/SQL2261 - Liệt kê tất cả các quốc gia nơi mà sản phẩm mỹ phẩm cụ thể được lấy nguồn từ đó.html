@@ -1,0 +1,8 @@
+ID: SQL2261
+Tiêu đề: Liệt kê tất cả các quốc gia nơi mà sản phẩm mỹ phẩm cụ thể được lấy nguồn từ đó
+URL WEB: https://db.ptit.edu.vn/question-detail/79abdab6-d0d4-453e-a32e-0ae80ba920df
+URL API: https://dbapi.ptit.edu.vn/api/app/question/79abdab6-d0d4-453e-a32e-0ae80ba920df
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có hai bảng dữ liệu:</p><p><strong>1. Bảng ingredients</strong> – Thông tin về các nguyên liệu và sản phẩm mà chúng liên quan đến:</p><ul><li>ingredient_id (INT): Mã định danh duy nhất cho mỗi nguyên liệu</li><li>ingredient_name (TEXT): Tên nguyên liệu</li><li>product_id (INT): Mã định danh của sản phẩm mà nguyên liệu này sử dụng (liên kết với bảng products)</li><li>country (TEXT): Quốc gia sản xuất nguyên liệu</li></ul><p><strong>2. Bảng products</strong> – Thông tin về các sản phẩm:</p><ul><li>product_id (INT): Mã định danh duy nhất cho mỗi sản phẩm</li><li>product_name (TEXT): Tên của sản phẩm</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong>Liệt kê tất cả các quốc gia</strong> mà sản phẩm mỹ phẩm cụ thể 'Facial Oil' được lấy nguyên liệu.</p><p><strong>Output yêu cầu:</strong></p><ul><li>country: tên các quốc gia mà nguyên liệu sản xuất sản phẩm 'Facial Oil' được lấy từ đó</li></ul><p><br></p>

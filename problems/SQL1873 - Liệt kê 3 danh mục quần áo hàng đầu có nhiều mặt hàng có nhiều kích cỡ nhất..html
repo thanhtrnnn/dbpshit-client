@@ -1,0 +1,47 @@
+ID: SQL1873
+Tiêu đề: Liệt kê 3 danh mục quần áo hàng đầu có nhiều mặt hàng có nhiều kích cỡ nhất.
+URL WEB: https://db.ptit.edu.vn/question-detail/59b1524a-2774-46cc-84a6-0bf63a1eab58
+URL API: https://dbapi.ptit.edu.vn/api/app/question/59b1524a-2774-46cc-84a6-0bf63a1eab58
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Clothing_Categories: </strong></p><p>Bảng này lưu trữ thông tin về các danh mục quần áo, bao gồm ID và tên danh mục.</p><ul><li>category_id (INT): Mã định danh của danh mục quần áo.</li><li>category_name (TEXT): Tên danh mục quần áo.</li></ul><p><strong>Bảng Items: </strong></p><p>Bảng này lưu trữ thông tin về các mặt hàng quần áo, bao gồm ID mặt hàng, ID danh mục, ID kích cỡ và tính khả dụng của kích cỡ.</p><ul><li>item_id (INT): Mã định danh của mặt hàng.</li><li>category_id (INT): Mã danh mục quần áo.</li><li>size_id (INT): Mã kích cỡ của mặt hàng.</li><li>is_size_inclusive (BOOLEAN): Liệu mặt hàng có bao gồm các kích cỡ đa dạng không.</li></ul><p><strong>Bảng Sizes: </strong></p><p>Bảng này lưu trữ thông tin về các kích cỡ quần áo.</p><ul><li>size_id (INT): Mã định danh của kích cỡ.</li><li>size_name (TEXT): Tên kích cỡ quần áo.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Liệt kê 3 danh mục quần áo hàng đầu có nhiều mặt hàng có nhiều kích cỡ nhất.</p><p><br></p><h3>Input mẫu</h3><p><strong>Bảng Clothing_Categories</strong></p><pre class="ql-syntax" spellcheck="false">
++-------------+------------------+
+| category_id | category_name    |
++-------------+------------------+
+| 1           | Shirts           |
+| 2           | Pants            |
+| 3           | Jackets          |
+| 4           | Dresses          |
++-------------+------------------+
+</pre><p><strong>Bảng Sizes</strong></p><pre class="ql-syntax" spellcheck="false">
++----------+-----------+
+| size_id  | size_name |
++----------+-----------+
+| 1        | S         |
+| 2        | M         |
+| 3        | L         |
+| 4        | XL        |
++----------+-----------+
+</pre><p><strong>Bảng Items</strong></p><pre class="ql-syntax" spellcheck="false">
++----------+-------------+----------+--------------------+
+| item_id  | category_id | size_id  | is_size_inclusive  |
++----------+-------------+----------+--------------------+
+| 1        | 1           | 1        | TRUE               |
+| 2        | 1           | 2        | TRUE               |
+| 3        | 1           | 3        | TRUE               |
+| 4        | 2           | 2        | TRUE               |
+| 5        | 2           | 3        | FALSE              |
+| 6        | 3           | 4        | TRUE               |
+| 7        | 3           | 3        | TRUE               |
+| 8        | 4           | 1        | FALSE              |
++----------+-------------+----------+--------------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++------------------+---------------------------+
+| category_name    | size_inclusive_item_count |
++------------------+---------------------------+
+| Shirts           | 3                         |
+| Jackets          | 2                         |
+| Pants            | 1                         |
++------------------+---------------------------+
+</pre><p><br></p>

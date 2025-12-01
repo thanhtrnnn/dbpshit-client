@@ -1,0 +1,8 @@
+ID: SQL2610
+Tiêu đề: Xác định ba quốc gia có tỷ lệ thất nghiệp của cựu chiến binh cao nhất?
+URL WEB: https://db.ptit.edu.vn/question-detail/0d464fe4-4155-43a5-8192-26a4e0356022
+URL API: https://dbapi.ptit.edu.vn/api/app/question/0d464fe4-4155-43a5-8192-26a4e0356022
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `Countries`: Quản lý dữ liệu về các quốc gia</strong></p><ul><li>`Countries (CountryID INT PRIMARY KEY, Name VARCHAR(50))`: Lưu thông tin về các quốc gia.</li><li>`CountryID`: Mã quốc gia.</li><li>`Name`: Tên quốc gia.</li></ul><p><strong>Bảng `Veterans': Quản lý dữ liệu về cựu chiến binh</strong></p><ul><li>`Veterans (VeteranID INT PRIMARY KEY, CountryID INT, FOREIGN KEY (CountryID) REFERENCES Countries(CountryID))`: Lưu thông tin về cựu chiến binh.</li><li>`VeteranID`: Mã cựu chiến binh.</li><li>`CountryID`: Mã quốc gia (liên kết với bảng `Countries`).</li></ul><p><strong>Bảng `Unemployment`: Tỷ lệ thất nghiệp của cựu chiến binh. </strong></p><ul><li>`Unemployment (UnemploymentID INT PRIMARY KEY, VeteranID INT, Rate DECIMAL(5,2), FOREIGN KEY (VeteranID) REFERENCES Veterans(VeteranID))`: Lưu thông tin tỷ lệ thất nghiệp của cựu chiến binh.</li><li>`UnemploymentID`: Mã bản ghi thất nghiệp.</li><li>`VeteranID`: Mã cựu chiến binh (liên kết với bảng `Veterans`).</li><li>`Rate`: Tỷ lệ thất nghiệp.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Xác định ba quốc gia có tỷ lệ thất nghiệp của cựu chiến binh cao nhất?</p><p><br></p><p><strong>Output</strong></p><p>Name, AvgRate</p>

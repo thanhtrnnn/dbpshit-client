@@ -1,0 +1,8 @@
+ID: SQL1963
+Tiêu đề: Xóa tất cả hồ sơ của khách chưa tham quan bất kỳ triển lãm nào
+URL WEB: https://db.ptit.edu.vn/question-detail/9efe994a-0d7e-4e79-b329-45a56dae39c0
+URL API: https://dbapi.ptit.edu.vn/api/app/question/9efe994a-0d7e-4e79-b329-45a56dae39c0
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Visitors:</strong></p><p>Lưu trữ thông tin về khách tham quan triển lãm.</p><ul><li>id (INT): Mã số định danh duy nhất cho khách tham quan.</li><li>name (VARCHAR(100)): Tên khách tham quan.</li><li>country (VARCHAR(50)): Quốc gia của khách tham quan.</li><li>visit_date (DATE): Ngày tham quan triển lãm.</li></ul><p><strong>Bảng Exhibitions:</strong></p><p>Lưu trữ thông tin về các triển lãm.</p><ul><li>id (INT): Mã số định danh duy nhất cho triển lãm.</li><li>name (VARCHAR(100)): Tên triển lãm.</li><li>location (VARCHAR(50)): Địa điểm tổ chức triển lãm.</li></ul><p><strong>Bảng Visits:</strong></p><p>Ghi lại thông tin về khách tham quan triển lãm.</p><ul><li>visitor_id (INT): Mã khách tham quan (foreign key từ Visitors).</li><li>exhibition_id (INT): Mã triển lãm (foreign key từ Exhibitions).</li><li>visit_date (DATE): Ngày tham quan triển lãm.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Xóa tất cả hồ sơ của khách chưa tham quan bất kỳ triển lãm nào.</p>

@@ -1,0 +1,8 @@
+ID: SQL2216
+Tiêu đề: Liệt kê tên và mức sử dụng dữ liệu của tất cả khách hàng ở khu vực 'north' có mức sử dụng dữ liệu lớn hơn mức sử dụng dữ liệu trung bình cho khu vực 'north'.
+URL WEB: https://db.ptit.edu.vn/question-detail/00fa023c-0d8a-4173-b739-3618935ed8dc
+URL API: https://dbapi.ptit.edu.vn/api/app/question/00fa023c-0d8a-4173-b739-3618935ed8dc
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng subscribers</strong> – Lưu trữ thông tin về các thuê bao dịch vụ:</p><ul><li>id (INT): Mã định danh duy nhất của thuê bao.</li><li>name (VARCHAR(50)): Tên thuê bao.</li><li>data_usage (DECIMAL(10,2)): Lượng dữ liệu đã sử dụng (tính bằng GB).</li><li>region (VARCHAR(10)): Khu vực đăng ký dịch vụ (ví dụ: 'north', 'south', ...).</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong> Hãy liệt kê tên và lượng dữ liệu đã sử dụng</strong> của <strong>tất cả thuê bao thuộc khu vực 'north'</strong>, <strong>có mức sử dụng dữ liệu cao hơn mức trung bình</strong> của <strong>toàn bộ thuê bao trong cùng khu vực</strong>.</p><p>Output: name, data_usage</p>

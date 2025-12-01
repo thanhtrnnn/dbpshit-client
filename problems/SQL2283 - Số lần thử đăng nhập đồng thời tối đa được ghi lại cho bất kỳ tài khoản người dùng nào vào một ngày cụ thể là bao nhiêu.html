@@ -1,0 +1,8 @@
+ID: SQL2283
+Tiêu đề: Số lần thử đăng nhập đồng thời tối đa được ghi lại cho bất kỳ tài khoản người dùng nào vào một ngày cụ thể là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/1c0b07c7-aaa1-4029-953a-f1fd3c287e3f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1c0b07c7-aaa1-4029-953a-f1fd3c287e3f
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng dữ liệu:</strong></p><p><strong>login_attempts</strong> – Chứa thông tin về các lần thử đăng nhập của người dùng.</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi lần thử đăng nhập (khóa chính).</li><li>user_id (INT): Mã định danh của người dùng.</li><li>timestamp (TIMESTAMP): Thời gian mà lần thử đăng nhập xảy ra.</li></ul><p><strong>Nhiệm vụ:</strong></p><ul><li>Xác định <strong>số phút giữa lần thử đăng nhập sớm nhất và muộn nhất trong ngày '2022-01-01'</strong> cho mỗi người dùng có <strong>hơn 5 lần thử đăng nhập</strong> trong ngày đó. Nói cách khác, tính <strong>khoảng thời gian dài nhất mà một người dùng thực hiện nhiều lần thử đăng nhập trong cùng một ngày</strong>.Ngày cụ thể cần tính trong SQL là '2022-01-01'.</li><li>Output: user_id (mã người dùng), MAX(time_diff).</li></ul>

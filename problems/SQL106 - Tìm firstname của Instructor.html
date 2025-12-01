@@ -1,0 +1,8 @@
+ID: SQL106
+Tiêu đề: Tìm firstname của Instructor
+URL WEB: https://db.ptit.edu.vn/question-detail/48655e83-8b1e-42f1-ac2f-0ce95e9ddec0
+URL API: https://dbapi.ptit.edu.vn/api/app/question/48655e83-8b1e-42f1-ac2f-0ce95e9ddec0
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có 3 bảng sau:</p><ol><li><strong>Bảng Class:</strong></li></ol><p>Chứa thông tin về các khóa học.</p><p>Cấu trúc:</p><ul><li class="ql-indent-1">dept (VARCHAR(6)): Mã phòng ban của khóa học.</li><li class="ql-indent-1">number (INTEGER): Số hiệu khóa học.</li><li class="ql-indent-1">title (VARCHAR(75)): Tiêu đề khóa học.</li></ul><p><br></p><ol><li><strong>Bảng Instructor:</strong></li></ol><p>Chứa thông tin về giảng viên.</p><p>Cấu trúc:</p><ul><li class="ql-indent-1">username (VARCHAR(8)): Tên tài khoản giảng viên.</li><li class="ql-indent-1">fname (VARCHAR(50)): Tên của giảng viên.</li><li class="ql-indent-1">lname (VARCHAR(50)): Họ của giảng viên.</li><li class="ql-indent-1">started_on (CHAR(10)): Ngày bắt đầu làm việc của giảng viên.</li></ul><p><br></p><ol><li><strong>Bảng Teaches:</strong></li></ol><p>Chứa thông tin về việc giảng viên dạy khóa học nào.</p><p>Cấu trúc:</p><ul><li class="ql-indent-1">username (VARCHAR(8)): Tên tài khoản giảng viên.</li><li class="ql-indent-1">dept (VARCHAR(6)): Mã phòng ban của khóa học.</li><li class="ql-indent-1">number (INTEGER): Số hiệu khóa học.</li></ul><p><br></p><p><strong>Yêu cầu:</strong></p><p><strong>Tìm</strong></p><p>-- Tên (firstname) của Instructor có tên đăng nhập (login) là 'zahorjan'?</p><p><br></p><p>fname&nbsp;&nbsp;&nbsp;</p><p>----------</p><p>John&nbsp;</p>

@@ -1,0 +1,40 @@
+ID: SQL1856
+Tiêu đề: Tổng doanh thu từ dịch vụ di động và băng thông rộng của từng khu vực là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/cabdcc70-e365-4ed9-a6e7-ef757c198414
+URL API: https://dbapi.ptit.edu.vn/api/app/question/cabdcc70-e365-4ed9-a6e7-ef757c198414
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng regions: </strong></p><p>Bảng này lưu trữ thông tin về các khu vực, bao gồm ID khu vực và tên khu vực.</p><ul><li>region_id (INT): Mã định danh của khu vực.</li><li>region_name (VARCHAR(50)): Tên của khu vực.</li></ul><p><strong>Bảng mobile_services: </strong></p><p>Bảng này lưu trữ thông tin về các dịch vụ di động, bao gồm ID dịch vụ, tên dịch vụ, ID khu vực và doanh thu.</p><ul><li>service_id (INT): Mã định danh của dịch vụ di động.</li><li>service_name (VARCHAR(50)): Tên dịch vụ di động.</li><li>region_id (INT): Mã khu vực nơi dịch vụ được cung cấp.</li><li>revenue (INT): Doanh thu từ dịch vụ di động.</li></ul><p><strong>Bảng broadband_services: </strong></p><p>Bảng này lưu trữ thông tin về các dịch vụ băng thông rộng, bao gồm ID dịch vụ, tên dịch vụ, ID khu vực và doanh thu.</p><ul><li>service_id (INT): Mã định danh của dịch vụ băng thông rộng.</li><li>service_name (VARCHAR(50)): Tên dịch vụ băng thông rộng.</li><li>region_id (INT): Mã khu vực nơi dịch vụ được cung cấp.</li><li>revenue (INT): Doanh thu từ dịch vụ băng thông rộng.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tổng doanh thu từ dịch vụ di động và băng thông rộng của từng khu vực là bao nhiêu?</p><p><br></p><h3>Input mẫu</h3><p><strong>Bảng regions</strong></p><pre class="ql-syntax" spellcheck="false">
++-----------+--------------+
+| region_id | region_name  |
++-----------+--------------+
+| 1         | North        |
+| 2         | South        |
+| 3         | East         |
++-----------+--------------+
+</pre><p><strong>Bảng mobile_services</strong></p><pre class="ql-syntax" spellcheck="false">
++------------+---------------+-----------+----------+
+| service_id | service_name  | region_id | revenue  |
++------------+---------------+-----------+----------+
+| 1          | Mobile A      | 1         | 5000     |
+| 2          | Mobile B      | 2         | 4000     |
+| 3          | Mobile C      | 3         | 3000     |
++------------+---------------+-----------+----------+
+</pre><p><strong>Bảng broadband_services</strong></p><pre class="ql-syntax" spellcheck="false">
++------------+----------------+-----------+----------+
+| service_id | service_name   | region_id | revenue  |
++------------+----------------+-----------+----------+
+| 1          | Broadband A    | 1         | 7000     |
+| 2          | Broadband B    | 2         | 2000     |
+| 3          | Broadband C    | 3         | 1000     |
++------------+----------------+-----------+----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++--------------+----------------+--------------------+----------------+
+| region_name  | mobile_revenue | broadband_revenue  | total_revenue  |
++--------------+----------------+--------------------+----------------+
+| North        | 5000           | 7000               | 12000          |
+| South        | 4000           | 2000               | 6000           |
+| East         | 3000           | 1000               | 4000           |
++--------------+----------------+--------------------+-------------
+</pre><p><br></p>

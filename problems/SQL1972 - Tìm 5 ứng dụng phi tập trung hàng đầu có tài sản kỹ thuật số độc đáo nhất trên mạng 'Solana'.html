@@ -1,0 +1,8 @@
+ID: SQL1972
+Tiêu đề: Tìm 5 ứng dụng phi tập trung hàng đầu có tài sản kỹ thuật số độc đáo nhất trên mạng 'Solana'?
+URL WEB: https://db.ptit.edu.vn/question-detail/ec24cac1-0a25-4d74-87cb-5e4be685fa6f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ec24cac1-0a25-4d74-87cb-5e4be685fa6f
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng decentralized_applications:</strong></p><p>Lưu trữ thông tin về các ứng dụng phi tập trung, bao gồm mã ứng dụng, tên ứng dụng và mạng lưới.</p><ul><li>app_id (INT): Mã số định danh duy nhất cho ứng dụng.</li><li>app_name (VARCHAR(50)): Tên ứng dụng.</li><li>network (VARCHAR(10)): Mạng lưới mà ứng dụng sử dụng (ví dụ: Solana, Ethereum).</li></ul><p><strong>Bảng app_assets:</strong></p><p>Lưu trữ thông tin về tài sản của các ứng dụng.</p><ul><li>app_id (INT): Mã ứng dụng (foreign key từ decentralized_applications).</li><li>asset_id (INT): Mã tài sản.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tìm 5 ứng dụng phi tập trung hàng đầu có tài sản kỹ thuật số độc đáo nhất trên mạng 'Solana'?</p>

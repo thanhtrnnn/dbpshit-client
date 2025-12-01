@@ -1,0 +1,8 @@
+ID: SQL2311
+Tiêu đề: Cập nhật số tiền yêu cầu bồi thường thành null cho loại chính sách 'Life'.
+URL WEB: https://db.ptit.edu.vn/question-detail/3c9d18eb-27bb-46bd-a81a-f9e491266afe
+URL API: https://dbapi.ptit.edu.vn/api/app/question/3c9d18eb-27bb-46bd-a81a-f9e491266afe
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng 1: Policy</strong></p><p><strong> Chứa thông tin về các loại hợp đồng bảo hiểm</strong>.</p><ul><li>PolicyID (INT): Mã định danh duy nhất cho mỗi hợp đồng bảo hiểm (khóa chính).</li><li>PolicyType (VARCHAR(50)): Loại hợp đồng bảo hiểm (ví dụ: <em>Auto</em>, <em>Home</em>, <em>Life</em>).</li></ul><p><strong>Bảng 2: Claims</strong></p><p><strong> Chứa thông tin về các yêu cầu bồi thường</strong> liên quan đến các hợp đồng bảo hiểm.</p><ul><li>ClaimID (INT): Mã định danh duy nhất cho mỗi yêu cầu bồi thường (khóa chính).</li><li>PolicyID (INT): Mã định danh của hợp đồng bảo hiểm liên quan đến yêu cầu bồi thường (liên kết với bảng Policy).</li><li>ClaimAmount (DECIMAL(10,2)): Số tiền yêu cầu bồi thường (chính xác đến 2 chữ số thập phân).</li></ul><h3><strong>Nhiệm vụ</strong></h3><p>Cập nhật giá trị ClaimAmount thành NULL đối với tất cả các yêu cầu bồi thường (Claims)</p><p> thuộc các hợp đồng bảo hiểm có loại chính sách (PolicyType) là 'Life'.</p><p><br></p><h3><em>Với mọi Claim liên kết tới Policy có PolicyType = 'Life', hãy đặt ClaimAmount = NULL.</em></h3><p><br></p>

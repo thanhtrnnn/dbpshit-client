@@ -1,0 +1,8 @@
+ID: SQL2652
+Tiêu đề: Các công ty khởi nghiệp trong lĩnh vực bền vững nào chưa nhận được bất kỳ khoản tài trợ nào?
+URL WEB: https://db.ptit.edu.vn/question-detail/ea738b1a-0fd3-48cd-bd7f-be59bda453fc
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ea738b1a-0fd3-48cd-bd7f-be59bda453fc
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `company`: Quản lý thông tin công ty. </strong></p><ul><li><span style="font-size: 14px;">`company (id INT, name TEXT, industry TEXT)`: Thông tin công ty.</span></li><li><span style="font-size: 14px;">`id`: Mã công ty.</span></li><li><span style="font-size: 14px;">`name`: Tên công ty.</span></li><li><span style="font-size: 14px;">`industry`: Ngành nghề của công ty.</span></li></ul><p><strong style="font-size: 14px;">Bảng `investment_round`: Quản lý các vòng đầu tư. </strong></p><ul><li><span style="font-size: 14px;">`investment_round (id INT, company_id INT)`: Các vòng đầu tư của công ty.</span></li><li><span style="font-size: 14px;">`id`: Mã vòng đầu tư.</span></li><li><span style="font-size: 14px;">`company_id`: Mã công ty (liên kết đến bảng `company`).</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Các công ty khởi nghiệp trong lĩnh vực bền vững nào chưa nhận được bất kỳ khoản tài trợ nào?</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">name</span></p>

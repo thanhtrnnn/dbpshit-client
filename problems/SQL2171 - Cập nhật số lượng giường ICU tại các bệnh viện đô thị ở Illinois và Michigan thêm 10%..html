@@ -1,0 +1,13 @@
+ID: SQL2171
+Tiêu đề: Cập nhật số lượng giường ICU tại các bệnh viện đô thị ở Illinois và Michigan thêm 10%.
+URL WEB: https://db.ptit.edu.vn/question-detail/c63033c8-a6d4-4470-b12b-4ccef28a471e
+URL API: https://dbapi.ptit.edu.vn/api/app/question/c63033c8-a6d4-4470-b12b-4ccef28a471e
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có bảng hospitals với các cột sau:</strong></p><ul><li>id (INT): Mã bệnh viện</li><li>name (TEXT): Tên bệnh viện</li><li>location (TEXT): Vị trí bệnh viện (ví dụ: "Urban" hoặc "Rural")</li><li>num_icu_beds (INT): Số giường ICU</li><li>state (TEXT): Tiểu bang (ví dụ: "Illinois", "Michigan")</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Cập nhật số lượng giường ICU tại các bệnh viện đô thị ở Illinois và Michigan thêm 10%.</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+-----+---------------------+------------------+---------------+-----------+
+| id  | name                | location         | num_icu_beds  | state     |
++-----+---------------------+------------------+---------------+-----------+
+| 2   | Community Hospital  | Urban, Michigan  | 19            | Michigan  |
++-----+---------------------+------------------+---------------+-----------+
+</pre>

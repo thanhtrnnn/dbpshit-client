@@ -1,0 +1,8 @@
+ID: SQL2319
+Tiêu đề: Có bao nhiêu con gấu Bắc Cực được quan sát thấy ở mỗi vùng Arctic region??
+URL WEB: https://db.ptit.edu.vn/question-detail/e50bbb6a-71d3-4f35-a79f-ba9225d1a95a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e50bbb6a-71d3-4f35-a79f-ba9225d1a95a
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng arctic_region: </strong>Chứa thông tin về các khu vực Bắc Cực. </p><ul><li>region_id (INT): Mã định danh duy nhất cho mỗi khu vực Bắc Cực (khóa chính của bảng). </li><li>region_name (VARCHAR(255)): Tên của khu vực Bắc Cực (ví dụ: Canadian Arctic, Greenland). </li></ul><p><strong>Bảng polar_bear_observation: </strong>Chứa thông tin về số lượng gấu Bắc Cực quan sát được trong các khu vực. </p><ul><li>region_id (INT): Mã định danh của khu vực Bắc Cực (liên kết với bảng arctic_region). </li><li>observation (INT): Số lượng gấu Bắc Cực quan sát được trong khu vực.</li></ul><p><strong>Nhiệm vụ:</strong> </p><p>Có bao nhiêu con gấu Bắc Cực được quan sát thấy ở mỗi vùng Arctic region?</p>

@@ -1,0 +1,8 @@
+ID: SQL2759
+Tiêu đề: Có bao nhiêu khu bảo tồn ở mỗi quốc gia?
+URL WEB: https://db.ptit.edu.vn/question-detail/a930864c-30f6-4b17-b760-e198578b0139
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a930864c-30f6-4b17-b760-e198578b0139
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `countries`: Quản lý các quốc gia.</strong></p><ul><li><span style="font-size: 14px;">`countries (country_id INT, country_name VARCHAR(100))`:</span></li><li><span style="font-size: 14px;">`country_id (INT)`: Mã quốc gia.</span></li><li><span style="font-size: 14px;">`country_name (VARCHAR(100))`: Tên quốc gia.</span></li></ul><p><strong style="font-size: 14px;">Bảng `protected_areas`: Quản lý các vùng bảo tồn thiên nhiên thuộc lãnh thổ của từng quốc gia. </strong></p><ul><li><span style="font-size: 14px;">`protected_areas (area_id INT, country_id INT, area_name VARCHAR(100))`:</span></li><li><span style="font-size: 14px;">`area_id (INT)`: Mã khu bảo tồn.</span></li><li><span style="font-size: 14px;">`country_id (INT)`: Quốc gia nơi khu bảo tồn nằm.</span></li><li><span style="font-size: 14px;">`area_name (VARCHAR(100))`: Tên khu bảo tồn thiên nhiên.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Có bao nhiêu khu bảo tồn ở mỗi quốc gia?</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">country_name, total_areas</span></p>

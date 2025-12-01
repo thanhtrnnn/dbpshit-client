@@ -1,0 +1,13 @@
+ID: SQL2109
+Tiêu đề: Tìm số lượng ấn phẩm của các sinh viên tốt nghiệp ở khoa Khoa học Máy tính chưa bao giờ nhận được trợ cấp nghiên cứu.
+URL WEB: https://db.ptit.edu.vn/question-detail/f3b0dec3-e294-4699-8180-cc3713223a2e
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f3b0dec3-e294-4699-8180-cc3713223a2e
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Cho hai bảng dữ liệu:</strong></p><h3><strong style="font-size: 14px;">Bảng students</strong></h3><ul><li><span style="font-size: 14px;">student_id (INT): Mã sinh viên</span></li><li><span style="font-size: 14px;">name (VARCHAR(50)): Tên sinh viên</span></li><li><span style="font-size: 14px;">department (VARCHAR(50)): Khoa của sinh viên</span></li><li><span style="font-size: 14px;">grant_recipient (BOOLEAN): Trạng thái nhận tài trợ (TRUE nếu có nhận, FALSE nếu không)</span></li></ul><h3><strong style="font-size: 14px;">Bảng publications</strong></h3><ul><li><span style="font-size: 14px;">publication_id (INT): Mã bài báo</span></li><li><span style="font-size: 14px;">student_id (INT): Mã sinh viên (foreign key tới students.student_id)</span></li><li><span style="font-size: 14px;">title (VARCHAR(100)): Tiêu đề bài báo</span></li></ul><p><strong style="font-size: 14px;">Nhiệm vụ:</strong></p><p><span style="font-size: 14px;">Tìm số lượng ấn phẩm của các sinh viên tốt nghiệp ở khoa Khoa học Máy tính chưa bao giờ nhận được trợ cấp nghiên cứu.</span></p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+----------+
+| COUNT(*) |
++----------+
+| 0        |
++----------+
+</pre>

@@ -1,0 +1,14 @@
+ID: SQL2106
+Tiêu đề: Giá trung bình của các sản phẩm được chứng nhận đạo đức là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/a66dd624-87f2-4113-99c7-1bcd095e948a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a66dd624-87f2-4113-99c7-1bcd095e948a
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Cho hai bảng dữ liệu:</strong></p><h3><strong>Bảng products</strong></h3><ul><li>id (INT): Mã sản phẩm</li><li>name (VARCHAR(255)): Tên sản phẩm</li><li>price (DECIMAL(10,2)): Giá sản phẩm</li><li>supplier_id (INT): Mã nhà cung cấp</li></ul><h3><strong>Bảng ethical_certifications</strong></h3><ul><li>id (INT): Mã chứng nhận</li><li>product_id (INT): Mã sản phẩm (foreign key tới products.id)</li><li>certification (VARCHAR(255)): Tên chứng nhận đạo đức</li><li>certification_date (DATE): Ngày cấp chứng nhận</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Giá trung bình của các sản phẩm được chứng nhận đạo đức là bao nhiêu?</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">
++--------------------+
+| AVG(p.price)       |
++--------------------+
+| 18.333333          |
++--------------------+
+</pre>

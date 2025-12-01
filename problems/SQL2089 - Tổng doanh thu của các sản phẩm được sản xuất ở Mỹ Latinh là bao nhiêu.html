@@ -1,0 +1,8 @@
+ID: SQL2089
+Tiêu đề: Tổng doanh thu của các sản phẩm được sản xuất ở Mỹ Latinh là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/020dcd21-af57-42f2-940b-f3d931390b13
+URL API: https://dbapi.ptit.edu.vn/api/app/question/020dcd21-af57-42f2-940b-f3d931390b13
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `factories`:</strong></p><p>Lưu trữ thông tin về các nhà máy, bao gồm mã nhà máy, địa điểm và chi phí lao động.</p><p>- factory_id (INT): Mã nhà máy.</p><p>- location (VARCHAR(50)): Địa điểm nhà máy.</p><p>- labor_cost (DECIMAL(10,2)): Chi phí lao động của nhà máy.</p><p><strong>Bảng `products_factories`:</strong></p><p>Lưu trữ thông tin về sản phẩm và nhà máy sản xuất sản phẩm đó.</p><p>- product_id (INT): Mã sản phẩm.</p><p>- factory_id (INT): Mã nhà máy (foreign key từ `factories`).</p><p><strong>Bảng `sales`:</strong></p><p>Lưu trữ thông tin về doanh thu từ việc bán sản phẩm.</p><p>- sale_id (INT): Mã bán hàng.</p><p>- product_id (INT): Mã sản phẩm (foreign key từ `products_factories`).</p><p>- revenue (DECIMAL(10,2)): Doanh thu bán hàng.</p><p><strong>Nhiệm vụ:</strong></p><p>Tổng doanh thu của các sản phẩm được sản xuất ở Mỹ Latinh là bao nhiêu?</p><p><strong>Output:</strong></p><p><strong>Một giá trị số</strong> duy nhất, đại diện cho <strong>Tổng doanh thu</strong> của tất cả các sản phẩm được sản xuất tại các nhà máy có địa điểm chứa chuỗi ký tự <strong>'Latin America'</strong> (Mỹ Latinh).</p>

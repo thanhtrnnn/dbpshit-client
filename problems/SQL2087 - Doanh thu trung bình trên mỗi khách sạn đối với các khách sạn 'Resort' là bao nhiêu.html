@@ -1,0 +1,8 @@
+ID: SQL2087
+Tiêu đề: Doanh thu trung bình trên mỗi khách sạn đối với các khách sạn 'Resort' là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/2ae85d8d-fc0a-4a39-9a67-0107deada35f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/2ae85d8d-fc0a-4a39-9a67-0107deada35f
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Cho hai bảng dữ liệu:</strong></p><h4><strong>Bảng hotels_types</strong></h4><ul><li>hotel_id (INT): Mã khách sạn</li><li>type (TEXT): Loại khách sạn</li></ul><h4><strong>Bảng bookings</strong></h4><ul><li>booking_id (INT): Mã đặt phòng</li><li>hotel_id (INT): Mã khách sạn (foreign key từ hotels_types)</li><li>revenue (FLOAT): Doanh thu từ đặt phòng</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Doanh thu trung bình trên mỗi khách sạn đối với các khách sạn 'Resort' là bao nhiêu?</p><p><strong>Output:</strong></p><p><strong>Một giá trị số</strong> duy nhất, đại diện cho <strong>doanh thu trung bình trên mỗi khách sạn</strong>. Giá trị này được tính bằng cách:</p><ol><li>Đầu tiên, tính <strong>tổng doanh thu</strong> cho <strong>mỗi khách sạn</strong>.</li><li>Sau đó, chỉ lấy những tổng doanh thu thuộc về các khách sạn có loại hình là <strong>'Resort'</strong>.</li><li>Cuối cùng, tính <strong>trung bình</strong> của các tổng doanh thu đó.</li></ol><p><br></p>

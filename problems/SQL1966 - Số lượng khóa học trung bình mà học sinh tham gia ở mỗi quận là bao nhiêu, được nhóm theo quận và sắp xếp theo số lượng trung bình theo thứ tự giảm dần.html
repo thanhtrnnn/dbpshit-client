@@ -1,0 +1,8 @@
+ID: SQL1966
+Tiêu đề: Số lượng khóa học trung bình mà học sinh tham gia ở mỗi quận là bao nhiêu, được nhóm theo quận và sắp xếp theo số lượng trung bình theo thứ tự giảm dần?
+URL WEB: https://db.ptit.edu.vn/question-detail/95fb3b78-9171-4c80-a7d1-427c47de4f6d
+URL API: https://dbapi.ptit.edu.vn/api/app/question/95fb3b78-9171-4c80-a7d1-427c47de4f6d
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng school_districts:</strong></p><p>Lưu trữ thông tin về các khu học chánh.</p><ul><li>district_id (INT): Mã khu học chánh.</li><li>district_name (TEXT): Tên khu học chánh.</li></ul><p><strong>Bảng students:</strong></p><p>Lưu trữ thông tin về học sinh.</p><ul><li>student_id (INT): Mã học sinh.</li><li>district_id (INT): Mã khu học chánh (foreign key từ school_districts).</li><li>num_courses (INT): Số khóa học mà học sinh tham gia.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Số lượng khóa học trung bình mà học sinh tham gia ở mỗi quận là bao nhiêu, được nhóm theo quận và sắp xếp theo số lượng trung bình giảm dần?</p>

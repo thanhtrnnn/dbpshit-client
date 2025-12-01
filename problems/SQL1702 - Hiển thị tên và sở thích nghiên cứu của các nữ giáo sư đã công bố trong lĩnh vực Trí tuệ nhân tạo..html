@@ -1,0 +1,25 @@
+ID: SQL1702
+Tiêu đề: Hiển thị tên và sở thích nghiên cứu của các nữ giáo sư đã công bố trong lĩnh vực Trí tuệ nhân tạo.
+URL WEB: https://db.ptit.edu.vn/question-detail/5b83f1f2-def4-44c2-8602-1d486d0fa980
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5b83f1f2-def4-44c2-8602-1d486d0fa980
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `professors`: Bảng này lưu trữ thông tin về các giảng viên, bao gồm ID, tên, giới tính, khoa, lĩnh vực nghiên cứu và lĩnh vực xuất bản.</strong></p><ul><li>`id (INT)`: Mã định danh của giảng viên.</li><li>`name (VARCHAR(50))`: Tên giảng viên.</li><li>`gender (VARCHAR(10))`: Giới tính của giảng viên.</li><li>`department (VARCHAR(50))`: Khoa giảng viên làm việc.</li><li>`research_interest (VARCHAR(50))`: Lĩnh vực nghiên cứu của giảng viên.</li><li>`publication_field (VARCHAR(50))`: Lĩnh vực xuất bản của giảng viên.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Hiển thị tên và sở thích nghiên cứu của các nữ giáo sư đã công bố trong lĩnh vực Trí tuệ nhân tạo.</p><p><br></p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----+-------------------+---------+------------------+----------------------+--------------------------+
+| id | name              | gender  | department       | research_interest    | publication_field        |
++----+-------------------+---------+------------------+----------------------+--------------------------+
+| 1  | Alice Nguyen      | Female  | Computer Science | Machine Learning     | Artificial Intelligence  |
+| 2  | John Smith        | Male    | Physics          | Quantum Computing    | Quantum Mechanics        |
+| 3  | Emma Tran         | Female  | Computer Science | Robotics             | Artificial Intelligence  |
+| 4  | David Lee         | Male    | Math             | Statistics           | Data Science             |
+| 5  | Sarah Kim         | Female  | Engineering      | Automation           | Mechanical Engineering   |
++----+-------------------+---------+------------------+----------------------+--------------------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----------------+-------------------+
+| name           | research_interest |
++----------------+-------------------+
+| Alice Nguyen   | Machine Learning  |
+| Emma Tran      | Robotics          |
++----------------+-------------------+
+</pre><p><br></p>

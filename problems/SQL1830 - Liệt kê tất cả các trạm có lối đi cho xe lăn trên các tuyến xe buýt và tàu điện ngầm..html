@@ -1,0 +1,58 @@
+ID: SQL1830
+Tiêu đề: Liệt kê tất cả các trạm có lối đi cho xe lăn trên các tuyến xe buýt và tàu điện ngầm.
+URL WEB: https://db.ptit.edu.vn/question-detail/bcebdca0-421c-4728-bff4-08eecaa2de1f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/bcebdca0-421c-4728-bff4-08eecaa2de1f
+Loại Database: Mysql
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng stations</strong></p><p><strong> Bảng này lưu trữ thông tin về các trạm</strong>, bao gồm <strong>ID trạm</strong> và <strong>tên trạm</strong>.</p><pre class="ql-syntax" spellcheck="false">+-------------+-----------------------+---------------------------------------+
+| Cột         | Kiểu dữ liệu          | Mô tả                                 |
++-------------+-----------------------+---------------------------------------+
+| station_id  | INT                   | Mã định danh trạm                     |
+| station_name| VARCHAR(255)          | Tên của trạm                          |
++-------------+-----------------------+---------------------------------------+
+</pre><p><strong>Bảng bus_stations</strong></p><p><strong> Bảng này lưu trữ thông tin về các trạm xe buýt</strong>, bao gồm <strong>ID tuyến</strong>, <strong>ID trạm</strong>, và <strong>hỗ trợ người khuyết tật</strong>.</p><pre class="ql-syntax" spellcheck="false">+---------------------------+-----------------------+----------------------------------------------+
+| Cột                       | Kiểu dữ liệu          | Mô tả                                        |
++---------------------------+-----------------------+----------------------------------------------+
+| route_id                  | INT                   | Mã tuyến xe buýt                             |
+| station_id                | INT                   | Mã trạm xe buýt                              |
+| is_wheelchair_accessible  | BOOLEAN               | Trạm có hỗ trợ người khuyết tật không        |
++---------------------------+-----------------------+----------------------------------------------+
+</pre><p><strong>Bảng subway_stations</strong></p><p><strong> Bảng này lưu trữ thông tin về các trạm tàu điện ngầm</strong>, bao gồm <strong>ID tuyến</strong>, <strong>ID trạm</strong>, và <strong>hỗ trợ người khuyết tật</strong>.</p><pre class="ql-syntax" spellcheck="false">+---------------------------+-----------------------+----------------------------------------------+
+| Cột                       | Kiểu dữ liệu          | Mô tả                                        |
++---------------------------+-----------------------+----------------------------------------------+
+| line_id                   | INT                   | Mã tuyến tàu điện ngầm                       |
+| station_id                | INT                   | Mã trạm tàu điện ngầm                        |
+| is_wheelchair_accessible  | BOOLEAN               | Trạm có hỗ trợ người khuyết tật không        |
++---------------------------+-----------------------+----------------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Liệt kê <strong>tất cả các trạm có lối đi cho xe lăn</strong> (is_wheelchair_accessible = TRUE)</p><p> <strong>trên các tuyến xe buýt hoặc tàu điện ngầm</strong>.</p><h3>Input mẫu</h3><p><strong>Bảng stations</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+--------------+
+| station_id  | station_name |
++-------------+--------------+
+| 1           | Central Park |
+| 2           | City Hall    |
+| 3           | Riverside    |
+| 4           | North Gate   |
++-------------+--------------+
+</pre><p><strong>Bảng bus_stations</strong></p><pre class="ql-syntax" spellcheck="false">+----------+-------------+---------------------------+
+| route_id | station_id  | is_wheelchair_accessible  |
++----------+-------------+---------------------------+
+| 10       | 1           | TRUE                      |
+| 11       | 3           | FALSE                     |
+| 12       | 4           | TRUE                      |
++----------+-------------+---------------------------+
+</pre><p><strong>Bảng subway_stations</strong></p><pre class="ql-syntax" spellcheck="false">+----------+-------------+---------------------------+
+| line_id  | station_id  | is_wheelchair_accessible  |
++----------+-------------+---------------------------+
+| 1        | 2           | TRUE                      |
+| 2        | 3           | TRUE                      |
+| 3        | 4           | FALSE                     |
++----------+-------------+---------------------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+--------------+
+| station_name |
++--------------+
+| Central Park |
+| City Hall    |
+| Riverside    |
+| North Gate   |
++--------------+
+</pre><p><br></p>

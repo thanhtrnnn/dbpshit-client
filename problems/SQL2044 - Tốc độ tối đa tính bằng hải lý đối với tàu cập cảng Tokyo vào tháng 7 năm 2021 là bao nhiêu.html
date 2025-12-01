@@ -1,0 +1,8 @@
+ID: SQL2044
+Tiêu đề: Tốc độ tối đa tính bằng hải lý đối với tàu cập cảng Tokyo vào tháng 7 năm 2021 là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/003270d2-3f50-4600-a341-889f9505619b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/003270d2-3f50-4600-a341-889f9505619b
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Vessels, DockingHistory</strong>: Quản lý thông tin tàu và lịch sử cập cảng.</p><p><strong>Bảng Vessels (Id INT, Name VARCHAR(255), AverageSpeed DECIMAL(5,2))</strong>:</p><ul><li>Id (INT): Mã số định danh duy nhất cho tàu.</li><li>Name (VARCHAR(255)): Tên tàu.</li><li>AverageSpeed (DECIMAL(5,2)): Tốc độ trung bình của tàu (giả định là hải lý/giờ).</li></ul><p><strong>Bảng DockingHistory (Id INT, VesselId INT, Port VARCHAR(255), DockingDateTime DATETIME)</strong>:</p><ul><li>Id (INT): Mã số định danh duy nhất cho lịch sử cập cảng.</li><li>VesselId (INT): Mã tàu (liên kết tới bảng Vessels).</li><li>Port (VARCHAR(255)): Tên cảng cập cảng.</li><li>DockingDateTime (DATETIME): Thời gian tàu cập cảng.</li></ul><p><strong>Nhiệm vụ:</strong> Tốc độ tối đa tính bằng hải lý đối với tàu cập cảng Tokyo vào tháng 7 năm 2021 là bao nhiêu?</p><p><strong>Output:</strong></p><p><strong>Một giá trị số </strong>duy nhất, đại diện cho <strong>Tốc độ trung bình tối đa</strong> của tất cả các tàu (Vessels) thỏa mãn đồng thời ba điều kiện sau:</p><ol><li>Tàu đó đã có lịch sử cập cảng (DockingHistory).</li><li>Cảng cập cảng (Port) là <strong>'Tokyo'</strong>.</li><li>Thời gian cập cảng (DockingDateTime) là vào <strong>năm 2021</strong> và <strong>tháng 7</strong>.</li></ol>

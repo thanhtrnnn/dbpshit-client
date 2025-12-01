@@ -1,0 +1,8 @@
+ID: SQL2226
+Tiêu đề: Có bao nhiêu xe điện đã được bán ở Đức và Pháp trong Quý 1 năm 2021 và Quý 2 năm 2021?
+URL WEB: https://db.ptit.edu.vn/question-detail/1b5b1e65-d879-463c-b588-f5b1908ebb01
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1b5b1e65-d879-463c-b588-f5b1908ebb01
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có một bảng dữ liệu:</p><p><strong>Bảng electric_vehicle_sales – Doanh số bán xe điện theo quốc gia và quý:</strong></p><ul><li>country (VARCHAR(50)) – Tên quốc gia</li><li>sale_quarter (VARCHAR(10)) – Quý bán hàng (ví dụ: 'Q1 2021', 'Q2 2021')</li><li>quantity (INT) – Số lượng xe điện bán ra trong quý đó</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tính <strong>tổng số xe điện đã bán ra</strong> ở <strong>Đức (Germany)</strong> và <strong>Pháp (France)</strong> trong <strong>Quý 1 năm 2021</strong> và <strong>Quý 2 năm 2021</strong>, <strong>và trả kết quả theo dạng bảng có 2 cột country và tổng số lượng tương ứng.</strong></p><p><br></p><p><strong>Output: </strong>country, SUM(quantity).</p>

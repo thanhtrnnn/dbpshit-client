@@ -1,0 +1,12 @@
+ID: SQL2134
+Tiêu đề: Xác định những thành viên đã tham gia các buổi tập luyện trong cả tháng 1 và tháng 2 năm 2022.
+URL WEB: https://db.ptit.edu.vn/question-detail/ee3b2c5e-9ecf-4eaa-b0ac-a0d0332d124c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ee3b2c5e-9ecf-4eaa-b0ac-a0d0332d124c
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Cho hai bảng dữ liệu:</strong></p><p><strong>Bảng Members</strong> lưu trữ thông tin về các thành viên, với cấu trúc:</p><ul><li>MemberID (INT): Mã thành viên</li><li>FirstName (VARCHAR): Tên</li><li>LastName (VARCHAR): Họ</li></ul><p><strong>Bảng Workouts</strong> lưu trữ thông tin về các buổi tập luyện của thành viên, với cấu trúc:</p><ul><li>WorkoutID (INT): Mã buổi tập</li><li>MemberID (INT): Mã thành viên</li><li>WorkoutDate (DATE): Ngày buổi tập</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Xác định những thành viên đã tham gia các buổi tập luyện trong cả tháng 1 và tháng 2 năm 2022.</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+----------+-----------+----------+
+| MemberID | FirstName | LastName |
++----------+-----------+----------+
+| 1        | John      | Doe      |
++----------+-----------+----------+</pre>

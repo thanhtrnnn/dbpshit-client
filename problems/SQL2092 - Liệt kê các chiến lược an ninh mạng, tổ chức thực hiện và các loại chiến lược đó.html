@@ -1,0 +1,13 @@
+ID: SQL2092
+Tiêu đề: Liệt kê các chiến lược an ninh mạng, tổ chức thực hiện và các loại chiến lược đó
+URL WEB: https://db.ptit.edu.vn/question-detail/b3dd59c1-7069-4afd-8f8c-bcc5b3e145ae
+URL API: https://dbapi.ptit.edu.vn/api/app/question/b3dd59c1-7069-4afd-8f8c-bcc5b3e145ae
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 12px;">Cho hai bảng dữ liệu:</strong></p><h4><strong style="font-size: 12px;">Bảng CyberStrategy</strong></h4><ul><li><span style="font-size: 12px;">id (INT): Mã chiến lược</span></li><li><span style="font-size: 12px;">name (VARCHAR(255)): Tên chiến lược</span></li><li><span style="font-size: 12px;">description (TEXT): Mô tả chiến lược</span></li><li><span style="font-size: 12px;">organization_id (INT): Mã tổ chức (khóa ngoại tới Organization.id)</span></li></ul><h4><strong style="font-size: 12px;">Bảng Organization</strong></h4><ul><li><span style="font-size: 12px;">id (INT): Mã tổ chức</span></li><li><span style="font-size: 12px;">name (VARCHAR(255)): Tên tổ chức</span></li><li><span style="font-size: 12px;">type (VARCHAR(255)): Loại tổ chức</span></li></ul><p><strong style="font-size: 12px;">Nhiệm vụ:</strong></p><p><span style="font-size: 12px;">Liệt kê các chiến lược an ninh mạng, tổ chức thực hiện và các loại chiến lược đó</span></p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+---------------------+---------------------+----------------+
+| name                | organization_name | type           |
++---------------------+---------------------+----------------+
+| Threat Hunting      | NSA               | Intelligence   |
++---------------------+---------------------+----------------+
+</pre>

@@ -1,0 +1,8 @@
+ID: SQL2019
+Tiêu đề: Tổng số lượng hàng may mặc chưa bán được của mỗi thương hiệu, được nhóm theo quốc gia, có số lượng lớn hơn 500 là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/e2badc32-31a8-4de8-bb85-fc9aa2af7a8a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e2badc32-31a8-4de8-bb85-fc9aa2af7a8a
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Countries:</strong></p><p>Lưu trữ thông tin về các quốc gia.</p><ul><li>id (INT): Mã số định danh duy nhất cho quốc gia.</li><li>country (VARCHAR(50)): Tên quốc gia.</li></ul><p><strong>Bảng Brands:</strong></p><p>Lưu trữ thông tin về các thương hiệu.</p><ul><li>id (INT): Mã số định danh duy nhất cho thương hiệu.</li><li>brand (VARCHAR(50)): Tên thương hiệu.</li></ul><p><strong>Bảng Inventory:</strong></p><p>Lưu trữ thông tin về số lượng sản phẩm của các thương hiệu tại các quốc gia.</p><ul><li>id (INT): Mã số định danh duy nhất cho hàng tồn kho.</li><li>country_id (INT): Mã quốc gia (foreign key từ bảng Countries).</li><li>brand_id (INT): Mã thương hiệu (foreign key từ bảng Brands).</li><li>quantity (INT): Số lượng sản phẩm tồn kho.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tổng số lượng hàng may mặc chưa bán được của mỗi thương hiệu, được nhóm theo quốc gia, có tổng số lượng tồn kho lớn hơn 500 là bao nhiêu?</p><p><strong>Output:</strong></p><p>Danh sách gồm ba cột: tên quốc gia <strong>(country)</strong>, <strong>tên thương hiệu</strong> <strong>(brand)</strong>, và tổng số lượng hàng tồn kho <strong>(total_unsold_quantity)</strong> của thương hiệu đó tại quốc gia đó. Danh sách <strong>bao gồm</strong> các cặp Quốc gia/Thương hiệu mà tổng số lượng tồn kho của chúng <strong>lớn hơn 500.</strong></p>

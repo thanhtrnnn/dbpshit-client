@@ -1,0 +1,8 @@
+ID: SQL2698
+Tiêu đề: Những sáng kiến phát triển lực lượng lao động chung giữa các nhà máy ở cùng khu vực là gì?
+URL WEB: https://db.ptit.edu.vn/question-detail/1a021352-d5f3-42e6-b8ba-eea8a7176823
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1a021352-d5f3-42e6-b8ba-eea8a7176823
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `factories`: Danh sách các nhà máy </strong></p><ul><li><span style="font-size: 14px;">`factory_id` (INT): Mã định danh nhà máy.</span></li><li><span style="font-size: 14px;">`name` (TEXT): Tên nhà máy.</span></li><li><span style="font-size: 14px;">`location` (TEXT): Vị trí nhà máy.</span></li></ul><p><strong style="font-size: 14px;">Bảng `initiatives`: Các sáng kiến do nhà máy triển khai </strong></p><ul><li><span style="font-size: 14px;">`initiative_id` (INT): Mã định danh sáng kiến.</span></li><li><span style="font-size: 14px;">`factory_id` (INT): Mã nhà máy (liên kết với bảng factories).</span></li><li><span style="font-size: 14px;">`description` (TEXT): Mô tả sáng kiến.</span></li><li><span style="font-size: 14px;">`start_date` (DATE): Ngày bắt đầu.</span></li><li><span style="font-size: 14px;">`end_date` (DATE): Ngày kết thúc.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Những sáng kiến phát triển lực lượng lao động chung giữa các nhà máy ở cùng khu vực là gì?</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">location, description</span></p>

@@ -1,0 +1,13 @@
+ID: SQL2093
+Tiêu đề: Số lượt phát nhạc dân gian tối thiểu trong tháng 7 là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/fb79ad05-28bb-4604-a234-00ead442663c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/fb79ad05-28bb-4604-a234-00ead442663c
+Loại Database: Mysql
+------------------------------
+
+<h4><strong style="font-size: 14px;">Bảng Streams</strong></h4><ul><li><span style="font-size: 14px;">id (INT): Mã dòng nhạc</span></li><li><span style="font-size: 14px;">genre (VARCHAR(20)): Thể loại nhạc</span></li><li><span style="font-size: 14px;">date (DATE): Ngày phát hành dòng nhạc</span></li><li><span style="font-size: 14px;">streams (INT): Số lượt nghe dòng nhạc</span></li></ul><p><strong style="font-size: 14px;">Nhiệm vụ:</strong></p><p><span style="font-size: 14px;">Số lượt phát nhạc dân gian tối thiểu trong tháng 7 là bao nhiêu?</span></p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+------------------+
+| MIN(streams)     |
++------------------+
+| 161              |
++------------------+
+</pre>

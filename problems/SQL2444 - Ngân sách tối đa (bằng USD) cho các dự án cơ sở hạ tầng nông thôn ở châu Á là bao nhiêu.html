@@ -1,0 +1,8 @@
+ID: SQL2444
+Tiêu đề: Ngân sách tối đa (bằng USD) cho các dự án cơ sở hạ tầng nông thôn ở châu Á là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/4140d910-99ae-4dad-981d-cdb63184ff60
+URL API: https://dbapi.ptit.edu.vn/api/app/question/4140d910-99ae-4dad-981d-cdb63184ff60
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng Rural_Infrastructure_Projects</strong></h3><p>Chứa thông tin về <strong>các dự án hạ tầng nông thôn</strong>.</p><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi dự án (khóa chính của bảng).</li><li>project_name (TEXT): Tên của dự án hạ tầng nông thôn (ví dụ: "Smart Irrigation", "Rural Road Upgrade").</li><li>budget (FLOAT): Ngân sách của dự án (đơn vị: USD).</li><li>country (TEXT): Quốc gia nơi dự án được thực hiện.</li></ul><p><strong>Yêu cầu:</strong></p><p> Xác định <strong>ngân sách tối đa (USD)</strong> trong số <strong>các dự án cơ sở hạ tầng nông thôn được thực hiện tại châu Á</strong>. (Asia)</p><p><br></p><p>Output: <span style="font-size: 14px;">MAX(budget)</span></p>

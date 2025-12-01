@@ -1,0 +1,44 @@
+{
+    "status": 1,
+    "result": [
+        {
+            "name": "Belgium",
+            "continent": "Europe",
+            "area": 30528,
+            "population": 11589623,
+            "gdp": 515300000000
+        },
+        {
+            "name": "Brazil",
+            "continent": "South America",
+            "area": 8515767,
+            "population": 211000000,
+            "gdp": 2055500000000
+        },
+        {
+            "name": "China",
+            "continent": "Asia",
+            "area": 9596961,
+            "population": 1393000000,
+            "gdp": 14140000000000
+        },
+        {
+            "name": "Denmark",
+            "continent": "Europe",
+            "area": 42933,
+            "population": 5806081,
+            "gdp": 355676000000
+        },
+        {
+            "name": "Ethiopia",
+            "continent": "Africa",
+            "area": 1104300,
+            "population": 114963588,
+            "gdp": 111264000000
+        }
+    ],
+    "typeQuery": "SELECT",
+    "timeExec": 1.0,
+    "testPass": 0,
+    "totalTest": 0
+}

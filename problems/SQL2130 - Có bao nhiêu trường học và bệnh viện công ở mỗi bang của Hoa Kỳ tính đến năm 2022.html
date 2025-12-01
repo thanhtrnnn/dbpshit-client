@@ -1,0 +1,15 @@
+ID: SQL2130
+Tiêu đề: Có bao nhiêu trường học và bệnh viện công ở mỗi bang của Hoa Kỳ tính đến năm 2022?
+URL WEB: https://db.ptit.edu.vn/question-detail/47b7baac-ebbc-43e4-aa2d-9a2d44c87207
+URL API: https://dbapi.ptit.edu.vn/api/app/question/47b7baac-ebbc-43e4-aa2d-9a2d44c87207
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng Facilities</strong></h3><p>Lưu trữ thông tin về các cơ sở tại Hoa Kỳ, với cấu trúc:</p><ul><li>State (VARCHAR): Tiểu bang</li><li>Type (VARCHAR): Loại cơ sở (ví dụ: 'Public School', 'Public Hospital', ...)</li><li>Count (INT): Số lượng cơ sở</li><li>Year (INT): Năm thống kê</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Có bao nhiêu trường học và bệnh viện công ở mỗi bang của Hoa Kỳ tính đến năm 2022?</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+-----------------+------------------+
+| State     | Type            | TotalFacilities  |
++-----------+-----------------+------------------+
+| Alabama   | Public School   | 120              |
+| Alabama   | Public Hospital | 25               |
+| Alaska    | Public School   | 22               |
+| Alaska    | Public Hospital | 4                |
++-----------+-----------------+------------------+</pre>

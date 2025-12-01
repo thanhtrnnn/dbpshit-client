@@ -1,0 +1,8 @@
+ID: SQL2011
+Tiêu đề: Tác phẩm nghệ thuật đắt nhất được tạo ra bởi một nghệ sĩ 'Nữ châu Âu' là gì?
+URL WEB: https://db.ptit.edu.vn/question-detail/d04ea154-6c45-4ba0-bcee-43704be3ebc7
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d04ea154-6c45-4ba0-bcee-43704be3ebc7
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Artists:</strong></p><p>Lưu trữ thông tin về các nghệ sĩ, bao gồm mã nghệ sĩ, tên nghệ sĩ, giới tính và dân tộc.</p><ul><li>id (INT): Mã số định danh duy nhất cho nghệ sĩ.</li><li>artist_name (VARCHAR(255)): Tên nghệ sĩ.</li><li>gender (VARCHAR(10)): Giới tính của nghệ sĩ.</li><li>ethnicity (VARCHAR(255)): Dân tộc của nghệ sĩ.</li></ul><p><strong>Bảng Artworks:</strong></p><p>Lưu trữ thông tin về các tác phẩm nghệ thuật, bao gồm mã tác phẩm, mã nghệ sĩ, tên tác phẩm, năm sáng tác và giá trị của tác phẩm.</p><ul><li>id (INT): Mã số định danh duy nhất cho tác phẩm nghệ thuật.</li><li>artist_id (INT): Mã nghệ sĩ (foreign key từ Artists).</li><li>artwork_name (VARCHAR(255)): Tên tác phẩm nghệ thuật.</li><li>year_created (INT): Năm sáng tác.</li><li>price (FLOAT): Giá trị của tác phẩm nghệ thuật.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tác phẩm nghệ thuật đắt nhất được tạo ra bởi một nghệ sĩ nữ châu Âu là gì?</p><p><strong>Output:</strong></p><p>Một bảng chứa ba cột: <strong>tên nghệ sĩ</strong> (artist_name), <strong>tên tác phẩm nghệ thuật</strong> (artwork_name), và <strong>giá trị</strong> (price) của tác phẩm nghệ thuật đó. Một hàng trong bảng đại diện cho <strong>tác phẩm có giá cao nhất</strong> được tạo ra bởi một nghệ sĩ thỏa mãn hai điều kiện: <strong>giới tính là nữ</strong> (Female) và <strong>người (dân tộc) Châu Âu</strong> (European).</p>

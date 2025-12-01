@@ -1,0 +1,27 @@
+ID: SQL1818
+Tiêu đề: Tính nhiệt độ và độ ẩm trung bình cho các nhà kính tiêu thụ năng lượng cao nhất trong tháng vừa qua.
+URL WEB: https://db.ptit.edu.vn/question-detail/807a6535-b000-42d1-9a54-05d91a0918eb
+URL API: https://dbapi.ptit.edu.vn/api/app/question/807a6535-b000-42d1-9a54-05d91a0918eb
+Loại Database: Mysql
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng greenhouse</strong> — Các loại <strong>nhà kính</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+---------------+
+| Tên cột     | Kiểu dữ liệu  |
++-------------+---------------+
+| id          | INT           |
+| name        | VARCHAR(255)  |
++-------------+---------------+
+</pre><p><strong>Bảng sensor</strong> — Thông tin của các <strong>cảm biến</strong></p><pre class="ql-syntax" spellcheck="false">+-------------------+---------------+
+| Tên cột           | Kiểu dữ liệu  |
++-------------------+---------------+
+| id                | INT           |
+| greenhouse_id      | INT           |
+| temperature        | INT           |
+| humidity           | INT           |
+| energy_consumption | INT           |
+| recorded_at        | TIMESTAMP     |
++-------------------+---------------+
+</pre><h3>Nhiệm vụ</h3><p>Xác định <strong>nhà kính có tổng mức tiêu thụ năng lượng cao nhất trong tháng 8 năm 2025</strong>,</p><p> đồng thời tính <strong>nhiệt độ trung bình</strong> và <strong>độ ẩm trung bình</strong> của nhà kính đó trong cùng khoảng thời gian.</p><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+---------------+------+----------------+--------------+
+| greenhouse_id | name | avg_temperature| avg_humidity |
++---------------+------+----------------+--------------+
+</pre><p><br></p>

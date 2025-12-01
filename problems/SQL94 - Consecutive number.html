@@ -1,0 +1,30 @@
+ID: SQL94
+Tiêu đề: Consecutive number
+URL WEB: https://db.ptit.edu.vn/question-detail/6b3ec22e-7dde-46e1-83c3-0c44622faefe
+URL API: https://dbapi.ptit.edu.vn/api/app/question/6b3ec22e-7dde-46e1-83c3-0c44622faefe
+Loại Database: Sql Server
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng: Logs</strong></p><p><br></p><pre class="ql-syntax" spellcheck="false">+-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| id          | int     |
+| num         | varchar |
++-------------+---------+
+</pre><p><br></p><p>Trong SQL, <strong><em>id</em></strong> là khóa chính của bảng này.</p><p><strong><em>id</em></strong> là cột tự tăng (auto increment).</p><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ:</strong></p><p>Tìm tất cả các số xuất hiện ít nhất ba lần liên tiếp.</p><p>Trả về bảng kết quả theo thứ tự tăng dần các số.</p><p><br></p><p><strong style="font-size: 14px;">Ví dụ:</strong></p><p>Input: Logs table:</p><pre class="ql-syntax" spellcheck="false">+----+-----+
+| id | num |
++----+-----+
+| 1  | 1   |
+| 2  | 1   |
+| 3  | 1   |
+| 4  | 2   |
+| 5  | 1   |
+| 6  | 2   |
+| 7  | 2   |
++----+-----+
+</pre><p><br></p><p>Output:</p><pre class="ql-syntax" spellcheck="false">+-----------------+
+| ConsecutiveNums |
++-----------------+
+| 1               |
++-----------------+
+</pre><p><br></p><p><strong style="font-size: 14px;">Giải thích:</strong></p><ul><li>Số 1 xuất hiện liên tiếp ít nhất 3 lần (id 1, 2, 3).</li><li>Các số khác không thỏa mãn điều kiện xuất hiện liên tiếp ít nhất 3 lần.</li></ul>

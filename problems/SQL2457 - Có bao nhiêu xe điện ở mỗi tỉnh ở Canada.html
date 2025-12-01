@@ -1,0 +1,8 @@
+ID: SQL2457
+Tiêu đề: Có bao nhiêu xe điện ở mỗi tỉnh ở Canada?
+URL WEB: https://db.ptit.edu.vn/question-detail/64e5806d-948d-4b88-b491-184eca83fec3
+URL API: https://dbapi.ptit.edu.vn/api/app/question/64e5806d-948d-4b88-b491-184eca83fec3
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng canada_vehicles</strong></h3><p>Chứa thông tin về <strong>số lượng phương tiện</strong> theo từng <strong>tỉnh bang ở Canada</strong>.</p><p><strong>Cấu trúc:</strong></p><ul><li>province (VARCHAR(20)): Tên tỉnh bang ở Canada (ví dụ: 'Ontario', 'Quebec').</li><li>vehicle_type (VARCHAR(20)): Loại phương tiện (ví dụ: 'Car', 'Truck', 'Electric').</li><li>quantity (INT): Số lượng phương tiện của loại đó tại tỉnh bang tương ứng.</li></ul><p><strong>Yêu cầu:</strong></p><p> Tính <strong>số lượng xe điện (vehicle_type = 'electric') ở mỗi tỉnh</strong> tại Canada.</p><p><br></p><p>Output: province, vehicle_type, total_electric_vehicles</p>

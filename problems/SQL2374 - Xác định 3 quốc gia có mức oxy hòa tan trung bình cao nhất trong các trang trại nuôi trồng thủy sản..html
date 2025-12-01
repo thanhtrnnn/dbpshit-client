@@ -1,0 +1,8 @@
+ID: SQL2374
+Tiêu đề: Xác định 3 quốc gia có mức oxy hòa tan trung bình cao nhất trong các trang trại nuôi trồng thủy sản.
+URL WEB: https://db.ptit.edu.vn/question-detail/1628ffbf-e850-41e3-8eab-496d57002b69
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1628ffbf-e850-41e3-8eab-496d57002b69
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng Farm</strong></h3><p>Chứa thông tin về các trang trại nuôi trồng thủy sản.</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi trang trại (khóa chính).</li><li>name (VARCHAR(50)): Tên của trang trại.</li><li>country (VARCHAR(50)): Quốc gia nơi trang trại tọa lạc.</li></ul><h3><strong>Bảng Measurement</strong></h3><p>Chứa thông tin về các phép đo chất lượng nước.</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi phép đo (khóa chính).</li><li>farm_id (INT): Mã định danh của trang trại được đo (liên kết với bảng Farm).</li><li>dissolved_oxygen (FLOAT): Nồng độ oxy hòa tan đo được.</li><li>timestamp (TIMESTAMP): Thời điểm thực hiện phép đo.</li></ul><h3><strong>Nhiệm vụ</strong></h3><p>Xác định 3 quốc gia có mức oxy hòa tan trung bình cao nhất trong các trang trại nuôi trồng thủy sản.</p>

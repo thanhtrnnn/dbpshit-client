@@ -1,0 +1,8 @@
+ID: SQL1759
+Tiêu đề: Liệt kê tên của tất cả các cầu thủ NHL đã lập hat-trick (3 bàn) trong một trận đấu, cùng với đội bóng mà họ thi đấu và ngày diễn ra trận đấu.
+URL WEB: https://db.ptit.edu.vn/question-detail/642b33e8-7fa1-4b73-a267-4e2e3bbe562e
+URL API: https://dbapi.ptit.edu.vn/api/app/question/642b33e8-7fa1-4b73-a267-4e2e3bbe562e
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `nhl_games`: Bảng này lưu trữ thông tin về các trận đấu NHL, bao gồm ID trận đấu, ngày trận đấu, đội nhà, đội khách, số bàn thắng đội nhà và đội khách. </strong></p><ul><li>`id (INT)`: Mã định danh của trận đấu.</li><li>`date (DATE)`: Ngày diễn ra trận đấu.</li><li>`home_team (VARCHAR(50))`: Tên đội nhà.</li><li>`away_team (VARCHAR(50))`: Tên đội khách.</li><li>`goals_home (INT)`: Số bàn thắng của đội nhà.</li><li>`goals_away (INT)`: Số bàn thắng của đội khách.</li></ul><p><br></p><p><strong>Bảng `nhl_players_goals`: Bảng này lưu trữ thông tin về các cầu thủ ghi bàn trong các trận đấu NHL.</strong></p><ul><li>`id (INT)`: Mã định danh của sự kiện ghi bàn.</li><li>`game_id (INT)`: Mã trận đấu. - `player_id (INT)`: Mã cầu thủ ghi bàn.</li><li>`goals (INT)`: Số bàn thắng của cầu thủ.</li><li>`assists (INT)`: Số pha kiến tạo của cầu thủ.</li></ul><p><br></p><p><strong>Bảng `nhl_players`: Bảng này lưu trữ thông tin về các cầu thủ NHL, bao gồm ID cầu thủ, tên cầu thủ và đội của cầu thủ.</strong></p><ul><li>`id (INT)`: Mã định danh của cầu thủ.</li><li>`name (VARCHAR(100))`: Tên cầu thủ.</li><li>`team (VARCHAR(50))`: Tên đội của cầu thủ.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Liệt kê tên của tất cả các cầu thủ NHL đã lập hat-trick (3 bàn) trong một trận đấu, cùng với đội bóng mà họ thi đấu và ngày diễn ra trận đấu.</p>

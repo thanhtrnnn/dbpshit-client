@@ -1,0 +1,13 @@
+ID: SQL2110
+Tiêu đề: Giá vé trung bình cho các trận đấu bóng đá ở Trung Tây là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/71a02d4a-9b8a-4635-a6e2-38257ef1855a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/71a02d4a-9b8a-4635-a6e2-38257ef1855a
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Cho ba bảng dữ liệu:</strong></p><h3><strong style="font-size: 14px;">Bảng sports</strong></h3><ul><li><span style="font-size: 14px;">id (INT): Mã môn thể thao</span></li><li><span style="font-size: 14px;">name (VARCHAR): Tên môn thể thao</span></li></ul><h3><strong style="font-size: 14px;">Bảng regions</strong></h3><ul><li><span style="font-size: 14px;">id (INT): Mã khu vực</span></li><li><span style="font-size: 14px;">name (VARCHAR): Tên khu vực</span></li></ul><h3><strong style="font-size: 14px;">Bảng games</strong></h3><ul><li><span style="font-size: 14px;">id (INT): Mã trận đấu</span></li><li><span style="font-size: 14px;">sport_id (INT): Mã môn thể thao (foreign key tới sports.id)</span></li><li><span style="font-size: 14px;">region_id (INT): Mã khu vực (foreign key tới regions.id)</span></li><li><span style="font-size: 14px;">price (INT): Giá vé</span></li><li><span style="font-size: 14px;">date (DATE): Ngày tổ chức trận đấu. </span></li></ul><p><strong style="font-size: 14px;">Nhiệm vụ:</strong></p><p><span style="font-size: 14px;">Giá vé trung bình cho các trận đấu bóng đá ở Trung Tây là bao nhiêu?</span></p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+
+| avg_price   |
++-------------+
+| 75.0        |
++-------------+
+</pre>

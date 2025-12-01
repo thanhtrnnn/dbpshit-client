@@ -1,0 +1,8 @@
+ID: SQL2748
+Tiêu đề: Những mỏ nào có cả tỷ lệ năng suất trên 10 và dữ liệu khảo sát địa chất?
+URL WEB: https://db.ptit.edu.vn/question-detail/511252cc-ba16-4ce3-8788-d76ba9ffbb61
+URL API: https://dbapi.ptit.edu.vn/api/app/question/511252cc-ba16-4ce3-8788-d76ba9ffbb61
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `mine_productivity`: Hệ thống theo dõi năng suất khai thác mỏ.</strong></p><ul><li><span style="font-size: 14px;">`mine_productivity (mine_name VARCHAR(255), year INT, productivity FLOAT)`:</span></li><li><span style="font-size: 14px;">`mine_name (VARCHAR(255))`: Tên mỏ.</span></li><li><span style="font-size: 14px;">`year (INT)`: Năm ghi nhận năng suất.</span></li><li><span style="font-size: 14px;">`productivity (FLOAT)`: Mức năng suất (chưa rõ đơn vị).</span></li></ul><p><strong style="font-size: 14px;">Bảng `geology_survey`: Hệ thống theo dõi các khảo sát địa chất liên quan. </strong></p><ul><li><span style="font-size: 14px;">`geology_survey (mine_name VARCHAR(255), survey_date DATE, mineral_deposits INT)`:</span></li><li><span style="font-size: 14px;">`mine_name (VARCHAR(255))`: Tên mỏ được khảo sát.</span></li><li><span style="font-size: 14px;">`survey_date (DATE)`: Ngày khảo sát. - `mineral_deposits (INT)`: Trữ lượng khoáng sản tìm được (đơn vị không chỉ rõ).</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Những mỏ nào có cả tỷ lệ năng suất trên 10 và dữ liệu khảo sát địa chất?</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">mine_name</span></p>

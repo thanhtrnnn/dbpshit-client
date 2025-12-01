@@ -1,0 +1,8 @@
+ID: SQL2069
+Tiêu đề: Kể tên và tổng số giờ lao động của công nhân xây dựng đã từng làm việc ở các dự án dân dụng và thương mại.
+URL WEB: https://db.ptit.edu.vn/question-detail/f6c6d4b3-5753-4b9c-82f7-96afe4497c33
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f6c6d4b3-5753-4b9c-82f7-96afe4497c33
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng construction_workers:</strong></p><ul><li>worker_id (INT): Mã công nhân.</li><li>name (VARCHAR): Tên công nhân xây dựng.</li></ul><p><strong>Bảng worker_projects:</strong></p><ul><li>worker_id (INT): Mã công nhân (FK).</li><li>project_id (INT): Mã dự án (FK).</li><li>total_labor_hours (INT): Tổng số giờ lao động.</li></ul><p><strong>Bảng project_types:</strong></p><ul><li>project_id (INT): Mã dự án.</li><li>project_type (VARCHAR): Loại dự án (ví dụ: 'Residential', 'Commercial').</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Kể tên và tổng số giờ lao động của công nhân xây dựng đã từng làm việc ở các dự án dân dụng và thương mại.</p><p><strong>Output:</strong></p><p>Danh sách gồm hai cột: <strong>Tên công nhân xây dựng</strong> (construction_workers.name) và <strong>Tổng số giờ lao động</strong> (SUM(worker_projects.total_labor_hours)). Danh sách này chỉ bao gồm những công nhân thỏa mãn điều kiện đã từng làm việc trong <strong>cả hai loại dự án</strong> là <strong>'Residential'</strong> (Dân dụng) <strong>VÀ'Commercial'</strong> (Thương mại) với tổng số giờ lao động được tính cho từng công nhân.</p>

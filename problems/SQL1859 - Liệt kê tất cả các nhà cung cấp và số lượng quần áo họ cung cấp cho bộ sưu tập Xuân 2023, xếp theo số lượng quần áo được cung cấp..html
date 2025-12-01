@@ -1,0 +1,44 @@
+ID: SQL1859
+Tiêu đề: Liệt kê tất cả các nhà cung cấp và số lượng quần áo họ cung cấp cho bộ sưu tập Xuân 2023, xếp theo số lượng quần áo được cung cấp.
+URL WEB: https://db.ptit.edu.vn/question-detail/bdb80627-5542-4d16-9324-fbdb48ba6d98
+URL API: https://dbapi.ptit.edu.vn/api/app/question/bdb80627-5542-4d16-9324-fbdb48ba6d98
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Suppliers: </strong></p><p>Bảng này lưu trữ thông tin về các nhà cung cấp, bao gồm ID và tên nhà cung cấp.</p><ul><li>supplier_id (INT): Mã định danh của nhà cung cấp.</li><li>supplier_name (VARCHAR(50))`: Tên của nhà cung cấp.</li></ul><p><strong>Bảng Garment_Suppliers: </strong></p><p>Bảng này lưu trữ thông tin về các nhà cung cấp và các sản phẩm của họ, bao gồm ID sản phẩm và ID nhà cung cấp.</p><ul><li>garment_id (INT): Mã định danh của sản phẩm.</li><li>supplier_id (INT): Mã nhà cung cấp.</li></ul><p><strong>Bảng Garments: </strong></p><p>Bảng này lưu trữ thông tin về các sản phẩm may mặc, bao gồm ID sản phẩm và tên bộ sưu tập.</p><ul><li>garment_id (INT): Mã định danh của sản phẩm.</li><li>collection_name (VARCHAR(50)): Tên bộ sưu tập của sản phẩm.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Liệt kê tất cả các <strong>nhà cung cấp</strong> và <strong>số lượng sản phẩm</strong> họ cung cấp cho <strong>bộ sưu tập “Spring 2023”</strong>, kết quả sắp xếp theo <strong>số lượng sản phẩm giảm dần</strong>.</p><p><br></p><h3>Input mẫu</h3><p><strong>Bảng Suppliers</strong></p><pre class="ql-syntax" spellcheck="false">
++--------------+----------------+
+| supplier_id  | supplier_name  |
++--------------+----------------+
+| 1            | AlphaTextiles  |
+| 2            | FashionCo      |
+| 3            | GlobalFabric   |
++--------------+----------------+
+</pre><p><strong>Bảng Garments</strong></p><pre class="ql-syntax" spellcheck="false">
++-------------+----------------+
+| garment_id  | collection_name|
++-------------+----------------+
+| 101         | Spring 2023    |
+| 102         | Spring 2023    |
+| 103         | Summer 2023    |
+| 104         | Spring 2023    |
+| 105         | Spring 2023    |
++-------------+----------------+
+</pre><p><strong>Bảng Garment_Suppliers</strong></p><pre class="ql-syntax" spellcheck="false">
++-------------+--------------+
+| garment_id  | supplier_id  |
++-------------+--------------+
+| 101         | 1            |
+| 102         | 1            |
+| 103         | 2            |
+| 104         | 2            |
+| 105         | 3            |
++-------------+--------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----------------+------------------+
+| supplier_name  | garments_supplied|
++----------------+------------------+
+| AlphaTextiles  | 2                |
+| FashionCo      | 1                |
+| GlobalFabric   | 1                |
++----------------+------------------+
+</pre><p><br></p>

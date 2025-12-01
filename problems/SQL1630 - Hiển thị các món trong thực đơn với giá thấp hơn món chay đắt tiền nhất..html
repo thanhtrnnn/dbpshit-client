@@ -1,0 +1,31 @@
+ID: SQL1630
+Tiêu đề: Hiển thị các món trong thực đơn với giá thấp hơn món chay đắt tiền nhất.
+URL WEB: https://db.ptit.edu.vn/question-detail/73dc2480-43de-4e3f-8c3f-f15b2dc219e1
+URL API: https://dbapi.ptit.edu.vn/api/app/question/73dc2480-43de-4e3f-8c3f-f15b2dc219e1
+Loại Database: Sql Server
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng vegetarian_menus</strong></p><p><strong> Bảng này chứa thông tin về các thực đơn chay</strong>, bao gồm <strong>ID món ăn</strong>, <strong>tên món ăn</strong>, <strong>loại món ăn</strong> và <strong>giá cả</strong>.</p><pre class="ql-syntax" spellcheck="false">+-----------+---------------+----------------+-------------------------+
+| Tên cột   | Kiểu dữ liệu  | Mô tả           |                         |
++-----------+---------------+----------------+-------------------------+
+| menu_id   | INT           | Mã món ăn       |                         |
+| menu_name | VARCHAR(50)   | Tên món ăn      |                         |
+| menu_type | VARCHAR(50)   | Loại món ăn     |                         |
+| price     | DECIMAL(5,2)  | Giá món ăn      |                         |
++-----------+---------------+----------------+-------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Hiển thị <strong>tên và giá</strong> của các món ăn loại <strong>"Entree"</strong> trong thực đơn <strong>có giá thấp hơn món ăn đắt tiền nhất</strong>.</p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">+----------+------------------+------------+--------+
+| menu_id  | menu_name        | menu_type  | price  |
++----------+------------------+------------+--------+
+| 1        | Tofu Curry       | Entree     | 15.00  |
+| 2        | Veggie Burger    | Entree     | 18.50  |
+| 3        | Garden Salad     | Appetizer  | 10.00  |
+| 4        | Stir Fry Noodles | Entree     | 20.00  |
+| 5        | Fruit Tart       | Dessert    | 12.00  |
++----------+------------------+------------+--------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+------------------+--------+
+| menu_name        | price  |
++------------------+--------+
+| Tofu Curry       | 15.00  |
+| Veggie Burger    | 18.50  |
++------------------+--------+
+</pre><p><br></p>

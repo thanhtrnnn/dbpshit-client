@@ -1,0 +1,8 @@
+ID: SQL1731
+Tiêu đề: Xác định số lượng giảng viên duy nhất đã giám sát sinh viên tốt nghiệp trong khoa "vật lý"
+URL WEB: https://db.ptit.edu.vn/question-detail/da9c9da6-64a0-4f1a-be7e-d2725ae5f156
+URL API: https://dbapi.ptit.edu.vn/api/app/question/da9c9da6-64a0-4f1a-be7e-d2725ae5f156
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `supervision`: Bảng này lưu trữ thông tin về các sinh viên và giảng viên giám sát, bao gồm ID sinh viên, ID giảng viên và bộ môn. </strong></p><ul><li>`student_id (INT)`: Mã sinh viên. </li><li>`faculty_id (INT)`: Mã giảng viên giám sát.</li><li>`department (VARCHAR(255))`: Tên bộ môn. </li></ul><p><br></p><p><strong>Bảng `faculty`: Bảng này lưu trữ thông tin về các giảng viên, bao gồm ID giảng viên, tên giảng viên và bộ môn.</strong></p><ul><li>`id (INT)`: Mã định danh giảng viên. </li><li>`name (VARCHAR(255))`: Tên giảng viên. </li><li>`department (VARCHAR(255))`: Bộ môn của giảng viên. </li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Xác định số lượng giảng viên duy nhất đã giám sát sinh viên tốt nghiệp trong khoa "vật lý"</p>

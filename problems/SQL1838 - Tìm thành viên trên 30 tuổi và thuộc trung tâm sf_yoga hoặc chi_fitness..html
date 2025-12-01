@@ -1,0 +1,46 @@
+ID: SQL1838
+Tiêu đề: Tìm thành viên trên 30 tuổi và thuộc trung tâm sf_yoga hoặc chi_fitness.
+URL WEB: https://db.ptit.edu.vn/question-detail/ec47050a-579b-4bf5-8b7a-a845c312a555
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ec47050a-579b-4bf5-8b7a-a845c312a555
+Loại Database: Mysql
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng sf_yoga</strong></p><p><strong> Bảng này lưu trữ thông tin về các thành viên thuộc lớp yoga ở trung tâm San Francisco</strong>, bao gồm mã thành viên, tên, tuổi và giới tính.</p><pre class="ql-syntax" spellcheck="false">+------------+--------------+----------------------------------+
+| Cột        | Kiểu dữ liệu | Mô tả                            |
++------------+--------------+----------------------------------+
+| member_id  | INT          | Mã định danh của thành viên      |
+| name       | VARCHAR(50)  | Tên của thành viên               |
+| age        | INT          | Tuổi của thành viên              |
+| gender     | VARCHAR(10)  | Giới tính của thành viên         |
++------------+--------------+----------------------------------+
+</pre><p><strong>Bảng chi_fitness</strong></p><p><strong> Bảng này lưu trữ thông tin về các thành viên của lớp fitness ở trung tâm Chicago</strong>, cũng bao gồm mã thành viên, tên, tuổi và giới tính.</p><pre class="ql-syntax" spellcheck="false">+------------+--------------+----------------------------------+
+| Cột        | Kiểu dữ liệu | Mô tả                            |
++------------+--------------+----------------------------------+
+| member_id  | INT          | Mã định danh của thành viên      |
+| name       | VARCHAR(50)  | Tên của thành viên               |
+| age        | INT          | Tuổi của thành viên              |
+| gender     | VARCHAR(10)  | Giới tính của thành viên         |
++------------+--------------+----------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Tìm <strong>tất cả các thành viên trên 30 tuổi</strong> thuộc <strong>trung tâm sf_yoga hoặc chi_fitness</strong>.</p><h3>Input mẫu</h3><p><strong>Bảng sf_yoga</strong></p><pre class="ql-syntax" spellcheck="false">--+------------+----------+-----+----------+
+| member_id  | name   | age | gender  |
+--+------------+----------+-----+----------+
+| 1          | Alice  | 28  | Female  |
+| 2          | Bob    | 35  | Male    |
+| 3          | Carol  | 40  | Female  |
+--+------------+----------+-----+----------+
+</pre><p><strong>Bảng chi_fitness</strong></p><pre class="ql-syntax" spellcheck="false">--+------------+----------+-----+----------+
+| member_id  | name   | age | gender  |
+--+------------+----------+-----+----------+
+| 1          | David  | 31  | Male    |
+| 2          | Emily  | 25  | Female  |
+| 3          | Frank  | 38  | Male    |
+--+------------+----------+-----+----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">--+------------+----------+-----+----------+
+| member_id  | name   | age | gender  |
+--+------------+----------+-----+----------+
+| 2          | Bob    | 35  | Male    |
+| 3          | Carol  | 40  | Female  |
+| 1          | David  | 31  | Male    |
+| 3          | Frank  | 38  | Male    |
+--+------------+----------+-----+----------+
+</pre><h3>Giải thích</h3><ul><li><strong>Bob (35)</strong> và <strong>Carol (40)</strong> từ sf_yoga đều trên 30 tuổi.</li><li><strong>David (31)</strong> và <strong>Frank (38)</strong> từ chi_fitness cũng trên 30 tuổi.</li><li><strong>Alice (28)</strong> và <strong>Emily (25)</strong> bị loại vì <strong>tuổi ≤ 30</strong>.</li></ul><p><br></p>

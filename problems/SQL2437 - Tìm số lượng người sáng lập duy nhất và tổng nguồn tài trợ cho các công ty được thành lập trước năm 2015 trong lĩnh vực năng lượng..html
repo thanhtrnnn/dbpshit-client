@@ -1,0 +1,8 @@
+ID: SQL2437
+Tiêu đề: Tìm số lượng người sáng lập duy nhất và tổng nguồn tài trợ cho các công ty được thành lập trước năm 2015 trong lĩnh vực năng lượng.
+URL WEB: https://db.ptit.edu.vn/question-detail/5b446914-dd8b-40bf-a2a6-b879db496098
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5b446914-dd8b-40bf-a2a6-b879db496098
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng companies</strong></h3><p>Chứa thông tin về các công ty.</p><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi công ty (khóa chính của bảng).</li><li>name (TEXT): Tên của công ty.</li><li>industry (TEXT): Ngành công nghiệp mà công ty hoạt động (ví dụ: 'Energy').</li><li>founder_gender (TEXT): Giới tính của người sáng lập công ty.</li><li>founded_date (DATE): Ngày thành lập công ty.</li></ul><h3><strong>Bảng funding</strong></h3><p>Chứa thông tin về các khoản tài trợ mà công ty nhận được.</p><p><strong>Cấu trúc:</strong></p><ul><li>company_id (INT): Mã định danh của công ty nhận tài trợ (liên kết với id trong bảng companies).</li><li>amount (INT): Số tiền tài trợ (đơn vị: USD).</li></ul><p><strong>Yêu cầu:</strong></p><p> Tìm <strong>số lượng người sáng lập duy nhất</strong> và <strong>tổng số tiền tài trợ</strong> cho <strong>các công ty trong lĩnh vực năng lượng (industry = 'Energy')</strong> được <strong>thành lập trước năm 2015</strong>.</p><p><br></p><p><br></p>

@@ -1,0 +1,8 @@
+ID: SQL1757
+Tiêu đề: Mức lương trung bình của công nhân “cấp dưới” ở mỗi nhà máy là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/67aac334-1a00-4ce2-a49d-68508c6cffc9
+URL API: https://dbapi.ptit.edu.vn/api/app/question/67aac334-1a00-4ce2-a49d-68508c6cffc9
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `factories`: Bảng này lưu trữ thông tin về các nhà máy, bao gồm ID nhà máy và tên nhà máy. </strong></p><ul><li>`factory_id (INT)`: Mã định danh của nhà máy. </li><li>`factory_name (VARCHAR(20))`: Tên của nhà máy. </li></ul><p><br></p><p><strong>Bảng `roles`: Bảng này lưu trữ các vai trò trong nhà máy, bao gồm ID vai trò và tên vai trò. </strong></p><ul><li>`role_id (INT)`: Mã định danh của vai trò. </li><li>`role_name (VARCHAR(20))`: Tên vai trò (junior, senior, manager). </li></ul><p><br></p><p><strong>Bảng `workers`: Bảng này lưu trữ thông tin về công nhân trong các nhà máy, bao gồm ID công nhân, ID nhà máy, ID vai trò và mức lương. </strong></p><ul><li>`worker_id (INT)`: Mã định danh của công nhân. </li><li>`factory_id (INT)`: Mã nhà máy mà công nhân làm việc.</li><li>`role_id (INT)`: Mã vai trò của công nhân. </li><li>`salary (DECIMAL(5,2))`: Mức lương của công nhân.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Mức lương trung bình của công nhân “cấp dưới” ở mỗi nhà máy là bao nhiêu?</p>

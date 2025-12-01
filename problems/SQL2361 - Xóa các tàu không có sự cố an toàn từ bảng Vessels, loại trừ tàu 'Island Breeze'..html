@@ -1,0 +1,8 @@
+ID: SQL2361
+Tiêu đề: Xóa các tàu không có sự cố an toàn từ bảng Vessels, loại trừ tàu 'Island Breeze'.
+URL WEB: https://db.ptit.edu.vn/question-detail/bc76ceb1-e58c-492b-a6d7-ef1e3f83b3e8
+URL API: https://dbapi.ptit.edu.vn/api/app/question/bc76ceb1-e58c-492b-a6d7-ef1e3f83b3e8
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng Vessels</strong>: Chứa thông tin về các phương tiện hàng hải.</h3><ul><li>ID (INT): Mã định danh duy nhất cho mỗi phương tiện (khóa chính).</li><li>Name (VARCHAR(50)): Tên phương tiện.</li><li>Type (VARCHAR(50)): Loại phương tiện (ví dụ: "Cargo", "Tanker", "Fishing").</li></ul><h3><strong>Bảng SafetyIncidents</strong>: Chứa thông tin về các sự cố an toàn liên quan đến phương tiện.</h3><ul><li>ID (INT): Mã định danh duy nhất cho mỗi sự cố (khóa chính).</li><li>VesselID (INT): Mã định danh của phương tiện gặp sự cố (liên kết với ID của bảng Vessels).</li><li>Location (VARCHAR(50)): Vị trí xảy ra sự cố.</li><li>IncidentType (VARCHAR(50)): Loại sự cố (ví dụ: "Collision", "Fire").</li></ul><h3><strong>Nhiệm vụ</strong>:</h3><p>Xóa các phương tiện không có bất kỳ sự cố an toàn nào khỏi bảng Vessels, ngoại trừ phương tiện có tên là Island Breeze (dù có hay không có sự cố cũng giữ lại).</p>

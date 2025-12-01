@@ -1,0 +1,13 @@
+[{
+    "status": 0,
+    "result": "access deny for query: -- ID: e52389d1-08af-43ba-a7fd-7c4414dfde95\n-- Code: SQL2029\n-- Title: Chèn bản ghi mới vào bảng 'water_conservation_goals' với dữ liệu sau vùng = 'Đông Nam', mục tiêu = 5, năm = 2023\n-- Yêu cầu: Viết câu lệnh SQL bên dưới\n-- ********************************************\nSELECT * FROM water_conservation_goals;",
+    "timeExec": 0.0,
+    "testPass": 0,
+    "totalTest": 0
+},{
+    "status": 0,
+    "result": "StatementCallback; bad SQL grammar [INSERT INTO temp_8ae52z6bzokf_water_conservation_goals (region, goal, year) VALUES ('Southeast', 5)]",
+    "timeExec": 0.0,
+    "testPass": 0,
+    "totalTest": 0
+}]

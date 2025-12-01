@@ -1,0 +1,8 @@
+ID: SQL2202
+Tiêu đề: Có bao nhiêu thư viện công cộng ở tiểu bang New York?
+URL WEB: https://db.ptit.edu.vn/question-detail/7ae051fb-1d44-484f-b766-7a87fe058513
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7ae051fb-1d44-484f-b766-7a87fe058513
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có 2 bảng dữ liệu:</p><p><strong>Bảng states</strong> – Thông tin về các tiểu bang:</p><ul><li><strong>id (INT)</strong>: Mã định danh duy nhất cho mỗi bang</li><li><strong>name (VARCHAR(50))</strong>: Tên của bang (ví dụ: 'New York', 'California')</li></ul><p><strong>Bảng libraries</strong> – Thông tin về các thư viện:</p><ul><li><strong>id (INT)</strong>: Mã định danh duy nhất cho mỗi thư viện</li><li><strong>name (VARCHAR(50))</strong>: Tên của thư viện</li><li><strong>state_id (INT)</strong>: Mã định danh của bang mà thư viện trực thuộc</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong> Có bao nhiêu thư viện</strong> nằm ở <strong>tiểu bang New York</strong>?</p><p><br></p><p>Output: <span style="font-size: 14px;">COUNT(*)</span></p>

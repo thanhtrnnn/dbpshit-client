@@ -1,0 +1,8 @@
+ID: SQL1740
+Tiêu đề: Cập nhật hồ sơ an toàn của tất cả các tàu gặp tai nạn ở Biển Đông.
+URL WEB: https://db.ptit.edu.vn/question-detail/ca0bc6f4-b57e-490f-94ed-3170e6d4ef90
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ca0bc6f4-b57e-490f-94ed-3170e6d4ef90
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `vessels`: Bảng này lưu trữ thông tin về các tàu, bao gồm ID tàu, tên tàu, loại tàu và hồ sơ an toàn. </strong></p><ul><li>`id (INT)`: Mã định danh của tàu.</li><li>`name (TEXT)`: Tên của tàu. </li><li>`type (TEXT)`: Loại tàu. </li><li>`safety_record (TEXT)`: Hồ sơ an toàn của tàu. </li></ul><p><br></p><p><strong>Bảng `incidents`: Bảng này lưu trữ thông tin về các sự cố xảy ra với tàu, bao gồm ID sự cố, ID tàu, vị trí và ngày xảy ra sự cố. </strong></p><ul><li>`id (INT)`: Mã định danh của sự cố. </li><li>`vessel_id (INT)`: Mã tàu liên quan đến sự cố. </li><li>`location (TEXT)`: Vị trí xảy ra sự cố. </li><li>`incident_date (DATE)`: Ngày xảy ra sự cố. </li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Cập nhật hồ sơ an toàn của tất cả các tàu gặp tai nạn ở Biển Đông.</p>

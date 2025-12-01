@@ -1,0 +1,8 @@
+ID: SQL2040
+Tiêu đề: Tổng doanh thu của từng loại sản phẩm trong năm hiện tại là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/dcec746d-9339-49c9-a202-d69e4bf6cff0
+URL API: https://dbapi.ptit.edu.vn/api/app/question/dcec746d-9339-49c9-a202-d69e4bf6cff0
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng sales</strong>: Lưu trữ thông tin về các giao dịch bán hàng, bao gồm mã giao dịch, mã sản phẩm, ngày giao dịch và doanh thu.</p><ul><li>sale_id (INT): Mã số định danh duy nhất cho giao dịch bán hàng.</li><li>product_id (INT): Mã sản phẩm (foreign key từ products).</li><li>sale_date (DATE): Ngày giao dịch.</li><li>revenue (INT): Doanh thu từ giao dịch bán hàng.</li></ul><p><strong>Câu hỏi:</strong></p><p>Tổng doanh thu của từng loại sản phẩm trong năm 2022 là bao nhiêu?</p><p><br></p><p>Output: product_id, total_revenue</p>

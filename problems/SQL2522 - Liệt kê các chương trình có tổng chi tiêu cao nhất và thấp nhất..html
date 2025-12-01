@@ -1,0 +1,8 @@
+ID: SQL2522
+Tiêu đề: Liệt kê các chương trình có tổng chi tiêu cao nhất và thấp nhất.
+URL WEB: https://db.ptit.edu.vn/question-detail/7a76b571-cb5f-46f9-997b-15c0366bed2d
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7a76b571-cb5f-46f9-997b-15c0366bed2d
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng programs (id INT, name VARCHAR, budget DECIMAL)</strong>: Thông tin về chương trình</p><ul><li>id: Mã chương trình</li><li>name: Tên chương trình</li><li>budget: Ngân sách của chương trình</li></ul><p><strong>Bảng donations (id INT, program_id INT, amount DECIMAL, payment_method VARCHAR)</strong>: Thông tin quyên góp cho chương trình</p><ul><li>id: Mã quyên góp</li><li>program_id: Mã chương trình nhận quyên góp (liên kết đến bảng programs)</li><li>amount: Số tiền quyên góp</li><li>payment_method: Phương thức thanh toán</li></ul><p><strong>Câu hỏi:</strong></p><p>Liệt kê các chương trình có tổng chi tiêu cao nhất và thấp nhất.</p><p><br></p><p>Output: name, total_expenses</p>

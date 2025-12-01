@@ -1,0 +1,13 @@
+ID: SQL2139
+Tiêu đề: Tổng số lượng hàng may mặc được cung cấp bởi các công ty có trụ sở tại Châu Phi hoặc Nam Mỹ là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/12510f63-d245-42e3-8844-41867a599452
+URL API: https://dbapi.ptit.edu.vn/api/app/question/12510f63-d245-42e3-8844-41867a599452
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Suppliers</strong> lưu trữ thông tin về các nhà cung cấp, với cấu trúc:</p><ul><li>supplier_id (INT): Mã nhà cung cấp</li><li>supplier_name (VARCHAR): Tên nhà cung cấp</li><li>country (VARCHAR): Quốc gia</li><li>industry (VARCHAR): Ngành nghề của nhà cung cấp</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tổng số lượng hàng may mặc được cung cấp bởi các công ty có trụ sở tại Châu Phi hoặc Nam Mỹ là bao nhiêu?</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+----------------+
+| SUM(quantity)  |
++----------------+
+| 75             |
++----------------+
+</pre>

@@ -1,0 +1,30 @@
+ID: SQL1661
+Tiêu đề: Những vận động viên nào đã tham gia hơn 50 sự kiện?
+URL WEB: https://db.ptit.edu.vn/question-detail/06889715-b55a-4bee-92b1-1ceceac06f36
+URL API: https://dbapi.ptit.edu.vn/api/app/question/06889715-b55a-4bee-92b1-1ceceac06f36
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng `Participants`: Bảng này lưu trữ thông tin về các vận động viên tham gia các sự kiện thể thao, bao gồm ID vận động viên và ID sự kiện. </strong></p><ul><li>`id (INT)`: Mã định danh của vận động viên tham gia sự kiện.</li><li>`athlete_id (INT)`: Mã vận động viên.</li><li>`event_id (INT)`: Mã sự kiện thể thao.</li></ul><p><br></p><p><strong>Bảng `Events`: Bảng này lưu trữ thông tin về các sự kiện thể thao, bao gồm ID sự kiện. </strong></p><ul><li>`id (INT)`: Mã định danh của sự kiện thể thao.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Những vận động viên nào đã tham gia hơn 50 sự kiện?Input</p><p><br></p><h3>Input mẫu</h3><p><strong>Bảng Participants</strong></p><pre class="ql-syntax" spellcheck="false">
++----+-------------+----------+
+| id | athlete_id  | event_id |
++----+-------------+----------+
+| 1  | 101         | 1        |
+| 2  | 101         | 2        |
+| 3  | 101         | 3        |
+| 4  | 102         | 1        |
+| 5  | 102         | 2        |
+| 6  | 103         | 1        |
+| 7  | 103         | 2        |
+| 8  | 103         | 3        |
+| 9  | 103         | 4        |
+|10  | 103         | 5        |
+... (tổng cộng 51 dòng cho athlete_id = 103)
++----+-------------+----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++-------------+
+| athlete_id  |
++-------------+
+| 103         |
++-------------+
+</pre><p><br></p>

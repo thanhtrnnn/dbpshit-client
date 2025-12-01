@@ -1,0 +1,8 @@
+ID: SQL2317
+Tiêu đề: Cập nhật bảng SafetyRecords, đặt cột “IsCompliant” thành “Yes” cho tàu có trọng tải tối đa dưới 5000 tấn
+URL WEB: https://db.ptit.edu.vn/question-detail/45a0d9c6-5529-488c-90dd-90a2c70a9eaf
+URL API: https://dbapi.ptit.edu.vn/api/app/question/45a0d9c6-5529-488c-90dd-90a2c70a9eaf
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng 1: SafetyRecords</strong></p><p><strong> Chứa thông tin về hồ sơ an toàn của các tàu</strong>.</p><ul><li>VesselId (INT): Mã định danh của tàu (liên kết với bảng Vessel).</li><li>IsCompliant (VARCHAR(10)): Tình trạng tuân thủ các quy định an toàn của tàu (ví dụ: "Yes", "No").</li></ul><p><strong>Bảng 2: Vessel</strong></p><p><strong> Chứa thông tin về các tàu</strong>.</p><ul><li>Id (INT): Mã định danh duy nhất cho mỗi tàu (khóa chính).</li><li>Name (VARCHAR(50)): Tên của tàu.</li><li>Type (VARCHAR(50)): Loại tàu (ví dụ: "Cargo", "Passenger").</li><li>MaxCapacity (INT): Sức chứa tối đa của tàu (ví dụ: tấn hàng hoặc số hành khách).</li></ul><h3><strong>Nhiệm vụ</strong></h3><p>Cập nhật cột IsCompliant thành "Yes" trong bảng SafetyRecords</p><p> cho tất cả các tàu có MaxCapacity &lt; 5000 trong bảng Vessel.</p>

@@ -1,0 +1,15 @@
+ID: SQL2187
+Tiêu đề: Cập nhật giá vé cho tuyến 'Yellow' tại 'Station 1' từ 1000 lên 1200.
+URL WEB: https://db.ptit.edu.vn/question-detail/0ab7448a-f73f-457e-add6-5dcdd42840af
+URL API: https://dbapi.ptit.edu.vn/api/app/question/0ab7448a-f73f-457e-add6-5dcdd42840af
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có 2 bảng dữ liệu:</strong></p><h4><strong>1. Bảng routes</strong> – Thông tin tuyến đường và các ga:</h4><ul><li>line (VARCHAR(10)): Tên tuyến đường (ví dụ: 'Yellow')</li><li>station (VARCHAR(20)): Tên ga thuộc tuyến</li></ul><h4><strong>2. Bảng fares</strong> – Doanh thu tại từng ga:</h4><ul><li>station (VARCHAR(20)): Tên ga</li><li>revenue (DECIMAL(10,2)): Doanh thu tại ga (lưu trữ tối đa 10 chữ số, trong đó có 2 chữ số sau dấu thập phân)</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Cập nhật giá vé cho tuyến 'Yellow' tại 'Station 1' từ 1000 lên 1200.</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+-----------------+----------+
+| station         | revenue  |
++-----------------+----------+
+| Station 1       | 1276.0   |
+| Station 2       | 1233.0   |
+| Station 3       | 2037.0   |
++-----------------+----------+
+</pre>

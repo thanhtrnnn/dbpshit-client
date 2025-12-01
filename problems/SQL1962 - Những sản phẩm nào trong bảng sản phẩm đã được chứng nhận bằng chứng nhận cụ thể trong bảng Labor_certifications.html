@@ -1,0 +1,8 @@
+ID: SQL1962
+Tiêu đề: Những sản phẩm nào trong bảng sản phẩm đã được chứng nhận bằng chứng nhận cụ thể trong bảng Labor_certifications?
+URL WEB: https://db.ptit.edu.vn/question-detail/ea97d25b-553e-4282-8dfa-738e0f81b9fe
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ea97d25b-553e-4282-8dfa-738e0f81b9fe
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng products:</strong></p><p>Lưu trữ thông tin về các sản phẩm.</p><ul><li>product_id (INT): Mã số định danh duy nhất cho sản phẩm.</li><li>product_name (VARCHAR(50)): Tên của sản phẩm.</li></ul><p><strong>Bảng labor_certifications:</strong></p><p>Lưu trữ thông tin về các chứng nhận lao động.</p><ul><li>certification_id (INT): Mã số định danh duy nhất cho chứng nhận lao động.</li><li>certification_name (VARCHAR(50)): Tên của chứng nhận lao động.</li></ul><p><strong>Bảng product_labor_certifications:</strong></p><p>Liên kết các sản phẩm với chứng nhận lao động.</p><ul><li>product_id (INT): Mã sản phẩm (foreign key từ products).</li><li>certification_id (INT): Mã chứng nhận lao động (foreign key từ labor_certifications).</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Những sản phẩm nào trong bảng sản phẩm đã được chứng nhận bằng chứng nhận cụ thể trong bảng labor_certifications?</p>

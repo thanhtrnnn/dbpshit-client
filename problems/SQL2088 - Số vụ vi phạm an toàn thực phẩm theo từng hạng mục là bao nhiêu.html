@@ -1,0 +1,8 @@
+ID: SQL2088
+Tiêu đề: Số vụ vi phạm an toàn thực phẩm theo từng hạng mục là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/63c77561-c41f-4d94-ae7e-21951057bd55
+URL API: https://dbapi.ptit.edu.vn/api/app/question/63c77561-c41f-4d94-ae7e-21951057bd55
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Cho ba bảng dữ liệu:</strong></p><h4><strong>Bảng Menu_Categories</strong></h4><ul><li>Category_ID (INT): Mã loại thực đơn</li><li>Category_Name (TEXT): Tên loại thực đơn</li></ul><h4><strong>Bảng Menu_Items</strong></h4><ul><li>Item_ID (INT): Mã món ăn</li><li>Item_Name (TEXT): Tên món ăn</li><li>Category_ID (INT): Mã loại món ăn (foreign key từ Menu_Categories)</li></ul><h4><strong>Bảng Inspections</strong></h4><ul><li>Inspection_ID (INT): Mã kiểm tra</li><li>Item_ID (INT): Mã món ăn (foreign key từ Menu_Items)</li><li>Violation_Count (INT): Số lượng vi phạm</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Số vụ vi phạm an toàn thực phẩm theo từng hạng mục là bao nhiêu?</p><p><br></p><p><strong>Output:</strong></p><p>Một danh sách gồm hai cột: <strong>Tên loại thực đơn</strong> (Category_Name) và <strong>Tổng số vụ vi phạm</strong> (Total_Violations). Tổng số vụ vi phạm được tính bằng cách lấy tổng số lượng vi phạm từ bảng Inspections cho từng loại thực đơn, với kết quả được <strong>nhóm lại</strong> theo tên loại thực đơn.</p>

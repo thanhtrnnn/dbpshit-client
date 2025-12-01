@@ -1,0 +1,16 @@
+ID: SQL2153
+Tiêu đề: Khu vực chính sách xoay vòng và tổng số tiền yêu cầu bồi thường
+URL WEB: https://db.ptit.edu.vn/question-detail/4b1dde2c-2198-46fd-b391-2c035140cd7c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/4b1dde2c-2198-46fd-b391-2c035140cd7c
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có 2 bảng:</strong></p><h4><strong>1. policy – lưu thông tin về các chính sách:</strong></h4><ul><li>policy_id (INT): Mã định danh của chính sách</li><li>policy_region (VARCHAR): Khu vực mà chính sách áp dụng</li></ul><h4><strong>2. claims – lưu thông tin về các yêu cầu bồi thường bảo hiểm:</strong></h4><ul><li>claim_id (INT): Mã yêu cầu bồi thường</li><li>policy_id (INT): Mã chính sách liên quan đến yêu cầu</li><li>claim_amount (INT): Số tiền được yêu cầu bồi thường</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Khu vực chính sách xoay vòng và tổng số tiền yêu cầu bồi thường</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+---------------+------------------------+------------------------+------------------------+
+| policy_region | northeast_claim_amount | southeast_claim_amount | southwest_claim_amount |
++---------------+------------------------+------------------------+------------------------+
+| Midwest       |                      0 |                      0 |                      0 |
+| Northeast     |                    450 |                      0 |                      0 |
+| Southeast     |                      0 |                   1050 |                      0 |
+| Southwest     |                      0 |                      0 |                   1650 |
+| NULL          |                    450 |                   1050 |                   1650 |
++---------------+------------------------+------------------------+------------------------+</pre>

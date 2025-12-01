@@ -1,0 +1,8 @@
+ID: SQL2364
+Tiêu đề: Cập nhật thông tin nhà cung cấp đối với sản phẩm có nguồn gốc từ quốc gia có nguy cơ cao
+URL WEB: https://db.ptit.edu.vn/question-detail/e1473996-35d6-4173-93d2-0670b48a2b36
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e1473996-35d6-4173-93d2-0670b48a2b36
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng products</strong>: Chứa thông tin về sản phẩm và nguồn cung.</h3><ul><li>product_id (INT): Mã định danh duy nhất cho mỗi sản phẩm (khóa chính).</li><li>supplier_id (INT): Mã định danh của nhà cung cấp (liên kết với bảng suppliers).</li><li>sourcing_country (VARCHAR(50)): Quốc gia cung ứng sản phẩm.</li></ul><h3><strong>Bảng suppliers</strong>: Chứa thông tin về nhà cung cấp và đánh giá đạo đức.</h3><ul><li>supplier_id (INT): Mã định danh duy nhất cho mỗi nhà cung cấp (khóa chính).</li><li>supplier_name (VARCHAR(50)): Tên nhà cung cấp.</li><li>ethical_rating (INT): Điểm đánh giá đạo đức (có thể từ 1 đến 10).</li></ul><h3><strong>Nhiệm vụ</strong>:</h3><p>Cập nhật thông tin nhà cung cấp (trong bảng suppliers) tương ứng với các sản phẩm có nguồn gốc từ quốc gia có nguy cơ cao.</p>

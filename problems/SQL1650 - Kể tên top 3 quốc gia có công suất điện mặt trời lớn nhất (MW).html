@@ -1,0 +1,29 @@
+ID: SQL1650
+Tiêu đề: Kể tên top 3 quốc gia có công suất điện mặt trời lớn nhất (MW)?
+URL WEB: https://db.ptit.edu.vn/question-detail/0183dde1-207f-42fc-9ece-c489e4aef978
+URL API: https://dbapi.ptit.edu.vn/api/app/question/0183dde1-207f-42fc-9ece-c489e4aef978
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng `solar_farms`: Bảng này lưu trữ thông tin về các trang trại năng lượng mặt trời, bao gồm tên trang trại, quốc gia và công suất. </strong></p><ul><li>`farm_name (VARCHAR(255))`: Tên trang trại năng lượng mặt trời.</li><li>`country (VARCHAR(255))`: Quốc gia trang trại hoạt động.</li><li>`capacity (FLOAT)`: Công suất của trang trại.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Kể tên top 3 quốc gia có công suất điện mặt trời lớn nhất (MW)?</p><p><br></p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">
++------------------+-------------+-----------+
+| farm_name        | country     | capacity  |
++------------------+-------------+-----------+
+| SunPower Alpha   | USA         | 150.5     |
+| SunPower Beta    | USA         | 220.0     |
+| Solar Future     | China       | 500.0     |
+| GreenSun         | China       | 300.0     |
+| HelioPlant One   | India       | 250.0     |
+| SolarWave        | India       | 180.0     |
+| SunEnergy        | Germany     | 120.0     |
+| BrightRay        | Spain       | 100.0     |
++------------------+-------------+-----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++-------------+----------------+
+| country     | total_capacity |
++-------------+----------------+
+| China       | 800.0          |
+| India       | 430.0          |
+| USA         | 370.5          |
++-------------+----------------+
+</pre><p>-------------+</p>

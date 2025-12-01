@@ -1,0 +1,18 @@
+ID: SQL1822
+Tiêu đề: Tổng chi phí xây dựng ở mỗi khu vực là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/00fbe799-8778-4ad2-8870-a2dab18d9013
+URL API: https://dbapi.ptit.edu.vn/api/app/question/00fbe799-8778-4ad2-8870-a2dab18d9013
+Loại Database: Mysql
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng construction_spending</strong></p><p><strong> Bảng này lưu trữ thông tin về chi phí xây dựng ở các khu vực</strong>, bao gồm <strong>ID chi phí</strong>, <strong>khu vực</strong>, và <strong>số tiền</strong>.</p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+---------------------------------------------+
+| Tên cột      | Kiểu dữ liệu   | Mô tả                                      |
++--------------+----------------+---------------------------------------------+
+| spending_id  | INT             | Mã định danh duy nhất cho mỗi khoản chi phí|
+| region       | VARCHAR(20)     | Khu vực thực hiện xây dựng                 |
+| amount       | DECIMAL(10,2)   | Số tiền chi phí xây dựng                   |
++--------------+----------------+---------------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Tính <strong>tổng chi phí xây dựng</strong> (total_spending) ở <strong>mỗi khu vực</strong> (region).</p><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+--------+----------------+
+| region | total_spending |
++--------+----------------+
+</pre><p><br></p>

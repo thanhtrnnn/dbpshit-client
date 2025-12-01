@@ -1,0 +1,8 @@
+ID: SQL2323
+Tiêu đề: Tìm doanh thu trung bình hàng ngày của các khách sạn thân thiện với môi trường ở Đức và Bồ Đào Nha, và số lượng khách tham quan trung bình hàng ngày tới các bảo tàng ở hai quốc gia này
+URL WEB: https://db.ptit.edu.vn/question-detail/6adc0dfa-255a-48e8-a206-8af1a9bf8443
+URL API: https://dbapi.ptit.edu.vn/api/app/question/6adc0dfa-255a-48e8-a206-8af1a9bf8443
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng hotel_revenue</strong>: Chứa thông tin về doanh thu hàng ngày của các khách sạn.</p><ul><li> hotel_id (INT): Mã định danh duy nhất cho mỗi khách sạn (khóa chính của bảng).</li><li> country (VARCHAR(20): Quốc gia nơi khách sạn tọa lạc.</li><li> daily_revenue (FLOAT): Doanh thu hàng ngày của khách sạn.</li></ul><p><strong>Bảng museum_visitors</strong>: Chứa thông tin về số lượng khách tham quan bảo tàng mỗi ngày.</p><ul><li> visit_id (INT): Mã định danh duy nhất cho mỗi lần tham quan (khóa chính của bảng).</li><li> country (VARCHAR(20): Quốc gia nơi bảo tàng tọa lạc.</li><li> daily_visitors (INT): Số lượng khách tham quan bảo tàng mỗi ngày.</li></ul><p><strong>Nhiệm vụ</strong>:</p><p>Tìm doanh thu trung bình hàng ngày của các khách sạn thân thiện với môi trường ở Đức (Germany) và Bồ Đào Nha (Portugal), và số lượng khách tham quan trung bình hàng ngày tới các bảo tàng ở hai quốc gia này.</p>

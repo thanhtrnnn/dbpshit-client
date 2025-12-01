@@ -1,0 +1,8 @@
+ID: SQL2294
+Tiêu đề: Những chương trình hỗ trợ nào đang được học sinh mắc chứng tự kỷ sử dụng?
+URL WEB: https://db.ptit.edu.vn/question-detail/8847514c-713e-40ab-af32-ebb073890819
+URL API: https://dbapi.ptit.edu.vn/api/app/question/8847514c-713e-40ab-af32-ebb073890819
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng SupportPrograms</strong> – Chứa thông tin về các chương trình hỗ trợ.</p><ul><li><strong>ProgramID (INT)</strong>: Mã định danh duy nhất cho mỗi chương trình hỗ trợ.</li><li><strong>ProgramName (VARCHAR(50))</strong>: Tên của chương trình hỗ trợ.</li><li><strong>ProgramType (VARCHAR(50))</strong>: Loại của chương trình hỗ trợ (ví dụ: Social Skills).</li></ul><p><strong>Bảng StudentDisabilities</strong> – Chứa thông tin về các loại khuyết tật của sinh viên.</p><ul><li><strong>StudentID (INT)</strong>: Mã định danh duy nhất cho mỗi sinh viên.</li><li><strong>DisabilityType (VARCHAR(50))</strong>: Loại khuyết tật của sinh viên (ví dụ: Autism).</li></ul><p><strong>Bảng StudentPrograms</strong> – Chứa thông tin về các chương trình mà sinh viên tham gia.</p><ul><li><strong>StudentID (INT)</strong>: Mã định danh của sinh viên (liên kết với bảng StudentDisabilities).</li><li><strong>ProgramID (INT)</strong>: Mã định danh của chương trình hỗ trợ (liên kết với bảng SupportPrograms).</li></ul><p><strong>Yêu cầu tính toán:</strong></p><p><strong> Liệt kê tất cả các chương trình hỗ trợ mà học sinh mắc chứng tự kỷ (Autism) đang tham gia.</strong></p><p><strong>Output:</strong></p><ul><li><strong>ProgramName</strong>: Tên chương trình.</li><li><strong>ProgramType</strong>: Loại chương trình.</li></ul><p><br></p>

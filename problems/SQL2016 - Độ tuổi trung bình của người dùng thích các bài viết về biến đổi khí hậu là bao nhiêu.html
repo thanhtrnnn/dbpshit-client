@@ -1,0 +1,8 @@
+ID: SQL2016
+Tiêu đề: Độ tuổi trung bình của người dùng thích các bài viết về biến đổi khí hậu là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/b87e18b2-b69e-4057-b5d2-f38e8a66dab3
+URL API: https://dbapi.ptit.edu.vn/api/app/question/b87e18b2-b69e-4057-b5d2-f38e8a66dab3
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng articles</strong></h3><p>Lưu trữ thông tin về các <strong>bài viết</strong>.</p><ul><li>id (<strong>INT</strong>): Mã số định danh duy nhất cho bài viết.</li><li>title (<strong>TEXT</strong>): Tiêu đề của bài viết.</li><li>category (<strong>TEXT</strong>): Danh mục của bài viết.</li></ul><h3><strong>Bảng users</strong></h3><p>Lưu trữ thông tin về các <strong>người dùng</strong>.</p><ul><li>id (<strong>INT</strong>): Mã số định danh duy nhất cho người dùng.</li><li>age (<strong>INT</strong>): Độ tuổi của người dùng.</li><li>gender (<strong>TEXT</strong>): Giới tính của người dùng.</li></ul><h3><strong>Bảng user_likes</strong></h3><p>Lưu trữ thông tin về <strong>những bài viết mà người dùng đã thích</strong>.</p><ul><li>user_id (<strong>INT</strong>): Mã người dùng (<em>foreign key</em> từ bảng users).</li><li>article_id (<strong>INT</strong>): Mã bài viết (<em>foreign key</em> từ bảng articles).</li></ul><p><br></p><p>Độ tuổi trung bình của người dùng thích các bài viết về biến đổi khí hậu là bao nhiêu?</p><p><strong>Output:</strong></p><p>Một giá trị số duy nhất, đại diện cho độ tuổi trung bình của tất cả những người dùng đã thích các bài viết thuộc danh mục <strong>'climate_change'</strong> (biến đổi khí hậu).</p>

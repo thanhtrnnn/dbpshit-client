@@ -1,0 +1,8 @@
+ID: SQL2308
+Tiêu đề: Tổng số lượng vàng và bạc được khai thác ở mỗi mỏ là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/64b1fa08-e37d-4f5b-bce3-a47743e86707
+URL API: https://dbapi.ptit.edu.vn/api/app/question/64b1fa08-e37d-4f5b-bce3-a47743e86707
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng 1: mine</strong></p><p><strong> Chứa thông tin về các mỏ khoáng sản.</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi mỏ khoáng sản (khóa chính).</li><li>name (TEXT): Tên của mỏ khoáng sản.</li><li>location (TEXT): Vị trí hoặc quốc gia của mỏ khoáng sản.</li></ul><p><strong>Bảng 2: mining_data</strong></p><p><strong> Chứa thông tin về các khoáng sản được khai thác từ các mỏ.</strong></p><ul><li>mine_id (INT): Mã định danh của mỏ khoáng sản (liên kết với bảng mine).</li><li>mineral (TEXT): Tên khoáng sản được khai thác (ví dụ: <em>gold</em>, <em>silver</em>, <em>copper</em>...).</li><li>quantity (INT): Lượng khoáng sản khai thác (đơn vị có thể là tấn hoặc kg).</li></ul><h3><strong>Nhiệm vụ</strong></h3><p>Tính tổng số lượng vàng (gold) và bạc (silver) được khai thác tại mỗi mỏ.</p><p> Kết quả hiển thị theo từng mỏ, bao gồm tên mỏ và tổng số lượng của hai loại khoáng sản này.</p>

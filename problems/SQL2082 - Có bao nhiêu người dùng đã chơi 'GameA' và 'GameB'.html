@@ -1,0 +1,8 @@
+ID: SQL2082
+Tiêu đề: Có bao nhiêu người dùng đã chơi 'GameA' và 'GameB'?
+URL WEB: https://db.ptit.edu.vn/question-detail/540ba67d-da32-4db7-a753-fe4696e7843e
+URL API: https://dbapi.ptit.edu.vn/api/app/question/540ba67d-da32-4db7-a753-fe4696e7843e
+Loại Database: Mysql
+------------------------------
+
+<h4><strong>Bảng users_games</strong></h4><ul><li>user_id (INT): Mã người dùng</li><li>game_id (INT): Mã trận đấu (ví dụ: '1', '2')</li><li>played_at (TIMESTAMP): Thời gian người dùng tham gia trận đấu</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Đếm số lượng người dùng duy nhất tham gia từng trận đấu có mã là 1 và 2.</p><p><strong>Output:</strong></p><p>Một danh sách gồm hai cột: <strong>Mã trận đấu</strong> (game_id) và <strong>Số lượng người dùng duy nhất</strong> (unique_users). Danh sách hiển thị kết quả cho các trận đấu có mã là <strong>1 và 2</strong>, với số lượng người dùng được tính riêng cho từng trận đấu.</p>

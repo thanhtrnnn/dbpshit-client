@@ -1,0 +1,35 @@
+{
+  "id": "5f06da94-ad81-4241-80b3-4acad7cc6414",
+  "createdAt": "2024-09-08T23:03:25.42976",
+  "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+  "lastModifiedAt": "2025-11-29T14:57:56.749832",
+  "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+  "questionCode": "SQL099",
+  "title": "Find custom referee",
+  "content": "\u003Cp\u003E\u003Cstrong\u003ETable:&nbsp;Customer\u003C/strong\u003E\u003C/p\u003E\u003Cpre class=\"ql-syntax\" spellcheck=\"false\"\u003E+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| referee_id  | int     |\n+-------------+---------+\n\u003C/pre\u003E\u003Cp\u003EIn SQL, id is the primary key column for this table.\u003C/p\u003E\u003Cp\u003EEach row of this table indicates the id of a customer, their name, and the id of the customer who referred them.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E\u003Cp\u003EFind the names of the customer that are&nbsp;\u003Cstrong\u003Enot referred by\u003C/strong\u003E&nbsp;the customer with&nbsp;id = 2.\u003C/p\u003E\u003Cp\u003EReturn the result table in&nbsp;\u003Cstrong\u003Eany order\u003C/strong\u003E.\u003C/p\u003E\u003Cp\u003EThe result format is in the following example.\u003C/p\u003E\u003Cp\u003E&nbsp;\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EExample 1:\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EInput:\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ECustomer table:\u003C/p\u003E\u003Cpre class=\"ql-syntax\" spellcheck=\"false\"\u003E+----+------+------------+\n| id | name | referee_id |\n+----+------+------------+\n| 1  | Will | null       |\n| 2  | Jane | null       |\n| 3  | Alex | 2          |\n| 4  | Bill | null       |\n| 5  | Zack | 1          |\n| 6  | Mark | 2          |\n+----+------+------------+\n\u003C/pre\u003E\u003Cp\u003E\u003Cbr\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EOutput:\u003C/strong\u003E\u003C/p\u003E\u003Cpre class=\"ql-syntax\" spellcheck=\"false\"\u003E+------+\n| name |\n+------+\n| Will |\n| Jane |\n| Bill |\n| Zack |\n+------+\n\u003C/pre\u003E",
+  "point": 5,
+  "prefixCode": "SJslyz",
+  "type": "SELECT",
+  "enable": true,
+  "level": "EASY",
+  "questionDetails": [
+    {
+      "id": "cb1a524a-7e4d-4b22-baa0-fda54e2618bb",
+      "lastModifiedAt": "2025-11-20T22:51:50.210314",
+      "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+      "typeDatabase": {
+        "id": "22222222-2222-2222-2222-222222222222",
+        "name": "Sql Server"
+      }
+    },
+    {
+      "id": "e34ac6a9-ad1d-4efe-a954-b1a043208fb0",
+      "lastModifiedAt": "2025-11-20T22:51:50.210356",
+      "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+      "typeDatabase": {
+        "id": "11111111-1111-1111-1111-111111111111",
+        "name": "Mysql"
+      }
+    }
+  ]
+}

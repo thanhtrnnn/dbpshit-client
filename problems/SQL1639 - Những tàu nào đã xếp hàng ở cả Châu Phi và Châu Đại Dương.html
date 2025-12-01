@@ -1,0 +1,46 @@
+ID: SQL1639
+Tiêu đề: Những tàu nào đã xếp hàng ở cả Châu Phi và Châu Đại Dương?
+URL WEB: https://db.ptit.edu.vn/question-detail/5fd2bcaf-6210-4470-83db-028af269daf1
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5fd2bcaf-6210-4470-83db-028af269daf1
+Loại Database: Sql Server
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng Vessels</strong></p><p><strong> Bảng này lưu trữ thông tin về các tàu</strong>, bao gồm <strong>ID tàu</strong> và <strong>tên tàu</strong>.</p><pre class="ql-syntax" spellcheck="false">+------------+---------------+----------------------------+
+| Tên cột    | Kiểu dữ liệu  | Mô tả                      |
++------------+---------------+----------------------------+
+| VesselID   | INT           | Mã định danh của tàu       |
+| VesselName | VARCHAR(50)   | Tên của tàu                |
++------------+---------------+----------------------------+
+</pre><p><strong>Bảng CargoLoads</strong></p><p><strong> Bảng này lưu trữ thông tin về các chuyến hàng trên tàu</strong>, bao gồm <strong>ID chuyến hàng</strong>, <strong>tàu</strong>, <strong>vị trí</strong>, và <strong>ngày tải hàng</strong>.</p><pre class="ql-syntax" spellcheck="false">+--------------+---------------+-----------------------------------------------+
+| Tên cột      | Kiểu dữ liệu  | Mô tả                                         |
++--------------+---------------+-----------------------------------------------+
+| LoadID       | INT           | Mã định danh của chuyến hàng                  |
+| VesselID     | INT           | Mã tàu tham gia vận chuyển (liên kết Vessels)|
+| LoadLocation | VARCHAR(50)   | Vị trí nơi hàng hóa được tải lên tàu          |
+| LoadDate     | DATE          | Ngày tải hàng lên tàu                         |
++--------------+---------------+-----------------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Xác định <strong>những tàu (VesselName) đã xếp hàng ở cả Châu Phi (Africa)</strong> và <strong>Châu Đại Dương (Oceania)</strong>.</p><h3>Input mẫu</h3><p><strong>Bảng Vessels</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+-------------+
+| VesselID  | VesselName  |
++-----------+-------------+
+| 1         | Poseidon    |
+| 2         | Neptune     |
+| 3         | Odyssey     |
+| 4         | Triton      |
++-----------+-------------+
+</pre><p><strong>Bảng CargoLoads</strong></p><pre class="ql-syntax" spellcheck="false">+---------+-----------+------------------+------------+
+| LoadID  | VesselID  | LoadLocation     | LoadDate   |
++---------+-----------+------------------+------------+
+| 101     | 1         | Africa - Kenya   | 2024-02-01 |
+| 102     | 1         | Oceania - Fiji   | 2024-03-05 |
+| 103     | 2         | Africa - Egypt   | 2024-01-12 |
+| 104     | 3         | Oceania - Samoa  | 2024-04-10 |
+| 105     | 4         | Africa - Ghana   | 2024-05-11 |
+| 106     | 4         | Oceania - Tonga  | 2024-05-30 |
++---------+-----------+------------------+------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+-------------+
+| VesselName  |
++-------------+
+| Poseidon    |
+| Triton      |
++-------------+
+</pre><p><br></p>

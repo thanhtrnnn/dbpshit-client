@@ -1,0 +1,8 @@
+ID: SQL2752
+Tiêu đề: Tìm tổng số lượng xe buýt điện và hybrid trong các hệ thống giao thông công cộng của Tokyo và Berlin.
+URL WEB: https://db.ptit.edu.vn/question-detail/f86e2e96-4cc1-496e-a5c9-6811f0077487
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f86e2e96-4cc1-496e-a5c9-6811f0077487
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `tokyo_buses`: Lưu trữ số lượng xe buýt theo loại tại Tokyo. </strong></p><ul><li><span style="font-size: 14px;">`tokyo_buses (type VARCHAR(20), quantity INT)`:</span></li><li><span style="font-size: 14px;">`type (VARCHAR(20))`: Loại xe buýt (electric, hybrid).</span></li><li><span style="font-size: 14px;">`quantity (INT)`: Số lượng xe tại Tokyo.</span></li></ul><p><strong style="font-size: 14px;">Bảng `berlin_buses`: Lưu trữ số lượng xe buýt theo loại tại Berlin. </strong></p><ul><li><span style="font-size: 14px;">`berlin_buses (type VARCHAR(20), quantity INT)`:</span></li><li><span style="font-size: 14px;">`type (VARCHAR(20))`: Loại xe buýt (electric, hybrid).</span></li><li><span style="font-size: 14px;">`quantity (INT)`: Số lượng xe tại Berlin.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Tìm tổng số lượng xe buýt điện và hybrid trong các hệ thống giao thông công cộng của Tokyo và Berlin.</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">SUM(quantity)</span></p>

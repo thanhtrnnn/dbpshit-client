@@ -1,0 +1,8 @@
+ID: SQL2207
+Tiêu đề: Số lượng khách du lịch đã tham quan các điểm đến ở châu Âu có xếp hạng an toàn cao trong năm 2019 là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/1a204da3-261c-47a2-a0c0-3ab8d65ca01b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1a204da3-261c-47a2-a0c0-3ab8d65ca01b
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng destinations</strong></p><p><strong> Lưu trữ thông tin về các điểm đến du lịch.</strong></p><ul><li>destination_id (INT): Mã định danh duy nhất cho mỗi điểm đến.</li><li>destination_name (VARCHAR(50)): Tên điểm đến.</li><li>continent (VARCHAR(50)): Châu lục mà điểm đến thuộc về.</li></ul><p><strong>Bảng safety_ratings</strong></p><p><strong> Lưu trữ thông tin đánh giá mức độ an toàn của các điểm đến.</strong></p><ul><li>destination_id (INT): Mã định danh của điểm đến.</li><li>rating (INT): Mức độ an toàn (từ 1 đến 5).</li></ul><p><strong>Bảng tourists</strong></p><p><strong> Lưu trữ thông tin về khách du lịch.</strong></p><ul><li>tourist_id (INT): Mã định danh duy nhất của khách du lịch.</li><li>destination_id (INT): Mã điểm đến mà khách du lịch đã đến thăm.</li><li>year (INT): Năm khách du lịch đến thăm điểm đến.</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong> Đếm số lượng khách du lịch đã đến thăm các điểm đến ở châu Âu</strong> (continent = 'Europe') và <strong>có xếp hạng an toàn từ 4 trở lên</strong> (rating &gt;= 4) <strong>trong năm 2019</strong> (year = 2019).</p><p>Output: total_tourists.</p>

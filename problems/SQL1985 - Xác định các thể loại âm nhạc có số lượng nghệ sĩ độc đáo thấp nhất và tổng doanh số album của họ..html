@@ -1,0 +1,8 @@
+ID: SQL1985
+Tiêu đề: Xác định các thể loại âm nhạc có số lượng nghệ sĩ độc đáo thấp nhất và tổng doanh số album của họ.
+URL WEB: https://db.ptit.edu.vn/question-detail/305bc39d-1bd3-4baf-955a-f4a4cc1970f0
+URL API: https://dbapi.ptit.edu.vn/api/app/question/305bc39d-1bd3-4baf-955a-f4a4cc1970f0
+Loại Database: Mysql
+------------------------------
+
+<h4>Bảng Artists</h4><p>Lưu trữ thông tin về các nghệ sĩ.</p><ul><li>ArtistID (<strong>INT</strong>): Mã số định danh duy nhất cho nghệ sĩ.</li><li>ArtistName (<strong>VARCHAR(255)</strong>): Tên của nghệ sĩ.</li><li>Genre (<strong>VARCHAR(50)</strong>): Thể loại âm nhạc của nghệ sĩ.</li></ul><h4>Bảng Albums</h4><p>Lưu trữ thông tin về các album âm nhạc.</p><ul><li>AlbumID (<strong>INT</strong>): Mã số định danh duy nhất cho album.</li><li>AlbumName (<strong>VARCHAR(255)</strong>): Tên của album.</li><li>Sales (<strong>INT</strong>): Số lượng bán ra của album.</li><li>ArtistID (<strong>INT</strong>): Mã nghệ sĩ (foreign key tham chiếu đến bảng Artists).</li></ul><p><strong>Nhiệm vụ: </strong>Xác định các thể loại âm nhạc có số lượng nghệ sĩ độc đáo thấp nhất và tổng doanh số album của họ.</p><p><strong>Output: </strong></p><p>Một bảng gồm 3 cột: <strong>Genre, Artists_Count, Total_Sales</strong> tương ứng với thể loại âm nhạc, số lượng nghệ sĩ và tổng doanh thu.</p>

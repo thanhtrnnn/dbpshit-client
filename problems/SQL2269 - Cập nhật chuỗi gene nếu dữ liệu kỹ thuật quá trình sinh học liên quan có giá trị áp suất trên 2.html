@@ -1,0 +1,8 @@
+ID: SQL2269
+Tiêu đề: Cập nhật chuỗi gene nếu dữ liệu kỹ thuật quá trình sinh học liên quan có giá trị áp suất trên 2
+URL WEB: https://db.ptit.edu.vn/question-detail/e9e51ddd-28c5-48e7-b52e-feafb7b8f060
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e9e51ddd-28c5-48e7-b52e-feafb7b8f060
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng genetic_data</strong> – Chứa thông tin về dữ liệu di truyền:</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi mẫu dữ liệu di truyền.</li><li>sample_id (VARCHAR(20)): Mã định danh của mẫu dữ liệu di truyền.</li><li>gene_sequence (TEXT): Dãy gene của mẫu (ví dụ: chuỗi ATGCGA...).</li></ul><p><strong>Bảng bioprocess_data</strong> – Chứa thông tin về dữ liệu quá trình sinh học:</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi bản ghi quá trình sinh học.</li><li>sample_id (VARCHAR(20)): Mã định danh của mẫu dữ liệu liên quan (liên kết với bảng genetic_data).</li><li>pressure (FLOAT): Áp suất trong quá trình sinh học.</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong> Cập nhật chuỗi gene (</strong>gene_sequence) trong bảng genetic_data thành 'ATGCGT...' nếu mẫu dữ liệu liên quan trong bảng bioprocess_data có giá trị áp suất (pressure) lớn hơn 2.</p><p><strong>Output:</strong></p><p><strong> Các bản ghi trong </strong>genetic_data có gene_sequence được cập nhật.</p>

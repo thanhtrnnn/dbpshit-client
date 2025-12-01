@@ -1,0 +1,32 @@
+ID: SQL1706
+Tiêu đề: Xác định tổng số hành động pháp lý được thực hiện đối với hợp đồng thông minh ở khu vực Nam Cực.
+URL WEB: https://db.ptit.edu.vn/question-detail/353a73af-ab75-4175-a03a-ebb47be24253
+URL API: https://dbapi.ptit.edu.vn/api/app/question/353a73af-ab75-4175-a03a-ebb47be24253
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `smart_contracts`: Bảng này lưu trữ thông tin về các hợp đồng thông minh, bao gồm ID hợp đồng, tên hợp đồng và khu vực. </strong></p><ul><li>`contract_id (INT)`: Mã định danh của hợp đồng thông minh.</li><li>`contract_name (VARCHAR(50))`: Tên của hợp đồng thông minh.</li><li>`region (VARCHAR(50))`: Khu vực nơi hợp đồng được triển khai.</li></ul><p><br></p><p><strong>Bảng `regulatory_actions`: Bảng này lưu trữ thông tin về các hành động pháp lý đối với các hợp đồng thông minh, bao gồm ID hành động, ID hợp đồng và ngày thực hiện hành động. </strong></p><ul><li>`action_id (INT)`: Mã định danh của hành động pháp lý.</li><li>`contract_id (INT)`: Mã hợp đồng thông minh.</li><li>`action_date (DATE)`: Ngày thực hiện hành động pháp lý.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Viết truy vấn SQL để xác định <strong>tổng số hành động pháp lý (COUNT(*))</strong> được thực hiện đối với các hợp đồng thông minh ở khu vực <strong>Nam Cực</strong> (Antarctic).</p><p><br></p><h3>Input mẫu</h3><p><strong>Bảng smart_contracts</strong></p><pre class="ql-syntax" spellcheck="false">
++-------------+------------------+-------------+
+| contract_id | contract_name    | region      |
++-------------+------------------+-------------+
+| 1           | IceTrade         | Antarctic   |
+| 2           | SnowCoin         | Arctic      |
+| 3           | PolarPay         | Antarctic   |
+| 4           | DesertChain      | Sahara      |
++-------------+------------------+-------------+
+</pre><p><strong>Bảng regulatory_actions</strong></p><pre class="ql-syntax" spellcheck="false">
++------------+-------------+-------------+
+| action_id  | contract_id | action_date |
++------------+-------------+-------------+
+| 1          | 1           | 2024-01-10  |
+| 2          | 2           | 2024-03-05  |
+| 3          | 3           | 2024-04-12  |
+| 4          | 1           | 2024-05-20  |
+| 5          | 4           | 2024-06-30  |
++------------+-------------+-------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----------+
+| count(*) |
++----------+
+| 3        |
+</pre><p><br></p>

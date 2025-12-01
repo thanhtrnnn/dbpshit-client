@@ -1,0 +1,42 @@
+ID: ENG-005
+Tiêu đề: BASIC JOIN 2
+URL WEB: https://db.ptit.edu.vn/question-detail/56f45084-3d42-4954-9a3c-083876238aad
+URL API: https://dbapi.ptit.edu.vn/api/app/question/56f45084-3d42-4954-9a3c-083876238aad
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Table: Customer</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName | varchar(100) |
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| varchar(50)&nbsp; |
++--------------+--------------+
+</pre><p>CustID is the unique ID of each customer, used as the primary key.</p><p>CustomerName is the full name of the customer.</p><p>City is the city where the customer lives.</p><p>Each row in this table represents one customer.</p><p><br></p><p><strong>Table: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| OrderID&nbsp; &nbsp; &nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | date&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| TotalAmount&nbsp; | decimal(10,2)&nbsp; |
++--------------+----------------+
+</pre><p>OrderID is the unique ID of each order, used as the primary key.</p><p>CustID is the ID of the customer who placed the order. CustID is a foreign key referencing CustID in the Customer table.</p><p>OrderDate is the date when the order was created.</p><p>TotalAmount is the total value of the order.</p><p>Each row in this table represents one order placed by a customer.</p><p><br></p><p><strong>Task:</strong></p><p>Write an SQL query to print OrderID, CustomerName, City, OrderDate, and TotalAmount for all orders where the customer lives in 'London' or 'Paris', and the order’s TotalAmount is greater than 200.</p><p><br></p><p><strong>Example</strong></p><p>Input:</p><p>Customer</p><pre class="ql-syntax" spellcheck="false">+--------+--------------+---------+
+| CustID | CustomerName | City&nbsp; &nbsp; |
++--------+--------------+---------+
+| 1&nbsp; &nbsp; &nbsp; | Alice&nbsp; &nbsp; &nbsp; &nbsp; | London&nbsp; |
+| 2&nbsp; &nbsp; &nbsp; | Bob&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Paris&nbsp; &nbsp;|
+| 3&nbsp; &nbsp; &nbsp; | Charlie&nbsp; &nbsp; &nbsp; | Hanoi&nbsp; &nbsp;|
++--------+--------------+---------+
+</pre><p><br></p><p>SaleOrder</p><pre class="ql-syntax" spellcheck="false">+---------+--------+------------+-------------+
+| OrderID | CustID | OrderDate&nbsp; | TotalAmount |
++---------+--------+------------+-------------+
+| 101&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; | 2024-01-10 | 150.00&nbsp; &nbsp; &nbsp; |
+| 102&nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; | 2024-01-12 | 220.50&nbsp; &nbsp; &nbsp; |
+| 103&nbsp; &nbsp; &nbsp;| 3&nbsp; &nbsp; &nbsp; | 2024-01-15 | 300.00&nbsp; &nbsp; &nbsp; |
++---------+--------+------------+-------------+
+</pre><p><br></p><p>Output:</p><pre class="ql-syntax" spellcheck="false">+---------+--------------+---------+------------+-------------+
+| OrderID | CustomerName | City&nbsp; &nbsp; | OrderDate&nbsp; | TotalAmount |
++---------+--------------+---------+------------+-------------+
+| 102&nbsp; &nbsp; &nbsp;| Bob&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Paris&nbsp; &nbsp;| 2024-01-12 | 220.50&nbsp; &nbsp; &nbsp; |
++---------+--------------+---------+------------+-------------+
+</pre>

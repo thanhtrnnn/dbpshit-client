@@ -1,0 +1,8 @@
+ID: SQL2365
+Tiêu đề: Tìm ngân sách trung bình cho các chương trình truyền hình và phim phát hành trong 5 năm qua
+URL WEB: https://db.ptit.edu.vn/question-detail/6068960d-f89a-4281-a006-ced6f8147856
+URL API: https://dbapi.ptit.edu.vn/api/app/question/6068960d-f89a-4281-a006-ced6f8147856
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng movies</strong>: Chứa thông tin về các bộ phim.</h3><ul><li>title (VARCHAR(255)): Tiêu đề của bộ phim.</li><li>genre (VARCHAR(50)): Thể loại phim (ví dụ: “Comedy”, “Drama”, “Action”).</li><li>budget (INT): Ngân sách sản xuất của bộ phim.</li><li>release_year (INT): Năm phát hành của bộ phim.</li></ul><h3><strong>Bảng tv_shows</strong>: Chứa thông tin về các chương trình truyền hình.</h3><ul><li>title (VARCHAR(255)): Tiêu đề của chương trình truyền hình.</li><li>genre (VARCHAR(50)): Thể loại chương trình.</li><li>budget (INT): Ngân sách sản xuất của chương trình.</li><li>release_year (INT): Năm phát sóng của chương trình.</li></ul><h3><strong>Nhiệm vụ</strong>:</h3><p>Tính ngân sách trung bình cho các bộ phim và chương trình truyền hình được phát hành trong 5 năm gần nhất (tính từ năm hiện tại).</p>

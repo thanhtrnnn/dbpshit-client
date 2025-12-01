@@ -1,0 +1,8 @@
+ID: SQL2790
+Tiêu đề: Tổng trọng lượng hàng hóa được công ty Orion Lines xử lý tại Cảng Hồng Kông là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/1dda24d9-efc9-40bd-bb17-deb4296f02eb
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1dda24d9-efc9-40bd-bb17-deb4296f02eb
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `ports`: Lưu trữ thông tin các cảng. </strong></p><ul><li><span style="font-size: 14px;">`id` (INT): Mã cảng.</span></li><li><span style="font-size: 14px;">`name` (VARCHAR(50)): Tên cảng.</span></li><li><span style="font-size: 14px;">`country` (VARCHAR(50)): Quốc gia.</span></li></ul><p><strong style="font-size: 14px;">Bảng `cargo_operations`: Lưu trữ thông tin hoạt động hàng hóa tại cảng. </strong></p><ul><li><span style="font-size: 14px;">`id` (INT): Mã hoạt động.</span></li><li><span style="font-size: 14px;">`port_id` (INT): Mã cảng liên quan.</span></li><li><span style="font-size: 14px;">`company` (VARCHAR(50)): Tên công ty. - `type` (VARCHAR(50)): Loại hoạt động (import/export).</span></li><li><span style="font-size: 14px;">`weight` (INT): Trọng lượng hàng hóa.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Tính tổng trọng lượng hàng hóa được công ty "Orion Lines" xử lý tại "Port of Hong Kong".</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">SUM(weight)</span></p>

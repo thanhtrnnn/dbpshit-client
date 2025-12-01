@@ -1,0 +1,26 @@
+ID: SQL1845
+Tiêu đề: Tổng số tiền hỗ trợ tài chính được cung cấp cho người tị nạn ở Jordan và Thổ Nhĩ Kỳ, được nhóm theo tổ chức là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/85e95d19-59fc-4568-aadf-8ca11f6ca8d8
+URL API: https://dbapi.ptit.edu.vn/api/app/question/85e95d19-59fc-4568-aadf-8ca11f6ca8d8
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng financial_aid:</strong></p><p>Bảng này lưu trữ thông tin về các khoản tài trợ tài chính cho các tổ chức, bao gồm ID, tổ chức, quốc gia và số tiền tài trợ.</p><ul><li>id (INT): Mã định danh của khoản tài trợ.</li><li>organization (VARCHAR(255)): Tên tổ chức nhận tài trợ.</li><li>country (VARCHAR(255)): Quốc gia nhận tài trợ.</li><li>amount (DECIMAL(10,2)): Số tiền tài trợ.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tổng số tiền hỗ trợ tài chính được cung cấp cho người tị nạn ở Jordan và Thổ Nhĩ Kỳ, được nhóm theo tổ chức là bao nhiêu?</p><p><br></p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----+---------------------+-----------+-----------+
+| id | organization        | country   | amount    |
++----+---------------------+-----------+-----------+
+| 1  | UNHCR               | Jordan    | 50000.00  |
+| 2  | UNICEF              | Turkey    | 30000.00  |
+| 3  | WHO                 | Jordan    | 20000.00  |
+| 4  | UNHCR               | Turkey    | 40000.00  |
+| 5  | Red Cross           | Lebanon   | 10000.00  |
++----+---------------------+-----------+-----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----------------+------------+
+| organization   | total_aid  |
++----------------+------------+
+| UNHCR          | 90000.00   |
+| UNICEF         | 30000.00   |
+| WHO            | 20000.00   |
++----------------+------------+
+</pre><p><br></p>

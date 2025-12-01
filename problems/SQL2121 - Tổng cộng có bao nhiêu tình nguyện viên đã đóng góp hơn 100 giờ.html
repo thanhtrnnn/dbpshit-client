@@ -1,0 +1,13 @@
+ID: SQL2121
+Tiêu đề: Tổng cộng có bao nhiêu tình nguyện viên đã đóng góp hơn 100 giờ?
+URL WEB: https://db.ptit.edu.vn/question-detail/ddacefd3-2100-4c82-aee4-e16ccdbc4537
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ddacefd3-2100-4c82-aee4-e16ccdbc4537
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Volunteers</strong></p><p>Lưu trữ thông tin về các tình nguyện viên, với cấu trúc:</p><ul><li>VolunteerID (INT): Mã tình nguyện viên</li><li>DonorID (INT): Mã người ủng hộ</li><li>NonprofitID (INT): Mã tổ chức từ thiện</li><li>Hours (INT): Số giờ tình nguyện</li><li>Year (INT): Năm tình nguyện</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tổng cộng có bao nhiêu tình nguyện viên đã đóng góp hơn 100 giờ?</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+----------+
+| COUNT(*) |
++----------+
+| 1        |
++----------+
+</pre>

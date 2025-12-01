@@ -1,0 +1,30 @@
+ID: SQL1839
+Tiêu đề: Tên của các tình nguyện viên đã từng làm việc trong các dự án ở cả hai hạng mục 'Education' và 'Environment' là gì?
+URL WEB: https://db.ptit.edu.vn/question-detail/8eb5117e-4168-436d-9b71-c5b14b342146
+URL API: https://dbapi.ptit.edu.vn/api/app/question/8eb5117e-4168-436d-9b71-c5b14b342146
+Loại Database: Mysql
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng projects</strong></p><p><strong> Bảng này lưu trữ thông tin về các dự án tình nguyện</strong>, bao gồm <strong>mã dự án</strong>, <strong>loại dự án</strong>, và <strong>mã tình nguyện viên tham gia</strong>.</p><pre class="ql-syntax" spellcheck="false">+---------------+---------------+-----------------------------------------+
+| Tên cột       | Kiểu dữ liệu  | Mô tả                                   |
++---------------+---------------+-----------------------------------------+
+| id            | INT           | Mã định danh duy nhất của dự án         |
+| category      | VARCHAR(20)   | Loại dự án (Education, Environment, ...)|
+| volunteer_id  | INT           | Mã tình nguyện viên tham gia dự án      |
++---------------+---------------+-----------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Tìm <strong>tên các tình nguyện viên (volunteer_id)</strong></p><p><strong> đã từng tham gia các dự án ở cả hai hạng mục ‘Education’ và ‘Environment’</strong>.</p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">+----+-------------+---------------+
+| id | category    | volunteer_id  |
++----+-------------+---------------+
+| 1  | Education   | 101           |
+| 2  | Environment | 101           |
+| 3  | Education   | 102           |
+| 4  | Environment | 103           |
+| 5  | Health      | 101           |
+| 6  | Education   | 104           |
++----+-------------+---------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+---------------+
+| volunteer_id  |
++---------------+
+| 101           |
++---------------+
+</pre><p><br></p>

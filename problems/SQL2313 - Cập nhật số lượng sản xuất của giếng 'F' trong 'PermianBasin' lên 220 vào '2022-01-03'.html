@@ -1,0 +1,8 @@
+ID: SQL2313
+Tiêu đề: Cập nhật số lượng sản xuất của giếng 'F' trong 'PermianBasin' lên 220 vào '2022-01-03'?
+URL WEB: https://db.ptit.edu.vn/question-detail/3f2f3b96-ddcb-4dec-a5ff-4b2c8d583613
+URL API: https://dbapi.ptit.edu.vn/api/app/question/3f2f3b96-ddcb-4dec-a5ff-4b2c8d583613
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng 1: wells</strong></p><p><strong> Chứa thông tin về các giếng khoan</strong>.</p><ul><li>id (VARCHAR(10)): Mã định danh duy nhất cho mỗi giếng khoan.</li><li>name (VARCHAR(10)): Tên của giếng khoan.</li><li>region (VARCHAR(20)): Vùng địa lý nơi giếng khoan nằm (ví dụ: <em>PermianBasin</em>).</li></ul><p><strong>Bảng 2: production</strong></p><p><strong> Chứa thông tin về sản lượng khai thác</strong> từ các giếng khoan.</p><ul><li>well_id (VARCHAR(10)): Mã định danh của giếng khoan (liên kết với bảng wells).</li><li>date (DATE): Ngày sản xuất.</li><li>quantity (INT): Sản lượng khai thác trong ngày (đơn vị có thể là thùng dầu, m³, v.v.).</li></ul><h3><strong>Nhiệm vụ</strong></h3><p>Cập nhật giá trị quantity thành 220</p><p> cho giếng có tên là 'F',</p><p> thuộc vùng 'PermianBasin',</p><p> vào ngày '2022-01-03'.</p>

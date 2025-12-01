@@ -1,0 +1,8 @@
+ID: SQL2248
+Tiêu đề: Có bao nhiêu bộ dụng cụ phòng chống thiên tai đã được phân phát ở mỗi khu vực?
+URL WEB: https://db.ptit.edu.vn/question-detail/e82643c3-3870-4de9-9721-558009b88820
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e82643c3-3870-4de9-9721-558009b88820
+Loại Database: Mysql
+------------------------------
+
+<h4><strong>Bảng regions</strong> – Thông tin về các khu vực địa lý:</h4><ul><li>name (VARCHAR(255)): Tên khu vực (ví dụ: 'Northeast', 'Southeast', ...)</li></ul><h4><strong>Bảng disaster_preparedness_kits</strong> – Thông tin về số lượng bộ dụng cụ phòng chống thiên tai:</h4><ul><li>id (INT): Mã định danh duy nhất cho mỗi bản ghi</li><li>region (VARCHAR(255)): Tên khu vực liên quan đến số lượng bộ dụng cụ (liên kết với regions.name)</li><li>quantity (INT): Số lượng bộ dụng cụ đã được phân phát</li></ul><p><strong>Nhiệm vụ:</strong> Tính tổng số bộ dụng cụ (total_kits_distributed) đã phân phát ở <strong>mỗi khu vực</strong>.</p><p><strong>Output:</strong> region, total_kits_distributed</p>

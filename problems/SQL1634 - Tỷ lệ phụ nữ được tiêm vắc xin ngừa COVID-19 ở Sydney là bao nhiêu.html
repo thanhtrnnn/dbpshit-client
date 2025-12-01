@@ -1,0 +1,31 @@
+ID: SQL1634
+Tiêu đề: Tỷ lệ phụ nữ được tiêm vắc xin ngừa COVID-19 ở Sydney là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/e15d3bcb-9603-4bd3-908b-7efd047de9e7
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e15d3bcb-9603-4bd3-908b-7efd047de9e7
+Loại Database: Sql Server
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng Vaccinations</strong></p><p><strong> Bảng này chứa thông tin về các buổi tiêm chủng</strong>, bao gồm <strong>ID tiêm chủng</strong>, <strong>ID bệnh nhân</strong>, <strong>giới tính</strong>, <strong>loại vắc xin</strong>, <strong>ngày tiêm</strong>, và <strong>thành phố tiêm chủng</strong>.</p><pre class="ql-syntax" spellcheck="false">+----------------+---------------+------------------------------------------------------+
+| Tên cột        | Kiểu dữ liệu  | Mô tả                                                |
++----------------+---------------+------------------------------------------------------+
+| VaccinationID  | INT           | Mã số duy nhất cho mỗi buổi tiêm chủng              |
+| PatientID      | INT           | ID của bệnh nhân                                    |
+| Gender         | VARCHAR(10)   | Giới tính của bệnh nhân                             |
+| VaccineType    | VARCHAR(20)   | Loại vắc xin                                        |
+| Date           | DATE          | Ngày tiêm chủng                                     |
+| City           | VARCHAR(30)   | Thành phố tiêm chủng                                |
++----------------+---------------+------------------------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Tính <strong>tỷ lệ phần trăm (%) số buổi tiêm chủng của bệnh nhân nữ (Gender = 'Female')</strong> so với <strong>tổng số buổi tiêm chủng tại thành phố Sydney (City = 'Sydney')</strong>.</p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">+---------------+-----------+---------+-------------+------------+-----------+
+| VaccinationID | PatientID | Gender  | VaccineType | Date       | City      |
++---------------+-----------+---------+-------------+------------+-----------+
+| 1             | 101       | Female  | Pfizer      | 2024-05-10 | Sydney    |
+| 2             | 102       | Male    | Moderna     | 2024-05-10 | Sydney    |
+| 3             | 103       | Female  | Pfizer      | 2024-05-11 | Sydney    |
+| 4             | 104       | Male    | AstraZeneca | 2024-05-12 | Melbourne |
++---------------+-----------+---------+-------------+------------+-----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+-----------------------------+
+| Female_Percentage_Sydney(%) |
++-----------------------------+
+| 66.67                       |
++-----------------------------+
+</pre><p><br></p>

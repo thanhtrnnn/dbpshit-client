@@ -1,0 +1,13 @@
+ID: SQL2181
+Tiêu đề: Tổng doanh thu từ các chương trình nghệ thuật cộng đồng so với doanh thu từ bộ sưu tập nghệ thuật vĩnh viễn tại các bảo tàng ở Hoa Kỳ là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/8b8aa4db-4baa-4e77-84a1-474c8976f659
+URL API: https://dbapi.ptit.edu.vn/api/app/question/8b8aa4db-4baa-4e77-84a1-474c8976f659
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có 3 bảng dữ liệu:</strong></p><h4><strong>1. Bảng museums – Thông tin về các bảo tàng:</strong></h4><ul><li>id (INT): Mã định danh của bảo tàng</li><li>name (VARCHAR(255)): Tên bảo tàng</li><li>location (VARCHAR(255)): Địa điểm của bảo tàng (ví dụ: "New York, USA")</li></ul><h4><strong>2. Bảng art_collections – Bộ sưu tập nghệ thuật:</strong></h4><ul><li>id (INT): Mã định danh bộ sưu tập</li><li>museum_id (INT): Mã bảo tàng</li><li>type (VARCHAR(255)): Loại bộ sưu tập (ví dụ: "Permanent", "Temporary")</li><li>revenue (DECIMAL(10,2)): Doanh thu từ bộ sưu tập</li></ul><h4><strong>3. Bảng community_programs – Chương trình cộng đồng:</strong></h4><ul><li>id (INT): Mã chương trình</li><li>museum_id (INT): Mã bảo tàng tổ chức chương trình</li><li>type (VARCHAR(255)): Loại chương trình (ví dụ: "Art")</li><li>revenue (DECIMAL(10,2)): Doanh thu từ chương trình cộng đồng</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tổng doanh thu từ các chương trình nghệ thuật cộng đồng so với doanh thu từ bộ sưu tập nghệ thuật vĩnh viễn tại các bảo tàng ở Hoa Kỳ là bao nhiêu?</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+---------------------+--------------------------+-----------------------+
+| location            | total_collection_revenue | total_program_revenue |
++---------------------+--------------------------+-----------------------+
+| United States       | 1000.0                   | 500.0                 |
++---------------------+--------------------------+-----------------------+
+</pre>

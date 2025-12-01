@@ -1,0 +1,8 @@
+ID: SQL2253
+Tiêu đề: Hiển thị tổng số thuê bao di động và thuê bao băng thông rộng tại khu vực Châu Á - Thái Bình Dương.
+URL WEB: https://db.ptit.edu.vn/question-detail/5f3869a9-b799-4ca3-91d3-ec02ea00842c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5f3869a9-b799-4ca3-91d3-ec02ea00842c
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có hai bảng dữ liệu:</p><p><strong>mobile_subscribers</strong> – thông tin các thuê bao di động:</p><ul><li class="ql-indent-1">subscriber_id (INT): mã định danh duy nhất cho mỗi thuê bao</li><li class="ql-indent-1">region (TEXT): khu vực của thuê bao (ví dụ: 'Asia-Pacific')</li></ul><p><strong>broadband_subscribers</strong> – thông tin các thuê bao băng rộng:</p><ul><li class="ql-indent-1">subscriber_id (INT): mã định danh duy nhất cho mỗi thuê bao</li><li class="ql-indent-1">region (TEXT): khu vực của thuê bao (ví dụ: 'Asia-Pacific')</li></ul><p><strong>Nhiệm vụ:</strong> Hiển thị <strong>tổng số thuê bao di động và tổng số thuê bao băng rộng</strong> tại khu vực <strong>Châu Á - Thái Bình Dương</strong>.</p><p><strong>Output: </strong>COUNT(*)</p><ul><li>Hàng đầu tiên: tổng số thuê bao di động (COUNT(*) từ mobile_subscribers)</li><li>Hàng thứ hai: tổng số thuê bao băng rộng (COUNT(*) từ broadband_subscribers)</li></ul>

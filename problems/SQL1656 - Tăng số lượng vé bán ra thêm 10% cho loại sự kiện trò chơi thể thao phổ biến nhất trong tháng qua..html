@@ -1,0 +1,35 @@
+ID: SQL1656
+Tiêu đề: Tăng số lượng vé bán ra thêm 10% cho loại sự kiện trò chơi thể thao phổ biến nhất trong tháng qua.
+URL WEB: https://db.ptit.edu.vn/question-detail/339d0c0c-4052-4b63-a16e-29c5fca4834e
+URL API: https://dbapi.ptit.edu.vn/api/app/question/339d0c0c-4052-4b63-a16e-29c5fca4834e
+Loại Database: Sql Server
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng TicketSales</strong></p><pre class="ql-syntax" spellcheck="false">+---------------+----------------+-----------------------------------------------+
+| Cột           | Kiểu dữ liệu   | Mô tả                                        |
++---------------+----------------+-----------------------------------------------+
+| id            | INT            | Mã định danh của giao dịch bán vé            |
+| event_type    | VARCHAR(255)   | Loại sự kiện (Concert, Sports Game, v.v.)    |
+| location      | VARCHAR(255)   | Địa điểm tổ chức sự kiện                     |
+| tickets_sold  | INT            | Số lượng vé đã bán                           |
+| price         | DECIMAL(5,2)   | Giá vé                                       |
+| ticket_type   | VARCHAR(50)    | Loại vé (VIP, General Admission, v.v.)       |
+| date          | DATE           | Ngày diễn ra sự kiện                         |
++---------------+----------------+-----------------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p><strong>Tăng số lượng vé bán ra thêm 10%</strong> cho <strong>loại sự kiện trò chơi thể thao (Sports Game)</strong> — loại sự kiện thể thao <strong>phổ biến nhất trong tháng qua</strong>.</p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">+----+--------------+-------------+--------------+--------+--------------------+------------+
+| id | event_type   | location    | tickets_sold | price  | ticket_type        | date       |
++----+--------------+-------------+--------------+--------+--------------------+------------+
+| 1  | Sports Game  | New York    | 1000         | 50.00  | General Admission  | 2025-10-15 |
+| 2  | Concert      | Los Angeles | 800          | 70.00  | VIP                | 2025-10-10 |
+| 3  | Sports Game  | Chicago     | 1200         | 60.00  | VIP                | 2025-10-20 |
+| 4  | Theater      | Boston      | 500          | 40.00  | General Admission  | 2025-10-05 |
++----+--------------+-------------+--------------+--------+--------------------+------------+
+</pre><h3>Output mẫu (sau khi cập nhật)</h3><pre class="ql-syntax" spellcheck="false">+----+--------------+-------------+--------------+--------+--------------------+------------+
+| id | event_type   | location    | tickets_sold | price  | ticket_type        | date       |
++----+--------------+-------------+--------------+--------+--------------------+------------+
+| 1  | Sports Game  | New York    | 1100         | 50.00  | General Admission  | 2025-10-15 |
+| 2  | Concert      | Los Angeles | 800          | 70.00  | VIP                | 2025-10-10 |
+| 3  | Sports Game  | Chicago     | 1320         | 60.00  | VIP                | 2025-10-20 |
+| 4  | Theater      | Boston      | 500          | 40.00  | General Admission  | 2025-10-05 |
++----+--------------+-------------+--------------+--------+--------------------+------------+
+</pre><p><br></p>

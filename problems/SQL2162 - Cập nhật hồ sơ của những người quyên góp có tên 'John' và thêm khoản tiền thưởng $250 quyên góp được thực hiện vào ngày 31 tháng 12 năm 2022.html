@@ -1,0 +1,17 @@
+ID: SQL2162
+Tiêu đề: Cập nhật hồ sơ của những người quyên góp có tên 'John' và thêm khoản tiền thưởng $250 quyên góp được thực hiện vào ngày 31 tháng 12 năm 2022
+URL WEB: https://db.ptit.edu.vn/question-detail/98dfc9d5-dde6-4734-a377-8f0fc2de40c9
+URL API: https://dbapi.ptit.edu.vn/api/app/question/98dfc9d5-dde6-4734-a377-8f0fc2de40c9
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Donors</strong> lưu trữ thông tin về các nhà tài trợ, gồm các cột:</p><ul><li>DonorID (INT): Mã định danh duy nhất cho mỗi nhà tài trợ.</li><li>FirstName (VARCHAR): Tên của nhà tài trợ.</li><li>LastName (VARCHAR): Họ của nhà tài trợ.</li><li>DonationDate (DATE): Ngày diễn ra hoạt động quyên góp.</li><li>Amount (DECIMAL): Số tiền tài trợ.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Cập nhật hồ sơ của những người quyên góp có tên 'John' và thêm khoản tiền thưởng $250 quyên góp được thực hiện vào ngày 31 tháng 12 năm 2022</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+----------+-----------+----------+--------------+------------+--------+
+| donorid  | firstname | lastname | donationdate | amount     |        |
++----------+-----------+----------+--------------+------------+--------+
+| 1573     | Bob       | Lisa     | 2021-06-02   | 303.54     |        |
+| 6909     | Mary      | John     | 2020-03-10   | 628.5      |        |
+| 8065     | David     | Bob      | 2020-05-19   | 606.04     |        |
+| 6992     | Lisa      | Bob      | 2024-12-01   | 4.95       |        |
+| 5073     | John      | Lisa     | 2022-12-31   | 917.23     |        |
+| 2481     | Michael   | Sarah    | 2020-08-28   | 637.73     |        |
++----------+-----------+----------+--------------+------------+--------+</pre>

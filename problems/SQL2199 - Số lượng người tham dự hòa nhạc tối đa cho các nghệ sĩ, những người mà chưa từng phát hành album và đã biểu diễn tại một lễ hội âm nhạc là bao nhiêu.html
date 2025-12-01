@@ -1,0 +1,8 @@
+ID: SQL2199
+Tiêu đề: Số lượng người tham dự hòa nhạc tối đa cho các nghệ sĩ, những người mà chưa từng phát hành album và đã biểu diễn tại một lễ hội âm nhạc là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/fed1a3bd-6518-4e4f-b167-b189d3fa0bcf
+URL API: https://dbapi.ptit.edu.vn/api/app/question/fed1a3bd-6518-4e4f-b167-b189d3fa0bcf
+Loại Database: Mysql
+------------------------------
+
+<p>Bảng Concerts lưu trữ thông tin về các buổi hòa nhạc, bao gồm:</p><ul><li>concert_id (INT): mã định danh của buổi hòa nhạc.</li><li>concert_name (TEXT): tên của buổi hòa nhạc.</li><li>attendees (INT): số lượng khán giả tham dự buổi hòa nhạc.</li><li>artist_id (INT): mã định danh của nghệ sĩ biểu diễn trong buổi hòa nhạc.</li></ul><p>Bảng Artists lưu trữ thông tin về các nghệ sĩ, bao gồm:</p><ul><li>artist_id (INT): mã định danh duy nhất cho nghệ sĩ.</li><li>artist_name (TEXT): tên của nghệ sĩ.</li><li>albums (INT): số lượng album mà nghệ sĩ đã phát hành.</li><li>festivals (BOOLEAN): cho biết nghệ sĩ có từng biểu diễn tại một lễ hội âm nhạc hay không (TRUE hoặc FALSE).</li></ul><p>Hãy <strong>tìm số lượng khán giả tham dự cao nhất (attendees) trong các buổi hòa nhạc của những nghệ sĩ chưa từng phát hành album (albums) nhưng đã từng biểu diễn tại lễ hội âm nhạc (festivals)</strong>.</p><p>Output: MAX(c.attendees)</p>

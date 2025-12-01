@@ -1,0 +1,14 @@
+ID: SQL2116
+Tiêu đề: Mức lương trung bình của nhân viên trong mỗi bộ phận, được nhóm theo chức danh công việc của họ là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/1693fd6e-e397-469b-97b2-3427fdc0102b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1693fd6e-e397-469b-97b2-3427fdc0102b
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng Employees</strong></p><p><span style="font-size: 14px;">Lưu trữ thông tin về các nhân viên, với cấu trúc:</span></p><ul><li><span style="font-size: 14px;">EmployeeID (INT): Mã nhân viên</span></li><li><span style="font-size: 14px;">Department (VARCHAR(50)): Tên bộ phận</span></li><li><span style="font-size: 14px;">JobTitle (VARCHAR(50)): Chức danh công việc</span></li><li><span style="font-size: 14px;">Salary (DECIMAL(10,2)): Mức lương của nhân viên</span></li></ul><p><strong style="font-size: 14px;">Nhiệm vụ:</strong></p><p><span style="font-size: 14px;">Mức lương trung bình của nhân viên trong mỗi bộ phận, được nhóm theo chức danh công việc của họ là bao nhiêu?</span></p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+------------+-----------------------+-----------+
+| Department | JobTitle              | AvgSalary |
++------------+-----------------------+-----------+
+| Engineering | Software Engineer     | 102733.9  |
+| Marketing   | Marketing Coordinator | 76563.03  |
+| Sales       | Sales Representative  | 78027.39  |
++------------+-----------------------+-----------+</pre>

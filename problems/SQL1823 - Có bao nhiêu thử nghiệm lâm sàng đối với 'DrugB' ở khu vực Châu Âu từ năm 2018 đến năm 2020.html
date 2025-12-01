@@ -1,0 +1,8 @@
+ID: SQL1823
+Tiêu đề: Có bao nhiêu thử nghiệm lâm sàng đối với 'DrugB' ở khu vực Châu Âu từ năm 2018 đến năm 2020?
+URL WEB: https://db.ptit.edu.vn/question-detail/78332c66-dfa5-4d1b-bd74-465cf9694864
+URL API: https://dbapi.ptit.edu.vn/api/app/question/78332c66-dfa5-4d1b-bd74-465cf9694864
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng clinical_trials</strong>:</p><p>Bảng này lưu trữ thông tin về các thử nghiệm lâm sàng, bao gồm các thông tin như tên thuốc, khu vực thử nghiệm, năm và số lượng thử nghiệm.</p><ul><li>drug_name (TEXT): Tên thuốc được thử nghiệm.</li><li>region (TEXT): Khu vực tiến hành thử nghiệm.</li><li>year (INT): Năm thực hiện thử nghiệm.</li><li>trials (INT): Số lượng thử nghiệm được thực hiện.</li></ul><p><strong>Nhiệm vụ</strong>:</p><p>Có bao nhiêu thử nghiệm lâm sàng đối với DrugB ở khu vực Châu Âu (Europe) từ năm 2018 đến năm 2020?</p><p><br></p><p><strong>Output: </strong><span style="font-size: 14px;">SUM(trials)</span></p>

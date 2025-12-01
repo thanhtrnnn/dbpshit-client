@@ -1,0 +1,8 @@
+ID: SQL2215
+Tiêu đề: Lượng sản xuất Neodymium trung bình hàng tháng trong năm 2020 từ các nguồn 'mining' và 'recycling' là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/35dff045-c881-40dd-9275-300097930247
+URL API: https://dbapi.ptit.edu.vn/api/app/question/35dff045-c881-40dd-9275-300097930247
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng mining</strong> – Lưu trữ sản lượng khai thác khoáng sản:</p><ul><li>year (INT): Năm khai thác.</li><li>element (VARCHAR(10)): Tên nguyên tố được khai thác.</li><li>quantity (INT): Sản lượng khai thác (tổng theo năm, tính bằng tấn).</li></ul><p><strong>Bảng recycling</strong> – Lưu trữ sản lượng tái chế khoáng sản:</p><ul><li>year (INT): Năm tái chế.</li><li>element (VARCHAR(10)): Tên nguyên tố được tái chế.</li><li>quantity (INT): Sản lượng tái chế (tổng theo năm, tính bằng tấn).</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong> Tính sản lượng trung bình hàng tháng của nguyên tố <em>Neodymium</em> trong năm 2020</strong>, khi <strong>tổng hợp từ cả hai nguồn dữ liệu</strong>: khai thác (mining) và tái chế (recycling).</p><p>Output: AVG(quantity).</p>

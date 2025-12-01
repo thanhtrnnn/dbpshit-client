@@ -1,0 +1,13 @@
+ID: SQL2189
+Tiêu đề: Cập nhật mục tiêu của ''National Security Strategy'' cho khu vực Bắc Mỹ thành ''Cyber Defense''.
+URL WEB: https://db.ptit.edu.vn/question-detail/b491cda7-ba50-442f-bdf5-953014e11336
+URL API: https://dbapi.ptit.edu.vn/api/app/question/b491cda7-ba50-442f-bdf5-953014e11336
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có 2 bảng dữ liệu:</strong></p><h4><strong>1. Bảng region</strong> – Thông tin về các khu vực địa lý:</h4><ul><li>id (INT): Mã định danh khu vực (khóa chính)</li><li>name (VARCHAR(255)): Tên khu vực (ví dụ: Bắc Mỹ)</li></ul><h4><strong>2. Bảng strategy</strong> – Thông tin về các chiến lược:</h4><ul><li>id (INT): Mã định danh chiến lược (khóa chính)</li><li>name (VARCHAR(255)): Tên chiến lược (ví dụ: National Security Strategy)</li><li>region_id (INT): Khóa ngoại tham chiếu đến bảng region</li><li>focus (VARCHAR(255)): Trọng tâm hoặc lĩnh vực của chiến lược</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Cập nhật mục tiêu của ''National Security Strategy'' cho khu vực Bắc Mỹ thành ''Cyber Defense''.</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+----+----------------------------+-----------+---------------------+
+| id | name                       | region_id | focus               |
++----+----------------------------+-----------+---------------------+
+| 1  | National Security Strategy | 1         | Counter-Terrorism   |
++----+----------------------------+-----------+---------------------+
+</pre>

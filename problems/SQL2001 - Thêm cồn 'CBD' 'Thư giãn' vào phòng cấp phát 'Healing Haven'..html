@@ -1,0 +1,8 @@
+ID: SQL2001
+Tiêu đề: Thêm cồn 'CBD' 'Thư giãn' vào phòng cấp phát 'Healing Haven'.
+URL WEB: https://db.ptit.edu.vn/question-detail/85c86c6f-99f1-452b-bf0c-1edd9a0bcd77
+URL API: https://dbapi.ptit.edu.vn/api/app/question/85c86c6f-99f1-452b-bf0c-1edd9a0bcd77
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng products:</strong></p><p>Lưu trữ thông tin về các sản phẩm, bao gồm mã sản phẩm, tên và loại sản phẩm.</p><ul><li>product_id (INT): Mã số định danh duy nhất cho sản phẩm.</li><li>name (VARCHAR(255): Tên sản phẩm.</li><li>type (VARCHAR(255): Loại sản phẩm.</li></ul><p><strong>Bảng dispensaries:</strong></p><p>Lưu trữ thông tin về các cửa hàng thuốc, bao gồm mã cửa hàng và tên cửa hàng.</p><ul><li>dispensary_id (INT): Mã số định danh duy nhất cho cửa hàng thuốc.</li><li>name (VARCHAR(255): Tên cửa hàng thuốc.</li></ul><p><strong>Bảng inventory:</strong></p><p>Lưu trữ thông tin về số lượng và giá của các sản phẩm tại cửa hàng.</p><ul><li>inventory_id (INT): Mã số định danh duy nhất cho hàng tồn kho.</li><li>product_id (INT): Mã sản phẩm (foreign key từ bảng products).</li><li>dispensary_id (INT): Mã cửa hàng (foreign key từ bảng dispensaries).</li><li>price (FLOAT): Giá của sản phẩm.</li><li>quantity (INT): Số lượng sản phẩm có trong cửa hàng.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Thêm sản phẩm 'CBD' loại 'Thư giãn' vào cửa hàng thuốc 'Healing Haven'.</p><p><strong>Output: </strong></p><p>Thêm một bản ghi <strong>inventory</strong> vào cửa hàng <strong>'Healing Haven'</strong>, liên kết với <strong>mã sản phẩm (product_id)</strong> của mặt hàng có tên là <strong>'CBD Tincture'</strong> và loại là <strong>'Relax'</strong>.</p>

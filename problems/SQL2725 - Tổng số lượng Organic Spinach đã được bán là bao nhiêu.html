@@ -1,0 +1,8 @@
+ID: SQL2725
+Tiêu đề: Tổng số lượng "Organic Spinach" đã được bán là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/a3fcbe14-c779-4f06-87ae-ed34886bbeec
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a3fcbe14-c779-4f06-87ae-ed34886bbeec
+Loại Database: Mysql
+------------------------------
+
+<h4><strong>Bảng sales</strong></h4><p>Chứa thông tin về các đơn hàng.</p><ul><li>id (INT): Mã định danh của đơn hàng.</li><li>menu_id (INT): Mã món ăn trong thực đơn được đặt mua.</li><li>sale_date (DATETIME): Ngày và giờ đơn hàng được tạo.</li><li>quantity (INT): Số lượng món ăn được bán.</li></ul><h4><strong>Bảng menu_items</strong></h4><p>Chứa thông tin về các món ăn trong thực đơn.</p><ul><li>id (INT): Mã món ăn.</li><li>name (VARCHAR(255)): Tên món ăn.</li><li>description (TEXT): Mô tả món ăn.</li><li>category (VARCHAR(255)): Phân loại món ăn (ví dụ: <em>khai vị</em>, <em>món chính</em>).</li></ul><h3><strong>Yêu cầu:</strong></h3><p>Tính <strong>tổng số lượng món “Organic Spinach”</strong> đã được bán.</p><p><br></p><p>Output: SUM(sales.quantity)</p>

@@ -1,0 +1,8 @@
+ID: SQL1994
+Tiêu đề: Tỷ lệ phần trăm người dùng đã đăng một tweet trong tháng qua và sống ở một quốc gia có dân số trên 100 triệu người, trong tổng số tất cả người dùng ở một quốc gia có dân số trên 100 triệu người là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/8836fd6e-d0a7-4018-b38a-bc5e28fb6ad0
+URL API: https://dbapi.ptit.edu.vn/api/app/question/8836fd6e-d0a7-4018-b38a-bc5e28fb6ad0
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng tweets:</strong></p><p>Lưu trữ thông tin về các tweet, bao gồm ID tweet, ID người dùng và ngày đăng tweet.</p><ul><li>tweet_id (INT): Mã số định danh duy nhất cho tweet.</li><li>user_id (INT): Mã người dùng (foreign key từ bảng users).</li><li>tweet_date (DATE): Ngày đăng tweet.</li></ul><p><strong>Bảng users:</strong></p><p>Lưu trữ thông tin về người dùng Twitter.</p><ul><li>user_id (INT): Mã số định danh duy nhất cho người dùng.</li><li>country (VARCHAR(50)): Quốc gia của người dùng.</li><li>registration_date (DATE): Ngày đăng ký tài khoản Twitter.</li></ul><p><strong>Bảng country_populations:</strong></p><p>Lưu trữ thông tin về dân số của các quốc gia.</p><ul><li>country (VARCHAR(50)): Tên quốc gia.</li><li>population (INT): Dân số của quốc gia.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tỷ lệ phần trăm người dùng đã đăng một tweet trong tháng qua và sống ở một quốc gia có dân số trên 100 triệu người, trong tổng số tất cả người dùng ở các quốc gia có dân số trên 100 triệu, là bao nhiêu?</p><p><strong>Output: giá trị tỷ lệ phần trăm</strong> mà truy vấn SQL đã tính toán, được hiển thị trong một cột có tên là <strong>pct_users</strong></p>

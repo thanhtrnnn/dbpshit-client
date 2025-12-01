@@ -1,0 +1,61 @@
+ID: SQL1820
+Tiêu đề: Số trận đã chơi và số trận thắng, thua và hòa của mỗi đội trong mỗi năm, từ các bảng teams, games và games_results là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/ba7d1188-f3f5-408f-8c58-13bdd123fb2d
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ba7d1188-f3f5-408f-8c58-13bdd123fb2d
+Loại Database: Mysql
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng teams</strong> — Thông tin các <strong>đội thi đấu</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+---------------+----------------------------------+
+| Tên cột   | Kiểu dữ liệu  | Mô tả                            |
++-----------+---------------+----------------------------------+
+| team_id   | INT           | Mã số duy nhất cho mỗi đội       |
+| team_name | VARCHAR(255)  | Tên của đội                      |
++-----------+---------------+----------------------------------+
+</pre><p><strong>Bảng games</strong> — Thông tin về <strong>các trận đấu</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+---------------+----------------------------------+
+| Tên cột   | Kiểu dữ liệu  | Mô tả                            |
++-----------+---------------+----------------------------------+
+| game_id   | INT           | Mã số duy nhất cho mỗi trận đấu  |
+| team_id   | INT           | Mã đội tham gia trận đấu         |
+| game_date | DATE          | Ngày của trận đấu                |
++-----------+---------------+----------------------------------+
+</pre><p><strong>Bảng games_results</strong> — Kết quả của các <strong>trận đấu</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+---------------+----------------------------------+
+| Tên cột   | Kiểu dữ liệu  | Mô tả                            |
++-----------+---------------+----------------------------------+
+| game_id   | INT           | Mã số trận đấu                   |
+| team_id   | INT           | Mã đội tham gia trận đấu         |
+| result    | VARCHAR(10)   | Kết quả của trận đấu (win/loss/draw) |
++-----------+---------------+----------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Thống kê <strong>số trận đã chơi</strong>, <strong>số trận thắng</strong>, <strong>thua</strong>, và <strong>hòa</strong> của <strong>mỗi đội trong từng năm</strong>,</p><p> dựa trên dữ liệu từ các bảng teams, games, và games_results.</p><h3>Input mẫu</h3><p><strong>Bảng teams</strong></p><pre class="ql-syntax" spellcheck="false">+----------+-----------+
+| team_id  | team_name |
++----------+-----------+
+| 1        | Eagles    |
+| 2        | Tigers    |
+| 3        | Sharks    |
++----------+-----------+
+</pre><p><strong>Bảng games</strong></p><pre class="ql-syntax" spellcheck="false">+----------+----------+------------+
+| game_id  | team_id  | game_date  |
++----------+----------+------------+
+| 101      | 1        | 2023-03-12 |
+| 102      | 1        | 2023-05-22 |
+| 103      | 2        | 2023-06-10 |
+| 104      | 3        | 2023-07-01 |
+| 105      | 3        | 2024-04-05 |
++----------+----------+------------+
+</pre><p><strong>Bảng games_results</strong></p><pre class="ql-syntax" spellcheck="false">+----------+----------+--------+
+| game_id  | team_id  | result |
++----------+----------+--------+
+| 101      | 1        | win    |
+| 102      | 1        | loss   |
+| 103      | 2        | win    |
+| 104      | 3        | draw   |
+| 105      | 3        | win    |
++----------+----------+--------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+-----------+------+--------------+------+--------+-------+
+| team_name | year | total_games  | wins | losses | draws |
++-----------+------+--------------+------+--------+-------+
+| Eagles    | 2023 | 2            | 1    | 1      | 0     |
+| Tigers    | 2023 | 1            | 1    | 0      | 0     |
+| Sharks    | 2023 | 1            | 0    | 0      | 1     |
+| Sharks    | 2024 | 1            | 1    | 0      | 0     |
++-----------+------+--------------+------+--------+-------+
+</pre><p><br></p>

@@ -1,0 +1,13 @@
+ID: SQL2118
+Tiêu đề: Hiển thị tên của tất cả các điểm đến đã được tiếp thị vào năm 2020 và có hơn 15000 khách du lịch ghé thăm trong năm đó.
+URL WEB: https://db.ptit.edu.vn/question-detail/952568c9-d059-482e-b36f-5dd5e7e4f6ee
+URL API: https://dbapi.ptit.edu.vn/api/app/question/952568c9-d059-482e-b36f-5dd5e7e4f6ee
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Cho hai bảng dữ liệu:</strong></p><h3><strong style="font-size: 14px;">Bảng marketing_campaigns</strong></h3><p><span style="font-size: 14px;">Lưu trữ thông tin về các chiến dịch marketing du lịch:</span></p><ul><li><span style="font-size: 14px;">destination (VARCHAR): Điểm đến</span></li><li><span style="font-size: 14px;">year (INT): Năm thực hiện chiến dịch</span></li></ul><h3><strong style="font-size: 14px;">Bảng tourism_stats</strong></h3><p><span style="font-size: 14px;">Lưu trữ thông tin về số lượng khách du lịch tại các điểm đến:</span></p><ul><li><span style="font-size: 14px;">destination (VARCHAR): Điểm đến</span></li><li><span style="font-size: 14px;">year (INT): Năm</span></li><li><span style="font-size: 14px;">tourists (INT): Số lượng khách du lịch</span></li></ul><p><strong style="font-size: 14px;">Nhiệm vụ:</strong></p><p><span style="font-size: 14px;">Hiển thị tên của tất cả các điểm đến đã được tiếp thị vào năm 2020 và có hơn 15000 khách du lịch ghé thăm trong năm đó.</span></p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+
+| destination |
++-------------+
+| Paris       |
++-------------+
+</pre>

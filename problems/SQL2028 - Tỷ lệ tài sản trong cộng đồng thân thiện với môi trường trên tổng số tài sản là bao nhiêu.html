@@ -1,0 +1,8 @@
+ID: SQL2028
+Tiêu đề: Tỷ lệ tài sản trong cộng đồng thân thiện với môi trường trên tổng số tài sản là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/3c64f9ce-0129-465f-83e6-ae5182b2cd26
+URL API: https://dbapi.ptit.edu.vn/api/app/question/3c64f9ce-0129-465f-83e6-ae5182b2cd26
+Loại Database: Mysql
+------------------------------
+
+<h3><strong style="font-size: 12px;">Bảng property_counts:</strong></h3><p><span style="font-size: 12px;">Lưu trữ thông tin về số lượng bất động sản, bao gồm mã bất động sản, loại cộng đồng và số lượng.</span></p><ul><li><span style="font-size: 12px;">id (INT): Mã số định danh duy nhất cho bất động sản.</span></li><li><span style="font-size: 12px;">community_type (VARCHAR(255)): Loại cộng đồng (ví dụ: eco-friendly, standard).</span></li><li><span style="font-size: 12px;">count (INT): Số lượng bất động sản trong cộng đồng.</span></li></ul><h3><strong style="font-size: 12px;">Nhiệm vụ:</strong></h3><p><span style="font-size: 12px;">Tính tỷ lệ tài sản trong cộng đồng thân thiện với môi trường (eco-friendly) trên tổng số tài sản.</span></p><p><strong style="font-size: 12px;">Output:</strong></p><p>Một giá trị số duy nhất, đại diện cho tỷ lệ phần trăm (percentage) của tổng số tài sản thuộc cộng đồng <strong>'eco-friendly'</strong> so với tổng số tài sản chung (cộng đồng <strong>'eco-friendly'</strong> và<strong> 'standard'</strong>).</p>

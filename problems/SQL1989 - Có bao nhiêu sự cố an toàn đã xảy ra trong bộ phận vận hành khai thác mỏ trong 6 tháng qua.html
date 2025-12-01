@@ -1,0 +1,8 @@
+ID: SQL1989
+Tiêu đề: Có bao nhiêu sự cố an toàn đã xảy ra trong bộ phận vận hành khai thác mỏ trong 6 tháng qua?
+URL WEB: https://db.ptit.edu.vn/question-detail/71d2f0b8-222f-4a46-ae0e-c843afb3a48a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/71d2f0b8-222f-4a46-ae0e-c843afb3a48a
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng department:</strong></p><p>Lưu trữ thông tin về các phòng ban trong công ty, bao gồm mã phòng ban, tên phòng ban và ngành nghề.</p><ul><li>id (INT): Mã số định danh duy nhất cho phòng ban.</li><li>name (TEXT): Tên phòng ban.</li><li>industry (TEXT): Ngành nghề của phòng ban.</li></ul><p><strong>Bảng incident:</strong></p><p>Lưu trữ thông tin về các sự cố trong công ty.</p><ul><li>id (INT): Mã số định danh duy nhất cho sự cố.</li><li>department_id (INT): Mã phòng ban (foreign key từ department).</li><li>date (DATE): Ngày xảy ra sự cố.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Có bao nhiêu sự cố an toàn đã xảy ra trong bộ phận vận hành khai thác mỏ trong 6 tháng qua?</p><p><strong>Output:</strong></p><p>Đếm số lượng sự cố <strong>(incident)</strong> đã xảy ra trong 6 tháng gần nhất (tính từ ngày hiện tại), và gom nhóm theo từng phòng ban <strong>(department)</strong>. Bảng gồm 2 cột: department_id, incident_count</p>

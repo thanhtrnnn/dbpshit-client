@@ -1,0 +1,8 @@
+ID: SQL1959
+Tiêu đề: Số môn học tối đa mà một giáo viên có thể hoàn thành trong một năm là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/3d5de207-a8f4-482f-a6fe-f73a2a3ef153
+URL API: https://dbapi.ptit.edu.vn/api/app/question/3d5de207-a8f4-482f-a6fe-f73a2a3ef153
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng teachers:</strong></p><p>Lưu trữ thông tin về các giáo viên.</p><ul><li>teacher_id (INT): Mã số định danh duy nhất cho giáo viên.</li><li>first_name (VARCHAR(255)): Tên của giáo viên.</li><li>last_name (VARCHAR(255)): Họ của giáo viên.</li></ul><p><strong>Bảng courses:</strong></p><p>Lưu trữ thông tin về các khóa học.</p><ul><li>course_id (INT): Mã số định danh duy nhất cho mỗi khóa học.</li><li>course_name (VARCHAR(255)): Tên khóa học.</li><li>completion_date (DATE): Ngày hoàn thành khóa học.</li></ul><p><strong>Bảng teacher_courses:</strong></p><p>Lưu trữ thông tin về các giáo viên tham gia khóa học.</p><ul><li>teacher_id (INT): Mã giáo viên (foreign key từ teachers).</li><li>course_id (INT): Mã khóa học (foreign key từ courses).</li><li>completion_date (DATE): Ngày hoàn thành khóa học.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Số môn học tối đa mà một giáo viên có thể hoàn thành trong một năm là bao nhiêu?</p>

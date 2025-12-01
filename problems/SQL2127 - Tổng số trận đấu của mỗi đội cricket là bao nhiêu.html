@@ -1,0 +1,35 @@
+ID: SQL2127
+Tiêu đề: Tổng số trận đấu của mỗi đội cricket là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/cfda3b50-6187-4c5f-b47f-53fb8498d480
+URL API: https://dbapi.ptit.edu.vn/api/app/question/cfda3b50-6187-4c5f-b47f-53fb8498d480
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 12px;">Cho hai bảng dữ liệu:</strong></p>
+<h3><strong style="font-size: 12px;">Bảng CricketTeams</strong></h3>
+<p><span style="font-size: 12px;">Lưu trữ thông tin về các đội cricket:</span></p>
+<ul>
+<li><span style="font-size: 12px;">team_name (TEXT): Tên đội</span></li>
+<li><span style="font-size: 12px;">wins (INT): Số trận thắng</span></li>
+</ul>
+<h3><strong style="font-size: 12px;">Bảng CricketGames</strong></h3>
+<p><span style="font-size: 12px;">Lưu trữ thông tin về các trận đấu cricket:</span></p>
+<ul>
+<li><span style="font-size: 12px;">game_id (INT): Mã trận đấu</span></li>
+<li><span style="font-size: 12px;">home_team (TEXT): Đội chủ nhà</span></li>
+<li><span style="font-size: 12px;">away_team (TEXT): Đội khách</span></li>
+</ul>
+<p><strong style="font-size: 12px;">Nhiệm vụ:</strong></p>
+<p><span style="font-size: 12px;">Tổng số trận đấu của mỗi đội cricket là bao nhiêu?</span></p>
+<p><br></p>
+<p><strong>Output:</strong></p>
+<pre class="ql-syntax" spellcheck="false">+----------+--------------+
+| team     | total_games  |
++----------+--------------+
+| Team A   | 1            |
+| Team C   | 1            |
+| Team B   | 1            |
+| Team B   | 1            |
+| Team A   | 1            |
+| Team C   | 1            |
++----------+--------------+</pre>

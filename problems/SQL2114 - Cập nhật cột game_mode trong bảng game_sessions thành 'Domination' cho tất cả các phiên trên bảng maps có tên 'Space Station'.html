@@ -1,0 +1,15 @@
+ID: SQL2114
+Tiêu đề: Cập nhật cột game_mode trong bảng game_sessions thành 'Domination' cho tất cả các phiên trên bảng maps có tên 'Space Station'
+URL WEB: https://db.ptit.edu.vn/question-detail/52e68ccb-3a2c-4c80-a1cc-73bbc85bb0ae
+URL API: https://dbapi.ptit.edu.vn/api/app/question/52e68ccb-3a2c-4c80-a1cc-73bbc85bb0ae
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Cho hai bảng dữ liệu:</strong></p><h3><strong style="font-size: 14px;">Bảng game_sessions</strong></h3><p><span style="font-size: 14px;">Lưu trữ thông tin về các phiên chơi game:</span></p><ul><li><span style="font-size: 14px;">session_id (INT): Mã phiên chơi game</span></li><li><span style="font-size: 14px;">player_id (INT): Mã người chơi</span></li><li><span style="font-size: 14px;">game_mode (VARCHAR(20)): Chế độ chơi game</span></li><li><span style="font-size: 14px;">map_id (INT): Mã bản đồ</span></li></ul><h3><strong style="font-size: 14px;">Bảng maps</strong></h3><p><span style="font-size: 14px;">Lưu trữ thông tin về các bản đồ:</span></p><ul><li><span style="font-size: 14px;">map_id (INT): Mã bản đồ</span></li><li><span style="font-size: 14px;">map_name (VARCHAR(20)): Tên bản đồ</span></li></ul><p><strong style="font-size: 14px;">Nhiệm vụ:</strong></p><p><span style="font-size: 14px;">Cập nhật cột game_mode trong bảng game_sessions thành 'Domination' cho tất cả các phiên trên bảng maps có tên 'Space Station'</span></p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+------------+-----------+-----------------+--------+
+| session_id | player_id | game_mode       | map_id |
++------------+-----------+-----------------+--------+
+| 1          | 1001      | Domination      | 101    |
+| 2          | 1002      | Free For All    | 102    |
+| 3          | 1003      | Domination      | 101    |
+| 4          | 1004      | Team Deathmatch | 103    |
++------------+-----------+-----------------+--------+</pre>

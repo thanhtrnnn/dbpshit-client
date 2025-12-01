@@ -1,0 +1,8 @@
+ID: SQL2529
+Tiêu đề: Tổng doanh thu cho mỗi tuyến xe buýt trong tháng trước là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/66802b24-60d6-4b09-865a-2f55c778e1fb
+URL API: https://dbapi.ptit.edu.vn/api/app/question/66802b24-60d6-4b09-865a-2f55c778e1fb
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng bus_routes</strong>: Quản lý thông tin về tuyến xe buýt</p><ul><li>route_id (INT): Mã tuyến</li><li>route_name (TEXT): Tên tuyến xe buýt</li><li>starting_point (TEXT): Điểm khởi hành</li><li>ending_point (TEXT): Điểm kết thúc</li></ul><p><strong>Bảng fares</strong>: Quản lý thông tin về giá vé</p><ul><li>fare_id (INT): Mã giá vé</li><li>route_id (INT): Mã tuyến xe (liên kết với bảng bus_routes)</li><li>fare_amount (DECIMAL): Số tiền vé</li><li>fare_date (DATE): Ngày áp dụng giá vé</li></ul><p><strong>Câu hỏi:</strong></p><p>Tổng doanh thu cho mỗi tuyến xe buýt trong 5/2025 trước là bao nhiêu?</p><p><br></p><p>Output: route_name, total_revenue</p>

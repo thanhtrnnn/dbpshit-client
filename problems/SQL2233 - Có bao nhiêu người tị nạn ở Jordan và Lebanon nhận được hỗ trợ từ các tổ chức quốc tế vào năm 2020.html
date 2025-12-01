@@ -1,0 +1,8 @@
+ID: SQL2233
+Tiêu đề: Có bao nhiêu người tị nạn ở Jordan và Lebanon nhận được hỗ trợ từ các tổ chức quốc tế vào năm 2020?
+URL WEB: https://db.ptit.edu.vn/question-detail/b1191103-6a0f-4fb5-b59a-b02592509d86
+URL API: https://dbapi.ptit.edu.vn/api/app/question/b1191103-6a0f-4fb5-b59a-b02592509d86
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có hai bảng dữ liệu:</p><p><strong>Bảng refugee_support – Thông tin về các chương trình hỗ trợ người tị nạn:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi bản ghi hỗ trợ</li><li>refugee_id (INT): Mã định danh của người tị nạn nhận hỗ trợ</li><li>country (TEXT): Quốc gia nơi thực hiện chương trình hỗ trợ</li><li>year (INT): Năm diễn ra hoạt động hỗ trợ</li></ul><p><strong>Bảng refugees – Thông tin về người tị nạn:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi người tị nạn</li><li>name (TEXT): Tên người tị nạn</li><li>country (TEXT): Quốc gia xuất xứ của người tị nạn</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong>Tính số lượng người tị nạn</strong> ở <strong>Jordan</strong> và <strong>Lebanon</strong> đã nhận được hỗ trợ từ các tổ chức quốc tế vào năm <strong>2020</strong>.</p><p>Output: COUNT(*).</p>

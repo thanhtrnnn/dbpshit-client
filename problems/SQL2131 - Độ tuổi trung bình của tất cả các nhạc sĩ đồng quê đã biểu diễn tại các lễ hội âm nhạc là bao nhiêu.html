@@ -1,0 +1,13 @@
+ID: SQL2131
+Tiêu đề: Độ tuổi trung bình của tất cả các nhạc sĩ đồng quê đã biểu diễn tại các lễ hội âm nhạc là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/cbde9082-be54-43de-92fa-3889f22f1e39
+URL API: https://dbapi.ptit.edu.vn/api/app/question/cbde9082-be54-43de-92fa-3889f22f1e39
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 12px;">Cho ba bảng dữ liệu:</strong></p><h3><strong style="font-size: 12px;">Bảng Artists</strong></h3><p><span style="font-size: 12px;">Lưu trữ thông tin về các nghệ sĩ:</span></p><ul><li><span style="font-size: 12px;">ArtistID (INT): Mã nghệ sĩ</span></li><li><span style="font-size: 12px;">Name (VARCHAR): Tên nghệ sĩ</span></li><li><span style="font-size: 12px;">Age (INT): Tuổi nghệ sĩ</span></li><li><span style="font-size: 12px;">Genre (VARCHAR): Thể loại âm nhạc (ví dụ: 'Country', 'Pop', ...)</span></li></ul><h3><strong style="font-size: 12px;">Bảng Festivals</strong></h3><p><span style="font-size: 12px;">Lưu trữ thông tin về các lễ hội âm nhạc:</span></p><ul><li><span style="font-size: 12px;">FestivalID (INT): Mã lễ hội</span></li><li><span style="font-size: 12px;">FestivalName (VARCHAR): Tên lễ hội</span></li></ul><h3><strong style="font-size: 12px;">Bảng Performances</strong></h3><p><span style="font-size: 12px;">Lưu trữ thông tin về các buổi biểu diễn của nghệ sĩ tại các lễ hội:</span></p><ul><li><span style="font-size: 12px;">ArtistID (INT): Mã nghệ sĩ</span></li><li><span style="font-size: 12px;">FestivalID (INT): Mã lễ hội</span></li><li><span style="font-size: 12px;">(Có thể có thêm các cột như thời gian biểu diễn, v.v.)</span></li></ul><p><strong style="font-size: 12px;">Nhiệm vụ:</strong></p><p><span style="font-size: 12px;">Độ tuổi trung bình của tất cả các nhạc sĩ đồng quê đã biểu diễn tại các lễ hội âm nhạc là bao nhiêu?</span></p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+---------------------+
+| AVG(A.Age)          |
++---------------------+
+| 35.0                |
++---------------------+
+</pre>

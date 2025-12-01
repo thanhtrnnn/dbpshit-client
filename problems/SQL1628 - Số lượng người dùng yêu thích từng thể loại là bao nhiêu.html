@@ -1,0 +1,31 @@
+ID: SQL1628
+Tiêu đề: Số lượng người dùng yêu thích từng thể loại là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/094d0267-bc9e-4600-8fb9-3a9681413cda
+URL API: https://dbapi.ptit.edu.vn/api/app/question/094d0267-bc9e-4600-8fb9-3a9681413cda
+Loại Database: Sql Server
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng users</strong></p><p><strong> Bảng này lưu trữ thông tin về người dùng, bao gồm ID</strong>, <strong>tên</strong>, và <strong>thể loại âm nhạc yêu thích</strong> của họ.</p><pre class="ql-syntax" spellcheck="false">+------------------+---------------+-------------------------------------------+
+| Tên cột          | Kiểu dữ liệu  | Mô tả                                     |
++------------------+---------------+-------------------------------------------+
+| id               | INT           | Mã số duy nhất cho mỗi người dùng         |
+| name             | VARCHAR(50)   | Tên của người dùng                        |
+| favorite_genre   | VARCHAR(50)   | Thể loại âm nhạc yêu thích của người dùng |
++------------------+---------------+-------------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Thống kê <strong>số lượng người dùng yêu thích từng thể loại âm nhạc</strong> (genre_count).</p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">+----+--------+----------------+
+| id | name   | favorite_genre |
++----+--------+----------------+
+| 1  | Alice  | Rock           |
+| 2  | Bob    | Pop            |
+| 3  | Carol  | Rock           |
+| 4  | David  | Jazz           |
+| 5  | Emma   | Pop            |
++----+--------+----------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+----------------+--------------+
+| favorite_genre | genre_count  |
++----------------+--------------+
+| Jazz           | 1            |
+| Pop            | 2            |
+| Rock           | 2            |
++----------------+--------------+
+</pre><p><br></p>

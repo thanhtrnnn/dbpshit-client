@@ -1,0 +1,26 @@
+ID: SQL1625
+Tiêu đề: So sánh số lượng giếng được khoan ở Mỹ và Canada.
+URL WEB: https://db.ptit.edu.vn/question-detail/f9c1bee1-db62-4c00-9e16-7b980e510a19
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f9c1bee1-db62-4c00-9e16-7b980e510a19
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng `wells`: Bảng này lưu trữ thông tin về các giếng, bao gồm ID giếng và quốc gia. </strong></p><ul><li>`well_id (INT)`: Mã số duy nhất cho mỗi giếng.</li><li>`country (VARCHAR(50))`: Quốc gia nơi giếng được khai thác.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Hãy viết truy vấn SQL để <strong>đếm số lượng giếng khai thác tại Canada và tại USA, sau đó hiển thị kết quả dưới dạng bảng gồm hai hàng (mỗi hàng tương ứng với một quốc gia)</strong>.</p><p><br></p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----------+----------+
+| well_id  | country  |
++----------+----------+
+| 1        | USA      |
+| 2        | USA      |
+| 3        | Canada   |
+| 4        | Canada   |
+| 5        | Canada   |
+| 6        | Mexico   |
++----------+----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----------+-----------+
+| country  | num_wells |
++----------+-----------+
+| Canada   | 3         |
+| USA      | 2         |
++----------+-----------+
+</pre><p><br></p>

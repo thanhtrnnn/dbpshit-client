@@ -1,0 +1,8 @@
+ID: SQL2282
+Tiêu đề: Điểm đến nào ở mỗi quốc gia có chỉ số bền vững cao nhất?
+URL WEB: https://db.ptit.edu.vn/question-detail/c65197d4-6ba3-4b37-9f4a-1c68888d2b71
+URL API: https://dbapi.ptit.edu.vn/api/app/question/c65197d4-6ba3-4b37-9f4a-1c68888d2b71
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng dữ liệu:</strong></p><p><strong>destinations</strong> – Chứa thông tin về các điểm đến và chỉ số bền vững.</p><ul><li>destination_id (INT): Mã định danh duy nhất cho mỗi điểm đến (khóa chính).</li><li>name (VARCHAR(50)): Tên của điểm đến (ví dụ: Fiordland National Park, Borobudur Temple).</li><li>country_id (INT): Mã định danh của quốc gia nơi điểm đến nằm (liên kết với bảng Countries).</li><li>sustainability_index (FLOAT): Chỉ số bền vững của điểm đến (giá trị từ 0 đến 1, với 1 là cao nhất).</li></ul><p><strong>Nhiệm vụ (mô tả chi tiết):</strong></p><ul><li>Xác định điểm đến có <strong>chỉ số bền vững cao nhất trong mỗi quốc gia</strong>.</li><li>Output: name (tên điểm đến), sustainability_index (chỉ số bền vững).</li></ul><p><br></p>

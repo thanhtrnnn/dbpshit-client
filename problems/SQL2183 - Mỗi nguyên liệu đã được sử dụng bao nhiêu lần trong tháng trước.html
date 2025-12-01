@@ -1,0 +1,14 @@
+ID: SQL2183
+Tiêu đề: Mỗi nguyên liệu đã được sử dụng bao nhiêu lần trong tháng trước?
+URL WEB: https://db.ptit.edu.vn/question-detail/5f0f00f9-25b3-41a9-a1e8-9d7663678488
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5f0f00f9-25b3-41a9-a1e8-9d7663678488
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có 2 bảng dữ liệu:</strong></p><h4><strong>1. Bảng ingredient – Thông tin nguyên liệu:</strong></h4><ul><li>ingredient_id (INT): Mã định danh nguyên liệu</li><li>ingredient_name (TEXT): Tên nguyên liệu</li></ul><h4><strong>2. Bảng recipe – Việc sử dụng nguyên liệu trong món ăn:</strong></h4><ul><li>recipe_id (INT): Mã công thức</li><li>dish_id (INT): Mã món ăn</li><li>ingredient_id (INT): Mã nguyên liệu</li><li>quantity (INT): Số lượng nguyên liệu sử dụng</li><li>use_date (DATE): Ngày sử dụng nguyên liệu</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Mỗi nguyên liệu đã được sử dụng bao nhiêu lần trong tháng trước?</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+-----------------+-----------+
+| ingredient_name | use_count |
++-----------------+-----------+
+| Flour           | 2         |
+| Sugar           | 1         |
++-----------------+-----------+
+</pre>

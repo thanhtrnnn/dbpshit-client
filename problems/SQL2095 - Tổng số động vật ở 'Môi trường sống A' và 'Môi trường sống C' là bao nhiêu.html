@@ -1,0 +1,13 @@
+ID: SQL2095
+Tiêu đề: Tổng số động vật ở 'Môi trường sống A' và 'Môi trường sống C' là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/5f253386-5e19-41fe-a35f-15c3a447d5a2
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5f253386-5e19-41fe-a35f-15c3a447d5a2
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Cho hai bảng dữ liệu:</strong></p><h4><strong style="font-size: 14px;">Bảng Habitats</strong></h4><ul><li><span style="font-size: 14px;">id (INT): Mã môi trường</span></li><li><span style="font-size: 14px;">name (VARCHAR(20)): Tên môi trường</span></li></ul><h4><strong style="font-size: 14px;">Bảng Animals</strong></h4><ul><li><span style="font-size: 14px;">id (INT): Mã động vật</span></li><li><span style="font-size: 14px;">name (VARCHAR(20)): Tên động vật</span></li><li><span style="font-size: 14px;">habitat_id (INT): Mã môi trường sống (foreign key từ Habitats.id)</span></li></ul><p><strong style="font-size: 14px;">Nhiệm vụ:</strong></p><p><span style="font-size: 14px;">Tổng số động vật ở 'Môi trường sống A' và 'Môi trường sống C' là bao nhiêu?</span></p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+------------------+
+| SUM(quantity)    |
++------------------+
+| 4                |
++------------------+
+</pre>

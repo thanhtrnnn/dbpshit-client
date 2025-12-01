@@ -1,0 +1,46 @@
+ID: SQL1648
+Tiêu đề: Số lượng công ty được thành lập ở mỗi quốc gia theo nhóm tuổi của người sáng lập (dưới 30, 30-39, 40-49, 50+) là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/49597b85-4659-4b2a-86e3-10ab779925b4
+URL API: https://dbapi.ptit.edu.vn/api/app/question/49597b85-4659-4b2a-86e3-10ab779925b4
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng `founders`: Bảng này lưu trữ thông tin về các nhà sáng lập, bao gồm ID nhà sáng lập, ID công ty và độ tuổi.</strong></p><ul><li>`founder_id (INT)`: Mã định danh của nhà sáng lập.</li><li>`company_id (INT)`: Mã định danh của công ty.</li><li>`age (INT)`: Độ tuổi của nhà sáng lập.</li></ul><p><br></p><p><strong>Bảng `companies`: Bảng này lưu trữ thông tin về các công ty, bao gồm ID công ty, năm sáng lập và quốc gia. </strong></p><ul><li>`company_id (INT)`: Mã định danh của công ty.</li><li>`founding_year (INT)`: Năm sáng lập công ty.</li><li>`country (VARCHAR(255))`: Quốc gia sáng lập công ty.</li></ul><p><br></p><p><strong>Bảng `age_groups`: Bảng này lưu trữ các nhóm tuổi và tên nhóm tuổi</strong>.</p><ul><li>`age (INT)`: Độ tuổi.</li><li>`age_group (VARCHAR(255))`: Tên nhóm tuổi.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Số lượng công ty được thành lập ở mỗi quốc gia theo nhóm tuổi của người sáng lập (dưới 30, 30-39, 40-49, 50+) là bao nhiêu?</p><p><br></p><h3>Input mẫu</h3><p><strong>Bảng founders</strong></p><pre class="ql-syntax" spellcheck="false">
++-------------+-------------+-----+
+| founder_id  | company_id  | age |
++-------------+-------------+-----+
+| 1           | 1           | 28  |
+| 2           | 2           | 35  |
+| 3           | 3           | 45  |
+| 4           | 4           | 52  |
+| 5           | 5           | 31  |
++-------------+-------------+-----+
+</pre><p><strong>Bảng companies</strong></p><pre class="ql-syntax" spellcheck="false">
++-------------+----------------+----------+
+| company_id  | founding_year  | country  |
++-------------+----------------+----------+
+| 1           | 2010           | USA      |
+| 2           | 2012           | USA      |
+| 3           | 2014           | Japan    |
+| 4           | 2016           | Germany  |
+| 5           | 2018           | USA      |
++-------------+----------------+----------+
+</pre><p><strong>Bảng age_groups</strong></p><pre class="ql-syntax" spellcheck="false">
++-----+-----------+
+| age | age_group |
++-----+-----------+
+| 20  | Under 30  |
+| 30  | 30-39     |
+| 40  | 40-49     |
+| 50  | 50+       |
++-----+-----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----------+-----------+----------------------+
+| country  | age_group | num_companies_founded|
++----------+-----------+----------------------+
+| USA      | Under 30  | 1                    |
+| USA      | 30-39     | 2                    |
+| Japan    | 40-49     | 1                    |
+| Germany  | 50+       | 1                    |
++----------+-----------+----------------------+
+</pre><p><br></p>

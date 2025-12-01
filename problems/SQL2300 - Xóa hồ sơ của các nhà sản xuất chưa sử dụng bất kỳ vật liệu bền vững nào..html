@@ -1,0 +1,8 @@
+ID: SQL2300
+Tiêu đề: Xóa hồ sơ của các nhà sản xuất chưa sử dụng bất kỳ vật liệu bền vững nào.
+URL WEB: https://db.ptit.edu.vn/question-detail/7b9755b8-947e-41ea-b76a-33a463c3f894
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7b9755b8-947e-41ea-b76a-33a463c3f894
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Manufacturers</strong> – Chứa thông tin về các nhà sản xuất.</p><ul><li><strong>ManufacturerID (INT)</strong>: Mã định danh duy nhất cho mỗi nhà sản xuất (khóa chính).</li><li><strong>ManufacturerName (VARCHAR(50))</strong>: Tên của nhà sản xuất.</li><li><strong>Region (VARCHAR(50))</strong>: Khu vực hoặc vùng mà nhà sản xuất hoạt động (ví dụ: Europe, Asia).</li></ul><p><strong>Bảng ManufacturersSustainableMaterials</strong> – Chứa thông tin về các vật liệu bền vững mà các nhà sản xuất sử dụng.</p><ul><li><strong>ManufacturerID (INT)</strong>: Mã định danh của nhà sản xuất (liên kết với bảng Manufacturers).</li><li><strong>MaterialID (INT)</strong>: Mã định danh của vật liệu bền vững (có thể liên kết với bảng Materials nếu có).</li></ul><p><strong>Yêu cầu tính toán:</strong></p><p><strong> Xóa hồ sơ trong bảng Manufacturers</strong> của những nhà sản xuất <strong>không sử dụng bất kỳ vật liệu bền vững nào</strong>.</p><p><strong>Output:</strong></p><ul><li>Không có output (thao tác xóa trực tiếp trên bảng).</li></ul><p><br></p>

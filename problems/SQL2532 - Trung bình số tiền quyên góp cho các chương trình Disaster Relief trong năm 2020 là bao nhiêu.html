@@ -1,0 +1,8 @@
+ID: SQL2532
+Tiêu đề: Trung bình số tiền quyên góp cho các chương trình "Disaster Relief" trong năm "2020" là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/fb796508-979b-460f-ab42-0b79c4a1cfeb
+URL API: https://dbapi.ptit.edu.vn/api/app/question/fb796508-979b-460f-ab42-0b79c4a1cfeb
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Donors</strong>: Quản lý thông tin về các nhà tài trợ</p><ul><li>donor_id (INT): Mã nhà tài trợ</li><li>donor_name (VARCHAR(255)): Tên nhà tài trợ</li></ul><p><strong>Bảng Donations</strong>: Quản lý thông tin về các khoản quyên góp</p><ul><li>donation_id (INT): Mã khoản quyên góp</li><li>donor_id (INT): Mã nhà tài trợ (liên kết với bảng Donors)</li><li>program_area (VARCHAR(255)): Tên chương trình được quyên góp</li><li>donation_amount (DECIMAL): Số tiền quyên góp</li><li>donation_date (DATE): Ngày quyên góp</li></ul><p><strong>Câu hỏi:</strong></p><p>Trung bình số tiền quyên góp cho các chương trình "Disaster Relief" trong năm "2020" là bao nhiêu?</p><p><br></p><p>Output: <span style="font-size: 14px;">avg_donation</span></p>

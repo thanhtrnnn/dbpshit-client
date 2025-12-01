@@ -1,0 +1,41 @@
+ID: SQL1841
+Tiêu đề: Tổng số thiết bị quân sự trong bảng Armory và Navy_base là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/e4764dda-3fc8-4d71-96d9-53c9694f4317
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e4764dda-3fc8-4d71-96d9-53c9694f4317
+Loại Database: Mysql
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng armory</strong></p><p><strong> Lưu trữ thông tin về các trang bị quân sự trong kho</strong>.</p><pre class="ql-syntax" spellcheck="false">+------------+----------------+
+| Cột        | Kiểu dữ liệu   |
++------------+----------------+
+| id         | INT            |
+| equipment  | VARCHAR(255)   |
++------------+----------------+
+</pre><p><strong>Bảng naval_base</strong></p><p><strong> Lưu trữ thông tin về các trang bị trong các căn cứ hải quân</strong>.</p><pre class="ql-syntax" spellcheck="false">+------------+----------------+
+| Cột        | Kiểu dữ liệu   |
++------------+----------------+
+| id         | INT            |
+| equipment  | VARCHAR(255)   |
++------------+----------------+
+</pre><h3>Nhiệm vụ</h3><p>Liệt kê <strong>tổng số thiết bị quân sự</strong> trong mỗi bảng armory và naval_base.</p><h3>Input mẫu</h3><p><strong>Bảng armory</strong></p><pre class="ql-syntax" spellcheck="false">+----+-------------+
+| id | equipment   |
++----+-------------+
+| 1  | Tank        |
+| 2  | Artillery   |
+| 3  | Rifle       |
++----+-------------+
+</pre><p><strong>Bảng naval_base</strong></p><pre class="ql-syntax" spellcheck="false">+----+-------------+
+| id | equipment   |
++----+-------------+
+| 1  | Submarine   |
+| 2  | Carrier     |
+| 3  | Destroyer   |
+| 4  | Frigate     |
++----+-------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+----------+
+| COUNT(*) |
++----------+
+| 3        |
+| 4        |
++----------+
+</pre><p><br></p>

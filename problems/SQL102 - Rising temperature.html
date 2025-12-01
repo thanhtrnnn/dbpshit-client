@@ -1,0 +1,8 @@
+ID: SQL102
+Tiêu đề: Rising temperature
+URL WEB: https://db.ptit.edu.vn/question-detail/6381ce26-8c37-4b93-ae00-65825d844122
+URL API: https://dbapi.ptit.edu.vn/api/app/question/6381ce26-8c37-4b93-ae00-65825d844122
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng: Weather</strong></p><p><img src="https://dbapi.ptit.edu.vn/api/app/media/files/2024-12-23/1734927411698_image.png"></p><ul><li>id là cột có giá trị duy nhất trong bảng này.</li><li>Không có hai hàng nào có cùng giá trị recordDate.</li><li>Bảng chứa thông tin về nhiệt độ (temperature) vào một ngày cụ thể (recordDate).</li></ul><p><br></p><p><strong>Yêu cầu:</strong></p><p>Viết một giải pháp để tìm tất cả các id của các ngày có nhiệt độ cao hơn so với ngày trước đó (hôm qua).</p><p>Trả về bảng kết quả với thứ tự bất kỳ.</p><p><br></p><h3>Ví dụ:</h3><p><strong>Đầu vào:</strong></p><p><strong>Bảng Weather:</strong></p><p><img src="https://dbapi.ptit.edu.vn/api/app/media/files/2024-12-23/1734927442224_image.png"></p><p><strong>Đầu ra:</strong></p><p><img src="https://dbapi.ptit.edu.vn/api/app/media/files/2024-12-23/1734927461152_image.png"></p><p><strong>Giải thích:</strong></p><ul><li>Ngày 2015-01-02 (ID = 2): Nhiệt độ 25 cao hơn ngày trước đó (2015-01-01, nhiệt độ = 10).</li><li>Ngày 2015-01-04 (ID = 4): Nhiệt độ 30 cao hơn ngày trước đó (2015-01-03, nhiệt độ = 20).</li><li>Ngày 2015-01-03 (ID = 3): Nhiệt độ 20 không cao hơn ngày trước đó (2015-01-02, nhiệt độ = 25).</li></ul><p><br></p>

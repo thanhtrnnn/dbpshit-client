@@ -1,0 +1,42 @@
+ID: SQL1834
+Tiêu đề: Tổng số hoạt động gìn giữ hòa bình ở 'european_region_table' và 'african_region_table' là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/a2d27ce1-49d9-4114-9de3-82d93c71d35b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a2d27ce1-49d9-4114-9de3-82d93c71d35b
+Loại Database: Mysql
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng european_region_table</strong></p><p><strong> Bảng này lưu trữ thông tin về các hoạt động gìn giữ hòa bình tại khu vực châu Âu</strong>, bao gồm mã chiến dịch, tên chiến dịch, quốc gia và ngân sách.</p><pre class="ql-syntax" spellcheck="false">+----------------+---------------+---------------------------------------------+
+| Cột            | Kiểu dữ liệu  | Mô tả                                      |
++----------------+---------------+---------------------------------------------+
+| id             | INT           | Mã định danh của chiến dịch                |
+| operation_name | VARCHAR(100)  | Tên chiến dịch                             |
+| country        | VARCHAR(50)   | Quốc gia thực hiện chiến dịch              |
+| budget         | INT           | Ngân sách dành cho chiến dịch              |
++----------------+---------------+---------------------------------------------+
+</pre><p><strong>Bảng african_region_table</strong></p><p><strong> Bảng này lưu trữ thông tin về các hoạt động gìn giữ hòa bình tại khu vực châu Phi</strong>, với cấu trúc tương tự như bảng châu Âu.</p><pre class="ql-syntax" spellcheck="false">+----------------+---------------+---------------------------------------------+
+| Cột            | Kiểu dữ liệu  | Mô tả                                      |
++----------------+---------------+---------------------------------------------+
+| id             | INT           | Mã định danh của chiến dịch                |
+| operation_name | VARCHAR(100)  | Tên chiến dịch                             |
+| country        | VARCHAR(50)   | Quốc gia thực hiện chiến dịch              |
+| budget         | INT           | Ngân sách dành cho chiến dịch              |
++----------------+---------------+---------------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Tính <strong>tổng số hoạt động gìn giữ hòa bình</strong> (tổng số dòng ghi nhận) trong <strong>hai bảng</strong> european_region_table và african_region_table.</p><h3>Input mẫu</h3><p><strong>Bảng european_region_table</strong></p><pre class="ql-syntax" spellcheck="false">+----+-------------------+-----------+---------+
+| id | operation_name    | country   | budget  |
++----+-------------------+-----------+---------+
+| 1  | Peace Dawn        | France    | 500000  |
+| 2  | Unity Shield      | Germany   | 650000  |
+| 3  | Horizon Light     | Italy     | 400000  |
++----+-------------------+-----------+---------+
+</pre><p><strong>Bảng african_region_table</strong></p><pre class="ql-syntax" spellcheck="false">+----+-------------------+-----------+---------+
+| id | operation_name    | country   | budget  |
++----+-------------------+-----------+---------+
+| 1  | Desert Hope       | Kenya     | 300000  |
+| 2  | Savannah Guard    | Nigeria   | 450000  |
++----+-------------------+-----------+---------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+----------------+
+| total_activity |
++----------------+
+| 5              |
++----------------+
+</pre><h3>Giải thích</h3><ul><li>Khu vực <strong>châu Âu</strong> có <strong>3 hoạt động</strong>.</li><li>Khu vực <strong>châu Phi</strong> có <strong>2 hoạt động</strong>.</li><li> → Tổng cộng có <strong>5 hoạt động gìn giữ hòa bình</strong> trên cả hai khu vực.</li></ul><p><br></p>

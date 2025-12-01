@@ -1,0 +1,33 @@
+ID: SQL99
+Tiêu đề: Find custom referee
+URL WEB: https://db.ptit.edu.vn/question-detail/5f06da94-ad81-4241-80b3-4acad7cc6414
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5f06da94-ad81-4241-80b3-4acad7cc6414
+Loại Database: Sql Server
+------------------------------
+
+<p>Table:&nbsp;Customer</p><p><br></p><pre class="ql-syntax" spellcheck="false">+-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| id          | int     |
+| name        | varchar |
+| referee_id  | int     |
++-------------+---------+
+</pre><p><br></p><p>In SQL, id is the primary key column for this table.</p><p>Each row of this table indicates the id of a customer, their name, and the id of the customer who referred them.</p><p>&nbsp;</p><p>Find the names of the customer that are&nbsp;<strong>not referred by</strong>&nbsp;the customer with&nbsp;id = 2.</p><p>Return the result table in&nbsp;<strong>any order</strong>.</p><p>The result format is in the following example.</p><p>&nbsp;</p><p><strong>Example 1:</strong></p><p><strong>Input:</strong></p><p>Customer table:</p><pre class="ql-syntax" spellcheck="false">+----+------+------------+
+| id | name | referee_id |
++----+------+------------+
+| 1  | Will | null       |
+| 2  | Jane | null       |
+| 3  | Alex | 2          |
+| 4  | Bill | null       |
+| 5  | Zack | 1          |
+| 6  | Mark | 2          |
++----+------+------------+
+</pre><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+------+
+| name |
++------+
+| Will |
+| Jane |
+| Bill |
+| Zack |
++------+
+</pre>

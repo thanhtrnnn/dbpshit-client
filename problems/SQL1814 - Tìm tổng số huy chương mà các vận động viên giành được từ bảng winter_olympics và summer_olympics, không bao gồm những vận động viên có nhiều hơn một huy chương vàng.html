@@ -1,0 +1,49 @@
+ID: SQL1814
+Tiêu đề: Tìm tổng số huy chương mà các vận động viên giành được từ bảng winter_olympics và summer_olympics, không bao gồm những vận động viên có nhiều hơn một huy chương vàng?
+URL WEB: https://db.ptit.edu.vn/question-detail/c3a411fe-d4b1-4fde-a5c0-68e5aeb7f9e8
+URL API: https://dbapi.ptit.edu.vn/api/app/question/c3a411fe-d4b1-4fde-a5c0-68e5aeb7f9e8
+Loại Database: Mysql
+------------------------------
+
+<p>Bảng `winter_olympics` và `summer_olympics`:</p><pre class="ql-syntax" spellcheck="false">Bảng winter_olympics
++-------------+-------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; |
++-------------+-------------+
+| athlete_id&nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| name&nbsp; &nbsp; &nbsp; &nbsp; | VARCHAR(50) |
+| gold&nbsp; &nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| silver&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| bronze&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+-------------+
+</pre><p><br></p><pre class="ql-syntax" spellcheck="false">Bảng summer_olympics
++-------------+-------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; |
++-------------+-------------+
+| athlete_id&nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| name&nbsp; &nbsp; &nbsp; &nbsp; | VARCHAR(50) |
+| gold&nbsp; &nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| silver&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| bronze&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+-------------+
+</pre><p><br></p><p>Nhiệm vụ:</p><p>Tìm tổng số huy chương mà các vận động viên giành được từ bảng winter_olympics và summer_olympics, không bao gồm những vận động viên có nhiều hơn một huy chương vàng?</p><p><br></p><p><strong>Input:</strong></p><pre class="ql-syntax" spellcheck="false">winter_olympics
++------------+-----------+------+--------+--------+
+| athlete_id | name&nbsp; &nbsp; &nbsp; | gold | silver | bronze |
++------------+-----------+------+--------+--------+
+| 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | John&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; | 0&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; |
+| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Alice&nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; | 0&nbsp; &nbsp; &nbsp; |
+| 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Bob&nbsp; &nbsp; &nbsp; &nbsp;| 0&nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; |
++------------+-----------+------+--------+--------+
+</pre><p><br></p><pre class="ql-syntax" spellcheck="false">summer_olympics
++------------+-----------+------+--------+--------+
+| athlete_id | name&nbsp; &nbsp; &nbsp; | gold | silver | bronze |
++------------+-----------+------+--------+--------+
+| 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | John&nbsp; &nbsp; &nbsp; | 0&nbsp; &nbsp; | 2&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; |
+| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Alice&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; | 0&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; |
+| 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | David&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; |
++------------+-----------+------+--------+--------+
+</pre><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+----------------+
+| SUM(medals)&nbsp; &nbsp; |
++----------------+
+| 8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++----------------+
+</pre>

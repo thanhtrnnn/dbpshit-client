@@ -1,0 +1,8 @@
+ID: SQL2042
+Tiêu đề: Cập nhật địa chỉ của chủ hợp đồng bằng cách sử dụng CẬP NHẬT và THAM GIA.
+URL WEB: https://db.ptit.edu.vn/question-detail/cd9454bf-aeb6-4dc0-8333-d1c3430645b8
+URL API: https://dbapi.ptit.edu.vn/api/app/question/cd9454bf-aeb6-4dc0-8333-d1c3430645b8
+Loại Database: Mysql
+------------------------------
+
+<p>Bảng Policyholder: Lưu trữ thông tin về chủ hợp đồng bảo hiểm, bao gồm mã chủ hợp đồng, tên, ngày sinh và địa chỉ.</p><ul><li>PolicyholderID (INT): Mã số định danh duy nhất cho chủ hợp đồng.</li><li>Name (TEXT): Tên chủ hợp đồng.</li><li>DOB (DATE): Ngày sinh của chủ hợp đồng.</li><li>Address (TEXT): Địa chỉ của chủ hợp đồng.</li></ul><p>Bảng Policy: Lưu trữ thông tin về hợp đồng bảo hiểm, bao gồm mã hợp đồng, mã chủ hợp đồng và sản phẩm bảo hiểm.</p><ul><li>PolicyID (INT): Mã số định danh duy nhất cho hợp đồng bảo hiểm.</li><li>PolicyholderID (INT): Mã chủ hợp đồng (foreign key từ Policyholder).</li><li>Product (VARCHAR(10)): Sản phẩm bảo hiểm (ví dụ: Auto, Home).</li></ul><p><strong>Câu hỏi:</strong></p><p><strong> Cập nhật địa chỉ (</strong>Address) của tất cả <strong>chủ hợp đồng có sản phẩm bảo hiểm là “Home”</strong> thành '321 Maple St'</p>

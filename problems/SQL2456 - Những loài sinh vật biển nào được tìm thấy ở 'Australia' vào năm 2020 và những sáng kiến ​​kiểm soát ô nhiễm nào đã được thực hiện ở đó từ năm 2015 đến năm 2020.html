@@ -1,0 +1,8 @@
+ID: SQL2456
+Tiêu đề: Những loài sinh vật biển nào được tìm thấy ở 'Australia' vào năm 2020 và những sáng kiến ​​kiểm soát ô nhiễm nào đã được thực hiện ở đó từ năm 2015 đến năm 2020?
+URL WEB: https://db.ptit.edu.vn/question-detail/b6e64bac-acb2-40bc-a4a7-53054d2926c3
+URL API: https://dbapi.ptit.edu.vn/api/app/question/b6e64bac-acb2-40bc-a4a7-53054d2926c3
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng Species_3</strong></h3><p>Chứa thông tin về <strong>các loài động vật</strong> và <strong>khu vực sinh sống của chúng</strong>.</p><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi loài (khóa chính của bảng).</li><li>name (VARCHAR(255)): Tên của loài động vật (ví dụ: 'Kangaroo Fish', 'Blue-ringed Octopus').</li><li>region (VARCHAR(255)): Khu vực sinh sống của loài (ví dụ: 'Australia').</li><li>year (INT): Năm loài được phát hiện hoặc nghiên cứu.</li></ul><h3><strong>Bảng Initiatives_3</strong></h3><p>Chứa thông tin về <strong>các sáng kiến bảo vệ môi trường</strong>.</p><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi sáng kiến (khóa chính của bảng).</li><li>initiative (VARCHAR(255)): Tên của sáng kiến (ví dụ: 'Coral Reef Restoration', 'Marine Debris Removal').</li><li>region (VARCHAR(255)): Khu vực triển khai sáng kiến (ví dụ: 'Australia').</li><li>start_year (INT): Năm bắt đầu sáng kiến.</li><li>end_year (INT): Năm kết thúc sáng kiến.</li></ul><p><strong>Yêu cầu:</strong></p><ul><li>Liệt kê <strong>các loài sinh vật biển được tìm thấy ở 'Australia' trong năm 2020</strong>.</li></ul><p><br></p><p>Output: name</p>

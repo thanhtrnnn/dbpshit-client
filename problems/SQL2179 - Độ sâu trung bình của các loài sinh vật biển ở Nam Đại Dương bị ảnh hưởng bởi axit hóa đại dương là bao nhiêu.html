@@ -1,0 +1,13 @@
+ID: SQL2179
+Tiêu đề: Độ sâu trung bình của các loài sinh vật biển ở Nam Đại Dương bị ảnh hưởng bởi axit hóa đại dương là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/b1a92bcb-6e32-4f57-b900-221cd7d8036c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/b1a92bcb-6e32-4f57-b900-221cd7d8036c
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có 2 bảng sau:</strong></p><p><strong>1. Bảng marine_species</strong> – Chứa thông tin về các loài sinh vật biển:</p><ul><li>name (TEXT): Tên của loài sinh vật biển.</li><li>affected_by_acidification (BOOLEAN): Loài có bị ảnh hưởng bởi axit hóa đại dương (TRUE/FALSE).</li><li>ocean (TEXT): Tên đại dương nơi loài sinh sống.</li><li>min_depth (FLOAT): Độ sâu tối thiểu mà loài có thể sinh tồn.</li></ul><p><strong>2. Bảng ocean_regions</strong> – Chứa thông tin về các vùng thuộc đại dương:</p><ul><li>name (TEXT): Tên vùng đại dương.</li><li>area (FLOAT): Diện tích của vùng đại dương (đơn vị có thể là km² hoặc m² tùy quy ước) </li></ul><p><strong>Nhiệm vụ:</strong></p><p>Độ sâu trung bình của các loài sinh vật biển ở Nam Đại Dương bị ảnh hưởng bởi axit hóa đại dương là bao nhiêu?</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+-----------------------+
+|      avg_depth      |
++-----------------------+
+| 100.0000000000000000 |
++-----------------------+
+</pre>

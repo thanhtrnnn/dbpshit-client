@@ -1,0 +1,8 @@
+ID: SQL2357
+Tiêu đề: Xác định những đối tượng chung nhận tài trợ trong cả lĩnh vực giáo dục và biến đổi khí hậu.
+URL WEB: https://db.ptit.edu.vn/question-detail/72d2808a-a6a5-46ec-96f1-09f7ab798aa5
+URL API: https://dbapi.ptit.edu.vn/api/app/question/72d2808a-a6a5-46ec-96f1-09f7ab798aa5
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Grants</strong>: Chứa thông tin về các khoản tài trợ và lĩnh vực liên quan.</p><ul><li>GrantID (INT): Mã định danh duy nhất cho mỗi khoản tài trợ (khóa chính).</li><li>GrantName (VARCHAR(50)): Tên của khoản tài trợ.</li><li>Recipient (VARCHAR(50)): Tổ chức hoặc cá nhân nhận tài trợ.</li><li>Amount (DECIMAL(10,2)): Số tiền tài trợ.</li><li>Field (VARCHAR(50)): Lĩnh vực hoặc chủ đề của khoản tài trợ (ví dụ: "Education", "Climate Change").</li></ul><p><strong>Nhiệm vụ</strong>:</p><p>Xác định những Recipient (đối tượng nhận tài trợ) đã nhận tài trợ cả trong lĩnh vực "Education" và "Climate Change".</p>

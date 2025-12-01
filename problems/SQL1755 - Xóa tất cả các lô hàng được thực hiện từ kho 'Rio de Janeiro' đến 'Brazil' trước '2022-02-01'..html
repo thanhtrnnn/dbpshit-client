@@ -1,0 +1,8 @@
+ID: SQL1755
+Tiêu đề: Xóa tất cả các lô hàng được thực hiện từ kho 'Rio de Janeiro' đến 'Brazil' trước '2022-02-01'.
+URL WEB: https://db.ptit.edu.vn/question-detail/f45fb666-1482-4aae-aff7-e83507bfa9a9
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f45fb666-1482-4aae-aff7-e83507bfa9a9
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `warehouse`: Bảng này lưu trữ thông tin về các kho hàng, bao gồm ID kho, tên kho và thành phố.</strong></p><ul><li>`id (INT)`: Mã định danh của kho hàng.</li><li>`name (VARCHAR(50))`: Tên kho hàng.</li><li>`city (VARCHAR(50))`: Thành phố nơi kho hàng tọa lạc.</li></ul><p><br></p><p><strong>Bảng `carrier`: Bảng này lưu trữ thông tin về các nhà vận chuyển, bao gồm ID nhà vận chuyển và tên. </strong></p><ul><li>`id (INT)`: Mã định danh của nhà vận chuyển.</li><li>`name (VARCHAR(50))`: Tên nhà vận chuyển.</li></ul><p><br></p><p><strong>Bảng `shipment`: Bảng này lưu trữ thông tin về các chuyến hàng, bao gồm ID chuyến hàng, ID kho, ID nhà vận chuyển, số lượng pallet và ngày vận chuyển. </strong></p><ul><li>`id (INT)`: Mã định danh của chuyến hàng.</li><li>`warehouse_id (INT)`: Mã kho liên quan đến chuyến hàng.</li><li>`carrier_id (INT)`: Mã nhà vận chuyển.</li><li>`pallet_count (INT)`: Số lượng pallet trong chuyến hàng.</li><li>`shipped_date (DATE)`: Ngày vận chuyển.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Xóa tất cả các lô hàng được thực hiện từ kho 'Rio de Janeiro' đến 'Brazil' trước '2022-02-01'.</p>

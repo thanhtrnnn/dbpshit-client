@@ -1,0 +1,8 @@
+ID: SQL1949
+Tiêu đề: Tổng giá trị giao dịch của mỗi khách hàng trong tuần qua, chia theo loại tiền tệ, đối với khách hàng ở Hoa Kỳ là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/dbe8e615-121b-4d44-911d-1baddae03dc7
+URL API: https://dbapi.ptit.edu.vn/api/app/question/dbe8e615-121b-4d44-911d-1baddae03dc7
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng customers:</strong></p><p>Bảng này lưu trữ thông tin về khách hàng, bao gồm ID khách hàng, độ tuổi, tên và quốc gia.</p><ul><li>customer_id (INT): Mã định danh của khách hàng.</li><li>age (INT): Độ tuổi của khách hàng.</li><li>name (VARCHAR(255)): Tên khách hàng.</li><li>country (VARCHAR(50)): Quốc gia của khách hàng.</li></ul><p><strong>Bảng transactions:</strong></p><p>Bảng này lưu trữ thông tin về các giao dịch của khách hàng, bao gồm ID giao dịch, ID khách hàng, ID sản phẩm, ID loại sản phẩm, ngày giao dịch, số tiền và loại tiền tệ.</p><ul><li>transaction_id (INT): Mã định danh của giao dịch.</li><li>customer_id (INT): Mã khách hàng thực hiện giao dịch.</li><li>product_id (INT): Mã sản phẩm trong giao dịch.</li><li>category_id (INT): Mã loại sản phẩm.</li><li>transaction_date (DATE): Ngày giao dịch.</li><li>amount (DECIMAL(10,2)): Số tiền giao dịch.</li><li>currency (VARCHAR(10)): Loại tiền tệ sử dụng trong giao dịch.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tổng giá trị giao dịch của mỗi khách hàng trong tuần qua, chia theo loại tiền tệ, đối với khách hàng ở Hoa Kỳ là bao nhiêu?</p>

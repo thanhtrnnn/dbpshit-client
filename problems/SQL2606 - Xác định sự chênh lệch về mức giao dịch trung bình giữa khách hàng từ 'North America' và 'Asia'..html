@@ -1,0 +1,8 @@
+ID: SQL2606
+Tiêu đề: Xác định sự chênh lệch về mức giao dịch trung bình giữa khách hàng từ 'North America' và 'Asia'.
+URL WEB: https://db.ptit.edu.vn/question-detail/bfb9526f-4ab8-425f-b074-5ed8b7eb1db5
+URL API: https://dbapi.ptit.edu.vn/api/app/question/bfb9526f-4ab8-425f-b074-5ed8b7eb1db5
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `transaction_amounts`: Quản lý thông tin giao dịch của khách hàng theo khu vực. </strong></p><ul><li>`transaction_amounts (customer_id INT, region VARCHAR(20), transaction_amount NUMERIC(12,2))`: Thông tin giao dịch theo khu vực.</li><li>`customer_id`: Mã khách hàng.</li><li>`region`: Khu vực.</li><li>`transaction_amount`: Số tiền giao dịch.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Từ bảng transaction_amounts(customer_id, region, transaction_amount), hãy tính <strong>độ chênh lệch tuyệt đối</strong> giữa <strong>mức giao dịch trung bình</strong> của khách hàng thuộc khu vực 'North America' và 'Asia'.</p><p><br></p><p><strong>Output</strong></p><p>Truy vấn trả về <strong>một dòng, một cột</strong> có tên avg_difference, là giá trị tuyệt đối của hiệu giữa hai giá trị trung bình này.</p>

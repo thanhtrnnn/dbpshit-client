@@ -1,0 +1,13 @@
+ID: SQL2149
+Tiêu đề: Thu nhập trung bình của khách hàng thắng kiện là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/4566acf2-027f-457e-ab8b-e0af6428cf33
+URL API: https://dbapi.ptit.edu.vn/api/app/question/4566acf2-027f-457e-ab8b-e0af6428cf33
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng cases</strong> lưu trữ thông tin về các vụ án, với cấu trúc:</p><ul><li>case_id (INT): Mã vụ án</li><li>client_id (INT): Mã khách hàng</li><li>outcome (VARCHAR): Kết quả vụ án (ví dụ: 'win', 'lose')</li></ul><p><strong>Bảng clients</strong> lưu trữ thông tin về khách hàng, với cấu trúc:</p><ul><li>client_id (INT): Mã khách hàng</li><li>age (INT): Tuổi</li><li>gender (VARCHAR): Giới tính</li><li>income (DECIMAL): Thu nhập</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Thu nhập trung bình của khách hàng thắng kiện là bao nhiêu?</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+----------------+
+| average_income |
++----------------+
+|                |
++----------------+
+</pre>

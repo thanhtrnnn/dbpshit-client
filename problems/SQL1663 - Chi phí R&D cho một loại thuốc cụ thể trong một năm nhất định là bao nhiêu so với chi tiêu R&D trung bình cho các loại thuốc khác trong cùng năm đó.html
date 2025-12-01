@@ -1,0 +1,24 @@
+ID: SQL1663
+Tiêu đề: Chi phí R&D cho một loại thuốc cụ thể trong một năm nhất định là bao nhiêu so với chi tiêu R&D trung bình cho các loại thuốc khác trong cùng năm đó?
+URL WEB: https://db.ptit.edu.vn/question-detail/3da45e7a-3443-4681-a841-03dffb1089ac
+URL API: https://dbapi.ptit.edu.vn/api/app/question/3da45e7a-3443-4681-a841-03dffb1089ac
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng `r_and_d_data`: Bảng này lưu trữ thông tin về dữ liệu nghiên cứu và phát triển của các loại thuốc, bao gồm tên thuốc, chi phí nghiên cứu và năm thực hiện.</strong></p><ul><li>`drug_name (TEXT)`: Tên của loại thuốc.</li><li>`expenditure (INTEGER)`: Chi phí nghiên cứu và phát triển của thuốc.</li><li>`year (TEXT)`: Năm thực hiện nghiên cứu.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Chi phí R&amp;D cho một loại thuốc cụ thể trong một năm nhất định là bao nhiêu so với chi tiêu R&amp;D trung bình cho các loại thuốc khác trong cùng năm đó?</p><p><br></p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----------+-------------+--------+
+| drug_name| expenditure | year   |
++----------+-------------+--------+
+| DrugA    | 500000      | 2020   |
+| DrugB    | 400000      | 2020   |
+| DrugC    | 600000      | 2020   |
+| DrugA    | 550000      | 2021   |
+| DrugB    | 550000      | 2021   |
++----------+-------------+--------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++-------------+
+| expenditure |
++-------------+
+| 500000      |
++-------------+
+</pre><p><br></p><p><br></p><p><br></p>

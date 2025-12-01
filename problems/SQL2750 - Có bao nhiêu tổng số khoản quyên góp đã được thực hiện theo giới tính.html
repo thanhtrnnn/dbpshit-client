@@ -1,0 +1,8 @@
+ID: SQL2750
+Tiêu đề: Có bao nhiêu tổng số khoản quyên góp đã được thực hiện theo giới tính?
+URL WEB: https://db.ptit.edu.vn/question-detail/62fe3d6e-74f8-4940-a435-491b9001923c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/62fe3d6e-74f8-4940-a435-491b9001923c
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `Donors`: Quản lý giới tính người tài trợ. </strong></p><ul><li><span style="font-size: 14px;">`Donors (id INT, gender VARCHAR(10), donation_id INT)`:</span></li><li><span style="font-size: 14px;">`id (INT)`: Mã nhà tài trợ. </span></li><li><span style="font-size: 14px;">`gender (VARCHAR(10))`: Giới tính. </span></li><li><span style="font-size: 14px;">`donation_id (INT)`: Mã khoản tài trợ tương ứng.</span></li></ul><p><strong style="font-size: 14px;">Bảng `Donations`: Quản lý thông tin chi tiết các khoản tài trợ. </strong></p><ul><li><span style="font-size: 14px;">`Donations (id INT, donor_id INT, amount DECIMAL(10,2))`:</span></li><li><span style="font-size: 14px;">`id (INT)`: Mã khoản tài trợ.</span></li><li><span style="font-size: 14px;">`donor_id (INT)`: Mã nhà tài trợ tương ứng.</span></li><li><span style="font-size: 14px;">`amount (DECIMAL(10,2))`: Số tiền tài trợ.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Có bao nhiêu tổng số khoản quyên góp đã được thực hiện theo giới tính?</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">gender, total_donations</span></p>

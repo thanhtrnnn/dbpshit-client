@@ -1,0 +1,8 @@
+ID: SQL2287
+Tiêu đề: Có bao nhiêu người dùng tham gia chuyến tham quan ảo các khách sạn ở 'CityC' trong 30 ngày qua?
+URL WEB: https://db.ptit.edu.vn/question-detail/4be17446-96e5-4dbe-9e1d-6f90b3a0f4bf
+URL API: https://dbapi.ptit.edu.vn/api/app/question/4be17446-96e5-4dbe-9e1d-6f90b3a0f4bf
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng hotels</strong> – Thông tin về khách sạn:</p><ul><li>hotel_id (INT): Mã định danh duy nhất cho mỗi khách sạn (khóa chính).</li><li>hotel_name (VARCHAR(50)): Tên khách sạn.</li><li>city (VARCHAR(50)): Thành phố nơi khách sạn tọa lạc.</li></ul><p><strong>Bảng virtualTours</strong> – Thông tin về các tour ảo của khách sạn:</p><ul><li>tour_id (INT): Mã định danh duy nhất cho mỗi tour ảo.</li><li>hotel_id (INT): Mã định danh của khách sạn có tour ảo (liên kết với hotels.hotel_id).</li><li>tour_name (VARCHAR(50)): Tên tour ảo.</li></ul><p><strong>Bảng userInteractions</strong> – Thông tin về các lần tương tác của người dùng với tour ảo:</p><ul><li>user_id (INT): Mã định danh của người dùng.</li><li>tour_id (INT): Mã tour ảo mà người dùng đã tương tác (liên kết với virtualTours.tour_id).</li><li>interaction_date (DATE): Ngày người dùng tương tác với tour ảo.</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong> Tính số lượng người dùng khác nhau (user_id)</strong> đã tham gia tour ảo tại các khách sạn ở <strong>thành phố 'CityC'</strong> trong <strong>30 ngày gần đây</strong> (tính từ ngày hiện tại).</p><p><strong>Output:</strong></p><ul><li>COUNT(DISTINCT user_id) – Số lượng người dùng khác nhau đã tham gia tour ảo</li></ul>

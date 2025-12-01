@@ -1,0 +1,8 @@
+ID: SQL1987
+Tiêu đề: Đếm số lượng loài sinh vật biển trong mỗi lưu vực đại dương, không bao gồm các loài có tình trạng bảo tồn 'Ít quan tâm'
+URL WEB: https://db.ptit.edu.vn/question-detail/71eb03a4-8fee-4f59-81b7-105005a72f68
+URL API: https://dbapi.ptit.edu.vn/api/app/question/71eb03a4-8fee-4f59-81b7-105005a72f68
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng species:</strong></p><p>Lưu trữ thông tin về các loài động vật, bao gồm mã loài, tên loài, trạng thái bảo tồn và môi trường sống.</p><ul><li>id (INT): Mã số định danh duy nhất cho loài.</li><li>name (VARCHAR(255)): Tên loài động vật.</li><li>conservation_status (VARCHAR(255)): Trạng thái bảo tồn của loài.</li><li>habitat (VARCHAR(255)): Môi trường sống của loài.</li></ul><p><strong>Bảng ocean_basin:</strong></p><p>Lưu trữ thông tin về các vùng biển, bao gồm mã vùng biển, tên vùng biển và số lượng loài trong vùng biển.</p><ul><li>id (INT): Mã số định danh duy nhất cho vùng biển.</li><li>name (VARCHAR(255)): Tên vùng biển.</li><li>species_count (INT): Số lượng loài động vật trong vùng biển.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Đếm số lượng loài sinh vật biển trong mỗi lưu vực đại dương, không bao gồm các loài có tình trạng bảo tồn là "Ít quan tâm".</p><p><strong>Output:</strong></p><p>Đếm số loài trong từng habitat, chỉ tính những loài không có trạng thái “Least Concern”. Kết quả chèn vào bảng <strong>ocean_basin</strong>.</p>

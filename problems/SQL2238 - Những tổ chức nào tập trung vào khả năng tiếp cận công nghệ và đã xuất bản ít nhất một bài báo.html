@@ -1,0 +1,8 @@
+ID: SQL2238
+Tiêu đề: Những tổ chức nào tập trung vào khả năng tiếp cận công nghệ và đã xuất bản ít nhất một bài báo?
+URL WEB: https://db.ptit.edu.vn/question-detail/ea62d5f3-f420-49ca-90ca-a5965b462b04
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ea62d5f3-f420-49ca-90ca-a5965b462b04
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có hai bảng dữ liệu:</p><ol><li><strong>Bảng tech_accessibility_orgs – Thông tin về các tổ chức trong lĩnh vực công nghệ hỗ trợ tiếp cận:</strong></li></ol><ul><li>id (INT): Mã định danh duy nhất cho mỗi tổ chức</li><li>name (VARCHAR(255)): Tên của tổ chức</li><li>website (VARCHAR(255)): Địa chỉ website chính thức</li><li>city (VARCHAR(255)): Thành phố nơi tổ chức đặt trụ sở</li></ul><ol><li><strong>Bảng papers – Thông tin về các bài nghiên cứu do tổ chức công bố:</strong></li></ol><ul><li>id (INT): Mã định danh duy nhất cho mỗi bài nghiên cứu</li><li>title (VARCHAR(255)): Tiêu đề của bài nghiên cứu</li><li>org_id (INT): Mã tổ chức công bố bài nghiên cứu</li><li>publication_date (DATE): Ngày công bố bài nghiên cứu</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong>Liệt kê tên các tổ chức</strong> tập trung vào khả năng tiếp cận công nghệ và đã <strong>xuất bản ít nhất một bài báo</strong>.</p><p>Output: name.</p>

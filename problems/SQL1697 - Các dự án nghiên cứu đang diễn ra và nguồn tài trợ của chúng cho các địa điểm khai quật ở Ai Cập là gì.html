@@ -1,0 +1,44 @@
+ID: SQL1697
+Tiêu đề: Các dự án nghiên cứu đang diễn ra và nguồn tài trợ của chúng cho các địa điểm khai quật ở Ai Cập là gì?
+URL WEB: https://db.ptit.edu.vn/question-detail/141e8cf1-358e-4031-b38a-ddcf7e0a3c2b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/141e8cf1-358e-4031-b38a-ddcf7e0a3c2b
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `ExcavationSite`: Bảng này lưu trữ thông tin về các địa điểm khai quật, bao gồm ID, tên, quốc gia, ngày bắt đầu và ngày kết thúc. </strong></p><ul><li>`SiteID (INT)`: Mã định danh của địa điểm khai quật.</li><li>`SiteName (VARCHAR(100))`: Tên của địa điểm khai quật.</li><li>`Country (VARCHAR(50))`: Quốc gia nơi địa điểm khai quật.</li><li>`StartDate (DATE)`: Ngày bắt đầu khai quật.</li><li>`EndDate (DATE)`: Ngày kết thúc khai quật.</li></ul><p><br></p><p><strong>Bảng `ResearchProject`: Bảng này lưu trữ thông tin về các dự án nghiên cứu tại các địa điểm khai quật, bao gồm ID dự án, tên dự án, ID địa điểm khai quật, ngày bắt đầu và ngày kết thúc.</strong></p><ul><li>`ProjectID (INT)`: Mã định danh của dự án nghiên cứu.</li><li>`ProjectName (VARCHAR(100))`: Tên dự án nghiên cứu.</li><li>`SiteID (INT)`: Mã địa điểm khai quật liên kết với dự án.</li><li>`StartDate (DATE)`: Ngày bắt đầu dự án nghiên cứu.</li><li>`EndDate (DATE)`: Ngày kết thúc dự án nghiên cứu.</li></ul><p><br></p><p><strong>Bảng `FundingSource`: Bảng này lưu trữ thông tin về các nguồn tài trợ cho dự án nghiên cứu, bao gồm ID nguồn tài trợ, ID dự án, tên nguồn tài trợ và số tiền tài trợ.</strong></p><ul><li>`FundingSourceID (INT)`: Mã định danh của nguồn tài trợ.</li><li>`ProjectID (INT)`: Mã dự án nghiên cứu.</li><li>`SourceName (VARCHAR(100))`: Tên của nguồn tài trợ.</li><li>`Amount (DECIMAL(10,2))`: Số tiền tài trợ.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Các dự án nghiên cứu đang diễn ra và nguồn tài trợ của chúng cho các địa điểm khai quật ở Ai Cập là gì?</p><p><br></p><h3>Input mẫu</h3><p><strong>Bảng ExcavationSite</strong></p><pre class="ql-syntax" spellcheck="false">
++---------+----------------------+----------+------------+------------+
+| SiteID  | SiteName             | Country  | StartDate  | EndDate    |
++---------+----------------------+----------+------------+------------+
+| 1       | Giza Plateau         | Egypt    | 2020-01-01 | 2030-12-31 |
+| 2       | Valley of the Kings  | Egypt    | 2018-05-01 | 2026-10-01 |
+| 3       | Machu Picchu         | Peru     | 2019-03-10 | 2025-11-15 |
+| 4       | Angkor Wat           | Cambodia | 2021-06-20 | 2024-12-30 |
++---------+----------------------+----------+------------+------------+
+</pre><p><strong>Bảng ResearchProject</strong></p><pre class="ql-syntax" spellcheck="false">
++------------+--------------------------+---------+------------+------------+
+| ProjectID  | ProjectName              | SiteID  | StartDate  | EndDate    |
++------------+--------------------------+---------+------------+------------+
+| 101        | Ancient Tombs Study      | 1       | 2022-02-10 | 2028-05-15 |
+| 102        | Pharaohs’ Relic Project  | 2       | 2020-03-01 | 2027-01-01 |
+| 103        | Inca Civilization Survey | 3       | 2021-01-05 | 2023-01-05 |
+| 104        | Temple Restoration       | 4       | 2021-02-01 | 2025-01-01 |
++------------+--------------------------+---------+------------+------------+
+</pre><p><strong>Bảng FundingSource</strong></p><pre class="ql-syntax" spellcheck="false">
++----------------+------------+--------------------+-----------+
+| FundingSourceID| ProjectID  | SourceName         | Amount    |
++----------------+------------+--------------------+-----------+
+| 1              | 101        | UNESCO             | 500000.00 |
+| 2              | 101        | Egyptology Fund    | 250000.00 |
+| 3              | 102        | Global Heritage Org| 300000.00 |
+| 4              | 103        | Andes Research     | 150000.00 |
+| 5              | 104        | Asian Monuments    | 200000.00 |
++----------------+------------+--------------------+-----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++--------------------------+----------------------+--------------------+-----------+
+| ProjectName              | SiteName             | SourceName         | Amount    |
++--------------------------+----------------------+--------------------+-----------+
+| Ancient Tombs Study      | Giza Plateau         | UNESCO             | 500000.00 |
+| Ancient Tombs Study      | Giza Plateau         | Egyptology Fund    | 250000.00 |
+| Pharaohs’ Relic Project  | Valley of the Kings  | Global Heritage Org| 300000.00 |
++--------------------------+----------------------+--------------------+-----------+
+</pre><p><br></p>

@@ -1,0 +1,8 @@
+ID: SQL2381
+Tiêu đề: Xác định thiết bị quân sự có tổng doanh số bán hàng cao nhất trong năm 2020.
+URL WEB: https://db.ptit.edu.vn/question-detail/aeb51f08-6b3b-47e7-beaa-c5eea789cd78
+URL API: https://dbapi.ptit.edu.vn/api/app/question/aeb51f08-6b3b-47e7-beaa-c5eea789cd78
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng Sales</strong></h3><p>Chứa thông tin về các giao dịch bán thiết bị.</p><ul><li>Sale_ID (INT): Mã định danh duy nhất cho mỗi giao dịch.</li><li>Equipment_ID (INT): Mã thiết bị được bán (liên kết với bảng Equipment).</li><li>Quantity (INT): Số lượng thiết bị bán ra.</li><li>Sale_Date (DATE): Ngày thực hiện giao dịch.</li></ul><h3><strong>Bảng Equipment</strong></h3><p>Chứa thông tin chi tiết về thiết bị.</p><ul><li>Equipment_ID (INT): Mã định danh thiết bị.</li><li>Equipment_Name (VARCHAR(50)): Tên thiết bị.</li><li>Supplier_ID (INT): Mã định danh nhà cung cấp.</li><li>Unit_Price (DECIMAL(10,2)): Đơn giá thiết bị.</li></ul><h3><strong>Nhiệm vụ</strong></h3><p>Xác định thiết bị quân sự có tổng doanh số bán hàng cao nhất trong năm 2020.</p>

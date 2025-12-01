@@ -1,0 +1,8 @@
+ID: SQL2014
+Tiêu đề: Tổng số loài sinh vật biển được quan sát thấy ở Thái Bình Dương và Đại Tây Dương, được nhóm theo năm là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/d26db619-4fb6-44f6-bdab-7b630f92e03d
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d26db619-4fb6-44f6-bdab-7b630f92e03d
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng MarineSpeciesObservations:</strong></p><p>Lưu trữ thông tin về các quan sát loài sinh vật biển, bao gồm mã quan sát, loài, vị trí và năm.</p><ul><li>observation_id (INT): Mã số định danh duy nhất cho quan sát.</li><li>species (VARCHAR(255)): Tên loài sinh vật.</li><li>location (VARCHAR(255)): Vị trí nơi quan sát sinh vật biển.</li><li>year (INT): Năm quan sát loài sinh vật.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Tổng số loài sinh vật biển được quan sát thấy ở Thái Bình Dương và Đại Tây Dương, được nhóm theo năm là bao nhiêu?</p><p><strong>Output:</strong></p><p>Danh sách gồm hai cột: <strong>Năm</strong> (year) và <strong>Tổng số lượng quan sát</strong> (COUNT(*)) được thực hiện trong năm đó. Danh sách bao gồm các quan sát được thực hiện ở <strong>Thái Bình Dương</strong> ('Pacific Ocean') và <strong>Đại Tây Dương</strong> ('Atlantic Ocean'), với kết quả được <strong>nhóm lại</strong> theo từng năm (year) quan sát.</p>

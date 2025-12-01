@@ -1,0 +1,31 @@
+ID: ENG-006
+Tiêu đề: BASIC AGGREGATE 1
+URL WEB: https://db.ptit.edu.vn/question-detail/77765591-55fd-4e03-9951-d235d5c06392
+URL API: https://dbapi.ptit.edu.vn/api/app/question/77765591-55fd-4e03-9951-d235d5c06392
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Table: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| OrderID&nbsp; &nbsp; &nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | date&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| TotalAmount&nbsp; | decimal(10,2)&nbsp; |
++--------------+----------------+
+</pre><p>OrderID is the unique ID of each order, used as the primary key.</p><p>CustID is the ID of the customer who placed the order.</p><p>OrderDate is the date when the order was created.</p><p>TotalAmount is the total value of the order.</p><p>Each row in this table represents one order placed by a customer.</p><p><br></p><p><strong>Task:</strong></p><p>Write an SQL query to print, for each customer, the total number of orders and the sum of all order amounts.</p><p>Sort the result by CustID in ascending order.</p><p><br></p><p><strong>Example</strong></p><p>Input:</p><p>SaleOrder</p><pre class="ql-syntax" spellcheck="false">+---------+--------+------------+-------------+
+| OrderID | CustID | OrderDate&nbsp; | TotalAmount |
++---------+--------+------------+-------------+
+| 101&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; | 2024-01-10 | 150.00&nbsp; &nbsp; &nbsp; |
+| 102&nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; | 2024-01-12 | 220.50&nbsp; &nbsp; &nbsp; |
+| 103&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; | 2024-01-15 | 300.00&nbsp; &nbsp; &nbsp; |
+| 104&nbsp; &nbsp; &nbsp;| 3&nbsp; &nbsp; &nbsp; | 2024-01-20 | 80.00&nbsp; &nbsp; &nbsp; &nbsp;|
++---------+--------+------------+-------------+
+</pre><p><br></p><p>Output:</p><pre class="ql-syntax" spellcheck="false">+--------+------------+------------+
+| CustID | OrderCount | TotalSpent |
++--------+------------+------------+
+| 1&nbsp; &nbsp; &nbsp; | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 450.00&nbsp; &nbsp; &nbsp;|
+| 2&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 220.50&nbsp; &nbsp; &nbsp;|
+| 3&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 80.00&nbsp; &nbsp; &nbsp; |
++--------+------------+------------+
+</pre>

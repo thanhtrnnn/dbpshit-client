@@ -1,0 +1,8 @@
+ID: SQL2721
+Tiêu đề: Có bao nhiêu khiếu nại của khách hàng liên quan đến việc giảm tốc độ dữ liệu trong Quý 2 năm 2022?
+URL WEB: https://db.ptit.edu.vn/question-detail/7c67816c-581e-4884-926d-4878189941be
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7c67816c-581e-4884-926d-4878189941be
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `complaints`: Lưu trữ thông tin về các khiếu nại của khách hàng liên quan đến dịch vụ. </strong></p><ul><li><span style="font-size: 14px;">`complaint_id (INT)`: Mã định danh cho mỗi khiếu nại.</span></li><li><span style="font-size: 14px;">`complaint_type (VARCHAR(20))`: Loại khiếu nại (ví dụ: data throttling, billing issue).</span></li><li><span style="font-size: 14px;">`complaint_date (DATE)`: Ngày gửi khiếu nại.</span></li><li><span style="font-size: 14px;">`resolved (BOOLEAN)`: Trạng thái đã xử lý hay chưa (TRUE = đã xử lý, FALSE = chưa xử lý).</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Hãy xác định số lượng khiếu nại chưa được xử lý (resolved = FALSE) liên quan đến việc giảm tốc độ dữ liệu (data throttling) được gửi trong Quý 2 năm 2022 (từ 2022-04-01 đến 2022-06-30).</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">COUNT(*)</span></p>

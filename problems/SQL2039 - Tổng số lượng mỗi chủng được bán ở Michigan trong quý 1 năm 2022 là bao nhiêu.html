@@ -1,0 +1,8 @@
+ID: SQL2039
+Tiêu đề: Tổng số lượng mỗi chủng được bán ở Michigan trong quý 1 năm 2022 là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/fb038d35-c8b2-46c4-9607-f76c8544923d
+URL API: https://dbapi.ptit.edu.vn/api/app/question/fb038d35-c8b2-46c4-9607-f76c8544923d
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Strains</strong></p><ul><li>id (INT): Mã số định danh duy nhất cho giống cây trồng</li><li>name (TEXT): Tên giống cây trồng</li><li>description (TEXT): Mô tả về giống cây trồng</li></ul><p><strong>Bảng Inventory</strong></p><ul><li>id (INT): Mã số định danh duy nhất cho hàng tồn kho</li><li>strain_id (INT): Mã giống cây trồng (foreign key từ Strains)</li><li>quantity (INT): Số lượng giống trong tồn kho</li><li>dispensary_id (INT): Mã cửa hàng phân phối</li></ul><p><strong>Bảng Sales</strong></p><ul><li>id (INT): Mã số định danh duy nhất cho giao dịch bán hàng</li><li>inventory_id (INT): Mã hàng tồn kho (foreign key từ Inventory)</li><li>quantity (INT): Số lượng giống bán được</li><li>sale_date (DATE): Ngày bán</li></ul><p><strong>Yêu cầu truy vấn</strong></p><ul><li>Tổng số lượng mỗi chủng được bán ở Michigan trong quý 1 năm 2022 là bao nhiêu?</li></ul>

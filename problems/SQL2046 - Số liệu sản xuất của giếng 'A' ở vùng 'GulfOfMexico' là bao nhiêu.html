@@ -1,0 +1,8 @@
+ID: SQL2046
+Tiêu đề: Số liệu sản xuất của giếng 'A' ở vùng 'GulfOfMexico' là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/f1039bbc-b1cc-455b-8f85-8c2394502375
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f1039bbc-b1cc-455b-8f85-8c2394502375
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng wells</strong>: Bảng này lưu trữ thông tin về các giếng dầu, bao gồm ID giếng, tên giếng và khu vực.</p><ul><li>id (VARCHAR(10)): Mã giếng.</li><li>name (VARCHAR(10)): Tên giếng.</li><li>region (VARCHAR(20)): Khu vực giếng.</li></ul><p><strong>Bảng production</strong>: Bảng này lưu trữ thông tin sản xuất từ các giếng dầu, bao gồm ID giếng, ngày và sản lượng.</p><ul><li>well_id (VARCHAR(10)): Mã giếng.</li><li>date (DATE): Ngày sản xuất.</li><li>quantity (INT): Sản lượng dầu.</li></ul><h4><strong>Nhiệm vụ</strong></h4><p>Số liệu sản xuất của giếng 'A' ở vùng 'GulfOfMexico' là bao nhiêu?</p><p><strong>Output:</strong></p><p>Danh sách gồm ba cột: <strong>Mã giếng</strong> (well_id), <strong>Ngày sản xuất</strong> (date), và <strong>Sản lượng dầu</strong> (quantity). Danh sách này chỉ bao gồm các bản ghi sản xuất (production) thỏa mãn điều kiện giếng đó có <strong>Tên là 'A'</strong> và nằm trong <strong>Vùng 'GulfOfMexico'</strong></p>

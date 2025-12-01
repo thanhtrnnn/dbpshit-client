@@ -1,0 +1,8 @@
+ID: SQL2009
+Tiêu đề: Đếm số lượng loài động vật hoang dã trong rừng phòng hộ
+URL WEB: https://db.ptit.edu.vn/question-detail/50d79884-f20d-424b-9a88-0a03420ce95e
+URL API: https://dbapi.ptit.edu.vn/api/app/question/50d79884-f20d-424b-9a88-0a03420ce95e
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng forests:</strong></p><p>Lưu trữ thông tin về các khu rừng, bao gồm mã rừng, tên rừng, diện tích, năm trồng và trạng thái bảo vệ.</p><ul><li>id (INT): Mã số định danh duy nhất cho khu rừng.</li><li>name (VARCHAR(50): Tên khu rừng.</li><li>hectares (DECIMAL(5,2)): Diện tích khu rừng, tính bằng hecta.</li><li>year_planted (INT): Năm trồng khu rừng.</li><li>is_protected (BOOLEAN): Chỉ ra liệu khu rừng có được bảo vệ hay không.</li></ul><p><strong>Bảng wildlife:</strong></p><p>Lưu trữ thông tin về các loài động vật trong khu rừng.</p><ul><li>id (INT): Mã số định danh duy nhất cho động vật.</li><li>forest_id (INT): Mã rừng (foreign key từ bảng forests).</li><li>species (VARCHAR(50)): Tên loài động vật trong khu rừng.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Đếm số lượng loài động vật hoang dã trong các khu rừng phòng hộ.</p><p><strong>Output:</strong></p><p>Là <strong>một số nguyên</strong> duy nhất, đại diện cho <strong>tổng số lượng loài động vật</strong> (đếm theo mã định danh w.id của bảng wildlife) <strong>tồn tại</strong> trong các khu rừng mà trạng thái bảo vệ (f.is_protected) được đánh dấu là <strong>TRUE</strong> (các khu rừng phòng hộ).</p>

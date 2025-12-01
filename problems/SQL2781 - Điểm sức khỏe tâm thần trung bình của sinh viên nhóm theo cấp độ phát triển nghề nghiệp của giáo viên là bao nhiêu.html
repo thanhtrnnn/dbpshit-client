@@ -1,0 +1,8 @@
+ID: SQL2781
+Tiêu đề: Điểm sức khỏe tâm thần trung bình của sinh viên nhóm theo cấp độ phát triển nghề nghiệp của giáo viên là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/7f315e19-5943-4c50-bdd6-e2382b3e8082
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7f315e19-5943-4c50-bdd6-e2382b3e8082
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `teacher_pd`: Trình độ phát triển nghề nghiệp của giáo viên.</strong><span style="font-size: 14px;">﻿</span></p><ul><li><span style="font-size: 14px;">`teacher_pd (teacher_id INT, tier INT)`:</span></li><li><span style="font-size: 14px;">`teacher_id (INT)`: Mã giáo viên.</span></li><li><span style="font-size: 14px;">`tier (INT)`: Cấp độ phát triển nghề nghiệp của giáo viên (1 = thấp, 3 = cao).</span></li></ul><p><strong style="font-size: 14px;">Bảng `student_mental_health`: Sức khỏe tâm thần học sinh. </strong><span style="font-size: 14px;">﻿</span></p><ul><li><span style="font-size: 14px;">`student_mental_health (student_id INT, mental_health_score INT, teacher_id INT)`:</span></li><li><span style="font-size: 14px;">`student_id (INT)`: Mã học sinh.</span></li><li><span style="font-size: 14px;">`mental_health_score (INT)`: Điểm đánh giá sức khỏe tâm thần của học sinh.</span></li><li><span style="font-size: 14px;">`teacher_id (INT)`: Mã giáo viên giảng dạy học sinh.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Điểm sức khỏe tâm thần trung bình của sinh viên nhóm theo cấp độ phát triển nghề nghiệp của giáo viên là bao nhiêu?</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">tier, AVG(smh.mental_health_score)</span></p>

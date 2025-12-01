@@ -1,0 +1,8 @@
+ID: SQL2384
+Tiêu đề: Tìm tổng giá vé thu được từ mỗi loại thanh toán
+URL WEB: https://db.ptit.edu.vn/question-detail/1c81471e-31cd-45d8-af77-406afae4a81f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1c81471e-31cd-45d8-af77-406afae4a81f
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng fare_collection</strong></h3><p>Chứa thông tin về mức phí thu được từ hành khách theo từng tuyến và phương thức thanh toán.</p><ul><li>route_id (INT): Mã định danh của tuyến.</li><li>payment_type (VARCHAR(10)): Loại hình thanh toán (ví dụ: "Cash", "Card").</li><li>fare (DECIMAL(5,2)): Mức phí thu được từ tuyến và phương thức thanh toán đó.</li></ul><h3><strong>Nhiệm vụ</strong></h3><p>Tính tổng giá vé thu được từ mỗi loại hình thanh toán (tức là tổng fare theo payment_type).</p>

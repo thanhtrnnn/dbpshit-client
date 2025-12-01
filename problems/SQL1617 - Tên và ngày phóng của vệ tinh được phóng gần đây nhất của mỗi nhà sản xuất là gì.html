@@ -1,0 +1,45 @@
+ID: SQL1617
+Tiêu đề: Tên và ngày phóng của vệ tinh được phóng gần đây nhất của mỗi nhà sản xuất là gì?
+URL WEB: https://db.ptit.edu.vn/question-detail/b08967f4-6f48-4d82-a74c-e5cdd24a5e30
+URL API: https://dbapi.ptit.edu.vn/api/app/question/b08967f4-6f48-4d82-a74c-e5cdd24a5e30
+Loại Database: Sql Server
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng manufacturers</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+-----------+
+| Cột       | Kiểu dữ liệu |
++-----------+-----------+
+| id        | INT       |
+| name      | TEXT      |
++-----------+-----------+
+</pre><p><strong>Bảng satellites</strong></p><pre class="ql-syntax" spellcheck="false">+------------------+-------------+
+| Cột              | Kiểu dữ liệu |
++------------------+-------------+
+| id               | INT         |
+| manufacturer_id  | INT         |
+| name             | TEXT        |
+| launch_date      | DATE        |
++------------------+-------------+
+</pre><h3>Nhiệm vụ</h3><p>Tìm ra <strong>vệ tinh được phóng gần nhất (có launch_date lớn nhất)</strong> của <strong>mỗi nhà sản xuất</strong>, đồng thời hiển thị:</p><ul><li>Tên nhà sản xuất</li><li>Tên vệ tinh</li><li>Ngày phóng vệ tinh</li></ul><h3>Input mẫu</h3><p><strong>Bảng manufacturers</strong></p><pre class="ql-syntax" spellcheck="false">+----+---------------+
+| id | name          |
++----+---------------+
+| 1  | SpaceX        |
+| 2  | NASA          |
+| 3  | Roscosmos     |
++----+---------------+
+</pre><p><strong>Bảng satellites</strong></p><pre class="ql-syntax" spellcheck="false">+----+------------------+-------------+-------------+
+| id | manufacturer_id  | name        | launch_date |
++----+------------------+-------------+-------------+
+| 1  | 1                | FalconSat   | 2020-01-10  |
+| 2  | 1                | Starlink-5  | 2024-05-22  |
+| 3  | 2                | Hubble      | 1990-04-24  |
+| 4  | 2                | Artemis-1   | 2022-11-16  |
+| 5  | 3                | Luna-25     | 2023-08-11  |
++----+------------------+-------------+-------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+---------------+-------------+-------------+
+| manufacturer  | satellite   | launch_date |
++---------------+-------------+-------------+
+| SpaceX        | Starlink-5  | 2024-05-22  |
+| NASA          | Artemis-1   | 2022-11-16  |
+| Roscosmos     | Luna-25     | 2023-08-11  |
++---------------+-------------+-------------+
+</pre><p><br></p>

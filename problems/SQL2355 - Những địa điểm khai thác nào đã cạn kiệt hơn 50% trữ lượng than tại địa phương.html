@@ -1,0 +1,8 @@
+ID: SQL2355
+Tiêu đề: Những địa điểm khai thác nào đã cạn kiệt hơn 50% trữ lượng than tại địa phương?
+URL WEB: https://db.ptit.edu.vn/question-detail/7f98c83f-2b13-4061-a1fc-d446c32b6d94
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7f98c83f-2b13-4061-a1fc-d446c32b6d94
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng mining_sites</strong>: Chứa thông tin về các mỏ than.</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi mỏ (khóa chính).</li><li>name (VARCHAR(50)): Tên của mỏ.</li><li>coal_reserve_initial (FLOAT): Khối lượng dự trữ than ban đầu tại mỏ.</li></ul><p><strong>Bảng coal_reserves</strong>: Chứa thông tin về khối lượng dự trữ than còn lại theo ngày cập nhật.</p><ul><li>site_id (INT): Mã định danh của mỏ (liên kết với id trong bảng mining_sites).</li><li>coal_reserve_remaining (FLOAT): Khối lượng dự trữ than còn lại tại thời điểm cập nhật.</li><li>update_date (DATE): Ngày cập nhật.</li></ul><p><strong>Nhiệm vụ</strong>:</p><p>Liệt kê những địa điểm khai thác (mỏ than) đã cạn kiệt hơn 50% trữ lượng than ban đầu tại địa phương.</p>

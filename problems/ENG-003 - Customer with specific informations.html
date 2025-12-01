@@ -1,0 +1,32 @@
+ID: ENG-003
+Tiêu đề: Customer with specific informations
+URL WEB: https://db.ptit.edu.vn/question-detail/37000259-a2b4-48c5-a095-a7ee773a0fd1
+URL API: https://dbapi.ptit.edu.vn/api/app/question/37000259-a2b4-48c5-a095-a7ee773a0fd1
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Table: Customer</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| CustomerID&nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName | varchar(100) |
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| varchar(50)&nbsp; |
+| Country&nbsp; &nbsp; &nbsp; | varchar(50)&nbsp; |
+| Phone&nbsp; &nbsp; &nbsp; &nbsp; | varchar(20)&nbsp; |
++--------------+--------------+
+</pre><p>CustomerID is the unique identifier of each customer.</p><p>CustomerName is the customer’s full name.</p><p>City is the city where the customer lives.</p><p>Country is the customer’s country.</p><p>Phone is the customer’s phone number.</p><p>Each row in this table represents one customer and their basic contact information.</p><p><br></p><p><strong>Task:</strong></p><p>Write an SQL query to return all columns of customers who live in the city 'London', and have an even CustomerID.</p><p><br></p><p><strong>Example:</strong></p><p>Input:</p><p>Customer table</p><pre class="ql-syntax" spellcheck="false">+------------+--------------------+---------+---------+--------------+
+| CustomerID | CustomerName&nbsp; &nbsp; &nbsp; &nbsp;| City&nbsp; &nbsp; | Country | Phone&nbsp; &nbsp; &nbsp; &nbsp; |
++------------+--------------------+---------+---------+--------------+
+| 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Alfreds Futterkiste| Berlin&nbsp; | Germany | 030-0074321&nbsp; |
+| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Around the Horn&nbsp; &nbsp; | London&nbsp; | UK&nbsp; &nbsp; &nbsp; | 020-77341234 |
+| 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Bon App&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Paris&nbsp; &nbsp;| France&nbsp; | 01-45-22-33&nbsp; |
+| 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Consolidated Corp&nbsp; | London&nbsp; | UK&nbsp; &nbsp; &nbsp; | 020-88990011 |
+| 5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Eastern Trading&nbsp; &nbsp; | London&nbsp; | UK&nbsp; &nbsp; &nbsp; | 020-71234567 |
++------------+--------------------+---------+---------+--------------+
+</pre><p><br></p><p>Output:</p><pre class="ql-syntax" spellcheck="false">+------------+-------------------+--------+---------+--------------+
+| CustomerID | CustomerName&nbsp; &nbsp; &nbsp; | City&nbsp; &nbsp;| Country | Phone&nbsp; &nbsp; &nbsp; &nbsp; |
++------------+-------------------+--------+---------+--------------+
+| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Around the Horn&nbsp; &nbsp;| London | UK&nbsp; &nbsp; &nbsp; | 020-77341234 |
+| 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Consolidated Corp | London | UK&nbsp; &nbsp; &nbsp; | 020-88990011 |
++------------+-------------------+--------+---------+--------------+
+</pre>

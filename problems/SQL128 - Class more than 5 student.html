@@ -1,0 +1,8 @@
+ID: SQL128
+Tiêu đề: Class more than 5 student
+URL WEB: https://db.ptit.edu.vn/question-detail/6f6422d4-1eaa-4c37-b787-13e6668ac932
+URL API: https://dbapi.ptit.edu.vn/api/app/question/6f6422d4-1eaa-4c37-b787-13e6668ac932
+Loại Database: Mysql
+------------------------------
+
+<p>Table:&nbsp;Courses</p><p>+-------------+---------+</p><p>| Column Name | Type |</p><p>+-------------+---------+</p><p>| student | varchar |</p><p>| class | varchar |</p><p>+-------------+---------+</p><p>(student, class) is the primary key (combination of columns with unique values) for this table.</p><p>Each row of this table indicates the name of a student and the class in which they are enrolled.</p><p>&nbsp;</p><p>Write a solution to find all the classes that have&nbsp;<strong>at least five students</strong>.</p><p>Return the result table in&nbsp;<strong>any order</strong>.</p><p>The&nbsp;result format is in the following example.</p><p>&nbsp;</p><p><strong>Example 1:</strong></p><p><strong>Input:</strong></p><p>Courses table:</p><p>+---------+----------+</p><p>| student | class |</p><p>+---------+----------+</p><p>| A | Math |</p><p>| B | English |</p><p>| C | Math |</p><p>| D | Biology |</p><p>| E | Math |</p><p>| F | Computer |</p><p>| G | Math |</p><p>| H | Math |</p><p>| I | Math |</p><p>+---------+----------+</p><p><strong>Output:</strong></p><p>+---------+</p><p>| class |</p><p>+---------+</p><p>| Math |</p><p>+---------+</p><p><strong>Explanation:</strong></p><p>- Math has 6 students, so we include it.</p><p>- English has 1 student, so we do not include it.</p><p>- Biology has 1 student, so we do not include it.</p><p>- Computer has 1 student, so we do not include it.</p>

@@ -1,0 +1,14 @@
+ID: SQL2163
+Tiêu đề: Liệt kê tất cả các loài trong bảng cô lập carbon có giá trị cô lập CO2 cao hơn mức cô lập CO2 trung bình?
+URL WEB: https://db.ptit.edu.vn/question-detail/fd153da4-de62-451d-9708-19d44681c733
+URL API: https://dbapi.ptit.edu.vn/api/app/question/fd153da4-de62-451d-9708-19d44681c733
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng carbon_sequestration</strong> lưu trữ thông tin về việc thu giữ CO₂, gồm các cột:</p><ul><li>sequestration_id (INT): Mã định danh cho mỗi bản ghi thu giữ CO₂.</li><li>species (VARCHAR): Tên loài cây thu giữ CO₂.</li><li>co2_sequestration (FLOAT): Lượng CO₂ được thu giữ (đơn vị tính giả định là tấn hoặc kg/năm).</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Liệt kê tất cả các loài trong bảng cô lập carbon có giá trị cô lập CO2 cao hơn mức cô lập CO2 trung bình?</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+------------+
+| species    |
++------------+
+| DapNqubuIm |
+| MwPOmtweQj |
+| dnOruPQdms |
++------------+</pre>

@@ -1,0 +1,45 @@
+ID: SQL1621
+Tiêu đề: Có tổng cộng bao nhiêu trang trại năng lượng tái tạo (gió và mặt trời)?
+URL WEB: https://db.ptit.edu.vn/question-detail/7fb1bb2b-9737-4fbe-9e0b-959f0466e204
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7fb1bb2b-9737-4fbe-9e0b-959f0466e204
+Loại Database: Sql Server
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng wind_farms</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+---------------+-----------------------------------------+
+| Cột         | Kiểu dữ liệu  | Mô tả                                   |
++-------------+---------------+-----------------------------------------+
+| id          | INT           | Mã số duy nhất cho trang trại gió       |
+| name        | VARCHAR(50)   | Tên của trang trại gió                  |
+| region      | VARCHAR(50)   | Vùng địa lý của trang trại              |
+| capacity    | FLOAT         | Công suất của trang trại gió            |
+| efficiency  | FLOAT         | Hiệu suất của trang trại gió            |
++-------------+---------------+-----------------------------------------+
+</pre><p><strong>Bảng solar_farms</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+---------------+-----------------------------------------+
+| Cột         | Kiểu dữ liệu  | Mô tả                                   |
++-------------+---------------+-----------------------------------------+
+| id          | INT           | Mã số duy nhất cho trang trại mặt trời  |
+| name        | VARCHAR(50)   | Tên của trang trại mặt trời             |
+| region      | VARCHAR(50)   | Vùng địa lý của trang trại              |
+| capacity    | FLOAT         | Công suất của trang trại mặt trời       |
+| efficiency  | FLOAT         | Hiệu suất của trang trại mặt trời       |
++-------------+---------------+-----------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Tính <strong>số lượng trang trại gió</strong> và <strong>số lượng trang trại điện mặt trời</strong>, sau đó hiển thị kết quả từ cả hai bảng.</p><h3>Input mẫu</h3><p><strong>Bảng wind_farms</strong></p><pre class="ql-syntax" spellcheck="false">+----+-------------+--------+----------+-------------+
+| id | name        | region | capacity | efficiency  |
++----+-------------+--------+----------+-------------+
+| 1  | Wind Alpha  | North  | 120.5    | 0.82        |
+| 2  | Wind Beta   | South  | 95.0     | 0.78        |
++----+-------------+--------+----------+-------------+
+</pre><p><strong>Bảng solar_farms</strong></p><pre class="ql-syntax" spellcheck="false">+----+--------------+--------+----------+-------------+
+| id | name         | region | capacity | efficiency  |
++----+--------------+--------+----------+-------------+
+| 1  | Solar One    | East   | 75.0     | 0.85        |
+| 2  | Solar Two    | West   | 82.5     | 0.88        |
+| 3  | Solar Three  | North  | 100.0    | 0.90        |
++----+--------------+--------+----------+-------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+--------------+
+| total_farms  |
++--------------+
+| 2            |
+| 3            |
++--------------+
+</pre><p><br></p>

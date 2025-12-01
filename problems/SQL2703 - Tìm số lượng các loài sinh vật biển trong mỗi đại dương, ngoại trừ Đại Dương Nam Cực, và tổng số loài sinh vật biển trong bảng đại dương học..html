@@ -1,0 +1,8 @@
+ID: SQL2703
+Tiêu đề: Tìm số lượng các loài sinh vật biển trong mỗi đại dương, ngoại trừ Đại Dương Nam Cực, và tổng số loài sinh vật biển trong bảng đại dương học.
+URL WEB: https://db.ptit.edu.vn/question-detail/f384fe4a-5b6d-45f1-af33-67f6abea2478
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f384fe4a-5b6d-45f1-af33-67f6abea2478
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `marine_species_status`: Trạng thái bảo tồn của các loài sinh vật biển </strong></p><ul><li><span style="font-size: 14px;">`id` (INT): Mã định danh loài.</span></li><li><span style="font-size: 14px;">`species_name` (VARCHAR): Tên loài sinh vật.</span></li><li><span style="font-size: 14px;">`conservation_status` (VARCHAR): Trạng thái bảo tồn (ví dụ: Nguy cấp, Sắp tuyệt chủng).</span></li><li><span style="font-size: 14px;">`ocean` (VARCHAR): Đại dương nơi loài đó sinh sống.</span></li></ul><p><strong style="font-size: 14px;">Bảng `oceanography`: Dữ liệu sinh học đại dương theo loài </strong></p><ul><li><span style="font-size: 14px;">`id` (INT): Mã định danh bản ghi.</span></li><li><span style="font-size: 14px;">`species_name` (VARCHAR): Tên loài sinh vật.</span></li><li><span style="font-size: 14px;">`location` (VARCHAR): Địa điểm quan sát loài (đại dương hoặc vùng nước).</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Tìm số lượng các loài sinh vật biển trong mỗi đại dương, ngoại trừ Đại Dương Nam Cực, và tổng số loài sinh vật biển trong bảng đại dương học.</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">ocean, COUNT(*)</span></p>

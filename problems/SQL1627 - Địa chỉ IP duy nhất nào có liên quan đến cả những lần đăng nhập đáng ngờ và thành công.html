@@ -1,0 +1,31 @@
+ID: SQL1627
+Tiêu đề: Địa chỉ IP duy nhất nào có liên quan đến cả những lần đăng nhập đáng ngờ và thành công?
+URL WEB: https://db.ptit.edu.vn/question-detail/4c162ba2-c31a-427c-ba75-0d17eff1ddbe
+URL API: https://dbapi.ptit.edu.vn/api/app/question/4c162ba2-c31a-427c-ba75-0d17eff1ddbe
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng `login_attempts`: Bảng này chứa thông tin về các lần đăng nhập, bao gồm ID, địa chỉ IP và trạng thái đăng nhập. </strong></p><h3><br></h3><pre class="ql-syntax" spellcheck="false">+--------------+----------------------+---------------------------------------------+
+| Cột          | Kiểu dữ liệu         | Mô tả                                       |
++--------------+----------------------+---------------------------------------------+
+| id           | INT                  | Mã số duy nhất cho mỗi lần đăng nhập        |
+| ip_address   | VARCHAR(15)          | Địa chỉ IP của người đăng nhập              |
+| login_status | VARCHAR(10)          | Trạng thái đăng nhập ('successful' hoặc 'suspicious') |
++--------------+----------------------+---------------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Xác định <strong>địa chỉ IP</strong> nào có liên quan đến <strong>cả những lần đăng nhập đáng ngờ (suspicious) và thành công (successful)</strong>.</p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">+----+-------------+--------------+
+| id | ip_address  | login_status |
++----+-------------+--------------+
+| 1  | 192.168.0.1 | successful   |
+| 2  | 192.168.0.2 | suspicious   |
+| 3  | 192.168.0.1 | suspicious   |
+| 4  | 192.168.0.3 | successful   |
+| 5  | 192.168.0.2 | successful   |
+| 6  | 192.168.0.4 | suspicious   |
++----+-------------+--------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+-------------+
+| ip_address  |
++-------------+
+| 192.168.0.1 |
+| 192.168.0.2 |
++-------------+
+</pre><p><br></p>

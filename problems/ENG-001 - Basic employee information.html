@@ -1,0 +1,42 @@
+ID: ENG-001
+Tiêu đề: Basic employee information
+URL WEB: https://db.ptit.edu.vn/question-detail/d65cca4f-e601-40e9-b395-c2a228cd013c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d65cca4f-e601-40e9-b395-c2a228cd013c
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Table: Employee</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+----------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+----------------+
+| EmpID&nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| FullName&nbsp; &nbsp; | varchar(100)&nbsp; &nbsp;|
+| Dept&nbsp; &nbsp; &nbsp; &nbsp; | varchar(50)&nbsp; &nbsp; |
+| Salary&nbsp; &nbsp; &nbsp; | decimal(10,2)&nbsp; |
+| HireDate&nbsp; &nbsp; | date&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Email&nbsp; &nbsp; &nbsp; &nbsp;| varchar(100)&nbsp; &nbsp;|
++-------------+----------------+
+</pre><p>EmpID is the unique identifier of each employee.</p><p>FullName is the employee’s full name.</p><p>Dept is the department name where the employee works.</p><p>Salary is the employee’s current salary.</p><p>HireDate is the date when the employee was hired.</p><p>Email is the employee’s email address.</p><p>Each row in this table represents one employee and their basic information.</p><p><br></p><p><strong>Task:</strong></p><p>Write an SQL query to print the EmpID, FullName, Dept, and Salary of all employees from the employee table.</p><p><br></p><p><strong>Example:</strong></p><p>Input:</p><p>Employee table</p><pre class="ql-syntax" spellcheck="false">+-------+----------------------+----------+----------+------------+------------------------+
+| EmpID | FullName&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Dept&nbsp; &nbsp; &nbsp;| Salary&nbsp; &nbsp;| HireDate&nbsp; &nbsp;| Email&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++-------+----------------------+----------+----------+------------+------------------------+
+| 3&nbsp; &nbsp; &nbsp;| Charlie Brown&nbsp; &nbsp; &nbsp; &nbsp; | Sales&nbsp; &nbsp; | 1800.50&nbsp; | 2020-07-20 | charlie@example.com&nbsp; &nbsp; |
+| 1&nbsp; &nbsp; &nbsp;| Alice Johnson&nbsp; &nbsp; &nbsp; &nbsp; | IT&nbsp; &nbsp; &nbsp; &nbsp;| 1500.00&nbsp; | 2022-01-10 | alice@example.com&nbsp; &nbsp; &nbsp; |
+| 5&nbsp; &nbsp; &nbsp;| Emma Wilson&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Finance&nbsp; | 2100.75&nbsp; | 2019-11-02 | emma.w@example.com&nbsp; &nbsp; &nbsp;|
+| 2&nbsp; &nbsp; &nbsp;| Bob Smith&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | HR&nbsp; &nbsp; &nbsp; &nbsp;| 1300.00&nbsp; | 2021-03-05 | bob@example.com&nbsp; &nbsp; &nbsp; &nbsp; |
+| 7&nbsp; &nbsp; &nbsp;| Daniel Green&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| IT&nbsp; &nbsp; &nbsp; &nbsp;| 1950.00&nbsp; | 2018-09-15 | d.green@example.com&nbsp; &nbsp; |
+| 4&nbsp; &nbsp; &nbsp;| Diana Prince&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Marketing| 1750.25&nbsp; | 2020-01-30 | diana.p@example.com&nbsp; &nbsp; |
+| 6&nbsp; &nbsp; &nbsp;| Frank Miller&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Sales&nbsp; &nbsp; | 1600.00&nbsp; | 2023-02-14 | frank.m@example.com&nbsp; &nbsp; |
+| 8&nbsp; &nbsp; &nbsp;| Grace Lee&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Support&nbsp; | 1400.00&nbsp; | 2021-06-18 | grace.lee@example.com&nbsp; |
++-------+----------------------+----------+----------+------------+------------------------+
+</pre><p><br></p><p>Output:</p><pre class="ql-syntax" spellcheck="false">+-------+----------------------+----------+----------+
+| EmpID | FullName&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Dept&nbsp; &nbsp; &nbsp;| Salary&nbsp; &nbsp;|
++-------+----------------------+----------+----------+
+| 3&nbsp; &nbsp; &nbsp;| Charlie Brown&nbsp; &nbsp; &nbsp; &nbsp; | Sales&nbsp; &nbsp; | 1800.50&nbsp; |
+| 1&nbsp; &nbsp; &nbsp;| Alice Johnson&nbsp; &nbsp; &nbsp; &nbsp; | IT&nbsp; &nbsp; &nbsp; &nbsp;| 1500.00&nbsp; |
+| 5&nbsp; &nbsp; &nbsp;| Emma Wilson&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Finance&nbsp; | 2100.75&nbsp; |
+| 2&nbsp; &nbsp; &nbsp;| Bob Smith&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | HR&nbsp; &nbsp; &nbsp; &nbsp;| 1300.00&nbsp; |
+| 7&nbsp; &nbsp; &nbsp;| Daniel Green&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| IT&nbsp; &nbsp; &nbsp; &nbsp;| 1950.00&nbsp; |
+| 4&nbsp; &nbsp; &nbsp;| Diana Prince&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Marketing| 1750.25&nbsp; |
+| 6&nbsp; &nbsp; &nbsp;| Frank Miller&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Sales&nbsp; &nbsp; | 1600.00&nbsp; |
+| 8&nbsp; &nbsp; &nbsp;| Grace Lee&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Support&nbsp; | 1400.00&nbsp; |
++-------+----------------------+----------+----------+
+</pre>

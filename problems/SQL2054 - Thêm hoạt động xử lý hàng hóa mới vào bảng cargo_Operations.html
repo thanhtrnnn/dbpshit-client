@@ -1,0 +1,8 @@
+ID: SQL2054
+Tiêu đề: Thêm hoạt động xử lý hàng hóa mới vào bảng "cargo_Operations"
+URL WEB: https://db.ptit.edu.vn/question-detail/1be94622-1861-497d-ab5a-04801282f5d0
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1be94622-1861-497d-ab5a-04801282f5d0
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng cargo_operations</strong>: Lưu trữ thông tin về các hoạt động vận chuyển hàng hóa của tàu.</p><ul><li>id (INT): Mã hoạt động vận chuyển (thường tự động tăng).</li><li>vessel_id (INT): Mã tàu.</li><li>port_id (INT): Mã cảng.</li><li>operation_type (VARCHAR(255)): Loại hoạt động vận chuyển (ví dụ: 'Loading', 'Discharging').</li><li>amount (INT): Số lượng hàng hóa vận chuyển.</li><li>timestamp (TIMESTAMP): Thời gian thực hiện hoạt động.</li></ul><p><strong>Nhiệm vụ</strong></p><p>Thêm một hoạt động xử lý hàng hóa mới vào bảng cargo_operations.</p><p><strong>Output:</strong></p><p>Bảng <strong>cargo_operations</strong> sau khi lệnh INSERT được thực thi. Một bản ghi mới sẽ được thêm vào bảng với các giá trị sau:</p><ul><li>id: 1</li><li>vessel_id: 1</li><li>port_id: 2</li><li>operation_type: 'Loading'</li><li>amount: 10000</li><li>timestamp: '2022-01-01 10:00:00'</li></ul>

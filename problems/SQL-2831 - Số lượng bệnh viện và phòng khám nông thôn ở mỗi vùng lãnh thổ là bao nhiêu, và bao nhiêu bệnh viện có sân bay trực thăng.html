@@ -1,0 +1,14 @@
+ID: SQL-2831
+Tiêu đề: Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?
+URL WEB: https://db.ptit.edu.vn/question-detail/00db97a0-335a-48fa-979c-ecac89648b29
+URL API: https://dbapi.ptit.edu.vn/api/app/question/00db97a0-335a-48fa-979c-ecac89648b29
+Loại Database: Mysql
+------------------------------
+
+<h4><strong>Bảng hospitals</strong> – Thông tin bệnh viện</h4><ul><li>id (INT): Mã bệnh viện</li><li>name (TEXT): Tên bệnh viện</li><li>location (TEXT): Vị trí bệnh viện</li><li>num_beds (INT): Số giường bệnh</li><li>territory (TEXT): Khu vực địa lý</li><li>has_helipad (BOOLEAN): Có sân bay trực thăng hay không (True là có, False là không)</li></ul><p><strong>Bảng clinics</strong> – Thông tin phòng khám</p><ul><li>id (INT): Mã phòng khám</li><li>name (TEXT): Tên phòng khám</li><li>location (TEXT): Vị trí phòng khám</li><li>num_beds (INT): Số giường bệnh</li><li>territory (TEXT): Khu vực địa lý</li></ul><h4><strong>Câu hỏi</strong></h4><ul><li>Đếm số lượng bệnh viện, phòng khám và số bệnh viện có sân bay trực thăng ở mỗi territory.</li></ul><p><br></p><p><strong>Output</strong>: </p><pre class="ql-syntax" spellcheck="false">+-----------------------+---------------+-------------+----------------------------+
+| territory&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| num_hospitals | num_clinics | num_hospitals_with_helipad |
++-----------------------+---------------+-------------+----------------------------+
+| Northwest Territories | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Nunavut&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++-----------------------+---------------+-------------+----------------------------+
+</pre>

@@ -1,0 +1,8 @@
+ID: SQL2690
+Tiêu đề: Có bao nhiêu cơ sở xử lý nước thải ở mỗi bang, phân loại theo phương pháp xử lý, cho các cơ sở xử lý hơn 1 triệu gallon nước mỗi ngày?
+URL WEB: https://db.ptit.edu.vn/question-detail/f8d00990-95ea-4c2c-9729-2851e9853e26
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f8d00990-95ea-4c2c-9729-2851e9853e26
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `us_treatment_facilities`: Quản lý thông tin các cơ sở điều trị nước tại Mỹ. </strong></p><ul><li><span style="font-size: 14px;">`us_treatment_facilities (name VARCHAR(255), state VARCHAR(255), method VARCHAR(255), capacity INT)`: Thông tin về cơ sở xử lý nước.</span></li><li><span style="font-size: 14px;">`name`: Tên cơ sở (kiểu VARCHAR(255)).</span></li><li><span style="font-size: 14px;">`state`: Tiểu bang nơi cơ sở tọa lạc (kiểu VARCHAR(255)).</span></li><li><span style="font-size: 14px;">`method`: Phương pháp xử lý nước (kiểu VARCHAR(255)).</span></li><li><span style="font-size: 14px;">`capacity`: Công suất xử lý (kiểu INT).</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Thống kê số lượng cơ sở xử lý nước thải ở mỗi bang, được phân loại theo phương pháp xử lý, chỉ tính những cơ sở có công suất lớn hơn 1.000.000 gallon/ngày.</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">state, method, num_facilities</span></p>

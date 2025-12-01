@@ -1,0 +1,42 @@
+ID: SQL1701
+Tiêu đề: Mức sử dụng dữ liệu trung bình của khách hàng trả sau ở mỗi khu vực là bao nhiêu, sắp xếp theo mức sử dụng theo thứ tự giảm dần?
+URL WEB: https://db.ptit.edu.vn/question-detail/a7cccc4c-2cec-40c2-91a4-a574816ce914
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a7cccc4c-2cec-40c2-91a4-a574816ce914
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `mobile_customers`: Bảng này lưu trữ thông tin về các khách hàng sử dụng dịch vụ di động, bao gồm ID khách hàng, loại gói dịch vụ, mức sử dụng dữ liệu và khu vực. </strong></p><ul><li>`customer_id (INT)`: Mã khách hàng.</li><li>`plan_type (VARCHAR(10))`: Loại gói dịch vụ (postpaid, prepaid).</li><li>`data_usage (FLOAT)`: Mức sử dụng dữ liệu của khách hàng.</li><li>`region (VARCHAR(20))`: Khu vực của khách hàng.</li></ul><p><br></p><p><strong>Bảng `regions`: Bảng này lưu trữ thông tin về các khu vực, bao gồm tên khu vực.</strong></p><ul><li>`region (VARCHAR(20))`: Tên khu vực.</li></ul><p><br></p><p><strong>Bảng `plan_types`: Bảng này lưu trữ thông tin về các loại gói dịch vụ di động. </strong></p><ul><li>`plan_type (VARCHAR(10))`: Tên loại gói dịch vụ.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Mức sử dụng dữ liệu trung bình của khách hàng trả sau ở mỗi khu vực là bao nhiêu, sắp xếp theo mức sử dụng theo thứ tự giảm dần?</p><p><br></p><h3>Input mẫu</h3><p><strong>Bảng mobile_customers</strong></p><pre class="ql-syntax" spellcheck="false">
++-------------+-----------+-------------+---------+
+| customer_id | plan_type | data_usage  | region  |
++-------------+-----------+-------------+---------+
+| 1           | postpaid  | 15.0        | North   |
+| 2           | prepaid   | 5.0         | North   |
+| 3           | postpaid  | 10.0        | South   |
+| 4           | postpaid  | 20.0        | South   |
+| 5           | prepaid   | 3.0         | East    |
+| 6           | postpaid  | 12.0        | East    |
++-------------+-----------+-------------+---------+
+</pre><p><strong>Bảng regions</strong></p><pre class="ql-syntax" spellcheck="false">
++---------+
+| region  |
++---------+
+| North   |
+| South   |
+| East    |
++---------+
+</pre><p><strong>Bảng plan_types</strong></p><pre class="ql-syntax" spellcheck="false">
++-----------+
+| plan_type |
++-----------+
+| prepaid   |
+| postpaid  |
++-----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++---------+----------------+
+| region  | avg_data_usage |
++---------+----------------+
+| South   | 15.00          |
+| North   | 15.00          |
+| East    | 12.00          |
++---------+----------------+
+</pre><p><br></p>

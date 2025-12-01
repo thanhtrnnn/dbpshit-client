@@ -1,0 +1,8 @@
+ID: SQL1711
+Tiêu đề: Hiển thị số trận đấu được chơi ở mỗi sân vận động trong bảng 'nba_stadiums'.
+URL WEB: https://db.ptit.edu.vn/question-detail/fd6c051e-6de8-4b1d-b391-42c80481d92c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/fd6c051e-6de8-4b1d-b391-42c80481d92c
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `nba_stadiums`: Bảng này lưu trữ thông tin về các sân vận động NBA, bao gồm ID sân, tên sân và thành phố.</strong></p><ul><li>`stadium_id (INT)`: Mã định danh của sân vận động.</li><li>`stadium_name (VARCHAR(255))`: Tên sân vận động.</li><li>`city (VARCHAR(255))`: Thành phố nơi sân vận động tọa lạc.</li></ul><p><br></p><p><strong>Bảng `nba_games`: Bảng này lưu trữ thông tin về các trận đấu NBA, bao gồm ID trận đấu, sân nhà và sân khách. </strong></p><ul><li>`game_id (INT)`: Mã định danh của trận đấu.</li><li>`home_stadium_id (INT)`: Mã sân nhà.</li><li>`away_stadium_id (INT)`: Mã sân khách.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Hiển thị số trận đấu (total_games) được chơi ở mỗi sân vận động (stadium_id) trong bảng 'nba_stadiums'.</p>

@@ -1,0 +1,8 @@
+ID: SQL2002
+Tiêu đề: Tỷ lệ tham dự trận đấu trên sân nhà trung bình của Lakers là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/50984c55-1110-4cf0-8a49-c3a2ffa95c5b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/50984c55-1110-4cf0-8a49-c3a2ffa95c5b
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng teams</strong></p><p>Lưu trữ thông tin về các đội thể thao.</p><ul><li>team_id (<strong>INT</strong>): Mã số định danh duy nhất cho đội.</li><li>team_name (<strong>VARCHAR(255)</strong>): Tên đội thể thao.</li></ul><p><strong>Bảng venues</strong></p><p>Lưu trữ thông tin về các địa điểm thi đấu.</p><ul><li>venue_id (<strong>INT</strong>): Mã số định danh duy nhất cho địa điểm thi đấu.</li><li>venue_name (<strong>VARCHAR(255)</strong>): Tên địa điểm thi đấu.</li></ul><p><strong>Bảng games</strong></p><p>Lưu trữ thông tin về các trận đấu thể thao.</p><ul><li>game_id (<strong>INT</strong>): Mã số định danh duy nhất cho trận đấu.</li><li>team_id (<strong>INT</strong>): Mã đội tham gia trận đấu (<em>foreign key</em> từ teams).</li><li>venue_id (<strong>INT</strong>): Mã địa điểm tổ chức trận đấu (<em>foreign key</em> từ venues).</li><li>attendance (<strong>INT</strong>): Số lượng khán giả tham gia trận đấu.</li></ul><p><strong>Nhiệm vụ: </strong>Tỷ lệ tham dự trận đấu trên sân nhà trung bình của Lakers là bao nhiêu?</p><p><strong>Output: Giá trị trung bình</strong> của số lượng khán giả (attendance) tham dự các trận đấu trên sân nhà của Lakers.</p>

@@ -1,0 +1,31 @@
+ID: ENG-007
+Tiêu đề: BASIC AGGREGATE 2
+URL WEB: https://db.ptit.edu.vn/question-detail/c5950f5e-cf07-4a75-ace1-7d82b243e275
+URL API: https://dbapi.ptit.edu.vn/api/app/question/c5950f5e-cf07-4a75-ace1-7d82b243e275
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Table: Employee</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+----------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+----------------+
+| EmpID&nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| FullName&nbsp; &nbsp; | varchar(100)&nbsp; &nbsp;|
+| Dept&nbsp; &nbsp; &nbsp; &nbsp; | varchar(50)&nbsp; &nbsp; |
+| Salary&nbsp; &nbsp; &nbsp; | decimal(10,2)&nbsp; |
++-------------+----------------+
+</pre><p>EmpID is the unique ID of each employee, used as the primary key.</p><p>FullName is the employee’s full name.</p><p>Dept is the department name where the employee works.</p><p>Salary is the employee’s current salary.</p><p>Each row in this table represents one employee and their basic information.</p><p><br></p><p>Task:</p><p>Write an SQL query to show, for each department, the number of employees and the average salary.</p><p>Only include departments whose average salary is greater than 2000.</p><p>The result should have the columns: Dept, EmployeeCount, AvgSalary</p><p><br></p><p><strong>Example</strong></p><p>Input:</p><p>Employee table</p><pre class="ql-syntax" spellcheck="false">+-------+----------------+----------+---------+
+| EmpID | FullName&nbsp; &nbsp; &nbsp; &nbsp;| Dept&nbsp; &nbsp; &nbsp;| Salary&nbsp; |
++-------+----------------+----------+---------+
+| 1&nbsp; &nbsp; &nbsp;| Alice Johnson&nbsp; | IT&nbsp; &nbsp; &nbsp; &nbsp;| 2500.00 |
+| 2&nbsp; &nbsp; &nbsp;| Bob Smith&nbsp; &nbsp; &nbsp; | HR&nbsp; &nbsp; &nbsp; &nbsp;| 1800.00 |
+| 3&nbsp; &nbsp; &nbsp;| Charlie Brown&nbsp; | IT&nbsp; &nbsp; &nbsp; &nbsp;| 2300.00 |
+| 4&nbsp; &nbsp; &nbsp;| Diana Prince&nbsp; &nbsp;| Sales&nbsp; &nbsp; | 2600.00 |
+| 5&nbsp; &nbsp; &nbsp;| Emma Wilson&nbsp; &nbsp; | Sales&nbsp; &nbsp; | 2400.00 |
++-------+----------------+----------+---------+
+</pre><p><br></p><p>Output:</p><pre class="ql-syntax" spellcheck="false">+----------+---------------+-----------+
+| Dept&nbsp; &nbsp; &nbsp;| EmployeeCount | AvgSalary |
++----------+---------------+-----------+
+| IT&nbsp; &nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 2400.00&nbsp; &nbsp;|
+| Sales&nbsp; &nbsp; | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 2500.00&nbsp; &nbsp;|
++----------+---------------+-----------+
+</pre><p><br></p><p>Intermediate averages:</p><p>- IT:&nbsp;(2500.00 + 2300.00) / 2 = 2400.00</p><p>- HR:&nbsp;(1800.00) / 1 = 1800.00</p><p>- Sales: (2600.00 + 2400.00) / 2 = 2500.00</p><p><br></p><p>Only IT and Sales have average salary &gt; 2000.</p>

@@ -1,0 +1,8 @@
+ID: SQL2356
+Tiêu đề: Tàu chở dầu nào có sức chở hàng hóa cao hơn mức trung bình của tàu chở dầu?
+URL WEB: https://db.ptit.edu.vn/question-detail/68b6e001-fb29-4240-8dc1-680abccba468
+URL API: https://dbapi.ptit.edu.vn/api/app/question/68b6e001-fb29-4240-8dc1-680abccba468
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng vessels</strong>: Chứa thông tin về các phương tiện hàng hải và khả năng chở hàng.</p><ul><li>id (INT): Mã định danh duy nhất cho mỗi phương tiện (khóa chính).</li><li>name (TEXT): Tên của phương tiện (ví dụ: "Cargo Ship 1", "Tanker 1").</li><li>type (TEXT): Loại phương tiện (ví dụ: "Cargo", "Tanker").</li><li>cargo_capacity (REAL): Sức chứa hàng hóa tối đa của phương tiện (có thể là số thực, đơn vị như tấn, m³...).</li></ul><p><strong>Nhiệm vụ</strong>:</p><p>Liệt kê các tàu chở dầu (type = 'Tanker') có sức chở hàng hóa lớn hơn mức trung bình của tất cả các tàu chở dầu.</p>

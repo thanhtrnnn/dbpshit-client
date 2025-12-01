@@ -1,0 +1,8 @@
+ID: SQL2225
+Tiêu đề: Tên của các nhà cung cấp cung cấp sản phẩm cho các nhà hàng ở cả California và New York là gì?
+URL WEB: https://db.ptit.edu.vn/question-detail/c9272644-bc8a-46c1-90ee-030c727fced3
+URL API: https://dbapi.ptit.edu.vn/api/app/question/c9272644-bc8a-46c1-90ee-030c727fced3
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có hai bảng dữ liệu:</p><p><strong>Bảng Restaurants – Thông tin về các nhà hàng:</strong></p><ul><li>restaurant_id (INT): Mã định danh duy nhất cho mỗi nhà hàng</li><li>restaurant_name (VARCHAR(50)): Tên nhà hàng</li><li>location (VARCHAR(50)): Địa điểm (ví dụ: "California", "New York", …)</li></ul><p><strong>Bảng Supplies – Thông tin về các nhà cung cấp:</strong></p><ul><li>supplier_id (INT): Mã định danh duy nhất cho mỗi nhà cung cấp</li><li>restaurant_id (INT): Mã nhà hàng mà nhà cung cấp phục vụ</li><li>supplier_name (VARCHAR(50)): Tên nhà cung cấp</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong>Liệt kê tên của các nhà cung cấp</strong> cung cấp sản phẩm cho các nhà hàng <strong>cả ở California và New York</strong>.</p><p><br></p><p>Output: supplier_name</p>

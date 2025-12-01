@@ -1,0 +1,33 @@
+ID: SQL1798
+Tiêu đề: Tổng số sáng kiến ​​công nghệ có thể tiếp cận theo khu vực là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/17baf7e5-dfed-4c4d-844a-a57f77e23648
+URL API: https://dbapi.ptit.edu.vn/api/app/question/17baf7e5-dfed-4c4d-844a-a57f77e23648
+Loại Database: Mysql
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng initiatives</strong></p><pre class="ql-syntax" spellcheck="false">+----------------------+----------------+
+| Cột                 | Kiểu dữ liệu   |
++----------------------+----------------+
+| id                   | INT            |
+| name                 | VARCHAR(50)    |
+| region               | VARCHAR(50)    |
+| accessibility_rating | INT            |
++----------------------+----------------+
+</pre><h3>Nhiệm vụ</h3><p>Thống kê <strong>số lượng sáng kiến có accessibility_rating lớn hơn 6</strong>, phân theo từng <strong>khu vực (region)</strong>.</p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">+----+----------------------+------------+-----------------------+
+| id | name                 | region     | accessibility_rating  |
++----+----------------------+------------+-----------------------+
+| 1  | Green Future         | Europe     | 8                     |
+| 2  | Smart City           | Europe     | 7                     |
+| 3  | Clean Ocean          | Asia       | 9                     |
+| 4  | Solar Village        | Asia       | 5                     |
+| 5  | AI for Good          | America    | 10                    |
+| 6  | Water Access         | America    | 6                     |
++----+----------------------+------------+-----------------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+----------+-------+
+| region   | count |
++----------+-------+
+| Europe   | 2     |
+| Asia     | 1     |
+| America  | 1     |
++----------+-------+
+</pre><p><br></p>

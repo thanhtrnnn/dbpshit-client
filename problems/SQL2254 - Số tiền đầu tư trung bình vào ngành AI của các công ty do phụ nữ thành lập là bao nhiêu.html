@@ -1,0 +1,8 @@
+ID: SQL2254
+Tiêu đề: Số tiền đầu tư trung bình vào ngành AI của các công ty do phụ nữ thành lập là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/a8235881-8df6-4acd-b1f3-cddb344cc045
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a8235881-8df6-4acd-b1f3-cddb344cc045
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Companies</strong> – thông tin về các công ty:</p><ul><li>CompanyID (INT) – mã định danh duy nhất cho mỗi công ty</li><li>CompanyName (VARCHAR(50)) – tên công ty</li><li>Industry (VARCHAR(30)) – ngành nghề của công ty</li><li>CompanyFoundingYear (INT) – năm thành lập công ty</li></ul><p><strong>Investments</strong> – thông tin về các khoản đầu tư:</p><ul><li>InvestmentID (INT) – mã định danh duy nhất cho mỗi khoản đầu tư</li><li>InvestorID (INT) – mã định danh nhà đầu tư</li><li>CompanyID (INT) – mã công ty nhận đầu tư (liên kết với Companies.CompanyID)</li><li>InvestmentAmount (DECIMAL(10,2)) – số tiền đầu tư</li></ul><p><strong>Founders</strong> – thông tin về các nhà sáng lập:</p><ul><li>FounderID (INT) – mã định danh duy nhất cho mỗi nhà sáng lập</li><li>FounderName (VARCHAR(50)) – tên nhà sáng lập</li><li>Gender (VARCHAR(10)) – giới tính của nhà sáng lập</li><li>CompanyID (INT) – mã công ty mà nhà sáng lập liên kết (liên kết với Companies.CompanyID)</li></ul><p><strong>Nhiệm vụ:</strong> Tính <strong>số tiền đầu tư trung bình</strong> vào các công ty trong ngành <strong>AI</strong> do <strong>nhà sáng lập là nữ</strong>.</p><p><strong>Output:</strong></p><ul><li>Industry – tên ngành (ở đây là 'AI')</li><li>AvgInvestmentAmount – giá trị trung bình của các khoản đầu tư (InvestmentAmount)</li></ul><p><br></p>

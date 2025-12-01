@@ -1,0 +1,8 @@
+ID: SQL2072
+Tiêu đề: Tìm các dự án quốc phòng có thời hạn dài nhất và các nhà thầu tương ứng.
+URL WEB: https://db.ptit.edu.vn/question-detail/ad0c7f2d-3452-4983-aa26-c962fee5a3e4
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ad0c7f2d-3452-4983-aa26-c962fee5a3e4
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `DefenseProjects`:</strong></p><p>Lưu trữ thông tin về các dự án quốc phòng, bao gồm mã dự án, tên dự án, ngày bắt đầu và ngày kết thúc.</p><p>- ProjectID (INT): Mã số dự án.</p><p>- ProjectName (VARCHAR(100)): Tên dự án.</p><p>- StartDate (DATE): Ngày bắt đầu dự án.</p><p>- EndDate (DATE): Ngày kết thúc dự án.</p><p><strong>Bảng `ContractorsProjects`:</strong></p><p>Lưu trữ thông tin về các nhà thầu và các dự án mà họ tham gia.</p><p>- ContractorID (INT): Mã nhà thầu.</p><p>- ProjectID (INT): Mã dự án (foreign key từ `DefenseProjects`).</p><p><strong>Bảng `Contractors`:</strong></p><p>Lưu trữ thông tin về các nhà thầu, bao gồm mã nhà thầu, tên và quốc gia của họ.</p><p>- ContractorID (INT): Mã nhà thầu duy nhất.</p><p>- ContractorName (VARCHAR(100)): Tên nhà thầu.</p><p>- Country (VARCHAR(50)): Quốc gia của nhà thầu.</p><p><strong>Nhiệm vụ:</strong></p><p>Tìm các dự án quốc phòng có thời hạn dài nhất và các nhà thầu tương ứng.</p><p><strong>Output:</strong></p><p>Một hàng đơn chứa năm cột thông tin: <strong>Mã nhà thầu</strong> (ContractorID), <strong>Tên nhà thầu</strong> (ContractorName), <strong>Mã dự án</strong> (ProjectID), <strong>Tên dự án</strong> (ProjectName), và <strong>Thời hạn dự án</strong> (DURATION). Thời hạn dự án được tính bằng số ngày giữa EndDate và StartDate.</p>

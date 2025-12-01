@@ -1,0 +1,13 @@
+ID: SQL2148
+Tiêu đề: Đếm số lượng công ty trong mỗi lĩnh vực.
+URL WEB: https://db.ptit.edu.vn/question-detail/2056af01-95ab-4d30-9a4a-9b8a982a9996
+URL API: https://dbapi.ptit.edu.vn/api/app/question/2056af01-95ab-4d30-9a4a-9b8a982a9996
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng companies</strong> lưu trữ thông tin về các công ty, với cấu trúc:</p><ul><li>id (INT): Mã công ty</li><li>sector (VARCHAR): Ngành nghề</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Đếm số lượng công ty trong mỗi lĩnh vực.</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+------------+----------+
+| sector     | COUNT(*) |
++------------+----------+
+| technology | 3        |
+| finance    | 2        |
++------------+----------+</pre>

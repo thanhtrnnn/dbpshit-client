@@ -1,0 +1,17 @@
+ID: SQL2182
+Tiêu đề: Năm thương hiệu được nhắc đến nhiều nhất bởi người dùng từ Hoa Kỳ và Canada, ngoại trừ các đề cập từ người dùng có ít hơn 100 người theo dõi, là những thương hiệu nào?
+URL WEB: https://db.ptit.edu.vn/question-detail/11bfa47e-a72f-47a4-a8ce-f7ecb89a49f3
+URL API: https://dbapi.ptit.edu.vn/api/app/question/11bfa47e-a72f-47a4-a8ce-f7ecb89a49f3
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có 2 bảng sau:</strong></p><p><strong>1. Bảng users – Thông tin người dùng</strong></p><ul><li>id (INT): Mã định danh người dùng</li><li>name (VARCHAR(50)): Tên người dùng</li><li>followers (INT): Số lượng người theo dõi</li><li>country (VARCHAR(50)): Quốc gia sinh sống của người dùng</li></ul><p><strong>2. Bảng brand_mentions – Việc người dùng nhắc đến các thương hiệu</strong></p><ul><li>user_id (INT): Mã người dùng (liên kết với bảng users)</li><li>brand (VARCHAR(50)): Tên thương hiệu được nhắc đến</li></ul><p><strong>Nhiệm vụ:</strong></p><p>﻿Năm thương hiệu được nhắc đến nhiều nhất bởi người dùng từ Hoa Kỳ và Canada, ngoại trừ các đề cập từ người dùng có ít hơn 100 người theo dõi, là những thương hiệu nào?&nbsp;</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+----------+
+| brand    |
++----------+
+| CocaCola |
+| Pepsi    |
+| Nike     |
+| Adidas   |
+| Puma     |
++----------+
+</pre>

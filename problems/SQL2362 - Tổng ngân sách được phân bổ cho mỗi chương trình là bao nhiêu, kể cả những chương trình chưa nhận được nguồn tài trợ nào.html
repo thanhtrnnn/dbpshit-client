@@ -1,0 +1,8 @@
+ID: SQL2362
+Tiêu đề: Tổng ngân sách được phân bổ cho mỗi chương trình là bao nhiêu, kể cả những chương trình chưa nhận được nguồn tài trợ nào?
+URL WEB: https://db.ptit.edu.vn/question-detail/4e208f6d-ef88-4dba-951b-c16bad18c265
+URL API: https://dbapi.ptit.edu.vn/api/app/question/4e208f6d-ef88-4dba-951b-c16bad18c265
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng Programs</strong>: Chứa thông tin về các chương trình và ngân sách phân bổ.</h3><ul><li>Program (TEXT): Tên chương trình.</li><li>Budget (DECIMAL(10,2)): Ngân sách được phân bổ cho chương trình.</li></ul><h3><strong>Bảng Donations</strong>: Chứa thông tin về các khoản quyên góp cho các chương trình.</h3><ul><li>DonationID (INT): Mã định danh duy nhất cho mỗi khoản quyên góp (khóa chính).</li><li>DonorID (INT): Mã định danh của nhà tài trợ.</li><li>Program (TEXT): Tên chương trình nhận quyên góp (liên kết với bảng Programs).</li><li>Amount (DECIMAL(10,2)): Số tiền quyên góp.</li><li>Success (BOOLEAN): Trạng thái quyên góp (TRUE nếu thành công, FALSE nếu không).</li></ul><h3><strong>Nhiệm vụ</strong>:</h3><p>Liệt kê ngân sách được phân bổ cho từng chương trình, bao gồm cả các chương trình chưa nhận được bất kỳ khoản quyên góp nào.</p>

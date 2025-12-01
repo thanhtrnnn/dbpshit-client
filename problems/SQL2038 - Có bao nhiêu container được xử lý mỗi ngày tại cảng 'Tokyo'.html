@@ -1,0 +1,8 @@
+ID: SQL2038
+Tiêu đề: Có bao nhiêu container được xử lý mỗi ngày tại cảng 'Tokyo'?
+URL WEB: https://db.ptit.edu.vn/question-detail/2fac3863-8395-4801-b3de-f1db97358d13
+URL API: https://dbapi.ptit.edu.vn/api/app/question/2fac3863-8395-4801-b3de-f1db97358d13
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng ports</strong>: Lưu trữ thông tin về các cảng, bao gồm mã cảng và tên cảng.</p><ul><li>port_id (INT): Mã số định danh duy nhất cho cảng.</li><li>port_name (VARCHAR(20)): Tên cảng.</li></ul><p><strong>Bảng cargo</strong>: Lưu trữ thông tin về các lô hàng tại các cảng, bao gồm mã lô hàng, mã cảng, trọng lượng container và ngày xử lý.</p><ul><li>cargo_id (INT): Mã số định danh duy nhất cho lô hàng.</li><li>port_id (INT): Mã cảng (foreign key từ ports).</li><li>container_weight (FLOAT): Trọng lượng container của lô hàng.</li><li>handling_date (DATE): Ngày xử lý lô hàng.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Có bao nhiêu container được xử lý mỗi ngày tại cảng 'Tokyo'?</p><p><strong>Output:</strong></p><p>Danh sách gồm hai cột: <strong>Ngày xử lý</strong> (handling_date) và <strong>Tổng số container</strong> (COUNT(*)). Kết quả được <strong>nhóm lại</strong> theo từng ngày.</p>

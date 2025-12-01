@@ -1,0 +1,8 @@
+ID: SQL2344
+Tiêu đề: Những sản phẩm nào từ các thương hiệu Châu Âu đã được đánh giá (reviewed) hơn 50 lần và có preference rating trên 4?
+URL WEB: https://db.ptit.edu.vn/question-detail/43e2d960-a2cd-4391-895f-55dd3fedd559
+URL API: https://dbapi.ptit.edu.vn/api/app/question/43e2d960-a2cd-4391-895f-55dd3fedd559
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Product_Reviews</strong>: Chứa thông tin về các đánh giá sản phẩm.</p><ul><li> review_id (INT): Mã định danh duy nhất cho mỗi đánh giá (khóa chính của bảng).</li><li> product_id (INT): Mã định danh của sản phẩm tương ứng với đánh giá (liên kết với bảng Product_Details).</li><li> review_text (TEXT): Nội dung đánh giá.</li><li> helpful_votes (INT): Số lượt bình chọn đánh giá là hữu ích.</li><li> review_date (DATE): Ngày đánh giá được tạo.</li><li> preference_rating (INT): Mức độ ưu tiên đánh giá (giá trị từ 1 đến 5).</li></ul><p><strong>Bảng Product_Details</strong>: Chứa thông tin chi tiết về sản phẩm.</p><ul><li> product_id (INT): Mã định danh duy nhất cho mỗi sản phẩm (khóa chính của bảng).</li><li> brand_id (INT): Mã định danh của thương hiệu sản phẩm.</li><li> brand (TEXT): Tên thương hiệu.</li><li> country (TEXT): Quốc gia xuất xứ của sản phẩm.</li></ul><p><strong>Nhiệm vụ</strong>:</p><p>Những sản phẩm nào từ các thương hiệu Châu Âu đã được đánh giá hơn 50 lần và có mức độ ưu tiên (preference_rating) trên 4?</p>

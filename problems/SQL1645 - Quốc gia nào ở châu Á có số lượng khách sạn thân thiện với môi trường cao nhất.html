@@ -1,0 +1,26 @@
+ID: SQL1645
+Tiêu đề: Quốc gia nào ở châu Á có số lượng khách sạn thân thiện với môi trường cao nhất?
+URL WEB: https://db.ptit.edu.vn/question-detail/2054b699-6b00-4156-8e84-913541c4b531
+URL API: https://dbapi.ptit.edu.vn/api/app/question/2054b699-6b00-4156-8e84-913541c4b531
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng `hotels`: Bảng này lưu trữ thông tin về các khách sạn, bao gồm ID khách sạn, khu vực, xếp hạng và tính thân thiện với môi trường. </strong></p><ul><li>`hotel_id (INT)`: Mã định danh của khách sạn.</li><li>`region (VARCHAR(50))`: Khu vực khách sạn tọa lạc.</li><li>`rating (VARCHAR(10))`: Xếp hạng của khách sạn.</li><li>`is_eco_friendly (BOOLEAN)`: Khách sạn có thân thiện với môi trường không.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Tìm <strong>khu vực (region) có số lượng khách sạn thân thiện với môi trường (is_eco_friendly = 1) cao nhất</strong>.</p><p><br></p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">
++-----------+----------+---------+------------------+
+| hotel_id  | region   | rating  | is_eco_friendly  |
++-----------+----------+---------+------------------+
+| 1         | North    | 5-star  | 1                |
+| 2         | North    | 4-star  | 1                |
+| 3         | South    | 3-star  | 0                |
+| 4         | East     | 4-star  | 1                |
+| 5         | East     | 3-star  | 0                |
+| 6         | North    | 5-star  | 1                |
+| 7         | West     | 4-star  | 0                |
++-----------+----------+---------+------------------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----------+-------------+
+| region   | num_hotels  |
++----------+-------------+
+| North    | 3           |
++----------+-------------+
+</pre><p><br></p>

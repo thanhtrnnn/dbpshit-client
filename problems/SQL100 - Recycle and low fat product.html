@@ -1,0 +1,8 @@
+ID: SQL100
+Tiêu đề: Recycle and low fat product
+URL WEB: https://db.ptit.edu.vn/question-detail/242cc8a1-17d1-49ef-9153-9b43f097d379
+URL API: https://dbapi.ptit.edu.vn/api/app/question/242cc8a1-17d1-49ef-9153-9b43f097d379
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng: Products</strong></p><p><img src="https://dbapi.ptit.edu.vn/api/app/media/files/2024-12-23/1734925548341_image.png"></p><ul><li>product_id là khóa chính (cột chứa các giá trị duy nhất) của bảng này.</li><li>low_fats là kiểu ENUM với các giá trị ('Y', 'N'), trong đó 'Y' nghĩa là sản phẩm ít béo và 'N' nghĩa là không ít béo.</li><li>recyclable là kiểu ENUM với các giá trị ('Y', 'N'), trong đó 'Y' nghĩa là sản phẩm có thể tái chế và 'N' nghĩa là không thể tái chế.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Viết một giải pháp để tìm các ID của sản phẩm vừa ít béo vừa có thể tái chế. Trả về bảng kết quả với thứ tự bất kỳ.</p><h3>Ví dụ:</h3><p><strong>Đầu vào:</strong></p><p><strong>Bảng Products:</strong></p><p><img src="https://dbapi.ptit.edu.vn/api/app/media/files/2024-12-23/1734925599157_image.png"></p><p><strong>Đầu ra:</strong></p><p><img src="https://dbapi.ptit.edu.vn/api/app/media/files/2024-12-23/1734925617014_image.png"></p><p><strong>Giải thích:</strong></p><p>Chỉ có các sản phẩm với ID là 1 và 3 thỏa mãn điều kiện vừa ít béo (low_fats = 'Y') vừa có thể tái chế (recyclable = 'Y').</p>

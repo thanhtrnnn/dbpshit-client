@@ -1,0 +1,8 @@
+ID: SQL2150
+Tiêu đề: Có bao nhiêu gói hàng được vận chuyển bằng đường bộ từ mỗi kho trong Quý 1 năm 2021?
+URL WEB: https://db.ptit.edu.vn/question-detail/a163a633-5a7d-44d8-8ccb-f62faab2b5a0
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a163a633-5a7d-44d8-8ccb-f62faab2b5a0
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có 3 bảng:</strong></p><h4><strong>1. packages </strong>– chứa thông tin các gói hàng:</h4><ul><li>id (INT): Mã gói hàng</li><li>shipment_type (VARCHAR): Loại vận chuyển (ví dụ: 'Road', 'Air', 'Sea')</li><li>warehouse (VARCHAR): Mã kho chứa</li><li>quarter (INT): Quý của năm (ví dụ: 1, 2, 3, 4)</li></ul><h4><strong>2. warehouses </strong>– chứa thông tin về các kho:</h4><ul><li>id (INT): Mã kho</li><li>name (VARCHAR): Tên kho</li></ul><h4><strong>3. shipment_types </strong>– chứa thông tin về loại vận chuyển:</h4><ul><li>id (VARCHAR): Mã loại vận chuyển</li><li>name (VARCHAR): Tên loại vận chuyển (ví dụ: 'Road', 'Air', 'Sea')</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Có bao nhiêu gói hàng được vận chuyển bằng đường bộ từ mỗi kho trong Quý 1 năm 2021?</p>

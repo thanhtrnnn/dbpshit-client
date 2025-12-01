@@ -1,0 +1,44 @@
+ID: SQL1635
+Tiêu đề: Tên của các tàu đã ghé thăm cả Cảng Long Beach và Cảng Los Angeles là gì?
+URL WEB: https://db.ptit.edu.vn/question-detail/7dcc0920-b04d-4f81-81a4-ef4b9c2da622
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7dcc0920-b04d-4f81-81a4-ef4b9c2da622
+Loại Database: Sql Server
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng port</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+---------------+-----------------------------+
+| Tên cột    | Kiểu dữ liệu  | Mô tả                       |
++-----------+---------------+-----------------------------+
+| port_id    | INT           | Mã số duy nhất cho mỗi cảng |
+| port_name  | VARCHAR(50)   | Tên của cảng                |
++-----------+---------------+-----------------------------+
+</pre><p><strong>Bảng vessel</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+---------------+--------------------------------------+
+| Tên cột      | Kiểu dữ liệu  | Mô tả                                |
++-------------+---------------+--------------------------------------+
+| vessel_id    | INT           | Mã số duy nhất cho mỗi tàu           |
+| vessel_name  | VARCHAR(50)   | Tên của tàu                          |
+| port_id      | INT           | Mã số cảng mà tàu đang đậu           |
++-------------+---------------+--------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Tìm <strong>tên của các tàu đã ghé thăm cả hai cảng có mã số là 1 và 2</strong>.</p><h3>Input mẫu</h3><p><strong>Bảng port</strong></p><pre class="ql-syntax" spellcheck="false">+----------+------------+
+| port_id  | port_name  |
++----------+------------+
+| 1        | Ha Noi     |
+| 2        | Hai Phong  |
+| 3        | Da Nang    |
++----------+------------+
+</pre><p><strong>Bảng vessel</strong></p><pre class="ql-syntax" spellcheck="false">+------------+--------------+----------+
+| vessel_id  | vessel_name  | port_id  |
++------------+--------------+----------+
+| 1          | Pacific Star | 1        |
+| 2          | Pacific Star | 2        |
+| 3          | Sea Queen    | 1        |
+| 4          | Ocean King   | 2        |
+| 5          | Ocean King   | 1        |
+| 6          | Wind Rider   | 3        |
++------------+--------------+----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+--------------+
+| vessel_name  |
++--------------+
+| Pacific Star |
+| Ocean King   |
++--------------+
+</pre><p><br></p>

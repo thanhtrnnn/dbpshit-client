@@ -1,0 +1,29 @@
+ID: SQL1829
+Tiêu đề: Tổng ngân sách dành cho các sáng kiến ​​phân chia kỹ thuật số của các công ty trong khu vực công là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/285bb142-c6ab-429b-8117-3ac68fa9bfd1
+URL API: https://dbapi.ptit.edu.vn/api/app/question/285bb142-c6ab-429b-8117-3ac68fa9bfd1
+Loại Database: Mysql
+------------------------------
+
+<h3>Mô tả bảng</h3><p><strong>Bảng pub_sector</strong></p><p><strong> Bảng này lưu trữ thông tin về các tổ chức công</strong>, bao gồm <strong>tên tổ chức</strong>, <strong>ngân sách</strong>, và <strong>lĩnh vực hoạt động</strong>.</p><pre class="ql-syntax" spellcheck="false">+----------+-----------+--------------------------------------------+
+| Cột      | Kiểu dữ liệu | Mô tả                                   |
++----------+-----------+--------------------------------------------+
+| name     | TEXT        | Tên tổ chức                              |
+| budget   | INTEGER     | Ngân sách của tổ chức                    |
+| sector   | TEXT        | Lĩnh vực hoạt động (ví dụ: public/private) |
++----------+-----------+--------------------------------------------+
+</pre><h3>Nhiệm vụ</h3><p>Tính <strong>tổng ngân sách (SUM(budget))</strong> dành cho <strong>các sáng kiến trong khu vực công</strong> (sector = 'public').</p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">+------------------+----------+----------+
+| name             | budget   | sector   |
++------------------+----------+----------+
+| National Library | 500000   | public   |
+| City Hospital    | 1200000  | public   |
+| Tech Academy     | 800000   | private  |
+| Gov IT Center    | 950000   | public   |
+| EduHub           | 400000   | private  |
++------------------+----------+----------+
+</pre><h3>Output mẫu</h3><pre class="ql-syntax" spellcheck="false">+-------------+
+| SUM(budget) |
++-------------+
+| 2650000     |
++-------------+
+</pre><p><br></p>

@@ -1,0 +1,8 @@
+ID: SQL2671
+Tiêu đề: Liệt kê 5 sinh viên sau đại học có năng suất cao nhất về số lượng bài báo đã công bố trong khoa Toán học.
+URL WEB: https://db.ptit.edu.vn/question-detail/5f1fdeed-99e7-400f-9bc8-04caf7452ce0
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5f1fdeed-99e7-400f-9bc8-04caf7452ce0
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `graduate_students`: Quản lý thông tin về sinh viên tốt nghiệp.</strong></p><p><span style="font-size: 14px;">- `id (INT)`: Mã sinh viên.</span></p><p><span style="font-size: 14px;">- `name (VARCHAR(50))`: Tên sinh viên.</span></p><p><span style="font-size: 14px;">- `department (VARCHAR(50))`: Khoa học mà sinh viên thuộc về.</span></p><p><strong style="font-size: 14px;">Bảng `publications`: Quản lý thông tin về các bài báo, bài nghiên cứu.</strong></p><p><span style="font-size: 14px;">- `id (INT)`: Mã bài báo.</span></p><p><span style="font-size: 14px;">- `title (VARCHAR(100))`: Tiêu đề bài báo.</span></p><p><span style="font-size: 14px;">- `author_id (INT)`: Mã tác giả (liên kết với `graduate_students`).</span></p><p><span style="font-size: 14px;">- `department (VARCHAR(50))`: Khoa học của tác giả.</span></p><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Hãy liệt kê </span><strong style="font-size: 14px;">tối đa</strong><span style="font-size: 14px;"> 5 sinh viên sau đại học thuộc khoa Toán học có số lượng bài báo đã công bố nhiều nhất.</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">name, paper_count</span></p>
