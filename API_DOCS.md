@@ -130,6 +130,47 @@ Retrieves the submission history for a specific user and question.
     }
   ],
   "totalPages": 1,
-  "totalElements": 2
+  "totalElements": 2,
+  "size": 2,
+  "number": 0,
+  "last": true,
+  "first": true,
+  "numberOfElements": 2,
+  "sort": {
+    "sorted": false,
+    "unsorted": true,
+    "empty": true
+  }
 }
+```
+### 5. Check Submission Status (Bulk)
+Retrieves the submission status for a list of questions.
+
+- **URL**: `/submit-history/check/complete`
+- **Method**: `POST`
+- **Payload**:
+```json
+{
+  "questionIds": [
+    "360518cb-fb15-47bb-9b98-b76e01a39f40",
+    "a6bc5583-740c-4ae0-9081-e4a5ecf9a661"
+  ],
+  "userId": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958"
+}
+```
+
+**Response Example:**
+```json
+[
+  {
+    "completed": "done",
+    "questionId": "360518cb-fb15-47bb-9b98-b76e01a39f40",
+    "status": "AC"
+  },
+  {
+    "completed": "done",
+    "questionId": "a6bc5583-740c-4ae0-9081-e4a5ecf9a661",
+    "status": "CE"
+  }
+]
 ```

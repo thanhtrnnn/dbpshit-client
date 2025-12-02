@@ -1,0 +1,299 @@
+{
+    "content": [
+        {
+            "id": "bdbd730d-d5d7-4390-a1ec-05f203613f1c",
+            "createdAt": "2025-12-02T20:32:44.924627",
+            "createdBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "lastModifiedAt": "2025-12-02T20:32:44.957436",
+            "lastModifiedBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "timeSubmit": "2025-12-02T20:32:44.923618",
+            "timeout": 0.0,
+            "status": "CE",
+            "user": {
+                "firstName": "Trần Xuân",
+                "lastName": "Thành",
+                "userCode": "B23DCAT280",
+                "fullName": "Thành Trần Xuân"
+            },
+            "testPass": 0,
+            "totalTest": 0,
+            "question": {
+                "questionCode": "SQL-2831",
+                "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?"
+            },
+            "database": {
+                "id": "11111111-1111-1111-1111-111111111111",
+                "name": "Mysql"
+            },
+            "querySub": "WITH all_facilities AS (\n -- Bước 1: Hợp nhất dữ liệu từ hospitals và clinics\n SELECT \n territory, \n 'hospital' AS facility_type,\n has_helipad\n FROM \n hospitals\n \n UNION ALL\n \n SELECT \n territory, \n 'clinic' AS facility_type,\n 0 AS has_helipad -- Clinics don't have helipads, so we add a placeholder '0'\n FROM \n clinics\n)\n-- Bước 2: Nhóm và đếm từ dữ liệu đã hợp nhất\nSELECT\n territory,\n COUNT(CASE WHEN facility_type = 'hospital' THEN 1 END) AS num_hospitals,\n COUNT(CASE WHEN facility_type = 'clinic' THEN 1 END) AS num_clinics,\n SUM(has_helipad) AS num_hospitals_with_helipad\nFROM\n all_facilities\nGROUP BY\n territory\nORDER BY\n territory;"
+        },
+        {
+            "id": "a536dfed-2a26-4dfe-9685-9d6e96c904cb",
+            "createdAt": "2025-12-02T20:32:18.047443",
+            "createdBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "lastModifiedAt": "2025-12-02T20:32:18.081503",
+            "lastModifiedBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "timeSubmit": "2025-12-02T20:32:18.046442",
+            "timeout": 0.0,
+            "status": "CE",
+            "user": {
+                "firstName": "Trần Xuân",
+                "lastName": "Thành",
+                "userCode": "B23DCAT280",
+                "fullName": "Thành Trần Xuân"
+            },
+            "testPass": 0,
+            "totalTest": 0,
+            "question": {
+                "questionCode": "SQL-2831",
+                "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?"
+            },
+            "database": {
+                "id": "11111111-1111-1111-1111-111111111111",
+                "name": "Mysql"
+            },
+            "querySub": "WITH all_facilities AS (\n -- Bước 1: Hợp nhất dữ liệu từ hospitals và clinics\n SELECT \n territory, \n 'hospital' AS facility_type,\n has_helipad\n FROM \n hospitals\n \n UNION ALL\n \n SELECT \n territory, \n 'clinic' AS facility_type,\n 0 AS has_helipad -- Clinics don't have helipads, so we add a placeholder '0'\n FROM \n clinics\n)\n-- Bước 2: Nhóm và đếm từ dữ liệu đã hợp nhất\nSELECT\n territory,\n COUNT(CASE WHEN facility_type = 'hospital' THEN 1 END) AS num_hospitals,\n COUNT(CASE WHEN facility_type = 'clinic' THEN 1 END) AS num_clinics,\n SUM(has_helipad) AS num_hospitals_with_helipad\nFROM\n all_facilities\nGROUP BY\n territory\nORDER BY\n territory;"
+        },
+        {
+            "id": "bd7ccd8e-eb90-4a53-9b9e-a6701f5306e6",
+            "createdAt": "2025-12-02T20:20:52.190899",
+            "createdBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "lastModifiedAt": "2025-12-02T20:20:52.210556",
+            "lastModifiedBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "timeSubmit": "2025-12-02T20:20:52.190057",
+            "timeout": 0.0,
+            "status": "CE",
+            "user": {
+                "firstName": "Trần Xuân",
+                "lastName": "Thành",
+                "userCode": "B23DCAT280",
+                "fullName": "Thành Trần Xuân"
+            },
+            "testPass": 0,
+            "totalTest": 0,
+            "question": {
+                "questionCode": "SQL-2831",
+                "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?"
+            },
+            "database": {
+                "id": "11111111-1111-1111-1111-111111111111",
+                "name": "Mysql"
+            },
+            "querySub": "WITH all_facilities AS (\n SELECT \n territory, \n 'hospital' AS facility_type,\n has_helipad\n FROM \n hospitals\n \n UNION ALL\n \n SELECT \n territory, \n 'clinic' AS facility_type,\n 0 AS has_helipad -- Clinics don't have helipads, so we add a placeholder '0'\n FROM \n clinics\n)\nSELECT\n territory,\n COUNT(CASE WHEN facility_type = 'hospital' THEN 1 END) AS num_hospitals,\n COUNT(CASE WHEN facility_type = 'clinic' THEN 1 END) AS num_clinics,\n SUM(has_helipad) AS num_hospitals_with_helipad\nFROM\n all_facilities\nGROUP BY\n territory\nORDER BY\n territory;"
+        },
+        {
+            "id": "c4f3cdc1-828a-491b-befe-d7e49a611a49",
+            "createdAt": "2025-11-14T19:02:32.565611",
+            "createdBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "lastModifiedAt": "2025-11-14T19:02:32.964487",
+            "lastModifiedBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "timeSubmit": "2025-11-14T19:02:32.564597",
+            "timeout": 3.5,
+            "status": "WA",
+            "user": {
+                "firstName": "Trần Xuân",
+                "lastName": "Thành",
+                "userCode": "B23DCAT280",
+                "fullName": "Thành Trần Xuân"
+            },
+            "testPass": 2,
+            "totalTest": 4,
+            "question": {
+                "questionCode": "SQL-2831",
+                "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?"
+            },
+            "database": {
+                "id": "11111111-1111-1111-1111-111111111111",
+                "name": "Mysql"
+            },
+            "querySub": "WITH all_facilities AS (\r\n    \r\n    SELECT \r\n        territory, \r\n        'hospital' AS facility_type,\r\n        has_helipad\r\n    FROM \r\n        hospitals\r\n    \r\n    UNION ALL\r\n    \r\n    SELECT \r\n        territory, \r\n        'clinic' AS facility_type,\r\n        0 AS has_helipad \r\n    FROM \r\n        clinics\r\n)\r\n\r\nSELECT\r\n    territory,\r\n    COUNT(CASE WHEN facility_type = 'hospital' THEN 1 END) AS num_hospitals,\r\n    COUNT(CASE WHEN facility_type = 'clinic' THEN 1 END) AS num_clinics,\r\n    SUM(has_helipad) AS num_hospitals_with_helipad\r\nFROM\r\n    all_facilities\r\nGROUP BY\r\n    territory\r\nORDER BY\r\n    territory;"
+        },
+        {
+            "id": "a7af3270-559a-41c6-b7b0-e68d3f4b3610",
+            "createdAt": "2025-11-14T19:02:31.125744",
+            "createdBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "lastModifiedAt": "2025-11-14T19:02:31.522369",
+            "lastModifiedBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "timeSubmit": "2025-11-14T19:02:31.125037",
+            "timeout": 4.75,
+            "status": "WA",
+            "user": {
+                "firstName": "Trần Xuân",
+                "lastName": "Thành",
+                "userCode": "B23DCAT280",
+                "fullName": "Thành Trần Xuân"
+            },
+            "testPass": 2,
+            "totalTest": 4,
+            "question": {
+                "questionCode": "SQL-2831",
+                "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?"
+            },
+            "database": {
+                "id": "11111111-1111-1111-1111-111111111111",
+                "name": "Mysql"
+            },
+            "querySub": "WITH all_facilities AS (\r\n    \r\n    SELECT \r\n        territory, \r\n        'hospital' AS facility_type,\r\n        has_helipad\r\n    FROM \r\n        hospitals\r\n    \r\n    UNION ALL\r\n    \r\n    SELECT \r\n        territory, \r\n        'clinic' AS facility_type,\r\n        0 AS has_helipad \r\n    FROM \r\n        clinics\r\n)\r\n\r\nSELECT\r\n    territory,\r\n    COUNT(CASE WHEN facility_type = 'hospital' THEN 1 END) AS num_hospitals,\r\n    COUNT(CASE WHEN facility_type = 'clinic' THEN 1 END) AS num_clinics,\r\n    SUM(has_helipad) AS num_hospitals_with_helipad\r\nFROM\r\n    all_facilities\r\nGROUP BY\r\n    territory\r\nORDER BY\r\n    territory;"
+        },
+        {
+            "id": "69a284c0-2e7c-487e-bf09-5de063ce5cf6",
+            "createdAt": "2025-11-14T18:57:57.541693",
+            "createdBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "lastModifiedAt": "2025-11-14T18:57:57.792984",
+            "lastModifiedBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "timeSubmit": "2025-11-14T18:57:57.540732",
+            "timeout": 0.0,
+            "status": "CE",
+            "user": {
+                "firstName": "Trần Xuân",
+                "lastName": "Thành",
+                "userCode": "B23DCAT280",
+                "fullName": "Thành Trần Xuân"
+            },
+            "testPass": 0,
+            "totalTest": 4,
+            "question": {
+                "questionCode": "SQL-2831",
+                "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?"
+            },
+            "database": {
+                "id": "11111111-1111-1111-1111-111111111111",
+                "name": "Mysql"
+            },
+            "querySub": "WITH HospitalCounts AS (\r\n    \r\n    SELECT\r\n        CAST(territory AS VARCHAR(MAX)) AS territory,\r\n        COUNT(id) AS num_hospitals,\r\n        SUM(CAST(has_helipad AS INT)) AS num_hospitals_with_helipad\r\n    FROM\r\n        hospitals\r\n    GROUP BY\r\n        CAST(territory AS VARCHAR(MAX))\r\n),\r\nClinicCounts AS (\r\n    \r\n    SELECT\r\n        CAST(territory AS VARCHAR(MAX)) AS territory,\r\n        COUNT(id) AS num_clinics\r\n    FROM\r\n        clinics\r\n    GROUP BY\r\n        CAST(territory AS VARCHAR(MAX))\r\n)\r\n\r\nSELECT\r\n    COALESCE(hc.territory, cc.territory) AS territory,\r\n    ISNULL(hc.num_hospitals, 0) AS num_hospitals,\r\n    ISNULL(cc.num_clinics, 0) AS num_clinics,\r\n    ISNULL(hc.num_hospitals_with_helipad, 0) AS num_hospitals_with_helipad\r\nFROM\r\n    HospitalCounts hc\r\nFULL OUTER JOIN\r\n    ClinicCounts cc ON hc.territory = cc.territory\r\nORDER BY\r\n    territory;"
+        },
+        {
+            "id": "53c188fc-bb16-44c1-9b07-4b918d8e8c02",
+            "createdAt": "2025-11-14T18:43:34.208907",
+            "createdBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "lastModifiedAt": "2025-11-14T18:43:34.235035",
+            "lastModifiedBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "timeSubmit": "2025-11-14T18:43:34.207936",
+            "timeout": 0.0,
+            "status": "CE",
+            "user": {
+                "firstName": "Trần Xuân",
+                "lastName": "Thành",
+                "userCode": "B23DCAT280",
+                "fullName": "Thành Trần Xuân"
+            },
+            "testPass": 0,
+            "totalTest": 0,
+            "question": {
+                "questionCode": "SQL-2831",
+                "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?"
+            },
+            "database": {
+                "id": "11111111-1111-1111-1111-111111111111",
+                "name": "Mysql"
+            },
+            "querySub": "CREATE TEMPORARY TABLE AllTerritories AS\r\nSELECT DISTINCT territory FROM hospitals\r\nUNION DISTINCT\r\nSELECT DISTINCT territory FROM clinics;\r\n\r\nSELECT\r\n    t.territory,\r\n    COALESCE(h_agg.num_hospitals, 0) AS num_hospitals,\r\n    COALESCE(c_agg.num_clinics, 0) AS num_clinics,\r\n    COALESCE(h_agg.num_hospitals_with_helipad, 0) AS num_hospitals_with_helipad\r\nFROM AllTerritories AS t\r\nLEFT JOIN (\r\n    SELECT\r\n        territory,\r\n        COUNT(id) AS num_hospitals,\r\n        SUM(has_helipad) AS num_hospitals_with_helipad\r\n    FROM hospitals\r\n    GROUP BY territory\r\n) AS h_agg ON t.territory = h_agg.territory\r\nLEFT JOIN (\r\n    SELECT\r\n        territory,\r\n        COUNT(id) AS num_clinics\r\n    FROM clinics\r\n    GROUP BY territory\r\n) AS c_agg ON t.territory = c_agg.territory\r\nORDER BY t.territory;\r\n\r\nDROP TEMPORARY TABLE AllTerritories;"
+        },
+        {
+            "id": "e4b32bf4-b5cc-414e-af69-46540f5bc835",
+            "createdAt": "2025-11-10T14:14:57.913505",
+            "createdBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "lastModifiedAt": "2025-11-10T14:14:58.205354",
+            "lastModifiedBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "timeSubmit": "2025-11-10T14:14:57.913374",
+            "timeout": 2.0,
+            "status": "WA",
+            "user": {
+                "firstName": "Trần Xuân",
+                "lastName": "Thành",
+                "userCode": "B23DCAT280",
+                "fullName": "Thành Trần Xuân"
+            },
+            "testPass": 2,
+            "totalTest": 4,
+            "question": {
+                "questionCode": "SQL-2831",
+                "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?"
+            },
+            "database": {
+                "id": "11111111-1111-1111-1111-111111111111",
+                "name": "Mysql"
+            },
+            "querySub": "SELECT\n    territory,\n    SUM(is_hospital) AS num_hospitals,\n    SUM(is_clinic) AS num_clinics,\n    SUM(is_helipad) AS num_hospitals_with_helipad\nFROM\n    (\n        SELECT\n            territory,\n            1 AS is_hospital,\n            0 AS is_clinic,\n            has_helipad AS is_helipad \n        FROM\n            hospitals\n        UNION ALL\n        SELECT\n            territory,\n            0 AS is_hospital,\n            1 AS is_clinic,\n            0 AS is_helipad \n        FROM\n            clinics\n    ) AS combined_data\nGROUP BY\n    territory\nORDER BY\n    territory;"
+        },
+        {
+            "id": "616dda39-5a30-4c88-a627-3b46662cbb5b",
+            "createdAt": "2025-11-10T14:14:50.204255",
+            "createdBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "lastModifiedAt": "2025-11-10T14:14:50.628717",
+            "lastModifiedBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "timeSubmit": "2025-11-10T14:14:50.204157",
+            "timeout": 33.25,
+            "status": "TLE",
+            "user": {
+                "firstName": "Trần Xuân",
+                "lastName": "Thành",
+                "userCode": "B23DCAT280",
+                "fullName": "Thành Trần Xuân"
+            },
+            "testPass": 0,
+            "totalTest": 4,
+            "question": {
+                "questionCode": "SQL-2831",
+                "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?"
+            },
+            "database": {
+                "id": "11111111-1111-1111-1111-111111111111",
+                "name": "Mysql"
+            },
+            "querySub": "SELECT\n    T.territory,\n    COALESCE(H.num_hospitals, 0) AS num_hospitals,\n    COALESCE(C.num_clinics, 0) AS num_clinics,\n    COALESCE(H.num_hospitals_with_helipad, 0) AS num_hospitals_with_helipad\nFROM\n    \n    (SELECT territory FROM hospitals\n     UNION\n     SELECT territory FROM clinics) AS T\nLEFT JOIN\n    \n    (SELECT\n         territory,\n         COUNT(id) AS num_hospitals,\n         \n         SUM(has_helipad) AS num_hospitals_with_helipad\n     FROM hospitals\n     GROUP BY territory) AS H ON T.territory = H.territory\nLEFT JOIN\n    \n    (SELECT\n         territory,\n         COUNT(id) AS num_clinics\n     FROM clinics\n     GROUP BY territory) AS C ON T.territory = C.territory;"
+        },
+        {
+            "id": "45d43460-9223-4a57-a620-f69a1f613c8b",
+            "createdAt": "2025-11-10T14:11:05.584956",
+            "createdBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "lastModifiedAt": "2025-11-10T14:11:05.878275",
+            "lastModifiedBy": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+            "timeSubmit": "2025-11-10T14:11:05.584358",
+            "timeout": 2.5,
+            "status": "WA",
+            "user": {
+                "firstName": "Trần Xuân",
+                "lastName": "Thành",
+                "userCode": "B23DCAT280",
+                "fullName": "Thành Trần Xuân"
+            },
+            "testPass": 2,
+            "totalTest": 4,
+            "question": {
+                "questionCode": "SQL-2831",
+                "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?"
+            },
+            "database": {
+                "id": "11111111-1111-1111-1111-111111111111",
+                "name": "Mysql"
+            },
+            "querySub": "SELECT\r\n    territory,\r\n    SUM(is_hospital) AS num_hospitals,\r\n    SUM(is_clinic) AS num_clinics,\r\n    SUM(is_helipad) AS num_hospitals_with_helipad\r\nFROM\r\n    (\r\n        SELECT\r\n            territory,\r\n            1 AS is_hospital,\r\n            0 AS is_clinic,\r\n            has_helipad AS is_helipad \r\n        FROM\r\n            hospitals\r\n        UNION ALL\r\n        SELECT\r\n            territory,\r\n            0 AS is_hospital,\r\n            1 AS is_clinic,\r\n            0 AS is_helipad \r\n        FROM\r\n            clinics\r\n    ) AS combined_data\r\nGROUP BY\r\n    territory\r\nORDER BY\r\n    territory;"
+        }
+    ],
+    "pageable": {
+        "pageNumber": 0,
+        "pageSize": 10,
+        "sort": {
+            "sorted": true,
+            "unsorted": false,
+            "empty": false
+        },
+        "offset": 0,
+        "unpaged": false,
+        "paged": true
+    },
+    "totalPages": 2,
+    "last": false,
+    "totalElements": 15,
+    "first": true,
+    "numberOfElements": 10,
+    "size": 10,
+    "number": 0,
+    "sort": {
+        "sorted": true,
+        "unsorted": false,
+        "empty": false
+    },
+    "empty": false
+}

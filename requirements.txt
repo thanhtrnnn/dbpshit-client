@@ -1,6 +1,5 @@
 requests
-beautifulsoup4
 selenium
 python-dotenv
 colorama
-webbrowser
+beautifulsoup4

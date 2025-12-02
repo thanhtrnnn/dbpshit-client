@@ -6,7 +6,7 @@ import webbrowser
 import re
 import json
 import base64
-import datetime
+from datetime import datetime
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -21,7 +21,7 @@ init(autoreset=True)
 # Tải biến môi trường từ file .env
 load_dotenv()
 
-class PTITSolver:
+class Client:
     def __init__(self):
         # Kiểm tra cấu hình bắt buộc
         self.username = os.getenv('QLDT_USERNAME')
@@ -206,30 +206,6 @@ class PTITSolver:
         self._save_user_id(user_id)
         return user_id
 
-    def get_problem_status(self, question_id):
-        """Check if a problem has been submitted and its status"""
-        if not self.user_id:
-            return None
-        
-        url = f"{self.base_api_url}/executor/user/history"
-        params = {
-            "userId": self.user_id,
-            "questionId": question_id,
-            "page": 0,
-            "size": 1
-        }
-        
-        try:
-            resp = self.session.get(url, params=params)
-            if resp.status_code == 200:
-                data = resp.json()
-                if data.get('content'):
-                    latest_sub = data['content'][0]
-                    return latest_sub.get('status')
-        except Exception:
-            pass
-        return None
-
     def view_submit_history(self, question_id):
         """Display full submission history for a problem"""
         if not self.user_id:
@@ -275,6 +251,8 @@ class PTITSolver:
                         status_color = Fore.GREEN + f"✅ {status}"
                     elif status == 'WA':
                         status_color = Fore.RED + f"❌ {status}"
+                    elif status == 'TLE':
+                        status_color = Fore.MAGENTA + f"⏳ {status}"
                     else:
                         status_color = Fore.YELLOW + f"⚠️  {status}"
                     
@@ -297,7 +275,7 @@ class PTITSolver:
         
         # Get all subdirectories (sections)
         sections = [d for d in os.listdir(problems_dir) 
-                   if os.path.isdir(os.path.join(problems_dir, d))]
+                   if os.path.isdir(os.path.join(problems_dir, d)) and not d == 'img']
         
         if not sections:
             print(Fore.YELLOW + "[!] Không tìm thấy sections. Hãy chạy organize_problems.py trước.")
@@ -338,37 +316,80 @@ class PTITSolver:
         
         all_files.sort()
         
-        print(Fore.GREEN + f"\n[+] {len(all_files)} bài tập:")
+        print(Fore.GREEN + f"\n[+] {len(all_files)} bài tập. Đang kiểm tra trạng thái...")
         
-        for idx, f_path in enumerate(all_files, 1):
-            filename = os.path.basename(f_path)
-            
-            # Extract question ID to check status
+        # Extract IDs and fetch status
+        question_ids = []
+        file_id_map = {}
+        
+        for f_path in all_files:
             try:
                 with open(f_path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 match_id = re.search(r'URL API: .*/([a-f0-9\-]+)', content)
-                
-                status_icon = "  "  # Default: not attempted
                 if match_id:
-                    question_id = match_id.group(1)
-                    status = self.get_problem_status(question_id)
-                    if status == 'AC':
-                        status_icon = Fore.GREEN + "✓ "
-                    elif status:
-                        status_icon = Fore.YELLOW + "• "
+                    qid = match_id.group(1)
+                    question_ids.append(qid)
+                    file_id_map[f_path] = qid
             except:
-                status_icon = "  "
-            
-            print(f"{status_icon}{idx}. {filename}")
+                pass
+        
+        status_map = self.check_complete_status(question_ids)
+        
+        # Filter loop
+        current_filter = 'ALL' # ALL, AC, ATTEMPTED, UNSUBMITTED
         
         while True:
-            choice = input("\nChọn số thứ tự bài tập (hoặc '0' để quay lại): ").strip()
+            filtered_files = []
+            for f_path in all_files:
+                qid = file_id_map.get(f_path)
+                status = status_map.get(qid)
+                
+                if current_filter == 'ALL':
+                    filtered_files.append(f_path)
+                elif current_filter == 'AC' and status == 'AC':
+                    filtered_files.append(f_path)
+                elif current_filter == 'ATTEMPTED' and status and status != 'AC':
+                    filtered_files.append(f_path)
+                elif current_filter == 'UNSUBMITTED' and not status:
+                    filtered_files.append(f_path)
+
+            print(Fore.CYAN + f"\n--- DANH SÁCH BÀI TẬP ({current_filter}) ---")
+            for idx, f_path in enumerate(filtered_files, 1):
+                filename = os.path.basename(f_path)
+                qid = file_id_map.get(f_path)
+                status = status_map.get(qid)
+                
+                status_icon = "  "
+                color = Fore.WHITE
+                
+                if status == 'AC':
+                    status_icon = "✅"
+                    color = Fore.GREEN
+                elif status:
+                    status_icon = "❌"
+                    color = Fore.RED
+                
+                print(f"{color}{idx}. {status_icon} {filename}{Style.RESET_ALL}")
+            
+            print(Fore.CYAN + "-"*40)
+            print("Filter: [A]ll | [C]ompleted (AC) | [T]ried | [U]nsubmitted")
+            choice = input("Chọn bài (số) hoặc Filter (A/C/T/U) hoặc '0' để quay lại: ").strip().upper()
+            
             if choice == '0':
                 return None
-            if choice.isdigit() and 1 <= int(choice) <= len(all_files):
-                return all_files[int(choice) - 1]
-            print(Fore.RED + "[-] Lựa chọn không hợp lệ.")
+            elif choice == 'A':
+                current_filter = 'ALL'
+            elif choice == 'C':
+                current_filter = 'AC'
+            elif choice == 'T':
+                current_filter = 'ATTEMPTED'
+            elif choice == 'U':
+                current_filter = 'UNSUBMITTED'
+            elif choice.isdigit() and 1 <= int(choice) <= len(filtered_files):
+                return filtered_files[int(choice) - 1]
+            else:
+                print(Fore.RED + "[-] Lựa chọn không hợp lệ.")
 
     def search_questions(self):
         """Tìm kiếm câu hỏi trong thư mục local (Recursive)"""
@@ -393,20 +414,81 @@ class PTITSolver:
             print(Fore.YELLOW + "[-] Không tìm thấy bài tập nào.")
             return None
         
-        print(Fore.GREEN + f"\n[+] Tìm thấy {len(matched_files)} bài tập:")
+        print(Fore.GREEN + f"\n[+] Tìm thấy {len(matched_files)} bài tập. Đang kiểm tra trạng thái...")
         matched_files.sort()
+
+        # Extract IDs and fetch status
+        question_ids = []
+        file_id_map = {}
         
-        for idx, f_path in enumerate(matched_files):
-            rel_path = os.path.relpath(f_path, problems_dir)
-            print(f"{idx + 1}. {rel_path}")
+        for f_path in matched_files:
+            try:
+                with open(f_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                match_id = re.search(r'URL API: .*/([a-f0-9\-]+)', content)
+                if match_id:
+                    qid = match_id.group(1)
+                    question_ids.append(qid)
+                    file_id_map[f_path] = qid
+            except:
+                pass
+        
+        status_map = self.check_complete_status(question_ids)
+        
+        # Filter loop
+        current_filter = 'ALL' # ALL, AC, ATTEMPTED, UNSUBMITTED
         
         while True:
-            choice = input("\nChọn số thứ tự bài tập (hoặc '0' để quay lại): ").strip()
+            filtered_files = []
+            for f_path in matched_files:
+                qid = file_id_map.get(f_path)
+                status = status_map.get(qid)
+                
+                if current_filter == 'ALL':
+                    filtered_files.append(f_path)
+                elif current_filter == 'AC' and status == 'AC':
+                    filtered_files.append(f_path)
+                elif current_filter == 'ATTEMPTED' and status and status != 'AC':
+                    filtered_files.append(f_path)
+                elif current_filter == 'UNSUBMITTED' and not status:
+                    filtered_files.append(f_path)
+
+            print(Fore.CYAN + f"\n--- DANH SÁCH BÀI TẬP ({current_filter}) ---")
+            for idx, f_path in enumerate(filtered_files, 1):
+                rel_path = os.path.relpath(f_path, problems_dir)
+                qid = file_id_map.get(f_path)
+                status = status_map.get(qid)
+                
+                status_icon = "  "
+                color = Fore.WHITE
+                
+                if status == 'AC':
+                    status_icon = "✅"
+                    color = Fore.GREEN
+                elif status:
+                    status_icon = "❌"
+                    color = Fore.RED
+                
+                print(f"{color}{idx}. {status_icon} {rel_path}{Style.RESET_ALL}")
+            
+            print(Fore.CYAN + "-"*40)
+            print("Filter: [A]ll | [C]ompleted (AC) | [T]ried | [U]nsubmitted")
+            choice = input("Chọn bài (số) hoặc Filter (A/C/T/U) hoặc '0' để quay lại: ").strip().upper()
+            
             if choice == '0':
                 return None
-            if choice.isdigit() and 1 <= int(choice) <= len(matched_files):
-                return matched_files[int(choice) - 1]
-            print(Fore.RED + "[-] Lựa chọn không hợp lệ.")
+            elif choice == 'A':
+                current_filter = 'ALL'
+            elif choice == 'C':
+                current_filter = 'AC'
+            elif choice == 'T':
+                current_filter = 'ATTEMPTED'
+            elif choice == 'U':
+                current_filter = 'UNSUBMITTED'
+            elif choice.isdigit() and 1 <= int(choice) <= len(filtered_files):
+                return filtered_files[int(choice) - 1]
+            else:
+                print(Fore.RED + "[-] Lựa chọn không hợp lệ.")
 
     def fetch_question(self, file_path):
         """Đọc nội dung bài tập từ file local và lấy thông tin từ API"""
@@ -473,6 +555,7 @@ class PTITSolver:
         selected_id = None
         if question_data and question_data.get('db_types'):
             db_types = question_data['db_types']
+            print(Fore.GREEN + f"[+] DB Types: {', '.join([db['name'] for db in db_types])}")
             for db in db_types:
                 if 'mysql' in db['name'].lower():
                     selected_id = db['id']
@@ -533,7 +616,7 @@ class PTITSolver:
             if line.strip().startswith('--'):
                 continue
             cleaned_lines.append(line)
-        return '\n'.join(cleaned_lines).strip()
+        return '\n'.join(cleaned_lines).strip().rstrip(';')
 
     def print_table(self, data):
         """In bảng kết quả đẹp hơn"""
@@ -646,18 +729,42 @@ class PTITSolver:
                 pass
         return None
 
+    def check_complete_status(self, question_ids):
+        """Check status for multiple questions"""
+        if not self.user_id or not question_ids:
+            return {}
+            
+        url = f"{self.base_api_url}/submit-history/check/complete"
+        payload = {
+            "questionIds": question_ids,
+            "userId": self.user_id
+        }
+        
+        try:
+            resp = self.session.post(url, json=payload)
+            if resp.status_code == 200:
+                data = resp.json()
+                # Map questionId -> status
+                status_map = {}
+                for item in data:
+                    status_map[item['questionId']] = item['status']
+                return status_map
+        except Exception:
+            pass
+        return {}
+
 def main():
     if not os.path.exists('.env'):
         print(Fore.RED + "[-] Lỗi: Không tìm thấy file .env. Hãy tạo file cấu hình trước.")
         return
 
-    solver = PTITSolver()
+    client = Client()
     
     # 1. Login
-    solver.login_selenium()
+    client.login_selenium()
     
     # 2. Lấy User ID
-    user_id = solver.get_user_id()
+    user_id = client.get_user_id()
     
     current_question_id = None
     current_question_data = None
@@ -679,41 +786,41 @@ def main():
             break
             
         elif choice == '1':
-            file_path = solver.search_questions()
+            file_path = client.search_questions()
             if file_path:
-                current_question_data = solver.fetch_question(file_path)
+                current_question_data = client.fetch_question(file_path)
                 if current_question_data:
                     current_question_id = current_question_data.get('id')
-                    solver.display_question(current_question_data)
-                    solver.generate_sql_file(current_question_data)
+                    client.display_question(current_question_data)
+                    client.generate_sql_file(current_question_data)
 
         elif choice == '2':
-            file_path = solver.browse_by_sections()
+            file_path = client.browse_by_sections()
             if file_path:
-                current_question_data = solver.fetch_question(file_path)
+                current_question_data = client.fetch_question(file_path)
                 if current_question_data:
                     current_question_id = current_question_data.get('id')
-                    solver.display_question(current_question_data)
-                    solver.generate_sql_file(current_question_data)
+                    client.display_question(current_question_data)
+                    client.generate_sql_file(current_question_data)
                     
         elif choice == '3' and current_question_id:
             try:
-                with open("solution.sql", 'r', encoding='utf-8') as f:
+                with open("solution.sql", 'r', encoding='utf-8-sig') as f:
                     sql_content = f.read()
-                solver.run_query(current_question_id, sql_content, current_question_data)
+                client.run_query(current_question_id, sql_content, current_question_data)
             except FileNotFoundError:
                 print(Fore.RED + "[-] Không tìm thấy file solution.sql")
                 
         elif choice == '4' and current_question_id:
             try:
-                with open("solution.sql", 'r', encoding='utf-8') as f:
+                with open("solution.sql", 'r', encoding='utf-8-sig') as f:
                     sql_content = f.read()
             except FileNotFoundError:
                 print(Fore.RED + "[-] Không tìm thấy file solution.sql")
                 continue
 
-            if solver.submit_solution(current_question_id, sql_content, current_question_data):
-                result = solver.check_submission_status(user_id, current_question_id)
+            if client.submit_solution(current_question_id, sql_content, current_question_data):
+                result = client.check_submission_status(user_id, current_question_id)
                 
                 if result:
                     status = result['status']
@@ -723,13 +830,15 @@ def main():
                         print(Fore.GREEN + f"\n✅ CHẤP NHẬN (ACCEPTED) | Test: {test_pass}")
                     elif status == 'WA':
                         print(Fore.RED + f"\n❌ SAI LÈ (WRONG ANSWER) | Test: {test_pass}")
+                    elif status == 'TLE':
+                        print(Fore.RED + f"\n⏳ QUÁ THỜI GIAN (TIME LIMIT EXCEEDED) | Test: {test_pass}")
                     else:
-                        print(Fore.YELLOW + f"\n⚠️ KẾT QUẢ: {status} | Test: {test_pass}")
+                        print(Fore.MAGENTA + f"\n⚠️ KẾT QUẢ: {status} | Test: {test_pass}")
                 else:
                     print(Fore.RED + "[-] Timeout: Không lấy được kết quả chấm.")
 
         elif choice == '5' and current_question_id:
-            solver.view_submit_history(current_question_id)
+            client.view_submit_history(current_question_id)
 
 if __name__ == "__main__":
     main()
