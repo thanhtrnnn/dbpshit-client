@@ -1,8 +1,9 @@
--- ID: e52389d1-08af-43ba-a7fd-7c4414dfde95
--- Code: SQL2029
--- Title: Chèn bản ghi mới vào bảng 'water_conservation_goals' với dữ liệu sau vùng = 'Đông Nam', mục tiêu = 5, năm = 2023
+-- ID: 360518cb-fb15-47bb-9b98-b76e01a39f40
+-- Code: SQL130
+-- Title: Product  Sales Anaysis
 -- Yêu cầu: Viết câu lệnh SQL bên dưới
 -- ********************************************
 
-INSERT INTO water_conservation_goals (region, goal, year)
-VALUES ('Southeast', 5, 2023);
+SELECT p.product_name, s.year, s.price
+FROM Sales s
+JOIN Product p ON s.product_id = p.product_id;  
