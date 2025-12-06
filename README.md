@@ -34,16 +34,13 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
     # Kích hoạt môi trường ảo
     # Trên Windows:
     .venv\Scripts\activate
-    # Trên macOS/Linux:
-    # source .venv/bin/activate
 
     # Cài đặt các thư viện phụ thuộc
     pip install -r requirements.txt
     ```
-    *Các thư viện bao gồm: `requests`, `beautifulsoup4`, `selenium`, `python-dotenv`.*
 
 3.  **Cấu hình môi trường**:
-    Tạo một file `.env` trong thư mục gốc với các biến sau:
+    Copy file `.env.example` đổi tên thành `.env` trong thư mục gốc với các biến sau:
     ```env
     QLDT_USERNAME=tên_đăng_nhập_của_bạn
     QLDT_PASSWORD=mật_khẩu_của_bạn
