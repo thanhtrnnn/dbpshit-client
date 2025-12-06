@@ -5,10 +5,10 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
 ## Tính năng
 
 -   **Tự động đăng nhập**: Sử dụng Selenium để đăng nhập và trích xuất JWT token tự động.
--   **Tìm kiếm bài tập cục bộ**: Tìm kiếm các bài tập được lưu trữ cục bộ trong thư mục `problems/`.
+-   **Tìm kiếm & Duyệt bài tập**: Tìm kiếm theo từ khóa hoặc duyệt theo chủ đề (Section). Hỗ trợ lọc bài tập theo trạng thái (AC, Chưa làm, ...).
 -   **Hiển thị trên trình duyệt**: Xem mô tả bài tập trực tiếp trên trình duyệt web mặc định của bạn.
 -   **Thực thi SQL**: Chạy thử các câu lệnh SQL với API để kiểm tra giải pháp của bạn (Dry Run).
--   **Nộp bài**: Nộp giải pháp SQL của bạn và nhận phản hồi ngay lập tức (AC, WA, v.v.).
+-   **Nộp bài & Lịch sử**: Nộp giải pháp, nhận phản hồi ngay lập tức và xem lại lịch sử các lần nộp trước đó.
 -   **Định dạng kết quả**: Kết quả truy vấn được hiển thị dưới dạng bảng sạch sẽ, dễ đọc.
 -   **Xử lý lỗi**: Thông báo lỗi rõ ràng cho các vấn đề phổ biến như "Access Denied" hoặc lỗi cú pháp SQL.
 -   **Làm sạch Payload**: Tự động xóa các comment khỏi SQL của bạn trước khi nộp để tránh lỗi API.
@@ -61,19 +61,22 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
     ```
 
 2.  **Các tùy chọn Menu**:
-    -   **1. Tìm kiếm bài tập (Local)**: Nhập từ khóa để tìm kiếm bài tập trong thư mục `problems/`. Chọn một bài tập để xem trên trình duyệt và tạo file `solution.sql`.
-    -   **2. Nhập ID bài tập trực tiếp**: (Hiện đang bị vô hiệu hóa trong chế độ local).
-    -   **3. Chạy thử code**: Thực thi mã SQL hiện có trong `solution.sql` với bài tập đã chọn. Hiển thị bảng kết quả hoặc thông báo lỗi.
-    -   **4. Nộp bài**: Nộp mã SQL trong `solution.sql` để chấm điểm. Hiển thị trạng thái (Chấp nhận, Sai kết quả, v.v.) và kết quả test case.
+    -   **1. Tìm kiếm bài tập (Local)**: Nhập từ khóa để tìm kiếm bài tập trong thư mục `problems/`. Hỗ trợ lọc theo trạng thái (Đã làm, Chưa làm, Đang làm).
+    -   **2. Duyệt bài tập theo Section**: Duyệt bài tập theo cấu trúc thư mục/chương. Hỗ trợ lọc theo trạng thái.
+    -   **3. Chạy thử code**: (Chỉ hiện khi đã chọn bài) Thực thi mã SQL hiện có trong `solution.sql` với bài tập đã chọn.
+    -   **4. Nộp bài**: (Chỉ hiện khi đã chọn bài) Nộp mã SQL trong `solution.sql` để chấm điểm.
+    -   **5. Xem lịch sử nộp bài**: (Chỉ hiện khi đã chọn bài) Xem lại lịch sử các lần nộp trước đó của bài tập hiện tại.
     -   **0. Thoát**: Thoát ứng dụng.
 
 3.  **Quy trình làm việc**:
-    -   Chọn tùy chọn **1** để tìm bài tập.
-    -   Bài tập sẽ mở trong trình duyệt của bạn.
-    -   Mở `solution.sql` trong trình soạn thảo của bạn.
+    -   Chọn tùy chọn **1** hoặc **2** để tìm/chọn bài tập.
+    -   Trong danh sách bài tập, bạn có thể lọc theo trạng thái: `[A]ll`, `[C]ompleted` (AC), `[T]ried`, `[U]nsubmitted`.
+    -   Sau khi chọn, bài tập sẽ mở trong trình duyệt và file `solution.sql` sẽ được tạo/cập nhật.
+    -   Mở `solution.sql` trong trình soạn thảo của bạn (VS Code, Notepad, ...).
     -   Viết câu lệnh SQL của bạn vào `solution.sql` (bên dưới phần header).
-    -   Chọn tùy chọn **3** để kiểm tra câu lệnh của bạn.
-    -   Chọn tùy chọn **4** để nộp bài khi đã sẵn sàng.
+    -   Quay lại menu chính, chọn tùy chọn **3** để kiểm tra thử (Dry Run).
+    -   Chọn tùy chọn **4** để nộp bài và nhận kết quả chấm.
+    -   Chọn tùy chọn **5** nếu muốn xem lại lịch sử nộp bài.
 
 ## Khắc phục sự cố
 
