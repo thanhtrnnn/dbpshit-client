@@ -28,7 +28,7 @@ class Client:
         self.password = os.getenv('QLDT_PASSWORD')
         self.login_url = os.getenv('LOGIN_URL')
         self.base_api_url = os.getenv('BASE_API_URL')
-        self.user_id = None
+        self.user_id = os.getenv('USER_ID', self.get_user_id())
         
         if not all([self.username, self.password, self.login_url]):
             print(Fore.RED + "[-] Lỗi: Thiếu thông tin đăng nhập trong file .env")

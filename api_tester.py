@@ -1,109 +1,84 @@
-from solver import PTITSolver
-import time
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from client import Client
+import json
+from colorama import Fore, Style
 
-class APITester(PTITSolver):
-    def login_selenium(self):
-        super().login_selenium()
-        # Extract token from LocalStorage
-        print("[*] Extracting token from LocalStorage...")
-        options = webdriver.ChromeOptions()
-        options.add_argument('--headless')
-        options.add_argument('--disable-gpu')
-        options.add_argument('--no-sandbox')
-        options.add_argument('--disable-dev-shm-usage')
+class APITester(Client):
+    def test_search(self):
+        """Test the question search endpoint"""
+        print(Fore.CYAN + "\n=== TESTING SEARCH ENDPOINTS ===")
+        url = f"{self.base_api_url}/question/search"
         
-        # Re-attach to the session if possible, but selenium doesn't support that easily.
-        # We need to do this DURING the main login_selenium call or modify PTITSolver.
-        # Since we are inheriting, let's just modify PTITSolver in solver.py directly 
-        # as it is the most efficient way and we are confident in the plan.
-        # BUT, for this tester, we will just re-implement login here to get the token.
+        # Test Case 1: Get All (Page 0)
+        params = {
+            "page": 0,
+            "size": 1000,
+            "sort": "createdAt,desc"
+        }
+
+        payload = {
+            "keyword": "",
+            "userId": self.user_id
+        }
+        print(Fore.YELLOW + f"[*] Requesting: POST {url}")
+        print(f"    Params: {params}")
         
-        driver = webdriver.Chrome(options=options)
         try:
-            driver.get(self.login_url)
-            wait = WebDriverWait(driver, 20) # Increased timeout
+            resp = self.session.post(url, json=payload, params=params)
+            print(f"    Status: {resp.status_code}")
             
-            # Try to handle the login trigger button if it exists
-            try:
-                print("[*] Looking for login trigger button...")
-                btn = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".grid.grid-cols-1.gap-4")))
-                btn.click()
-                print("[*] Clicked login trigger button.")
-            except Exception as e:
-                print(f"[*] Login trigger button not found or not clickable (might be already on login page): {e}")
-
-            print("[*] Waiting for username field...")
-            wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#qldt-username"))).send_keys(self.username)
-            driver.find_element(By.CSS_SELECTOR, "#qldt-password").send_keys(self.password)
-            
-            # Click submit instead of .submit() on element, sometimes safer
-            submit_btn = driver.find_element(By.CSS_SELECTOR, "button[type='submit']") 
-            # If explicit submit button exists, use it. Otherwise fallback.
-            if submit_btn:
-                 submit_btn.click()
+            if resp.status_code == 200:
+                data = resp.json()
+                content = data.get('content', [])
+                total = data.get('totalElements', 0)
+                
+                print(Fore.GREEN + f"[+] Success! Found {len(content)} items on page 0 (Total available: {total})")
+                
+                if content:
+                    print(Fore.WHITE + "\nSample Results:")
+                    print("-" * 80)
+                    print(f"{'CODE':<10} | {'TITLE':<50} | {'LEVEL':<10}")
+                    print("-" * 80)
+                    for item in content:  # Show all items
+                        code = item.get('questionCode', 'N/A')
+                        title = item.get('title', 'N/A')
+                        level = item.get('level', 'N/A')
+                        print(f"{code:<10} | {title[:47]+'...' if len(title)>47 else title:<50} | {level:<10}")
+                    print("-" * 80)
             else:
-                 driver.find_element(By.CSS_SELECTOR, "#qldt-password").submit()
-            
-            print("[*] Submitted credentials. Waiting for navigation...")
-            time.sleep(10) # Increased wait time
-            
-            # Check if we are still on login page
-            if "login" in driver.current_url:
-                 print(f"[-] Still on login page: {driver.current_url}")
-            
-            # Extract Token
-            print("[*] Attempting to extract token...")
-            token = driver.execute_script("return localStorage.getItem('token') || localStorage.getItem('accessToken') || localStorage.getItem('auth_token');")
-            if token:
-                print(f"[+] Token found: {token[:20]}...")
-                self.session.headers.update({'Authorization': f"Bearer {token}"})
-            else:
-                print("[-] Token NOT found in LocalStorage")
-                # Try looking at cookies just in case
-                # print(driver.get_cookies())
-
-            for cookie in driver.get_cookies():
-                self.session.cookies.set(cookie['name'], cookie['value'])
+                print(Fore.RED + f"[-] Failed. Response: {resp.text[:500]}")
                 
         except Exception as e:
-            print(f"[-] Login failed: {e}")
-        finally:
-            driver.quit()
+            print(Fore.RED + f"[-] Exception: {e}")
 
     def test_executor(self):
-        print("\n=== TESTING EXECUTOR ENDPOINTS ===")
-        # We need a valid question ID. Let's use the one found earlier: f7c4953d-554f-4ba8-a99b-d58671879c49 (SQL132)
-        question_id = "f7c4953d-554f-4ba8-a99b-d58671879c49"
+        """Test the SQL executor endpoint"""
+        print(Fore.CYAN + "\n=== TESTING EXECUTOR ENDPOINTS ===")
+        # We need a valid question ID. 
+        # Note: This ID might need to be updated to a valid one in your DB
+        question_id = "f7c4953d-554f-4ba8-a99b-d58671879c49" 
         sql = "SELECT * FROM LearnSQL;"
         
         url = f"{self.base_api_url}/executor/user"
         payload = {
             "questionId": question_id,
             "sql": sql,
-            "typeDatabaseId": "11111111-1111-1111-1111-111111111111"
+            "typeDatabaseId": "11111111-1111-1111-1111-111111111111",
+            "userId": self.user_id
         }
         
-        self._make_request("POST /executor/user (Run Query)", "POST", url, json=payload)
-
-    def _make_request(self, name, method, url, params=None, json=None):
-        print(f"\n[*] Testing: {name}")
+        print(Fore.YELLOW + f"[*] Requesting: POST {url}")
         try:
-            if method == "GET":
-                resp = self.session.get(url, params=params)
-            else:
-                resp = self.session.post(url, json=json, params=params)
-            
+            resp = self.session.post(url, json=payload)
             print(f"    Status: {resp.status_code}")
-            print(f"    Response: {resp.text[:300]}...") # Truncate
+            print(f"    Response: {resp.text[:300]}...")
         except Exception as e:
-            print(f"    Error: {e}")
+            print(Fore.RED + f"[-] Error: {e}")
 
 if __name__ == "__main__":
     tester = APITester()
+    # Use the robust login from the parent Client class
     tester.login_selenium()
-    # tester.test_search()
-    tester.test_executor()
+    print(tester.session.headers)
+    # Run tests
+    tester.test_search()
+    # tester.test_executor()

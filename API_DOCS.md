@@ -14,7 +14,85 @@ All requests (except login) require a Bearer Token in the `Authorization` header
 
 ## Endpoints
 
-### 1. Get Question Details
+### 1. Search Questions
+Searches for questions with filtering and pagination.
+
+- **URL**: `/question/search`
+- **Method**: `POST`
+- **Query Parameters**:
+  - `page` (int): Page number (0-indexed).
+  - `size` (int): Number of items per page.
+  - `sort` (string): Sort criteria (e.g., `createdAt,desc`).
+- **Body (JSON)**:
+```json
+{
+  "keyword": "",
+  "userId": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958"
+}
+```
+- **Response Example**:
+```json
+{
+  "content": [
+      {
+          "id": "f7c4953d-554f-4ba8-a99b-d58671879c49",
+          "createdAt": "2023-01-01T10:59:30",
+          "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+          "lastModifiedAt": "2025-11-29T14:57:18.676031",
+          "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+          "questionCode": "SQL132",
+          "title": "Làm quen với LearnSQL",
+          "point": 10.0,
+          "type": "SELECT",
+          "enable": true,
+          "isSynchorus": true,
+          "totalSub": 9743,
+          "acceptance": 54.22,
+          "level": "EASY",
+          "prefixCode": "hiqEBg",
+          "isShare": true,
+          "questionDetails": [
+              {
+                  "id": "39079865-cc9a-4143-8ae6-522d3d60bc29",
+                  "lastModifiedAt": "2025-09-26T14:53:10.002268",
+                  "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+                  "typeDatabase": {
+                      "id": "11111111-1111-1111-1111-111111111111",
+                      "name": "Mysql"
+                  }
+              }
+          ]
+      }
+  ],
+  "pageable": {
+      "pageNumber": 0,
+      "pageSize": 10,
+      "sort": {
+          "sorted": true,
+          "unsorted": false,
+          "empty": false
+      },
+      "offset": 0,
+      "paged": true,
+      "unpaged": false
+  },
+  "totalPages": 1,
+  "last": true,
+  "totalElements": 1,
+  "first": true,
+  "numberOfElements": 1,
+  "size": 10,
+  "number": 0,
+  "sort": {
+      "sorted": true,
+      "unsorted": false,
+      "empty": false
+  },
+  "empty": false
+}
+```
+
+### 2. Get Question Details
 Retrieves detailed information about a specific question, including supported database types.
 
 - **URL**: `/question/{id}`
@@ -41,7 +119,7 @@ Retrieves detailed information about a specific question, including supported da
 }
 ```
 
-### 2. Run Query (Dry Run)
+### 3. Run Query (Dry Run)
 Executes a SQL query against the database without submitting it for grading. Used for testing.
 
 - **URL**: `/executor/user`
@@ -51,7 +129,8 @@ Executes a SQL query against the database without submitting it for grading. Use
 {
   "questionId": "c3cce420-fe30-4b07-a021-18cd21c324ee",
   "sql": "SELECT * FROM Student;",
-  "typeDatabaseId": "11111111-1111-1111-1111-111111111111"
+  "typeDatabaseId": "11111111-1111-1111-1111-111111111111",
+  "userId": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958"
 }
 ```
 
@@ -78,7 +157,7 @@ Executes a SQL query against the database without submitting it for grading. Use
 }
 ```
 
-### 3. Submit Solution
+### 4. Submit Solution
 Submits a SQL query for grading.
 
 - **URL**: `/executor/submit`
@@ -88,7 +167,8 @@ Submits a SQL query for grading.
 {
   "questionId": "c3cce420-fe30-4b07-a021-18cd21c324ee",
   "sql": "SELECT * FROM Student;",
-  "typeDatabaseId": "11111111-1111-1111-1111-111111111111"
+  "typeDatabaseId": "11111111-1111-1111-1111-111111111111",
+  "userId": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958"
 }
 ```
 
@@ -101,7 +181,7 @@ Submits a SQL query for grading.
 ```
 *(Note: Actual success response structure may vary, but `status: 1` indicates success)*
 
-### 4. Get Submission History
+### 5. Get Submission History
 Retrieves the submission history for a specific user and question.
 
 - **URL**: `/submit-history/user/{userId}`
@@ -143,7 +223,7 @@ Retrieves the submission history for a specific user and question.
   }
 }
 ```
-### 5. Check Submission Status (Bulk)
+### 6. Check Submission Status (Bulk)
 Retrieves the submission status for a list of questions.
 
 - **URL**: `/submit-history/check/complete`

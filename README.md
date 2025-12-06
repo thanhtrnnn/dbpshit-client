@@ -59,13 +59,20 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
     ```bash
     python client.py
     ```
+    > Hướng dẫn cho gà mờ:
+    > - Bạn sẽ thấy menu tương tác trong terminal. 
+    > - Chọn 1 để tìm kiếm bài tập hoặc 2 để duyệt theo dạng bài. 
+    > - Nhập số thứ tự hiển thị trước tên bài tập để chọn. Trình duyệt sẽ mở đề bài.
+    > - Làm bài trong `solution.sql`, sau đó quay lại menu để chạy thử (3) hoặc nộp bài (4).
 
 2.  **Các tùy chọn Menu**:
-    -   **1. Tìm kiếm bài tập (Local)**: Nhập từ khóa để tìm kiếm bài tập trong thư mục `problems/`. Hỗ trợ lọc theo trạng thái (Đã làm, Chưa làm, Đang làm).
-    -   **2. Duyệt bài tập theo Section**: Duyệt bài tập theo cấu trúc thư mục/chương. Hỗ trợ lọc theo trạng thái.
-    -   **3. Chạy thử code**: (Chỉ hiện khi đã chọn bài) Thực thi mã SQL hiện có trong `solution.sql` với bài tập đã chọn.
-    -   **4. Nộp bài**: (Chỉ hiện khi đã chọn bài) Nộp mã SQL trong `solution.sql` để chấm điểm.
-    -   **5. Xem lịch sử nộp bài**: (Chỉ hiện khi đã chọn bài) Xem lại lịch sử các lần nộp trước đó của bài tập hiện tại.
+    - Giao diện ban đầu:
+        -   **1. Tìm kiếm bài tập (Local)**: Nhập từ khóa để tìm kiếm bài tập trong thư mục `problems/`. Hỗ trợ lọc theo trạng thái (Đã làm, Chưa làm, Đang làm).
+        -   **2. Duyệt bài tập theo Section**: Duyệt bài tập theo cấu trúc thư mục/chương. Hỗ trợ lọc theo trạng thái.
+    - Giao diện sau khi chọn bài:
+        -   **3. Chạy thử code**: (Chỉ hiện khi đã chọn bài) Thực thi mã SQL hiện có trong `solution.sql` với bài tập đã chọn.
+        -   **4. Nộp bài**: (Chỉ hiện khi đã chọn bài) Nộp mã SQL trong `solution.sql` để chấm điểm.
+        -   **5. Xem lịch sử nộp bài**: (Chỉ hiện khi đã chọn bài) Xem lại lịch sử các lần nộp trước đó của bài tập hiện tại.
     -   **0. Thoát**: Thoát ứng dụng.
 
 3.  **Quy trình làm việc**:
