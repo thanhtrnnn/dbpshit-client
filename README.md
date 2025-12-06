@@ -47,10 +47,10 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
     ```env
     QLDT_USERNAME=tên_đăng_nhập_của_bạn
     QLDT_PASSWORD=mật_khẩu_của_bạn
-    LOGIN_URL=https://qldt.ptit.edu.vn
-    BASE_API_URL=https://dbapi.ptit.edu.vn/api
+    LOGIN_URL=https://db.ptit.edu.vn/login
+    BASE_API_URL=https://dbapi.ptit.edu.vn/api/app
     DEFAULT_DB_TYPE=11111111-1111-1111-1111-111111111111
-    USER_ID=uuid_người_dùng_của_bạn
+    USER_ID=
     ```
     > *Lưu ý*: 
     > - `USER_ID` có thể được lấy tự động hoặc nhập thủ công nếu thiếu.
