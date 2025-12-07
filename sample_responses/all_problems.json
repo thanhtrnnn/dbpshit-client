@@ -1,0 +1,1667 @@
+{
+    "content": [
+        {
+            "id": "f7c4953d-554f-4ba8-a99b-d58671879c49",
+            "createdAt": "2023-01-01T10:59:30",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:57:18.676031",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL132",
+            "title": "Làm quen với LearnSQL",
+            "point": 10.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 9886,
+            "acceptance": 54.19,
+            "level": "EASY",
+            "prefixCode": "hiqEBg",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "39079865-cc9a-4143-8ae6-522d3d60bc29",
+                    "lastModifiedAt": "2025-09-26T14:53:10.002268",
+                    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "6b3ec22e-7dde-46e1-83c3-0c44622faefe",
+            "createdAt": "2024-09-08T20:51:09.556943",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:57:28.375405",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL094",
+            "title": "Consecutive number",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 11341,
+            "acceptance": 20.64,
+            "level": "EASY",
+            "prefixCode": "sQucjZ",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "36f753c3-adf8-4ece-bf1c-14e4cc0fb306",
+                    "lastModifiedAt": "2025-11-01T10:12:10.633793",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "8e67251c-8649-4119-ae90-123d733b10d1",
+                    "lastModifiedAt": "2025-11-01T10:12:10.633812",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5a948be2-3de7-4985-b94b-06d6db1c4163",
+            "createdAt": "2024-09-08T21:11:51.739265",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:57:34.189344",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL095",
+            "title": "Big Countries",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 5282,
+            "acceptance": 59.94,
+            "level": "MEDIUM",
+            "prefixCode": "m6N0Q5",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "ace51124-91b2-44a8-bae6-3c41e250b483",
+                    "lastModifiedAt": "2024-12-23T11:00:42.246984",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "6f19585d-07b6-4143-80b3-b6abb30107e2",
+                    "lastModifiedAt": "2024-12-23T11:00:42.247094",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5f64fb51-eea8-46ec-865d-97f3e992575b",
+            "createdAt": "2024-09-08T22:12:57.279933",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:57:40.505728",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL096",
+            "title": " Replace Employee ID with unique identify",
+            "point": 8.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 5518,
+            "acceptance": 58.03,
+            "level": "MEDIUM",
+            "prefixCode": "SfgrOH",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "c51f3f1b-e5f1-44f6-8ddd-084268a61fd0",
+                    "lastModifiedAt": "2024-12-23T11:04:16.454715",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "f3536131-c1ad-42d1-9181-d4ad19b2f459",
+                    "lastModifiedAt": "2024-12-23T11:04:16.454389",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "df5664b3-a36a-4078-92f2-e42a9edc4861",
+            "createdAt": "2024-09-08T22:18:21.982318",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:57:45.956159",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL097",
+            "title": "Average time of process per machine",
+            "point": 9.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 3296,
+            "acceptance": 65.17,
+            "level": "MEDIUM",
+            "prefixCode": "KNreNo",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "9c0dbeef-0a48-49d5-b6ae-fb3629e19940",
+                    "lastModifiedAt": "2025-11-23T12:04:35.983944",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "1b658655-9cf0-4d70-93d8-f17d350ee915",
+                    "lastModifiedAt": "2025-11-23T12:04:35.983969",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "c30da897-442d-445e-9153-3f0818862286",
+            "createdAt": "2024-09-08T22:23:13.356832",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:57:51.183491",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL098",
+            "title": "Delete duplicate emails",
+            "point": 5.0,
+            "type": "DELETE",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 3807,
+            "acceptance": 64.38,
+            "level": "EASY",
+            "prefixCode": "E11COB",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "f0d0319a-74e7-4b01-86b1-ee927b206222",
+                    "lastModifiedAt": "2024-12-08T17:00:43.466491",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "6236487a-fbe1-4886-8dfd-2dd4c8a10ace",
+                    "lastModifiedAt": "2024-12-08T17:00:43.46697",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5f06da94-ad81-4241-80b3-4acad7cc6414",
+            "createdAt": "2024-09-08T23:03:25.42976",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:57:56.749832",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL099",
+            "title": "Find custom referee",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 7029,
+            "acceptance": 45.63,
+            "level": "EASY",
+            "prefixCode": "SJslyz",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "cb1a524a-7e4d-4b22-baa0-fda54e2618bb",
+                    "lastModifiedAt": "2025-11-20T22:51:50.210314",
+                    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "e34ac6a9-ad1d-4efe-a954-b1a043208fb0",
+                    "lastModifiedAt": "2025-11-20T22:51:50.210356",
+                    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "242cc8a1-17d1-49ef-9153-9b43f097d379",
+            "createdAt": "2024-09-13T17:07:16.553907",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:58:02.061477",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL100",
+            "title": "Recycle and low fat product",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 3462,
+            "acceptance": 87.49,
+            "level": "EASY",
+            "prefixCode": "RfyY6U",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "2ffee638-a236-4d30-87a7-4dd5384b6450",
+                    "lastModifiedAt": "2024-12-23T10:47:14.792752",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "a5512efa-17d9-4440-99a6-9a4c6feb50b1",
+                    "lastModifiedAt": "2024-12-23T10:47:14.781664",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "f4818a0c-4b6e-4b52-804a-d29bab7f0b20",
+            "createdAt": "2024-09-13T17:07:28.143605",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:58:07.413392",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL101",
+            "title": "Not boring movie",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 4499,
+            "acceptance": 50.97,
+            "level": "EASY",
+            "prefixCode": "p4bJSY",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "ba9fbe18-03c4-4e41-9acf-c9a3cef4f217",
+                    "lastModifiedAt": "2024-12-23T11:11:54.532662",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "6381ce26-8c37-4b93-ae00-65825d844122",
+            "createdAt": "2024-09-13T17:18:25.541558",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:58:16.113707",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL102",
+            "title": "Rising temperature",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 4334,
+            "acceptance": 61.54,
+            "level": "EASY",
+            "prefixCode": "TlHBaw",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "cbb72329-62ce-463c-920c-07832131ed86",
+                    "lastModifiedAt": "2024-12-23T11:17:50.566614",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "b0fe9e24-ebdd-4cd1-8057-7a26a09af43a",
+                    "lastModifiedAt": "2024-12-23T11:17:50.566411",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "13581b1a-583d-465c-a9d2-25a4794930ba",
+            "createdAt": "2024-09-19T05:39:06.083174",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:58:23.586857",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL103",
+            "title": "Liệt kê 2 khóa học theo tên giảng viên (sắp xếp theo tên giảm dần) ",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 7692,
+            "acceptance": 28.89,
+            "level": "EASY",
+            "prefixCode": "g9rt2t",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "66fb4f6c-47d9-4707-b218-7fe9eb8968c6",
+                    "lastModifiedAt": "2025-10-16T10:28:52.656457",
+                    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "729091b5-80b5-40d1-8407-77971305c179",
+            "createdAt": "2024-09-20T06:38:39.952723",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T14:58:32.956639",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL104",
+            "title": "Tìm các lớp học đang được mở",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 10584,
+            "acceptance": 13.35,
+            "level": "EASY",
+            "prefixCode": "9brYYF",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "bfc89766-41a8-4e9f-bf05-e2d39a99cae2",
+                    "lastModifiedAt": "2024-12-08T16:54:33.444695",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "90c52ccb-6e5f-4dec-8829-9606d2c4e0ed",
+                    "lastModifiedAt": "2024-12-08T16:54:33.44435",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4a20f9bb-fea7-4020-a3fd-2b610b8a7050",
+            "createdAt": "2024-09-20T06:53:47.946365",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-02T14:05:36.691147",
+            "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+            "questionCode": "SQL105",
+            "title": "Liệt kê 2 khóa học theo tên giảng viên (sắp xếp tăng dần)",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 6869,
+            "acceptance": 14.44,
+            "level": "MEDIUM",
+            "prefixCode": "cUHo9W",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "8db8465d-2344-46ea-9b11-bc5403259774",
+                    "lastModifiedAt": "2025-11-02T14:05:36.691197",
+                    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "48655e83-8b1e-42f1-ac2f-0ce95e9ddec0",
+            "createdAt": "2024-09-20T06:58:38.520124",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-08-28T00:39:48.00479",
+            "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+            "questionCode": "SQL106",
+            "title": "Tìm firstname của Instructor",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 2753,
+            "acceptance": 88.81,
+            "level": "EASY",
+            "prefixCode": "hLgJ9R",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "0b18b837-cf5f-4b58-a1a3-67e8ee4606c3",
+                    "lastModifiedAt": "2024-12-08T16:44:34.078797",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "52588ff2-74f7-4a91-8339-f8ae871631e5",
+            "createdAt": "2024-09-20T07:04:48.461589",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-08T16:45:23.994097",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL107",
+            "title": "Các khóa học cấp độ 400 (4xx) của CSE đang mở là gì",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 2816,
+            "acceptance": 69.5,
+            "level": "EASY",
+            "prefixCode": "UXkbOm",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "19f55849-9c26-45d4-8f3e-54e7c94977c5",
+                    "lastModifiedAt": "2024-12-08T16:45:23.99493",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "83396c1c-7bc4-41de-8b41-830216cb38ab",
+            "createdAt": "2024-09-20T07:07:55.965661",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-08T16:55:37.318746",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL108",
+            "title": "Tìm lớp học của thầy Levy",
+            "point": 0.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 2525,
+            "acceptance": 58.85,
+            "level": "EASY",
+            "prefixCode": "dPFeQ7",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "3590798f-70e9-4f17-8dc8-818af0688809",
+                    "lastModifiedAt": "2024-12-08T16:55:37.319164",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "b10573f0-6714-46e2-9522-6eb4fd063b25",
+            "createdAt": "2024-09-20T07:08:36.231991",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-02T13:37:42.112958",
+            "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+            "questionCode": "SQL109",
+            "title": "Quản lý product",
+            "point": 5.0,
+            "type": "CREATE",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 6263,
+            "acceptance": 16.3,
+            "level": "EASY",
+            "prefixCode": "XgXvsJ",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "00522116-6dcd-4289-bee9-c009419598b3",
+                    "lastModifiedAt": "2025-11-27T10:05:54.793229",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0b75f4d0-9406-43f0-b31a-06aed53ba2cc",
+            "createdAt": "2024-09-20T07:09:48.507163",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-08T16:38:25.31891",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL110",
+            "title": " Những khóa học nào có tên bắt đầu bằng \"Introduction\"",
+            "point": 0.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 3539,
+            "acceptance": 78.16,
+            "level": "EASY",
+            "prefixCode": "E9UYV3",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "fd1ed8e7-f26b-4faf-a789-e83ebba7462e",
+                    "lastModifiedAt": "2024-12-08T16:38:25.319284",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "31dc7b4f-b612-47d7-bfb5-74138611fb0b",
+            "createdAt": "2024-09-20T07:11:09.319031",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-08T16:38:55.242277",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL111",
+            "title": "Sửa tiêu đề gõ sai",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 2674,
+            "acceptance": 73.86,
+            "level": "EASY",
+            "prefixCode": "U7RnwI",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "c5aca2c4-8f4b-46a3-8125-d3aa9a47cfd5",
+                    "lastModifiedAt": "2024-12-08T16:38:55.242923",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "726b03c1-87ae-4fec-8354-058924f590db",
+            "createdAt": "2024-09-20T07:13:47.576398",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-08-27T22:18:27.14293",
+            "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+            "questionCode": "SQL112",
+            "title": "Hiển thị tên khóa học và độ dài của nó",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 5421,
+            "acceptance": 14.04,
+            "level": "EASY",
+            "prefixCode": "yab4OW",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "b0d6b18e-2d06-4da1-8e3d-11896b42f5b6",
+                    "lastModifiedAt": "2025-08-27T22:18:27.14315",
+                    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "2dce3ac9-4859-47db-b424-3ea9c58af5d6",
+            "createdAt": "2024-09-20T07:15:33.861726",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-08T16:40:42.536201",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL113",
+            "title": "Chuẩn hóa tên các khóa học",
+            "point": 10.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 2328,
+            "acceptance": 83.55,
+            "level": "MEDIUM",
+            "prefixCode": "lh0FjG",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "7455d660-5f83-4f4f-b2bd-92c4ad7e2b7f",
+                    "lastModifiedAt": "2024-12-28T20:58:49.439604",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "a2d41934-2730-4e54-bc40-a3e8cbc7cc85",
+            "createdAt": "2024-09-20T07:16:36.468228",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-08T16:56:41.243102",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL114",
+            "title": "Những instructors nào bắt đầu dạy trước 1990",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 3455,
+            "acceptance": 55.95,
+            "level": "EASY",
+            "prefixCode": "EJz1S1",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "36d601e8-cdc0-4b9a-8776-df41c39de5ea",
+                    "lastModifiedAt": "2024-12-08T16:56:57.366399",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "11066809-500e-4c09-833e-7fdafaa7544d",
+            "createdAt": "2024-09-20T07:17:36.001019",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-10T11:44:34.428857",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL115",
+            "title": "Những instructors nào bắt đầu dạy trước thời điểm hiện tại",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1656,
+            "acceptance": 89.61,
+            "level": "EASY",
+            "prefixCode": "ST1JMK",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "a17267ab-ca05-4815-98e6-9ee4f5b5aa08",
+                    "lastModifiedAt": "2024-12-10T11:44:34.438511",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "ce9b9e82-8e52-4594-be7d-6b4d47f0238f",
+            "createdAt": "2024-09-20T07:19:00.61251",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-08T17:01:16.79092",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL116",
+            "title": "Những instructors bắt đầu dạy vào hoặc sau ngày 1 tháng 1 của 20 năm trước",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 2996,
+            "acceptance": 48.87,
+            "level": "MEDIUM",
+            "prefixCode": "zKECTA",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "6b076521-5d57-466b-a6e0-ae1b23753418",
+                    "lastModifiedAt": "2024-12-08T17:01:16.791473",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "23289965-0b9a-43af-80f0-a469dbd9ad89",
+            "createdAt": "2024-09-28T04:53:30.432359",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-19T17:14:38.755683",
+            "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+            "questionCode": "SQL117",
+            "title": "Sửa dữ liệu sai trong bảng",
+            "point": 3.0,
+            "type": "ALTER",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 3693,
+            "acceptance": 22.8,
+            "level": "EASY",
+            "prefixCode": "Ud1479",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "07b9df29-2f11-4869-9c57-cf29f21ee094",
+                    "lastModifiedAt": "2025-11-19T17:14:38.756102",
+                    "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "e91d40fc-c564-4a91-9eeb-969aa9beceeb",
+            "createdAt": "2024-10-17T23:16:45.858363",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-08T08:30:34.363543",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL118",
+            "title": "Thiết kế cơ sở dữ liệu với bảng đăng ký khóa học",
+            "point": 10.0,
+            "type": "CREATE",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 4135,
+            "acceptance": 36.25,
+            "level": "EASY",
+            "prefixCode": "yGaFwb",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "8dbfff40-bf50-4575-bab8-3ce82fba4dcb",
+                    "lastModifiedAt": "2025-11-27T10:06:29.244276",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "6aac3870-f4aa-41b9-920d-63271d164814",
+                    "lastModifiedAt": "2025-11-27T10:06:29.244531",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "d9aa19ed-28a7-4a8d-bacb-09bf6640c272",
+            "createdAt": "2024-10-17T23:21:32.127034",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-08-28T01:00:10.856666",
+            "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+            "questionCode": "SQL119",
+            "title": "Chỉnh sửa bảng cơ sở dữ liệu với kiểu dữ liệu sai",
+            "point": 10.0,
+            "type": "ALTER",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1984,
+            "acceptance": 39.31,
+            "level": "EASY",
+            "prefixCode": "MHLoNi",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "81dca59e-99ab-4d17-9e29-e04862c26bcc",
+                    "lastModifiedAt": "2025-08-28T01:03:34.556913",
+                    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "c1e44881-57a1-4a24-9955-dc3bc1dce5d6",
+            "createdAt": "2024-10-17T23:24:06.991128",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-08T16:58:29.131003",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL120",
+            "title": "Tạo procedure lấy danh sách nhân viên",
+            "point": 10.0,
+            "type": "PROCEDURE",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1964,
+            "acceptance": 44.25,
+            "level": "EASY",
+            "prefixCode": "FktSnz",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "3702ed11-8c4c-40a8-9ed1-5c9e71193332",
+                    "lastModifiedAt": "2024-12-08T16:58:51.327765",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "d452ad40-09f3-4f3a-bfac-9cb5caa2b370",
+                    "lastModifiedAt": "2024-12-08T16:58:51.327923",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "a4a6a754-742d-478d-8fd2-5b1098f70137",
+            "createdAt": "2024-11-03T10:20:54.58794",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-08T16:37:34.859988",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL125",
+            "title": "Cập nhật kết quả sinh viên",
+            "point": 5.0,
+            "type": "UPDATE",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 2638,
+            "acceptance": 28.2,
+            "level": "EASY",
+            "prefixCode": "MJRLME",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "e017d313-ae50-4e42-8cb4-22399c5af0a9",
+                    "lastModifiedAt": "2024-12-08T16:37:34.867371",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "381fd68a-456e-4545-aa45-e2d4b322a82e",
+            "createdAt": "2024-11-04T07:37:38.077566",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-23T11:22:57.486794",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL126",
+            "title": "Confirmation Rate",
+            "point": 10.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 2365,
+            "acceptance": 44.86,
+            "level": "MEDIUM",
+            "prefixCode": "GOOSpT",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "4e3b3587-16c1-4e2b-967a-7bcaebedba22",
+                    "lastModifiedAt": "2024-12-23T11:22:57.487425",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "49c96c3a-d461-47ae-ad5e-712493b0f9bb",
+            "createdAt": "2024-11-04T07:37:44.03551",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-23T10:55:04.921476",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL127",
+            "title": "Number of Unique Subject taught by each teacher",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1929,
+            "acceptance": 61.53,
+            "level": "EASY",
+            "prefixCode": "zZPHqV",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "e01ef7ea-409d-4534-8cc3-907b3adc23ed",
+                    "lastModifiedAt": "2024-12-23T10:55:04.921847",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "6f6422d4-1eaa-4c37-b787-13e6668ac932",
+            "createdAt": "2024-11-04T10:47:46.189004",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-08T16:48:55.168758",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL128",
+            "title": "Class more than 5 student",
+            "point": 7.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1527,
+            "acceptance": 60.58,
+            "level": "EASY",
+            "prefixCode": "HHClBa",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "415a6661-66f5-4393-a4cd-b3ff49df7bf9",
+                    "lastModifiedAt": "2024-12-08T16:48:55.171873",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "33a30a6c-b248-46fb-b8ba-540493ce8290",
+            "createdAt": "2024-11-04T23:04:37.962558",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-23T10:50:15.449531",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL129",
+            "title": "Invalid Tweets",
+            "point": 3.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1388,
+            "acceptance": 78.67,
+            "level": "EASY",
+            "prefixCode": "nOebym",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "ffc550b7-289c-43c0-9a8a-3dc0f2e246db",
+                    "lastModifiedAt": "2024-12-23T10:50:15.450304",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "360518cb-fb15-47bb-9b98-b76e01a39f40",
+            "createdAt": "2024-11-07T10:18:27.441921",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-23T11:29:03.488174",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL130",
+            "title": "Product  Sales Anaysis",
+            "point": 8.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1824,
+            "acceptance": 48.36,
+            "level": "EASY",
+            "prefixCode": "RWvmsF",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "4a03c4ed-4b4e-43f4-afce-4f6ff8d7b4be",
+                    "lastModifiedAt": "2024-12-23T11:29:03.490094",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "00315685-bcaa-444c-8100-2c8c34f88a45",
+            "createdAt": "2024-11-07T10:48:45.696842",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-23T11:32:18.112502",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL131",
+            "title": "Customer who bought all product",
+            "point": 10.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1754,
+            "acceptance": 67.84,
+            "level": "MEDIUM",
+            "prefixCode": "WcfdxL",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "45f73913-f767-497c-b73f-161422460be4",
+                    "lastModifiedAt": "2024-12-23T11:32:18.112958",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0302d83c-97ef-494c-aebe-ef1d871f67bf",
+            "createdAt": "2024-11-07T22:51:29.853193",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-23T11:36:51.34658",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL133",
+            "title": "Average Selling Price",
+            "point": 10.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 4184,
+            "acceptance": 12.5,
+            "level": "MEDIUM",
+            "prefixCode": "vHFpTH",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "95fb34b8-f77f-441c-8a31-6c05a2801aab",
+                    "lastModifiedAt": "2024-12-23T11:36:51.347004",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "16233627-ab8d-4757-9c9a-bec118308510",
+            "createdAt": "2024-11-09T10:37:04.298809",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-09-12T12:46:08.462373",
+            "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+            "questionCode": "SQL134",
+            "title": "Movie rating",
+            "point": 20.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1320,
+            "acceptance": 44.39,
+            "level": "HARD",
+            "prefixCode": "daIaxL",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "25c66d68-cf70-4499-b296-d30ef4adfab8",
+                    "lastModifiedAt": "2025-09-12T12:46:08.462441",
+                    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "f1e0ae26-bb38-42d4-aa3d-356da7974fbf",
+            "createdAt": "2024-11-16T08:46:30.120564",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-23T11:33:47.22693",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL136",
+            "title": "Students and examinations",
+            "point": 8.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1618,
+            "acceptance": 44.56,
+            "level": "MEDIUM",
+            "prefixCode": "hZYDZd",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "bb90b04f-de65-443f-a0ef-891b3785500f",
+                    "lastModifiedAt": "2024-12-23T11:33:47.227198",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "57f89e1d-16b0-40a2-a1df-93a076101d6a",
+            "createdAt": "2024-11-16T08:51:25.743033",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-23T11:39:52.412176",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL137",
+            "title": "Managers with at least 5 direction report",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1382,
+            "acceptance": 75.83,
+            "level": "EASY",
+            "prefixCode": "qdUgCl",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "c56d1ecb-7619-4ed7-a682-48fd0428721a",
+                    "lastModifiedAt": "2024-12-23T11:39:52.412404",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "d8fa37e7-3bff-4742-b597-59c52f662023",
+            "createdAt": "2024-11-16T09:00:11.993892",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2024-12-23T11:40:54.896852",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL138",
+            "title": "Fix name in a table",
+            "point": 5.0,
+            "type": "UPDATE",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1532,
+            "acceptance": 52.81,
+            "level": "EASY",
+            "prefixCode": "ukhGAd",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "c2f98380-40b6-4bc9-b028-57697d40ed3e",
+                    "lastModifiedAt": "2024-12-23T11:40:54.897363",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "f601dbde-4978-427b-9309-82eff364a754",
+                    "lastModifiedAt": "2024-12-23T11:40:54.897233",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "fde581a6-ff53-42c1-9c1c-4e7c8a7b16cc",
+            "createdAt": "2024-11-16T09:06:56.954045",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T17:38:46.464169",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL139",
+            "title": "Empoyee bonus",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1896,
+            "acceptance": 41.19,
+            "level": "EASY",
+            "prefixCode": "vMJYLq",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "dfb1e9df-d716-4f65-b1ce-1082c0b2bd68",
+                    "lastModifiedAt": "2024-12-23T11:44:06.95487",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5098dddf-5b44-4596-9049-b8d650cf8700",
+            "createdAt": "2024-11-27T12:29:53.060227",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T17:39:05.388988",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL147",
+            "title": "Danh sách các đối tác cung cấp hàng cho công ty",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 756,
+            "acceptance": 73.28,
+            "level": "EASY",
+            "prefixCode": "WpjWpe",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "862a9915-4be1-4bcc-8493-ec8d12454381",
+                    "lastModifiedAt": "2024-12-28T20:56:17.39991",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "f47a11e6-5d3a-4713-b922-d2dc18739b2c",
+            "createdAt": "2024-11-27T14:30:45.509871",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T17:39:14.144875",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL148",
+            "title": "Mã hàng, tên hàng và số lượng của các mặt hàng hiện có trong công ty",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 2505,
+            "acceptance": 9.38,
+            "level": "EASY",
+            "prefixCode": "KenpyT",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "cd5fdff8-289d-42e4-a2a2-de4100320ae2",
+                    "lastModifiedAt": "2024-12-08T16:58:45.486641",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3f7e7e5a-bce0-4318-afaa-6e1e614d4099",
+            "createdAt": "2024-11-27T14:32:17.579673",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T17:39:26.211512",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL149",
+            "title": "Họ tên, địa chỉ và năm bắt đầu làm việc của các nhân viên trong cty",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 2230,
+            "acceptance": 4.75,
+            "level": "EASY",
+            "prefixCode": "xLIpcd",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "8bbe78de-743d-4629-9d69-8b0a72591d61",
+                    "lastModifiedAt": "2024-12-08T16:59:50.235302",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0b9d1a61-bf04-4ad7-897e-80a57cdd7317",
+            "createdAt": "2024-11-27T14:34:19.962113",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T17:39:39.056273",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL150",
+            "title": "Cho biết mỗi mặt hàng trong công ty do ai cung cấp",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1293,
+            "acceptance": 15.85,
+            "level": "EASY",
+            "prefixCode": "hOaurU",
+            "isShare": false,
+            "questionDetails": [
+                {
+                    "id": "d351490e-9fd2-498d-8733-582acfe2aa30",
+                    "lastModifiedAt": "2024-12-10T10:00:07.467541",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "e727cf96-1132-4454-bd49-473ad963bbf1",
+            "createdAt": "2024-11-27T14:36:34.113565",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T23:24:30.750405",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL151",
+            "title": "Loại hàng \"furniture\" do những công ty nào cung cấp, địa chỉ của công ty đó",
+            "point": 8.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 1285,
+            "acceptance": 12.3,
+            "level": "MEDIUM",
+            "prefixCode": "lijvdt",
+            "isShare": true,
+            "questionDetails": [
+                {
+                    "id": "d31e04e2-2b06-4ee5-8f0c-ebd9f9bec796",
+                    "lastModifiedAt": "2025-11-29T23:24:30.750601",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "e15d3bcb-9603-4bd3-908b-7efd047de9e7",
+            "createdAt": "2025-05-03T21:53:16.97468",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T23:33:31.498077",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL1634",
+            "title": "Tỷ lệ phụ nữ được tiêm vắc xin ngừa COVID-19 ở Sydney là bao nhiêu?",
+            "point": 3.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 969,
+            "acceptance": 15.79,
+            "level": "EASY",
+            "prefixCode": "LGyCkO",
+            "isShare": true,
+            "status": "REVIEW",
+            "questionDetails": [
+                {
+                    "id": "ddae3da4-a881-46cc-aa55-359ba6579633",
+                    "createdAt": "2025-05-03T21:53:16.974908",
+                    "lastModifiedAt": "2025-11-29T23:40:25.358124",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "62fe3d6e-74f8-4940-a435-491b9001923c",
+            "createdAt": "2025-06-02T14:25:53.598846",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T23:31:18.652822",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL2750",
+            "title": "Có bao nhiêu tổng số khoản quyên góp đã được thực hiện theo giới tính?",
+            "point": 3.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 392,
+            "acceptance": 25.51,
+            "level": "EASY",
+            "prefixCode": "YUkMsC",
+            "isShare": true,
+            "status": "REVIEW",
+            "questionDetails": [
+                {
+                    "id": "ffddb025-b0e7-4eb3-bdab-c5a23f558c66",
+                    "createdAt": "2025-06-02T14:25:53.599032",
+                    "lastModifiedAt": "2025-11-29T23:31:08.489919",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "00db97a0-335a-48fa-979c-ecac89648b29",
+            "createdAt": "2025-08-29T11:50:05.710705",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T23:28:35.657212",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL-2831",
+            "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?",
+            "point": 3.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 558,
+            "acceptance": 9.86,
+            "level": "EASY",
+            "prefixCode": "HPnUlD",
+            "isShare": true,
+            "status": "REVIEW",
+            "questionDetails": [
+                {
+                    "id": "eab495c1-110c-4745-b74b-19dc6ef68367",
+                    "createdAt": "2025-08-29T11:54:25.600915",
+                    "lastModifiedAt": "2025-11-29T23:28:35.657334",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "a96f0617-4306-414d-bdea-9d2bedee2518",
+            "createdAt": "2025-08-29T12:08:27.471308",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-29T23:09:51.363697",
+            "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+            "questionCode": "SQL-2836",
+            "title": "Những công đoàn nào có hơn 5000 thành viên và có trụ sở tại California?",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 289,
+            "acceptance": 55.36,
+            "level": "EASY",
+            "prefixCode": "BLoXWc",
+            "isShare": true,
+            "status": "REVIEW",
+            "questionDetails": [
+                {
+                    "id": "6f8a2bd1-5de0-43af-b996-ea1563188553",
+                    "createdAt": "2025-08-29T12:19:04.953903",
+                    "lastModifiedAt": "2025-11-29T23:09:51.363806",
+                    "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "002e974f-effa-46dc-9b44-0917209091a8",
+            "createdAt": "2025-11-09T23:07:55.774608",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-11-09T23:19:45.692339",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "questionCode": "SQL-2883",
+            "title": "Tính tổng vốn đầu tư của các dự án có sector chứa từ “Energy” và kèm tổng điểm ESG",
+            "point": 5.0,
+            "type": "SELECT",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 415,
+            "acceptance": 33.49,
+            "level": "MEDIUM",
+            "prefixCode": "ExxeOm",
+            "isShare": false,
+            "status": "REVIEW",
+            "questionDetails": [
+                {
+                    "id": "24fb4bdf-9d76-466e-9893-73c459a9e28e",
+                    "createdAt": "2025-11-09T23:18:03.493701",
+                    "lastModifiedAt": "2025-11-09T23:19:45.692389",
+                    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4cb2d27b-1f6b-4903-8ff2-fb459aed9f39",
+            "createdAt": "2025-11-25T21:59:26.12833",
+            "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+            "lastModifiedAt": "2025-11-29T23:02:27.240343",
+            "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+            "questionCode": "DEMO-025",
+            "title": "Tạo bảng đánh giá đơn hàng",
+            "point": 1.0,
+            "type": "CREATE",
+            "enable": true,
+            "isSynchorus": true,
+            "totalSub": 823,
+            "acceptance": 10.94,
+            "level": "EASY",
+            "prefixCode": "MnIhBx",
+            "isShare": true,
+            "status": "APPROVED",
+            "questionDetails": [
+                {
+                    "id": "d61b9e01-60f5-45fb-9053-7840a5251819",
+                    "createdAt": "2025-11-25T22:04:22.009718",
+                    "lastModifiedAt": "2025-11-29T23:02:27.240469",
+                    "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+                    "typeDatabase": {
+                        "id": "22222222-2222-2222-2222-222222222222",
+                        "name": "Sql Server"
+                    }
+                },
+                {
+                    "id": "ecea45c6-6268-4e20-91e8-4002a095b4f1",
+                    "createdAt": "2025-11-25T22:04:22.006173",
+                    "lastModifiedAt": "2025-11-29T23:02:27.240542",
+                    "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+                    "typeDatabase": {
+                        "id": "11111111-1111-1111-1111-111111111111",
+                        "name": "Mysql"
+                    }
+                }
+            ]
+        }
+    ],
+    "pageable": {
+        "pageNumber": 0,
+        "pageSize": 1000,
+        "sort": {
+            "sorted": true,
+            "unsorted": false,
+            "empty": false
+        },
+        "offset": 0,
+        "unpaged": false,
+        "paged": true
+    },
+    "totalPages": 1,
+    "last": true,
+    "totalElements": 52,
+    "first": true,
+    "numberOfElements": 52,
+    "size": 1000,
+    "number": 0,
+    "sort": {
+        "sorted": true,
+        "unsorted": false,
+        "empty": false
+    },
+    "empty": false
+}

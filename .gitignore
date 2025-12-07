@@ -3,3 +3,5 @@ __pycache__
 .venv
 solutions
 solution.sql
+hmm.js
+api_tester.py

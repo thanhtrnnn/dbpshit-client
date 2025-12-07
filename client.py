@@ -7,11 +7,6 @@ import re
 import json
 import base64
 from datetime import datetime
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from dotenv import load_dotenv, set_key, find_dotenv
 from colorama import init, Fore, Style
 
@@ -28,7 +23,9 @@ class Client:
         self.password = os.getenv('QLDT_PASSWORD')
         self.login_url = os.getenv('LOGIN_URL')
         self.base_api_url = os.getenv('BASE_API_URL')
-        self.user_id = os.getenv('USER_ID', self.get_user_id())
+        self.auth_base_url = os.getenv('AUTH_API_URL')
+        self.user_id = None
+        self.refresh_token = None
         
         if not all([self.username, self.password, self.login_url]):
             print(Fore.RED + "[-] Lỗi: Thiếu thông tin đăng nhập trong file .env")
@@ -39,105 +36,40 @@ class Client:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
             'Content-Type': 'application/json'
         })
+    
+    def login_api(self):
+        """Đăng nhập qua API và lưu access token"""
+        print(Fore.CYAN + f"[*] Đang đăng nhập user **{self.username}** qua API...")
+        url = f'{self.auth_base_url.rstrip("/")}/auth/ptit-login'
+        payload = {"username": self.username, "password": self.password}
 
-    def login_selenium(self):
-        """Đăng nhập qua Selenium và lấy Cookies"""
-        print(Fore.CYAN + f"[*] Đang khởi động trình duyệt để đăng nhập user: {self.username}...")
-        
-        options = webdriver.ChromeOptions()
-        options.add_argument('--headless') # Chạy ẩn theo yêu cầu
-        options.add_argument('--disable-gpu')
-        options.add_argument('--window-size=1920,1080')
-        options.add_argument('--no-sandbox')
-        options.add_argument('--disable-dev-shm-usage')
-
-        driver = webdriver.Chrome(options=options)
-        
         try:
-            driver.get(self.login_url)
-            wait = WebDriverWait(driver, 15)
+            resp = self.session.post(url, json=payload, headers={
+                "Content-Type": "application/json", 
+                "User-Agent": self.session.headers.get('User-Agent', '')
+            })
 
-            # Click button để mở login window nếu cần
-            try:
-                print(Fore.CYAN + "[*] Tìm nút mở login...")
-                login_trigger = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".grid.grid-cols-1.gap-4")))
-                login_trigger.click()
-                print(Fore.GREEN + "[*] Đã click nút mở login.")
-            except Exception as e:
-                print(Fore.YELLOW + f"[!] Không tìm thấy hoặc không click được nút login (có thể đã ở trang login): {e}")
-
-            # Chờ và điền username
-            user_input = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#qldt-username")))
-            user_input.send_keys(self.username)
+            if resp.status_code != 200:
+                print(Fore.RED + f"[-] Đăng nhập API thất bại: {resp.status_code} {resp.text}")
+                return False
             
-            # Điền password
-            pass_input = driver.find_element(By.CSS_SELECTOR, "#qldt-password")
-            pass_input.send_keys(self.password)
-            pass_input.submit()
-            
-            print(Fore.CYAN + "[*] Đang chờ đăng nhập thành công...")
-            time.sleep(5) 
-            
-            # Lấy cookies
-            selenium_cookies = driver.get_cookies()
-            for cookie in selenium_cookies:
-                self.session.cookies.set(cookie['name'], cookie['value'])
-            
-            # Extract Token
-            try:
-                ls_keys = driver.execute_script("return Object.keys(localStorage);")
-                ss_keys = driver.execute_script("return Object.keys(sessionStorage);")
-
-                token = None
-                # Prioritize access_token
-                priority_keys = ['access_token', 'accessToken', 'token']
-                
-                # Check LocalStorage for priority keys
-                for pk in priority_keys:
-                    for k in ls_keys:
-                        if pk == k or pk == k.lower():
-                             val = driver.execute_script(f"return localStorage.getItem('{k}');")
-                             if val and val.startswith('eyJ'):
-                                 token = val
-                                 break
-                    if token: break
-                
-                # Fallback to fuzzy search if not found
-                if not token:
-                    possible_keys = ['token', 'accessToken', 'auth_token', 'jwt', 'user', 'auth']
-                    for k in ls_keys:
-                        if any(pk in k.lower() for pk in possible_keys) and 'refresh' not in k.lower():
-                             val = driver.execute_script(f"return localStorage.getItem('{k}');")
-                             if val and val.startswith('eyJ'):
-                                 token = val
-                                 break
-            
-                # Check SessionStorage if not found
-                if not token:
-                    possible_keys = ['token', 'accessToken', 'auth_token', 'jwt', 'user', 'auth']
-                    for k in ss_keys:
-                        if any(pk in k.lower() for pk in possible_keys):
-                             val = driver.execute_script(f"return sessionStorage.getItem('{k}');")
-                             if val and val.startswith('eyJ'):
-                                 token = val
-                                 break
-
-                if token:
-                    self.session.headers.update({'Authorization': f"Bearer {token}"})
-                    print(Fore.GREEN + "[+] Added Authorization header.")
-                else:
-                    print(Fore.RED + "[-] Could not find any JWT-like token.")
-            except Exception as e:
-                print(Fore.RED + f"[-] Error extracting token: {e}")
-
-            print(Fore.GREEN + "[+] Đăng nhập thành công! Đã lấy được Cookies và Token.")
-            
+            data = resp.json()
+            access_token = data.get('accessToken') or data.get('access_token')
+            if not access_token:
+                print(Fore.RED + "[-] API không trả về accessToken.")
+                return False
+            self._set_tokens(access_token)
+            # Lấy user id nếu có trong payload
+            possible_keys = ['userId', 'id', 'sub']
+            for k in possible_keys:
+                if k in data:
+                    self._save_user_id(data[k])
+                    break
+            print(Fore.GREEN + "[+] Đăng nhập API thành công. Đã lưu token.")
+            return True
         except Exception as e:
-            print(Fore.RED + f"[-] Lỗi đăng nhập: {e}")
-            driver.quit()
-            exit(1)
-        finally:
-            driver.quit()
+            print(Fore.RED + f"[-] Lỗi đăng nhập API: {e}")
+            return False
 
     def _save_user_id(self, user_id):
         """Lưu User ID vào file .env"""
@@ -152,57 +84,100 @@ class Client:
             print(Fore.GREEN + f"[+] Đã lưu USER_ID vào {env_file}")
         self.user_id = str(user_id)
 
+    def _set_tokens(self, access_token, refresh_token=None):
+        """Lưu access token vào session. refresh_token hiện không dùng."""
+        if access_token:
+            self.session.headers.update({'Authorization': f"Bearer {access_token}"})
+        # Không dùng refresh token nữa
+        self.refresh_token = None
+
+    def _relogin(self):
+        """Thử đăng nhập lại khi gặp 401. Trả về token mới hoặc None."""
+        print(Fore.YELLOW + "[*] Token hết hạn, thử đăng nhập lại...")
+        try:
+            if self.login_api():
+                auth_header = self.session.headers.get('Authorization')
+                if auth_header and ' ' in auth_header:
+                    return auth_header.split(' ', 1)[1]
+                return True
+        except Exception as e:
+            print(Fore.RED + f"[-] Lỗi đăng nhập lại: {e}")
+        return None
+
+    def _request(self, method, url, **kwargs):
+        """Gửi request, tự refresh token nếu 401. Trả về resp"""
+        resp = self.session.request(method, url, **kwargs)
+        if resp.status_code == 401:
+            new_token = self._relogin()
+            if new_token:
+                resp = self.session.request(method, url, **kwargs)
+        return resp
+
     def _get_user_id_from_token(self):
-        """Giải mã JWT token để lấy User ID"""
+        """Giải mã JWT token để lấy User ID (base64url, không padding thừa)"""
         try:
             auth_header = self.session.headers.get('Authorization')
-            if not auth_header:
+            if not auth_header or ' ' not in auth_header:
                 return None
-            
+
             token = auth_header.split(' ')[1]
             parts = token.split('.')
             if len(parts) != 3:
                 return None
-                
+
             payload = parts[1]
-            padded = payload + '=' * (4 - len(payload) % 4)
+            padded = payload + '=' * (-len(payload) % 4)
             decoded = base64.urlsafe_b64decode(padded)
-            data = json.loads(decoded)
-            
+            data = json.loads(decoded.decode('utf-8'))
+
             possible_keys = ['id', 'userId', 'sub', 'user_id', 'unique_name']
             for k in possible_keys:
                 if k in data:
                     return data[k]
-            
-            if 'user' in data and isinstance(data['user'], dict):
+
+            if isinstance(data.get('user'), dict):
                 for k in possible_keys:
                     if k in data['user']:
                         return data['user'][k]
-                        
+
             return None
         except Exception as e:
             print(Fore.RED + f"[-] Lỗi giải mã token: {e}")
             return None
 
     def get_user_id(self):
-        """Lấy User ID từ .env, Token hoặc hỏi người dùng và lưu lại vào .env"""
+        """Lấy User ID từ .env, Token hoặc API; cuối cùng hỏi người dùng"""
         current_id = os.getenv('USER_ID')
-        
         if current_id and current_id.strip():
             self.user_id = current_id.strip()
             return self.user_id
-        
-        print(Fore.CYAN + "[*] Chưa có USER_ID trong .env. Đang thử lấy từ token...")
+
+        print(Fore.CYAN + "[*] Đang lấy USER_ID từ token...")
         token_id = self._get_user_id_from_token()
         if token_id:
             print(Fore.GREEN + f"[+] Tìm thấy USER_ID từ token: {token_id}")
             self._save_user_id(token_id)
             return token_id
-        
-        print(Fore.YELLOW + "\n[!] Không tìm thấy USER_ID tự động.")
-        print("Hãy nhập User UUID của bạn (lấy từ URL submit history hoặc F12 Network):")
+
+        print(Fore.CYAN + "[*] Đang lấy USER_ID từ API...")
+        try:
+            url = "https://dbapi.ptit.edu.vn/api/auth/users/info"
+            resp = self._request('get', url)
+            if resp.status_code == 200:
+                data = resp.json()
+                api_id = data.get('id')
+                if api_id:
+                    print(Fore.GREEN + f"[+] Lấy được USER_ID từ API: {api_id}")
+                    self._save_user_id(api_id)
+                    return api_id
+                print(Fore.YELLOW + "[-] API không trả về USER_ID.")
+            else:
+                print(Fore.YELLOW + f"[-] Lỗi API khi lấy USER_ID: {resp.status_code}")
+        except Exception as e:
+            print(Fore.RED + f"[-] Lỗi kết nối API: {e}")
+
+        print(Fore.YELLOW + "\n[!] Không tự động lấy được USER_ID. Hãy nhập thủ công:")
         user_id = input("User UUID: ").strip()
-        
         self._save_user_id(user_id)
         return user_id
 
@@ -222,7 +197,7 @@ class Client:
         print(Fore.CYAN + f"\n[*] Đang lấy lịch sử nộp bài...")
         
         try:
-            resp = self.session.get(url, params=params)
+            resp = self._request('get', url, params=params)
             if resp.status_code == 200:
                 data = resp.json()
                 submissions = data.get('content', [])
@@ -522,7 +497,7 @@ class Client:
             # Fetch details from API to get DB types
             try:
                 api_url = f"{self.base_api_url}/question/{data['id']}"
-                resp = self.session.get(api_url)
+                resp = self._request('get', api_url)
                 if resp.status_code == 200:
                     api_data = resp.json()
                     data['api_data'] = api_data
@@ -656,7 +631,7 @@ class Client:
         
         try:
             url = f"{self.base_api_url}/executor/user"
-            resp = self.session.post(url, json=payload)
+            resp = self._request('post', url, json=payload)
             
             if resp.status_code == 200:
                 data = resp.json()
@@ -688,7 +663,7 @@ class Client:
         
         try:
             url = f"{self.base_api_url}/executor/submit"
-            resp = self.session.post(url, json=payload)
+            resp = self._request('post', url, json=payload)
             
             if resp.status_code == 200:
                 data = resp.json()
@@ -713,7 +688,7 @@ class Client:
         for i in range(15): # Thử 15 lần
             time.sleep(2)
             try:
-                resp = self.session.get(url, params=params)
+                resp = self._request('get', url, params=params)
                 if resp.status_code == 200:
                     data = resp.json()
                     if data.get('content'):
@@ -741,7 +716,7 @@ class Client:
         }
         
         try:
-            resp = self.session.post(url, json=payload)
+            resp = self._request('post', url, json=payload)
             if resp.status_code == 200:
                 data = resp.json()
                 # Map questionId -> status
@@ -761,11 +736,13 @@ def main():
     client = Client()
     
     # 1. Login
-    client.login_selenium()
+    # client.login_selenium()
+    if not client.login_api():
+        print(Fore.RED + "[-] Đăng nhập thất bại. Dừng chương trình.")
+        return
     
     # 2. Lấy User ID
     user_id = client.get_user_id()
-    
     current_question_id = None
     current_question_data = None
     

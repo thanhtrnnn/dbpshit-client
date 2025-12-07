@@ -17,12 +17,28 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
 ## Yêu cầu
 
 -   Python 3.x
--   Google Chrome (cho Selenium)
--   Chromedriver (tương thích với phiên bản Chrome của bạn)
 
 ## Cài đặt
 
-1.  **Clone repository** (nếu có) hoặc tải mã nguồn.
+1.  **Clone repository**.
+Với Windows có giới hạn đường dẫn 260 ký tự, bạn nên làm theo các bước sau để tránh lỗi khi clone repo:
+    > Tránh lỗi hiển thị tiếng Việt bị méo trong các file HTML: Đầu tiên chạy `chcp 65001` để chuyển sang UTF-8.
+-   Mở PowerShell với quyền Administrator và bật hỗ trợ đường dẫn dài của Git:
+
+    ```powershell
+    git config --system core.longpaths true
+    ```
+
+-   Clone repo về một đường dẫn ngắn để tránh tràn 260 ký tự (ví dụ `C:\src` hoặc `D:\code`):
+
+    ```powershell
+    cd C:\src
+    git clone https://github.com/thanhtrnnn/dbpshit-client.git
+    ```
+
+-   Nếu đã clone và gặp lỗi với các file dài, hãy xóa thư mục cũ, chạy lệnh `core.longpaths` ở trên rồi clone lại vào đường dẫn ngắn.
+
+
 
 2.  **Thiết lập môi trường ảo và cài đặt thư viện**:
     Khuyến nghị sử dụng môi trường ảo để tránh xung đột thư viện.
@@ -40,18 +56,19 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
     ```
 
 3.  **Cấu hình môi trường**:
-    Copy file `.env.example` đổi tên thành `.env` trong thư mục gốc với các biến sau:
+    **Copy file `.env.example` và đổi tên** thành `.env` trong **thư mục gốc** với các biến sau:
     ```env
     QLDT_USERNAME=tên_đăng_nhập_của_bạn
     QLDT_PASSWORD=mật_khẩu_của_bạn
-    LOGIN_URL=https://db.ptit.edu.vn/login
+    LOGIN_URL=https://dbapi.ptit.edu.vn/api/auth/auth/ptit-login
     BASE_API_URL=https://dbapi.ptit.edu.vn/api/app
+    AUTH_API_URL=https://dbapi.ptit.edu.vn/api/auth
     DEFAULT_DB_TYPE=11111111-1111-1111-1111-111111111111
     USER_ID=
     ```
     > *Lưu ý*: 
-    > - `USER_ID` có thể được lấy tự động hoặc nhập thủ công nếu thiếu.
-    > - `DEFAULT_DB_TYPE` là loại cơ sở dữ liệu mặc định (thường là MySQL) nếu không lấy được từ API.
+    > - `USER_ID` được script tự điền nếu thiếu, hãy để trống giá trị này.
+    > - `DEFAULT_DB_TYPE` là loại cơ sở dữ liệu mặc định (thường là MySQL với mã toàn số 1) nếu không lấy được từ API.
 
 ## Hướng dẫn sử dụng
 
@@ -60,7 +77,7 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
     python client.py
     ```
     > Hướng dẫn cho gà mờ:
-    > - Bạn sẽ thấy menu tương tác trong terminal. 
+    > - Mày sẽ thấy menu tương tác trong terminal. 
     > - Chọn 1 để tìm kiếm bài tập hoặc 2 để duyệt theo dạng bài. 
     > - Nhập số thứ tự hiển thị trước tên bài tập để chọn. Trình duyệt sẽ mở đề bài.
     > - Làm bài trong `solution.sql`, sau đó quay lại menu để chạy thử (3) hoặc nộp bài (4).
@@ -88,7 +105,7 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
 ## Khắc phục sự cố
 
 -   **Đăng nhập thất bại**: Kiểm tra `QLDT_USERNAME` và `QLDT_PASSWORD` trong `.env`. Đảm bảo Chrome đã được cài đặt.
--   **Access Denied (401)**: Token có thể đã hết hạn. Khởi động lại script để đăng nhập lại. Ngoài ra, đảm bảo SQL của bạn không chứa từ khóa bị cấm (mặc dù comment đã được tự động xóa).
+-   **Access Denied (401)**: Token có thể đã hết hạn. Khởi động lại script để đăng nhập lại.
 -   **Trình duyệt không mở**: Đảm bảo hệ thống của bạn đã cấu hình trình duyệt mặc định.
 -   **FileNotFoundError**: Đảm bảo thư mục `problems/` tồn tại và chứa các file `.html`.
 
@@ -96,6 +113,6 @@ Một client Python để giải và nộp bài tập cơ sở dữ liệu trên
 
 -   `client.py`: Script ứng dụng chính.
 -   `problems/`: Thư mục chứa các file HTML bài tập.
--   `solution.sql`: File tạm thời để viết giải pháp SQL của bạn.
+-   `solution.sql`: File tạm thời để viết code SQL của bạn.
 -   `.env`: File cấu hình (chứa thông tin nhạy cảm).
 -   `requirements.txt`: Các thư viện Python phụ thuộc.

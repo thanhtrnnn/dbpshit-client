@@ -1,5 +1,3 @@
 requests
-selenium
 python-dotenv
 colorama
-beautifulsoup4

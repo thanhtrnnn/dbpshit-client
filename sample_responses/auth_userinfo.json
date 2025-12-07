@@ -1,0 +1,26 @@
+{
+    "id": "683ee568-c78f-4fcb-9ed6-317efa9e9971",
+    "createdAt": "2025-09-12T13:40:08.372482",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-12-07T17:11:20.762613",
+    "lastModifiedBy": "7f6dd402-2a4f-4ca4-a1d4-f291527bbc15",
+    "firstName": "Trần Xuân",
+    "lastName": "Thành",
+    "username": "B23DCAT280",
+    "avatar": null,
+    "email": "ThanhTX.B23AT280@stu.ptit.edu.vn",
+    "phone": null,
+    "birthDay": "2005-08-21",
+    "providers": [
+        "LOCAL",
+        "PTIT"
+    ],
+    "role": [
+        "STUDENT"
+    ],
+    "userCode": "B23DCAT280",
+    "userPrefix": "edTazy",
+    "fullName": "Trần Xuân Thành",
+    "isPremium": false,
+    "isScheduleSynced": null
+}

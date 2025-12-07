@@ -1,0 +1,310 @@
+[
+    {
+        "path": "/rank",
+        "roles": [
+            "STUDENT"
+        ]
+    },
+    {
+        "path": "/assignments/:assignmentId/edit",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/assignments/:assignmentId/view",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/assignments/create",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/questions/list",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/questions/create",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/questions/edit/:id",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/assignments/:assignmentId/submissions",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/courses/create",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/feedback",
+        "roles": [
+            "STUDENT",
+            "LECTURER",
+            "ADMIN"
+        ]
+    },
+    {
+        "path": "/module",
+        "roles": [
+            "ADMIN"
+        ]
+    },
+    {
+        "path": "/exercise",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/",
+        "roles": [
+            "STUDENT",
+            "LECTURER",
+            "ADMIN"
+        ]
+    },
+    {
+        "path": "/login",
+        "roles": [
+            "STUDENT",
+            "LECTURER",
+            "ADMIN"
+        ]
+    },
+    {
+        "path": "/home",
+        "roles": [
+            "STUDENT",
+            "LECTURER",
+            "ADMIN"
+        ]
+    },
+    {
+        "path": "/register",
+        "roles": [
+            "STUDENT",
+            "LECTURER",
+            "ADMIN"
+        ]
+    },
+    {
+        "path": "/courses/:courseId",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/profile",
+        "roles": [
+            "STUDENT",
+            "LECTURER",
+            "ADMIN"
+        ]
+    },
+    {
+        "path": "/question-detail/:questionId",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/contest",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/exams/create",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/exam/exam-history",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/history",
+        "roles": [
+            "STUDENT"
+        ]
+    },
+    {
+        "path": "/doc-agent/:sessionId",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/student/courses/:courseId",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/contest-waiting/:contestId",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/contest-joined/:contestId",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/contest-joined/:contestId/question/:innerQuestionId/:outerQuestionId",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/teacher/classes/:courseId/groups/create",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/exam/exam-detail/:examId",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/exams/:examId/grading",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/exams/:examId/update/basic-info",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/exams/:examId/update/users",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/exams/:examId/update/questions",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/assignments/assignment-detail/:assignmentId",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/student/assignments",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/exam/exam-list",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/courses",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/assignments",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/questions",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/exams",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/doc-agent",
+        "roles": [
+            "LECTURER",
+            "ADMIN"
+        ]
+    },
+    {
+        "path": "/student/courses",
+        "roles": [
+            "STUDENT"
+        ]
+    },
+    {
+        "path": "/grades",
+        "roles": [
+            "STUDENT"
+        ]
+    },
+    {
+        "path": "/exam/take/:examId",
+        "roles": [
+            "STUDENT",
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/exams/:examId/statistics",
+        "roles": [
+            "LECTURER"
+        ]
+    },
+    {
+        "path": "/home-demo",
+        "roles": []
+    }
+]
