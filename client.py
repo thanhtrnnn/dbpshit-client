@@ -6,6 +6,8 @@ import webbrowser
 import re
 import json
 import base64
+import subprocess
+import sys
 from datetime import datetime
 from dotenv import load_dotenv, set_key, find_dotenv
 from colorama import init, Fore, Style
@@ -26,6 +28,7 @@ class Client:
         self.auth_base_url = os.getenv('AUTH_API_URL')
         self.user_id = None
         self.refresh_token = None
+        self.browser_path = None
         
         if not all([self.username, self.password, self.login_url]):
             print(Fore.RED + "[-] Lỗi: Thiếu thông tin đăng nhập trong file .env")
@@ -90,6 +93,99 @@ class Client:
             self.session.headers.update({'Authorization': f"Bearer {access_token}"})
         # Không dùng refresh token nữa
         self.refresh_token = None
+
+    def _detect_browsers(self):
+        """Phát hiện trình duyệt có sẵn trên hệ thống"""
+        browsers = {}
+        
+        if sys.platform == 'win32':
+            # Windows browser paths
+            browser_paths = {
+                'Chrome': r'C:\Program Files\Google\Chrome\Application\chrome.exe',
+                'Chromium': r'C:\Program Files\Chromium\Application\chrome.exe',
+                'Edge': r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',
+                'Firefox': r'C:\Program Files\Mozilla Firefox\firefox.exe',
+                'Opera': r'C:\Program Files\Opera\opera.exe',
+            }
+            
+            for name, path in browser_paths.items():
+                if os.path.exists(path):
+                    browsers[name] = path
+        
+        elif sys.platform == 'darwin':
+            # macOS browser paths
+            browser_paths = {
+                'Chrome': '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+                'Arc': '/Applications/Arc.app/Contents/MacOS/Arc',
+                'Firefox': '/Applications/Firefox.app/Contents/MacOS/firefox',
+                'Safari': '/Applications/Safari.app/Contents/MacOS/Safari',
+            }
+            
+            for name, path in browser_paths.items():
+                if os.path.exists(path):
+                    browsers[name] = path
+        
+        else:
+            # Linux browser paths
+            browser_commands = {
+                'Chrome': 'google-chrome',
+                'Chromium': 'chromium',
+                'Firefox': 'firefox',
+            }
+            
+            for name, cmd in browser_commands.items():
+                try:
+                    result = subprocess.run(['which', cmd], capture_output=True, text=True)
+                    if result.returncode == 0:
+                        browsers[name] = result.stdout.strip()
+                except:
+                    pass
+        
+        return browsers
+
+    def _prompt_browser_selection(self):
+        """Yêu cầu người dùng chọn trình duyệt"""
+        browsers = self._detect_browsers()
+        
+        if not browsers:
+            print(Fore.YELLOW + "[!] Không phát hiện trình duyệt nào. Dùng trình duyệt mặc định của hệ thống.")
+            return None
+        
+        if len(browsers) == 1:
+            name, path = list(browsers.items())[0]
+            print(Fore.GREEN + f"[+] Phát hiện trình duyệt: {name}")
+            return path
+        
+        print(Fore.CYAN + "\n=== CHỌN TRÌNH DUYỆT ===")
+        browser_list = list(browsers.items())
+        for idx, (name, path) in enumerate(browser_list, 1):
+            print(f"{idx}. {name}")
+        print("0. Dùng trình duyệt mặc định")
+        
+        while True:
+            choice = input("Lựa chọn: ").strip()
+            if choice == '0':
+                return None
+            if choice.isdigit() and 1 <= int(choice) <= len(browser_list):
+                name, path = browser_list[int(choice) - 1]
+                print(Fore.GREEN + f"[+] Đã chọn: {name}")
+                self.browser_path = path
+                return path
+            print(Fore.RED + "[-] Lựa chọn không hợp lệ.")
+
+    def _open_browser(self, file_path):
+        """Mở file trong trình duyệt đã chọn hoặc mặc định"""
+        try:
+            file_url = f"file:///{os.path.abspath(file_path).replace(chr(92), '/')}"
+            
+            if self.browser_path:
+                subprocess.Popen([self.browser_path, file_url])
+            else:
+                webbrowser.open(file_url)
+            
+            print(Fore.GREEN + "[+] Đã mở bài tập trong trình duyệt.")
+        except Exception as e:
+            print(Fore.RED + f"[-] Không thể mở trình duyệt: {e}")
 
     def _relogin(self):
         """Thử đăng nhập lại khi gặp 401. Trả về token mới hoặc None."""
@@ -557,7 +653,7 @@ class Client:
         try:
             file_path = os.path.abspath(data['file_path'])
             print(Fore.CYAN + f"[*] Đang mở bài tập trong trình duyệt...")
-            webbrowser.open(f"file:///{file_path}")
+            self._open_browser(file_path)
         except Exception as e:
             print(Fore.RED + f"[-] Không thể mở trình duyệt: {e}")
 
@@ -735,13 +831,17 @@ def main():
 
     client = Client()
     
-    # 1. Login
+    # 1. Chọn trình duyệt
+    print(Fore.CYAN + "[*] Đang phát hiện trình duyệt...")
+    client._prompt_browser_selection()
+    
+    # 2. Login
     # client.login_selenium()
     if not client.login_api():
         print(Fore.RED + "[-] Đăng nhập thất bại. Dừng chương trình.")
         return
     
-    # 2. Lấy User ID
+    # 3. Lấy User ID
     user_id = client.get_user_id()
     current_question_id = None
     current_question_data = None
