@@ -101,11 +101,11 @@ class Client:
         if sys.platform == 'win32':
             # Windows browser paths
             browser_paths = {
-                'Chrome': r'C:\Program Files\Google\Chrome\Application\chrome.exe',
-                'Chromium': r'C:\Program Files\Chromium\Application\chrome.exe',
-                'Edge': r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',
-                'Firefox': r'C:\Program Files\Mozilla Firefox\firefox.exe',
-                'Opera': r'C:\Program Files\Opera\opera.exe',
+                'Chrome': r'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+                'CocCoc': r'C:\\Program Files\\CocCoc\\Browser\\Application\\browser.exe',
+                'Edge': r'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+                'Firefox': r'C:\\Program Files\\Mozilla Firefox\\firefox.exe',
+                'Opera': r'C:\\Program Files\\Opera\\opera.exe',
             }
             
             for name, path in browser_paths.items():
@@ -249,11 +249,11 @@ class Client:
             return self.user_id
 
         print(Fore.CYAN + "[*] Đang lấy USER_ID từ token...")
-        token_id = self._get_user_id_from_token()
-        if token_id:
-            print(Fore.GREEN + f"[+] Tìm thấy USER_ID từ token: {token_id}")
-            self._save_user_id(token_id)
-            return token_id
+        # token_id = self._get_user_id_from_token()
+        # if token_id:
+        #     print(Fore.GREEN + f"[+] Tìm thấy USER_ID từ token: {token_id}")
+        #     self._save_user_id(token_id)
+        #     return token_id
 
         print(Fore.CYAN + "[*] Đang lấy USER_ID từ API...")
         try:
