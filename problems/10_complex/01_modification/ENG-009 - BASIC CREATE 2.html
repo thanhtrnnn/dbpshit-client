@@ -1,0 +1,17 @@
+ID: ENG-009
+Tiêu đề: BASIC CREATE 2
+URL WEB: https://db.ptit.edu.vn/question-detail/62a11120-d68f-4517-816a-5d5ed2928f69
+URL API: https://dbapi.ptit.edu.vn/api/app/question/62a11120-d68f-4517-816a-5d5ed2928f69
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Table: Customer&nbsp;(already exists)</strong></p><p>Assume there is an existing table Customer with:</p><p>- CustID as the primary key,</p><p>- basic customer information such as name, email, city, etc.</p><p><br></p><p>You must create the SaleOrder table so that it references this existing Customer table.</p><p><br></p><p><strong>Table to create: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------------------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  |
++--------------+--------------------------------+
+| OrderID&nbsp; &nbsp; &nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   |
+| OrderDate&nbsp; &nbsp; | date&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  |
+| Status&nbsp; &nbsp; &nbsp; &nbsp;| enum('NEW','PAID','CANCELLED') |
+| TotalAmount&nbsp; | decimal(10,2)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   |
++--------------+--------------------------------+
+</pre><p>OrderID is the unique ID of each order and will be the primary key.&nbsp;&nbsp;</p><p>CustID is the ID of the customer who placed the order; it must reference CustID in the existing Customer table.&nbsp;&nbsp;</p><p>OrderDate is the date when the order was created.&nbsp;&nbsp;</p><p>Status indicates the current order status and uses an ENUM with values 'NEW', 'PAID', or 'CANCELLED'.&nbsp;&nbsp;</p><p>TotalAmount is the total value of the order.&nbsp;&nbsp;</p><p>Each row in this table represents a single order placed by a customer.</p><p><br></p><p><strong>Task:&nbsp;&nbsp;</strong></p><p>Based on the existing Customer table, write an SQL statement to create only the SaleOrder table with:</p><p>- OrderID as the primary key,</p><p>- a foreign key from SaleOrder.CustID to Customer.CustID,</p><p>- Status defined as ENUM('NEW','PAID','CANCELLED'),</p><p>- appropriate NOT NULL constraints as described.</p>

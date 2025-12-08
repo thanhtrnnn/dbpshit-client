@@ -1,0 +1,31 @@
+ID: DEMO-031
+Tiêu đề: Thêm danh sách khách hàng VIP theo tổng chi tiêu năm 2024
+URL WEB: https://db.ptit.edu.vn/question-detail/f9f1b77b-91fb-47d3-9e00-324b802f4d89
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f9f1b77b-91fb-47d3-9e00-324b802f4d89
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống bán hàng có 3 bảng:</p><p><strong>Bảng: Customer</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName | VARCHAR(100) |
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(50)&nbsp; |
++--------------+--------------+
+</pre><p>CustID là mã khách hàng, khóa chính, dùng để định danh duy nhất từng khách.</p><p>CustomerName là tên đầy đủ của khách hàng, yêu cầu luôn có giá trị.</p><p>City là thành phố nơi khách hàng sinh sống.</p><p>Mỗi hàng trong bảng này thể hiện thông tin cơ bản của một khách hàng.</p><p><br></p><p><strong>Bảng: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| TotalAmount&nbsp; | DECIMAL(10,2)&nbsp; |
++--------------+----------------+
+</pre><p>OrderID là mã đơn hàng, khóa chính của bảng.</p><p>CustID là mã khách đã tạo đơn, là khóa ngoại tham chiếu đến CustID trong bảng Customer.</p><p>OrderDate là ngày tạo đơn hàng.</p><p>TotalAmount là tổng tiền của đơn hàng, lưu với hai chữ số thập phân.</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng của một khách hàng cụ thể.</p><p><br></p><p><strong>Bảng: VipCustomer</strong></p><pre class="ql-syntax" spellcheck="false">+-----------------+----------------+
+| Column Name&nbsp; &nbsp; &nbsp;| Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-----------------+----------------+
+| CustID&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName&nbsp; &nbsp; | VARCHAR(100)&nbsp; &nbsp;|
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | VARCHAR(50)&nbsp; &nbsp; |
+| TotalSpent2024&nbsp; | DECIMAL(10,2)&nbsp; |
++-----------------+----------------+
+</pre><p>CustID là mã khách hàng VIP, khóa chính, đồng thời là khóa ngoại tham chiếu đến CustID trong bảng Customer.</p><p>CustomerName là tên khách hàng được gắn nhãn VIP, sao chép từ bảng Customer tại thời điểm ghi nhận.</p><p>City là thành phố của khách hàng VIP, cũng sao chép từ bảng Customer.</p><p>TotalSpent2024 là tổng tiền mà khách chi tiêu trong năm 2024, tính từ các đơn hàng trong bảng SaleOrder.</p><p>Mỗi hàng trong bảng này thể hiện một khách hàng được xếp vào nhóm VIP theo tổng chi tiêu năm 2024.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Thêm vào bảng VipCustomer những khách hàng thỏa mãn đồng thời:</p><p>- Tổng tiền các đơn hàng trong năm 2024 với OrderDate thuộc năm 2024 lớn hơn hoặc bằng 2000.</p>

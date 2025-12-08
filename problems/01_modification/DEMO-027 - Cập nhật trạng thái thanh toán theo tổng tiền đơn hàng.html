@@ -1,0 +1,30 @@
+ID: DEMO-027
+Tiêu đề: Cập nhật trạng thái thanh toán theo tổng tiền đơn hàng
+URL WEB: https://db.ptit.edu.vn/question-detail/d3305b57-7e32-4c4b-b1a3-8ed3c8971b88
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d3305b57-7e32-4c4b-b1a3-8ed3c8971b88
+Loại Database: Mysql
+------------------------------
+
+<p>Có 3 bảng sau:</p><p><strong>Bảng: Product</strong></p><pre class="ql-syntax" spellcheck="false">+---------+--------------+
+| Cột&nbsp; &nbsp; &nbsp;| Kiểu dữ liệu |
++---------+--------------+
+| PID&nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Title&nbsp; &nbsp;| VARCHAR(100) |
+| Price&nbsp; &nbsp;| DECIMAL(10,2)|
++---------+--------------+
+</pre><p>PID là mã sản phẩm, khóa chính, định danh duy nhất từng sản phẩm.</p><p>Title là tên sản phẩm, mô tả ngắn gọn.</p><p>Price là đơn giá của sản phẩm, lưu dạng số với 2 chữ số thập phân.</p><p>Mỗi hàng trong bảng này thể hiện một sản phẩm cụ thể.</p><p><br></p><p><strong>Bảng: Payment</strong></p><pre class="ql-syntax" spellcheck="false">+---------+----------------------+
+| Cột&nbsp; &nbsp; &nbsp;| Kiểu dữ liệu&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++---------+----------------------+
+| PayID&nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderID | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Status&nbsp; | ENUM            &nbsp; &nbsp; &nbsp;|
+| PaidAt&nbsp; | DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++---------+----------------------+
+</pre><p>PayID là mã thanh toán, khóa chính của bảng.</p><p>OrderID là mã đơn hàng gắn với lần thanh toán, một OrderID chỉ xuất hiện một lần trong bảng Payment.</p><p>Status là trạng thái thanh toán, ví dụ: 'PENDING', 'PAID', 'FAILED'.</p><p>PaidAt là ngày thanh toán nếu đã trả tiền.</p><p>Mỗi hàng trong bảng này thể hiện thông tin thanh toán cho một đơn hàng.</p><p><br></p><p><strong>Bảng: OrderItem</strong></p><pre class="ql-syntax" spellcheck="false">+---------+--------------+
+| Cột&nbsp; &nbsp; &nbsp;| Kiểu dữ liệu |
++---------+--------------+
+| OrderID | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| PID&nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Qty&nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++---------+--------------+
+</pre><p>OrderID là mã đơn hàng mà dòng hàng này thuộc về, khóa ngoại tham chiếu tới OrderID trong bảng Payment.</p><p>PID là mã sản phẩm, khóa ngoại tham chiếu tới PID trong bảng Product.</p><p>Qty là số lượng sản phẩm ở dòng này.</p><p>Khóa chính của bảng OrderItem là (OrderID, PID).</p><p>Mỗi hàng trong bảng này thể hiện một dòng chi tiết hàng hóa của một đơn hàng.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Đặt Status = 'PAID' và PaidAt = '2025-01-01' cho những bản ghi trong bảng Payment mà&nbsp;tổng tiền hàng của đơn đó (theo mỗi OrderID) lớn hơn hoặc bằng 500.</p>

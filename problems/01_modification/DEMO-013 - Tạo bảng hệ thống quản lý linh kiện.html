@@ -1,0 +1,8 @@
+ID: DEMO-013
+Tiêu đề: Tạo bảng hệ thống quản lý linh kiện
+URL WEB: https://db.ptit.edu.vn/question-detail/89cc9f67-e7d9-4106-8627-2650ef9ce47a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/89cc9f67-e7d9-4106-8627-2650ef9ce47a
+Loại Database: Mysql
+------------------------------
+
+<p>Trong hệ thống quản lý cung ứng linh kiện, có bảng SUPPLIER và PART với cấu trúc như sau:</p><p><br></p><p><strong>Bảng SUPPLIER:</strong></p><p>• SID (INT): Mã nhà cung cấp, khóa chính.</p><p>• Name (VARCHAR(100)): Tên nhà cung cấp, NOT NULL.</p><p><br></p><p><strong>Bảng PART:</strong></p><p>• PID (INT): Mã linh kiện, khóa chính.</p><p>• PartName (VARCHAR(100)): Tên linh kiện, NOT NULL.</p><p><br></p><p><strong>Yêu cầu: Tạo bảng SUPPLY với ràng buộc</strong></p><p><br></p><p><strong>Bảng SUPPLY:</strong></p><p>• SID (INT): Mã nhà cung cấp, NOT NULL, tham chiếu đến SID trong bảng SUPPLIER.</p><p>• PID (INT): Mã linh kiện, NOT NULL, tham chiếu đến PID trong bảng PART.</p><p>• Price (DECIMAL(10,2)): Giá cung ứng, NOT NULL và phải lớn hơn 0.</p><p><br></p><p>Khóa chính của SUPPLY là cặp (SID, PID) để mô hình hóa quan hệ N–N giữa SUPPLIER và PART.</p><p><br></p><p>Hãy tạo bảng SUPPLY thỏa mãn mô tả trên.</p>

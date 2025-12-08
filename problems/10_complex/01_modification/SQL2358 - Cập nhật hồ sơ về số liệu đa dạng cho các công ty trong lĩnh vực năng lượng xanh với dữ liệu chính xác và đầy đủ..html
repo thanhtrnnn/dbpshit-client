@@ -1,0 +1,8 @@
+ID: SQL2358
+Tiêu đề: Cập nhật hồ sơ về số liệu đa dạng cho các công ty trong lĩnh vực năng lượng xanh với dữ liệu chính xác và đầy đủ.
+URL WEB: https://db.ptit.edu.vn/question-detail/fcd21d8e-a89c-4208-9817-6063c9641f87
+URL API: https://dbapi.ptit.edu.vn/api/app/question/fcd21d8e-a89c-4208-9817-6063c9641f87
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng diversity_metrics</strong>: Chứa thông tin về các chỉ số đa dạng của công ty theo năm.</h3><ul><li>id (INT): Mã định danh duy nhất cho mỗi bản ghi chỉ số (khóa chính).</li><li>company_id (INT): Mã định danh của công ty (liên kết với bảng company).</li><li>year (INT): Năm ghi nhận chỉ số.</li><li>gender_distribution (TEXT): Tỷ lệ phân bố giới tính (dưới dạng JSON hoặc mô tả).</li><li>racial_distribution (TEXT): Tỷ lệ phân bố chủng tộc (dưới dạng JSON hoặc mô tả).</li></ul><h3><strong>Bảng company</strong>: Chứa thông tin về các công ty.</h3><ul><li>id (INT): Mã định danh duy nhất cho mỗi công ty (khóa chính).</li><li>name (TEXT): Tên công ty.</li><li>industry (TEXT): Ngành nghề hoạt động (ví dụ: "Green Energy", "Technology", ...)</li></ul><h3><strong>Nhiệm vụ</strong>:</h3><p>Cập nhật các hồ sơ về chỉ số đa dạng (diversity_metrics) cho các công ty thuộc lĩnh vực "Green Energy" (industry = 'Green Energy') với dữ liệu chính xác và đầy đủ.</p>

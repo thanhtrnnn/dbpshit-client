@@ -1,0 +1,32 @@
+ID: DEMO-003
+Tiêu đề: Tính tổng doanh thu theo khách hàng
+URL WEB: https://db.ptit.edu.vn/question-detail/93588896-cc1b-4dd4-8894-ff0dc19fd0dc
+URL API: https://dbapi.ptit.edu.vn/api/app/question/93588896-cc1b-4dd4-8894-ff0dc19fd0dc
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng: SALEORDER</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+--------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+--------------+
+| OrderID&nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Total&nbsp; &nbsp; &nbsp; &nbsp;| decimal(10,2)|
++-------------+--------------+
+</pre><p>OrderID: mã đơn hàng, duy nhất cho mỗi đơn.</p><p>CustID: mã khách hàng gắn với đơn hàng này.</p><p>Total: số tiền của đơn hàng, lưu với 2 chữ số thập phân.</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng cụ thể, bao gồm ID đơn, ID khách hàng và số tiền mà khách đã thanh toán cho đơn đó.</p><p><br></p><p><strong>Nhiệm vụ:</strong></p><p>Tính tổng doanh thu cho từng khách hàng.</p><p>Trả về bảng kết quả gồm hai cột (CustID, TotalRevenue).</p><p>Sắp xếp kết quả theo CustID tăng dần.</p><p><br></p><p><strong>Ví dụ:</strong></p><p>Input:</p><p>Bảng <strong>SALEORDER</strong>:</p><pre class="ql-syntax" spellcheck="false">+---------+--------+--------+
+| OrderID | CustID | Total&nbsp; |
++---------+--------+--------+
+| 1&nbsp; &nbsp; &nbsp; &nbsp;| 101&nbsp; &nbsp; | 100.00 |
+| 2&nbsp; &nbsp; &nbsp; &nbsp;| 101&nbsp; &nbsp; |&nbsp; 50.50 |
+| 3&nbsp; &nbsp; &nbsp; &nbsp;| 102&nbsp; &nbsp; | 200.00 |
+| 4&nbsp; &nbsp; &nbsp; &nbsp;| 103&nbsp; &nbsp; |&nbsp; 10.00 |
+| 5&nbsp; &nbsp; &nbsp; &nbsp;| 101&nbsp; &nbsp; |&nbsp; 20.00 |
+| 6&nbsp; &nbsp; &nbsp; &nbsp;| 102&nbsp; &nbsp; |&nbsp; 30.00 |
++---------+--------+--------+
+</pre><p><br></p><p>Output:</p><pre class="ql-syntax" spellcheck="false">+--------+--------------+
+| CustID | TotalRevenue |
++--------+--------------+
+| 101&nbsp; &nbsp; | 170.50&nbsp; &nbsp; &nbsp; &nbsp;|
+| 102&nbsp; &nbsp; | 230.00&nbsp; &nbsp; &nbsp; &nbsp;|
+| 103&nbsp; &nbsp; | 10.00&nbsp; &nbsp; &nbsp; &nbsp; |
++--------+--------------+
+</pre><p><br></p><p><strong>Giải thích:</strong></p><p>- Khách 101 có ba đơn: 100.00 + 50.50 + 20.00 = 170.50.</p><p>- Khách 102 có hai đơn: 200.00 + 30.00 = 230.00.</p><p>- Khách 103 chỉ có một đơn 10.00.</p>

@@ -1,0 +1,18 @@
+ID: SQL2160
+Tiêu đề: Cập nhật lương của toàn bộ nhân viên chưa rời công ty
+URL WEB: https://db.ptit.edu.vn/question-detail/2c3a5d0f-2246-4d00-91b0-cca8f0f68fdd
+URL API: https://dbapi.ptit.edu.vn/api/app/question/2c3a5d0f-2246-4d00-91b0-cca8f0f68fdd
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Employees</strong> lưu trữ thông tin về nhân viên, với các trường sau:</p><ul><li>id (INT): Mã định danh duy nhất của nhân viên.</li><li>name (VARCHAR): Tên của nhân viên.</li><li>position (VARCHAR): Chức danh công việc.</li><li>left_company (BOOLEAN): Trạng thái rời công ty (TRUE nếu đã nghỉ, FALSE nếu còn làm việc).</li><li>salary (DECIMAL): Mức lương của nhân viên.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Cập nhật lương của toàn bộ nhân viên chưa rời công ty</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+--------+-------+-------------+--------------+----------+
+|   id   | name  |  position   | left_company |  salary  |
++--------+-------+-------------+--------------+----------+
+|  2934  | Lisa  | lwdaxGOlhp  |     true     |  78.94   |
+|  2687  | David | BYEzOQevff  |     true     |  423.81  |
+|  5192  | Lisa  | VRqSNdHYIE  |    false     | 70000.0  |
+|  1645  | Lisa  | LkoMFjVxwu  |     true     |  37.08   |
+|  5949  | David | vBvoqcqkpm  |     true     |  948.14  |
+|  2502  | Alice | LnybUaStlJ  |     true     |  338.9   |
++--------+-------+-------------+--------------+----------+
+</pre>

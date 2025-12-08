@@ -1,0 +1,31 @@
+ID: DEMO-032
+Tiêu đề: Cập nhật Tier cho khách chi tiêu cao nhất trong từng thành phố
+URL WEB: https://db.ptit.edu.vn/question-detail/0113b463-c4cc-4bce-9981-2c3a6aca1779
+URL API: https://dbapi.ptit.edu.vn/api/app/question/0113b463-c4cc-4bce-9981-2c3a6aca1779
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống bán hàng có 3 bảng:</p><p><strong>Bảng: Customer</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName | VARCHAR(100) |
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(50)&nbsp; |
+| Tier&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(20)&nbsp; |
++--------------+--------------+
+</pre><p>CustID là mã khách hàng, khóa chính, INT, định danh duy nhất từng khách.&nbsp;&nbsp;</p><p>CustomerName là tên đầy đủ của khách hàng.&nbsp;&nbsp;</p><p>City là thành phố nơi khách sinh sống.&nbsp;&nbsp;</p><p>Tier là hạng khách hàng (ví dụ: 'NORMAL', 'VIP', 'TOP_CITY'), dùng để phân loại theo mức độ chi tiêu.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện thông tin cơ bản và hạng hiện tại của một khách hàng.</p><p><br></p><p><strong>Bảng: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+</pre><p>OrderID là mã đơn hàng, khóa chính.&nbsp;&nbsp;</p><p>CustID là mã khách hàng đã tạo đơn, khóa ngoại tham chiếu đến CustID trong bảng Customer.&nbsp;&nbsp;</p><p>OrderDate là ngày tạo đơn hàng.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng của một khách cụ thể trong một thời điểm nhất định.</p><p><br></p><p><strong>Bảng: Payment</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| PaymentID&nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Amount&nbsp; &nbsp; &nbsp; &nbsp;| DECIMAL(10,2)&nbsp; |
+| Status&nbsp; &nbsp; &nbsp; &nbsp;| ENUM/VARCHAR&nbsp; &nbsp;|
++--------------+----------------+
+</pre><p>PaymentID là mã thanh toán, khóa chính.&nbsp;&nbsp;</p><p>OrderID là mã đơn hàng được thanh toán, khóa ngoại tham chiếu đến OrderID trong bảng SaleOrder.&nbsp;&nbsp;</p><p>Amount là số tiền thanh toán cho lần Payment đó.&nbsp;&nbsp;</p><p>Status là trạng thái thanh toán, ví dụ: 'PAID', 'PENDING', 'FAILED'.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một lần thanh toán của một đơn hàng.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Cập nhật cột Tier của bảng Customer thành 'TOP_CITY' cho các khách hàng thỏa mãn:</p><p>1. Tổng số tiền thanh toán thành công (Status = 'PAID') của khách đó (tính trên tất cả các đơn hàng của khách) là <strong>lớn nhất trong thành phố của họ</strong>.</p><p>2. Nếu trong một thành phố có nhiều khách hàng cùng đạt tổng chi tiêu PAID cao nhất (bằng nhau), thì tất cả những khách đó đều được gán Tier = 'TOP_CITY'.</p>

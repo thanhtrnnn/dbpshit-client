@@ -1,0 +1,17 @@
+ID: ENG-008
+Tiêu đề: BASIC CREATE 1
+URL WEB: https://db.ptit.edu.vn/question-detail/c3cce420-fe30-4b07-a021-18cd21c324ee
+URL API: https://dbapi.ptit.edu.vn/api/app/question/c3cce420-fe30-4b07-a021-18cd21c324ee
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Table: Student</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+----------------+
+| Column&nbsp; &nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-----------+----------------+
+| StudentID | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| FullName&nbsp; | varchar(100)&nbsp; &nbsp;|
+| Email&nbsp; &nbsp; &nbsp;| varchar(100)&nbsp; &nbsp;|
+| BirthDate | date&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| GPA&nbsp; &nbsp; &nbsp; &nbsp;| decimal(3,2)&nbsp; &nbsp;|
++-----------+----------------+
+</pre><p>StudentID is the unique ID of each student and will be the primary key.&nbsp;&nbsp;</p><p>FullName is the full name of the student, required for every record.&nbsp;&nbsp;</p><p>Email is the student’s email address, also required.&nbsp;&nbsp;</p><p>BirthDate is the student’s date of birth.&nbsp;&nbsp;</p><p>GPA is the student’s grade point average on a 0.00–4.00 scale.&nbsp;&nbsp;</p><p>Each row in this table represents one student and their basic academic information.</p><p><br></p><p><strong>Task:&nbsp;&nbsp;</strong></p><p>Write an SQL statement to create the Student table with the columns above.&nbsp;&nbsp;</p><p><strong>Requirements:</strong></p><p>- StudentID is the primary key.</p><p>- FullName and Email cannot be NULL.</p><p>- GPA cannot be NULL and should allow values like 3.50, 2.75, 4.00.</p>

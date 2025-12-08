@@ -1,0 +1,32 @@
+ID: DEMO-034
+Tiêu đề: Xóa log điểm thưởng welcome trùng lặp cho khách chi tiêu thấp
+URL WEB: https://db.ptit.edu.vn/question-detail/171f76fc-7bee-4a8f-897c-b528677a99c6
+URL API: https://dbapi.ptit.edu.vn/api/app/question/171f76fc-7bee-4a8f-897c-b528677a99c6
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống khách hàng thân thiết có 3 bảng:</p><p><strong>Bảng: Customer</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName | VARCHAR(100) |
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(50)&nbsp; |
++--------------+--------------+
+</pre><p>CustID là mã khách hàng, khóa chính, kiểu INT.&nbsp;&nbsp;</p><p>CustomerName là tên đầy đủ của khách, kiểu VARCHAR(100), luôn có dữ liệu.&nbsp;&nbsp;</p><p>City là tên thành phố nơi khách sinh sống, kiểu VARCHAR(50).&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một khách hàng cùng thông tin cơ bản của họ.</p><p><br></p><p><strong>Bảng: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| TotalAmount&nbsp; | DECIMAL(10,2)&nbsp; |
++--------------+----------------+
+</pre><p>OrderID là mã đơn hàng, khóa chính, kiểu INT.&nbsp;&nbsp;</p><p>CustID là mã khách đã tạo đơn, kiểu INT, là khóa ngoại tham chiếu đến CustID trong bảng Customer.&nbsp;&nbsp;</p><p>OrderDate là ngày tạo đơn hàng, kiểu DATE.&nbsp;&nbsp;</p><p>TotalAmount là tổng tiền của đơn hàng, kiểu DECIMAL(10,2).&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một giao dịch mua hàng cụ thể của một khách hàng.</p><p><br></p><p><strong>Bảng: LoyaltyHistory</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| HistoryID&nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| ChangeDate&nbsp; &nbsp;| DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| PointsChange | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Reason&nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(50)&nbsp; &nbsp; |
++--------------+----------------+
+</pre><p>HistoryID là mã dòng lịch sử điểm thưởng, khóa chính, kiểu INT.&nbsp;&nbsp;</p><p>CustID là mã khách hàng, kiểu INT, là khóa ngoại tham chiếu đến CustID trong bảng Customer.&nbsp;</p><p>ChangeDate là ngày phát sinh thay đổi điểm, kiểu DATE.&nbsp;&nbsp;</p><p>PointsChange là số điểm cộng/trừ (dương hoặc âm), kiểu INT.&nbsp;&nbsp;</p><p>Reason là lý do thay đổi điểm, ví dụ: 'WELCOME_BONUS', 'ORDER_BONUS', 'PROMO', kiểu VARCHAR(50).&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một lần điều chỉnh điểm thưởng cho một khách hàng.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Xóa khỏi bảng LoyaltyHistory những dòng log “WELCOME_BONUS” trùng lặp dành cho các khách hàng có tổng chi tiêu thấp, theo đúng các quy tắc sau:</p><p><br></p><p>1. Xét riêng từng khách hàng (CustID), với cùng Reason = 'WELCOME_BONUS' và cùng PointsChange, nếu có nhiều hơn một dòng lịch sử thì chỉ giữ lại bản ghi mới nhất (ChangeDate lớn nhất), các bản ghi cũ hơn phải bị xóa (tức là xóa các HistoryID cũ hơn trong mỗi nhóm trùng).&nbsp;&nbsp;</p><p><br></p><p>2. Chỉ xóa các bản ghi cũ thuộc về khách hàng có tổng chi tiêu TotalAmount trên bảng SaleOrder (tính trên tất cả đơn hàng của khách đó) nhỏ hơn 1000.&nbsp;</p><p>&nbsp;</p><p><strong>Nói ngắn gọn:</strong> Xóa các dòng “WELCOME_BONUS” cũ (không phải mới nhất) cho những khách hàng có tổng chi tiêu &lt; 1000; khách chi tiêu lớn (&gt;=1000) vẫn giữ nguyên toàn bộ lịch sử.</p>

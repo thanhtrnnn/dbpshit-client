@@ -1,0 +1,8 @@
+ID: DEMO-012
+Tiêu đề: Tạo bảng quản lý đơn hàng
+URL WEB: https://db.ptit.edu.vn/question-detail/1f95589f-8a16-4c4d-91ff-22176ff7dbaf
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1f95589f-8a16-4c4d-91ff-22176ff7dbaf
+Loại Database: Mysql
+------------------------------
+
+<p>Trong hệ thống bán hàng, có bảng CUSTOMER lưu thông tin khách hàng với CustID là khóa chính.</p><p><br></p><p><strong>Yêu cầu: Tạo bảng SALEORDER với ràng buộc</strong></p><p><br></p><p><strong>Bảng SALEORDER:</strong></p><p>• OrderID (INT): Mã đơn hàng, khóa chính.</p><p>• CustID (INT): Mã khách hàng, NOT NULL, tham chiếu đến CustID trong bảng CUSTOMER.</p><p>• TotalAmount (DECIMAL(12,2)): Tổng tiền đơn hàng, NOT NULL và phải lớn hơn 0.</p><p>• Status ENUM('NEW','PAID','CANCELLED'): Trạng thái đơn hàng, NOT NULL.</p><p><br></p><p>Hãy tạo bảng SALEORDER thỏa mãn mô tả trên.</p>

@@ -1,0 +1,8 @@
+ID: DEMO-011
+Tiêu đề: Tạo bảng hệ thống quản lý đăng ký học phần
+URL WEB: https://db.ptit.edu.vn/question-detail/d11eb0f8-9a15-4d70-88b2-07d6ac680088
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d11eb0f8-9a15-4d70-88b2-07d6ac680088
+Loại Database: Mysql
+------------------------------
+
+<p>Trong hệ thống quản lý đăng ký học phần, có bảng STUDENT và COURSE với cấu trúc như sau:</p><p><br></p><p><strong>Bảng STUDENT:</strong></p><p>• SID (INT): Mã sinh viên, khóa chính.</p><p>• FullName (VARCHAR(100)): Họ tên sinh viên, NOT NULL.</p><p><br></p><p><strong>Bảng COURSE:</strong></p><p>• CID (INT): Mã khóa học, khóa chính.</p><p>• Title (VARCHAR(100)): Tên khóa học, NOT NULL.</p><p><br></p><p><strong>Yêu cầu: Tạo bảng ENROLL với ràng buộc</strong></p><p><br></p><p><strong>Bảng ENROLL:</strong></p><p>• SID (INT): Mã sinh viên, NOT NULL, tham chiếu đến SID trong bảng STUDENT.</p><p>• CID (INT): Mã khóa học, NOT NULL, tham chiếu đến CID trong bảng COURSE.</p><p>• EnrollmentDate (DATE): Ngày ghi danh, không được trống.</p><p><br></p><p>Khóa chính của ENROLL là cặp (SID, CID) để mô hình hóa quan hệ N–N giữa STUDENT và COURSE.</p><p><br></p><p>Hãy tạo bảng ENROLL thỏa mãn mô tả trên.</p>

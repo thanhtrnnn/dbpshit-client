@@ -1,0 +1,8 @@
+ID: SQL1974
+Tiêu đề: Xóa hồ sơ của sinh viên chưa công bố bài báo nào.
+URL WEB: https://db.ptit.edu.vn/question-detail/e370e93b-69fd-48e3-9387-ff917747750c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e370e93b-69fd-48e3-9387-ff917747750c
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng students:</strong></p><p>Lưu trữ thông tin về các học sinh, bao gồm mã học sinh và tên học sinh.</p><ul><li>id (INT): Mã số định danh duy nhất cho mỗi học sinh.</li><li>name (VARCHAR(50)): Tên của học sinh.</li></ul><p><strong>Bảng student_publications:</strong></p><p>Lưu trữ thông tin về các bài viết công bố của học sinh.</p><ul><li>student_id (INT): Mã học sinh (foreign key từ students).</li><li>publication_id (INT): Mã bài viết công bố.</li></ul><p><strong>Bảng publications:</strong></p><p>Lưu trữ thông tin về các bài viết công bố.</p><ul><li>id (INT): Mã số định danh duy nhất cho mỗi bài viết.</li><li>title (VARCHAR(100)): Tiêu đề bài viết.</li><li>year (INT): Năm công bố bài viết.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Xóa hồ sơ của sinh viên chưa công bố bài báo nào.</p>

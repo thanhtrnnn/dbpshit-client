@@ -1,0 +1,15 @@
+ID: DEMO-015
+Tiêu đề: Chỉnh sửa thông tin sinh viên
+URL WEB: https://db.ptit.edu.vn/question-detail/4f9b616f-639b-4158-bf16-20e32fdaea29
+URL API: https://dbapi.ptit.edu.vn/api/app/question/4f9b616f-639b-4158-bf16-20e32fdaea29
+Loại Database: Mysql
+------------------------------
+
+<p>Trong cơ sở dữ liệu hiện tại, bảng <strong>Students</strong> đã được tạo như sau:</p><pre class="ql-syntax" spellcheck="false">CREATE TABLE Students (
+&nbsp; &nbsp; student_id INT,
+&nbsp; &nbsp; full_name VARCHAR(255),
+&nbsp; &nbsp; email VARCHAR(255),
+&nbsp; &nbsp; birth_date VARCHAR(20),
+&nbsp; &nbsp; phone VARCHAR(50)
+);
+</pre><p><br></p><p>Tuy nhiên, thiết kế bảng trên còn nhiều vấn đề:</p><p><strong>student_id</strong></p><ul><li>Mới chỉ là kiểu INT bình thường.</li><li>Trường này phải là <strong>khóa chính</strong>, <strong>NOT NULL</strong> và <strong>AUTO_INCREMENT</strong> để định danh duy nhất cho từng sinh viên.</li></ul><p><strong>birth_date</strong></p><ul><li>Đang là VARCHAR(20), trong khi đây là ngày tháng năm sinh nên phải dùng kiểu <strong>DATE</strong> để lưu trữ chính xác.</li></ul><p><strong>email</strong></p><ul><li>Chưa khai báo <strong>NOT NULL</strong>, trong khi email của mỗi sinh viên bắt buộc phải có.</li></ul><p><strong>phone</strong></p><ul><li>Phải là trường <strong>NOT NULL</strong> (bắt buộc nhập số điện thoại), nhưng hiện chưa khai báo ràng buộc này.</li></ul><p>Bảng <strong>Students</strong> cũng cần thêm cột <strong>created_at</strong> để lưu thời điểm tạo bản ghi, với kiểu <strong>DATETIME</strong> và giá trị mặc định là <strong>thời điểm hiện tại</strong>.</p><p><br></p><h3><strong>Yêu cầu</strong></h3><p>Dùng các câu lệnh sql để chỉnh sửa bảng <strong>Students</strong> như sau:</p><ol><li>Đặt student_id làm <strong>PRIMARY KEY</strong>, <strong>NOT NULL</strong>, <strong>AUTO_INCREMENT</strong>.</li><li>Đổi kiểu dữ liệu của birth_date từ VARCHAR(20) sang DATE.</li><li>Thiết lập email là <strong>NOT NULL</strong>.</li><li>Thiết lập phone là <strong>NOT NULL</strong>.</li><li>Thêm cột created_at kiểu DATETIME với giá trị mặc định là CURRENT_TIMESTAMP.</li></ol>

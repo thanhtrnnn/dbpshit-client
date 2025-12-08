@@ -1,0 +1,8 @@
+ID: SQL2268
+Tiêu đề: Xóa hồ sơ của những nhân viên y tế cộng đồng chưa được đào tạo về sức khỏe tâm thần.
+URL WEB: https://db.ptit.edu.vn/question-detail/d56c9eb5-17a3-40dd-93aa-4fa1083b1dec
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d56c9eb5-17a3-40dd-93aa-4fa1083b1dec
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng CommunityHealthWorkers</strong> – Thông tin về các nhân viên y tế cộng đồng và chuyên môn của họ:</p><ul><li>WorkerID (INT): Mã định danh duy nhất cho mỗi nhân viên y tế cộng đồng.</li><li>Name (VARCHAR(50)): Tên của nhân viên y tế cộng đồng.</li><li>Specialty (VARCHAR(50)): Chuyên môn của nhân viên (ví dụ: sức khỏe tâm thần, sức khỏe thể chất).</li><li>MentalHealthParity (BOOLEAN): Cho biết nhân viên y tế cộng đồng có được đào tạo/cân bằng về sức khỏe tâm thần hay không (TRUE/FALSE).</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong>Xóa tất cả hồ sơ của những nhân viên y tế cộng đồng không được đào tạo về sức khỏe tâm thần</strong>.</p><p><strong>Output:</strong></p><ul><li>Bảng CommunityHealthWorkers sau khi thực thi lệnh xóa, chỉ còn những nhân viên có MentalHealthParity = TRUE.</li></ul>

@@ -1,0 +1,17 @@
+ID: DEMO-017
+Tiêu đề: Chính sửa thông tin sản phẩm
+URL WEB: https://db.ptit.edu.vn/question-detail/3b6bcdd8-ceee-469c-bbc1-bba380a8490b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/3b6bcdd8-ceee-469c-bbc1-bba380a8490b
+Loại Database: Mysql
+------------------------------
+
+<p>Trong cơ sở dữ liệu hiện tại, bảng <strong>Products</strong> đã được tạo như sau:</p><pre class="ql-syntax" spellcheck="false">CREATE TABLE Products (
+&nbsp; &nbsp; id VARCHAR(50),
+&nbsp; &nbsp; name VARCHAR(255),
+&nbsp; &nbsp; category VARCHAR(100),
+&nbsp; &nbsp; price INT,
+&nbsp; &nbsp; status VARCHAR(20),
+&nbsp; &nbsp; created_at VARCHAR(50),
+&nbsp; &nbsp; temp_note VARCHAR(255)
+);
+</pre><p><br></p><p>Tuy nhiên, thiết kế bảng trên còn chưa hợp lý:</p><p><strong>id</strong></p><ul><li>Đang là VARCHAR(50) nhưng đây là mã sản phẩm dạng số.</li><li>Cần chuyển sang kiểu <strong>INT</strong>, đặt <strong>NOT NULL</strong>, <strong>AUTO_INCREMENT</strong> và dùng làm <strong>khóa chính</strong>.</li></ul><p><strong>price</strong></p><ul><li>Đang là INT, trong khi giá sản phẩm cần có phần thập phân.</li><li>Cần đổi sang <strong>DECIMAL(10,2)</strong>, <strong>NOT NULL</strong>, và đảm bảo giá <strong>không âm</strong>.</li></ul><p><strong>status</strong></p><ul><li>Đang là VARCHAR(20) tự do, dễ nhập sai.</li><li>Hệ thống chỉ cho phép các trạng thái:</li><li class="ql-indent-1">'ACTIVE' (đang bán),</li><li class="ql-indent-1">'INACTIVE' (tạm ẩn),</li><li class="ql-indent-1">'DISCONTINUED' (ngừng kinh doanh).</li><li>Cần chuyển sang kiểu <strong>ENUM</strong>, đặt là <strong>NOT NULL</strong>, mặc định 'ACTIVE'.</li></ul><p><strong>created_at</strong></p><ul><li>Đang là VARCHAR(50), nhưng đây là thời điểm thêm sản phẩm, nên phải dùng kiểu <strong>DATETIME</strong> với giá trị mặc định là <strong>CURRENT_TIMESTAMP</strong>.</li></ul><p><strong>category</strong></p><ul><li>Cần bắt buộc nhập, nên phải đặt <strong>NOT NULL</strong>.</li></ul><p><strong>temp_note</strong></p><ul><li>Chỉ là cột tạm dùng trong quá trình nhập liệu, bây giờ không còn dùng nữa.</li><li>Cần <strong>xóa cột này khỏi bảng</strong>.</li></ul><p><br></p><h3><strong>Yêu cầu</strong></h3><p>Dùng các câu lệnh sql để chỉnh sửa bảng <strong>Products</strong> như sau:</p><ol><li>Chuyển id sang kiểu INT, đặt <strong>NOT NULL</strong>, <strong>AUTO_INCREMENT</strong> và làm <strong>PRIMARY KEY</strong>.</li><li>Đổi kiểu dữ liệu của price sang <strong>DECIMAL(10,2) NOT NULL</strong> và thêm ràng buộc kiểm tra giá không âm.</li><li>Đổi kiểu dữ liệu của status sang <strong>ENUM, </strong>đặt là<strong> NOT NULL </strong>với mặc định là<strong> 'ACTIVE'</strong>.</li><li>Đổi kiểu created_at sang kiểu <strong>DATETIME </strong>với giá trị mặc định là<strong> CURRENT_TIMESTAMP</strong>.</li><li>Đặt category là <strong>NOT NULL</strong>.</li><li>Xóa cột temp_note khỏi bảng.</li></ol>

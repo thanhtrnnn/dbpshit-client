@@ -1,0 +1,17 @@
+ID: DEMO-022
+Tiêu đề: Chỉnh sửa thông tin bảng điểm khách hàng
+URL WEB: https://db.ptit.edu.vn/question-detail/a88ab707-42a4-4bc4-a1f3-a4d6a01dbc83
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a88ab707-42a4-4bc4-a1f3-a4d6a01dbc83
+Loại Database: Mysql
+------------------------------
+
+<p>rong cơ sở dữ liệu hiện tại, bảng <strong>LoyaltyPoints</strong> đang được tạo như sau:</p><pre class="ql-syntax" spellcheck="false">CREATE TABLE LoyaltyPoints (
+&nbsp; &nbsp; record_id INT,
+&nbsp; &nbsp; customer_id VARCHAR(50),
+&nbsp; &nbsp; points INT,
+&nbsp; &nbsp; type VARCHAR(20),
+&nbsp; &nbsp; created_at VARCHAR(50),
+&nbsp; &nbsp; expired_at VARCHAR(50),
+&nbsp; &nbsp; note_temp VARCHAR(255)
+);
+</pre><p>Tuy nhiên, thiết kế bảng trên còn chưa hợp lý:</p><p><strong>record_id</strong></p><ul><li>Mới chỉ là INT bình thường.</li><li>Đây là mã định danh duy nhất cho mỗi giao dịch điểm.</li><li>Cần dùng để phân biệt từng dòng dữ liệu, <strong>không được để trống</strong> và <strong>tăng tự động</strong> khi thêm bản ghi.</li><li>Nên được sử dụng làm <strong>khóa chính</strong> của bảng.</li></ul><p><strong>customer_id</strong></p><ul><li>Đang là VARCHAR(50) nhưng hệ thống lưu mã khách hàng dưới dạng số nguyên.</li><li>Cần chuyển sang kiểu phù hợp với mã số khách hàng.</li><li>Không được để trống vì mọi giao dịch điểm đều phải gắn với một khách hàng cụ thể.</li></ul><p><strong>points</strong></p><ul><li>Đang là INT, trong khi số điểm có thể cần lưu chính xác hơn (ví dụ quy đổi từ tiền sang điểm, có thể cần phần thập phân).</li><li>Cần chuyển sang kiểu số thực <strong>DECIMAL(10,2)</strong>.</li><li>Không được để trống, nếu chưa có dữ liệu thì mặc định là <strong>0</strong>.</li></ul><p><strong>type</strong></p><ul><li>Đang là VARCHAR(20) tự do, dễ nhập sai.</li><li>Hệ thống chỉ quy ước 3 loại giao dịch điểm:</li><li class="ql-indent-1">'EARN' (cộng điểm)</li><li class="ql-indent-1">'REDEEM' (trừ điểm do đổi quà / giảm giá)</li><li class="ql-indent-1">'ADJUST' (điều chỉnh thủ công)</li><li>Cần giới hạn giá trị theo ba loại trên, <strong>không được để trống</strong>, mặc định là <strong>'EARN'.</strong></li></ul><p><strong>created_at</strong></p><ul><li>Đang là VARCHAR(50) nhưng đây là thời điểm phát sinh giao dịch điểm.</li><li>Cần dùng kiểu ngày giờ phù hợp, với giá trị mặc định là <strong>thời điểm hiện tại</strong> khi thêm bản ghi.</li></ul><p><strong>expired_at</strong></p><ul><li>Đang là VARCHAR(50) trong khi đây là ngày hết hạn điểm.</li><li>Cần chuyển sang kiểu ngày tháng thích hợp.</li><li>Có thể để trống nếu giao dịch không có ngày hết hạn.</li></ul><p><strong>Thêm cột mới: status</strong></p><ul><li>Cần thêm cột để thể hiện trạng thái của bản ghi điểm:</li><li class="ql-indent-1">'ACTIVE' (điểm còn hiệu lực)</li><li class="ql-indent-1">'EXPIRED' (điểm đã hết hạn)</li><li class="ql-indent-1">'CANCELLED' (giao dịch bị hủy)</li><li>Cột này phải <strong>không được để trống</strong>, giá trị mặc định là <strong>'ACTIVE'.</strong></li></ul><p><strong>note_temp</strong></p><ul><li>Là cột ghi chú tạm dùng trong quá trình xử lý dữ liệu.</li><li>Hiện tại không còn sử dụng nữa, nên cần <strong>xóa khỏi bảng</strong>.</li></ul><p><br></p><p><strong>Yêu cầu: Dùng các câu lệnh SQL để thực hiện tất cả các thay đổi đã mô tả ở trên.</strong></p>

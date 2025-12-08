@@ -1,0 +1,8 @@
+ID: DEMO-019
+Tiêu đề: Tạo bảng hệ thống quản lý thư viện
+URL WEB: https://db.ptit.edu.vn/question-detail/76c99d50-b214-4b45-8942-478918fe58ae
+URL API: https://dbapi.ptit.edu.vn/api/app/question/76c99d50-b214-4b45-8942-478918fe58ae
+Loại Database: Mysql
+------------------------------
+
+<p>Trong hệ thống quản lý thư viện, có các bảng:</p><p><br></p><p><strong>Bảng MEMBER:</strong></p><p>• MemberID (INT): Mã thành viên, khóa chính.</p><p>• FullName (VARCHAR(100)): Họ tên thành viên, NOT NULL.</p><p><br></p><p><strong>Bảng BOOK:</strong></p><p>• BookID (INT): Mã sách, khóa chính.</p><p>• Title (VARCHAR(200)): Tên sách, NOT NULL.</p><p><br></p><p><strong>Yêu cầu:</strong> Tạo bảng LOAN để lưu thông tin mượn sách của các thành viên, với cấu trúc và ràng buộc như sau:</p><p><br></p><p><strong>Bảng LOAN:</strong></p><p>• LoanID (INT): Mã phiếu mượn, là khóa chính.</p><p>• MemberID (INT): Mã thành viên mượn sách, NOT NULL, tham chiếu đến MemberID trong bảng MEMBER.</p><p>• BookID (INT): Mã sách được mượn, NOT NULL, tham chiếu đến BookID trong bảng BOOK.</p><p>• LoanDate (DATE): Ngày mượn, NOT NULL.</p><p>• DueDate (DATE): Hạn trả, NOT NULL.</p><p>• ReturnDate (DATE): Ngày trả thực tế, có thể NULL nếu chưa trả.</p><p>• Status ENUM('BORROWED','RETURNED','OVERDUE'): Trạng thái phiếu mượn, NOT NULL, giá trị mặc định là 'BORROWED'.</p><p>• Fine (DECIMAL(8,2)): Tiền phạt (nếu có), NOT NULL, mặc định 0.</p><p><br></p><p>Hãy tạo bảng LOAN thỏa mãn mô tả trên.</p>

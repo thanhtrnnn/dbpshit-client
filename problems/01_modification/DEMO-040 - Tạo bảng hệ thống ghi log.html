@@ -1,0 +1,8 @@
+ID: DEMO-040
+Tiêu đề: Tạo bảng hệ thống ghi log
+URL WEB: https://db.ptit.edu.vn/question-detail/2744bcfd-eb89-47c0-a1c4-697354c4e9aa
+URL API: https://dbapi.ptit.edu.vn/api/app/question/2744bcfd-eb89-47c0-a1c4-697354c4e9aa
+Loại Database: Mysql
+------------------------------
+
+<p>Trong một hệ thống ghi log hoạt động của ứng dụng, cần thiết kế bảng ACTIVITY_LOG để lưu lại các thao tác quan trọng của người dùng.</p><p><br></p><p>Bảng ACTIVITY_LOG lưu các thông tin sau:</p><p>• LogID: giá trị số dùng làm khóa chính, phân biệt từng bản ghi log.</p><p>• Actor: chuỗi ký tự, bắt buộc nhập, có độ dài tối đa 100.</p><p>• Action: mô tả ngắn gọn thao tác đã thực hiện (ví dụ: "LOGIN", "CREATE_ORDER", "UPDATE_PROFILE"), bắt buộc nhập, có độ dài tối đa 100.</p><p>• Detail: dạng chuỗi văn bản dài mô tả dài hơn hoặc nội dung bổ sung cho hành động, có thể để trống.</p><p>• CreatedAt: kiểu ngày giờ, bắt buộc, và nếu khi chèn dữ liệu không truyền giá trị thì tự động lấy thời điểm hiện tại của hệ thống.</p><p><br></p><p>Hãy tạo bảng ACTIVITY_LOG trong cơ sở dữ liệu.</p>

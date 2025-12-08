@@ -1,0 +1,16 @@
+ID: DEMO-008
+Tiêu đề: Tăng lương cho nhân viên phòng IT
+URL WEB: https://db.ptit.edu.vn/question-detail/5eb929f2-1c63-4edf-8659-5b102e0e847c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5eb929f2-1c63-4edf-8659-5b102e0e847c
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng: EMPLOYEE</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+----------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+----------------+
+| EmpID&nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| FullName&nbsp; &nbsp; | varchar(100)&nbsp; &nbsp;|
+| Dept&nbsp; &nbsp; &nbsp; &nbsp; | varchar(50)&nbsp; &nbsp; |
+| Salary&nbsp; &nbsp; &nbsp; | decimal(10,2)&nbsp; |
++-------------+----------------+
+</pre><p>EmpID: mã nhân viên, khóa chính, duy nhất cho mỗi người.&nbsp;&nbsp;</p><p>FullName: họ tên đầy đủ của nhân viên, không được để trống.&nbsp;&nbsp;</p><p>Dept: tên phòng ban mà nhân viên đang làm việc, ví dụ: 'IT', 'HR', 'Finance'.&nbsp;&nbsp;</p><p>Salary: mức lương hiện tại của nhân viên, lưu với 2 chữ số thập phân.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một nhân viên cùng với ID, tên, phòng ban và mức lương của họ.</p><p><br></p><p><strong>Yêu cầu:&nbsp;&nbsp;</strong></p><p>Tăng lương 10% cho tất cả nhân viên thuộc phòng ban 'IT' (Dept = 'IT').&nbsp;&nbsp;</p><p>Các nhân viên phòng ban khác giữ nguyên mức lương.</p>

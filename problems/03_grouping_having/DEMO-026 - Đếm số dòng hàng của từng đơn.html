@@ -1,0 +1,58 @@
+ID: DEMO-026
+Tiêu đề: Đếm số dòng hàng của từng đơn
+URL WEB: https://db.ptit.edu.vn/question-detail/b4e1a6cb-3688-44b6-8e5c-fa5c77beeb0f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/b4e1a6cb-3688-44b6-8e5c-fa5c77beeb0f
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống bán hàng có 3 bảng sau:</p><p><strong>Bảng: Customer</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName | VARCHAR(100) |
++--------------+--------------+
+</pre><p>CustID là mã khách hàng, khóa chính, định danh duy nhất từng khách.</p><p>CustomerName là tên đầy đủ của khách hàng, không được để trống.</p><p>Mỗi hàng trong bảng này thể hiện một khách hàng cụ thể.</p><p><br></p><p><strong>Bảng: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+</pre><p>OrderID là mã đơn hàng, khóa chính của bảng.</p><p>CustID là mã khách đã tạo đơn, tham chiếu tới CustID trong bảng Customer.</p><p>OrderDate là ngày tạo đơn hàng.</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng của một khách hàng.</p><p><br></p><p>Bảng: OrderItem</p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| PID&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Qty&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++--------------+--------------+
+</pre><p>OrderID là mã đơn hàng mà dòng hàng này thuộc về, khóa ngoại tham chiếu đến OrderID trong bảng SaleOrder.</p><p>PID là mã sản phẩm trong dòng hàng.</p><p>Qty là số lượng sản phẩm trong dòng đó.</p><p>Khóa chính của bảng là (OrderID, PID).</p><p>Mỗi hàng trong bảng này thể hiện một dòng chi tiết hàng hóa của một đơn hàng.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Liệt kê (OrderID, CustomerName, TotalLines) cho các đơn hàng có từ 2 dòng hàng trở lên.&nbsp;&nbsp;</p><p>TotalLines là số lượng dòng trong bảng OrderItem ứng với mỗi OrderID.</p><p>Sắp xếp theo OrderID.</p><p><br></p><p><strong>Ví dụ:</strong></p><p>Bảng Customer</p><pre class="ql-syntax" spellcheck="false">+--------+--------------+
+| CustID | CustomerName |
++--------+--------------+
+| 1&nbsp; &nbsp; &nbsp; | Alice&nbsp; &nbsp; &nbsp; &nbsp; |
+| 2&nbsp; &nbsp; &nbsp; | Bob&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| 3&nbsp; &nbsp; &nbsp; | Charlie&nbsp; &nbsp; &nbsp; |
++--------+--------------+
+</pre><p>Bảng SaleOrder</p><pre class="ql-syntax" spellcheck="false">+---------+--------+------------+
+| OrderID | CustID | OrderDate&nbsp; |
++---------+--------+------------+
+| 101&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; | 2024-01-10 |
+| 102&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; | 2024-01-11 |
+| 103&nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; | 2024-01-12 |
++---------+--------+------------+
+</pre><p>Bảng OrderItem</p><pre class="ql-syntax" spellcheck="false">+---------+------+-----+
+| OrderID | PID&nbsp; | Qty |
++---------+------+-----+
+| 101&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; | 2&nbsp; &nbsp;|
+| 101&nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; | 1&nbsp; &nbsp;|
+| 102&nbsp; &nbsp; &nbsp;| 3&nbsp; &nbsp; | 5&nbsp; &nbsp;|
+| 103&nbsp; &nbsp; &nbsp;| 4&nbsp; &nbsp; | 1&nbsp; &nbsp;|
+| 103&nbsp; &nbsp; &nbsp;| 5&nbsp; &nbsp; | 2&nbsp; &nbsp;|
+| 103&nbsp; &nbsp; &nbsp;| 6&nbsp; &nbsp; | 1&nbsp; &nbsp;|
++---------+------+-----+
+</pre><p>Giải thích:</p><p>- Đơn 101 có 2 dòng hàng → lấy.</p><p>- Đơn 102 có 1 dòng hàng → bỏ.</p><p>- Đơn 103 có 3 dòng hàng → lấy.</p><p><br></p><p>Kết quả mong muốn:</p><pre class="ql-syntax" spellcheck="false">+---------+--------------+------------+
+| OrderID | CustomerName | TotalLines |
++---------+--------------+------------+
+| 101&nbsp; &nbsp; &nbsp;| Alice&nbsp; &nbsp; &nbsp; &nbsp; | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| 103&nbsp; &nbsp; &nbsp;| Bob&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++---------+--------------+------------+
+</pre>

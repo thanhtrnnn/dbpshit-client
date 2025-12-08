@@ -1,0 +1,8 @@
+ID: SQL1956
+Tiêu đề: Xóa tất cả hồ sơ của những khách hàng chưa đầu tư vào bất kỳ quỹ trách nhiệm xã hội nào.
+URL WEB: https://db.ptit.edu.vn/question-detail/d9f078cf-1293-429d-a358-eeb9330872aa
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d9f078cf-1293-429d-a358-eeb9330872aa
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng clients:</strong></p><p>Lưu trữ thông tin về khách hàng.</p><ul><li>id (INT): Mã số định danh duy nhất cho khách hàng.</li><li>name (VARCHAR(255)): Tên khách hàng.</li></ul><p><strong>Bảng investments:</strong></p><p>Lưu trữ thông tin về các khoản đầu tư của khách hàng.</p><ul><li>id (INT): Mã số định danh duy nhất cho mỗi khoản đầu tư.</li><li>client_id (INT): Mã khách hàng (foreign key từ clients).</li><li>fund_type (VARCHAR(255)): Loại quỹ (ví dụ: Socially Responsible, Standard).</li><li>amount (DECIMAL(10, 2)): Số tiền đầu tư.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Xóa tất cả hồ sơ của những khách hàng chưa đầu tư vào bất kỳ quỹ trách nhiệm xã hội nào.</p>

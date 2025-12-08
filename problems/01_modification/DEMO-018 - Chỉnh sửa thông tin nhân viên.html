@@ -1,0 +1,17 @@
+ID: DEMO-018
+Tiêu đề: Chỉnh sửa thông tin nhân viên
+URL WEB: https://db.ptit.edu.vn/question-detail/d13ff2f2-2b58-4586-81ab-e6b067269690
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d13ff2f2-2b58-4586-81ab-e6b067269690
+Loại Database: Mysql
+------------------------------
+
+<p>Trong cơ sở dữ liệu hiện tại, bảng <strong>Employees</strong> đã được tạo như sau:</p><pre class="ql-syntax" spellcheck="false">CREATE TABLE Employees (
+&nbsp; &nbsp; emp_id INT,
+&nbsp; &nbsp; emp_name VARCHAR(255),
+&nbsp; &nbsp; department VARCHAR(100),
+&nbsp; &nbsp; role VARCHAR(100),
+&nbsp; &nbsp; salary INT,
+&nbsp; &nbsp; status VARCHAR(20),
+&nbsp; &nbsp; temp_info VARCHAR(255)
+);
+</pre><p>Tuy nhiên, thiết kế bảng trên chưa hợp lý:</p><p><strong>emp_id</strong></p><ul><li>Mới chỉ là INT bình thường, chưa có ràng buộc gì.</li><li>Cần đặt là <strong>NOT NULL</strong>, <strong>AUTO_INCREMENT</strong> và dùng làm <strong>PRIMARY KEY</strong>.</li></ul><p><strong>salary</strong></p><ul><li>Đang là INT, nhưng lương thường cần lưu cả phần thập phân.</li><li>Cần đổi sang <strong>DECIMAL(12,2)</strong> và đặt <strong>NOT NULL</strong>, giá trị mặc định là 0.</li></ul><p><strong>status</strong></p><ul><li>Đang là VARCHAR(20) tự do, dễ nhập sai.</li><li>Hệ thống quy ước chỉ nhận một trong các trạng thái:</li><li class="ql-indent-1">'ACTIVE' (đang làm),</li><li class="ql-indent-1">'INACTIVE' (nghỉ tạm thời),</li><li class="ql-indent-1">'RESIGNED' (đã nghỉ việc).</li><li>Cần chuyển sang <strong>ENUM </strong>và không được bỏ trống, giá trị mặc định là 'ACTIVE'.</li></ul><p>Thêm cột <strong>employment_type</strong></p><ul><li>Dùng để lưu loại hợp đồng:</li><li class="ql-indent-1">'FULL_TIME', 'PART_TIME', 'INTERN'.</li><li class="ql-indent-1">Kiểu dữ liệu: <strong>ENUM </strong>không được bỏ trống, mặc định 'FULL_TIME'.</li></ul><p>Thêm cột <strong>hire_date</strong></p><ul><li>Kiểu <strong>DATE</strong>, lưu ngày vào làm.</li><li>Có thể để trống (không bắt buộc).</li></ul><p><strong>temp_info</strong></p><ul><li>Là cột tạm dùng trong quá trình nhập liệu, bây giờ không dùng nữa.</li><li>Cần <strong>xóa cột này khỏi bảng</strong>.</li></ul><p><br></p><h3><strong>Yêu cầu</strong></h3><p>Dùng các câu lệnh sql để chỉnh sửa bảng <strong>Employees</strong> như sau:</p><ol><li>Đặt emp_id thành <strong>INT </strong>không được trống, tự động tăng, và làm khóa chính.</li><li>Chuyển salary sang <strong>DECIMAL(12,2), </strong>không trống, mặc định là 0.</li><li>Chuyển status sang <strong>ENUM, </strong>không được trống và mặc định là<strong> 'ACTIVE'</strong>.</li><li>Thêm cột employment_type kiểu <strong>ENUM </strong>không được trống và mặc định là<strong> 'FULL_TIME'</strong>.</li><li>Thêm cột hire_date kiểu <strong>DATE</strong>.</li><li>Xóa cột temp_info khỏi bảng.</li></ol>

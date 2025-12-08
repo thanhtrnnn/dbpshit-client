@@ -1,0 +1,21 @@
+ID: DEMO-021
+Tiêu đề: Thêm cựu sinh viên vào bảng ALUMNI
+URL WEB: https://db.ptit.edu.vn/question-detail/7f89b2e4-04e2-4f01-b235-153ce0f6b941
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7f89b2e4-04e2-4f01-b235-153ce0f6b941
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng: STUDENT</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+----------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+----------------+
+| SID&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| FullName&nbsp; &nbsp; | varchar(100)&nbsp; &nbsp;|
+| Graduated&nbsp; &nbsp;| tinyint(1)&nbsp; &nbsp; &nbsp;|
++-------------+----------------+
+</pre><p>SID là mã sinh viên, khóa chính duy nhất cho mỗi sinh viên.</p><p>FullName là họ tên đầy đủ của sinh viên, bắt buộc phải có.</p><p>Graduated là cờ cho biết sinh viên đã tốt nghiệp hay chưa, 1 là đã tốt nghiệp, 0 là chưa.</p><p>Mỗi hàng trong bảng này thể hiện một sinh viên cùng với mã số, họ tên và trạng thái tốt nghiệp của họ.</p><p><br></p><p><strong>Bảng: ALUMNI</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+----------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+----------------+
+| SID&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| FullName&nbsp; &nbsp; | varchar(100)&nbsp; &nbsp;|
++-------------+----------------+
+</pre><p>SID là mã sinh viên, khóa chính trong bảng cựu sinh viên.</p><p>FullName là họ tên của cựu sinh viên, không được để trống.</p><p>Mỗi hàng trong bảng này thể hiện một cựu sinh viên đã tốt nghiệp được ghi nhận lại từ bảng STUDENT.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Thêm vào bảng ALUMNI tất cả các sinh viên trong STUDENT có Graduated = 1.</p>

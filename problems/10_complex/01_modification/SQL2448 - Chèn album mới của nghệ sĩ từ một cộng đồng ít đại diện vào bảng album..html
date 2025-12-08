@@ -1,0 +1,8 @@
+ID: SQL2448
+Tiêu đề: Chèn album mới của nghệ sĩ từ một cộng đồng ít đại diện vào bảng album.
+URL WEB: https://db.ptit.edu.vn/question-detail/da3ee991-3950-4e68-8d5c-f9751f0efa93
+URL API: https://dbapi.ptit.edu.vn/api/app/question/da3ee991-3950-4e68-8d5c-f9751f0efa93
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng artists</strong></h3><p>Chứa thông tin về <strong>các nghệ sĩ</strong>.</p><p><strong>Cấu trúc:</strong></p><ul><li>artist_id (INTEGER): Mã định danh duy nhất cho mỗi nghệ sĩ (khóa chính của bảng).</li><li>name (VARCHAR(255)): Tên của nghệ sĩ.</li><li>community (VARCHAR(255)): Cộng đồng văn hóa hoặc dân tộc mà nghệ sĩ thuộc về (ví dụ: 'African American', 'Latinx').</li></ul><h3><strong>Bảng albums</strong></h3><p>Chứa thông tin về <strong>các album</strong> của nghệ sĩ.</p><p><strong>Cấu trúc:</strong></p><ul><li>album_id (INTEGER): Mã định danh duy nhất cho mỗi album (khóa chính của bảng).</li><li>title (VARCHAR(255)): Tên hoặc tiêu đề của album.</li><li>artist_id (INTEGER): Mã định danh của nghệ sĩ sáng tác album (liên kết với artist_id trong bảng artists).</li></ul><p><strong>Yêu cầu:</strong></p><p>Chèn <strong>một album mới có tên </strong>'A Long Way Home' (id = 5) vào bảng albums,</p><p> thuộc về <strong>nghệ sĩ tên 'Ayo' đến từ cộng đồng 'African American'</strong></p><p><br></p><p><strong>output: </strong><span style="font-size: 14px;">album_id, </span>title, artist_id </p>

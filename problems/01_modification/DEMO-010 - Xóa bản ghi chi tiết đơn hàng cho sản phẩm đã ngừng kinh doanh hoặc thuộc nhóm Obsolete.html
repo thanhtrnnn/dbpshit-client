@@ -1,0 +1,29 @@
+ID: DEMO-010
+Tiêu đề: Xóa bản ghi chi tiết đơn hàng cho sản phẩm đã ngừng kinh doanh hoặc thuộc nhóm "Obsolete"
+URL WEB: https://db.ptit.edu.vn/question-detail/c3b40e6d-2d9d-4e74-acd1-4044f56fbbab
+URL API: https://dbapi.ptit.edu.vn/api/app/question/c3b40e6d-2d9d-4e74-acd1-4044f56fbbab
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng: CATEGORY</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+----------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+----------------+
+| CategoryID&nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CategoryName| varchar(100)&nbsp; &nbsp;|
++-------------+----------------+
+</pre><p>CategoryID là mã danh mục, khóa chính, duy nhất cho mỗi danh mục.</p><p>CategoryName là tên danh mục sản phẩm, ví dụ: 'Electronics', 'Office', 'Obsolete',...</p><p>Mỗi hàng trong bảng này thể hiện một nhóm danh mục sản phẩm với mã và tên tương ứng.</p><p><br></p><p><strong>Bảng: PRODUCT</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+----------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+----------------+
+| ProductID&nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CategoryID&nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Name&nbsp; &nbsp; &nbsp; &nbsp; | varchar(100)&nbsp; &nbsp;|
+| Discontinued| tinyint(1)&nbsp; &nbsp; &nbsp;|
++-------------+----------------+
+</pre><p>ProductID là mã sản phẩm, khóa chính.</p><p>CategoryID là mã danh mục mà sản phẩm thuộc về. CategoryID là khóa ngoại tham chiếu đến CategoryID trong bảng CATEGORY.</p><p>Name là tên sản phẩm, bắt buộc có.</p><p>Discontinued là cờ cho biết sản phẩm đã ngừng kinh doanh hay chưa (1 là đã ngừng, 0 là còn bán).</p><p>Mỗi hàng trong bảng này thể hiện một sản phẩm cụ thể, thuộc một danh mục, kèm trạng thái còn bán hay đã ngừng.</p><p><br></p><p><strong>Bảng: ORDER_ITEM</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+---------+
+| Column Name | Type&nbsp; &nbsp; |
++-------------+---------+
+| OrderID&nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp;|
+| ProductID&nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp;|
+| Qty&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp;|
++-------------+---------+
+</pre><p>OrderID là mã đơn hàng chứa dòng chi tiết này.</p><p>ProductID là mã sản phẩm xuất hiện trong dòng chi tiết. ProductID là khóa ngoại tham chiếu đến ProductID trong bảng PRODUCT.</p><p>Qty là số lượng sản phẩm được đặt trong dòng chi tiết.</p><p>Mỗi hàng trong bảng này thể hiện một dòng chi tiết đơn hàng, gắn một sản phẩm cụ thể với số lượng tương ứng trong một đơn.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Xóa khỏi bảng ORDER_ITEM tất cả các bản ghi mà:</p><ul><li>Sản phẩm tương ứng đã ngừng kinh doanh, hoặc</li><li>Sản phẩm thuộc danh mục có tên là 'Obsolete'.</li></ul><p>Kết quả thao tác là câu lệnh DELETE, không cần trả về dữ liệu</p>

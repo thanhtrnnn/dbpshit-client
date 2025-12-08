@@ -1,0 +1,58 @@
+ID: DEMO-004
+Tiêu đề: Tổng số tiền đã thanh toán thành công của mỗi khách
+URL WEB: https://db.ptit.edu.vn/question-detail/5a4a4c45-8e4f-41d0-834b-64a295248af2
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5a4a4c45-8e4f-41d0-834b-64a295248af2
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng: CUSTOMER</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+--------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName| varchar(100) |
++-------------+--------------+
+</pre><p>CustID: mã định danh duy nhất cho mỗi khách hàng.&nbsp;&nbsp;</p><p>CustomerName: tên đầy đủ của khách hàng, không được để trống.</p><p>Mỗi hàng trong bảng này thể hiện một khách hàng với mã định danh và tên của họ.</p><p><br></p><p><strong>Bảng: SALEORDER</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+--------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+--------------+
+| OrderID&nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Total&nbsp; &nbsp; &nbsp; &nbsp;| decimal(10,2)|
++-------------+--------------+
+</pre><p>OrderID: mã đơn hàng, không trùng lặp.&nbsp;&nbsp;</p><p>CustID: mã khách sở hữu đơn hàng. CustID là khóa ngoại tham chiếu đến CustID trong bảng CUSTOMER.&nbsp;&nbsp;</p><p>Total: số tiền của đơn hàng, lưu với 2 chữ số thập phân.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng cụ thể của một khách hàng, cùng với số tiền mà khách phải thanh toán cho đơn đó.</p><p><br></p><p><strong>Bảng: PAYMENT</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+--------------------------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  |
++-------------+--------------------------------+
+| PaymentID&nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderID&nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Status&nbsp; &nbsp; &nbsp; | enum('PAID','PENDING','FAILED')|
++-------------+--------------------------------+
+</pre><p>PaymentID: mã thanh toán, duy nhất cho mỗi giao dịch thanh toán.&nbsp;&nbsp;</p><p>OrderID: mã đơn hàng được ghi nhận thanh toán. OrderID là khóa ngoại tham chiếu đến OrderID trong bảng SALEORDER.&nbsp;&nbsp;</p><p>Status: trạng thái thanh toán, nhận một trong ba giá trị 'PAID', 'PENDING' hoặc 'FAILED'.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một giao dịch thanh toán cho một đơn hàng, cùng với trạng thái hiện tại của thanh toán.</p><p><br></p><p><strong>Nhiệm vụ:</strong></p><p>Lấy danh sách mỗi khách hàng và tổng số tiền mà họ đã thanh toán thành công (Status = 'PAID').</p><p>Nếu khách hàng chưa có bất kỳ đơn hàng nào hoặc có đơn hàng nhưng chưa có thanh toán PAID, tổng tiền phải hiển thị là 0.&nbsp;&nbsp;</p><p>Sắp xếp kết quả theo CustomerName tăng dần.</p><p><br></p><p><strong>Ví dụ:</strong></p><p>Input:</p><p>Bảng CUSTOMER</p><pre class="ql-syntax" spellcheck="false">+--------+--------------+
+| CustID | CustomerName |
++--------+--------------+
+| 1&nbsp; &nbsp; &nbsp; | Alice&nbsp; &nbsp; &nbsp; &nbsp; |
+| 2&nbsp; &nbsp; &nbsp; | Bob&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| 3&nbsp; &nbsp; &nbsp; | Charlie&nbsp; &nbsp; &nbsp; |
++--------+--------------+
+</pre><p><br></p><p>Bảng SALEORDER</p><pre class="ql-syntax" spellcheck="false">+---------+--------+--------+
+| OrderID | CustID | Total&nbsp; |
++---------+--------+--------+
+| 101&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; | 100.00 |
+| 102&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; |&nbsp; 50.00 |
+| 103&nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; | 200.00 |
+| 104&nbsp; &nbsp; &nbsp;| 3&nbsp; &nbsp; &nbsp; |&nbsp; 80.00 |
++---------+--------+--------+
+</pre><p><br></p><p>Bảng PAYMENT</p><pre class="ql-syntax" spellcheck="false">+-----------+---------+---------+
+| PaymentID | OrderID | Status&nbsp; |
++-----------+---------+---------+
+| 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 101&nbsp; &nbsp; &nbsp;| PAID&nbsp; &nbsp; |
+| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 102&nbsp; &nbsp; &nbsp;| FAILED&nbsp; |
+| 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 103&nbsp; &nbsp; &nbsp;| PAID&nbsp; &nbsp; |
+| 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 104&nbsp; &nbsp; &nbsp;| PENDING |
++-----------+---------+---------+
+</pre><p><br></p><p>Output:</p><pre class="ql-syntax" spellcheck="false">+--------------+-----------+
+| CustomerName | PaidTotal |
++--------------+-----------+
+| Alice&nbsp; &nbsp; &nbsp; &nbsp; | 100.00&nbsp; &nbsp; |
+| Bob&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 200.00&nbsp; &nbsp; |
+| Charlie&nbsp; &nbsp; &nbsp; | 0.00&nbsp; &nbsp; &nbsp; |
++--------------+-----------+
+</pre>

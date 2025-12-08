@@ -1,0 +1,13 @@
+ID: SQL2102
+Tiêu đề: Xóa tất cả hồ sơ trợ cấp cho các giảng viên không quan tâm nghiên cứu về 'Vật lý'.
+URL WEB: https://db.ptit.edu.vn/question-detail/ef80cad7-ef2b-4f7d-8fc0-3e7ee2b02f91
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ef80cad7-ef2b-4f7d-8fc0-3e7ee2b02f91
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Cho hai bảng dữ liệu:</strong></p><h4><strong style="font-size: 14px;">Bảng grants</strong></h4><ul><li><span style="font-size: 14px;">id (INT): Mã tài trợ duy nhất</span></li><li><span style="font-size: 14px;">title (TEXT): Tiêu đề tài trợ</span></li><li><span style="font-size: 14px;">amount (FLOAT): Số tiền tài trợ</span></li><li><span style="font-size: 14px;">faculty_name (VARCHAR(50)): Tên khoa nhận tài trợ</span></li></ul><h4><strong style="font-size: 14px;">Bảng faculty</strong></h4><ul><li><span style="font-size: 14px;">id (INT): Mã khoa</span></li><li><span style="font-size: 14px;">name (VARCHAR(50)): Tên khoa</span></li><li><span style="font-size: 14px;">research_interest (TEXT): Lĩnh vực nghiên cứu của khoa</span></li></ul><p><strong style="font-size: 14px;">Nhiệm vụ:</strong></p><p><span style="font-size: 14px;">Xóa tất cả hồ sơ trợ cấp cho các giảng viên không quan tâm nghiên cứu về 'Vật lý'.</span></p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+--------+-----------+----------+---------------+--------------+
+|   id   |   title   |  amount  | faculty_name  |              |
++--------+-----------+----------+---------------+--------------+
+|   1    |  Grant A  |   1000   |     Alice     |              |
++--------+-----------+----------+---------------+--------------+
+</pre>

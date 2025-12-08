@@ -1,0 +1,19 @@
+ID: SQL2172
+Tiêu đề: Xóa tất cả các đơn hàng có menu_id là 5678 và số lượng lớn hơn 50.
+URL WEB: https://db.ptit.edu.vn/question-detail/20fc271f-008c-40ed-b773-1ccc56115539
+URL API: https://dbapi.ptit.edu.vn/api/app/question/20fc271f-008c-40ed-b773-1ccc56115539
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Orders</strong> – Lưu trữ thông tin về các đơn hàng:</p><ul><li>order_id (INT): Mã đơn hàng.</li><li>customer_id (INT): Mã khách hàng.</li><li>menu_id (INT): Mã thực đơn.</li><li>order_date (DATETIME): Ngày đặt hàng.</li><li>quantity (INT): Số lượng món ăn trong đơn hàng.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Xóa tất cả các đơn hàng có menu_id là 5678 và số lượng lớn hơn 50.</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+------------+---------------+-----------+-------------+------------+----------+
+| order_id   | customer_id   | menu_id   | order_date  | quantity   |          |
++------------+---------------+-----------+-------------+------------+----------+
+| 58         | 8764          | 5246      | 2020-01-22  | 1061       |          |
+| 78         | 2200          | 9421      | 2021-12-21  | 676        |          |
+| 186        | 2014          | 4021      | 2024-06-23  | 3356       |          |
+| 314        | 5338          | 7480      | 2020-07-10  | 353        |          |
+| 382        | 1039          | 130       | 2024-02-17  | 4861       |          |
+| 452        | 6471          | 5041      | 2024-07-24  | 4882       |          |
+| 590        | 3123          | 7503      | 2024-02-23  | 5912       |          |
++------------+---------------+-----------+-------------+------------+----------+
+</pre>

@@ -1,0 +1,8 @@
+ID: SQL2221
+Tiêu đề: Xóa các tàu không có sự cố an toàn khỏi bảng Tàu.
+URL WEB: https://db.ptit.edu.vn/question-detail/4f046497-e18a-4ad8-ab07-a1e2ff91799e
+URL API: https://dbapi.ptit.edu.vn/api/app/question/4f046497-e18a-4ad8-ab07-a1e2ff91799e
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có hai bảng dữ liệu:</p><p><strong>Bảng Vessels – Thông tin về các tàu thuyền:</strong></p><ul><li>ID (INT): Mã định danh duy nhất cho mỗi tàu</li><li>Name (VARCHAR(50)): Tên tàu</li><li>Type (VARCHAR(50)): Loại tàu (ví dụ: tàu chở hàng, tàu chở dầu, …)</li></ul><p><strong>Bảng SafetyIncidents – Thông tin về các sự cố an toàn:</strong></p><ul><li>ID (INT): Mã định danh duy nhất cho mỗi sự cố</li><li>VesselID (INT): Mã định danh của tàu liên quan đến sự cố</li><li>Location (VARCHAR(50)): Địa điểm xảy ra sự cố</li><li>IncidentType (VARCHAR(50)): Loại sự cố (ví dụ: va chạm, hỏa hoạn, …)</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong>Xóa khỏi bảng Vessels</strong> tất cả các tàu <strong>không có bất kỳ sự cố an toàn nào</strong> trong bảng <strong>SafetyIncidents</strong>.</p><p>Output: id, name, type.</p>

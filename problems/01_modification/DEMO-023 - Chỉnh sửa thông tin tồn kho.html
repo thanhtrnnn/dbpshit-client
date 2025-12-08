@@ -1,0 +1,18 @@
+ID: DEMO-023
+Tiêu đề: Chỉnh sửa thông tin tồn kho
+URL WEB: https://db.ptit.edu.vn/question-detail/bfc25a96-8419-4e56-b183-8c2a7657af59
+URL API: https://dbapi.ptit.edu.vn/api/app/question/bfc25a96-8419-4e56-b183-8c2a7657af59
+Loại Database: Mysql
+------------------------------
+
+<p>Trong cơ sở dữ liệu hiện tại, bảng <strong>Inventory</strong> được tạo như sau:</p><pre class="ql-syntax" spellcheck="false">CREATE TABLE Inventory (
+&nbsp; &nbsp; item_id INT,
+&nbsp; &nbsp; product_code VARCHAR(50),
+&nbsp; &nbsp; warehouse_code VARCHAR(50),
+&nbsp; &nbsp; quantity INT,
+&nbsp; &nbsp; unit_price INT,
+&nbsp; &nbsp; status VARCHAR(20),
+&nbsp; &nbsp; last_updated VARCHAR(50),
+&nbsp; &nbsp; temp_col VARCHAR(100)
+);
+</pre><p>Thiết kế trên còn nhiều vấn đề:</p><p><strong>item_id</strong></p><ul><li>Mới chỉ là INT bình thường.</li><li>Cần dùng làm <strong>khóa chính</strong> và <strong>không được để trống</strong>.</li></ul><p><strong>quantity</strong></p><ul><li>Chưa có ràng buộc, nhưng số lượng tồn kho phải luôn có, mặc định là 0.</li></ul><p><strong>unit_price</strong></p><ul><li>Đang là INT, trong khi giá có thể có phần thập phân.</li><li>Cần đổi sang kiểu <strong>DECIMAL(10,2) </strong>không được để trống với giá trị mặc định là<strong> </strong>0.</li></ul><p><strong>status</strong></p><ul><li>Đang là VARCHAR(20) tự do, dễ nhập sai.</li><li>Hệ thống chỉ quy ước 3 trạng thái:</li><li class="ql-indent-1">'IN_STOCK' (còn hàng)</li><li class="ql-indent-1">'OUT_OF_STOCK' (hết hàng)</li><li class="ql-indent-1">'STOPPED' (ngừng kinh doanh)</li><li>Cần dùng <strong>ENUM, </strong>không được để trống, mặc định là<strong> 'IN_STOCK'</strong>.</li></ul><p><strong>last_updated</strong></p><ul><li>Đang là VARCHAR(50) nhưng đây là thời điểm cập nhật tồn kho.</li><li>Cần đổi sang <strong>DATETIME</strong> với giá trị mặc định là <strong>CURRENT_TIMESTAMP</strong>.</li></ul><p>Thêm cột <strong>note</strong> để ghi chú nội bộ</p><ul><li>Kiểu <strong>VARCHAR(255)</strong>, cho phép để trống.</li></ul><p><strong>temp_col</strong></p><ul><li>Là cột tạm, hiện không dùng nữa.</li><li>Cần <strong>xóa cột này khỏi bảng</strong>.</li></ul><p><br></p><p><strong>Yêu cầu:</strong> Dùng các câu lệnh sql để thực hiện các thay đổi trên.</p>

@@ -1,0 +1,18 @@
+ID: ENG-010
+Tiêu đề: BASIC ALTER 1
+URL WEB: https://db.ptit.edu.vn/question-detail/2b0e6542-4cf1-4219-aad4-7db2783d819f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/2b0e6542-4cf1-4219-aad4-7db2783d819f
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Table: Students</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+--------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+--------------+
+| student_id&nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| full_name&nbsp; &nbsp;| varchar(100) |
+| birth_date&nbsp; | varchar(20)&nbsp; |
+| email&nbsp; &nbsp; &nbsp; &nbsp;| varchar(100) |
+| phone&nbsp; &nbsp; &nbsp; &nbsp;| varchar(20)&nbsp; |
+| address&nbsp; &nbsp; &nbsp;| varchar(255) |
++-------------+--------------+
+</pre><p>student_id stores the numeric ID of each student, currently without primary key or auto-increment.</p><p>full_name stores the student’s full name.</p><p>birth_date is stored as text for now, not as a real date type.</p><p>email stores the student’s email address and is currently nullable and shorter.</p><p>phone stores the student’s phone number and is currently nullable and short.</p><p>address stores the student’s home address.</p><p>Each row in this table represents one student and their basic contact information.</p><p><br></p><p><strong>Task:</strong></p><p>The Students table already exists with the structure above.&nbsp;&nbsp;</p><p>You need to change it so that:</p><p>- student_id becomes an INT NOT NULL AUTO_INCREMENT and is the primary key.</p><p>- birth_date is stored as a proper DATE type.</p><p>- email becomes VARCHAR(255) and cannot be NULL.</p><p>- phone becomes VARCHAR(50) and cannot be NULL.</p><p>- a new column created_at is added, with type DATETIME and default value CURRENT_TIMESTAMP.</p><p><br></p><p>Write an ALTER TABLE statement to apply all these changes to the Students table.</p>

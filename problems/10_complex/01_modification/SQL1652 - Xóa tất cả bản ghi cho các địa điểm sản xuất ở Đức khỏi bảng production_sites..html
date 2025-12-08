@@ -1,0 +1,26 @@
+ID: SQL1652
+Tiêu đề: Xóa tất cả bản ghi cho các địa điểm sản xuất ở Đức khỏi bảng production_sites.
+URL WEB: https://db.ptit.edu.vn/question-detail/30fed374-970b-4283-bb31-462db088e3d3
+URL API: https://dbapi.ptit.edu.vn/api/app/question/30fed374-970b-4283-bb31-462db088e3d3
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng `production_sites`: Bảng này lưu trữ thông tin về các địa điểm sản xuất, bao gồm ID, tên địa điểm và vị trí. </strong></p><ul><li>`id (INT)`: Mã định danh của địa điểm sản xuất.</li><li>`site_name (TEXT)`: Tên địa điểm sản xuất.</li><li>`location (TEXT)`: Vị trí của địa điểm sản xuất.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Xóa tất cả bản ghi cho các địa điểm sản xuất ở <strong>Đức (Germany)</strong> khỏi bảng production_sites.</p><p><br></p><h3>Input mẫu</h3><pre class="ql-syntax" spellcheck="false">
++----+--------------+-----------+
+| id | site_name    | location  |
++----+--------------+-----------+
+| 1  | Berlin Plant | Germany   |
+| 2  | Munich Hub   | Germany   |
+| 3  | Paris Plant  | France    |
+| 4  | Milan Site   | Italy     |
+| 5  | Tokyo Base   | Japan     |
++----+--------------+-----------+
+</pre><h3>Output mẫu (sau khi xóa)</h3><pre class="ql-syntax" spellcheck="false">
++----+--------------+----------+
+| id | site_name    | location |
++----+--------------+----------+
+| 3  | Paris Plant  | France   |
+| 4  | Milan Site   | Italy    |
+| 5  | Tokyo Base   | Japan    |
++----+--------------+----------+
+</pre><p><br></p>

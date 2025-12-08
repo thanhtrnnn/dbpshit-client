@@ -1,0 +1,8 @@
+ID: SQL2391
+Tiêu đề: Xóa tất cả hồ sơ tập luyện của những thành viên tham gia sau tháng 3 năm 2022.
+URL WEB: https://db.ptit.edu.vn/question-detail/d7ff8b29-068c-41b8-97af-afc32cbe607d
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d7ff8b29-068c-41b8-97af-afc32cbe607d
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng Members</strong></p><p>Chứa thông tin về các thành viên tham gia phòng tập.</p><ul><li>MemberID (INT): Mã định danh duy nhất cho mỗi thành viên (khóa chính của bảng).</li><li>FirstName (VARCHAR(50)): Tên của thành viên.</li><li>LastName (VARCHAR(50)): Họ của thành viên.</li><li>DateJoined (DATE): Ngày thành viên đăng ký tham gia.</li></ul><p><strong>Bảng Workouts</strong></p><p>Chứa thông tin về các buổi tập của thành viên.</p><ul><li>WorkoutID (INT): Mã định danh duy nhất cho mỗi buổi tập (khóa chính của bảng).</li><li>MemberID (INT): Mã định danh của thành viên tham gia buổi tập (liên kết với MemberID của bảng Members).</li><li>WorkoutDate (DATE): Ngày thành viên thực hiện buổi tập.</li></ul><p><strong>Nhiệm vụ</strong>:</p><p>Xóa tất cả hồ sơ tập luyện của những thành viên tham gia sau tháng 3 năm 2022.</p>

@@ -1,0 +1,58 @@
+ID: DEMO-036
+Tiêu đề: Khách hàng chi tiêu cao trong cả năm 2023 và 2024
+URL WEB: https://db.ptit.edu.vn/question-detail/21869b8f-93fb-401a-82de-fc3f6a47b063
+URL API: https://dbapi.ptit.edu.vn/api/app/question/21869b8f-93fb-401a-82de-fc3f6a47b063
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống bán hàng có 3 bảng:</p><p><strong>Bảng: Customer</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName | VARCHAR(100)&nbsp; &nbsp;|
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(50)&nbsp; &nbsp; |
++--------------+----------------+
+</pre><p>CustID là mã khách hàng, khóa chính, định danh duy nhất cho mỗi khách.</p><p>CustomerName là tên đầy đủ của khách hàng.</p><p>City là tên thành phố nơi khách hàng sinh sống.</p><p>Mỗi hàng trong bảng này thể hiện một khách hàng cùng thông tin cơ bản của họ.</p><p><br></p><p><strong>Bảng: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+</pre><p>OrderID là mã đơn hàng, khóa chính.</p><p>CustID là mã khách hàng đã tạo đơn, INT, là khóa ngoại tham chiếu đến CustID trong bảng Customer.</p><p>OrderDate là ngày tạo đơn hàng.</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng cụ thể của một khách tại một thời điểm.</p><p><br></p><p><strong>Bảng: Payment</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| PaymentID&nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Amount&nbsp; &nbsp; &nbsp; &nbsp;| DECIMAL(10,2)&nbsp; |
+| Status&nbsp; &nbsp; &nbsp; &nbsp;| ENUM/VARCHAR&nbsp; &nbsp;|
++--------------+----------------+
+</pre><p>PaymentID là mã thanh toán, khóa chính.</p><p>OrderID là mã đơn hàng được thanh toán, INT, là khóa ngoại tham chiếu đến OrderID trong bảng SaleOrder.</p><p>Amount là số tiền của lần thanh toán đó.</p><p>Status là trạng thái thanh toán, ví dụ: 'PAID', 'PENDING', 'FAILED'.</p><p>Mỗi hàng trong bảng này thể hiện một lần thanh toán gắn với một đơn hàng cụ thể.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Liệt kê các khách hàng (CustID, CustomerName) thỏa mãn đồng thời hai điều kiện: Tổng số tiền đã thanh toán thành công (Status = 'PAID') trong năm 2023 và 2024 của khách đó&nbsp;lớn hơn hoặc bằng 500.</p><p><br></p><p><strong>Ví dụ:</strong></p><p>Customer</p><pre class="ql-syntax" spellcheck="false">+--------+----------------+---------+
+| CustID | CustomerName&nbsp; &nbsp;| City&nbsp; &nbsp; |
++--------+----------------+---------+
+| 1&nbsp; &nbsp; &nbsp; | Nguyen Van A&nbsp; &nbsp;| Ha Noi&nbsp; |
+| 2&nbsp; &nbsp; &nbsp; | Tran Thi B&nbsp; &nbsp; &nbsp;| Da Nang |
+| 3&nbsp; &nbsp; &nbsp; | Le Van C&nbsp; &nbsp; &nbsp; &nbsp;| HCM&nbsp; &nbsp; &nbsp;|
++--------+----------------+---------+
+</pre><p>SaleOrder</p><pre class="ql-syntax" spellcheck="false">+---------+--------+------------+
+| OrderID | CustID | OrderDate&nbsp; |
++---------+--------+------------+
+| 10&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; | 2023-01-10 |
+| 11&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; | 2024-02-20 |
+| 12&nbsp; &nbsp; &nbsp; | 2&nbsp; &nbsp; &nbsp; | 2023-03-15 |
+| 13&nbsp; &nbsp; &nbsp; | 3&nbsp; &nbsp; &nbsp; | 2024-04-01 |
++---------+--------+------------+
+</pre><p>Payment</p><pre class="ql-syntax" spellcheck="false">+-----------+---------+--------+--------+
+| PaymentID | OrderID | Amount | Status |
++-----------+---------+--------+--------+
+| 100&nbsp; &nbsp; &nbsp; &nbsp;| 10&nbsp; &nbsp; &nbsp; | 600.00 | PAID&nbsp; &nbsp;|&nbsp; -- A, 2023
+| 101&nbsp; &nbsp; &nbsp; &nbsp;| 11&nbsp; &nbsp; &nbsp; | 700.00 | PAID&nbsp; &nbsp;|&nbsp; -- A, 2024
+| 102&nbsp; &nbsp; &nbsp; &nbsp;| 12&nbsp; &nbsp; &nbsp; | 400.00 | PAID&nbsp; &nbsp;|&nbsp; -- B, 2023 ( &lt;500 )
+| 103&nbsp; &nbsp; &nbsp; &nbsp;| 13&nbsp; &nbsp; &nbsp; | 800.00 | PAID&nbsp; &nbsp;|&nbsp; -- C, 2024
++-----------+---------+--------+--------+
+</pre><p><br></p><p>Kết quả mong muốn:</p><pre class="ql-syntax" spellcheck="false">+--------+----------------+
+| CustID | CustomerName&nbsp; &nbsp;|
++--------+----------------+
+| 1&nbsp; &nbsp; &nbsp; | Nguyen Van A&nbsp; &nbsp;|
++--------+----------------+
+</pre>

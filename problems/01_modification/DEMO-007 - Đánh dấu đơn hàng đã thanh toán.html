@@ -1,0 +1,21 @@
+ID: DEMO-007
+Tiêu đề: Đánh dấu đơn hàng đã thanh toán
+URL WEB: https://db.ptit.edu.vn/question-detail/aa508f18-9e9c-4d48-8e9b-ac9f768b770d
+URL API: https://dbapi.ptit.edu.vn/api/app/question/aa508f18-9e9c-4d48-8e9b-ac9f768b770d
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng: ORDER</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+------------------------------------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+------------------------------------------+
+| OrderID&nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Status&nbsp; &nbsp; &nbsp; | enum('NEW','PAID','CANCELLED')&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+------------------------------------------+
+</pre><p>OrderID: mã đơn hàng, khóa chính, duy nhất cho mỗi đơn.&nbsp;&nbsp;</p><p>Status: trạng thái của đơn hàng, chỉ nhận một trong các giá trị 'NEW', 'PAID' hoặc 'CANCELLED', mặc định là 'NEW'.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng cùng với trạng thái hiện tại của nó trong hệ thống.</p><p><br></p><p><strong>Bảng: PAYMENT</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+------------------------------------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+------------------------------------------+
+| PaymentID&nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderID&nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Status&nbsp; &nbsp; &nbsp; | enum('PAID','PENDING','FAILED')&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++-------------+------------------------------------------+
+</pre><p>PaymentID: mã thanh toán, khóa chính cho mỗi giao dịch thanh toán.&nbsp;&nbsp;</p><p>OrderID: mã đơn hàng được thanh toán. OrderID là khóa ngoại tham chiếu đến OrderID trong bảng ORDER.&nbsp;&nbsp;</p><p>Status: trạng thái của thanh toán, chỉ nhận một trong ba giá trị 'PAID', 'PENDING' hoặc 'FAILED'.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một giao dịch thanh toán gắn với một đơn hàng và trạng thái xử lý của giao dịch đó.</p><p><br></p><p><strong>Nhiệm vụ:&nbsp;&nbsp;</strong></p><p>Đánh dấu trạng thái đơn hàng là 'PAID' cho tất cả các đơn hàng có ít nhất một giao dịch thanh toán với Status = 'PAID' trong bảng PAYMENT.&nbsp;&nbsp;</p><p>Các đơn hàng không có thanh toán hoặc chỉ có thanh toán với trạng thái 'PENDING'/'FAILED' thì giữ nguyên Status hiện tại.&nbsp;&nbsp;</p>

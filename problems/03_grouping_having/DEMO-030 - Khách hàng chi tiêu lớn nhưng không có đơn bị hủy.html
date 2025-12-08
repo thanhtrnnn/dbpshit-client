@@ -1,0 +1,45 @@
+ID: DEMO-030
+Tiêu đề: Khách hàng chi tiêu lớn nhưng không có đơn bị hủy
+URL WEB: https://db.ptit.edu.vn/question-detail/937f7ee9-c25f-4c9e-a568-2c9c93d71cff
+URL API: https://dbapi.ptit.edu.vn/api/app/question/937f7ee9-c25f-4c9e-a568-2c9c93d71cff
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống bán hàng có 2 bảng:</p><p><strong>Bảng: Customer</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName | VARCHAR(100) |
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(50)&nbsp; |
++--------------+--------------+
+</pre><p>CustID là mã khách hàng, khóa chính, định danh duy nhất cho mỗi khách.</p><p>CustomerName là tên đầy đủ của khách hàng.</p><p>City là thành phố nơi khách hàng sinh sống.</p><p>Mỗi hàng trong bảng này thể hiện thông tin cơ bản của một khách hàng.</p><p><br></p><p><strong>Bảng: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Status&nbsp; &nbsp; &nbsp; &nbsp;| (ENUM/VARCHAR) |
+| TotalAmount&nbsp; | DECIMAL(10,2)&nbsp; |
++--------------+----------------+
+</pre><p>OrderID là mã đơn hàng, khóa chính của bảng.</p><p>CustID là mã khách hàng đã đặt đơn, là khóa ngoại tham chiếu đến CustID trong bảng Customer.</p><p>OrderDate là ngày tạo đơn hàng.</p><p>Status là trạng thái đơn hàng, ví dụ: 'NEW', 'PAID', 'CANCELLED'.</p><p>TotalAmount là tổng tiền của đơn hàng.</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng cụ thể của một khách hàng.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Liệt kê các khách hàng (CustID, CustomerName, TotalSpent) thỏa mãn:</p><p>1. Tổng tiền tất cả các đơn hàng trong năm 2024 của khách đó&nbsp;≥ 1000.</p><p>2. Khách hàng đó không có bất kỳ đơn hàng nào trong năm 2024 có Status = 'CANCELLED'.</p><p><br></p><p><strong>Ví dụ:</strong></p><p>Customer</p><pre class="ql-syntax" spellcheck="false">+--------+---------------+---------+
+| CustID | CustomerName&nbsp; | City&nbsp; &nbsp; |
++--------+---------------+---------+
+| 1&nbsp; &nbsp; &nbsp; | Nguyen Van A&nbsp; | Ha Noi&nbsp; |
+| 2&nbsp; &nbsp; &nbsp; | Tran Thi B&nbsp; &nbsp; | Da Nang |
+| 3&nbsp; &nbsp; &nbsp; | Le Van C&nbsp; &nbsp; &nbsp; | HCMC&nbsp; &nbsp; |
++--------+---------------+---------+
+</pre><p>SaleOrder</p><pre class="ql-syntax" spellcheck="false">+---------+--------+------------+------------+-------------+
+| OrderID | CustID | OrderDate&nbsp; | Status&nbsp; &nbsp; &nbsp;| TotalAmount |
++---------+--------+------------+------------+-------------+
+| 101&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; | 2024-01-10 | PAID&nbsp; &nbsp; &nbsp; &nbsp;| 600.00&nbsp; &nbsp; &nbsp; |
+| 102&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; | 2024-03-05 | PAID&nbsp; &nbsp; &nbsp; &nbsp;| 500.00&nbsp; &nbsp; &nbsp; |
+| 103&nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; | 2024-02-20 | CANCELLED&nbsp; | 700.00&nbsp; &nbsp; &nbsp; |
+| 104&nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; | 2024-04-01 | PAID&nbsp; &nbsp; &nbsp; &nbsp;| 400.00&nbsp; &nbsp; &nbsp; |
+| 105&nbsp; &nbsp; &nbsp;| 3&nbsp; &nbsp; &nbsp; | 2023-12-25 | PAID&nbsp; &nbsp; &nbsp; &nbsp;| 1000.00&nbsp; &nbsp; &nbsp;|
++---------+--------+------------+------------+-------------+
+</pre><p>Kết quả:</p><pre class="ql-syntax" spellcheck="false">+--------+--------------+------------+
+| CustID | CustomerName | TotalSpent |
++--------+--------------+------------+
+| 1&nbsp; &nbsp; &nbsp; | Nguyen Van A | 1100.00&nbsp; &nbsp; |
++--------+--------------+------------+
+</pre>

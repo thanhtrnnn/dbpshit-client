@@ -1,0 +1,8 @@
+ID: SQL138
+Tiêu đề: Fix name in a table
+URL WEB: https://db.ptit.edu.vn/question-detail/d8fa37e7-3bff-4742-b597-59c52f662023
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d8fa37e7-3bff-4742-b597-59c52f662023
+Loại Database: Sql Server
+------------------------------
+
+<p><strong>Bảng: Users</strong></p><p>+----------------+---------+</p><p>| <strong>Tên Cột</strong> | <strong>Kiểu Dữ Liệu</strong> |</p><p>+----------------+---------+</p><p>| user_id | int |</p><p>| name | varchar |</p><p>+----------------+---------+</p><ul><li>user_id là khóa chính (cột có giá trị duy nhất).</li><li>Bảng này chứa thông tin ID và tên của người dùng.</li><li>Tên (name) chỉ chứa các ký tự chữ cái in thường hoặc in hoa.</li></ul><p><br></p><p><strong>Yêu cầu:</strong></p><p>Viết một giải pháp để chỉnh sửa các tên sao cho:</p><ul><li>Chỉ ký tự đầu tiên được viết hoa.</li><li>Các ký tự còn lại phải được chuyển thành chữ thường.</li></ul><p>Trả về bảng kết quả được sắp xếp theo user_id.</p><p><br></p><p><strong>Ví dụ 1:</strong></p><p><strong>Đầu vào:</strong></p><p><strong>Bảng Users:</strong></p><p>+---------+-------+</p><p>| user_id | name |</p><p>+---------+-------+</p><p>| 1 | aLice |</p><p>| 2 | bOB |</p><p>+---------+-------+</p><p><strong>Đầu ra:</strong></p><p>+---------+-------+</p><p>| user_id | name |</p><p>+---------+-------+</p><p>| 1 | Alice |</p><p>| 2 | Bob |</p><p>+---------+-------+</p><p><strong>Giải thích:</strong></p><ul><li>Tên của người dùng được chuẩn hóa sao cho chỉ ký tự đầu tiên viết hoa:</li><li class="ql-indent-1">aLice → Alice.</li><li class="ql-indent-1">bOB → Bob.</li></ul><p><br></p>

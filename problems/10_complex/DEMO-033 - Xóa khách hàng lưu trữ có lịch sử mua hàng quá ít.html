@@ -1,0 +1,30 @@
+ID: DEMO-033
+Tiêu đề: Xóa khách hàng lưu trữ có lịch sử mua hàng quá ít
+URL WEB: https://db.ptit.edu.vn/question-detail/c1be7c4a-7d6d-46eb-b636-55143239fa93
+URL API: https://dbapi.ptit.edu.vn/api/app/question/c1be7c4a-7d6d-46eb-b636-55143239fa93
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống bán hàng có 3 bảng:</p><p><strong>Bảng: Customer</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName | VARCHAR(100) |
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(50)&nbsp; |
++--------------+--------------+
+</pre><p>CustID là mã khách hàng, khóa chính, định danh duy nhất từng khách.</p><p>CustomerName là tên đầy đủ của khách hàng.</p><p>City là thành phố nơi khách hàng sinh sống.</p><p>Mỗi hàng trong bảng này thể hiện thông tin cơ bản của một khách hàng.</p><p><br></p><p><strong>Bảng: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| TotalAmount&nbsp; | DECIMAL(10,2)&nbsp; |
++--------------+----------------+
+</pre><p>OrderID là mã đơn hàng, khóa chính.</p><p>CustID là mã khách đã tạo đơn, khóa ngoại tham chiếu đến CustID trong bảng Customer.</p><p>OrderDate là ngày tạo đơn hàng.</p><p>TotalAmount là tổng tiền của đơn hàng.</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng cụ thể của khách.</p><p><br></p><p><strong>Bảng: CustomerArchive</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| ArchiveID&nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| ArchivedAt&nbsp; &nbsp;| DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+</pre><p>ArchiveID là mã bản ghi lưu trữ, khóa chính.</p><p>CustID là mã khách hàng được lưu trữ, khóa ngoại tham chiếu đến CustID trong bảng Customer.</p><p>ArchivedAt là ngày ghi nhận việc đưa khách hàng vào danh sách lưu trữ.</p><p>Mỗi hàng trong bảng này thể hiện một khách hàng đã được đưa vào diện “lưu trữ”.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Xóa khỏi bảng CustomerArchive những dòng lưu trữ thỏa <strong>đồng thời</strong> các điều kiện sau:</p><p>1. Tổng tiền các đơn hàng của khách đó<strong> trước ngày 2024-01-01 </strong>nhỏ hơn 500.</p><p>2. Không tồn tại bất kỳ đơn hàng nào của khách đó có ngày OrderDate <strong>từ 2024-01-01 trở đi&nbsp;</strong>(tức là khách không còn giao dịch mới từ năm 2024 trở về sau).</p>

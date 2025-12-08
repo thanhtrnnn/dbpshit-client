@@ -1,0 +1,42 @@
+ID: DEMO-038
+Tiêu đề: Liệt kê đơn hàng theo thành phố
+URL WEB: https://db.ptit.edu.vn/question-detail/cb6ec651-c73e-451b-afa2-e3c057c719e0
+URL API: https://dbapi.ptit.edu.vn/api/app/question/cb6ec651-c73e-451b-afa2-e3c057c719e0
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống bán hàng có 2 bảng:</p><p><strong>Bảng: Customer</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+--------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName | VARCHAR(100) |
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(50)&nbsp; |
++--------------+--------------+
+</pre><p>CustID là mã khách hàng, khóa chính, dùng để định danh từng khách.&nbsp;&nbsp;</p><p>CustomerName là tên đầy đủ của khách hàng.&nbsp;&nbsp;</p><p>City là thành phố nơi khách hàng sinh sống.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện thông tin một khách hàng cụ thể.</p><p><br></p><p><strong>Bảng: SaleOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| OrderID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| TotalAmount&nbsp; | DECIMAL(10,2)&nbsp; |
++--------------+----------------+
+</pre><p>OrderID là mã đơn hàng, khóa chính, định danh từng đơn.&nbsp;&nbsp;</p><p>CustID là mã khách hàng, khóa ngoại tham chiếu đến CustID trong bảng Customer.&nbsp;&nbsp;</p><p>OrderDate là ngày tạo đơn hàng.&nbsp;&nbsp;</p><p>TotalAmount là tổng số tiền của đơn hàng.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng do một khách cụ thể tạo ra.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Hãy liệt kê danh sách các đơn hàng được tạo bởi khách hàng ở thành phố 'Ha Noi' và có tổng tiền TotalAmount &gt; 500.&nbsp;&nbsp;</p><p>Sắp xếp kết quả tăng dần theo OrderID.</p><p><br></p><p><strong>Ví dụ:</strong></p><p>Customer</p><pre class="ql-syntax" spellcheck="false">+--------+-----------------+---------+
+| CustID | CustomerName&nbsp; &nbsp; | City&nbsp; &nbsp; |
++--------+-----------------+---------+
+| 1&nbsp; &nbsp; &nbsp; | Nguyen Van A&nbsp; &nbsp; | Ha Noi&nbsp; |
+| 2&nbsp; &nbsp; &nbsp; | Tran Thi B&nbsp; &nbsp; &nbsp; | Da Nang |
+| 3&nbsp; &nbsp; &nbsp; | Le Van C&nbsp; &nbsp; &nbsp; &nbsp; | Ha Noi&nbsp; |
++--------+-----------------+---------+
+</pre><p>SaleOrder</p><pre class="ql-syntax" spellcheck="false">+---------+--------+------------+-------------+
+| OrderID | CustID | OrderDate&nbsp; | TotalAmount |
++---------+--------+------------+-------------+
+| 10&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; | 2024-01-01 | 300.00&nbsp; &nbsp; &nbsp; |
+| 11&nbsp; &nbsp; &nbsp; | 2&nbsp; &nbsp; &nbsp; | 2024-01-02 | 800.00&nbsp; &nbsp; &nbsp; |
+| 12&nbsp; &nbsp; &nbsp; | 3&nbsp; &nbsp; &nbsp; | 2024-01-03 | 750.00&nbsp; &nbsp; &nbsp; |
++---------+--------+------------+-------------+
+</pre><p>Kết quả mong muốn:</p><pre class="ql-syntax" spellcheck="false">+---------+-----------------+------------+-------------+
+| OrderID | CustomerName&nbsp; &nbsp; | OrderDate&nbsp; | TotalAmount |
++---------+-----------------+------------+-------------+
+| 12&nbsp; &nbsp; &nbsp; | Le Van C&nbsp; &nbsp; &nbsp; &nbsp; | 2024-01-03 | 750.00&nbsp; &nbsp; &nbsp; |
++---------+-----------------+------------+-------------+
+</pre>

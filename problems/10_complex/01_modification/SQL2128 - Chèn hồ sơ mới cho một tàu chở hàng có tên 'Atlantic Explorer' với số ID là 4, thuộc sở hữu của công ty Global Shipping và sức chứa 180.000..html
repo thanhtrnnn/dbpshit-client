@@ -1,0 +1,12 @@
+ID: SQL2128
+Tiêu đề: Chèn hồ sơ mới cho một tàu chở hàng có tên 'Atlantic Explorer' với số ID là 4, thuộc sở hữu của công ty Global Shipping và sức chứa 180.000.
+URL WEB: https://db.ptit.edu.vn/question-detail/15d65144-2991-47f5-87cb-b76ac1db870a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/15d65144-2991-47f5-87cb-b76ac1db870a
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Cho hai bảng dữ liệu:</strong></p><h3><strong>Bảng cargo_ships</strong></h3><p>Lưu trữ thông tin về các tàu chở hàng, với cấu trúc:</p><ul><li>id (INT): Mã tàu</li><li>name (VARCHAR): Tên tàu</li><li>capacity (INT): Công suất tàu</li><li>owner_id (INT): Mã chủ sở hữu tàu</li></ul><h3><strong>Bảng owners</strong></h3><p>Lưu trữ thông tin về các chủ sở hữu tàu:</p><ul><li>owner_id (INT): Mã chủ sở hữu</li><li>owner_name (VARCHAR): Tên chủ sở hữu</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Chèn hồ sơ mới cho một tàu chở hàng có tên 'Atlantic Explorer' với số ID là 4, thuộc sở hữu của công ty Global Shipping và sức chứa 180.000.</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+--------+--------------------+-----------+-----------+
+|  id    |        name        | capacity  | owner_id  |
++--------+--------------------+-----------+-----------+
+|   4    | Atlantic Explorer  |  180000   |   null    |
++--------+--------------------+-----------+-----------+</pre>

@@ -1,0 +1,66 @@
+ID: DEMO-028
+Tiêu đề: Supplier cung cấp nhiều sản phẩm Electronics
+URL WEB: https://db.ptit.edu.vn/question-detail/95d6e7dc-c8bb-4946-a657-82c61135f4c7
+URL API: https://dbapi.ptit.edu.vn/api/app/question/95d6e7dc-c8bb-4946-a657-82c61135f4c7
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống quản lý cung ứng có 4 bảng sau:</p><p><strong>Bảng: Category</strong></p><pre class="ql-syntax" spellcheck="false">+----------+--------------+
+| Cột&nbsp; &nbsp; &nbsp; | Kiểu dữ liệu |
++----------+--------------+
+| CatID&nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CatName&nbsp; | VARCHAR(100) |
++----------+--------------+
+</pre><p>CatID là mã danh mục, khóa chính, định danh duy nhất cho từng loại hàng.</p><p>CatName là tên danh mục, ví dụ: 'Electronics', 'Furniture', 'Books',...</p><p><br></p><p><strong>Bảng: Product</strong></p><pre class="ql-syntax" spellcheck="false">+----------+----------------+
+| Cột&nbsp; &nbsp; &nbsp; | Kiểu dữ liệu&nbsp; &nbsp;|
++----------+----------------+
+| PID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Title&nbsp; &nbsp; | VARCHAR(100)&nbsp; &nbsp;|
+| Price&nbsp; &nbsp; | DECIMAL(10,2)&nbsp; |
+| CatID&nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++----------+----------------+
+</pre><p>PID là mã sản phẩm, khóa chính.</p><p>Title là tên sản phẩm.</p><p>Price là đơn giá sản phẩm.</p><p>CatID là mã danh mục, khóa ngoại tham chiếu đến CatID trong bảng Category.</p><p>Mỗi hàng trong bảng Product thể hiện một sản phẩm thuộc một danh mục nào đó.</p><p><br></p><p><strong>Bảng: Supplier</strong></p><pre class="ql-syntax" spellcheck="false">+----------+----------------+
+| Cột&nbsp; &nbsp; &nbsp; | Kiểu dữ liệu&nbsp; &nbsp;|
++----------+----------------+
+| SID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| SName&nbsp; &nbsp; | VARCHAR(100)&nbsp; &nbsp;|
++----------+----------------+
+</pre><p>SID là mã nhà cung cấp, khóa chính.</p><p>SName là tên nhà cung cấp.</p><p>Mỗi hàng trong bảng Supplier thể hiện một nhà cung cấp cụ thể.</p><p><br></p><p><strong>Bảng: Supply</strong></p><pre class="ql-syntax" spellcheck="false">+----------+----------------+
+| Cột&nbsp; &nbsp; &nbsp; | Kiểu dữ liệu&nbsp; &nbsp;|
++----------+----------------+
+| SID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| PID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Price&nbsp; &nbsp; | DECIMAL(10,2)&nbsp; |
++----------+----------------+
+</pre><p>SID là mã nhà cung cấp, khóa ngoại tham chiếu đến SID trong bảng Supplier.</p><p>PID là mã sản phẩm, khóa ngoại tham chiếu đến PID trong bảng Product.</p><p>Price là đơn giá mà nhà cung cấp cung cấp sản phẩm đó.</p><p>Khóa chính của bảng Supply là (SID, PID).</p><p>Mỗi hàng thể hiện một quan hệ <strong>“supplier cung cấp một sản phẩm với một đơn giá cụ thể”.</strong></p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Tìm các nhà cung cấp (SID, SName) cung cấp **ít nhất 2 sản phẩm** thuộc CATEGORY có tên <strong>Electronics.</strong></p><p><br></p><p><strong>Ví dụ:</strong></p><p>Category</p><pre class="ql-syntax" spellcheck="false">+-------+-------------+
+| CatID | CatName&nbsp; &nbsp; &nbsp;|
++-------+-------------+
+| 10&nbsp; &nbsp; | Electronics |
+| 21&nbsp; &nbsp; | Furniture&nbsp; &nbsp;|
++-------+-------------+
+</pre><p>Product</p><pre class="ql-syntax" spellcheck="false">+-----+------------------+--------+-------+
+| PID | Title&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Price&nbsp; | CatID |
++-----+------------------+--------+-------+
+| 1&nbsp; &nbsp;| TV&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 500.00 | 10&nbsp; &nbsp; |
+| 2&nbsp; &nbsp;| Laptop&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 900.00 | 10&nbsp; &nbsp; |
+| 3&nbsp; &nbsp;| Sofa&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 300.00 | 21&nbsp; &nbsp; |
++-----+------------------+--------+-------+
+</pre><p>Supplier</p><pre class="ql-syntax" spellcheck="false">+-----+----------------+
+| SID | SName&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++-----+----------------+
+| 100 | Tech Shop&nbsp; &nbsp; &nbsp; |
+| 200 | Home Store&nbsp; &nbsp; &nbsp;|
++-----+----------------+
+</pre><p>Supply</p><pre class="ql-syntax" spellcheck="false">+-----+-----+--------+
+| SID | PID | Price&nbsp; |
++-----+-----+--------+
+| 100 | 1&nbsp; &nbsp;| 480.00 |
+| 100 | 2&nbsp; &nbsp;| 880.00 |
+| 200 | 3&nbsp; &nbsp;| 290.00 |
++-----+-----+--------+
+</pre><p><br></p><p>Kết quả mong muốn:</p><pre class="ql-syntax" spellcheck="false">+-----+----------+
+| SID | SName&nbsp; &nbsp; |
++-----+----------+
+| 100 | Tech Shop|
++-----+----------+
+</pre>

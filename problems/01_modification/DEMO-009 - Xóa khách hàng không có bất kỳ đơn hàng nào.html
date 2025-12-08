@@ -1,0 +1,20 @@
+ID: DEMO-009
+Tiêu đề: Xóa khách hàng không có bất kỳ đơn hàng nào
+URL WEB: https://db.ptit.edu.vn/question-detail/242b82d1-87fc-48a1-b4af-f3fd8f6d6d3b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/242b82d1-87fc-48a1-b4af-f3fd8f6d6d3b
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng: CUSTOMER</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+--------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName| varchar(100) |
++-------------+--------------+
+</pre><p>CustID là khóa chính định danh duy nhất mỗi khách hàng.</p><p>CustomerName là tên đầy đủ của khách hàng, bắt buộc có.</p><p>Mỗi hàng trong bảng này thể hiện một khách hàng với mã ID và tên tương ứng.</p><p><br></p><p><strong>Bảng: SALEORDER</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+---------+
+| Column Name | Type&nbsp; &nbsp; |
++-------------+---------+
+| OrderID&nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp;|
+| CustID&nbsp; &nbsp; &nbsp; | int&nbsp; &nbsp; &nbsp;|
++-------------+---------+
+</pre><p>OrderID là mã đơn hàng, khóa chính không trùng lặp.</p><p>CustID là mã khách sở hữu đơn hàng, không được để trống, là khóa ngoại tham chiếu đến CustID trong bảng CUSTOMER.</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng cụ thể của một khách hàng.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Xóa khỏi bảng CUSTOMER tất cả các khách hàng không có bất kỳ đơn hàng nào.</p><p>Kết quả thao tác là câu lệnh DELETE, không cần trả về dữ liệu.</p>

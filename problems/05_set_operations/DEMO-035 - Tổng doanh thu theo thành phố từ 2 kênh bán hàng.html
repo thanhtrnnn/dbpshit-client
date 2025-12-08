@@ -1,0 +1,45 @@
+ID: DEMO-035
+Tiêu đề: Tổng doanh thu theo thành phố từ 2 kênh bán hàng
+URL WEB: https://db.ptit.edu.vn/question-detail/dd1e86b2-e87c-4cb9-b5dc-3d9b9d703bd8
+URL API: https://dbapi.ptit.edu.vn/api/app/question/dd1e86b2-e87c-4cb9-b5dc-3d9b9d703bd8
+Loại Database: Mysql
+------------------------------
+
+<p>Một hệ thống bán hàng ghi nhận doanh thu từ hai kênh:</p><p>- Bán hàng Online.</p><p>- Bán hàng tại cửa hàng (Store).</p><p>Dữ liệu được lưu ở 2 bảng:</p><p><strong>Bảng: OnlineOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| OnlineID&nbsp; &nbsp; &nbsp;| INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| OrderDate&nbsp; &nbsp; | DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(50)&nbsp; &nbsp; |
+| Amount&nbsp; &nbsp; &nbsp; &nbsp;| DECIMAL(10,2)&nbsp; |
++--------------+----------------+
+</pre><p>OnlineID là mã đơn online, khóa chính, INT.&nbsp;&nbsp;</p><p>OrderDate là ngày tạo đơn online.&nbsp;&nbsp;</p><p>City là thành phố nơi khách đặt đơn hàng.&nbsp;&nbsp;</p><p>Amount là số tiền của đơn hàng online (đã quy đổi về một đơn vị tiền thống nhất).&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng phát sinh qua kênh bán hàng online.</p><p><br></p><p><strong>Bảng: StoreOrder</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+
+| Column Name&nbsp; | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+
+| StoreID&nbsp; &nbsp; &nbsp; | INT&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| SaleDate&nbsp; &nbsp; &nbsp;| DATE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| City&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| VARCHAR(50)&nbsp; &nbsp; |
+| Amount&nbsp; &nbsp; &nbsp; &nbsp;| DECIMAL(10,2)&nbsp; |
++--------------+----------------+
+</pre><p>StoreID là mã hóa đơn bán tại cửa hàng, khóa chính, INT.&nbsp;&nbsp;</p><p>SaleDate là ngày xuất hóa đơn tại cửa hàng.&nbsp;&nbsp;</p><p>City là thành phố nơi cửa hàng thực hiện giao dịch.&nbsp;&nbsp;</p><p>Amount là số tiền của hóa đơn bán tại cửa hàng.&nbsp;&nbsp;</p><p>Mỗi hàng trong bảng này thể hiện một giao dịch phát sinh tại điểm bán trực tiếp.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Hãy liệt kê tổng doanh thu theo từng thành phố, lấy từ cả hai kênh OnlineOrder và StoreOrder và sắp xếp theo thứ tự thành phố tăng dần.&nbsp;</p><p><br></p><p><strong>Ví dụ:</strong></p><p>OnlineOrder</p><pre class="ql-syntax" spellcheck="false">+----------+------------+----------+---------+
+| OnlineID | OrderDate&nbsp; | City&nbsp; &nbsp; &nbsp;| Amount&nbsp; |
++----------+------------+----------+---------+
+| 1&nbsp; &nbsp; &nbsp; &nbsp; | 2024-01-01 | Ha Noi&nbsp; &nbsp;| 100.00&nbsp; |
+| 2&nbsp; &nbsp; &nbsp; &nbsp; | 2024-01-02 | Ha Noi&nbsp; &nbsp;| 200.00&nbsp; |
+| 3&nbsp; &nbsp; &nbsp; &nbsp; | 2024-01-03 | Da Nang&nbsp; | 150.00&nbsp; |
++----------+------------+----------+---------+
+</pre><p>StoreOrder</p><pre class="ql-syntax" spellcheck="false">+---------+------------+----------+---------+
+| StoreID | SaleDate&nbsp; &nbsp;| City&nbsp; &nbsp; &nbsp;| Amount&nbsp; |
++---------+------------+----------+---------+
+| 10&nbsp; &nbsp; &nbsp; | 2024-01-01 | Ha Noi&nbsp; &nbsp;| 300.00&nbsp; |
+| 11&nbsp; &nbsp; &nbsp; | 2024-01-02 | Da Nang&nbsp; | 100.00&nbsp; |
+| 12&nbsp; &nbsp; &nbsp; | 2024-01-03 | Hue&nbsp; &nbsp; &nbsp; | 250.00&nbsp; |
++---------+------------+----------+---------+
+</pre><p><br></p><p>Kết quả:</p><pre class="ql-syntax" spellcheck="false">+----------+--------------+
+| City&nbsp; &nbsp; &nbsp;| TotalRevenue |
++----------+--------------+
+| Da Nang&nbsp; | 250.00&nbsp; &nbsp; &nbsp; &nbsp;|
+| Ha Noi&nbsp; &nbsp;| 600.00&nbsp; &nbsp; &nbsp; &nbsp;|
+| Hue&nbsp; &nbsp; &nbsp; | 250.00&nbsp; &nbsp; &nbsp; &nbsp;|
++----------+--------------+
+</pre>

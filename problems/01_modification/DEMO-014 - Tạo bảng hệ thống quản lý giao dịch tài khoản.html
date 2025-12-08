@@ -1,0 +1,8 @@
+ID: DEMO-014
+Tiêu đề: Tạo bảng hệ thống quản lý giao dịch tài khoản
+URL WEB: https://db.ptit.edu.vn/question-detail/4374784f-0906-44e1-9575-7f5d725ae33e
+URL API: https://dbapi.ptit.edu.vn/api/app/question/4374784f-0906-44e1-9575-7f5d725ae33e
+Loại Database: Mysql
+------------------------------
+
+<p>Trong hệ thống quản lý giao dịch tài khoản, có bảng ACCOUNT với cấu trúc như sau:</p><p><br></p><p><strong>Bảng ACCOUNT:</strong></p><p>• AccountID (INT): Mã tài khoản, khóa chính.</p><p>• Owner (VARCHAR(100)): Tên chủ tài khoản, NOT NULL.</p><p><br></p><p><strong>Yêu cầu: Tạo bảng TXN với ràng buộc</strong></p><p><br></p><p><strong>Bảng TXN:</strong></p><p>• TxnID (INT): Mã giao dịch, là khóa chính.</p><p>• AccountID (INT): Mã tài khoản liên quan, bắt buộc và tham chiếu đến AccountID trong bảng ACCOUNT.</p><p>• Amount (DECIMAL(12,2)): Số tiền giao dịch, NOT NULL và phải lớn hơn 0.</p><p>• Type ENUM('DEPOSIT','WITHDRAW'): Loại giao dịch, chỉ nhận một trong hai giá trị này, không được để trống.</p><p>• TxnTime (TIMESTAMP): Thời điểm phát sinh giao dịch, mặc định là thời gian hiện tại, không được để trống.</p><p><br></p><p>Hãy tạo bảng TXN thỏa mãn mô tả trên.</p>

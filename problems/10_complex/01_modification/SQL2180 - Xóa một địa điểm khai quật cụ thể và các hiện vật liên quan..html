@@ -1,0 +1,13 @@
+ID: SQL2180
+Tiêu đề: Xóa một địa điểm khai quật cụ thể và các hiện vật liên quan.
+URL WEB: https://db.ptit.edu.vn/question-detail/f0b91191-69ec-441b-81a7-df70e75c399a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f0b91191-69ec-441b-81a7-df70e75c399a
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bạn có 2 bảng sau:</strong></p><p><strong>1. Bảng ExcavationSites</strong> – Thông tin về các địa điểm khai quật khảo cổ:</p><ul><li>SiteID (INT): Mã định danh duy nhất cho mỗi địa điểm khai quật.</li><li>Name (VARCHAR(50)): Tên của địa điểm khai quật.</li><li>Country (VARCHAR(50)): Quốc gia nơi địa điểm khai quật tọa lạc.</li><li>StartDate (DATE): Ngày bắt đầu khai quật tại địa điểm đó.</li></ul><p><strong>2. Bảng Artifacts</strong> – Thông tin về các hiện vật tìm thấy:</p><ul><li>ArtifactID (INT): Mã định danh duy nhất cho mỗi hiện vật.</li><li>SiteID (INT): Mã định danh của địa điểm khai quật chứa hiện vật.</li><li>Name (VARCHAR(50)): Tên của hiện vật.</li><li>Description (TEXT): Mô tả chi tiết.</li><li>DateFound (DATE): Ngày tìm thấy hiện vật.</li></ul><p><strong>Nhiệm vụ:</strong></p><p>Xóa một địa điểm khai quật cụ thể và các hiện vật liên quan.</p><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------+-------------+---------------------+------------------+
+| artifactid   | siteid   | name        | description         | datefound        |
++--------------+----------+-------------+---------------------+------------------+
+| 2            | 2        | Artifact Y  | A Canadian artifact | 2015-03-26       |
++--------------+----------+-------------+---------------------+------------------+
+</pre>

@@ -1,0 +1,45 @@
+ID: DEMO-002
+Tiêu đề: Danh sách đơn hàng và tên khách hàng
+URL WEB: https://db.ptit.edu.vn/question-detail/a7a4b21f-ceac-4389-87db-e98b5f782c9a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a7a4b21f-ceac-4389-87db-e98b5f782c9a
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng: CUSTOMER</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+--------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+--------------+
+| CustID&nbsp; &nbsp; &nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustomerName| varchar(100) |
++-------------+--------------+
+</pre><p><br></p><p>CustID: mã số khách hàng, duy nhất cho mỗi khách.</p><p>CustomerName: tên đầy đủ của khách hàng.</p><p><br></p><p><strong>Bảng: SALEORDER</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+--------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+--------------+
+| OrderID&nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| CustID&nbsp; &nbsp; &nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Total&nbsp; &nbsp; &nbsp; &nbsp;| decimal(10,2)|
++-------------+--------------+
+</pre><p><br></p><p>OrderID: mã đơn hàng, không trùng lặp.</p><p>CustID: mã khách gắn với đơn hàng, là khóa ngoại tham chiếu đến CustID trong bảng CUSTOMER.</p><p>Total: tổng tiền của đơn hàng, có 2 chữ số thập phân.</p><p><br></p><p><strong>Nhiệm vụ:</strong></p><p>Lấy danh sách OrderID và CustomerName cho tất cả đơn hàng.</p><p>Trả về bảng kết quả gồm (OrderID, CustomerName), sắp xếp tăng dần theo OrderID.</p><p><br></p><p><strong>Ví dụ:</strong></p><p>Input:</p><p>Bảng <strong>CUSTOMER</strong>:</p><pre class="ql-syntax" spellcheck="false">+--------+--------------+
+| CustID | CustomerName |
++--------+--------------+
+| 1&nbsp; &nbsp; &nbsp; | Alice&nbsp; &nbsp; &nbsp; &nbsp; |
+| 2&nbsp; &nbsp; &nbsp; | Bob&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| 3&nbsp; &nbsp; &nbsp; | Charlie&nbsp; &nbsp; &nbsp; |
+| 4&nbsp; &nbsp; &nbsp; | Diana&nbsp; &nbsp; &nbsp; &nbsp; |
++--------+--------------+
+</pre><p>Bảng <strong>SALEORDER</strong>:</p><pre class="ql-syntax" spellcheck="false">+---------+--------+--------+
+| OrderID | CustID | Total&nbsp; |
++---------+--------+--------+
+| 101&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; | 200.00 |
+| 102&nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; |&nbsp; 99.99 |
+| 103&nbsp; &nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; | 150.50 |
+| 104&nbsp; &nbsp; &nbsp;| 4&nbsp; &nbsp; &nbsp; | 300.00 |
++---------+--------+--------+
+</pre><p><br></p><p>Output:</p><pre class="ql-syntax" spellcheck="false">+---------+--------------+
+| OrderID | CustomerName |
++---------+--------------+
+| 101&nbsp; &nbsp; &nbsp;| Alice&nbsp; &nbsp; &nbsp; &nbsp; |
+| 102&nbsp; &nbsp; &nbsp;| Bob&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| 103&nbsp; &nbsp; &nbsp;| Alice&nbsp; &nbsp; &nbsp; &nbsp; |
+| 104&nbsp; &nbsp; &nbsp;| Diana&nbsp; &nbsp; &nbsp; &nbsp; |
++---------+--------------+
+</pre>

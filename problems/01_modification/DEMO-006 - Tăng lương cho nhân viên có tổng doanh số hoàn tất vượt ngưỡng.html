@@ -1,0 +1,24 @@
+ID: DEMO-006
+Tiêu đề: Tăng lương cho nhân viên có tổng doanh số hoàn tất vượt ngưỡng
+URL WEB: https://db.ptit.edu.vn/question-detail/76f0a73d-f6ad-47c2-80a3-7f069df42856
+URL API: https://dbapi.ptit.edu.vn/api/app/question/76f0a73d-f6ad-47c2-80a3-7f069df42856
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng: EMPLOYEE</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+----------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------+----------------+
+| EmpID&nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| FullName&nbsp; &nbsp; | varchar(100)&nbsp; &nbsp;|
+| Dept&nbsp; &nbsp; &nbsp; &nbsp; | varchar(50)&nbsp; &nbsp; |
+| Salary&nbsp; &nbsp; &nbsp; | decimal(10,2)&nbsp; |
++-------------+----------------+
+</pre><p>EmpID là mã nhân viên, khóa chính duy nhất cho mỗi người.</p><p>FullName là họ tên đầy đủ của nhân viên, bắt buộc có.</p><p>Dept là tên phòng ban mà nhân viên đang làm việc, ví dụ: 'IT', 'Sales', 'HR'.</p><p>Salary là mức lương hiện tại của nhân viên, lưu với 2 chữ số thập phân.</p><p>Mỗi hàng trong bảng này thể hiện một nhân viên cùng với ID, họ tên, phòng ban và mức lương của họ.</p><p><br></p><p><strong>Bảng: SALEORDER</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+------------------------------------+
+| Column Name | Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      |
++-------------+------------------------------------+
+| OrderID&nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     |
+| EmpID&nbsp; &nbsp; &nbsp; &nbsp;| int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     |
+| TotalAmount | decimal(10,2)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     |
+| Status&nbsp; &nbsp; &nbsp; | enum('NEW','COMPLETED','CANCELLED')|
++-------------+------------------------------------+
+</pre><p>OrderID là mã đơn hàng, khóa chính cho mỗi đơn.</p><p>EmpID là mã nhân viên phụ trách đơn hàng. EmpID là khóa ngoại tham chiếu đến EmpID trong bảng EMPLOYEE.</p><p>TotalAmount là tổng số tiền của đơn hàng, lưu với 2 chữ số thập phân.</p><p>Status là trạng thái của đơn hàng, có thể là 'NEW', 'COMPLETED' hoặc 'CANCELLED'.</p><p>Mỗi hàng trong bảng này thể hiện một đơn hàng cụ thể, gắn với nhân viên xử lý, tổng số tiền và trạng thái của đơn.</p><p><br></p><p><strong>Yêu cầu:</strong></p><p>Tăng lương 10% cho những nhân viên có tổng doanh số từ các đơn hàng đã hoàn tất (Status = 'COMPLETED') lớn hơn 50000.</p><p>Sử dụng câu lệnh UPDATE.</p><p>Chỉ cập nhật lương cho những nhân viên thỏa điều kiện, các nhân viên khác giữ nguyên mức lương.</p>

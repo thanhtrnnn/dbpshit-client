@@ -1,0 +1,8 @@
+ID: SQL2754
+Tiêu đề: Có bao nhiêu người dùng đã đăng bài hơn 5 lần trong tuần qua?
+URL WEB: https://db.ptit.edu.vn/question-detail/ebfd4f2f-7613-4e25-b58a-6ac9d05f270a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ebfd4f2f-7613-4e25-b58a-6ac9d05f270a
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng users</strong></p><ul><li>id (INT): Mã người dùng.</li><li>country (VARCHAR(2)): Mã quốc gia (ISO-2, ví dụ: 'US').</li></ul><p><strong>Bảng posts</strong></p><ul><li>id (INT): Mã bài đăng.</li><li>user_id (INT): Mã người dùng đăng bài.</li><li>likes (INT): Số lượt thích.</li><li>timestamp (DATETIME): Thời điểm đăng bài.</li></ul><p><strong>Yêu cầu:</strong> Có bao nhiêu người dùng đã đăng <strong>hơn 5 lần</strong> trong <strong>7 ngày gần nhất</strong>?</p><p><br></p><p>Output: <span style="font-size: 14px;">COUNT(DISTINCT posts.user_id)</span></p>

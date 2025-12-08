@@ -622,21 +622,37 @@ class Client:
             return None
 
     def _get_db_type_id(self, question_data):
-        """Lấy ID của loại database phù hợp nhất"""
-        selected_id = None
+        """Lấy ID của loại database phù hợp nhất; cho chọn nếu có nhiều loại."""
         if question_data and question_data.get('db_types'):
             db_types = question_data['db_types']
-            print(Fore.GREEN + f"[+] DB Types: {', '.join([db['name'] for db in db_types])}")
+            names = [db['name'] for db in db_types]
+            print(Fore.GREEN + f"[+] DB Types: {', '.join(names)}")
+
+            # Nếu chỉ có 1, dùng luôn
+            if len(db_types) == 1:
+                return db_types[0]['id']
+
+            # Nếu nhiều hơn 1, cho phép chọn
+            print(Fore.CYAN + "\nChọn loại DB để chạy/nộp:")
+            for idx, db in enumerate(db_types, 1):
+                print(f"{idx}. {db['name']} ({db.get('id')})")
+            print("0. Dùng gợi ý (ưu tiên MySQL, sau đó loại đầu tiên)")
+
+            while True:
+                choice = input("Lựa chọn: ").strip()
+                if choice == '0':
+                    break
+                if choice.isdigit() and 1 <= int(choice) <= len(db_types):
+                    return db_types[int(choice) - 1]['id']
+                print(Fore.RED + "[-] Lựa chọn không hợp lệ.")
+
+            # Gợi ý: ưu tiên MySQL, nếu không có thì lấy đầu tiên
             for db in db_types:
                 if 'mysql' in db['name'].lower():
-                    selected_id = db['id']
-                    break
-            if not selected_id and db_types:
-                selected_id = db_types[0]['id']
-        
-        if selected_id:
-            return selected_id
-            
+                    return db['id']
+            return db_types[0]['id']
+
+        # Không tìm thấy loại DB nào, fallback ENV
         default_id = os.getenv('DEFAULT_DB_TYPE', '11111111-1111-1111-1111-111111111111')
         print(Fore.YELLOW + f"[!] Không tìm thấy DB Type phù hợp, dùng mặc định: {default_id}")
         return default_id

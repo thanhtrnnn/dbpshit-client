@@ -1,0 +1,15 @@
+ID: DEMO-016
+Tiêu đề: Chính sửa thông tin đơn hàng
+URL WEB: https://db.ptit.edu.vn/question-detail/bc9d38d2-7d25-44d8-b97c-431586ae3d73
+URL API: https://dbapi.ptit.edu.vn/api/app/question/bc9d38d2-7d25-44d8-b97c-431586ae3d73
+Loại Database: Mysql
+------------------------------
+
+<p>Trong cơ sở dữ liệu hiện tại, bảng <strong>Orders</strong> đã được tạo như sau:</p><pre class="ql-syntax" spellcheck="false">CREATE TABLE Orders (
+&nbsp; &nbsp; order_id VARCHAR(50),
+&nbsp; &nbsp; customer_name VARCHAR(100),
+&nbsp; &nbsp; order_date VARCHAR(20),
+&nbsp; &nbsp; status VARCHAR(20),
+&nbsp; &nbsp; total_amount INT
+);
+</pre><p>Tuy nhiên, thiết kế bảng trên chưa hợp lý:</p><p><strong>order_id</strong></p><ul><li>Được khai báo là VARCHAR(50) trong khi đây là mã đơn hàng dạng số.</li><li>Trường này cần là <strong>số nguyên</strong>, <strong>NOT NULL</strong>, <strong>AUTO_INCREMENT</strong> và dùng làm <strong>khóa chính</strong>.</li></ul><p><strong>customer_name</strong></p><ul><li>Cột này phải là <strong>NOT NULL</strong> vì mọi đơn hàng đều phải có tên khách hàng.</li></ul><p><strong>order_date</strong></p><ul><li>Đang là VARCHAR(20) trong khi đây là ngày đặt hàng nên cần dùng kiểu <strong>DATE</strong>.</li></ul><p><strong>status</strong></p><ul><li>Đang dùng VARCHAR(20) tự do, dễ nhập sai giá trị.</li><li>Hệ thống quy ước chỉ cho phép các trạng thái:</li><li class="ql-indent-1">'PENDING' (mặc định khi mới tạo),</li><li class="ql-indent-1">'PAID' (đã thanh toán),</li><li class="ql-indent-1">'SHIPPED' (đã giao cho đơn vị vận chuyển),</li><li class="ql-indent-1">'CANCELLED' (đã hủy).</li></ul><p><strong>total_amount</strong></p><ul><li>Đang là INT, nhưng tổng tiền thường cần lưu cả phần thập phân, nên phải dùng <strong>DECIMAL(10,2)</strong>.</li></ul><p>Bảng <strong>Orders</strong> cũng cần thêm cột <strong>payment_method</strong> để lưu phương thức thanh toán, chỉ cho phép một trong các giá trị:</p><ul><li>'CASH', 'CARD', 'TRANSFER'.</li></ul><p><br></p><h3><strong>Yêu cầu</strong></h3><p>Dùng các câu lệnh sql để chỉnh sửa bảng <strong>Orders</strong> như sau:</p><ol><li>Chuyển order_id sang kiểu <strong>INT</strong>, đặt <strong>NOT NULL</strong>, <strong>AUTO_INCREMENT</strong> và thiết lập làm <strong>PRIMARY KEY</strong>.</li><li>Đăt cột customer_name là <strong>NOT NULL</strong>.</li><li>Đổi kiểu dữ liệu của order_date sang <strong>DATE</strong>.</li><li>Đổi kiểu cột status sang <strong>ENUM</strong>, đặt <strong>NOT NULL</strong>, giá trị mặc định <strong>'PENDING</strong>'.</li><li>Đổi kiểu dữ liệu của total_amount sang <strong>DECIMAL(10,2)</strong>.</li><li>Thêm cột payment_method kiểu <strong>ENUM, </strong>đặt<strong> NOT NULL, </strong>phương thức thanh toán mặc định là<strong> 'CASH'</strong>.</li></ol>

@@ -1,0 +1,32 @@
+ID: DEMO-001
+Tiêu đề: Liệt kê sản phẩm
+URL WEB: https://db.ptit.edu.vn/question-detail/d9bb1716-ab2f-4b18-bf1d-3c6b431f7337
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d9bb1716-ab2f-4b18-bf1d-3c6b431f7337
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng: PRODUCT</strong></p><pre class="ql-syntax" spellcheck="false">+------------+--------------+
+| Column Name| Type&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++------------+--------------+
+| ProductID&nbsp; | int&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Name&nbsp; &nbsp; &nbsp; &nbsp;| varchar&nbsp; &nbsp; &nbsp; |
+| Price&nbsp; &nbsp; &nbsp; | decimal(10,2)|
++------------+--------------+
+</pre><p><br></p><p>Trong SQL, ProductID là khóa chính của bảng này.</p><p>ProductID là cột số nguyên định danh duy nhất mỗi sản phẩm.</p><p>Name là tên sản phẩm.</p><p>Price là giá của sản phẩm.</p><p><br></p><p><strong>Nhiệm vụ:</strong></p><p>Liệt kê các sản phẩm có giá lớn hơn 100.</p><p>Trả về bảng kết quả gồm các cột (ProductID, Name).</p><p><br></p><p><strong>Ví dụ:</strong></p><p><strong>Input:</strong></p><p>Bảng PRODUCT:</p><pre class="ql-syntax" spellcheck="false">+-----------+-----------+--------+
+| ProductID | Name&nbsp; &nbsp; &nbsp; | Price&nbsp; |
++-----------+-----------+--------+
+| 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Chair&nbsp; &nbsp; &nbsp;|&nbsp; 80.00 |
+| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Table&nbsp; &nbsp; &nbsp;| 150.00 |
+| 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Lamp&nbsp; &nbsp; &nbsp; | 120.50 |
+| 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Sofa&nbsp; &nbsp; &nbsp; |&nbsp; 99.99 |
+| 5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Bookshelf | 250.00 |
+| 6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Cup&nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; 15.00 |
++-----------+-----------+--------+
+</pre><p><br></p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+-----------+
+| ProductID | Name&nbsp; &nbsp; &nbsp; |
++-----------+-----------+
+| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Table&nbsp; &nbsp; &nbsp;|
+| 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Lamp&nbsp; &nbsp; &nbsp; |
+| 5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Bookshelf |
++-----------+-----------+
+</pre>
