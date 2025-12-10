@@ -29,6 +29,7 @@ class Client:
         self.user_id = None
         self.refresh_token = None
         self.browser_path = None
+        self.browser_controller = None
         
         if not all([self.username, self.password, self.login_url]):
             print(Fore.RED + "[-] Lỗi: Thiếu thông tin đăng nhập trong file .env")
@@ -154,6 +155,7 @@ class Client:
         if len(browsers) == 1:
             name, path = list(browsers.items())[0]
             print(Fore.GREEN + f"[+] Phát hiện trình duyệt: {name}")
+            self._set_browser_controller(path)
             return path
         
         print(Fore.CYAN + "\n=== CHỌN TRÌNH DUYỆT ===")
@@ -170,18 +172,28 @@ class Client:
                 name, path = browser_list[int(choice) - 1]
                 print(Fore.GREEN + f"[+] Đã chọn: {name}")
                 self.browser_path = path
+                self._set_browser_controller(path)
                 return path
             print(Fore.RED + "[-] Lựa chọn không hợp lệ.")
+
+    def _set_browser_controller(self, browser_path):
+        """Pin a specific browser so all problems open in one window/tab set."""
+        try:
+            self.browser_controller = webbrowser.BackgroundBrowser(browser_path)
+        except Exception as e:
+            print(Fore.YELLOW + f"[!] Không thể ghim trình duyệt đã chọn ({e}). Dùng mặc định.")
+            self.browser_controller = None
 
     def _open_browser(self, file_path):
         """Mở file trong trình duyệt đã chọn hoặc mặc định"""
         try:
             file_url = f"file:///{os.path.abspath(file_path).replace(chr(92), '/')}"
-            
-            if self.browser_path:
+            if self.browser_controller:
+                self.browser_controller.open(file_url, new=1)  # new tab when possible
+            elif self.browser_path:
                 subprocess.Popen([self.browser_path, file_url])
             else:
-                webbrowser.open(file_url)
+                webbrowser.open(file_url, new=1)
             
             print(Fore.GREEN + "[+] Đã mở bài tập trong trình duyệt.")
         except Exception as e:
@@ -287,7 +299,7 @@ class Client:
         params = {
             "questionId": question_id,
             "page": 0,
-            "size": 20  # Get last 20 submissions
+            "size": 30  # Get last 30 submissions
         }
         
         print(Fore.CYAN + f"\n[*] Đang lấy lịch sử nộp bài...")
@@ -926,7 +938,7 @@ def main():
                     elif status == 'TLE':
                         print(Fore.RED + f"\n⏳ QUÁ THỜI GIAN (TIME LIMIT EXCEEDED) | Test: {test_pass}")
                     else:
-                        print(Fore.MAGENTA + f"\n⚠️ KẾT QUẢ: {status} | Test: {test_pass}")
+                        print(Fore.MAGENTA + f"\n⚠️  KẾT QUẢ: {status} | Test: {test_pass}")
                 else:
                     print(Fore.RED + "[-] Timeout: Không lấy được kết quả chấm.")
 

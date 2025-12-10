@@ -1,0 +1,8 @@
+ID: SQL2751
+Tiêu đề: Tổng số khách tham quan mỗi triển lãm, bao gồm cả những khách tham quan không tham gia vào bất kỳ triển lãm nào là bao nhiêu?
+URL WEB: https://db.ptit.edu.vn/question-detail/7c392374-abd5-4eec-87c7-6860eb8e728c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7c392374-abd5-4eec-87c7-6860eb8e728c
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `Exhibitions`: Theo dõi các buổi triển lãm nghệ thuật. </strong></p><ul><li><span style="font-size: 14px;">`Exhibitions (ExhibitionID INT, Name VARCHAR(50))`:</span></li><li><span style="font-size: 14px;">`ExhibitionID (INT)`: Mã triển lãm.</span></li><li><span style="font-size: 14px;">`Name (VARCHAR(50))`: Tên buổi triển lãm.</span></li></ul><p><strong style="font-size: 14px;">Bảng `Visitors`: Theo dõi các lượt khách tham quan. </strong></p><ul><li><span style="font-size: 14px;">`Visitors (VisitorID INT, ExhibitionID INT)`:</span></li><li><span style="font-size: 14px;">`VisitorID (INT)`: Mã khách tham quan.</span></li><li><span style="font-size: 14px;">`ExhibitionID (INT)`: Mã triển lãm mà khách đã đến (có thể NULL nếu không tham gia triển lãm cụ thể).</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ</strong></p><p><span style="font-size: 14px;">Tổng số khách tham quan mỗi triển lãm là bao nhiêu?</span></p><p><br></p><p><strong style="font-size: 14px;">Output</strong></p><p><span style="font-size: 14px;">Name, TotalVisitors</span></p>
