@@ -1,0 +1,13 @@
+ID: SQL-2872
+Tiêu đề: Tính tổng số sản phẩm dành cho nam (‘Men’) với Size = 32 trong quý 1 năm 2025 (từ 2025-01-01 đến 2025-03-31).
+URL WEB: https://db.ptit.edu.vn/question-detail/d10e839a-a958-4793-b461-464384efe0ea
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d10e839a-a958-4793-b461-464384efe0ea
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng SalesData: </strong>Chứa thông tin về <strong>dữ liệu bán hàng</strong>, bao gồm sản phẩm, số lượng bán ra và đặc điểm của khách hàng.</h3><p><strong>Cấu trúc:</strong></p><ul><li>SaleID (INT): Mã định danh duy nhất cho mỗi giao dịch bán hàng (khóa chính của bảng).</li><li>ProductID (INT): Mã định danh của sản phẩm (liên kết với bảng sản phẩm nếu có).</li><li>SaleDate (DATE): Ngày thực hiện giao dịch bán hàng.</li><li>QuantitySold (INT): Số lượng sản phẩm bán ra trong giao dịch.</li><li>Gender (TEXT): Giới tính của khách hàng (ví dụ: 'Men', 'Women').</li><li>Size (INT): Kích cỡ sản phẩm được bán.</li></ul><p><br></p><p><strong>Yêu cầu: </strong>Tính tổng số sản phẩm dành cho nam (‘Men’) với Size = 32 trong quý 1 năm 2025 (từ 2025-01-01 đến 2025-03-31).</p><p><br></p><p>Output ví dụ:</p><pre class="ql-syntax" spellcheck="false">+----------------+
+| total_quantity |
++----------------+
+| 16&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++----------------+
+</pre>

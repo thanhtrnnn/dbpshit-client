@@ -1,0 +1,13 @@
+ID: SQL-2877
+Tiêu đề: Tính tổng quãng đường đã đi ở khu vực ‘Atlantic’
+URL WEB: https://db.ptit.edu.vn/question-detail/f32867c5-b69b-4e77-b56f-76d67b39d72f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f32867c5-b69b-4e77-b56f-76d67b39d72f
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng vessels: </strong>Chứa thông tin về <strong>tàu</strong>.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi tàu (khóa chính của bảng).</li><li>name (VARCHAR(50)): Tên của tàu.</li><li>type (VARCHAR(50)): Loại tàu (ví dụ: 'Cargo', 'Tanker', 'Passenger').</li><li>max_cargo_weight (INT): Khối lượng hàng hóa tối đa mà tàu có thể chở (đơn vị: kg hoặc tấn).</li></ul><h3><strong>Bảng voyages: </strong>Chứa thông tin về các <strong>chuyến đi</strong> mà các tàu đã thực hiện.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi chuyến đi (khóa chính của bảng).</li><li>vessel_id (INT): Mã định danh của tàu thực hiện chuyến đi (liên kết với id trong bảng vessels).</li><li>region (VARCHAR(50)): Khu vực mà tàu hoạt động trong chuyến đi (ví dụ: 'Arctic', 'Atlantic').</li><li>distance (DECIMAL(5,2)): Quãng đường của chuyến đi (đơn vị: km hoặc hải lý).</li><li>cargo_weight (INT): Khối lượng hàng hóa được chuyên chở trong chuyến đi.</li></ul><p><br></p><p><strong>Yêu cầu:</strong></p><p>Với mỗi loại tàu, tính tổng quãng đường đã đi ở khu vực ‘Atlantic’, chỉ hiển thị những loại có tổng quãng đường ≥ 1000. Sắp xếp theo tổng quảng đường giảm dần.</p><p><br></p><p><strong>Output ví dụ</strong></p><pre class="ql-syntax" spellcheck="false">+-------+-------------------------+
+| type&nbsp; | total_distance_atlantic |
++-------+-------------------------+
+| Cargo | 1100&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++-------+-------------------------+
+</pre>

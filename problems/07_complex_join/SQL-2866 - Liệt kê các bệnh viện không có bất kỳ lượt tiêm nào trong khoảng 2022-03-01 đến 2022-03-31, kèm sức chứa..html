@@ -1,0 +1,15 @@
+ID: SQL-2866
+Tiêu đề: Liệt kê các bệnh viện không có bất kỳ lượt tiêm nào trong khoảng 2022-03-01 đến 2022-03-31, kèm sức chứa.
+URL WEB: https://db.ptit.edu.vn/question-detail/cbe8236e-d00c-408b-8d05-ce7bb7479c01
+URL API: https://dbapi.ptit.edu.vn/api/app/question/cbe8236e-d00c-408b-8d05-ce7bb7479c01
+Loại Database: Mysql
+------------------------------
+
+<p>Cho cơ sở dữ liệu các bệnh viện và bệnh nhân tiêm chủng với các bảng:</p><p><strong>Bảng hospitals</strong></p><ul><li>id (INT): Mã bệnh viện</li><li>name (VARCHAR(50)): Tên bệnh viện</li><li>location (VARCHAR(50)): Vị trí bệnh viện</li><li>capacity (INT): Sức chứa của bệnh viện</li></ul><p><strong>Bảng patient_vaccinations</strong></p><ul><li>id (INT): Mã tiêm chủng</li><li>hospital_id (INT): Mã bệnh viện (liên kết đến hospitals.id)</li><li>patient_id (INT): Mã bệnh nhân</li><li>date (DATE): Ngày tiêm chủng</li></ul><p><strong>Câu hỏi: </strong>Liệt kê các bệnh viện không có bất kỳ lượt tiêm nào trong khoảng 2022-03-01 đến 2022-03-31, kèm sức chứa. Sắp xếp mặc định theo tên bệnh viện</p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+------------------+----------+
+| name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| capacity |
++------------------+----------+
+| Kyoto Hospital&nbsp; &nbsp;| 300&nbsp; &nbsp; &nbsp; |
+| Nairobi Hospital | 600&nbsp; &nbsp; &nbsp; |
+| Osaka Clinic&nbsp; &nbsp; &nbsp;| 200&nbsp; &nbsp; &nbsp; |
++------------------+----------+
+</pre>

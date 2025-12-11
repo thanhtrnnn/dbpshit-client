@@ -1,0 +1,13 @@
+ID: SQL-2898
+Tiêu đề: Liệt kê các sự kiện thuộc thể loại music 
+URL WEB: https://db.ptit.edu.vn/question-detail/a8ed8ee5-67e1-4baa-9380-198aadc452f6
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a8ed8ee5-67e1-4baa-9380-198aadc452f6
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `events`: Lưu trữ thông tin các sự kiện. </strong></p><ul><li><span style="font-size: 14px;">`id` (INT): Mã sự kiện.</span></li><li><span style="font-size: 14px;">`name` (TEXT): Tên sự kiện.</span></li><li><span style="font-size: 14px;">`category` (TEXT): Thể loại sự kiện (ví dụ: music, theater).</span></li><li><span style="font-size: 14px;">`tickets_sold` (INT): Số vé đã bán.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ: </strong>Liệt kê các sự kiện thuộc thể loại music có số vé đã bán lớn hơn mức trung bình vé bán của toàn bộ sự kiện music. Kết quả sắp xếp giảm dần theo số vé đã bán. </p><p><br></p><p><strong style="font-size: 14px;">Output ví dụ: </strong></p><pre class="ql-syntax" spellcheck="false">+------------+--------------+
+| name&nbsp; &nbsp; &nbsp; &nbsp;| tickets_sold |
++------------+--------------+
+| Concert D2 | 240&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++------------+--------------+
+</pre>

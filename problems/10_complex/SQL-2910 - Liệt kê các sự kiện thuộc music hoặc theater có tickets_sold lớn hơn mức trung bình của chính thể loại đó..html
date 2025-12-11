@@ -1,0 +1,14 @@
+ID: SQL-2910
+Tiêu đề: Liệt kê các sự kiện thuộc music hoặc theater có tickets_sold lớn hơn mức trung bình của chính thể loại đó.
+URL WEB: https://db.ptit.edu.vn/question-detail/f9645015-c038-4c5e-ba21-c6a119a8b5fc
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f9645015-c038-4c5e-ba21-c6a119a8b5fc
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `events`: Lưu trữ thông tin các sự kiện. </strong></p><ul><li><span style="font-size: 14px;">`id` (INT): Mã sự kiện.</span></li><li><span style="font-size: 14px;">`name` (TEXT): Tên sự kiện.</span></li><li><span style="font-size: 14px;">`category` (TEXT): Thể loại sự kiện (ví dụ: music, theater).</span></li><li><span style="font-size: 14px;">`tickets_sold` (INT): Số vé đã bán.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ: </strong>Liệt kê các sự kiện thuộc music hoặc theater có tickets_sold lớn hơn mức trung bình của chính thể loại đó. Sắp xếp theo số vé giảm dần. </p><p><br></p><p><strong style="font-size: 14px;">Output: </strong></p><pre class="ql-syntax" spellcheck="false">+------------+----------+--------------+
+| name&nbsp; &nbsp; &nbsp; &nbsp;| category | tickets_sold |
++------------+----------+--------------+
+| Concert F2 | music&nbsp; &nbsp; | 250&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Play F2&nbsp; &nbsp; | theater&nbsp; | 210&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++------------+----------+--------------+
+</pre>

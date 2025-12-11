@@ -1,0 +1,8 @@
+ID: SQL2453
+Tiêu đề: Liệt kê tổng số sự cố an toàn lao động theo tình trạng công đoàn trong ngành xây dựng năm 2021 và 2022?
+URL WEB: https://db.ptit.edu.vn/question-detail/e71c59b3-2742-4d91-8325-5d433a43bfb0
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e71c59b3-2742-4d91-8325-5d433a43bfb0
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng union_status: </strong>Chứa thông tin về <strong>trạng thái công đoàn</strong> của người lao động.</h3><ul><li>id (INT): Mã định danh duy nhất cho mỗi trạng thái (khóa chính).</li><li>union_status (VARCHAR(10)): Trạng thái công đoàn (ví dụ: 'Union', 'Non-Union').</li></ul><h3><strong>Bảng construction_sectors: </strong>Chứa thông tin về <strong>các ngành xây dựng</strong>.</h3><ul><li>sector_id (INT): Mã định danh duy nhất cho mỗi ngành (khóa chính).</li><li>sector_name (VARCHAR(255)): Tên ngành (ví dụ: Xây dựng nhà - 'Building Construction' , Xây dựng đường - Highway Construction', Kỹ sư dân dụng - 'Civil Engineering').</li></ul><h3><strong>Bảng workplace_safety_incidents: </strong>Chứa thông tin về <strong>các sự cố an toàn</strong> theo ngành và trạng thái công đoàn.</h3><ul><li>id (INT): Mã định danh duy nhất cho mỗi sự cố (khóa chính).</li><li>sector_id (INT): Tham chiếu tới construction_sectors.sector_id.</li><li>union_status_id (INT): Tham chiếu tới union_status.id.</li><li>incident_year (INT): Năm xảy ra sự cố.</li><li>incidents (INT): Số lượng sự cố trong năm.</li></ul><p><strong>Yêu cầu:</strong></p><p>Liệt kê <strong>tổng số sự cố an toàn lao động ngành xây dựng theo trạng thái công đoàn</strong> cho <strong>năm 2021 và 2022</strong>. Kết quả sắp xếp tăng dần theo trạng thái công đoàn và năm.</p><p><br></p><p>Output: union_status, incident_year, total_incidents</p>

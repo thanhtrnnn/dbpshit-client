@@ -1,0 +1,13 @@
+ID: SQL-2829
+Tiêu đề: Ai là nhà nghiên cứu chính cho dự án có số lượng gen tham gia nhiều nhất?
+URL WEB: https://db.ptit.edu.vn/question-detail/21a7b228-9163-4055-be29-1eba64cf2694
+URL API: https://dbapi.ptit.edu.vn/api/app/question/21a7b228-9163-4055-be29-1eba64cf2694
+Loại Database: Mysql
+------------------------------
+
+<p>Cho CSDL với các bảng như dưới đây.</p><p><strong>Bảng research</strong> – Thông tin dự án nghiên cứu</p><ul><li>id (INT, PRIMARY KEY): Mã nghiên cứu (duy nhất)</li><li>company_id (INT): Mã công ty thực hiện nghiên cứu</li><li>title (VARCHAR(255)): Tên đề tài nghiên cứu</li><li>lead_researcher (VARCHAR(255)): Tên người đứng đầu dự án</li><li>start_date (DATE): Ngày bắt đầu nghiên cứu</li></ul><p><strong>Bảng gene</strong> – Dữ liệu về gene</p><ul><li>id (INT, PRIMARY KEY): Mã định danh gene (duy nhất)</li><li>name (VARCHAR(255)): Tên gene</li><li>function (VARCHAR(255)): Vai trò/chức năng sinh học của gene</li><li>company_id (INT): Mã công ty sở hữu nghiên cứu gene</li><li>research_id (INT): Mã dự án nghiên cứu liên quan (liên kết đến bảng research)</li></ul><h4><strong>Câu hỏi</strong></h4><p>Xác định người đứng đầu của dự án sử dụng nhiều gene để nghiên cứu nhất?</p><p><br></p><p><strong>Output ví dụ</strong> :</p><pre class="ql-syntax" spellcheck="false">+-----------------+
+| lead_researcher |
++-----------------+
+| Dr. Smith&nbsp; &nbsp; &nbsp; &nbsp;|
++-----------------+
+</pre>

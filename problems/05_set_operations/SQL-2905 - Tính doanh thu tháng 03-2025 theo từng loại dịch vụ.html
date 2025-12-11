@@ -1,0 +1,14 @@
+ID: SQL-2905
+Tiêu đề: Tính doanh thu tháng 03/2025 theo từng loại dịch vụ
+URL WEB: https://db.ptit.edu.vn/question-detail/5079dc7f-4c70-4875-963f-cabdbbdea9ad
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5079dc7f-4c70-4875-963f-cabdbbdea9ad
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng mobile_subscribers: </strong>Chứa thông tin về các thuê bao di động.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi thuê bao di động (khóa chính của bảng).</li><li>name (VARCHAR(50)): Tên của thuê bao di động.</li><li>subscription_fee (FLOAT): Phí thuê bao hàng tháng cho dịch vụ di động.</li><li>date (DATE): Ngày bắt đầu đăng ký dịch vụ.</li></ul><h3><strong>Bảng broadband_subscribers: </strong>Chứa thông tin về các thuê bao băng thông rộng.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi thuê bao băng thông rộng (khóa chính của bảng).</li><li>name (VARCHAR(50)): Tên của thuê bao băng thông rộng.</li><li>subscription_fee (FLOAT): Phí thuê bao hàng tháng cho dịch vụ băng thông rộng.</li><li>date (DATE): Ngày bắt đầu đăng ký dịch vụ.</li></ul><p><br></p><p><strong>Yêu cầu</strong>: Tính doanh thu tháng 03/2025 theo từng loại dịch vụ. Sắp xếp theo doanh thu giảm dần.</p><p><br></p><p><strong>Output</strong>:</p><pre class="ql-syntax" spellcheck="false">+--------------+---------------+
+| service_type | total_revenue |
++--------------+---------------+
+| broadband&nbsp; &nbsp; | 70&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| mobile&nbsp; &nbsp; &nbsp; &nbsp;| 35&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++--------------+---------------+
+</pre>

@@ -1,0 +1,15 @@
+ID: SQL-2863
+Tiêu đề: Tính tổng khán giả theo từng đội
+URL WEB: https://db.ptit.edu.vn/question-detail/d77b5678-d04e-44aa-91db-cb76f8f31b55
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d77b5678-d04e-44aa-91db-cb76f8f31b55
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `TeamStats`: Lưu trữ thống kê số lượng khán giả trong các trận đấu thể thao. </strong></p><ul><li><span style="font-size: 14px;">`GameID (INT)`: Mã trận đấu.</span></li><li><span style="font-size: 14px;">`TeamID (INT)`: Mã đội thi đấu (Mã đội chiến thắng).</span></li><li><span style="font-size: 14px;">`HomeTeam (VARCHAR(255))`: Tên đội chủ nhà.</span></li><li><span style="font-size: 14px;">`AwayTeam (VARCHAR(255))`: Tên đội khách.</span></li><li><span style="font-size: 14px;">`HomeAttendance (INT)`: Số khán giả cổ vũ đội chủ nhà.</span></li><li><span style="font-size: 14px;">`AwayAttendance (INT)`: Số khán giả cổ vũ đội khách.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ: </strong>Tính tổng khán giả theo từng đội trên tất cả các trận mà đội tham gia, dù là sân khách hay sân nhà. Trả về 3 đội có tổng khán giả cao nhất. Sắp xếp giảm dần theo tổng khán giả, và tăng dần theo tên đội. </p><p><strong>Output ví dụ: </strong></p><pre class="ql-syntax" spellcheck="false">+---------+------------------+
+| Team&nbsp; &nbsp; | Total_Attendance |
++---------+------------------+
+| Knicks&nbsp; | 41000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Bulls&nbsp; &nbsp;| 34000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Celtics | 33000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++---------+------------------+
+</pre>

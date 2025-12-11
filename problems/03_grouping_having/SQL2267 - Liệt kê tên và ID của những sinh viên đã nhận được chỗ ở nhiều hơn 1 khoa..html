@@ -1,0 +1,14 @@
+ID: SQL2267
+Tiêu đề: Liệt kê tên và ID của những sinh viên đã nhận được chỗ ở nhiều hơn 1 khoa.
+URL WEB: https://db.ptit.edu.vn/question-detail/5106645e-0aa8-4313-a225-40b42069bb09
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5106645e-0aa8-4313-a225-40b42069bb09
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng student_info</strong> – Thông tin về sinh viên:</p><ul><li>student_id (INT): Mã định danh duy nhất cho mỗi sinh viên</li><li>name (VARCHAR(255)): Tên của sinh viên</li></ul><p><strong>Bảng student_disability_accommodations</strong> – Thông tin hỗ trợ cho sinh viên có nhu cầu đặc biệt:</p><ul><li>student_id (INT): Mã định danh của sinh viên được hỗ trợ (liên kết với student_info.student_id)</li><li>accommodation_type (VARCHAR(255)): Loại hỗ trợ đặc biệt (ví dụ: thời gian kiểm tra kéo dài, người ghi chú, v.v.)</li><li>department (VARCHAR(255)): Tên khoa mà sinh viên thuộc về</li></ul><p><strong>Yêu cầu tính: </strong>Liệt kê các sinh viên đã nhận được hỗ trợ từ nhiều hơn 1 khoa.</p><p><strong>Output:</strong></p><pre class="ql-syntax" spellcheck="false">+------------+----------+
+| student_id | name&nbsp; &nbsp; &nbsp;|
++------------+----------+
+| 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Alice&nbsp; &nbsp; |
+| 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | John Doe |
++------------+----------+
+</pre>

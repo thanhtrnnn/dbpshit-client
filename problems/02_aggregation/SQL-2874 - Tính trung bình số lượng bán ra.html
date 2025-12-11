@@ -1,0 +1,13 @@
+ID: SQL-2874
+Tiêu đề: Tính trung bình số lượng bán ra
+URL WEB: https://db.ptit.edu.vn/question-detail/29bbc40d-8b7b-448c-8a0d-093bc6bd3f04
+URL API: https://dbapi.ptit.edu.vn/api/app/question/29bbc40d-8b7b-448c-8a0d-093bc6bd3f04
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng SalesData: </strong>Chứa thông tin về <strong>dữ liệu bán hàng</strong>, bao gồm sản phẩm, số lượng bán ra và đặc điểm của khách hàng.</h3><p><strong>Cấu trúc:</strong></p><ul><li>SaleID (INT): Mã định danh duy nhất cho mỗi giao dịch bán hàng (khóa chính của bảng).</li><li>ProductID (INT): Mã định danh của sản phẩm (liên kết với bảng sản phẩm nếu có).</li><li>SaleDate (DATE): Ngày thực hiện giao dịch bán hàng.</li><li>QuantitySold (INT): Số lượng sản phẩm bán ra trong giao dịch.</li><li>Gender (TEXT): Giới tính của khách hàng (ví dụ: 'Men', 'Women').</li><li>Size (INT): Kích cỡ sản phẩm được bán.</li></ul><p><br></p><p><strong>Yêu cầu: </strong>Tính trung bình số lượng bán ra cho các giao dịch Size = 36 (không phân biệt giới tính) trong tháng 5/2025</p><p><br></p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+
+| avg_quantity |
++--------------+
+| 8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++--------------+
+</pre>

@@ -1,0 +1,14 @@
+ID: SQL-2893
+Tiêu đề: Tìm công suất lớn nhất trong giai đoạn 
+URL WEB: https://db.ptit.edu.vn/question-detail/a305cb10-efdd-4ac6-9dac-a0abbed75c10
+URL API: https://dbapi.ptit.edu.vn/api/app/question/a305cb10-efdd-4ac6-9dac-a0abbed75c10
+Loại Database: Mysql
+------------------------------
+
+<h3><strong style="font-size: 12px;">Bảng Vehicle_Types: </strong><span style="font-size: 12px;">Chứa thông tin về các loại phương tiện.</span></h3><ul><li><span style="font-size: 12px;">Id (INT): Mã định danh duy nhất cho mỗi loại phương tiện (khóa chính của bảng).</span></li><li><span style="font-size: 12px;">Name (VARCHAR(50)): Tên loại phương tiện (ví dụ: "Sedan", "SUV", "Truck").</span></li></ul><p><br></p><h3><strong style="font-size: 12px;">Bảng Vehicle_Releases: </strong><span style="font-size: 12px;">Chứa thông tin về các mẫu phương tiện được phát hành.</span></h3><ul><li><span style="font-size: 12px;">Id (INT): Mã định danh duy nhất cho mỗi phương tiện (khóa chính của bảng).</span></li><li><span style="font-size: 12px;">Name (VARCHAR(50)): Tên mẫu phương tiện.</span></li><li><span style="font-size: 12px;">Release_Date (DATE): Ngày ra mắt của phương tiện.</span></li><li><span style="font-size: 12px;">Origin_Country (VARCHAR(50)): Quốc gia nơi phương tiện được sản xuất.</span></li><li><span style="font-size: 12px;">Horsepower (INT): Công suất động cơ tính bằng mã lực.</span></li><li><span style="font-size: 12px;">Vehicle_Type_Id (INT): Mã định danh loại phương tiện (liên kết với Id trong bảng Vehicle_Types).</span></li></ul><p><strong style="font-size: 12px;">Nhiệm vụ:</strong></p><p>Với mỗi loại phương tiện, tìm công suất lớn nhất trong giai đoạn 2021-01-01 → 2022-12-31. Kết quả sắp xếp giảm dần them công suất.</p><p><br></p><p><strong style="font-size: 12px;">Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+--------+
+| type_name | max_hp |
++-----------+--------+
+| SUV&nbsp; &nbsp; &nbsp; &nbsp;| 300&nbsp; &nbsp; |
+| Sedan&nbsp; &nbsp; &nbsp;| 250&nbsp; &nbsp; |
++-----------+--------+
+</pre>

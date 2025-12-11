@@ -1,0 +1,14 @@
+ID: SQL-2894
+Tiêu đề: Đếm số mẫu (model) theo quốc gia sản xuất 
+URL WEB: https://db.ptit.edu.vn/question-detail/634573fd-e593-4705-ab97-51b3a5a7c566
+URL API: https://dbapi.ptit.edu.vn/api/app/question/634573fd-e593-4705-ab97-51b3a5a7c566
+Loại Database: Mysql
+------------------------------
+
+<h3><strong style="font-size: 12px;">Bảng Vehicle_Types: </strong><span style="font-size: 12px;">Chứa thông tin về các loại phương tiện.</span></h3><ul><li><span style="font-size: 12px;">Id (INT): Mã định danh duy nhất cho mỗi loại phương tiện (khóa chính của bảng).</span></li><li><span style="font-size: 12px;">Name (VARCHAR(50)): Tên loại phương tiện (ví dụ: "Sedan", "SUV", "Truck").</span></li></ul><p><br></p><h3><strong style="font-size: 12px;">Bảng Vehicle_Releases: </strong><span style="font-size: 12px;">Chứa thông tin về các mẫu phương tiện được phát hành.</span></h3><ul><li><span style="font-size: 12px;">Id (INT): Mã định danh duy nhất cho mỗi phương tiện (khóa chính của bảng).</span></li><li><span style="font-size: 12px;">Name (VARCHAR(50)): Tên mẫu phương tiện.</span></li><li><span style="font-size: 12px;">Release_Date (DATE): Ngày ra mắt của phương tiện.</span></li><li><span style="font-size: 12px;">Origin_Country (VARCHAR(50)): Quốc gia nơi phương tiện được sản xuất.</span></li><li><span style="font-size: 12px;">Horsepower (INT): Công suất động cơ tính bằng mã lực.</span></li><li><span style="font-size: 12px;">Vehicle_Type_Id (INT): Mã định danh loại phương tiện (liên kết với Id trong bảng Vehicle_Types).</span></li></ul><p><strong style="font-size: 12px;">Nhiệm vụ:</strong></p><p>Đếm số mẫu (model) theo quốc gia sản xuất cho các mẫu có Horsepower từ 150 đến 350 và ra mắt sau 2018-12-31. Sắp xếp giảm dần theo số mẫu. </p><p><br></p><p><strong style="font-size: 12px;">Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+----------------+-------------+
+| origin_country | model_count |
++----------------+-------------+
+| Japan&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Germany&nbsp; &nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++----------------+-------------+
+</pre>

@@ -1,0 +1,13 @@
+ID: SQL-2878
+Tiêu đề: Liệt kê các chuyến đi vi phạm sức chở: cargo_weight > max_cargo_weight.
+URL WEB: https://db.ptit.edu.vn/question-detail/f8cfc5da-c934-40ab-bca7-eec1f032a674
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f8cfc5da-c934-40ab-bca7-eec1f032a674
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng vessels: </strong>Chứa thông tin về <strong>tàu</strong>.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi tàu (khóa chính của bảng).</li><li>name (VARCHAR(50)): Tên của tàu.</li><li>type (VARCHAR(50)): Loại tàu (ví dụ: 'Cargo', 'Tanker', 'Passenger').</li><li>max_cargo_weight (INT): Khối lượng hàng hóa tối đa mà tàu có thể chở (đơn vị: kg hoặc tấn).</li></ul><h3><strong>Bảng voyages: </strong>Chứa thông tin về các <strong>chuyến đi</strong> mà các tàu đã thực hiện.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi chuyến đi (khóa chính của bảng).</li><li>vessel_id (INT): Mã định danh của tàu thực hiện chuyến đi (liên kết với id trong bảng vessels).</li><li>region (VARCHAR(50)): Khu vực mà tàu hoạt động trong chuyến đi (ví dụ: 'Arctic', 'Atlantic').</li><li>distance (DECIMAL(5,2)): Quãng đường của chuyến đi (đơn vị: km hoặc hải lý).</li><li>cargo_weight (INT): Khối lượng hàng hóa được chuyên chở trong chuyến đi.</li></ul><p><br></p><p><strong>Yêu cầu:</strong></p><p>Liệt kê các chuyến đi vi phạm sức chở: Khối lượng hàng hóa được chuyên chở lớn hơn Khối lượng hàng hóa tối đa được phép. Kết quả sắp xếp mặc định theo id của voyage.</p><p><br></p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+-------------+-----------+--------------+------------------+
+| vessel_name | voyage_id | cargo_weight | max_cargo_weight |
++-------------+-----------+--------------+------------------+
+| CapOne&nbsp; &nbsp; &nbsp; | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 12000&nbsp; &nbsp; &nbsp; &nbsp; | 10000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++-------------+-----------+--------------+------------------+
+</pre>

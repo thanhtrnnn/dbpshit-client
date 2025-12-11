@@ -1,0 +1,8 @@
+ID: SQL2450
+Tiêu đề: Có bao nhiêu sản phẩm may mặc cỡ 36 dành cho nữ đã được bán trong tháng trước?
+URL WEB: https://db.ptit.edu.vn/question-detail/e54df7b8-5de0-4de0-b4f0-243ab55eddac
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e54df7b8-5de0-4de0-b4f0-243ab55eddac
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng SalesData</strong></h3><p>Chứa thông tin về <strong>dữ liệu bán hàng</strong>, bao gồm sản phẩm, số lượng bán ra và đặc điểm của khách hàng.</p><p><strong>Cấu trúc:</strong></p><ul><li>SaleID (INT): Mã định danh duy nhất cho mỗi giao dịch bán hàng (khóa chính của bảng).</li><li>ProductID (INT): Mã định danh của sản phẩm (liên kết với bảng sản phẩm nếu có).</li><li>SaleDate (DATE): Ngày thực hiện giao dịch bán hàng.</li><li>QuantitySold (INT): Số lượng sản phẩm bán ra trong giao dịch.</li><li>Gender (TEXT): Giới tính của khách hàng (ví dụ: 'Men', 'Women').</li><li>Size (INT): Kích cỡ sản phẩm được bán.</li></ul><p><strong>Yêu cầu:</strong></p><p>Tính <strong>tổng số sản phẩm may mặc cỡ 36 dành cho nữ ('Women')</strong> đã được bán <strong>trong tháng 5/2025</strong>.</p><p><br></p><p>output: <span style="font-size: 14px;">total_quantity</span></p>

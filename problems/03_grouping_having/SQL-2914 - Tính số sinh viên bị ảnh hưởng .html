@@ -1,0 +1,14 @@
+ID: SQL-2914
+Tiêu đề: Tính số sinh viên bị ảnh hưởng 
+URL WEB: https://db.ptit.edu.vn/question-detail/687d8eaa-2bf9-4175-940b-fb5eb9592dd6
+URL API: https://dbapi.ptit.edu.vn/api/app/question/687d8eaa-2bf9-4175-940b-fb5eb9592dd6
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng 1: initiatives: Chứa thông tin về các sáng kiến cộng đồng.</strong></p><ul><li>initiative_id (INT): Mã định danh duy nhất cho mỗi sáng kiến (khóa chính).</li><li>initiative_name (VARCHAR(255)): Tên của sáng kiến.</li><li>initiative_date (DATE): Ngày sáng kiến được triển khai.</li><li>community_type (VARCHAR(255)): Loại cộng đồng liên quan đến sáng kiến (ví dụ: <em>giáo dục</em>, <em>y tế</em>, <em>môi trường</em>).</li></ul><p><strong>Bảng 2: impact: Chứa thông tin về sự tác động của các sáng kiến đến sinh viên.</strong></p><ul><li>initiative_id (INT): Mã định danh của sáng kiến (liên kết với bảng initiatives).</li><li>student_id (INT): Mã định danh của sinh viên tham gia sáng kiến.</li></ul><h3><strong>Yêu cầu: </strong>Tính số sinh viên bị ảnh hưởng theo mỗi loại cộng đồng trong Quý 1 năm 2025 (2025-01-01 → 2025-03-31). Kết quả sắp xếp theo số sinh viên giảm dần.</h3><p><br></p><p><strong>Output</strong><em>: </em></p><pre class="ql-syntax" spellcheck="false">+----------------+-------------------+
+| community_type | students_impacted |
++----------------+-------------------+
+| Health&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Education&nbsp; &nbsp; &nbsp; | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++----------------+-------------------+
+</pre>

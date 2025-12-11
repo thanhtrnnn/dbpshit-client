@@ -1,0 +1,15 @@
+ID: SQL-2873
+Tiêu đề: Tính tổng số bán theo ProductID cho ‘Women’ (không giới hạn Size)
+URL WEB: https://db.ptit.edu.vn/question-detail/81065a9b-64c8-4f9a-8a0a-7fbf748e976f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/81065a9b-64c8-4f9a-8a0a-7fbf748e976f
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng SalesData: </strong>Chứa thông tin về <strong>dữ liệu bán hàng</strong>, bao gồm sản phẩm, số lượng bán ra và đặc điểm của khách hàng.</h3><p><strong>Cấu trúc:</strong></p><ul><li>SaleID (INT): Mã định danh duy nhất cho mỗi giao dịch bán hàng (khóa chính của bảng).</li><li>ProductID (INT): Mã định danh của sản phẩm (liên kết với bảng sản phẩm nếu có).</li><li>SaleDate (DATE): Ngày thực hiện giao dịch bán hàng.</li><li>QuantitySold (INT): Số lượng sản phẩm bán ra trong giao dịch.</li><li>Gender (TEXT): Giới tính của khách hàng (ví dụ: 'Men', 'Women').</li><li>Size (INT): Kích cỡ sản phẩm được bán.</li></ul><p><br></p><p><strong>Yêu cầu: </strong>Trong năm 2025, tính tổng số bán theo ProductID cho ‘Women’ (không giới hạn Size). Chỉ trả về các sản phẩm có tổng ≥ 10 và sắp xếp giảm dần theo tổng. Sắp xếp giảm dần theo tổng số sản phẩm.</p><p><br></p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+----------------+
+| ProductID | total_quantity |
++-----------+----------------+
+| 1001&nbsp; &nbsp; &nbsp; | 11&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| 1002&nbsp; &nbsp; &nbsp; | 11&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| 1003&nbsp; &nbsp; &nbsp; | 10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-----------+----------------+
+</pre>

@@ -1,0 +1,14 @@
+ID: SQL-2853
+Tiêu đề: Tìm nhà cung cấp, sản lượng năng lượng và ngày cung cấp
+URL WEB: https://db.ptit.edu.vn/question-detail/506994b5-490e-47ab-a0dc-3633bf7e5a55
+URL API: https://dbapi.ptit.edu.vn/api/app/question/506994b5-490e-47ab-a0dc-3633bf7e5a55
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống theo dõi sản xuất điện từ các nguồn tái tạo theo vùng và nhà cung cấp. CSDL của hệ thống bao gốm các bảng sau:</p><p><strong>Bảng region – Quản lý thông tin về các vùng địa lý</strong></p><p>•	`region (id INT PRIMARY KEY, name VARCHAR(50))`:</p><p>•	`id (INT)`: Mã vùng.</p><p>•	`name (VARCHAR(50))`: Tên vùng.</p><p><strong>Bảng provider – Quản lý thông tin về các nhà cung cấp năng lượng</strong></p><p>•	`provider (id INT PRIMARY KEY, name VARCHAR(50), region_id INT)`:</p><p>•	`id (INT)`: Mã nhà cung cấp.</p><p>•	`name (VARCHAR(50))`: Tên nhà cung cấp.</p><p>•	`region_id (INT)`: Vùng mà nhà cung cấp hoạt động.</p><p><strong>Bảng renewable_source – Quản lý thông tin về các nguồn năng lượng tái tạo</strong></p><p>•	`renewable_source (id INT PRIMARY KEY, name VARCHAR(50), provider_id INT)`:</p><p>•	`id (INT)`: Mã nguồn năng lượng tái tạo.</p><p>•	`name (VARCHAR(50))`: Tên nguồn (ví dụ: "Solar" là năng lượng mặt trời, "Wind" là năng lượng gió ...).</p><p>•	`provider_id (INT)`: Nhà cung cấp sử dụng nguồn năng lượng này.</p><p><strong>Bảng power_generation – Quản lý thông tin về sản lượng điện sản xuất</strong></p><p>•	`power_generation (id INT PRIMARY KEY, date DATE, source_id INT, power_generated INT)`:</p><p>•	`id (INT)`: Mã bản ghi sản lượng.</p><p>•	`date (DATE)`: Ngày sản xuất.</p><p>•	`source_id (INT)`: Mã nguồn năng lượng sử dụng.</p><p>•	`power_generated (INT)`: Lượng điện được sản xuất (đơn vị kWh hoặc tương đương).</p><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Tìm 2 nhà cung cấp có số ngày phát điện bằng nguồn 'Solar' nhiều nhất trong các vùng có tên chứa 'East' (ví dụ: East, Southeast, Northeast) trong khoảng từ 2021-02-01 đến 2021-05-31. Nếu giống nhau về số ngày, ưu tiên nhà cung cấp có tổng sản lượng lớn hơn.&nbsp;</p><p><br></p><p><strong>Output ví dụ</strong></p><pre class="ql-syntax" spellcheck="false">+---------------+-------------+-----------------------+
+| provider_name | days_active | total_power_generated |
++---------------+-------------+-----------------------+
+| SunEast A&nbsp; &nbsp; &nbsp;| 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 1800&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| SeaSolar&nbsp; &nbsp; &nbsp; | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 2200&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++---------------+-------------+-----------------------+
+</pre>

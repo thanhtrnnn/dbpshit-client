@@ -1,0 +1,8 @@
+ID: SQL2540
+Tiêu đề: Liệt kê các bệnh viện ở Nairobi với năng lực phục vụ và số lượng bệnh nhân được tiêm chủng tại mỗi nơi.
+URL WEB: https://db.ptit.edu.vn/question-detail/e0f35519-1461-4e83-8eab-6cad38156fc2
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e0f35519-1461-4e83-8eab-6cad38156fc2
+Loại Database: Mysql
+------------------------------
+
+<p>Cho cơ sở dữ liệu các bệnh viện và bệnh nhân tiêm chủng với các bảng:</p><p><strong>Bảng hospitals</strong></p><ul><li>id (INT): Mã bệnh viện</li><li>name (VARCHAR(50)): Tên bệnh viện</li><li>location (VARCHAR(50)): Vị trí bệnh viện</li><li>capacity (INT): Sức chứa của bệnh viện</li></ul><p><strong>Bảng patient_vaccinations</strong></p><ul><li>id (INT): Mã tiêm chủng</li><li>hospital_id (INT): Mã bệnh viện (liên kết đến hospitals.id)</li><li>patient_id (INT): Mã bệnh nhân</li><li>date (DATE): Ngày tiêm chủng</li></ul><p><strong>Câu hỏi</strong></p><p>Liệt kê các bệnh viện ở Nairobi, sức chứa và số lượng bệnh nhân được tiêm chủng.</p><p><br></p><p>Output: name, capacity, vaccinated</p>

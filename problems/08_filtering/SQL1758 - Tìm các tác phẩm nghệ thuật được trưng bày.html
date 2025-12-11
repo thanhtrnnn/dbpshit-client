@@ -1,0 +1,14 @@
+ID: SQL1758
+Tiêu đề: Tìm các tác phẩm nghệ thuật được trưng bày
+URL WEB: https://db.ptit.edu.vn/question-detail/0c83d6a7-83a5-4313-9033-c92b8c64bf3f
+URL API: https://dbapi.ptit.edu.vn/api/app/question/0c83d6a7-83a5-4313-9033-c92b8c64bf3f
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `Artworks`: lưu trữ thông tin về các tác phẩm nghệ thuật, bao gồm ID tác phẩm, tên tác phẩm, năm sáng tác và ID nghệ sĩ.</strong></p><ul><li>`ArtworkID (INT)`: Mã định danh của tác phẩm nghệ thuật.</li><li>`Title (VARCHAR(50))`: Tên của tác phẩm nghệ thuật.</li><li>`CreationYear (INT)`: Năm sáng tác tác phẩm.</li><li>`ArtistID (INT)`: Mã nghệ sĩ sáng tác tác phẩm.</li></ul><p><br></p><p><strong>Bảng `Exhibitions`: lưu trữ thông tin về các triển lãm, bao gồm ID triển lãm và ID tác phẩm nghệ thuật. </strong></p><ul><li>`ExhibitionID (INT)`: Mã định danh của triển lãm.</li><li>`ArtworkID (INT)`: Mã tác phẩm nghệ thuật được trưng bày.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Liệt kê các tác phẩm nghệ thuật được trưng bày cùng với tác phẩm có tên 'Sunflowers'.</p><p><br></p><p><strong>Output ví dụ</strong>: </p><pre class="ql-syntax" spellcheck="false">+----------------------------+
+| Title&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++----------------------------+
+| Starry Night&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Wheat Field with Cypresses |
++----------------------------+
+</pre>

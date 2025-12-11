@@ -1,0 +1,14 @@
+ID: SQL-2869
+Tiêu đề: Tính biến động năm theo trạng thái công đoàn: tổng sự cố 2022 trừ 2021 cho từng union_status.
+URL WEB: https://db.ptit.edu.vn/question-detail/ca95e058-bd53-497b-940e-0a3341ad0fc8
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ca95e058-bd53-497b-940e-0a3341ad0fc8
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng union_status: </strong>Chứa thông tin về <strong>trạng thái công đoàn</strong> của người lao động.</h3><ul><li>id (INT): Mã định danh duy nhất cho mỗi trạng thái (khóa chính).</li><li>union_status (VARCHAR(10)): Trạng thái công đoàn (ví dụ: 'Union', 'Non-Union').</li></ul><h3><strong>Bảng construction_sectors: </strong>Chứa thông tin về <strong>các ngành xây dựng</strong>.</h3><ul><li>sector_id (INT): Mã định danh duy nhất cho mỗi ngành (khóa chính).</li><li>sector_name (VARCHAR(255)): Tên ngành (ví dụ: Xây dựng nhà - 'Building Construction' , Xây dựng đường - Highway Construction', Kỹ sư dân dụng - 'Civil Engineering').</li></ul><h3><strong>Bảng workplace_safety_incidents: </strong>Chứa thông tin về <strong>các sự cố an toàn</strong> theo ngành và trạng thái công đoàn.</h3><ul><li>id (INT): Mã định danh duy nhất cho mỗi sự cố (khóa chính).</li><li>sector_id (INT): Tham chiếu tới construction_sectors.sector_id.</li><li>union_status_id (INT): Tham chiếu tới union_status.id.</li><li>incident_year (INT): Năm xảy ra sự cố.</li><li>incidents (INT): Số lượng sự cố trong năm.</li></ul><p><strong>Yêu cầu: </strong>Tính biến động năm theo trạng thái công đoàn: tổng sự cố 2022 trừ 2021 cho từng union_status. Sắp xếp mặc định theo trạng thái công đoàn.</p><p><br></p><p><strong>Output ví dụ: </strong></p><pre class="ql-syntax" spellcheck="false">+--------------+----------------+----------------+--------------------+
+| union_status | incidents_2021 | incidents_2022 | delta_2022_vs_2021 |
++--------------+----------------+----------------+--------------------+
+| Non-Union&nbsp; &nbsp; | 115&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 118&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Union&nbsp; &nbsp; &nbsp; &nbsp; | 90&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 100&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++--------------+----------------+----------------+--------------------+
+</pre>

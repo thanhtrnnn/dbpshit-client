@@ -1,0 +1,15 @@
+ID: SQL-2911
+Tiêu đề: Tính tổng ngân sách AI theo từng quốc gia cho các năm từ 2019 trở đi.
+URL WEB: https://db.ptit.edu.vn/question-detail/bb8c2e5e-5c7e-4b93-b90e-2be5bbfcb27e
+URL API: https://dbapi.ptit.edu.vn/api/app/question/bb8c2e5e-5c7e-4b93-b90e-2be5bbfcb27e
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng ai_budget_usa: </strong>Chứa thông tin về ngân sách AI tại Hoa Kỳ theo năm.</h3><ul><li>budget (INT): Số ngân sách dành cho AI.</li><li>year (INT): Năm ghi nhận ngân sách.</li><li>country (VARCHAR(10)): Mã quốc gia (“USA”).</li></ul><h3><strong>Bảng ai_budget_uk: </strong>Chứa thông tin về ngân sách AI tại Vương quốc Anh.</h3><ul><li>budget (INT): Số ngân sách dành cho AI.</li><li>year (INT): Năm ghi nhận ngân sách.</li><li>country (VARCHAR(10)): Mã quốc gia (“UK”).</li></ul><h3><strong>Bảng ai_budget_japan: </strong>Chứa thông tin về ngân sách AI tại Nhật Bản.</h3><ul><li>budget (INT): Số ngân sách dành cho AI.</li><li>year (INT): Năm ghi nhận ngân sách.</li><li>country (VARCHAR(10)): Mã quốc gia (“Japan”).</li><li><br></li></ul><h3><strong>Nhiệm vụ: </strong>Tính tổng ngân sách AI theo từng quốc gia cho các năm từ 2019 trở đi. Kết quả sắp xếp giảm dần theo tổng ngân sách.</h3><p><strong>Output</strong>:</p><pre class="ql-syntax" spellcheck="false">+---------+--------------+
+| country | total_budget |
++---------+--------------+
+| USA&nbsp; &nbsp; &nbsp;| 13000000&nbsp; &nbsp; &nbsp;|
+| UK&nbsp; &nbsp; &nbsp; | 9700000&nbsp; &nbsp; &nbsp; |
+| Japan&nbsp; &nbsp;| 7800000&nbsp; &nbsp; &nbsp; |
++---------+--------------+
+</pre>

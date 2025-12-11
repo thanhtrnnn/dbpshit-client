@@ -1,0 +1,14 @@
+ID: SQL-2895
+Tiêu đề: Liệt kê mẫu mới nhất cho từng loại phương tiện
+URL WEB: https://db.ptit.edu.vn/question-detail/7c2bac24-f053-4521-b6b6-ff935498fb2b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7c2bac24-f053-4521-b6b6-ff935498fb2b
+Loại Database: Mysql
+------------------------------
+
+<h3><strong style="font-size: 12px;">Bảng Vehicle_Types: </strong><span style="font-size: 12px;">Chứa thông tin về các loại phương tiện.</span></h3><ul><li><span style="font-size: 12px;">Id (INT): Mã định danh duy nhất cho mỗi loại phương tiện (khóa chính của bảng).</span></li><li><span style="font-size: 12px;">Name (VARCHAR(50)): Tên loại phương tiện (ví dụ: "Sedan", "SUV", "Truck").</span></li></ul><p><br></p><h3><strong style="font-size: 12px;">Bảng Vehicle_Releases: </strong><span style="font-size: 12px;">Chứa thông tin về các mẫu phương tiện được phát hành.</span></h3><ul><li><span style="font-size: 12px;">Id (INT): Mã định danh duy nhất cho mỗi phương tiện (khóa chính của bảng).</span></li><li><span style="font-size: 12px;">Name (VARCHAR(50)): Tên mẫu phương tiện.</span></li><li><span style="font-size: 12px;">Release_Date (DATE): Ngày ra mắt của phương tiện.</span></li><li><span style="font-size: 12px;">Origin_Country (VARCHAR(50)): Quốc gia nơi phương tiện được sản xuất.</span></li><li><span style="font-size: 12px;">Horsepower (INT): Công suất động cơ tính bằng mã lực.</span></li><li><span style="font-size: 12px;">Vehicle_Type_Id (INT): Mã định danh loại phương tiện (liên kết với Id trong bảng Vehicle_Types).</span></li></ul><p><strong style="font-size: 12px;">Nhiệm vụ:</strong></p><p>Liệt kê mẫu mới nhất (ngày ra mắt mới nhất) cho từng loại phương tiện. Sắp xếp mặc định theo tên xe và tên model.</p><p><br></p><p><strong style="font-size: 12px;">Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+------------+--------------+
+| type_name | model_name | release_date |
++-----------+------------+--------------+
+| Sedan&nbsp; &nbsp; &nbsp;| S-2021&nbsp; &nbsp; &nbsp;| 2021-05-05&nbsp; &nbsp;|
+| SUV&nbsp; &nbsp; &nbsp; &nbsp;| U-2022&nbsp; &nbsp; &nbsp;| 2022-03-03&nbsp; &nbsp;|
++-----------+------------+--------------+
+</pre>

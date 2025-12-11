@@ -1,0 +1,14 @@
+ID: SQL-2857
+Tiêu đề: Liệt kê các phòng ban có tỷ lệ nhân viên nữ ≥ 60%
+URL WEB: https://db.ptit.edu.vn/question-detail/d8c214d7-bcd4-42ef-89b2-71b3c61653aa
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d8c214d7-bcd4-42ef-89b2-71b3c61653aa
+Loại Database: Mysql
+------------------------------
+
+<h3>Cho CSDL bao gồm các bảng như dưới.</h3><h3><strong>Bảng companies: </strong>Chứa thông tin về các công ty.</h3><p><strong>Cấu trúc:</strong></p><ul><li>company_id (INT): Mã định danh duy nhất cho mỗi công ty (khóa chính của bảng).</li><li>company_name (VARCHAR(255)): Tên của công ty.</li></ul><h3><strong>Bảng departments: </strong>Chứa thông tin về các phòng ban trong công ty.</h3><p><strong>Cấu trúc:</strong></p><ul><li>dept_id (INT): Mã định danh duy nhất cho mỗi phòng ban (khóa chính của bảng).</li><li>dept_name (VARCHAR(255)): Tên của phòng ban.</li><li>company_id (INT): Mã định danh của công ty mà phòng ban thuộc về (liên kết với company_id trong bảng companies).</li></ul><h3><strong>Bảng employees: </strong>Chứa thông tin về các nhân viên trong các phòng ban.</h3><p><strong>Cấu trúc:</strong></p><ul><li>employee_id (INT): Mã định danh duy nhất cho mỗi nhân viên (khóa chính của bảng).</li><li>employee_name (VARCHAR(255)): Tên của nhân viên.</li><li>dept_id (INT): Mã định danh của phòng ban nơi nhân viên làm việc (liên kết với dept_id trong bảng departments).</li><li>gender (VARCHAR(10)): Giới tín</li></ul><p><strong>Yêu cầu</strong>: Liệt kê các phòng ban có tỷ lệ nhân viên nữ ≥ 60%, kèm tên công ty. Sắp xếp giảm dần theo tỷ lệ nữ, rồi theo tên phòng ban.</p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+-----------+-------------------+
+| company_name | dept_name | female_percentage |
++--------------+-----------+-------------------+
+| Beryl&nbsp; &nbsp; &nbsp; &nbsp; | Care&nbsp; &nbsp; &nbsp; | 100&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Aurora&nbsp; &nbsp; &nbsp; &nbsp;| Design&nbsp; &nbsp; | 66.66667&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++--------------+-----------+-------------------+
+</pre>

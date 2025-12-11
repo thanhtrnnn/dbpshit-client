@@ -1,0 +1,14 @@
+ID: SQL-2861
+Tiêu đề: Tính trung bình tổng khán giả mỗi trận và trả về 3 cặp cao nhất.
+URL WEB: https://db.ptit.edu.vn/question-detail/1ddb0993-ebeb-41d8-95ae-aa3174e42b1b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1ddb0993-ebeb-41d8-95ae-aa3174e42b1b
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `TeamStats`: Lưu trữ thống kê số lượng khán giả trong các trận đấu thể thao. </strong></p><ul><li><span style="font-size: 14px;">`GameID (INT)`: Mã trận đấu.</span></li><li><span style="font-size: 14px;">`TeamID (INT)`: Mã đội thi đấu (Mã đội chiến thắng).</span></li><li><span style="font-size: 14px;">`HomeTeam (VARCHAR(255))`: Tên đội chủ nhà.</span></li><li><span style="font-size: 14px;">`AwayTeam (VARCHAR(255))`: Tên đội khách.</span></li><li><span style="font-size: 14px;">`HomeAttendance (INT)`: Số khán giả cổ vũ đội chủ nhà.</span></li><li><span style="font-size: 14px;">`AwayAttendance (INT)`: Số khán giả cổ vũ đội khách.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ: </strong>Với mỗi cặp đấu không phân biệt sân nhà/khách (coi 'A' gặp 'B' như 'B' gặp 'A'), tính trung bình tổng khán giả mỗi trận và trả về 3 cặp cao nhất. Sắp xếp giảm dần theo trung bình tổng khản giả, và mặc định với team A, team B</p><p>Output ví dụ: </p><pre class="ql-syntax" spellcheck="false">+---------+--------+----------------------+
+| TeamA&nbsp; &nbsp;| TeamB&nbsp; | Avg_Total_Attendance |
++---------+--------+----------------------+
+| Celtics | Knicks | 31000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Bulls&nbsp; &nbsp;| Knicks | 25000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++---------+--------+----------------------+
+</pre>

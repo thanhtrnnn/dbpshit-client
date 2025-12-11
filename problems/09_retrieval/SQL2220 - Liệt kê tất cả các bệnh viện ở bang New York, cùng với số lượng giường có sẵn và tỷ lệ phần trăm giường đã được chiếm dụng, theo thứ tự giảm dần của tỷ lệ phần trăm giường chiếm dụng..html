@@ -1,0 +1,15 @@
+ID: SQL2220
+Tiêu đề: Liệt kê tất cả các bệnh viện ở bang New York, cùng với số lượng giường có sẵn và tỷ lệ phần trăm giường đã được chiếm dụng, theo thứ tự giảm dần của tỷ lệ phần trăm giường chiếm dụng.
+URL WEB: https://db.ptit.edu.vn/question-detail/5da762ba-aca7-4e1b-8582-45eefba19cbd
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5da762ba-aca7-4e1b-8582-45eefba19cbd
+Loại Database: Mysql
+------------------------------
+
+<p>Bạn có hai bảng dữ liệu:</p><p><strong>Bảng hospitals – Thông tin bệnh viện:</strong></p><ul><li>id (INT): Mã định danh của bệnh viện</li><li>name (TEXT): Tên bệnh viện</li><li>state (TEXT): Bang hoặc tiểu bang</li><li>num_beds (INT): Tổng số giường bệnh</li></ul><p><strong>Bảng occupancy – Thông tin số giường đang được sử dụng:</strong></p><ul><li>id (INT): Mã định danh bản ghi</li><li>hospital_id (INT): Mã bệnh viện</li><li>beds_occupied (INT): Số giường đang được sử dụng</li></ul><p><strong>Nhiệm vụ:</strong></p><p><strong>Liệt kê tất cả các bệnh viện ở bang New York</strong>, cùng với:</p><ul><li>Số lượng giường còn trống</li><li>Tỷ lệ phần trăm giường đã được chiếm dụng</li></ul><p>Sắp xếp theo <strong>tỷ lệ phần trăm giường chiếm dụng giảm dần</strong>.</p><p><br></p><p><strong>Output ví dụ</strong>: </p><pre class="ql-syntax" spellcheck="false">+-------------------------------+----------+--------------+
+| name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | num_beds | pct_occupied |
++-------------------------------+----------+--------------+
+| NewYork-Presbyterian Hospital | 2000&nbsp; &nbsp; &nbsp;| 78&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Rochester General Hospital&nbsp; &nbsp; | 500&nbsp; &nbsp; &nbsp; | 62&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Mount Sinai Hospital&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 1200&nbsp; &nbsp; &nbsp;| 58.91667&nbsp; &nbsp; &nbsp;|
++-------------------------------+----------+--------------+
+</pre>

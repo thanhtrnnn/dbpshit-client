@@ -1,0 +1,15 @@
+ID: SQL-2908
+Tiêu đề: Tính tỷ lệ (%) bệnh viện có sân bay trực thăng theo từng territory (chỉ xét những territory có ít nhất 1 bệnh viện).
+URL WEB: https://db.ptit.edu.vn/question-detail/3e2fcf80-3fd9-4c8f-a2fd-bc7ef36e669c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/3e2fcf80-3fd9-4c8f-a2fd-bc7ef36e669c
+Loại Database: Mysql
+------------------------------
+
+<h4><strong>Bảng hospitals</strong> – Thông tin bệnh viện</h4><ul><li>id (INT): Mã bệnh viện</li><li>name (TEXT): Tên bệnh viện</li><li>location (TEXT): Vị trí bệnh viện</li><li>num_beds (INT): Số giường bệnh</li><li>territory (TEXT): Khu vực địa lý</li><li>has_helipad (BOOLEAN): Có sân bay trực thăng hay không (True là có, False là không)</li></ul><p><strong>Bảng clinics</strong> – Thông tin phòng khám</p><ul><li>id (INT): Mã phòng khám</li><li>name (TEXT): Tên phòng khám</li><li>location (TEXT): Vị trí phòng khám</li><li>num_beds (INT): Số giường bệnh</li><li>territory (TEXT): Khu vực địa lý</li></ul><p><strong>Câu hỏi: </strong>Tính tỷ lệ (%) bệnh viện có sân bay trực thăng theo từng territory (chỉ xét những territory có ít nhất 1 bệnh viện). Tỷ lệ tính theo: helipad_rate = 100 * (số bệnh viện có helipad) / (tổng số bệnh viện) làm tròn 2 chữ số. Sắp xếp theo tỷ lệ giảm dần. </p><p><br></p><p><strong>Output</strong>:</p><pre class="ql-syntax" spellcheck="false">+-----------------------+--------------+
+| territory&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| helipad_rate |
++-----------------------+--------------+
+| Yukon&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 100&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Nunavut&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 50&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Northwest Territories | 0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++-----------------------+--------------+
+</pre>

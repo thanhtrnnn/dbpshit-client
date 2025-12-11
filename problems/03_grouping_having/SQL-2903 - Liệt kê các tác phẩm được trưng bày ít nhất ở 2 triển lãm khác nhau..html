@@ -1,0 +1,15 @@
+ID: SQL-2903
+Tiêu đề: Liệt kê các tác phẩm được trưng bày ít nhất ở 2 triển lãm khác nhau.
+URL WEB: https://db.ptit.edu.vn/question-detail/2745f75e-5f3b-49ac-bd33-9c665b692d81
+URL API: https://dbapi.ptit.edu.vn/api/app/question/2745f75e-5f3b-49ac-bd33-9c665b692d81
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng `Artworks`: lưu trữ thông tin về các tác phẩm nghệ thuật, bao gồm ID tác phẩm, tên tác phẩm, năm sáng tác và ID nghệ sĩ.</strong></p><ul><li>`ArtworkID (INT)`: Mã định danh của tác phẩm nghệ thuật.</li><li>`Title (VARCHAR(50))`: Tên của tác phẩm nghệ thuật.</li><li>`CreationYear (INT)`: Năm sáng tác tác phẩm.</li><li>`ArtistID (INT)`: Mã nghệ sĩ sáng tác tác phẩm.</li></ul><p><br></p><p><strong>Bảng `Exhibitions`: lưu trữ thông tin về các triển lãm, bao gồm ID triển lãm và ID tác phẩm nghệ thuật. </strong></p><ul><li>`ExhibitionID (INT)`: Mã định danh của triển lãm.</li><li>`ArtworkID (INT)`: Mã tác phẩm nghệ thuật được trưng bày.</li></ul><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Liệt kê các tác phẩm được trưng bày ít nhất ở 2 triển lãm khác nhau. Sắp xếp theo số lượng giảm dần. </p><p><br></p><p><strong>Output ví dụ</strong>:</p><pre class="ql-syntax" spellcheck="false">+----------------+-------------------+
+| Title&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | exhibitions_count |
++----------------+-------------------+
+| Irises&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Starry Night&nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| The Night Café | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++----------------+-------------------+
+</pre>

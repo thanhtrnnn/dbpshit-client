@@ -1,0 +1,13 @@
+ID: SQL-2912
+Tiêu đề: Tìm năm có tổng ngân sách AI kết hợp lớn nhất (cộng của USA + UK + Japan) trong giai đoạn 2018–2021.
+URL WEB: https://db.ptit.edu.vn/question-detail/0b305b0e-c4a1-4114-ae02-5e0e27e5a5d9
+URL API: https://dbapi.ptit.edu.vn/api/app/question/0b305b0e-c4a1-4114-ae02-5e0e27e5a5d9
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng ai_budget_usa: </strong>Chứa thông tin về ngân sách AI tại Hoa Kỳ theo năm.</h3><ul><li>budget (INT): Số ngân sách dành cho AI.</li><li>year (INT): Năm ghi nhận ngân sách.</li><li>country (VARCHAR(10)): Mã quốc gia (“USA”).</li></ul><h3><strong>Bảng ai_budget_uk: </strong>Chứa thông tin về ngân sách AI tại Vương quốc Anh.</h3><ul><li>budget (INT): Số ngân sách dành cho AI.</li><li>year (INT): Năm ghi nhận ngân sách.</li><li>country (VARCHAR(10)): Mã quốc gia (“UK”).</li></ul><h3><strong>Bảng ai_budget_japan: </strong>Chứa thông tin về ngân sách AI tại Nhật Bản.</h3><ul><li>budget (INT): Số ngân sách dành cho AI.</li><li>year (INT): Năm ghi nhận ngân sách.</li><li>country (VARCHAR(10)): Mã quốc gia (“Japan”).</li><li><br></li></ul><h3><strong>Nhiệm vụ: </strong>Tìm năm có tổng ngân sách AI kết hợp lớn nhất trong giai đoạn 2018–2021.</h3><p><strong>Output</strong>:</p><pre class="ql-syntax" spellcheck="false">+------+--------------+
+| year | total_budget |
++------+--------------+
+| 2020 | 16000000&nbsp; &nbsp; &nbsp;|
++------+--------------+
+</pre>

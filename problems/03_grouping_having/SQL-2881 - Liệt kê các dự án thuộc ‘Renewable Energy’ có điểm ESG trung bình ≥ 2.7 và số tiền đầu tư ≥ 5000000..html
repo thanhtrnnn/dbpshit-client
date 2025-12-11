@@ -1,0 +1,13 @@
+ID: SQL-2881
+Tiêu đề: Liệt kê các dự án thuộc ‘Renewable Energy’ có điểm ESG trung bình ≥ 2.7 và số tiền đầu tư ≥ 5000000.
+URL WEB: https://db.ptit.edu.vn/question-detail/447b57f3-a0b6-48b5-873c-759b0cba48ab
+URL API: https://dbapi.ptit.edu.vn/api/app/question/447b57f3-a0b6-48b5-873c-759b0cba48ab
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng esg_factors: </strong>Chứa thông tin về <strong>các yếu tố ESG (Môi trường, Xã hội, Quản trị)</strong> của các công ty.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi bản ghi (khóa chính của bảng).</li><li>company_id (INT(255)): Mã công ty.</li><li>environment (FLOAT): Điểm đánh giá về yếu tố <strong>môi trường</strong>.</li><li>social (FLOAT): Điểm đánh giá về yếu tố <strong>xã hội</strong>.</li><li>governance (FLOAT): Điểm đánh giá về yếu tố <strong>quản trị</strong>.</li></ul><h3><strong>Bảng impact_investments: </strong>Chứa thông tin về <strong>các khoản đầu tư có tác động tích cực (impact investments)</strong>.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi khoản đầu tư (khóa chính của bảng).</li><li>company_id (INT(255)): Mã công ty.</li><li>sector (VARCHAR(255)): Ngành nghề của dự án đầu tư (ví dụ: "Renewable Energy").</li><li>project (VARCHAR(255)): Tên của dự án đầu tư (ví dụ: "Solar Farm Project").</li><li>location (VARCHAR(255)): Địa điểm của dự án.</li><li>amount (FLOAT): Số tiền đầu tư.</li></ul><p><strong>Yêu cầu:</strong></p><p>Liệt kê các dự án thuộc ‘Renewable Energy’ có điểm ESG trung bình ≥ 2.7 và số tiền đầu tư ≥ 5000000. Kết quả sắp xếp giảm dần theo số tiền. </p><p><br></p><p><strong>Output ví dụ: </strong></p><pre class="ql-syntax" spellcheck="false">+---------+----------+---------+-------------------+
+| project | location | amount&nbsp; | avg_esg&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++---------+----------+---------+-------------------+
+| Solar A | USA&nbsp; &nbsp; &nbsp; | 6000000 | 2.800000031789144 |
++---------+----------+---------+-------------------+
+</pre>

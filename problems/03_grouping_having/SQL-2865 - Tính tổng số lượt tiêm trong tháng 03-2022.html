@@ -1,0 +1,14 @@
+ID: SQL-2865
+Tiêu đề: Tính tổng số lượt tiêm trong tháng 03/2022
+URL WEB: https://db.ptit.edu.vn/question-detail/7637c9ba-a590-4e8e-92d7-324ec5e81945
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7637c9ba-a590-4e8e-92d7-324ec5e81945
+Loại Database: Mysql
+------------------------------
+
+<p>Cho cơ sở dữ liệu các bệnh viện và bệnh nhân tiêm chủng với các bảng:</p><p><strong>Bảng hospitals</strong></p><ul><li>id (INT): Mã bệnh viện</li><li>name (VARCHAR(50)): Tên bệnh viện</li><li>location (VARCHAR(50)): Vị trí bệnh viện</li><li>capacity (INT): Sức chứa của bệnh viện</li></ul><p><strong>Bảng patient_vaccinations</strong></p><ul><li>id (INT): Mã tiêm chủng</li><li>hospital_id (INT): Mã bệnh viện (liên kết đến hospitals.id)</li><li>patient_id (INT): Mã bệnh nhân</li><li>date (DATE): Ngày tiêm chủng</li></ul><p><strong>Câu hỏi</strong></p><p>Tính tổng số lượt tiêm trong tháng 03/2022 cho mỗi bệnh viện và tỷ lệ sử dụng công suất tương ứng, với công thức utilization_pct = 100 * total_shots / capacity. Chỉ hiển thị các bệnh viện có ít nhất 1 lượt tiêm trong tháng 03/2022. Sắp xếp giảm dần theo tỷ lệ sử dụng công suất sử dụng. </p><p><br></p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+------------------+----------+---------------------+-----------------+
+| name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| capacity | total_shots_mar2022 | utilization_pct |
++------------------+----------+---------------------+-----------------+
+| Nairobi Hospital | 600&nbsp; &nbsp; &nbsp; | 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 0.5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Mombasa Hospital | 300&nbsp; &nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 0.33&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++------------------+----------+---------------------+-----------------+
+</pre>

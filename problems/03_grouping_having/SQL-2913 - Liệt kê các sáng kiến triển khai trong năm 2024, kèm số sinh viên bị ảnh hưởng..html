@@ -1,0 +1,15 @@
+ID: SQL-2913
+Tiêu đề: Liệt kê các sáng kiến triển khai trong năm 2024, kèm số sinh viên bị ảnh hưởng.
+URL WEB: https://db.ptit.edu.vn/question-detail/81991591-d531-4426-bdbd-63e473df7391
+URL API: https://dbapi.ptit.edu.vn/api/app/question/81991591-d531-4426-bdbd-63e473df7391
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng 1: initiatives: Chứa thông tin về các sáng kiến cộng đồng.</strong></p><ul><li>initiative_id (INT): Mã định danh duy nhất cho mỗi sáng kiến (khóa chính).</li><li>initiative_name (VARCHAR(255)): Tên của sáng kiến.</li><li>initiative_date (DATE): Ngày sáng kiến được triển khai.</li><li>community_type (VARCHAR(255)): Loại cộng đồng liên quan đến sáng kiến (ví dụ: <em>giáo dục</em>, <em>y tế</em>, <em>môi trường</em>).</li></ul><p><strong>Bảng 2: impact: Chứa thông tin về sự tác động của các sáng kiến đến sinh viên.</strong></p><ul><li>initiative_id (INT): Mã định danh của sáng kiến (liên kết với bảng initiatives).</li><li>student_id (INT): Mã định danh của sinh viên tham gia sáng kiến.</li></ul><h3><strong>Yêu cầu</strong></h3><p>Liệt kê các sáng kiến triển khai trong năm 2024, kèm số sinh viên bị ảnh hưởng. Chỉ hiển thị những sáng kiến có ít nhất 2 sinh viên. Sắp xếp theo số sinh viên giản dần.</p><p><br></p><p><strong>Output</strong><em>: </em></p><pre class="ql-syntax" spellcheck="false">+-------------------+-------------------+
+| initiative_name&nbsp; &nbsp;| students_impacted |
++-------------------+-------------------+
+| Scholarship Fair&nbsp; | 4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| STEM Outreach&nbsp; &nbsp; &nbsp;| 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Clean Water Drive | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++-------------------+-------------------+
+</pre>

@@ -1,0 +1,16 @@
+ID: SQL-2862
+Tiêu đề: Ttính trung bình khán giả khi đội đó đá sân nhà và khi đội đó đá sân khách.
+URL WEB: https://db.ptit.edu.vn/question-detail/6f2faeb5-c471-47cd-843e-debe13516e08
+URL API: https://dbapi.ptit.edu.vn/api/app/question/6f2faeb5-c471-47cd-843e-debe13516e08
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `TeamStats`: Lưu trữ thống kê số lượng khán giả trong các trận đấu thể thao. </strong></p><ul><li><span style="font-size: 14px;">`GameID (INT)`: Mã trận đấu.</span></li><li><span style="font-size: 14px;">`TeamID (INT)`: Mã đội thi đấu (Mã đội chiến thắng).</span></li><li><span style="font-size: 14px;">`HomeTeam (VARCHAR(255))`: Tên đội chủ nhà.</span></li><li><span style="font-size: 14px;">`AwayTeam (VARCHAR(255))`: Tên đội khách.</span></li><li><span style="font-size: 14px;">`HomeAttendance (INT)`: Số khán giả cổ vũ đội chủ nhà.</span></li><li><span style="font-size: 14px;">`AwayAttendance (INT)`: Số khán giả cổ vũ đội khách.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ: </strong>Với mỗi đội, tính trung bình khán giả khi đội đó đá sân nhà và khi đội đó đá sân khách. Sắp xếp mặc định theo tên đội (Team)</p><p><strong>Output ví dụ: </strong></p><pre class="ql-syntax" spellcheck="false">+---------+-------------+-------------+
+| Team&nbsp; &nbsp; | Avg_As_Home | Avg_As_Away |
++---------+-------------+-------------+
+| Bulls&nbsp; &nbsp;| 13000&nbsp; &nbsp; &nbsp; &nbsp;| 11000&nbsp; &nbsp; &nbsp; &nbsp;|
+| Celtics |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 15000&nbsp; &nbsp; &nbsp; &nbsp;|
+| Knicks&nbsp; | 14500&nbsp; &nbsp; &nbsp; &nbsp;| 12000&nbsp; &nbsp; &nbsp; &nbsp;|
++---------+-------------+-------------+
+
+</pre>

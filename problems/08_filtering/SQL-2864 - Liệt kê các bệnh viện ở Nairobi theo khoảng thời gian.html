@@ -1,0 +1,14 @@
+ID: SQL-2864
+Tiêu đề: Liệt kê các bệnh viện ở Nairobi theo khoảng thời gian
+URL WEB: https://db.ptit.edu.vn/question-detail/3be509b0-340e-410b-a1ec-ba8204c034b4
+URL API: https://dbapi.ptit.edu.vn/api/app/question/3be509b0-340e-410b-a1ec-ba8204c034b4
+Loại Database: Mysql
+------------------------------
+
+<p>Cho cơ sở dữ liệu các bệnh viện và bệnh nhân tiêm chủng với các bảng:</p><p><strong>Bảng hospitals</strong></p><ul><li>id (INT): Mã bệnh viện</li><li>name (VARCHAR(50)): Tên bệnh viện</li><li>location (VARCHAR(50)): Vị trí bệnh viện</li><li>capacity (INT): Sức chứa của bệnh viện</li></ul><p><strong>Bảng patient_vaccinations</strong></p><ul><li>id (INT): Mã tiêm chủng</li><li>hospital_id (INT): Mã bệnh viện (liên kết đến hospitals.id)</li><li>patient_id (INT): Mã bệnh nhân</li><li>date (DATE): Ngày tiêm chủng</li></ul><p><strong>Câu hỏi: </strong>Liệt kê các bệnh viện ở Nairobi trong khoảng thời gian từ 2022-03-01 đến 2022-03-31, kèm số bệnh nhân duy nhất đã tiêm và tổng số lượt tiêm. Sắp xếp giảm dần theo  số bệnh nhân và  số tiêm.</p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+------------------+-----------------+-------------+
+| name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| unique_patients | total_shots |
++------------------+-----------------+-------------+
+| Nairobi Hospital | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Mombasa Hospital | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++------------------+-----------------+-------------+
+</pre>

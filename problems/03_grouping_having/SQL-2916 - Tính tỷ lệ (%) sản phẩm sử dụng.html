@@ -1,0 +1,14 @@
+ID: SQL-2916
+Tiêu đề: Tính tỷ lệ (%) sản phẩm sử dụng
+URL WEB: https://db.ptit.edu.vn/question-detail/e3ad5471-018e-40b5-a5db-37e4f9efd5b7
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e3ad5471-018e-40b5-a5db-37e4f9efd5b7
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng SupplyChainViolations</strong> – Thông tin về các vi phạm trong chuỗi cung ứng của các quốc gia:</p><ul><li>country (TEXT): Tên quốc gia.</li><li>num_violations (INT): Số lượng vi phạm trong chuỗi cung ứng của quốc gia đó.</li></ul><p><strong>Bảng Products</strong> – Thông tin về các sản phẩm và quốc gia sản xuất:</p><ul><li>product_id (INT): Mã định danh duy nhất cho mỗi sản phẩm.</li><li>country (TEXT): Tên quốc gia sản xuất sản phẩm.</li></ul><p><strong>Bảng ProductTransparency</strong> – Thông tin về tính minh bạch của sản phẩm:</p><ul><li>product_id (INT): Mã định danh duy nhất cho mỗi sản phẩm (liên kết với bảng Products).</li><li>recycled_materials (BOOLEAN): Xác định liệu sản phẩm có sử dụng vật liệu tái chế hay không (TRUE/FALSE).</li></ul><p><strong>Yêu cầu : </strong>Tính tỷ lệ (%) sản phẩm sử dụng vật liệu tái chế trên tổng số sản phẩm của từng quốc gia (chỉ tính các quốc gia có ít nhất 2 sản phẩm).</p><p><em>Công thức: </em>recycle_rate = 100 * (số sản phẩm recycled) / (tổng sản phẩm), làm tròn 2 chữ số.</p><p><strong>Output ví dụ: </strong>country, recycle_rate (giảm dần theo recycle_rate, rồi country)</p><pre class="ql-syntax" spellcheck="false">+------------+--------------+
+| country&nbsp; &nbsp; | recycle_rate |
++------------+--------------+
+| Vietnam&nbsp; &nbsp; | 100&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Bangladesh | 50&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++------------+--------------+
+</pre>

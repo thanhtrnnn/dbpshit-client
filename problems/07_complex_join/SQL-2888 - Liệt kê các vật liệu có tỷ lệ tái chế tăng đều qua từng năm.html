@@ -1,0 +1,13 @@
+ID: SQL-2888
+Tiêu đề: Liệt kê các vật liệu có tỷ lệ tái chế tăng đều qua từng năm
+URL WEB: https://db.ptit.edu.vn/question-detail/0f471870-cf58-48bb-a22d-475768c91529
+URL API: https://dbapi.ptit.edu.vn/api/app/question/0f471870-cf58-48bb-a22d-475768c91529
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng recycling_rates: </strong>Chứa thông tin về <strong>tỷ lệ tái chế của các vật liệu</strong> theo từng năm.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi bản ghi (khóa chính của bảng).</li><li>material (VARCHAR(20)): Loại vật liệu được tái chế (ví dụ: 'glass', 'paper').</li><li>year (INT): Năm thống kê dữ liệu tái chế.</li><li>recycling_rate (DECIMAL(5,2)): Tỷ lệ tái chế, biểu diễn dưới dạng số thập phân (ví dụ: 0.35 tương đương 35%).</li></ul><p><strong>Yêu cầu:</strong></p><p>Liệt kê các vật liệu có tỷ lệ tái chế tăng đều qua từng năm 2017 → 2018 → 2019. Kết quả sắp xếp mặc định theo vật liệu. </p><p><br></p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+----------+
+| material |
++----------+
+| glass&nbsp; &nbsp; |
++----------+
+</pre>

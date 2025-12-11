@@ -1,0 +1,15 @@
+ID: SQL-2901
+Tiêu đề: Liệt kê 3 đề tài nghiên cứu có số gene tham gia nhiều nhất, kèm số gene
+URL WEB: https://db.ptit.edu.vn/question-detail/d7390262-d5b1-434f-8076-ffef3b70d4b4
+URL API: https://dbapi.ptit.edu.vn/api/app/question/d7390262-d5b1-434f-8076-ffef3b70d4b4
+Loại Database: Mysql
+------------------------------
+
+<p>Cho CSDL với các bảng như dưới đây.</p><p><strong>Bảng research</strong> – Thông tin dự án nghiên cứu</p><ul><li>id (INT, PRIMARY KEY): Mã nghiên cứu (duy nhất)</li><li>company_id (INT): Mã công ty thực hiện nghiên cứu</li><li>title (VARCHAR(255)): Tên đề tài nghiên cứu</li><li>lead_researcher (VARCHAR(255)): Tên người đứng đầu dự án</li><li>start_date (DATE): Ngày bắt đầu nghiên cứu</li></ul><p><strong>Bảng gene</strong> – Dữ liệu về gene</p><ul><li>id (INT, PRIMARY KEY): Mã định danh gene (duy nhất)</li><li>name (VARCHAR(255)): Tên gene</li><li>function (VARCHAR(255)): Vai trò/chức năng sinh học của gene</li><li>company_id (INT): Mã công ty sở hữu nghiên cứu gene</li><li>research_id (INT): Mã dự án nghiên cứu liên quan (liên kết đến bảng research)</li></ul><h4><strong>Câu hỏi</strong></h4><p>Liệt kê 3 đề tài nghiên cứu có số gene tham gia nhiều nhất, kèm số gene. Nếu bằng nhau, sắp xếp theo title tăng dần.</p><p><br></p><p><strong>Output ví dụ</strong> :</p><pre class="ql-syntax" spellcheck="false">+-----------------+------------+
+| title&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| gene_count |
++-----------------+------------+
+| Immunotherapy&nbsp; &nbsp;| 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Cancer Genomics | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Neuro Mapping&nbsp; &nbsp;| 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++-----------------+------------+
+</pre>

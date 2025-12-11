@@ -1,0 +1,8 @@
+ID: SQL2435
+Tiêu đề: Đếm số lượng sản phẩm chăm sóc tóc thuần chay được bán trong 6 tháng qua
+URL WEB: https://db.ptit.edu.vn/question-detail/8688a08e-c8f0-4ce1-a09b-54de6fe3a76b
+URL API: https://dbapi.ptit.edu.vn/api/app/question/8688a08e-c8f0-4ce1-a09b-54de6fe3a76b
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng time: </strong>Chứa thông tin về các ngày bán hàng.</h3><p><strong>Cấu trúc:</strong></p><ul><li>time_id (INT): Mã định danh duy nhất cho mỗi ngày bán hàng (khóa chính của bảng).</li><li>sale_date (DATE): Ngày bán hàng.</li></ul><h3><strong>Bảng sales: </strong>Chứa thông tin về các giao dịch bán hàng.</h3><p><strong>Cấu trúc:</strong></p><ul><li>sale_id (INT): Mã định danh duy nhất cho mỗi giao dịch bán (khóa chính của bảng).</li><li>product_id (INT): Mã định danh của sản phẩm được bán trong giao dịch (liên kết với product_id của bảng products).</li><li>quantity (INT): Số lượng sản phẩm bán trong giao dịch.</li><li>time_id (INT): Mã định danh của ngày bán hàng (liên kết với time_id của bảng time).</li></ul><h3><strong>Bảng products: </strong>Chứa thông tin về các sản phẩm.</h3><p><strong>Cấu trúc:</strong></p><ul><li>product_id (INT): Mã định danh duy nhất cho mỗi sản phẩm (khóa chính của bảng).</li><li>product_name (VARCHAR(255)): Tên của sản phẩm.</li><li>category (VARCHAR(255)): Danh mục sản phẩm (ví dụ: "Hair Care" chăm sóc tóc, "Body Care" chăm sóc cơ thể ...).</li><li>vegan (BOOLEAN): Chỉ định liệu sản phẩm có phải là thuần chay hay không (TRUE nếu thuần chay, FALSE nếu không).</li></ul><p><strong>Yêu cầu:</strong></p><p>Hiển thị số lượng sản phẩm chăm sóc tóc thuần chay được bán trong 6 tháng gần nhất.</p><p><br></p><p>Output: num_products</p>

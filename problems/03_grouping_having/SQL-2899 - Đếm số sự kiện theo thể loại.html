@@ -1,0 +1,14 @@
+ID: SQL-2899
+Tiêu đề: Đếm số sự kiện theo thể loại
+URL WEB: https://db.ptit.edu.vn/question-detail/6879dc32-34f0-43a8-a734-19707d76bff6
+URL API: https://dbapi.ptit.edu.vn/api/app/question/6879dc32-34f0-43a8-a734-19707d76bff6
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `events`: Lưu trữ thông tin các sự kiện. </strong></p><ul><li><span style="font-size: 14px;">`id` (INT): Mã sự kiện.</span></li><li><span style="font-size: 14px;">`name` (TEXT): Tên sự kiện.</span></li><li><span style="font-size: 14px;">`category` (TEXT): Thể loại sự kiện (ví dụ: music, theater).</span></li><li><span style="font-size: 14px;">`tickets_sold` (INT): Số vé đã bán.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ: </strong>Đếm số sự kiện theo thể loại trong đó số vé đã bán nằm trong khoảng [100, 250]. Kết quả sắp xếp giảm dần theo số sự kiện. </p><p><br></p><p><strong style="font-size: 14px;">Output ví dụ: </strong></p><pre class="ql-syntax" spellcheck="false">+----------+-------------+
+| category | event_count |
++----------+-------------+
+| theater&nbsp; | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| music&nbsp; &nbsp; | 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++----------+-------------+
+</pre>

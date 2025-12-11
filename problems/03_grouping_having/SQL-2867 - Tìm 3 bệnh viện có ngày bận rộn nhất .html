@@ -1,0 +1,15 @@
+ID: SQL-2867
+Tiêu đề: Tìm 3 bệnh viện có ngày bận rộn nhất 
+URL WEB: https://db.ptit.edu.vn/question-detail/9449f547-a9ec-414b-b7f8-a91c680d1a64
+URL API: https://dbapi.ptit.edu.vn/api/app/question/9449f547-a9ec-414b-b7f8-a91c680d1a64
+Loại Database: Mysql
+------------------------------
+
+<p>Cho cơ sở dữ liệu các bệnh viện và bệnh nhân tiêm chủng với các bảng:</p><p><strong>Bảng hospitals</strong></p><ul><li>id (INT): Mã bệnh viện</li><li>name (VARCHAR(50)): Tên bệnh viện</li><li>location (VARCHAR(50)): Vị trí bệnh viện</li><li>capacity (INT): Sức chứa của bệnh viện</li></ul><p><strong>Bảng patient_vaccinations</strong></p><ul><li>id (INT): Mã tiêm chủng</li><li>hospital_id (INT): Mã bệnh viện (liên kết đến hospitals.id)</li><li>patient_id (INT): Mã bệnh nhân</li><li>date (DATE): Ngày tiêm chủng</li></ul><p><strong>Câu hỏi: </strong>Tìm 3 bệnh viện có ngày bận rộn nhất (nhiều lượt tiêm nhất trong một ngày) cao nhất. Trả về tên bệnh viện, ngày bận rộn nhất và số lượt tiêm ngày đó. Sắp xếp giảm dần theo số lượt tiêm (peak_shots)</p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+------+------------+------------+
+| name | peak_date&nbsp; | peak_shots |
++------+------------+------------+
+| B&nbsp; &nbsp; | 2022-03-01 | 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| A&nbsp; &nbsp; | 2022-03-01 | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| C&nbsp; &nbsp; | 2022-03-05 | 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++------+------------+------------+
+</pre>

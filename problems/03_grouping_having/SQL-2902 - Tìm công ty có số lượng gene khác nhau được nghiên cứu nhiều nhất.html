@@ -1,0 +1,13 @@
+ID: SQL-2902
+Tiêu đề: Tìm công ty có số lượng gene khác nhau được nghiên cứu nhiều nhất
+URL WEB: https://db.ptit.edu.vn/question-detail/53afa590-013c-4888-9fa3-f304d152de63
+URL API: https://dbapi.ptit.edu.vn/api/app/question/53afa590-013c-4888-9fa3-f304d152de63
+Loại Database: Mysql
+------------------------------
+
+<p>Cho CSDL với các bảng như dưới đây.</p><p><strong>Bảng research</strong> – Thông tin dự án nghiên cứu</p><ul><li>id (INT, PRIMARY KEY): Mã nghiên cứu (duy nhất)</li><li>company_id (INT): Mã công ty thực hiện nghiên cứu</li><li>title (VARCHAR(255)): Tên đề tài nghiên cứu</li><li>lead_researcher (VARCHAR(255)): Tên người đứng đầu dự án</li><li>start_date (DATE): Ngày bắt đầu nghiên cứu</li></ul><p><strong>Bảng gene</strong> – Dữ liệu về gene</p><ul><li>id (INT, PRIMARY KEY): Mã định danh gene (duy nhất)</li><li>name (VARCHAR(255)): Tên gene</li><li>function (VARCHAR(255)): Vai trò/chức năng sinh học của gene</li><li>company_id (INT): Mã công ty sở hữu nghiên cứu gene</li><li>research_id (INT): Mã dự án nghiên cứu liên quan (liên kết đến bảng research)</li></ul><h4><strong>Câu hỏi</strong></h4><p>Tìm công ty có số lượng gene khác nhau được nghiên cứu nhiều nhất trong các dự án bắt đầu từ ngày 2024-01-01. Nếu giống nhau, ưu tiên company_id nhỏ hơn.</p><p><br></p><p><strong>Output ví dụ</strong> :</p><pre class="ql-syntax" spellcheck="false">+------------+---------------------+
+| company_id | distinct_gene_count |
++------------+---------------------+
+| 100&nbsp; &nbsp; &nbsp; &nbsp; | 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++------------+---------------------+
+</pre>

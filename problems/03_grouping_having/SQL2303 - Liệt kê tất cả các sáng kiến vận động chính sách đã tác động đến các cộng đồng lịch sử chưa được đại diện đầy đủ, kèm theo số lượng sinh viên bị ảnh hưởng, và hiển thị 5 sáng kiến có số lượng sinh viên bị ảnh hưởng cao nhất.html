@@ -1,0 +1,17 @@
+ID: SQL2303
+Tiêu đề: Liệt kê tất cả các sáng kiến vận động chính sách đã tác động đến các cộng đồng lịch sử chưa được đại diện đầy đủ, kèm theo số lượng sinh viên bị ảnh hưởng, và hiển thị 5 sáng kiến có số lượng sinh viên bị ảnh hưởng cao nhất
+URL WEB: https://db.ptit.edu.vn/question-detail/ecb99876-ebce-4c41-ad3e-0ec2ffc40a43
+URL API: https://dbapi.ptit.edu.vn/api/app/question/ecb99876-ebce-4c41-ad3e-0ec2ffc40a43
+Loại Database: Mysql
+------------------------------
+
+<p><strong>Bảng 1: initiatives</strong></p><p><strong> Chứa thông tin về các sáng kiến cộng đồng.</strong></p><ul><li>initiative_id (INT): Mã định danh duy nhất cho mỗi sáng kiến (khóa chính).</li><li>initiative_name (VARCHAR(255)): Tên của sáng kiến.</li><li>initiative_date (DATE): Ngày sáng kiến được triển khai.</li><li>community_type (VARCHAR(255)): Loại cộng đồng liên quan đến sáng kiến (ví dụ: <em>giáo dục</em>, <em>y tế</em>, <em>môi trường</em>).</li></ul><p><strong>Bảng 2: impact</strong></p><p><strong> Chứa thông tin về sự tác động của các sáng kiến đến sinh viên.</strong></p><ul><li>initiative_id (INT): Mã định danh của sáng kiến (liên kết với bảng initiatives).</li><li>student_id (INT): Mã định danh của sinh viên tham gia sáng kiến.</li></ul><h3><strong>Yêu cầu</strong></h3><p>Liệt kê tất cả sáng kiến vận động chính sách có loại cộng đồng là 'Historically Underrepresented', kèm theo số lượng sinh viên bị ảnh hưởng.</p><p><br></p><p><strong>Output</strong><em>: Chỉ hiển thị 5 sáng kiến có số lượng sinh viên bị ảnh hưởng cao nhất.</em></p><pre class="ql-syntax" spellcheck="false">+-----------------+-------------------+
+| initiative_name | students_impacted |
++-----------------+-------------------+
+| initiative 1&nbsp;  &nbsp;| 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        |
+| initiative 4&nbsp;&nbsp;  | 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp;|
+| initiative 5&nbsp;&nbsp;  | 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &nbsp;&nbsp;&nbsp;|
+| initiative 8&nbsp;&nbsp;  | 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &nbsp;&nbsp;&nbsp;|
+| initiative 9&nbsp;&nbsp;  | 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &nbsp;&nbsp;|
++-----------------+-------------------+
+</pre><p><br></p>

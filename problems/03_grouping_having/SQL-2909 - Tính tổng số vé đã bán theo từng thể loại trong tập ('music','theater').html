@@ -1,0 +1,13 @@
+ID: SQL-2909
+Tiêu đề: Tính tổng số vé đã bán theo từng thể loại trong tập ('music','theater')
+URL WEB: https://db.ptit.edu.vn/question-detail/1b447cca-90ae-4a94-8d16-a586c0c183e2
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1b447cca-90ae-4a94-8d16-a586c0c183e2
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `events`: Lưu trữ thông tin các sự kiện. </strong></p><ul><li><span style="font-size: 14px;">`id` (INT): Mã sự kiện.</span></li><li><span style="font-size: 14px;">`name` (TEXT): Tên sự kiện.</span></li><li><span style="font-size: 14px;">`category` (TEXT): Thể loại sự kiện (ví dụ: music, theater).</span></li><li><span style="font-size: 14px;">`tickets_sold` (INT): Số vé đã bán.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ: </strong><span style="font-size: 14px;">T</span>ính tổng số vé đã bán theo từng thể loại trong tập ('music','theater'). Chỉ hiển thị các thể loại có tổng vé ≥ 200. Sắp xếp theo thứ tự tổng số vé giảm dần.</p><p><br></p><p><strong style="font-size: 14px;">Output: </strong></p><pre class="ql-syntax" spellcheck="false">+----------+---------------+
+| category | total_tickets |
++----------+---------------+
+| music&nbsp; &nbsp; | 270&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
++----------+---------------+
+</pre>

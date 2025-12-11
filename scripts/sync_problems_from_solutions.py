@@ -41,11 +41,11 @@ def ensure_exists(paths: Iterable[Path]) -> None:
 def main() -> None:
     args = parse_args()
     client_root = Path(__file__).resolve().parent
-    scraper_root = (client_root.parent / "dbpshit-scraper").resolve() if args.scraper_root is None else args.scraper_root.resolve()
+    scraper_root = (client_root.parent.parent / "dbpshit-scraper").resolve() if args.scraper_root is None else args.scraper_root.resolve()
 
     solutions_root = scraper_root / "solutions"
     problems_src_root = scraper_root / "problems"
-    client_problems_root = client_root / "problems"
+    client_problems_root = client_root.parent / "problems"
 
     ensure_exists([scraper_root, solutions_root, problems_src_root, client_problems_root])
 

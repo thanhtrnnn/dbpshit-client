@@ -1,0 +1,15 @@
+ID: SQL-2906
+Tiêu đề: Tìm Top 3 khách hàng theo tổng phí 
+URL WEB: https://db.ptit.edu.vn/question-detail/7c84eaf1-dbe2-4030-908e-3b6aec5b425c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7c84eaf1-dbe2-4030-908e-3b6aec5b425c
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng mobile_subscribers: </strong>Chứa thông tin về các thuê bao di động.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi thuê bao di động (khóa chính của bảng).</li><li>name (VARCHAR(50)): Tên của thuê bao di động.</li><li>subscription_fee (FLOAT): Phí thuê bao hàng tháng cho dịch vụ di động.</li><li>date (DATE): Ngày bắt đầu đăng ký dịch vụ.</li></ul><h3><strong>Bảng broadband_subscribers: </strong>Chứa thông tin về các thuê bao băng thông rộng.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi thuê bao băng thông rộng (khóa chính của bảng).</li><li>name (VARCHAR(50)): Tên của thuê bao băng thông rộng.</li><li>subscription_fee (FLOAT): Phí thuê bao hàng tháng cho dịch vụ băng thông rộng.</li><li>date (DATE): Ngày bắt đầu đăng ký dịch vụ.</li></ul><p>Yêu cầu: Trong quý 1 năm 2025 (2025-01-01 → 2025-03-31), tìm Top 3 khách hàng theo tổng phí khi gộp cả hai dịch vụ (nếu cùng tên ở cả mobile/broadband thì cộng chung). Sắp xếp theo thứ tự tổng kinh phí giảm dần.</p><p><br></p><p><strong>Output</strong>:</p><pre class="ql-syntax" spellcheck="false">+-------+-----------+
+| name&nbsp; | total_fee |
++-------+-----------+
+| Duy&nbsp; &nbsp;| 60&nbsp; &nbsp; &nbsp; &nbsp; |
+| Alice | 55&nbsp; &nbsp; &nbsp; &nbsp; |
+| Bob&nbsp; &nbsp;| 55&nbsp; &nbsp; &nbsp; &nbsp; |
++-------+-----------+
+</pre>

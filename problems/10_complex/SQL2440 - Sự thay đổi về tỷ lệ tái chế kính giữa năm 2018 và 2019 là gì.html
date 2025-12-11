@@ -1,0 +1,8 @@
+ID: SQL2440
+Tiêu đề: Sự thay đổi về tỷ lệ tái chế kính giữa năm 2018 và 2019 là gì?
+URL WEB: https://db.ptit.edu.vn/question-detail/7b21caff-ee48-4a61-888d-b79d63f15b11
+URL API: https://dbapi.ptit.edu.vn/api/app/question/7b21caff-ee48-4a61-888d-b79d63f15b11
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng recycling_rates: </strong>Chứa thông tin về <strong>tỷ lệ tái chế của các vật liệu</strong> theo từng năm.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi bản ghi (khóa chính của bảng).</li><li>material (VARCHAR(20)): Loại vật liệu được tái chế (ví dụ: 'glass', 'paper').</li><li>year (INT): Năm thống kê dữ liệu tái chế.</li><li>recycling_rate (DECIMAL(5,2)): Tỷ lệ tái chế, biểu diễn dưới dạng số thập phân (ví dụ: 0.35 tương đương 35%).</li></ul><p><strong>Yêu cầu:</strong></p><p>Tính sự thay đổi về tỷ lệ tái chế của vật liệu 'glass' giữa năm 2018 và năm 2019.</p><p><br></p><p>Output: <span style="font-size: 14px;">rate_difference</span></p>

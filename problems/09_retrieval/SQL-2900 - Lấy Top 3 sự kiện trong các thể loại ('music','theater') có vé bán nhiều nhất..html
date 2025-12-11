@@ -1,0 +1,15 @@
+ID: SQL-2900
+Tiêu đề: Lấy Top 3 sự kiện trong các thể loại ('music','theater') có vé bán nhiều nhất.
+URL WEB: https://db.ptit.edu.vn/question-detail/e5fd87ac-ad77-4938-80c3-81f707529bab
+URL API: https://dbapi.ptit.edu.vn/api/app/question/e5fd87ac-ad77-4938-80c3-81f707529bab
+Loại Database: Mysql
+------------------------------
+
+<p><strong style="font-size: 14px;">Bảng `events`: Lưu trữ thông tin các sự kiện. </strong></p><ul><li><span style="font-size: 14px;">`id` (INT): Mã sự kiện.</span></li><li><span style="font-size: 14px;">`name` (TEXT): Tên sự kiện.</span></li><li><span style="font-size: 14px;">`category` (TEXT): Thể loại sự kiện (ví dụ: music, theater).</span></li><li><span style="font-size: 14px;">`tickets_sold` (INT): Số vé đã bán.</span></li></ul><p><br></p><p><strong style="font-size: 14px;">Nhiệm vụ: </strong>Lấy Top 3 sự kiện trong các thể loại ('music','theater') có vé bán nhiều nhất. Kết quả sắp xếp giảm dần theo số vé đã bán. </p><p><br></p><p><strong style="font-size: 14px;">Output ví dụ: </strong></p><pre class="ql-syntax" spellcheck="false">+-----------+----------+--------------+
+| name&nbsp; &nbsp; &nbsp; | category | tickets_sold |
++-----------+----------+--------------+
+| Concert N | music&nbsp; &nbsp; | 320&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Play N&nbsp; &nbsp; | theater&nbsp; | 280&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Gig N&nbsp; &nbsp; &nbsp;| music&nbsp; &nbsp; | 260&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++-----------+----------+--------------+
+</pre>

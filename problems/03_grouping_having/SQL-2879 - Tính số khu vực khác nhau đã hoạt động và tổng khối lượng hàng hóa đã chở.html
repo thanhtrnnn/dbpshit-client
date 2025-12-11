@@ -1,0 +1,13 @@
+ID: SQL-2879
+Tiêu đề: Tính số khu vực khác nhau đã hoạt động và tổng khối lượng hàng hóa đã chở
+URL WEB: https://db.ptit.edu.vn/question-detail/1cc0f765-a657-4d91-b123-4c22178a3b77
+URL API: https://dbapi.ptit.edu.vn/api/app/question/1cc0f765-a657-4d91-b123-4c22178a3b77
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng vessels: </strong>Chứa thông tin về <strong>tàu</strong>.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi tàu (khóa chính của bảng).</li><li>name (VARCHAR(50)): Tên của tàu.</li><li>type (VARCHAR(50)): Loại tàu (ví dụ: 'Cargo', 'Tanker', 'Passenger').</li><li>max_cargo_weight (INT): Khối lượng hàng hóa tối đa mà tàu có thể chở (đơn vị: kg hoặc tấn).</li></ul><h3><strong>Bảng voyages: </strong>Chứa thông tin về các <strong>chuyến đi</strong> mà các tàu đã thực hiện.</h3><p><strong>Cấu trúc:</strong></p><ul><li>id (INT): Mã định danh duy nhất cho mỗi chuyến đi (khóa chính của bảng).</li><li>vessel_id (INT): Mã định danh của tàu thực hiện chuyến đi (liên kết với id trong bảng vessels).</li><li>region (VARCHAR(50)): Khu vực mà tàu hoạt động trong chuyến đi (ví dụ: 'Arctic', 'Atlantic').</li><li>distance (DECIMAL(5,2)): Quãng đường của chuyến đi (đơn vị: km hoặc hải lý).</li><li>cargo_weight (INT): Khối lượng hàng hóa được chuyên chở trong chuyến đi.</li></ul><p><br></p><p><strong>Yêu cầu:</strong></p><p>Với mỗi tàu, tính số khu vực khác nhau đã hoạt động và tổng khối lượng hàng hóa đã chở; chỉ hiển thị các tàu có ít nhất 2 khu vực khác nhau và tổng khối lượng &gt; 0. Sắp xếp theo distinct_regions giảm dần, sau đó total_cargo giảm dần, rồi name. </p><p><br></p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+--------+------------------+-------------+
+| name&nbsp; &nbsp;| distinct_regions | total_cargo |
++--------+------------------+-------------+
+| Runner | 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 11000&nbsp; &nbsp; &nbsp; &nbsp;|
++--------+------------------+-------------+
+</pre>

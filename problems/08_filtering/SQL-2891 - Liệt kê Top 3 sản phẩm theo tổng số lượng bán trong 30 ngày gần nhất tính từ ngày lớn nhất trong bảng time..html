@@ -1,0 +1,15 @@
+ID: SQL-2891
+Tiêu đề: Liệt kê Top 3 sản phẩm theo tổng số lượng bán trong 30 ngày gần nhất tính từ ngày lớn nhất trong bảng time.
+URL WEB: https://db.ptit.edu.vn/question-detail/f063267c-5309-41a1-b655-b6395894974a
+URL API: https://dbapi.ptit.edu.vn/api/app/question/f063267c-5309-41a1-b655-b6395894974a
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng time: </strong>Chứa thông tin về các ngày bán hàng.</h3><p><strong>Cấu trúc:</strong></p><ul><li>time_id (INT): Mã định danh duy nhất cho mỗi ngày bán hàng (khóa chính của bảng).</li><li>sale_date (DATE): Ngày bán hàng.</li></ul><h3><strong>Bảng sales: </strong>Chứa thông tin về các giao dịch bán hàng.</h3><p><strong>Cấu trúc:</strong></p><ul><li>sale_id (INT): Mã định danh duy nhất cho mỗi giao dịch bán (khóa chính của bảng).</li><li>product_id (INT): Mã định danh của sản phẩm được bán trong giao dịch (liên kết với product_id của bảng products).</li><li>quantity (INT): Số lượng sản phẩm bán trong giao dịch.</li><li>time_id (INT): Mã định danh của ngày bán hàng (liên kết với time_id của bảng time).</li></ul><h3><strong>Bảng products: </strong>Chứa thông tin về các sản phẩm.</h3><p><strong>Cấu trúc:</strong></p><ul><li>product_id (INT): Mã định danh duy nhất cho mỗi sản phẩm (khóa chính của bảng).</li><li>product_name (VARCHAR(255)): Tên của sản phẩm.</li><li>category (VARCHAR(255)): Danh mục sản phẩm (ví dụ: "Hair Care" chăm sóc tóc, "Body Care" chăm sóc cơ thể ...).</li><li>vegan (BOOLEAN): Chỉ định liệu sản phẩm có phải là thuần chay hay không (TRUE nếu thuần chay, FALSE nếu không).</li></ul><p><strong>Yêu cầu:</strong></p><p>Liệt kê Top 3 sản phẩm theo tổng số lượng bán trong 30 ngày gần nhất tính từ ngày lớn nhất trong bảng time. Sắp xếp giảm dần theo tổng số lượng bán. </p><p><br></p><p><strong>Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+--------------+-----------+
+| product_name | total_qty |
++--------------+-----------+
+| Shampoo&nbsp; &nbsp; &nbsp; | 35&nbsp; &nbsp; &nbsp; &nbsp; |
+| Hair Gel&nbsp; &nbsp; &nbsp;| 30&nbsp; &nbsp; &nbsp; &nbsp; |
+| Conditioner&nbsp; | 25&nbsp; &nbsp; &nbsp; &nbsp; |
++--------------+-----------+
+</pre>

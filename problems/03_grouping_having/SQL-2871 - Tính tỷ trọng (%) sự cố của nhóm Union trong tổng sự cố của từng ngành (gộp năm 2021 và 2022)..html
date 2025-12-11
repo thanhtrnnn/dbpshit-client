@@ -1,0 +1,14 @@
+ID: SQL-2871
+Tiêu đề: Tính tỷ trọng (%) sự cố của nhóm Union trong tổng sự cố của từng ngành (gộp năm 2021 và 2022).
+URL WEB: https://db.ptit.edu.vn/question-detail/6ff9f8f2-5d36-4581-8709-d8c8534c2b5c
+URL API: https://dbapi.ptit.edu.vn/api/app/question/6ff9f8f2-5d36-4581-8709-d8c8534c2b5c
+Loại Database: Mysql
+------------------------------
+
+<h3><strong>Bảng union_status: </strong>Chứa thông tin về <strong>trạng thái công đoàn</strong> của người lao động.</h3><ul><li>id (INT): Mã định danh duy nhất cho mỗi trạng thái (khóa chính).</li><li>union_status (VARCHAR(10)): Trạng thái công đoàn (ví dụ: 'Union', 'Non-Union').</li></ul><h3><strong>Bảng construction_sectors: </strong>Chứa thông tin về <strong>các ngành xây dựng</strong>.</h3><ul><li>sector_id (INT): Mã định danh duy nhất cho mỗi ngành (khóa chính).</li><li>sector_name (VARCHAR(255)): Tên ngành (ví dụ: Xây dựng nhà - 'Building Construction' , Xây dựng đường - Highway Construction', Kỹ sư dân dụng - 'Civil Engineering').</li></ul><h3><strong>Bảng workplace_safety_incidents: </strong>Chứa thông tin về <strong>các sự cố an toàn</strong> theo ngành và trạng thái công đoàn.</h3><ul><li>id (INT): Mã định danh duy nhất cho mỗi sự cố (khóa chính).</li><li>sector_id (INT): Tham chiếu tới construction_sectors.sector_id.</li><li>union_status_id (INT): Tham chiếu tới union_status.id.</li><li>incident_year (INT): Năm xảy ra sự cố.</li><li>incidents (INT): Số lượng sự cố trong năm.</li></ul><p><strong>Yêu cầu: </strong>Tính tỷ trọng (%) sự cố của nhóm Union trong tổng sự cố của từng ngành (gộp năm 2021 và 2022). Công thức: union_share_pct = 100 * union_incidents / (union_incidents + nonunion_incidents). Chỉ hiển thị ngành có cả hai trạng thái xuất hiện trong 2021–2022. Kết quả sắp xếp giảm dần theo trọng số sự cố.</p><p><br></p><p><strong>Output ví dụ: </strong></p><pre class="ql-syntax" spellcheck="false">+-------------+-----------------+
+| sector_name | union_share_pct |
++-------------+-----------------+
+| Building&nbsp; &nbsp; | 45&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| Civil&nbsp; &nbsp; &nbsp; &nbsp;| 25&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++-------------+-----------------+
+</pre>

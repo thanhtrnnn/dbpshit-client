@@ -1,0 +1,14 @@
+ID: SQL-2896
+Tiêu đề: Tính công suất trung bình cho các mẫu
+URL WEB: https://db.ptit.edu.vn/question-detail/8c076229-34bd-4258-ac24-c69d4a459d62
+URL API: https://dbapi.ptit.edu.vn/api/app/question/8c076229-34bd-4258-ac24-c69d4a459d62
+Loại Database: Mysql
+------------------------------
+
+<h3><strong style="font-size: 12px;">Bảng Vehicle_Types: </strong><span style="font-size: 12px;">Chứa thông tin về các loại phương tiện.</span></h3><ul><li><span style="font-size: 12px;">Id (INT): Mã định danh duy nhất cho mỗi loại phương tiện (khóa chính của bảng).</span></li><li><span style="font-size: 12px;">Name (VARCHAR(50)): Tên loại phương tiện (ví dụ: "Sedan", "SUV", "Truck").</span></li></ul><p><br></p><h3><strong style="font-size: 12px;">Bảng Vehicle_Releases: </strong><span style="font-size: 12px;">Chứa thông tin về các mẫu phương tiện được phát hành.</span></h3><ul><li><span style="font-size: 12px;">Id (INT): Mã định danh duy nhất cho mỗi phương tiện (khóa chính của bảng).</span></li><li><span style="font-size: 12px;">Name (VARCHAR(50)): Tên mẫu phương tiện.</span></li><li><span style="font-size: 12px;">Release_Date (DATE): Ngày ra mắt của phương tiện.</span></li><li><span style="font-size: 12px;">Origin_Country (VARCHAR(50)): Quốc gia nơi phương tiện được sản xuất.</span></li><li><span style="font-size: 12px;">Horsepower (INT): Công suất động cơ tính bằng mã lực.</span></li><li><span style="font-size: 12px;">Vehicle_Type_Id (INT): Mã định danh loại phương tiện (liên kết với Id trong bảng Vehicle_Types).</span></li></ul><p><strong style="font-size: 12px;">Nhiệm vụ:</strong></p><p>Với các loại ‘SUV’ và ‘Truck’, tính công suất trung bình cho các mẫu ra mắt từ 2020-01-01 và có xuất xứ thuộc {USA, Germany}. Kết quả sắp xếp giảm dần theo công suất trung bình. </p><p><br></p><p><strong style="font-size: 12px;">Output ví dụ:</strong></p><pre class="ql-syntax" spellcheck="false">+-----------+--------+
+| type_name | avg_hp |
++-----------+--------+
+| Truck&nbsp; &nbsp; &nbsp;| 400&nbsp; &nbsp; |
+| SUV&nbsp; &nbsp; &nbsp; &nbsp;| 310&nbsp; &nbsp; |
++-----------+--------+
+</pre>

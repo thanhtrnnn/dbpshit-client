@@ -1,0 +1,15 @@
+ID: SQL-2852
+Tiêu đề: Tính tổng sản lượng năng lượng
+URL WEB: https://db.ptit.edu.vn/question-detail/5c20bfd3-6f13-4659-8c22-9102e395d272
+URL API: https://dbapi.ptit.edu.vn/api/app/question/5c20bfd3-6f13-4659-8c22-9102e395d272
+Loại Database: Mysql
+------------------------------
+
+<p>Hệ thống theo dõi sản xuất điện từ các nguồn tái tạo theo vùng và nhà cung cấp. CSDL của hệ thống bao gốm các bảng sau:</p><p><strong>Bảng region – Quản lý thông tin về các vùng địa lý</strong></p><p>•	`region (id INT PRIMARY KEY, name VARCHAR(50))`:</p><p>•	`id (INT)`: Mã vùng.</p><p>•	`name (VARCHAR(50))`: Tên vùng.</p><p><strong>Bảng provider – Quản lý thông tin về các nhà cung cấp năng lượng</strong></p><p>•	`provider (id INT PRIMARY KEY, name VARCHAR(50), region_id INT)`:</p><p>•	`id (INT)`: Mã nhà cung cấp.</p><p>•	`name (VARCHAR(50))`: Tên nhà cung cấp.</p><p>•	`region_id (INT)`: Vùng mà nhà cung cấp hoạt động.</p><p><strong>Bảng renewable_source – Quản lý thông tin về các nguồn năng lượng tái tạo</strong></p><p>•	`renewable_source (id INT PRIMARY KEY, name VARCHAR(50), provider_id INT)`:</p><p>•	`id (INT)`: Mã nguồn năng lượng tái tạo.</p><p>•	`name (VARCHAR(50))`: Tên nguồn (ví dụ: "Solar" là năng lượng mặt trời, "Wind" là năng lượng gió ...).</p><p>•	`provider_id (INT)`: Nhà cung cấp sử dụng nguồn năng lượng này.</p><p><strong>Bảng power_generation – Quản lý thông tin về sản lượng điện sản xuất</strong></p><p>•	`power_generation (id INT PRIMARY KEY, date DATE, source_id INT, power_generated INT)`:</p><p>•	`id (INT)`: Mã bản ghi sản lượng.</p><p>•	`date (DATE)`: Ngày sản xuất.</p><p>•	`source_id (INT)`: Mã nguồn năng lượng sử dụng.</p><p>•	`power_generated (INT)`: Lượng điện được sản xuất (đơn vị kWh hoặc tương đương).</p><p><br></p><p><strong>Nhiệm vụ</strong></p><p>Xác định 3 nhà cung cấp có cả hai nguồn năng lượng ‘Solar’ và ‘Wind’ và thuộc các vùng có tên kết thúc bằng “st” (ví dụ: “West”, “Midwest”). Tính tổng sản lượng điện trong Quý 1/2021 (từ 2021-01-01 đến 2021-03-31, tính cả hai ngày), loại trừ các bản ghi có power_generated = 0. Kết quả hiển thị theo thứ tự giảm dần của tổng sản lượng. </p><p><br></p><p><strong>Output ví dụ</strong></p><pre class="ql-syntax" spellcheck="false">+---------------+-----------------------+
+| provider_name | total_power_generated |
++---------------+-----------------------+
+| WestDual B&nbsp; &nbsp; | 1400&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| WestDual A&nbsp; &nbsp; | 1200&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| MidDual C&nbsp; &nbsp; &nbsp;| 1200&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
++---------------+-----------------------+
+</pre>
