@@ -409,7 +409,7 @@ class Client:
             try:
                 with open(f_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                match_id = re.search(r'URL API: .*/([a-f0-9\-]+)', content)
+                match_id = re.search(r'URL API:\s*(?:<a[^>]*href=")?https?://[^"\s>]*?/question/([0-9A-Fa-f\-]{36})', content, re.IGNORECASE)
                 if match_id:
                     qid = match_id.group(1)
                     question_ids.append(qid)
@@ -508,7 +508,7 @@ class Client:
             try:
                 with open(f_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                match_id = re.search(r'URL API: .*/([a-f0-9\-]+)', content)
+                match_id = re.search(r'URL API:\s*(?:<a[^>]*href=")?https?://[^"\s>]*?/question/([0-9A-Fa-f\-]{36})', content, re.IGNORECASE)
                 if match_id:
                     qid = match_id.group(1)
                     question_ids.append(qid)
@@ -584,7 +584,8 @@ class Client:
             data = {}
             data['file_path'] = file_path
             
-            match_id = re.search(r'URL API: .*/([a-f0-9\-]+)', content)
+            # Support both plain URL and <a href="..."> wrapped URL formats
+            match_id = re.search(r'URL API:\s*(?:<a[^>]*href=")?https?://[^"\s>]*?/question/([0-9A-Fa-f\-]{36})', content, re.IGNORECASE)
             if match_id:
                 data['id'] = match_id.group(1)
             else:
