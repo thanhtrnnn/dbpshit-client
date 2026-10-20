@@ -14,6 +14,8 @@ const STUDENT_CODE_KEY = "jnp_student_code";
 const Q_CODE_KEY = "jnp_q_code";
 
 document.addEventListener("DOMContentLoaded", async () => {
+    if (!(await Auth.requireAuth())) return;
+    initAuthUI();
     initInputs();
     initResizers();
     initFileUploadDownload();
@@ -23,6 +25,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadCredentials();
     bindEvents();
 });
+
+// 0. Logged-in user (DB PTIT) on navbar
+function initAuthUI() {
+    const nameEl = document.getElementById("nav-user-name");
+    const render = (user) => {
+        const code = user && (user.userCode || user.username || user.sub);
+        const name = user && user.fullName;
+        nameEl.innerHTML = code ? `<strong>${escapeHtml(code)}</strong>` : "Đã đăng nhập";
+        nameEl.title = name ? `Đang đăng nhập: ${name}` : "Tài khoản DB PTIT đang đăng nhập";
+    };
+
+    render(Auth.getUser());
+    Auth.fetchProfile().then((user) => user && render(user)).catch(() => {});
+
+    document.getElementById("btn-logout").addEventListener("click", () => {
+        if (confirm("Đăng xuất khỏi tài khoản DB PTIT?")) Auth.logout();
+    });
+}
 
 // 1. Initialize Student & Question Code Inputs
 function initInputs() {
@@ -923,15 +943,16 @@ function bindEvents() {
             const resBox = document.getElementById("submit-response-area");
             resBox.textContent = `Đang đăng nhập tài khoản ${cred.username} để lấy Bearer token...`;
             try {
-                const loginRes = await fetch("https://dbapi.ptit.edu.vn/api/auth/auth/ptit-login", {
+                // Qua backend proxy (gọi thẳng dbapi.ptit.edu.vn từ trình duyệt bị chặn CORS).
+                // Chỉ lấy token cho lần nộp này, không đổi phiên đăng nhập hiện tại.
+                const loginRes = await fetch("/api/auth/login", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ username: cred.username, password: cred.password })
                 });
                 if (loginRes.ok) {
                     const data = await loginRes.json();
-                    const token = data.accessToken || data.access_token;
-                    document.getElementById("input-ptit-token").value = token;
+                    document.getElementById("input-ptit-token").value = data.accessToken;
                     resBox.innerHTML = `<span style="color:var(--accent-green);">[+] Đăng nhập thành công! Đã tự động điền Bearer token.</span>`;
                 } else {
                     resBox.innerHTML = `<span style="color:var(--accent-red);">[-] Đăng nhập thất bại (Mã lỗi ${loginRes.status}). Vui lòng nhập token thủ công.</span>`;
@@ -945,18 +966,14 @@ function bindEvents() {
     // Submit Code to PTIT Button
     document.getElementById("btn-submit-code-ptit").addEventListener("click", async () => {
         if (!currentProblem || !editor) return;
-        const token = document.getElementById("input-ptit-token").value.trim();
+        // Token nhập tay (tài khoản khác) được ưu tiên, để trống thì dùng token của phiên đăng nhập
+        const manualToken = document.getElementById("input-ptit-token").value.trim();
         const code = editor.getValue();
         const resBox = document.getElementById("submit-response-area");
 
-        if (!token) {
-            alert("Vui lòng nhập Bearer token hoặc chọn tài khoản đã lưu để lấy token.");
-            return;
-        }
-
         resBox.textContent = `Đang nộp mã nguồn cho bài [${currentProblem.alias || "JNP"}] lên hệ thống PTIT...`;
 
-        try {
+        const submitWith = async (token) => {
             const res = await fetch("/api/submit-ptit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -966,8 +983,20 @@ function bindEvents() {
                     token: token
                 })
             });
+            return res.json();
+        };
 
-            const data = await res.json();
+        try {
+            let data = await submitWith(manualToken || Auth.getToken());
+            // Token phiên hết hạn giữa chừng: refresh một lần rồi nộp lại
+            if (!manualToken && data.statusCode === 401) {
+                const newToken = await Auth.refresh();
+                if (!newToken) {
+                    Auth.logout();
+                    return;
+                }
+                data = await submitWith(newToken);
+            }
             resBox.innerHTML = `
                 <div style="color:var(--accent-green); margin-bottom: 4px;">[+] Kết quả phản hồi (Mã trạng thái: ${data.statusCode})</div>
                 <pre style="font-size:11px; color:var(--text-primary);">${escapeHtml(JSON.stringify(data.response, null, 2))}</pre>
