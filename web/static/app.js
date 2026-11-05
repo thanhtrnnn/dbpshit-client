@@ -484,7 +484,7 @@ async function loadQCodes() {
     const courseId = document.getElementById("input-course-id").value.trim();
     if (allProblems.length === 0) return;
     // Token nhập tay (tài khoản khác) được ưu tiên, để trống thì dùng token của phiên đăng nhập
-    const manualToken = document.getElementById("input-ptit-token").value.trim();
+    const manualToken = getManualToken();
     // Để trống courseId thì backend tự tìm khóa học JNP của tài khoản
     const url = courseId ? `/api/ptit/qcodes?courseId=${encodeURIComponent(courseId)}` : "/api/ptit/qcodes";
     try {
@@ -495,10 +495,18 @@ async function loadQCodes() {
             const err = await res.json().catch(() => ({}));
             throw new Error(err.detail || `HTTP ${res.status}`);
         }
-        const { qcodes, courseId: resolvedCourseId } = await res.json();
-        document.getElementById("input-course-id").value = resolvedCourseId;
-        localStorage.setItem(COURSE_ID_KEY, resolvedCourseId);
-        allProblems.forEach(p => { p.qCode = qcodes[p.code] || null; });
+        const { problems, courseId: resolvedCourseId } = await res.json();
+        if (resolvedCourseId) {
+            document.getElementById("input-course-id").value = resolvedCourseId;
+            localStorage.setItem(COURSE_ID_KEY, resolvedCourseId);
+        }
+        // source = "course" hoặc mã contest (CST-xxxx); completion chỉ có với bài trong khóa học
+        allProblems.forEach(p => {
+            const info = problems[p.code] || {};
+            p.qCode = info.qCode || null;
+            p.qSource = info.source || null;
+            p.completion = info.completion || null;
+        });
         qCodesLoaded = true;
         const count = allProblems.filter(p => p.qCode).length;
         document.getElementById("app-badge").textContent = `${allProblems.length} Bài Tập · ${count} qCode`;
@@ -513,6 +521,24 @@ async function loadQCodes() {
         document.getElementById("app-badge").textContent = `${allProblems.length} Bài Tập · không lấy được qCode`;
         document.getElementById("app-badge").title = e.message;
     }
+}
+
+// Trình duyệt hay tự điền mật khẩu đã lưu vào ô token, chỉ nhận chuỗi có dạng JWT
+function getManualToken() {
+    const value = document.getElementById("input-ptit-token").value.trim();
+    return value.split(".").length === 3 ? value : "";
+}
+
+// Hoàn thành = AC + đã nộp code; "Có code" chỉ là có file lời giải trong ltm/, chưa chắc đã AC
+function statusTag(p) {
+    const c = p.completion;
+    if (c && c.completed) return `<span class="proto-tag solved-tag">Hoàn thành</span>`;
+    if (c && c.hasAcSubmission) return `<span class="proto-tag solved-tag" title="AC nhưng chưa nộp mã nguồn">AC</span>`;
+    if (p.ltmFile && !p.isPublic && p.qSource !== "course") {
+        return `<span class="proto-tag untested-tag" title="${p.ltmFile} - chưa chạy trên server">Có code · chưa test</span>`;
+    }
+    if (p.ltmFile) return `<span class="proto-tag code-tag" title="${p.ltmFile}">Có code</span>`;
+    return "";
 }
 
 function setQCode(qCode) {
@@ -549,8 +575,9 @@ function renderProblemList() {
             <div class="problem-item-footer">
                 <span class="proto-tag">${protoText}</span>
                 ${p.code ? `<span class="proto-tag">Code: ${p.code}</span>` : ""}
-                ${p.qCode ? `<span class="proto-tag" title="qCode của bạn">${p.qCode}</span>` : ""}
-                ${p.ltmFile ? `<span class="proto-tag solved-tag" title="${p.ltmFile}">Đã giải</span>` : ""}
+                ${p.qCode ? `<span class="proto-tag" title="qCode của bạn${p.qSource && p.qSource !== "course" ? ` (contest ${p.qSource})` : ""}">${p.qCode}</span>` : ""}
+                ${p.qSource && p.qSource !== "course" ? `<span class="proto-tag contest-tag">${p.qSource}</span>` : ""}
+                ${statusTag(p)}
             </div>
         `;
 
@@ -1023,7 +1050,7 @@ function bindEvents() {
     document.getElementById("btn-submit-code-ptit").addEventListener("click", async () => {
         if (!currentProblem || !editor) return;
         // Token nhập tay (tài khoản khác) được ưu tiên, để trống thì dùng token của phiên đăng nhập
-        const manualToken = document.getElementById("input-ptit-token").value.trim();
+        const manualToken = getManualToken();
         const code = editor.getValue();
         const resBox = document.getElementById("submit-response-area");
         // Hệ thống nhận qCode riêng của sinh viên (vd tf04IzUW) + courseId, không nhận JNP-xxx

@@ -377,6 +377,17 @@ body {
     border-color: var(--accent-green);
 }
 
+.proto-tag.code-tag {
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+.proto-tag.untested-tag,
+.proto-tag.contest-tag {
+    color: var(--accent-orange);
+    border-color: var(--accent-orange);
+}
+
 /* WORKSPACE: SPLIT VIEW */
 .workspace-area {
     flex: 1;

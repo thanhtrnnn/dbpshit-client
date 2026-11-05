@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import base64
 import time
 import socket
 import re
@@ -8,6 +9,7 @@ import shutil
 import tempfile
 import subprocess
 import threading
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Optional, Dict, Any, List
 from fastapi import FastAPI, HTTPException, Header
@@ -476,15 +478,10 @@ def _fetch_qcodes(course_id: str, token: str) -> Dict[int, str]:
         if not isinstance(body, dict) or page >= body.get("totalPages", 1):
             return qcodes
 
-@app.get("/api/ptit/qcodes")
-def get_ptit_qcodes(courseId: Optional[str] = None, authorization: Optional[str] = Header(None)):
-    # qCode riêng của sinh viên = userAlias trong danh sách câu hỏi của khóa học
-    token = _bearer(authorization)
-    if not token:
-        raise HTTPException(status_code=401, detail="Missing PTIT Bearer token")
-    if courseId:
+def _resolve_course(course_id: Optional[str], token: str):
+    if course_id:
         try:
-            return {"courseId": courseId, "qcodes": _fetch_qcodes(courseId, token)}
+            return course_id, None, _fetch_qcodes(course_id, token)
         except HTTPException as e:
             # courseId cũ của tài khoản khác -> tự tìm khóa học của tài khoản hiện tại
             if e.status_code == 401 or e.status_code >= 500:
@@ -496,9 +493,76 @@ def get_ptit_qcodes(courseId: Optional[str] = None, authorization: Optional[str]
     for c in jnp:
         qcodes = _fetch_qcodes(c["id"], token)
         if qcodes:
-            return {"courseId": c["id"], "courseName": c.get("name"), "qcodes": qcodes}
-    names = ", ".join(c.get("name") or "?" for c in courses) or "không có"
-    raise HTTPException(status_code=404, detail=f"Tài khoản không có khóa học JNP nào (khóa học: {names})")
+            return c["id"], c.get("name"), qcodes
+    return None, None, {}
+
+def _fetch_contest_qcodes(token: str) -> Dict[int, Dict[str, str]]:
+    # Đề contest (kể cả chưa public, contest chưa mở) cũng trả userAlias riêng của sinh viên
+    user_id = (_decode_jwt(token) or {}).get("sub")
+    if not user_id:
+        return {}
+    body = _ptit_get(f"/app/contest/user-status/{user_id}", token, {"page": 0, "size": 100})
+    contests = body.get("content", []) if isinstance(body, dict) else body
+    result: Dict[int, Dict[str, str]] = {}
+    for c in contests:
+        contest_id = c.get("contestId") or (c.get("contest") or {}).get("id")
+        if not contest_id:
+            continue
+        try:
+            items = _ptit_get(f"/app/jnp-submission/contest/{contest_id}/questions", token)
+        except HTTPException:
+            continue
+        for item in items if isinstance(items, list) else items.get("content", []):
+            q = item.get("question") or item
+            if q.get("code") is not None and q.get("userAlias") and q["code"] not in result:
+                result[q["code"]] = {"qCode": q["userAlias"], "contest": c.get("contestCode") or contest_id}
+    return result
+
+def _decode_jwt(token: str) -> Optional[dict]:
+    try:
+        part = token.split(".")[1]
+        return json.loads(base64.urlsafe_b64decode(part + "=" * (-len(part) % 4)))
+    except (IndexError, ValueError):
+        return None
+
+@app.get("/api/ptit/qcodes")
+def get_ptit_qcodes(courseId: Optional[str] = None, authorization: Optional[str] = Header(None)):
+    # qCode riêng của sinh viên = userAlias; lấy từ khóa học trước, bài chỉ có trong contest lấy từ contest
+    token = _bearer(authorization)
+    if not token:
+        raise HTTPException(status_code=401, detail="Missing PTIT Bearer token")
+    course_id, course_name, course_qcodes = _resolve_course(courseId, token)
+    contest_qcodes = _fetch_contest_qcodes(token)
+    if not course_qcodes and not contest_qcodes:
+        raise HTTPException(status_code=404, detail="Tài khoản không có khóa học hay contest JNP nào")
+
+    # Trạng thái AC / nộp code chỉ có cho bài trong khóa học
+    completion: Dict[int, Any] = {}
+    if course_id and course_qcodes:
+        def status(item):
+            code, alias = item
+            try:
+                return code, _ptit_get("/app/jnp-submission/completion-status", token,
+                                       {"questionAlias": alias, "courseId": course_id})
+            except HTTPException:
+                return code, None
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            completion = {code: st for code, st in pool.map(status, course_qcodes.items()) if st}
+
+    problems = {code: {"qCode": alias, "source": "course"} for code, alias in course_qcodes.items()}
+    for code, info in contest_qcodes.items():
+        problems.setdefault(code, {"qCode": info["qCode"], "source": info["contest"]})
+    for code, st in completion.items():
+        problems[code]["completion"] = st
+    return {"courseId": course_id, "courseName": course_name, "problems": problems}
+
+@app.get("/api/ptit/completion")
+def get_ptit_completion(qCode: str, courseId: str, authorization: Optional[str] = Header(None)):
+    # {hasAcSubmission, hasSource, completed}: bài chỉ hoàn thành khi có cả AC lẫn mã nguồn
+    token = _bearer(authorization)
+    if not token:
+        raise HTTPException(status_code=401, detail="Missing PTIT Bearer token")
+    return _ptit_get("/app/jnp-submission/completion-status", token, {"questionAlias": qCode, "courseId": courseId})
 
 def solve_701_expected(data_str: str) -> str:
     nums = sorted([int(x.strip()) for x in data_str.strip().split(",") if x.strip()])
