@@ -1,0 +1,142 @@
+[
+  {
+    "id": "21cf313c-7212-4489-a59b-55b22a43b8ec",
+    "contestId": "cd57b1ba-a746-46df-afe6-fd50b8f55267",
+    "question": {
+      "id": "21cf313c-7212-4489-a59b-55b22a43b8ec",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 1311,
+      "alias": "JNP-1311",
+      "title": "RMI - Byte",
+      "description": "<p>Một chương trình (tạm gọi là RMI Server) cung cấp giao diện cho phép triệu gọi từ xa để xử lý dữ liệu nhị phân.</p>\r\n<p><strong>Giao diện từ xa:</strong></p>\r\n<pre class=\"ql-syntax\">public interface ByteService extends Remote {\r\n    public byte[] requestData(String studentCode, String qCode) throws RemoteException;\r\n    public void submitData(String studentCode, String qCode, byte[] data) throws RemoteException;\r\n}</pre>\r\n<p><strong>Trong đó:</strong></p>\r\n<ul><li>Interface ByteService được viết trong package RMI.</li><li>Đối tượng cài đặt giao diện từ xa ByteService được đăng ký với RegistryServer với tên là: RMIByteService.</li></ul>\r\n<p><strong>Yêu cầu:</strong> Viết chương trình tại máy trạm (RMI client) để thực hiện các công việc sau với dữ liệu nhị phân nhận được từ RMI Server:</p>\r\n<p>a. Triệu gọi phương thức requestData để nhận một mảng dữ liệu nhị phân (byte[]) từ server, đại diện cho một chuỗi văn bản ASCII.</p>\r\n<p>b. Thực hiện mã hóa XOR cho mảng dữ liệu nhị phân bằng cách sử dụng một khóa là chuỗi <code>PTIT</code>. Thực hiện phép XOR trên từng byte trong mảng dữ liệu với byte tương ứng trong khóa (khóa sẽ được lặp lại để khớp với độ dài của mảng dữ liệu).</p>\r\n<p><strong>Ví dụ:</strong> Nếu dữ liệu nhị phân nhận được là [72, 101, 108, 108, 111] (tương ứng với chuỗi <code>Hello</code>), và khóa là <code>PTIT</code>, chương trình sẽ thực hiện mã hóa như sau:</p>\r\n<ul><li>Chuyển khóa <code>PTIT</code> thành mảng byte [80, 84, 73, 84].</li><li>Lặp lại khóa để khớp độ dài dữ liệu: [80, 84, 73, 84, 80].</li><li>Thực hiện phép XOR trên từng byte của dữ liệu với khóa:</li><li>Kết quả mã hóa là mảng [24, 49, 37, 56, 63].</li></ul>\r\n<p>c. Triệu gọi phương thức submitData để gửi mảng dữ liệu đã được mã hóa bằng XOR trở lại server.</p>\r\n<p>d. Kết thúc chương trình client.</p>",
+      "protocolType": "RMI_BYTE",
+      "level": "MEDIUM",
+      "status": "APPROVED",
+      "isPublic": false,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "ebUI8IVt",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 3
+  },
+  {
+    "id": "12845354-bd8a-42df-a4f8-1c1e7bca1b5b",
+    "contestId": "cd57b1ba-a746-46df-afe6-fd50b8f55267",
+    "question": {
+      "id": "12845354-bd8a-42df-a4f8-1c1e7bca1b5b",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "code": 1338,
+      "alias": "JNP-1338",
+      "title": "RMI - Character",
+      "description": "<p>Một chương trình (tạm gọi là RMI Server) cung cấp giao diện cho phép triệu gọi từ xa để xử lý chuỗi.</p>\r\n<p><strong>Giao diện từ xa:</strong></p>\r\n<pre class=\"ql-syntax\">public interface CharacterService extends Remote {\r\n    public String requestCharacter(String studentCode, String qCode) throws RemoteException;\r\n    public void submitCharacter(String studentCode, String qCode, String strSubmit) throws RemoteException;\r\n}</pre>\r\n<p><strong>Trong đó:</strong></p>\r\n<ul><li>Interface CharacterService được viết trong package RMI.</li><li>Đối tượng cài đặt giao diện từ xa CharacterService được đăng ký với RegistryServer với tên là: RMICharacterService.</li></ul>\r\n<p><strong>Yêu cầu:</strong> Viết chương trình tại máy trạm (RMI client) để thực hiện các công việc sau với chuỗi được nhận từ RMI Server:</p>\r\n<p>a. Triệu gọi phương thức requestCharacter để nhận chuỗi ngẫu nhiên từ server với định dạng: \"Chuỗi văn bản đầu vào\".</p>\r\n<p>b. Thực hiện thao tác đếm tần số xuất hiện của từng ký tự trong chuỗi đầu vào. Kết quả trả về là danh sách các ký tự kèm theo số lần xuất hiện của mỗi ký tự.</p>\r\n<p><strong>Ví dụ:</strong> Chuỗi ban đầu \"Hello world\" -&gt; Kết quả đếm tần số ký tự: {<code>H</code>: 1, <code>e</code>: 1, <code>l</code>: 3, <code>o</code>: 2, \" \": 1, <code>w</code>: 1, <code>r</code>: 1, <code>d</code>: 1}.</p>\r\n<p>c. Triệu gọi phương thức submitCharacter để gửi kết quả đếm tần số ký tự trở lại server dưới dạng chuỗi kết quả đã được định dạng.</p>\r\n<p>d. Kết thúc chương trình client.</p>",
+      "protocolType": "RMI_CHARACTER",
+      "level": "MEDIUM",
+      "status": "APPROVED",
+      "isPublic": false,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "Q0Xu67C5",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 2
+  },
+  {
+    "id": "19a7f1c2-6184-408c-a932-50f1fbded282",
+    "contestId": "cd57b1ba-a746-46df-afe6-fd50b8f55267",
+    "question": {
+      "id": "19a7f1c2-6184-408c-a932-50f1fbded282",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 1341,
+      "alias": "JNP-1341",
+      "title": "RMI - Object",
+      "description": "<p>Một chương trình (tạm gọi là RMI Server) cung cấp giao diện cho phép triệu gọi từ xa để xử lý thông tin nhân viên. Chương trình sẽ ngẫu nhiên tạo ra đối tượng Employee với các giá trị ban đầu và cung cấp cho RMI client như sau:</p>\r\n<p><strong>Giao diện từ xa:</strong></p>\r\n<pre class=\"ql-syntax\">public interface ObjectService extends Remote {\r\n    public Serializable requestObject(String studentCode, String qCode) throws RemoteException;\r\n    public void submitObject(String studentCode, String qCode, Serializable object) throws RemoteException;\r\n}</pre>\r\n<p>Lớp Employee gồm các thuộc tính: id String, name String, baseSalary double, experienceYears int, finalSalary double.</p>\r\n<p><strong>Trường dữ liệu:</strong> private static final long serialVersionUID = 20241119L;</p>\r\n<p>02 hàm khởi dựng:</p>\r\n<pre class=\"ql-syntax\">public Employee()\r\npublic Employee(String id, String name, double baseSalary, int experienceYears)</pre>\r\n<p><strong>Trong đó:</strong></p>\r\n<ul><li>Interface ObjectService và lớp Employee được viết trong package RMI.</li><li>Đối tượng cài đặt giao diện từ xa ObjectService được đăng ký với RegistryServer với tên là: RMIObjectService.</li></ul>\r\n<p><strong>Yêu cầu:</strong> Viết chương trình tại máy trạm (RMI client) để thực hiện các công việc sau với đối tượng nhân viên được nhận từ RMI Server:</p>\r\n<p>a. Triệu gọi phương thức requestObject với tham số đầu vào là mã sinh viên và mã câu hỏi để nhận đối tượng Employee ngẫu nhiên từ server.</p>\r\n<p>b. Tính toán finalSalary dựa trên baseSalary, experienceYears, và áp dụng thuật toán xử lý số phức tạp để tạo hệ số điều chỉnh, yêu cầu sinh viên phải thao tác và xử lý experienceYears như sau:</p>\r\n<ul><li>Tách experienceYears thành tổng các chữ số (ví dụ, 14 sẽ thành 1 + 4 = 5).</li><li>Tính số lượng ước số nguyên của experienceYears (ví dụ, nếu experienceYears là 12, các ước số là 1, 2, 3, 4, 6, 12, nên có 6 ước số).</li><li>Xác định hệ số điều chỉnh factor dựa trên công thức sau: factor = (Số năm làm việc + tổng các chữ số + số lượng ước số) / 100.0</li><li>Tính finalSalary theo công thức: finalSalary = baseSalary * (1 + factor)</li></ul>\r\n<p>c. Cập nhật giá trị finalSalary trong đối tượng Employee.</p>\r\n<p>d. Triệu gọi phương thức submitObject để gửi đối tượng Employee đã được xử lý trở lại server.</p>\r\n<p>e. Kết thúc chương trình client.</p>",
+      "protocolType": "RMI_OBJECT",
+      "level": "MEDIUM",
+      "status": "APPROVED",
+      "isPublic": false,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "Q5aElF0p",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 5
+  },
+  {
+    "id": "e9dfd449-c77d-45ed-bed0-69a46bea33c5",
+    "contestId": "cd57b1ba-a746-46df-afe6-fd50b8f55267",
+    "question": {
+      "id": "e9dfd449-c77d-45ed-bed0-69a46bea33c5",
+      "createdAt": "2026-05-18T15:36:57.813379",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-10-11T06:47:15.655236",
+      "code": 1921,
+      "alias": "Q1921",
+      "title": "[RMI Data] Tìm vị trí đỉnh cục bộ",
+      "description": "<div>                                                                        \r\n      <p>Một chương trình RMI Server cung cấp giao diện DataService trong package RMI, được đăng ký với  \r\n  RegistryServer bằng tên RMIDataService.</p>                                                            \r\n      <p><strong>Giao diện từ xa:</strong></p>                                                           \r\n      <pre class=\"ql-syntax\">public interface DataService extends Remote {                               \r\n        public Object requestData(String studentCode, String qCode) throws RemoteException;              \r\n        public void submitData(String studentCode, String qCode, Object data) throws RemoteException;    \r\n    }</pre>                                                                                              \r\n      <h4>Yêu cầu</h4>                                                                                   \r\n      <p>a. Sử dụng mã sinh viên và mã câu hỏi làm tham số khi gọi RMI. Ví dụ:                           \r\n  <code>studentCode=\"B21DCCN001\"</code>, <code>qCode=\"A1B2C3D4\"</code>.</p>                              \r\n      <p>b. Triệu gọi <code>requestData(studentCode, qCode)</code> để nhận một mảng số nguyên từ server. \r\n  Ví dụ: <code>[3,8,5,10,7]</code>.</p>                                                                  \r\n      <p>c. Một phần tử là đỉnh cục bộ nếu lớn hơn phần tử liền kề bên trái và bên phải; phần tử đầu/cuối\r\n  chỉ cần lớn hơn phần tử kề duy nhất. Trả về vị trí theo chỉ số bắt đầu từ 1.</p>                       \r\n      <p>d. Triệu gọi <code>submitData(studentCode, qCode, data)</code> để gửi <code>List&lt;Integer&gt; \r\n  </code> các vị trí đỉnh cục bộ. Ví dụ: <code>[2,4]</code>.</p>                                         \r\n      <p>e. Kết thúc chương trình client.</p>                                                            \r\n    </div>",
+      "protocolType": "RMI_DATA",
+      "level": "HARD",
+      "status": "APPROVED",
+      "isPublic": true,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "K3tNRgpL",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 1
+  },
+  {
+    "id": "7b5fecbf-366b-4579-83c8-a0ea1cf427dd",
+    "contestId": "cd57b1ba-a746-46df-afe6-fd50b8f55267",
+    "question": {
+      "id": "7b5fecbf-366b-4579-83c8-a0ea1cf427dd",
+      "createdAt": "2026-05-18T15:36:57.813379",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 2252,
+      "alias": "Q2252",
+      "title": "[SOAP Character] Che và sắp xếp mảng log",
+      "description": "<div>\r\n  <p>Một dịch vụ web hỗ trợ SOAP version 1.1 được định nghĩa trong CharacterService?wsdl và triển khai tại http://&lt;Exam_IP&gt;:2221/CharacterService?wsdl.</p>\r\n  <h4>Yêu cầu</h4>\r\n  <p>a. Sử dụng mã sinh viên và mã câu hỏi làm tham số khi gọi các phương thức SOAP. Ví dụ: <code>studentCode=\"B21DCCN001\"</code>, <code>qCode=\"BAA62945\"</code>.</p>\r\n  <p>b. Triệu gọi phương thức <code>requestStringArray(studentCode, qCode)</code> để nhận danh sách chuỗi log <code>List&lt;String&gt;</code> từ server. Ví dụ một phần tử: <code>ERROR user=a email=a@example.com phone=0123456789 token=abc</code>.</p>\r\n  <p>c. Che email, số điện thoại và token trong từng dòng, sau đó sắp xếp các dòng theo mức <code>ERROR</code>, <code>WARN</code>, <code>INFO</code>.</p>\r\n  <p>d. Triệu gọi <code>submitStringArray(studentCode, qCode, data)</code> để gửi danh sách chuỗi đã xử lý. Ví dụ phần tử nộp lại: <code>ERROR user=a email=[EMAIL] phone=[PHONE] token=[TOKEN]</code>.</p>\r\n  <p>e. Kết thúc chương trình client.</p>\r\n</div>",
+      "protocolType": "SOAP_CHARACTER",
+      "level": "HARD",
+      "status": "APPROVED",
+      "isPublic": true,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "4tJ2XFK5",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 6
+  },
+  {
+    "id": "6393aace-30ee-444b-b6f2-8077ba78c0ed",
+    "contestId": "cd57b1ba-a746-46df-afe6-fd50b8f55267",
+    "question": {
+      "id": "6393aace-30ee-444b-b6f2-8077ba78c0ed",
+      "createdAt": "2026-05-18T15:36:57.813379",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 2261,
+      "alias": "Q2261",
+      "title": "[SOAP Object] Tính giá ProductY sau thuế và giảm giá",
+      "description": "<div>\r\n  <p>Một dịch vụ web hỗ trợ SOAP version 1.1 được định nghĩa trong ObjectService?wsdl và triển khai tại http://&lt;Exam_IP&gt;:2221/ObjectService?wsdl.</p>\r\n  <h4>Yêu cầu</h4>\r\n  <p>a. Sử dụng mã sinh viên và mã câu hỏi làm tham số khi gọi các phương thức SOAP. Ví dụ: <code>studentCode=\"B21DCCN001\"</code>, <code>qCode=\"5AD2B818\"</code>.</p>\r\n  <p>b. Triệu gọi phương thức <code>requestProductY(studentCode, qCode)</code> để nhận đối tượng <code>ProductY</code> gồm <code>price</code>, <code>taxRate</code>, <code>discount</code> và <code>finalPrice</code>. Ví dụ: <code>price=100;taxRate=10;discount=5</code>.</p>\r\n  <p>c. Tính <code>finalPrice = round2(price * (1 + taxRate/100) * (1 - discount/100))</code> và cập nhật thuộc tính <code>finalPrice</code> trong đối tượng.</p>\r\n  <p>d. Triệu gọi <code>submitProductY(studentCode, qCode, data)</code> để gửi đối tượng <code>ProductY</code> đã cập nhật. Ví dụ: <code>finalPrice=104.50</code>.</p>\r\n  <p>e. Kết thúc chương trình client.</p>\r\n</div>",
+      "protocolType": "SOAP_OBJECT",
+      "level": "HARD",
+      "status": "APPROVED",
+      "isPublic": false,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "pypD5SFO",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 4
+  }
+]

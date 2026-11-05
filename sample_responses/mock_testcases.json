@@ -1,0 +1,3319 @@
+{
+  "600": {
+    "code": 600,
+    "alias": "JNP-600",
+    "title": "TCP - Character Stream",
+    "protocolType": "TCP_CHARACTER",
+    "port": 2208,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;EC4F899B",
+    "sampleInput": "giHgWHwkLf0Rd0.io, I7jpjuRw13D.io, wXf6GP3KP.vn, MdpIzhxDVtTFTF.edu, TUHuMfn25chmw.vn, HHjE9.com, 4hJld2m2yiweto.vn, y2L4SQwH.vn, s2aUrZGdzS.com, 4hXfJe9giAA.edu",
+    "sampleExpectedOutput": "MdpIzhxDVtTFTF.edu, 4hXfJe9giAA.edu",
+    "allExamples": [
+      "B15DCCN999;EC4F899B",
+      "giHgWHwkLf0Rd0.io, I7jpjuRw13D.io, wXf6GP3KP.vn, MdpIzhxDVtTFTF.edu, TUHuMfn25chmw.vn, HHjE9.com, 4hJld2m2yiweto.vn, y2L4SQwH.vn, s2aUrZGdzS.com, 4hXfJe9giAA.edu",
+      "MdpIzhxDVtTFTF.edu, 4hXfJe9giAA.edu"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B15DCCN999;EC4F899B",
+      "MdpIzhxDVtTFTF.edu, 4hXfJe9giAA.edu"
+    ]
+  },
+  "700": {
+    "code": 700,
+    "alias": "JNP-700",
+    "title": "TCP - Byte Stream",
+    "protocolType": "TCP_BYTE_RAW",
+    "port": 2206,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;C64967DD",
+    "sampleInput": "2|5|9|11",
+    "sampleExpectedOutput": "27",
+    "allExamples": [
+      "B16DCCN999;C64967DD",
+      "2|5|9|11",
+      "27"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;C64967DD",
+      "|",
+      "2|5|9|11",
+      "27"
+    ]
+  },
+  "701": {
+    "code": 701,
+    "alias": "JNP-701",
+    "title": "TCP - Byte Stream",
+    "protocolType": "TCP_BYTE_RAW",
+    "port": 2206,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;FF49DC02",
+    "sampleInput": "1,3,9,19,33,20",
+    "sampleExpectedOutput": "1,19,20",
+    "allExamples": [
+      "B16DCCN999;FF49DC02",
+      "1,3,9,19,33,20",
+      "1,19,20"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;FF49DC02",
+      ",",
+      "1,3,9,19,33,20",
+      "1,19,20"
+    ]
+  },
+  "702": {
+    "code": 702,
+    "alias": "JNP-702",
+    "title": "TCP - Byte Stream",
+    "protocolType": "TCP_BYTE_RAW",
+    "port": 2206,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;2B3A6510",
+    "sampleInput": "1,3,9,19,33,20",
+    "sampleExpectedOutput": "20,5",
+    "allExamples": [
+      "B16DCCN999;2B3A6510",
+      "1,3,9,19,33,20",
+      "20,5"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;2B3A6510",
+      ",",
+      "1,3,9,19,33,20"
+    ]
+  },
+  "704": {
+    "code": 704,
+    "alias": "JNP-704",
+    "title": "TCP - Byte Stream",
+    "protocolType": "TCP_BYTE_RAW",
+    "port": 2206,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;76B68B3B",
+    "sampleInput": "5,10,20,25,50,40,30,35",
+    "sampleExpectedOutput": "5,10,20,25,30,35;6",
+    "allExamples": [
+      "B16DCCN999;76B68B3B",
+      "5,10,20,25,50,40,30,35",
+      "5,10,20,25,30,35;6"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;76B68B3B",
+      ",",
+      "5,10,20,25,50,40,30,35",
+      "dãy con;độ dài",
+      "5,10,20,25,30,35;6"
+    ]
+  },
+  "705": {
+    "code": 705,
+    "alias": "JNP-705",
+    "title": "TCP - Byte Stream",
+    "protocolType": "TCP_BYTE_RAW",
+    "port": 2206,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;10048F28",
+    "sampleInput": "abcabcbb",
+    "sampleExpectedOutput": "abc;3",
+    "allExamples": [
+      "B16DCCN999;10048F28",
+      "abcabcbb",
+      "abc;3"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;10048F28",
+      "abcabcbb",
+      "longestsubstring;length",
+      "abc;3"
+    ]
+  },
+  "721": {
+    "code": 721,
+    "alias": "JNP-721",
+    "title": "TCP - Character Stream",
+    "protocolType": "TCP_CHARACTER",
+    "port": 2208,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;BAA62945",
+    "sampleInput": "dgUOo ch2k22ldsOo",
+    "sampleExpectedOutput": "d:2,O:2,o:2,2:3,",
+    "allExamples": [
+      "B15DCCN999;BAA62945",
+      "dgUOo ch2k22ldsOo",
+      "d:2,O:2,o:2,2:3,"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B15DCCN999;BAA62945",
+      "dgUOo ch2k22ldsOo",
+      "d:2,O:2,o:2,2:3,"
+    ]
+  },
+  "800": {
+    "code": 800,
+    "alias": "JNP-800",
+    "title": "TCP - Data Stream",
+    "protocolType": "TCP_DATA",
+    "port": 2207,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;1D25ED92",
+    "sampleInput": "",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "B15DCCN999;1D25ED92"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B15DCCN999;1D25ED92"
+    ]
+  },
+  "801": {
+    "code": 801,
+    "alias": "JNP-801",
+    "title": "UDP - Data Type",
+    "protocolType": "UDP_DATA",
+    "port": 2207,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;371EA16D",
+    "sampleInput": "requestId;10;2,3,5,6,9",
+    "sampleExpectedOutput": "requestId;1,4,7,8,10",
+    "allExamples": [
+      ";B15DCCN001;371EA16D",
+      "requestId;10;2,3,5,6,9",
+      "requestId;1,4,7,8,10"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;371EA16D",
+      "requestId; n; A1,A2,...An",
+      "requestId;10;2,3,5,6,9",
+      "requestId;B1,B2,...,Bm",
+      "requestId;1,4,7,8,10"
+    ]
+  },
+  "802": {
+    "code": 802,
+    "alias": "JNP-802",
+    "title": "UDP - Data Type",
+    "protocolType": "UDP_DATA",
+    "port": 2207,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;73457A17",
+    "sampleInput": "requestId;10;2,3,5,6,5",
+    "sampleExpectedOutput": "requestId;1,4,7,8,9,10",
+    "allExamples": [
+      ";B15DCCN001;73457A17",
+      "requestId;10;2,3,5,6,5",
+      "requestId;1,4,7,8,9,10"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;73457A17",
+      "requestId;n;A1,A2,...An",
+      "requestId;10;2,3,5,6,5",
+      "requestId;B1,B2,...,Bm",
+      "requestId;1,4,7,8,9,10"
+    ]
+  },
+  "803": {
+    "code": 803,
+    "alias": "JNP-803",
+    "title": "UDP - String",
+    "protocolType": "UDP_STRING",
+    "port": 2208,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;EE29C059",
+    "sampleInput": "requestId;Qnc8d5x78aldSGWWmaAAjyg3",
+    "sampleExpectedOutput": "requestId;8:4,9,",
+    "allExamples": [
+      ";B15DCCN001;EE29C059",
+      "requestId;Qnc8d5x78aldSGWWmaAAjyg3",
+      "requestId;8:4,9,"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;EE29C059",
+      "requestId; data",
+      "requestId;Qnc8d5x78aldSGWWmaAAjyg3",
+      "requestId;8:4,9,"
+    ]
+  },
+  "914": {
+    "code": 914,
+    "alias": "JNP-914",
+    "title": "TCP - Data Stream",
+    "protocolType": "TCP_DATA",
+    "port": 2207,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;D68C93F7",
+    "sampleInput": "với s = 3 thì ký tự A sẽ được thay thế bằng ký tự D",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "với s = 3 thì ký tự A sẽ được thay thế bằng ký tự D",
+      "B15DCCN999;D68C93F7"
+    ],
+    "allCodeTags": [
+      "A",
+      "D",
+      "studentCode;qCode",
+      "B15DCCN999;D68C93F7"
+    ]
+  },
+  "915": {
+    "code": 915,
+    "alias": "JNP-915",
+    "title": "TCP - Character Stream",
+    "protocolType": "TCP_CHARACTER",
+    "port": 2208,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;7D6265E3",
+    "sampleInput": "",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "B15DCCN999;7D6265E3"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B15DCCN999;7D6265E3"
+    ]
+  },
+  "917": {
+    "code": 917,
+    "alias": "JNP-917",
+    "title": "TCP - Object Stream",
+    "protocolType": "TCP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;5AD2B818",
+    "sampleInput": "“lenovo thinkpad T520” bị chuyển thành “T520 thinkpad lenovo”",
+    "sampleExpectedOutput": "từ 9981 thành 1899",
+    "allExamples": [
+      "“lenovo thinkpad T520” bị chuyển thành “T520 thinkpad lenovo”",
+      "từ 9981 thành 1899",
+      "B15DCCN999;5AD2B818"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B15DCCN999;5AD2B818"
+    ]
+  },
+  "918": {
+    "code": 918,
+    "alias": "JNP-918",
+    "title": "TCP - Object Stream",
+    "protocolType": "TCP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;F2DA54F3",
+    "sampleInput": "nguyen van hai duong -> DUONG, Nguyen Van Hai",
+    "sampleExpectedOutput": "10-11-2012 -> 11/10/2012",
+    "allExamples": [
+      "nguyen van hai duong -> DUONG, Nguyen Van Hai",
+      "10-11-2012 -> 11/10/2012",
+      "nguyen van hai duong -> nvhduong",
+      "B15DCCN999;F2DA54F3"
+    ],
+    "allCodeTags": [
+      "nguyen van hai duong -> DUONG, Nguyen Van Hai",
+      "10-11-2012 -> 11/10/2012",
+      "nguyen van hai duong -> nvhduong",
+      "studentCode;qCode",
+      "B15DCCN999;F2DA54F3"
+    ]
+  },
+  "931": {
+    "code": 931,
+    "alias": "JNP-931",
+    "title": "UDP - Data Type",
+    "protocolType": "UDP_DATA",
+    "port": 2207,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;DC73CA2E",
+    "sampleInput": "requestId;a1,a2,...,a50",
+    "sampleExpectedOutput": "requestId;max,min",
+    "allExamples": [
+      ";B15DCCN001;DC73CA2E"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;DC73CA2E",
+      "requestId;a1,a2,...,a50",
+      "requestId;max,min"
+    ]
+  },
+  "932": {
+    "code": 932,
+    "alias": "JNP-932",
+    "title": "UDP - String",
+    "protocolType": "UDP_STRING",
+    "port": 2208,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;5B35BCC1",
+    "sampleInput": "requestId;data",
+    "sampleExpectedOutput": "requestId;data",
+    "allExamples": [
+      ";B15DCCN001;5B35BCC1"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;5B35BCC1",
+      "requestId;data",
+      "requestId;data"
+    ]
+  },
+  "933": {
+    "code": 933,
+    "alias": "JNP-933",
+    "title": "UDP - Object",
+    "protocolType": "UDP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;EE29C059",
+    "sampleInput": "nguyen van tuan nam -> namnvt@ptit.edu.vn. Gán giá trị này cho thuộc tính email của đối tượng nhận được",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      ";B15DCCN001;EE29C059",
+      "nguyen van tuan nam -> namnvt@ptit.edu.vn. Gán giá trị này cho thuộc tính email của đối tượng nhận được"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;EE29C059"
+    ]
+  },
+  "934": {
+    "code": 934,
+    "alias": "JNP-934",
+    "title": "UDP - Data Type",
+    "protocolType": "UDP_DATA",
+    "port": 2207,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;825EE3A7",
+    "sampleInput": "với s = 3 thì ký tự A sẽ được thay thế bằng ký tự D",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "với s = 3 thì ký tự A sẽ được thay thế bằng ký tự D",
+      ";B15DCCN001;825EE3A7"
+    ],
+    "allCodeTags": [
+      "A",
+      "D",
+      ";studentCode;qCode",
+      ";B15DCCN001;825EE3A7",
+      "requestId;strEncode;s",
+      "requestId;strDecode"
+    ]
+  },
+  "937": {
+    "code": 937,
+    "alias": "JNP-937",
+    "title": "UDP - Object",
+    "protocolType": "UDP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;EE29C059",
+    "sampleInput": "“lenovo thinkpad T520” bị chuyển thành “T520 thinkpad lenovo”",
+    "sampleExpectedOutput": "từ 9981 thành 1899",
+    "allExamples": [
+      "“lenovo thinkpad T520” bị chuyển thành “T520 thinkpad lenovo”",
+      "từ 9981 thành 1899",
+      ";B15DCCN001;EE29C059"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;EE29C059"
+    ]
+  },
+  "938": {
+    "code": 938,
+    "alias": "JNP-938",
+    "title": "UDP - Object",
+    "protocolType": "UDP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;EE29C059",
+    "sampleInput": "nguyen van hai duong -> DUONG, Nguyen Van Hai",
+    "sampleExpectedOutput": "10-11-2012 -> 11/10/2012",
+    "allExamples": [
+      "nguyen van hai duong -> DUONG, Nguyen Van Hai",
+      "10-11-2012 -> 11/10/2012",
+      "nguyen van hai duong -> nvhduong",
+      ";B15DCCN001;EE29C059"
+    ],
+    "allCodeTags": [
+      "nguyen van hai duong -> DUONG, Nguyen Van Hai",
+      "10-11-2012 -> 11/10/2012",
+      "nguyen van hai duong -> nvhduong",
+      ";studentCode;qCode",
+      ";B15DCCN001;EE29C059"
+    ]
+  },
+  "953": {
+    "code": 953,
+    "alias": "JNP-953",
+    "title": "RMI + UDP",
+    "protocolType": "MIXED",
+    "port": 2208,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "id;code",
+    "sampleExpectedOutput": "",
+    "allExamples": [],
+    "allCodeTags": [
+      "id;code"
+    ]
+  },
+  "954": {
+    "code": 954,
+    "alias": "JNP-954",
+    "title": "RMI + TCP",
+    "protocolType": "MIXED",
+    "port": 2208,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "id;qCode",
+    "sampleExpectedOutput": "",
+    "allExamples": [],
+    "allCodeTags": [
+      "id;qCode"
+    ]
+  },
+  "961": {
+    "code": 961,
+    "alias": "JNP-961",
+    "title": "WS - DataService",
+    "protocolType": "WS_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "7602,9136,1090,34319,7830,6179,10584,20166,28199,30250,32179,22544,3222,10320,30590,19279",
+    "sampleExpectedOutput": "91367830760261793431932223217930590302502819922544201661927910901058410320",
+    "allExamples": [
+      "7602,9136,1090,34319,7830,6179,10584,20166,28199,30250,32179,22544,3222,10320,30590,19279",
+      "91367830760261793431932223217930590302502819922544201661927910901058410320"
+    ],
+    "allCodeTags": [
+      "7602,9136,1090,34319,7830,6179,10584,20166,28199,30250,32179,22544,3222,10320,30590,19279",
+      "91367830760261793431932223217930590302502819922544201661927910901058410320"
+    ]
+  },
+  "981": {
+    "code": 981,
+    "alias": "JNP-981",
+    "title": "TCP - Data Stream",
+    "protocolType": "TCP_DATA",
+    "port": 2207,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B10DCCN000;0D135D6A",
+    "sampleInput": "Nếu bạn nhận được n = 21 từ máy chủ, có nghĩa bạn sẽ nhận giá trị tung xúc xắc 21 lần",
+    "sampleExpectedOutput": "Server gửi lần lượt 21 giá trị là 1,6,4,4,4,3,2,6,3,4,5,4,5,2,4,5,4,6,1,5,5",
+    "allExamples": [
+      "B10DCCN000;0D135D6A",
+      "Nếu bạn nhận được n = 21 từ máy chủ, có nghĩa bạn sẽ nhận giá trị tung xúc xắc 21 lần",
+      "Server gửi lần lượt 21 giá trị là 1,6,4,4,4,3,2,6,3,4,5,4,5,2,4,5,4,6,1,5,5",
+      "gửi lên server lần lượt 6 giá trị là 0.0952381, 0.0952381, 0.0952381, 0.33333334, 0.23809524, 0.142857155"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B10DCCN000;0D135D6A"
+    ]
+  },
+  "983": {
+    "code": 983,
+    "alias": "JNP-983",
+    "title": "TCP - Object Stream",
+    "protocolType": "TCP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;1E08CA31",
+    "sampleInput": "",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "B15DCCN999;1E08CA31"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B15DCCN999;1E08CA31"
+    ]
+  },
+  "987": {
+    "code": 987,
+    "alias": "JNP-987",
+    "title": "UDP - Data Type",
+    "protocolType": "UDP_DATA",
+    "port": 2207,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN004;99D9F604",
+    "sampleInput": "requestId;z1,z2,...,z50",
+    "sampleExpectedOutput": "requestId;secondMax,secondMin",
+    "allExamples": [
+      ";B15DCCN004;99D9F604"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN004;99D9F604",
+      "requestId;z1,z2,...,z50",
+      "requestId;secondMax,secondMin"
+    ]
+  },
+  "988": {
+    "code": 988,
+    "alias": "JNP-988",
+    "title": "TCP - Data Stream",
+    "protocolType": "TCP_DATA",
+    "port": 2207,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B10DCCN000;A1B2C3D4",
+    "sampleInput": "n = 5, và các giá trị 5, 9, 3, 6, 8",
+    "sampleExpectedOutput": ", gửi lên lần lượt: 31, 6.2, 4.5599995.",
+    "allExamples": [
+      "B10DCCN000;A1B2C3D4",
+      "n = 5, và các giá trị 5, 9, 3, 6, 8",
+      ", gửi lên lần lượt: 31, 6.2, 4.5599995."
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B10DCCN000;A1B2C3D4"
+    ]
+  },
+  "989": {
+    "code": 989,
+    "alias": "JNP-989",
+    "title": "TCP - Character Stream",
+    "protocolType": "TCP_CHARACTER",
+    "port": 2208,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;A1B2C3D4",
+    "sampleInput": "",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "B15DCCN999;A1B2C3D4"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B15DCCN999;A1B2C3D4"
+    ]
+  },
+  "991": {
+    "code": 991,
+    "alias": "JNP-991",
+    "title": "UDP - Data Type",
+    "protocolType": "UDP_DATA",
+    "port": 2207,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN011;A1F3D5B7",
+    "sampleInput": "requestId;num",
+    "sampleExpectedOutput": "requestId;sumDigits",
+    "allExamples": [
+      ";B15DCCN011;A1F3D5B7"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN011;A1F3D5B7",
+      "requestId;num",
+      "requestId;sumDigits"
+    ]
+  },
+  "992": {
+    "code": 992,
+    "alias": "JNP-992",
+    "title": "UDP - Data Type",
+    "protocolType": "UDP_DATA",
+    "port": 2207,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN009;F3E8B2D4",
+    "sampleInput": "requestId;n",
+    "sampleExpectedOutput": "requestId;p1,p2,...,pk",
+    "allExamples": [
+      ";B15DCCN009;F3E8B2D4"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN009;F3E8B2D4",
+      "requestId;n",
+      "requestId;p1,p2,...,pk"
+    ]
+  },
+  "993": {
+    "code": 993,
+    "alias": "JNP-993",
+    "title": "UDP - String",
+    "protocolType": "UDP_STRING",
+    "port": 2208,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;9F8C2D3A",
+    "sampleInput": "requestId;aaabbbccdaa",
+    "sampleExpectedOutput": "Với chuỗi aaazbbbccdaaz , kết quả sẽ là: requestId;5a2z3b2c1d",
+    "allExamples": [
+      ";B15DCCN001;9F8C2D3A",
+      "requestId;aaabbbccdaa",
+      "Với chuỗi aaazbbbccdaaz , kết quả sẽ là: requestId;5a2z3b2c1d"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;9F8C2D3A",
+      "requestId;data",
+      "requestId;aaabbbccdaa",
+      "requestId;processedData",
+      "aaazbbbccdaaz",
+      "requestId;5a2z3b2c1d"
+    ]
+  },
+  "994": {
+    "code": 994,
+    "alias": "JNP-994",
+    "title": "TCP - Byte Stream",
+    "protocolType": "TCP_BYTE_RAW",
+    "port": 2206,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;2B3A6510",
+    "sampleInput": "7",
+    "sampleExpectedOutput": "kết quả với n = 7 thì dãy: 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1; 17",
+    "allExamples": [
+      "B16DCCN999;2B3A6510",
+      "7",
+      "kết quả với n = 7 thì dãy: 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1; 17"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;2B3A6510",
+      "7"
+    ]
+  },
+  "996": {
+    "code": 996,
+    "alias": "JNP-996",
+    "title": "TCP - Data Stream",
+    "protocolType": "TCP_DATA",
+    "port": 2207,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;D68C93F7",
+    "sampleInput": "15226",
+    "sampleExpectedOutput": "15226 sẽ thành 11101101111010;3B7A",
+    "allExamples": [
+      "B15DCCN999;D68C93F7",
+      "15226",
+      "15226 sẽ thành 11101101111010;3B7A"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B15DCCN999;D68C93F7",
+      "15226",
+      "11101101111010;3B7A"
+    ]
+  },
+  "997": {
+    "code": 997,
+    "alias": "JNP-997",
+    "title": "UDP - Data Type",
+    "protocolType": "UDP_DATA",
+    "port": 2207,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN009;F3E8B2D4",
+    "sampleInput": "veM3xgA1g:4,IPFfgEanY:5,aWXlSzDwe:2,PHupvPc:3,PR3gH8ahN:6,UEEKHLIt:7,M6dpWTE:1",
+    "sampleExpectedOutput": "chuỗi đã được xử lý: M6dpWTE,aWXlSzDwe,PHupvPc,veM3xgA1g,IPFfgEanY,PR3gH8ahN,UEEKHLIt",
+    "allExamples": [
+      ";B15DCCN009;F3E8B2D4",
+      "veM3xgA1g:4,IPFfgEanY:5,aWXlSzDwe:2,PHupvPc:3,PR3gH8ahN:6,UEEKHLIt:7,M6dpWTE:1",
+      "chuỗi đã được xử lý: M6dpWTE,aWXlSzDwe,PHupvPc,veM3xgA1g,IPFfgEanY,PR3gH8ahN,UEEKHLIt"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN009;F3E8B2D4",
+      "requestId;string",
+      "veM3xgA1g:4,IPFfgEanY:5,aWXlSzDwe:2,PHupvPc:3,PR3gH8ahN:6,UEEKHLIt:7,M6dpWTE:1",
+      "requestId;string",
+      "M6dpWTE,aWXlSzDwe,PHupvPc,veM3xgA1g,IPFfgEanY,PR3gH8ahN,UEEKHLIt"
+    ]
+  },
+  "998": {
+    "code": 998,
+    "alias": "JNP-998",
+    "title": "UDP - String",
+    "protocolType": "UDP_STRING",
+    "port": 2208,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN000;XbYdNZ3",
+    "sampleInput": "requestId;0100011111001101,1101000111110101",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      ";B15DCCN000;XbYdNZ3",
+      "requestId;0100011111001101,1101000111110101"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN000;XbYdNZ3",
+      "requestId;b1,b2",
+      "requestId;0100011111001101,1101000111110101",
+      "requestId;sum"
+    ]
+  },
+  "1000": {
+    "code": 1000,
+    "alias": "JNP-1000",
+    "title": "UDP - Object",
+    "protocolType": "UDP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B23DCCN005;eQkvAeId",
+    "sampleInput": "",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      ";B23DCCN005;eQkvAeId"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B23DCCN005;eQkvAeId"
+    ]
+  },
+  "1001": {
+    "code": 1001,
+    "alias": "JNP-1001",
+    "title": "UDP - Object",
+    "protocolType": "UDP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B23DCCN006;ITleSdqV",
+    "sampleInput": "\"john doe\" thành \"John Doe\"",
+    "sampleExpectedOutput": "hireDate 2023-07-15 thì x = 2 + 0 + 2 + 3 = 7), làm tròn 2 chữ số thập phân",
+    "allExamples": [
+      ";B23DCCN006;ITleSdqV",
+      "\"john doe\" thành \"John Doe\"",
+      "hireDate 2023-07-15 thì x = 2 + 0 + 2 + 3 = 7), làm tròn 2 chữ số thập phân",
+      "\"2023-07-15\" thành 15/07/2023"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B23DCCN006;ITleSdqV",
+      "15/07/2023"
+    ]
+  },
+  "1002": {
+    "code": 1002,
+    "alias": "JNP-1002",
+    "title": "RMI - Object",
+    "protocolType": "RMI_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "",
+    "sampleExpectedOutput": "",
+    "allExamples": [],
+    "allCodeTags": []
+  },
+  "1311": {
+    "code": 1311,
+    "alias": "JNP-1311",
+    "title": "RMI - Byte",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu dữ liệu nhị phân nhận được là [72, 101, 108, 108, 111] (tương ứng với chuỗi Hello ), và khóa là PTIT , chương trình sẽ thực hiện mã hóa như sau:",
+    "sampleExpectedOutput": "PTIT",
+    "allExamples": [
+      "Nếu dữ liệu nhị phân nhận được là [72, 101, 108, 108, 111] (tương ứng với chuỗi Hello ), và khóa là PTIT , chương trình sẽ thực hiện mã hóa như sau:"
+    ],
+    "allCodeTags": [
+      "PTIT",
+      "Hello",
+      "PTIT",
+      "PTIT"
+    ]
+  },
+  "1312": {
+    "code": 1312,
+    "alias": "JNP-1312",
+    "title": "RMI - Byte",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu dữ liệu nhị phân nhận được là [72, 101, 108, 108, 111] (tương ứng với chuỗi Hello ), chương trình sẽ thực hiện mã hóa Caesar với độ dịch là 5. Kết quả mã hóa là mảng [77, 106, 113, 113, 116], tương ứng với chuỗi Mjqqt",
+    "sampleExpectedOutput": "Mjqqt",
+    "allExamples": [
+      "Nếu dữ liệu nhị phân nhận được là [72, 101, 108, 108, 111] (tương ứng với chuỗi Hello ), chương trình sẽ thực hiện mã hóa Caesar với độ dịch là 5. Kết quả mã hóa là mảng [77, 106, 113, 113, 116], tương ứng với chuỗi Mjqqt"
+    ],
+    "allCodeTags": [
+      "Hello",
+      "Mjqqt"
+    ]
+  },
+  "1313": {
+    "code": 1313,
+    "alias": "JNP-1313",
+    "title": "RMI - Byte",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu dữ liệu byte nhận được là [10, 10, 10, 20, 20, 30, 30, 30, 30], chương trình sẽ thực hiện nén RLE như sau:",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Nếu dữ liệu byte nhận được là [10, 10, 10, 20, 20, 30, 30, 30, 30], chương trình sẽ thực hiện nén RLE như sau:"
+    ],
+    "allCodeTags": []
+  },
+  "1314": {
+    "code": 1314,
+    "alias": "JNP-1314",
+    "title": "RMI - Byte",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu dữ liệu Base64 nhận được là chuỗi mã hóa SGVsbG8gV29ybGQ= (tương ứng với chuỗi \"Hello World\" trong ASCII), chương trình sẽ thực hiện giải mã để nhận được mảng dữ liệu nhị phân [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Nếu dữ liệu Base64 nhận được là chuỗi mã hóa SGVsbG8gV29ybGQ= (tương ứng với chuỗi \"Hello World\" trong ASCII), chương trình sẽ thực hiện giải mã để nhận được mảng dữ liệu nhị phân [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]"
+    ],
+    "allCodeTags": []
+  },
+  "1315": {
+    "code": 1315,
+    "alias": "JNP-1315",
+    "title": "RMI - Byte",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu dữ liệu nhị phân nhận được là [72, 101, 108, 108, 111], chương trình sẽ chuyển đổi mảng này thành chuỗi hex 48656c6c6f , tương ứng với chuỗi Hello trong ASCII",
+    "sampleExpectedOutput": "Hello",
+    "allExamples": [
+      "Nếu dữ liệu nhị phân nhận được là [72, 101, 108, 108, 111], chương trình sẽ chuyển đổi mảng này thành chuỗi hex 48656c6c6f , tương ứng với chuỗi Hello trong ASCII"
+    ],
+    "allCodeTags": [
+      "48656c6c6f",
+      "Hello"
+    ]
+  },
+  "1316": {
+    "code": 1316,
+    "alias": "JNP-1316",
+    "title": "RMI - Byte",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu mảng dữ liệu nhận được là [72, 101, 108], chương trình sẽ thực hiện chuyển đổi từng byte thành dạng bát phân:",
+    "sampleExpectedOutput": "110145154",
+    "allExamples": [
+      "Nếu mảng dữ liệu nhận được là [72, 101, 108], chương trình sẽ thực hiện chuyển đổi từng byte thành dạng bát phân:"
+    ],
+    "allCodeTags": [
+      "110",
+      "145",
+      "154",
+      "110145154"
+    ]
+  },
+  "1317": {
+    "code": 1317,
+    "alias": "JNP-1317",
+    "title": "RMI - Byte",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu mảng dữ liệu nhận được là [3, 1, 5, 12, 2, 11, 3], giá trị K = 3, chương trình sẽ tìm phần tử lớn thứ ba -> Kết quả là 5",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Nếu mảng dữ liệu nhận được là [3, 1, 5, 12, 2, 11, 3], giá trị K = 3, chương trình sẽ tìm phần tử lớn thứ ba -> Kết quả là 5"
+    ],
+    "allCodeTags": []
+  },
+  "1318": {
+    "code": 1318,
+    "alias": "JNP-1318",
+    "title": "RMI - Byte",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu mảng dữ liệu nhận được là [1, 2, 3, 4, 5], sau khi phân chia chẵn-lẻ, mảng kết quả sẽ là [2, 4, 1, 3, 5] (tất cả phần tử chẵn được đặt trước, theo sau là tất cả phần tử lẻ)",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Nếu mảng dữ liệu nhận được là [1, 2, 3, 4, 5], sau khi phân chia chẵn-lẻ, mảng kết quả sẽ là [2, 4, 1, 3, 5] (tất cả phần tử chẵn được đặt trước, theo sau là tất cả phần tử lẻ)"
+    ],
+    "allCodeTags": []
+  },
+  "1319": {
+    "code": 1319,
+    "alias": "JNP-1319",
+    "title": "RMI - Byte",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu mảng dữ liệu nhận được là [1, 2, 3, 2, 1], chương trình sẽ tìm ra phần tử xuất hiện ít nhất là 3 (xuất hiện 1 lần), nên mảng gửi lên server là [3, 1]",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Nếu mảng dữ liệu nhận được là [1, 2, 3, 2, 1], chương trình sẽ tìm ra phần tử xuất hiện ít nhất là 3 (xuất hiện 1 lần), nên mảng gửi lên server là [3, 1]"
+    ],
+    "allCodeTags": []
+  },
+  "1320": {
+    "code": 1320,
+    "alias": "JNP-1320",
+    "title": "RMI - Byte",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu mảng dữ liệu nhận được là [1, 2, 3, 2, 1, 2], phần tử xuất hiện nhiều nhất là 2, với tần suất xuất hiện 3 lần, nên mảng gửi lên server là [2, 3]",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Nếu mảng dữ liệu nhận được là [1, 2, 3, 2, 1, 2], phần tử xuất hiện nhiều nhất là 2, với tần suất xuất hiện 3 lần, nên mảng gửi lên server là [2, 3]"
+    ],
+    "allCodeTags": []
+  },
+  "1322": {
+    "code": 1322,
+    "alias": "JNP-1322",
+    "title": "RMI - Data",
+    "protocolType": "RMI_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Với Chuỗi 3, 1, 5, 12, 2, 11; 3 nghĩa là mảng [3, 1, 5, 12, 2, 11] và K = 3 -> cần tìm phần tử lớn thứ 3 là 5",
+    "sampleExpectedOutput": "3, 1, 5, 12, 2, 11; 3",
+    "allExamples": [
+      "Với Chuỗi 3, 1, 5, 12, 2, 11; 3 nghĩa là mảng [3, 1, 5, 12, 2, 11] và K = 3 -> cần tìm phần tử lớn thứ 3 là 5"
+    ],
+    "allCodeTags": [
+      "3, 1, 5, 12, 2, 11; 3"
+    ]
+  },
+  "1324": {
+    "code": 1324,
+    "alias": "JNP-1324",
+    "title": "RMI - Data",
+    "protocolType": "RMI_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Với tập hợp [1, 2, 3, 4] và K = 2, kết quả là danh sách các tổ hợp [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Với tập hợp [1, 2, 3, 4] và K = 2, kết quả là danh sách các tổ hợp [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]"
+    ],
+    "allCodeTags": []
+  },
+  "1325": {
+    "code": 1325,
+    "alias": "JNP-1325",
+    "title": "RMI - Data",
+    "protocolType": "RMI_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Với tập dữ liệu nhận được 2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0 , phương sai là 4.00 và độ lệch chuẩn là 2.00",
+    "sampleExpectedOutput": "variance : standard deviation",
+    "allExamples": [
+      "Với tập dữ liệu nhận được 2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0 , phương sai là 4.00 và độ lệch chuẩn là 2.00"
+    ],
+    "allCodeTags": [
+      "2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0",
+      "variance : standard deviation"
+    ]
+  },
+  "1326": {
+    "code": 1326,
+    "alias": "JNP-1326",
+    "title": "RMI - Data",
+    "protocolType": "RMI_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Với N = 20, kết quả là [1, 4, 9, 16]",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Với N = 20, kết quả là [1, 4, 9, 16]"
+    ],
+    "allCodeTags": []
+  },
+  "1329": {
+    "code": 1329,
+    "alias": "JNP-1329",
+    "title": "RMI - Data",
+    "protocolType": "RMI_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Với amount = 18 và mệnh giá đồng xu cố định [1, 2, 5, 10], kết quả là 4 (18 = 10 + 5 + 2 + 1). Chuỗi cần gửi lên server là: 4; 10,5,2,1",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Với amount = 18 và mệnh giá đồng xu cố định [1, 2, 5, 10], kết quả là 4 (18 = 10 + 5 + 2 + 1). Chuỗi cần gửi lên server là: 4; 10,5,2,1"
+    ],
+    "allCodeTags": []
+  },
+  "1330": {
+    "code": 1330,
+    "alias": "JNP-1330",
+    "title": "RMI - Data",
+    "protocolType": "RMI_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Với chuỗi 1, 2, 3 tổ hợp kế tiếp là 1, 3, 2. Nếu chuỗi là 3, 2, 1 (tổ hợp lớn nhất), kết quả sẽ là 1, 2, 3 (tổ hợp nhỏ nhất)",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Với chuỗi 1, 2, 3 tổ hợp kế tiếp là 1, 3, 2. Nếu chuỗi là 3, 2, 1 (tổ hợp lớn nhất), kết quả sẽ là 1, 2, 3 (tổ hợp nhỏ nhất)"
+    ],
+    "allCodeTags": []
+  },
+  "1332": {
+    "code": 1332,
+    "alias": "JNP-1332",
+    "title": "RMI - Character",
+    "protocolType": "RMI_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "chuỗi ban đầu PTIT;HELLO -> từ khóa PTIT và chuỗi mã hóa là: WXTED",
+    "sampleExpectedOutput": "WXTED",
+    "allExamples": [
+      "chuỗi ban đầu PTIT;HELLO -> từ khóa PTIT và chuỗi mã hóa là: WXTED"
+    ],
+    "allCodeTags": [
+      "PTIT;HELLO",
+      "PTIT",
+      "WXTED"
+    ]
+  },
+  "1333": {
+    "code": 1333,
+    "alias": "JNP-1333",
+    "title": "RMI - Character",
+    "protocolType": "RMI_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Chuỗi ban đầu A;HELLO -> Khóa A -> chuỗi mã hóa gồm các ký tự có mã [9, 4, 13, 13, 14] (ví dụ 'H' (72) XOR 'A' (65) = 9). Kết quả thường chứa ký tự không in được; gửi nguyên chuỗi này qua submitCharacter",
+    "sampleExpectedOutput": "A;HELLO",
+    "allExamples": [
+      "Chuỗi ban đầu A;HELLO -> Khóa A -> chuỗi mã hóa gồm các ký tự có mã [9, 4, 13, 13, 14] (ví dụ 'H' (72) XOR 'A' (65) = 9). Kết quả thường chứa ký tự không in được; gửi nguyên chuỗi này qua submitCharacter"
+    ],
+    "allCodeTags": [
+      "A;HELLO",
+      "A"
+    ]
+  },
+  "1334": {
+    "code": 1334,
+    "alias": "JNP-1334",
+    "title": "RMI - Character",
+    "protocolType": "RMI_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Chuỗi ban đầu HELLO -> Chuỗi mã hóa Base64 là: SEVMTE8=",
+    "sampleExpectedOutput": "SEVMTE8=",
+    "allExamples": [
+      "Chuỗi ban đầu HELLO -> Chuỗi mã hóa Base64 là: SEVMTE8="
+    ],
+    "allCodeTags": [
+      "HELLO",
+      "SEVMTE8="
+    ]
+  },
+  "1335": {
+    "code": 1335,
+    "alias": "JNP-1335",
+    "title": "RMI - Character",
+    "protocolType": "RMI_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Chuỗi ban đầu \"Hello World!\" -> Chuỗi mã hóa URL là: \"Hello%20World!\"",
+    "sampleExpectedOutput": "- _ . ~ ! * ' ( ) ; : @ & = + $ , /",
+    "allExamples": [
+      "Chuỗi ban đầu \"Hello World!\" -> Chuỗi mã hóa URL là: \"Hello%20World!\""
+    ],
+    "allCodeTags": [
+      "~=+%^*/()[]{}!@#$?|",
+      "new java.net.URI(null, null, s, null).toASCIIString()",
+      "% \"  [ ] { } | \\ ^",
+      "?",
+      "#",
+      "%XX",
+      "- _ . ~ ! * ' ( ) ; : @ & = + $ , /"
+    ]
+  },
+  "1336": {
+    "code": 1336,
+    "alias": "JNP-1336",
+    "title": "RMI - Character",
+    "protocolType": "RMI_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "\"MCMXCIV\" -> 1994",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "\"MCMXCIV\" -> 1994"
+    ],
+    "allCodeTags": [
+      "\"MCMXCIV\" -> 1994"
+    ]
+  },
+  "1337": {
+    "code": 1337,
+    "alias": "JNP-1337",
+    "title": "RMI - Character",
+    "protocolType": "RMI_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "58 -> \"LVIII\"",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "58 -> \"LVIII\""
+    ],
+    "allCodeTags": [
+      "58 -> \"LVIII\""
+    ]
+  },
+  "1338": {
+    "code": 1338,
+    "alias": "JNP-1338",
+    "title": "RMI - Character",
+    "protocolType": "RMI_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Chuỗi ban đầu \"Hello world\" -> Kết quả đếm tần số ký tự: { H : 1, e : 1, l : 3, o : 2, \" \": 1, w : 1, r : 1, d : 1}",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Chuỗi ban đầu \"Hello world\" -> Kết quả đếm tần số ký tự: { H : 1, e : 1, l : 3, o : 2, \" \": 1, w : 1, r : 1, d : 1}"
+    ],
+    "allCodeTags": [
+      "H",
+      "e",
+      "l",
+      "o",
+      "w",
+      "r",
+      "d"
+    ]
+  },
+  "1339": {
+    "code": 1339,
+    "alias": "JNP-1339",
+    "title": "RMI - Character",
+    "protocolType": "RMI_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Chuỗi JSON ban đầu { name : Alice , age : 25, city : Wonderland , country : Fictionland } -> Kết quả trích xuất: name: Alice, city: Wonderland; age: 25, country: Fictionland",
+    "sampleExpectedOutput": "name: Alice, city: Wonderland; age: 25, country: Fictionland",
+    "allExamples": [
+      "Chuỗi JSON ban đầu { name : Alice , age : 25, city : Wonderland , country : Fictionland } -> Kết quả trích xuất: name: Alice, city: Wonderland; age: 25, country: Fictionland"
+    ],
+    "allCodeTags": [
+      "name",
+      "Alice",
+      "age",
+      "city",
+      "Wonderland",
+      "country",
+      "Fictionland",
+      "name: Alice, city: Wonderland; age: 25, country: Fictionland"
+    ]
+  },
+  "1341": {
+    "code": 1341,
+    "alias": "JNP-1341",
+    "title": "RMI - Object",
+    "protocolType": "RMI_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": ", 14 sẽ thành 1 + 4 = 5)",
+    "sampleExpectedOutput": ", nếu experienceYears là 12, các ước số là 1, 2, 3, 4, 6, 12, nên có 6 ước số)",
+    "allExamples": [
+      ", 14 sẽ thành 1 + 4 = 5)",
+      ", nếu experienceYears là 12, các ước số là 1, 2, 3, 4, 6, 12, nên có 6 ước số)"
+    ],
+    "allCodeTags": []
+  },
+  "1342": {
+    "code": 1342,
+    "alias": "JNP-1342",
+    "title": "RMI - Object",
+    "protocolType": "RMI_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": ", với tác giả \"John Doe\", hai chữ cái đầu sẽ là JD",
+    "sampleExpectedOutput": ", nếu yearPublished là 1985, sẽ lấy 85",
+    "allExamples": [
+      ", với tác giả \"John Doe\", hai chữ cái đầu sẽ là JD",
+      ", nếu yearPublished là 1985, sẽ lấy 85",
+      "7 thành 007 )",
+      ", nếu tác giả là \"Jane Austen\", yearPublished là 1813, title là \"Pride and Prejudice\" (17 chữ cái), và pageCount là 345, thì mã code sẽ là: \"JA1317345\""
+    ],
+    "allCodeTags": [
+      "JD",
+      "85",
+      "007"
+    ]
+  },
+  "1343": {
+    "code": 1343,
+    "alias": "JNP-1343",
+    "title": "RMI - Object",
+    "protocolType": "RMI_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "với tiêu đề dài 32 ký tự, giá trị này sẽ là 2)",
+    "sampleExpectedOutput": ", nếu tác giả là \"Mark Twain\", năm xuất bản là 1884, thể loại là Fiction với 7 ký tự, và tiêu đề có 24 ký tự, mã code sẽ là: Mn8474",
+    "allExamples": [
+      "với tiêu đề dài 32 ký tự, giá trị này sẽ là 2)",
+      ", nếu tác giả là \"Mark Twain\", năm xuất bản là 1884, thể loại là Fiction với 7 ký tự, và tiêu đề có 24 ký tự, mã code sẽ là: Mn8474"
+    ],
+    "allCodeTags": [
+      "Fiction",
+      "Mn8474"
+    ]
+  },
+  "1345": {
+    "code": 1345,
+    "alias": "JNP-1345",
+    "title": "RMI - Object",
+    "protocolType": "RMI_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu sự kiện có tên là \"Charity Run\", ngày diễn ra là \"2024-05-12\" và số lượng người tham gia dự kiến là 1200, mã eventCode sẽ là LCN1205",
+    "sampleExpectedOutput": "LCN1205",
+    "allExamples": [
+      "Nếu sự kiện có tên là \"Charity Run\", ngày diễn ra là \"2024-05-12\" và số lượng người tham gia dự kiến là 1200, mã eventCode sẽ là LCN1205"
+    ],
+    "allCodeTags": [
+      "L",
+      "M",
+      "S",
+      "ddMM",
+      "LCN1205"
+    ]
+  },
+  "1346": {
+    "code": 1346,
+    "alias": "JNP-1346",
+    "title": "RMI - Object",
+    "protocolType": "RMI_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu đơn hàng có mã khách hàng là C123456 , ngày đặt hàng là \"2023-10-05\", và loại giao hàng là Express , thì mã orderCode sẽ là EX4560510",
+    "sampleExpectedOutput": "EX4560510",
+    "allExamples": [
+      "Nếu đơn hàng có mã khách hàng là C123456 , ngày đặt hàng là \"2023-10-05\", và loại giao hàng là Express , thì mã orderCode sẽ là EX4560510"
+    ],
+    "allCodeTags": [
+      "ddMM",
+      "C123456",
+      "Express",
+      "EX4560510"
+    ]
+  },
+  "1411": {
+    "code": 1411,
+    "alias": "JNP-1411",
+    "title": "WS - DataService",
+    "protocolType": "WS_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu mảng số nguyên nhận được từ phương thức getData là [1, 2, 3, 4, 5], chương trình client sẽ tính tổng là 15 và gửi kết quả này trở lại server qua phương thức submitData",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Nếu mảng số nguyên nhận được từ phương thức getData là [1, 2, 3, 4, 5], chương trình client sẽ tính tổng là 15 và gửi kết quả này trở lại server qua phương thức submitData"
+    ],
+    "allCodeTags": []
+  },
+  "1422": {
+    "code": 1422,
+    "alias": "JNP-1422",
+    "title": "WS - CharacterService",
+    "protocolType": "WS_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu mảng ký tự nhận được từ phương thức requestCharacter là ['a', 'b', 'c', 'd'], giá trị nguyên của ký tự 'a' trong bảng mã ASCII là 97, thực hiện xoay vòng phải 97 lần sẽ trả lại mảng ['d', 'a', 'b', 'c']. Mảng này sẽ được gửi lại server qua phương thức submitCharacterCharArray",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "Nếu mảng ký tự nhận được từ phương thức requestCharacter là ['a', 'b', 'c', 'd'], giá trị nguyên của ký tự 'a' trong bảng mã ASCII là 97, thực hiện xoay vòng phải 97 lần sẽ trả lại mảng ['d', 'a', 'b', 'c']. Mảng này sẽ được gửi lại server qua phương thức submitCharacterCharArray"
+    ],
+    "allCodeTags": []
+  },
+  "1428": {
+    "code": 1428,
+    "alias": "JNP-1428",
+    "title": "WS - CharacterService",
+    "protocolType": "WS_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Nếu danh sách chuỗi nhận được từ phương thức requestCharacter là [ apple , banana , pear , grape , kiwi ], các nhóm có thể là:",
+    "sampleExpectedOutput": "grape, kiwi, pear",
+    "allExamples": [
+      "Nếu danh sách chuỗi nhận được từ phương thức requestCharacter là [ apple , banana , pear , grape , kiwi ], các nhóm có thể là:"
+    ],
+    "allCodeTags": [
+      "apple",
+      "banana",
+      "pear",
+      "grape",
+      "kiwi",
+      "apple, banana",
+      "grape, kiwi, pear",
+      "apple, banana",
+      "grape, kiwi, pear"
+    ]
+  },
+  "1433": {
+    "code": 1433,
+    "alias": "JNP-1433",
+    "title": "WS - ObjectService",
+    "protocolType": "WS_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "",
+    "sampleExpectedOutput": "",
+    "allExamples": [],
+    "allCodeTags": []
+  },
+  "1439": {
+    "code": 1439,
+    "alias": "JNP-1439",
+    "title": "WS - ObjectService",
+    "protocolType": "WS_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "",
+    "sampleExpectedOutput": "",
+    "allExamples": [],
+    "allCodeTags": []
+  },
+  "1443": {
+    "code": 1443,
+    "alias": "JNP-1443",
+    "title": "TCP - GZIP Stream",
+    "protocolType": "TCP_GZIP",
+    "port": 2210,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;GZLEN01",
+    "sampleInput": "Nhận 123 → Đảo ngược thành 321 → Base64 của 321 là MzIx → Gửi lên: 321|MzIx",
+    "sampleExpectedOutput": "321|MzIx",
+    "allExamples": [
+      "B16DCCN999;GZLEN01",
+      "Nhận 123 → Đảo ngược thành 321 → Base64 của 321 là MzIx → Gửi lên: 321|MzIx"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;GZLEN01",
+      "123",
+      "321",
+      "321",
+      "MzIx",
+      "321|MzIx"
+    ]
+  },
+  "1444": {
+    "code": 1444,
+    "alias": "JNP-1444",
+    "title": "TCP - GZIP Stream",
+    "protocolType": "TCP_GZIP",
+    "port": 2210,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;GZCRC_LEN03",
+    "sampleInput": "Nhận về dbca1 thì gửi lên server 1abcd",
+    "sampleExpectedOutput": "1abcd",
+    "allExamples": [
+      "B16DCCN999;GZCRC_LEN03",
+      "Nhận về dbca1 thì gửi lên server 1abcd"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;GZCRC_LEN03",
+      "dbca1",
+      "1abcd"
+    ]
+  },
+  "1451": {
+    "code": 1451,
+    "alias": "JNP-1451",
+    "title": "TCP - NIO Stream",
+    "protocolType": "TCP_NIO",
+    "port": 2211,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;fkdRJYuX",
+    "sampleInput": "\\r\\n",
+    "sampleExpectedOutput": "\\r\\n\\r\\n",
+    "allExamples": [
+      "B16DCCN999;fkdRJYuX"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;fkdRJYuX",
+      "\\r\\n",
+      "\\r\\n\\r\\n",
+      "METHOD;PATH;HOST"
+    ]
+  },
+  "1452": {
+    "code": 1452,
+    "alias": "JNP-1452",
+    "title": "TCP - NIO Stream",
+    "protocolType": "TCP_NIO",
+    "port": 2211,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;2wyy4DBL",
+    "sampleInput": "k1=v1&k2=v2&...",
+    "sampleExpectedOutput": "k1=v1;k2=v2;...",
+    "allExamples": [
+      "B16DCCN999;2wyy4DBL"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;2wyy4DBL",
+      "k1=v1&k2=v2&...",
+      "k1=v1;k2=v2;..."
+    ]
+  },
+  "1453": {
+    "code": 1453,
+    "alias": "JNP-1453",
+    "title": "TCP - NIO Stream",
+    "protocolType": "TCP_NIO",
+    "port": 2211,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;fVHUYiI4",
+    "sampleInput": "key=value",
+    "sampleExpectedOutput": "ip=;path=;status=",
+    "allExamples": [
+      "B16DCCN999;fVHUYiI4"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;fVHUYiI4",
+      "key=value",
+      ";",
+      "ip=;path=;status="
+    ]
+  },
+  "1455": {
+    "code": 1455,
+    "alias": "JNP-1455",
+    "title": "TCP - NIO Stream",
+    "protocolType": "TCP_NIO",
+    "port": 2211,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B16DCCN999;ucpQ9zAh",
+    "sampleInput": "event",
+    "sampleExpectedOutput": "user",
+    "allExamples": [
+      "B16DCCN999;ucpQ9zAh"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B16DCCN999;ucpQ9zAh",
+      "event",
+      "user",
+      "ok",
+      "event=;user=;ok="
+    ]
+  },
+  "1511": {
+    "code": 1511,
+    "alias": "Q1511",
+    "title": "[TCP Byte Raw] Checksum byte payload",
+    "protocolType": "TCP_BYTE_RAW",
+    "port": 2206,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "\"B15DCCN999;1D25ED92\"",
+    "sampleInput": "12,45,255,8",
+    "sampleExpectedOutput": "64",
+    "allExamples": [
+      "\"B15DCCN999;1D25ED92\"",
+      "12,45,255,8",
+      "64",
+      "nếu dữ liệu nhận được là 75,68,12,158,115,63,175,113,189,91,158,56,29,215,122 thì dữ liệu nộp lại là 103"
+    ],
+    "allCodeTags": [
+      "75,68,12,158,115,63,175,113,189,91,158,56,29,215,122",
+      "103"
+    ]
+  },
+  "1521": {
+    "code": 1521,
+    "alias": "Q1521",
+    "title": "[TCP Data Stream] Thống kê min max sum",
+    "protocolType": "TCP_DATA",
+    "port": 2207,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "\"B15DCCN999;1D25ED92\"",
+    "sampleInput": "3;20;87",
+    "sampleExpectedOutput": "nếu dữ liệu nhận được là 496,342,197,73,-52,124,130,228,238,-147,-329,411 thì dữ liệu nộp lại là -329;496;1711",
+    "allExamples": [
+      "\"B15DCCN999;1D25ED92\"",
+      "3;20;87",
+      "nếu dữ liệu nhận được là 496,342,197,73,-52,124,130,228,238,-147,-329,411 thì dữ liệu nộp lại là -329;496;1711"
+    ],
+    "allCodeTags": [
+      "496,342,197,73,-52,124,130,228,238,-147,-329,411",
+      "-329;496;1711"
+    ]
+  },
+  "1522": {
+    "code": 1522,
+    "alias": "Q1522",
+    "title": "[TCP Data Stream] Thống kê telemetry average p95",
+    "protocolType": "TCP_DATA",
+    "port": 2207,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "\"B15DCCN999;1D25ED92\"",
+    "sampleInput": "18.45;30.12;4",
+    "sampleExpectedOutput": "nếu dữ liệu nhận được là 90.0,47.66,81.95,93.56,9.72,77.04,13.72,88.62,5.34,85.55 thì dữ liệu nộp lại là 59.32;93.56;6",
+    "allExamples": [
+      "\"B15DCCN999;1D25ED92\"",
+      "18.45;30.12;4",
+      "nếu dữ liệu nhận được là 90.0,47.66,81.95,93.56,9.72,77.04,13.72,88.62,5.34,85.55 thì dữ liệu nộp lại là 59.32;93.56;6"
+    ],
+    "allCodeTags": [
+      "90.0,47.66,81.95,93.56,9.72,77.04,13.72,88.62,5.34,85.55",
+      "59.32;93.56;6"
+    ]
+  },
+  "1531": {
+    "code": 1531,
+    "alias": "Q1531",
+    "title": "[TCP Character Stream] Che dữ liệu nhạy cảm trong log",
+    "protocolType": "TCP_CHARACTER",
+    "port": 2208,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "\"B15DCCN999;BAA62945\"",
+    "sampleInput": "nếu dữ liệu nhận được là INFO user=cuong email=cuong0@example.com phone=0684775637 token=ftrTU9XmBX action=shipping thì dữ liệu nộp lại là INFO user=cuong email=[EMAIL] phone=[PHONE] token=[TOKEN] action=shipping",
+    "sampleExpectedOutput": "INFO user=cuong email=[EMAIL] phone=[PHONE] token=[TOKEN] action=shipping",
+    "allExamples": [
+      "\"B15DCCN999;BAA62945\"",
+      "nếu dữ liệu nhận được là INFO user=cuong email=cuong0@example.com phone=0684775637 token=ftrTU9XmBX action=shipping thì dữ liệu nộp lại là INFO user=cuong email=[EMAIL] phone=[PHONE] token=[TOKEN] action=shipping"
+    ],
+    "allCodeTags": [
+      "INFO user=cuong email=cuong0@example.com phone=0684775637 token=ftrTU9XmBX action=shipping",
+      "INFO user=cuong email=[EMAIL] phone=[PHONE] token=[TOKEN] action=shipping"
+    ]
+  },
+  "1541": {
+    "code": 1541,
+    "alias": "Q1541",
+    "title": "[TCP Object Stream] Tính giá cuối cùng của sản phẩm",
+    "protocolType": "TCP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;5AD2B818",
+    "sampleInput": "nhận id=9817; name=product-74SD; price=786.64; discount=32 thì gửi lại id=9817; name=product-74SD; price=534.92; discount=32",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "B15DCCN999;5AD2B818",
+      "nhận id=9817; name=product-74SD; price=786.64; discount=32 thì gửi lại id=9817; name=product-74SD; price=534.92; discount=32"
+    ],
+    "allCodeTags": []
+  },
+  "1542": {
+    "code": 1542,
+    "alias": "Q1542",
+    "title": "[TCP Object Stream] Chuẩn hóa mã sinh viên và xếp loại GPA",
+    "protocolType": "TCP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B15DCCN999;5AD2B818",
+    "sampleInput": "nhận id=2897; code=sv0uone; gpa=1.19; gpaLetter=\"\" thì gửi lại id=2897; code=SV0UONE; gpa=1.19; gpaLetter=F",
+    "sampleExpectedOutput": "id=2897; code=SV0UONE; gpa=1.19; gpaLetter=F",
+    "allExamples": [
+      "B15DCCN999;5AD2B818",
+      "nhận id=2897; code=sv0uone; gpa=1.19; gpaLetter=\"\" thì gửi lại id=2897; code=SV0UONE; gpa=1.19; gpaLetter=F"
+    ],
+    "allCodeTags": [
+      "ObjectInputStream",
+      "ObjectOutputStream",
+      "serialVersionUID",
+      "String",
+      "studentCode;qCode",
+      "ObjectOutputStream",
+      "B15DCCN999;5AD2B818",
+      "TCP.Student",
+      "id",
+      "code",
+      "gpa",
+      "gpaLetter",
+      "code",
+      "gpaLetter",
+      "A",
+      "gpa >= 3.6",
+      "B",
+      "gpa >= 3.2",
+      "C",
+      "gpa >= 2.5",
+      "D",
+      "gpa >= 2.0",
+      "F",
+      "TCP.Student",
+      "id",
+      "gpa",
+      "id=2897; code=sv0uone; gpa=1.19; gpaLetter=\"\"",
+      "id=2897; code=SV0UONE; gpa=1.19; gpaLetter=F"
+    ]
+  },
+  "1561": {
+    "code": 1561,
+    "alias": "Q1561",
+    "title": "[TCP NIO] Nối frame và tính checksum",
+    "protocolType": "TCP_NIO",
+    "port": 2211,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "payload: \"B15DCCN999;9F8E7D6C\"",
+    "sampleInput": "nếu dữ liệu nhận được là frame1=abc;frame2=def;frame3=ghi thì dữ liệu nộp lại là len=9;checksum=909",
+    "sampleExpectedOutput": "len=9;checksum=909",
+    "allExamples": [
+      "payload: \"B15DCCN999;9F8E7D6C\"",
+      "nếu dữ liệu nhận được là frame1=abc;frame2=def;frame3=ghi thì dữ liệu nộp lại là len=9;checksum=909"
+    ],
+    "allCodeTags": [
+      "frame1=abc;frame2=def;frame3=ghi",
+      "len=9;checksum=909"
+    ]
+  },
+  "1562": {
+    "code": 1562,
+    "alias": "Q1562",
+    "title": "[TCP NIO] Phân loại bản ghi theo trạng thái",
+    "protocolType": "TCP_NIO",
+    "port": 2211,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "payload: \"B15DCCN999;9F8E7D6C\"",
+    "sampleInput": "nếu dữ liệu nhận được là 300,op0,OK|301,op1,FAIL|302,op2,RETRY thì dữ liệu nộp lại là OK=300;FAIL=301;RETRY=302",
+    "sampleExpectedOutput": "OK=300;FAIL=301;RETRY=302",
+    "allExamples": [
+      "payload: \"B15DCCN999;9F8E7D6C\"",
+      "nếu dữ liệu nhận được là 300,op0,OK|301,op1,FAIL|302,op2,RETRY thì dữ liệu nộp lại là OK=300;FAIL=301;RETRY=302"
+    ],
+    "allCodeTags": [
+      "300,op0,OK|301,op1,FAIL|302,op2,RETRY",
+      "OK=300;FAIL=301;RETRY=302"
+    ]
+  },
+  "1612": {
+    "code": 1612,
+    "alias": "Q1612",
+    "title": "[UDP Data] Tính weighted checksum",
+    "protocolType": "UDP_DATA",
+    "port": 2207,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;EE29C059",
+    "sampleInput": "NjMPqAdf;264,340,630,733,395,954,431,631,650,412",
+    "sampleExpectedOutput": "NjMPqAdf;31500",
+    "allExamples": [
+      ";B15DCCN001;EE29C059",
+      "NjMPqAdf;264,340,630,733,395,954,431,631,650,412",
+      "NjMPqAdf;31500"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;EE29C059",
+      "requestId;data",
+      "NjMPqAdf;264,340,630,733,395,954,431,631,650,412",
+      "sum((i + 1) * value[i]) mod 100000",
+      "requestId;answer",
+      "NjMPqAdf;31500"
+    ]
+  },
+  "1621": {
+    "code": 1621,
+    "alias": "Q1621",
+    "title": "[UDP String] Chuẩn hóa slug",
+    "protocolType": "UDP_STRING",
+    "port": 2208,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;EE29C059",
+    "sampleInput": "7Brz6QQA;REFUND ticket Payment Payment customer Payment customer ticket REFUND customer shipping shipping Payment",
+    "sampleExpectedOutput": "7Brz6QQA;refund-ticket-payment-payment-customer-payment-customer-ticket-refund-customer-shipping-shipping-payment",
+    "allExamples": [
+      ";B15DCCN001;EE29C059",
+      "7Brz6QQA;REFUND ticket Payment Payment customer Payment customer ticket REFUND customer shipping shipping Payment.",
+      "7Brz6QQA;refund-ticket-payment-payment-customer-payment-customer-ticket-refund-customer-shipping-shipping-payment"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;EE29C059",
+      "requestId;data",
+      "7Brz6QQA;REFUND ticket Payment Payment customer Payment customer ticket REFUND customer shipping shipping Payment",
+      "requestId;answer",
+      "7Brz6QQA;refund-ticket-payment-payment-customer-payment-customer-ticket-refund-customer-shipping-shipping-payment"
+    ]
+  },
+  "1622": {
+    "code": 1622,
+    "alias": "Q1622",
+    "title": "[UDP String] Che dữ liệu nhạy cảm",
+    "protocolType": "UDP_STRING",
+    "port": 2208,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;EE29C059",
+    "sampleInput": "rBhDz2JJ;INFO user=minh email=minh0@example.com phone=0309453907 token=bDzj8Olxc9 action=refund",
+    "sampleExpectedOutput": "rBhDz2JJ;INFO user=minh email=[EMAIL] phone=[PHONE] token=[TOKEN] action=refund",
+    "allExamples": [
+      ";B15DCCN001;EE29C059",
+      "rBhDz2JJ;INFO user=minh email=minh0@example.com phone=0309453907 token=bDzj8Olxc9 action=refund",
+      "rBhDz2JJ;INFO user=minh email=[EMAIL] phone=[PHONE] token=[TOKEN] action=refund"
+    ],
+    "allCodeTags": [
+      ";studentCode;qCode",
+      ";B15DCCN001;EE29C059",
+      "requestId;data",
+      "rBhDz2JJ;INFO user=minh email=minh0@example.com phone=0309453907 token=bDzj8Olxc9 action=refund",
+      "[EMAIL]",
+      "[PHONE]",
+      "token=[TOKEN]",
+      "requestId;answer",
+      "rBhDz2JJ;INFO user=minh email=[EMAIL] phone=[PHONE] token=[TOKEN] action=refund"
+    ]
+  },
+  "1631": {
+    "code": 1631,
+    "alias": "Q1631",
+    "title": "[UDP Object] Cập nhật lương nhân viên",
+    "protocolType": "UDP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;EE29C059",
+    "sampleInput": "đối tượng: id=yuAdfGfj; name=ngUYEN vAn khlp; salary=11516.9; hireDate=2024-02-15",
+    "sampleExpectedOutput": "name=Nguyen Van Khlp; salary=12438.25; hireDate=2024-02-15",
+    "allExamples": [
+      ";B15DCCN001;EE29C059",
+      "đối tượng: id=yuAdfGfj; name=ngUYEN vAn khlp; salary=11516.9; hireDate=2024-02-15",
+      "name=Nguyen Van Khlp; salary=12438.25; hireDate=2024-02-15"
+    ],
+    "allCodeTags": [
+      "serialVersionUID",
+      ";studentCode;qCode",
+      ";B15DCCN001;EE29C059",
+      "requestId",
+      "UDP.Employee",
+      "ObjectInputStream",
+      "id=yuAdfGfj; name=ngUYEN vAn khlp; salary=11516.9; hireDate=2024-02-15",
+      "name",
+      "salary",
+      "id",
+      "hireDate",
+      "requestId",
+      "Employee",
+      "ObjectOutputStream",
+      "name=Nguyen Van Khlp; salary=12438.25; hireDate=2024-02-15"
+    ]
+  },
+  "1632": {
+    "code": 1632,
+    "alias": "Q1632",
+    "title": "[UDP Object] Cập nhật giá sản phẩm sau thuế và giảm giá",
+    "protocolType": "UDP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B15DCCN001;EE29C059",
+    "sampleInput": "đối tượng: id=kYop10jO; name=SKU-d6kck; basePrice=298.72; taxRate=14.0; discountRate=5.0; finalPrice=0.0",
+    "sampleExpectedOutput": "finalPrice=323.51",
+    "allExamples": [
+      ";B15DCCN001;EE29C059",
+      "đối tượng: id=kYop10jO; name=SKU-d6kck; basePrice=298.72; taxRate=14.0; discountRate=5.0; finalPrice=0.0",
+      "finalPrice=323.51"
+    ],
+    "allCodeTags": [
+      "serialVersionUID",
+      ";studentCode;qCode",
+      ";B15DCCN001;EE29C059",
+      "requestId",
+      "UDP.PricedProduct",
+      "ObjectInputStream",
+      "id=kYop10jO; name=SKU-d6kck; basePrice=298.72; taxRate=14.0; discountRate=5.0; finalPrice=0.0",
+      "finalPrice = round2(basePrice * (1 + taxRate/100) * (1 - discountRate/100))",
+      "requestId",
+      "PricedProduct",
+      "ObjectOutputStream",
+      "finalPrice=323.51"
+    ]
+  },
+  "1712": {
+    "code": 1712,
+    "alias": "Q1712",
+    "title": "[RMI Byte] Tính XOR checksum",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu dữ liệu nhận được là [5, 7, 5] thì dữ liệu nộp lại là 7",
+    "sampleExpectedOutput": "[5, 7, 5]",
+    "allExamples": [
+      "studentCode=\"B15DCCN999\", qCode=\"1D25ED92\"",
+      "nếu dữ liệu nhận được là [5, 7, 5] thì dữ liệu nộp lại là 7"
+    ],
+    "allCodeTags": [
+      "[5, 7, 5]",
+      "7"
+    ]
+  },
+  "1721": {
+    "code": 1721,
+    "alias": "Q1721",
+    "title": "[RMI Data] Liệt kê số nguyên tố trong khoảng",
+    "protocolType": "RMI_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu dữ liệu nhận được là 10;20 thì dữ liệu nộp lại là [11, 13, 17, 19]",
+    "sampleExpectedOutput": "[11, 13, 17, 19]",
+    "allExamples": [
+      "studentCode=\"B15DCCN999\", qCode=\"A1B2C3D4\"",
+      "nếu dữ liệu nhận được là 10;20 thì dữ liệu nộp lại là [11, 13, 17, 19]"
+    ],
+    "allCodeTags": [
+      "10;20",
+      "[11, 13, 17, 19]"
+    ]
+  },
+  "1731": {
+    "code": 1731,
+    "alias": "Q1731",
+    "title": "[RMI Character] Chuẩn hóa câu",
+    "protocolType": "RMI_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu dữ liệu nhận được là ticket Payment customer ticket shipping shipping Payment ticket REFUND shipping ticket. thì dữ liệu nộp lại là ticket payment customer ticket shipping shipping payment ticket refund shipping ticket",
+    "sampleExpectedOutput": "ticket payment customer ticket shipping shipping payment ticket refund shipping ticket",
+    "allExamples": [
+      "studentCode=\"B15DCCN999\", qCode=\"BAA62945\"",
+      "nếu dữ liệu nhận được là ticket Payment customer ticket shipping shipping Payment ticket REFUND shipping ticket. thì dữ liệu nộp lại là ticket payment customer ticket shipping shipping payment ticket refund shipping ticket"
+    ],
+    "allCodeTags": [
+      "ticket Payment customer ticket shipping shipping Payment ticket REFUND shipping ticket",
+      "ticket payment customer ticket shipping shipping payment ticket refund shipping ticket"
+    ]
+  },
+  "1741": {
+    "code": 1741,
+    "alias": "Q1741",
+    "title": "[RMI Object] Cập nhật SLA ticket",
+    "protocolType": "RMI_OBJECT",
+    "port": null,
+    "handshakeFormat": "requestObject(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nhận ticketId=T6287; priority=LOW; openedHoursAgo=47; breached=false; action=\"\" thì gửi lại ticketId=T6287; priority=LOW; openedHoursAgo=47; breached=false; action=MONITOR",
+    "sampleExpectedOutput": "ticketId=T6287; priority=LOW; openedHoursAgo=47; breached=false; action=MONITOR",
+    "allExamples": [
+      "studentCode=\"B15DCCN999\" , qCode=\"5AD2B818\"",
+      "nhận ticketId=T6287; priority=LOW; openedHoursAgo=47; breached=false; action=\"\" thì gửi lại ticketId=T6287; priority=LOW; openedHoursAgo=47; breached=false; action=MONITOR"
+    ],
+    "allCodeTags": [
+      "ObjectService",
+      "RMIObjectService",
+      "RMI",
+      "serialVersionUID",
+      "studentCode=\"B15DCCN999\"",
+      "qCode=\"5AD2B818\"",
+      "requestObject(studentCode, qCode)",
+      "RMI.TicketSla",
+      "breached = true",
+      "false",
+      "priority",
+      "CRITICAL",
+      "openedHoursAgo > 4",
+      "priority",
+      "HIGH",
+      "openedHoursAgo > 12",
+      "priority",
+      "openedHoursAgo > 48",
+      "action",
+      "ESCALATE",
+      "breached",
+      "MONITOR",
+      "submitObject(studentCode, qCode, object)",
+      "TicketSla",
+      "ticketId=T6287; priority=LOW; openedHoursAgo=47; breached=false; action=\"\"",
+      "ticketId=T6287; priority=LOW; openedHoursAgo=47; breached=false; action=MONITOR"
+    ]
+  },
+  "1742": {
+    "code": 1742,
+    "alias": "Q1742",
+    "title": "[RMI Object] Cập nhật tổng tiền đơn hàng",
+    "protocolType": "RMI_OBJECT",
+    "port": null,
+    "handshakeFormat": "requestObject(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nhận orderId=O7613; itemsSubtotal=593.77; shippingFee=17.71; discountRate=23.0; total=0.0; status=PENDING thì gửi lại orderId=O7613; itemsSubtotal=593.77; shippingFee=17.71; discountRate=23.0; total=474.91; status=READY",
+    "sampleExpectedOutput": "orderId=O7613; itemsSubtotal=593.77; shippingFee=17.71; discountRate=23.0; total=474.91; status=READY",
+    "allExamples": [
+      "studentCode=\"B15DCCN999\" , qCode=\"5AD2B818\"",
+      "nhận orderId=O7613; itemsSubtotal=593.77; shippingFee=17.71; discountRate=23.0; total=0.0; status=PENDING thì gửi lại orderId=O7613; itemsSubtotal=593.77; shippingFee=17.71; discountRate=23.0; total=474.91; status=READY"
+    ],
+    "allCodeTags": [
+      "ObjectService",
+      "RMIObjectService",
+      "RMI",
+      "serialVersionUID",
+      "studentCode=\"B15DCCN999\"",
+      "qCode=\"5AD2B818\"",
+      "requestObject(studentCode, qCode)",
+      "RMI.OrderTotal",
+      "total = round2(itemsSubtotal * (1 - discountRate/100) + shippingFee)",
+      "status",
+      "REVIEW",
+      "total >= 1000",
+      "READY",
+      "submitObject(studentCode, qCode, object)",
+      "OrderTotal",
+      "orderId=O7613; itemsSubtotal=593.77; shippingFee=17.71; discountRate=23.0; total=0.0; status=PENDING",
+      "orderId=O7613; itemsSubtotal=593.77; shippingFee=17.71; discountRate=23.0; total=474.91; status=READY"
+    ]
+  },
+  "1811": {
+    "code": 1811,
+    "alias": "Q1811",
+    "title": "[TCP Byte Raw] Checksum vị trí nguyên tố",
+    "protocolType": "TCP_BYTE_RAW",
+    "port": 2206,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B21DCCN001;A1B2C3D4",
+    "sampleInput": "12,45,255,8,19,20",
+    "sampleExpectedOutput": "primeSum=319;xor=209",
+    "allExamples": [
+      "B21DCCN001;A1B2C3D4",
+      "12,45,255,8,19,20",
+      "primeSum=319;xor=209"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "OutputStream",
+      "B21DCCN001;A1B2C3D4",
+      "12,45,255,8,19,20",
+      "primeSum",
+      "xor",
+      "primeSum=;xor=",
+      "primeSum=319;xor=209"
+    ]
+  },
+  "1821": {
+    "code": 1821,
+    "alias": "Q1821",
+    "title": "[TCP Data Stream] Tổng doanh thu theo nhóm",
+    "protocolType": "TCP_DATA",
+    "port": 2207,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B21DCCN001;A1B2C3D4",
+    "sampleInput": "bản ghi: BOOK,120.50,3",
+    "sampleExpectedOutput": "category=BOOK;total=361.50;records=1",
+    "allExamples": [
+      "B21DCCN001;A1B2C3D4",
+      "bản ghi: BOOK,120.50,3",
+      "category=BOOK;total=361.50;records=1"
+    ],
+    "allCodeTags": [
+      "writeUTF",
+      "studentCode;qCode",
+      "B21DCCN001;A1B2C3D4",
+      "n",
+      "n",
+      "category",
+      "readUTF",
+      "amount",
+      "readDouble",
+      "quantity",
+      "readInt",
+      "BOOK,120.50,3",
+      "amount * quantity",
+      "writeUTF",
+      "category=;total=;records=",
+      "category=BOOK;total=361.50;records=1"
+    ]
+  },
+  "1822": {
+    "code": 1822,
+    "alias": "Q1822",
+    "title": "[TCP Data Stream] Thống kê độ trễ loại ngoại lệ",
+    "protocolType": "TCP_DATA",
+    "port": 2207,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B21DCCN001;A1B2C3D4",
+    "sampleInput": "12.50,30.00,45.25,80.00",
+    "sampleExpectedOutput": "trimmedAvg=37.63;stddev=24.84;outliers=1",
+    "allExamples": [
+      "B21DCCN001;A1B2C3D4",
+      "12.50,30.00,45.25,80.00",
+      "trimmedAvg=37.63;stddev=24.84;outliers=1"
+    ],
+    "allCodeTags": [
+      "writeUTF",
+      "studentCode;qCode",
+      "B21DCCN001;A1B2C3D4",
+      "n",
+      "n",
+      "double",
+      "12.50,30.00,45.25,80.00",
+      "average + stddev",
+      "writeUTF",
+      "trimmedAvg=;stddev=;outliers=",
+      "trimmedAvg=37.63;stddev=24.84;outliers=1"
+    ]
+  },
+  "1831": {
+    "code": 1831,
+    "alias": "Q1831",
+    "title": "[TCP Character Stream] Lọc giao dịch rủi ro",
+    "protocolType": "TCP_CHARACTER",
+    "port": 2208,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B21DCCN001;BAA62945",
+    "sampleInput": "U300 action=PAY risk=85 amount=7200.50||U302 action=PAY risk=72 amount=3300.25",
+    "sampleExpectedOutput": "count=2;ids=U300,U302;amount=10500.75",
+    "allExamples": [
+      "B21DCCN001;BAA62945",
+      "U300 action=PAY risk=85 amount=7200.50||U302 action=PAY risk=72 amount=3300.25",
+      "count=2;ids=U300,U302;amount=10500.75"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "BufferedWriter",
+      "B21DCCN001;BAA62945",
+      "||",
+      "user action=... risk=... amount=...",
+      "U300 action=PAY risk=85 amount=7200.50||U302 action=PAY risk=72 amount=3300.25",
+      "risk >= 70",
+      "amount >= 5000",
+      "count=;ids=;amount=",
+      "count=2;ids=U300,U302;amount=10500.75"
+    ]
+  },
+  "1832": {
+    "code": 1832,
+    "alias": "Q1832",
+    "title": "[TCP Character Stream] Thống kê cụm hai từ",
+    "protocolType": "TCP_CHARACTER",
+    "port": 2208,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B21DCCN001;BAA62945",
+    "sampleInput": "payment ticket payment ticket refund",
+    "sampleExpectedOutput": "payment_ticket=2|ticket_payment=1|ticket_refund=1",
+    "allExamples": [
+      "B21DCCN001;BAA62945",
+      "payment ticket payment ticket refund.",
+      "payment_ticket=2|ticket_payment=1|ticket_refund=1"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "BufferedWriter",
+      "B21DCCN001;BAA62945",
+      "payment ticket payment ticket refund",
+      "[a-z0-9 ]",
+      "word_word=count|word_word=count",
+      "payment_ticket=2|ticket_payment=1|ticket_refund=1"
+    ]
+  },
+  "1841": {
+    "code": 1841,
+    "alias": "Q1841",
+    "title": "[TCP Object Stream] Giá sau chiết khấu, VAT và phí xử lý",
+    "protocolType": "TCP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B21DCCN001;5AD2B818",
+    "sampleInput": "id=2001; price=1000.00; discount=10",
+    "sampleExpectedOutput": "giá nộp lại: 987.00",
+    "allExamples": [
+      "B21DCCN001;5AD2B818",
+      "id=2001; price=1000.00; discount=10",
+      "giá nộp lại: 987.00"
+    ],
+    "allCodeTags": [
+      "ObjectInputStream",
+      "ObjectOutputStream",
+      "serialVersionUID",
+      "String",
+      "studentCode;qCode",
+      "ObjectOutputStream",
+      "B21DCCN001;5AD2B818",
+      "TCP.Product",
+      "id",
+      "name",
+      "price",
+      "discount",
+      "id=2001; price=1000.00; discount=10",
+      "price",
+      "round2(price * (100 - discount) / 100 * 1.08 + fee)",
+      "fee = 15",
+      "fee = 0",
+      "TCP.Product",
+      "price",
+      "id",
+      "name",
+      "discount",
+      "987.00"
+    ]
+  },
+  "1842": {
+    "code": 1842,
+    "alias": "Q1842",
+    "title": "[TCP Object Stream] Chuẩn hóa mã và xếp hạng GPA nâng cao",
+    "protocolType": "TCP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B21DCCN001;5AD2B818",
+    "sampleInput": "id=2002; code=sv-ab3-24; gpa=3.45",
+    "sampleExpectedOutput": "code=SVAB324; gpaLetter=B+",
+    "allExamples": [
+      "B21DCCN001;5AD2B818",
+      "id=2002; code=sv-ab3-24; gpa=3.45",
+      "code=SVAB324; gpaLetter=B+"
+    ],
+    "allCodeTags": [
+      "ObjectInputStream",
+      "ObjectOutputStream",
+      "serialVersionUID",
+      "String",
+      "studentCode;qCode",
+      "ObjectOutputStream",
+      "B21DCCN001;5AD2B818",
+      "TCP.Student",
+      "id=2002; code=sv-ab3-24; gpa=3.45",
+      "code",
+      "[A-Z0-9]",
+      "gpaLetter",
+      "A",
+      "gpa >= 3.7",
+      "B+",
+      "gpa >= 3.4",
+      "B",
+      "gpa >= 3.0",
+      "C+",
+      "gpa >= 2.5",
+      "C",
+      "gpa >= 2.0",
+      "F",
+      "TCP.Student",
+      "id",
+      "gpa",
+      "code=SVAB324; gpaLetter=B+"
+    ]
+  },
+  "1861": {
+    "code": 1861,
+    "alias": "Q1861",
+    "title": "[TCP NIO] Tính tổng hóa đơn từ nhiều frame",
+    "protocolType": "TCP_NIO",
+    "port": 2211,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "payload: B21DCCN001;9F8E7D6C",
+    "sampleInput": "I400:2:120.50|I401:6:90.00",
+    "sampleExpectedOutput": "total=781.00;large=1",
+    "allExamples": [
+      "payload: B21DCCN001;9F8E7D6C",
+      "I400:2:120.50|I401:6:90.00",
+      "total=781.00;large=1"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B21DCCN001;9F8E7D6C",
+      "invoiceId:quantity:unitPrice",
+      "|",
+      "I400:2:120.50|I401:6:90.00",
+      "quantity * unitPrice >= 500",
+      "total=;large=",
+      "total=781.00;large=1"
+    ]
+  },
+  "1862": {
+    "code": 1862,
+    "alias": "Q1862",
+    "title": "[TCP NIO] Phân loại điểm xử lý bản ghi",
+    "protocolType": "TCP_NIO",
+    "port": 2211,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "payload: B21DCCN001;9F8E7D6C",
+    "sampleInput": "R500,AUTH,90|R501,PAY,45",
+    "sampleExpectedOutput": "PASS=R500;REVIEW=;FAIL=R501",
+    "allExamples": [
+      "payload: B21DCCN001;9F8E7D6C",
+      "R500,AUTH,90|R501,PAY,45",
+      "PASS=R500;REVIEW=;FAIL=R501"
+    ],
+    "allCodeTags": [
+      "studentCode;qCode",
+      "B21DCCN001;9F8E7D6C",
+      "id,type,score",
+      "|",
+      "R500,AUTH,90|R501,PAY,45",
+      "PASS",
+      "REVIEW",
+      "FAIL",
+      "PASS=id,id;REVIEW=id;FAIL=id",
+      "PASS=R500;REVIEW=;FAIL=R501"
+    ]
+  },
+  "1891": {
+    "code": 1891,
+    "alias": "Q1891",
+    "title": "[UDP Object] Điều chỉnh lương theo năm tuyển dụng",
+    "protocolType": "UDP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B21DCCN001;EE29C059",
+    "sampleInput": "đối tượng: id=Ab12Cd34; name=le THI an; salary=15000; hireDate=2024-05-12",
+    "sampleExpectedOutput": "name=Le Thi An; salary=16200.00; hireDate=12/05/2024",
+    "allExamples": [
+      ";B21DCCN001;EE29C059",
+      "đối tượng: id=Ab12Cd34; name=le THI an; salary=15000; hireDate=2024-05-12",
+      "name=Le Thi An; salary=16200.00; hireDate=12/05/2024"
+    ],
+    "allCodeTags": [
+      "serialVersionUID",
+      ";studentCode;qCode",
+      ";B21DCCN001;EE29C059",
+      "requestId",
+      "UDP.Employee",
+      "id=Ab12Cd34; name=le THI an; salary=15000; hireDate=2024-05-12",
+      "name",
+      "salary",
+      "hireDate",
+      "hireDate",
+      "yyyy-mm-dd",
+      "dd/mm/yyyy",
+      "requestId",
+      "Employee",
+      "name=Le Thi An; salary=16200.00; hireDate=12/05/2024"
+    ]
+  },
+  "1892": {
+    "code": 1892,
+    "alias": "Q1892",
+    "title": "[UDP Object] Giá sản phẩm sau thuế, giảm giá và phụ phí",
+    "protocolType": "UDP_OBJECT",
+    "port": 2209,
+    "handshakeFormat": ";studentCode;qCode",
+    "handshakeExample": ";B21DCCN001;EE29C059",
+    "sampleInput": "basePrice=1200; taxRate=10; discountRate=5",
+    "sampleExpectedOutput": "finalPrice=1279.00",
+    "allExamples": [
+      ";B21DCCN001;EE29C059",
+      "basePrice=1200; taxRate=10; discountRate=5",
+      "finalPrice=1279.00"
+    ],
+    "allCodeTags": [
+      "serialVersionUID",
+      ";studentCode;qCode",
+      ";B21DCCN001;EE29C059",
+      "requestId",
+      "UDP.PricedProduct",
+      "basePrice=1200; taxRate=10; discountRate=5",
+      "finalPrice = round2(basePrice * (1 + taxRate/100) * (1 - discountRate/100) + fee)",
+      "fee = 25",
+      "basePrice >= 1000",
+      "fee = 0",
+      "requestId",
+      "PricedProduct",
+      "finalPrice",
+      "finalPrice=1279.00"
+    ]
+  },
+  "1912": {
+    "code": 1912,
+    "alias": "Q1912",
+    "title": "[RMI Byte] Rolling checksum và số byte chẵn",
+    "protocolType": "RMI_BYTE",
+    "port": null,
+    "handshakeFormat": "requestData(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "dữ liệu không dấu: [5,7,10]",
+    "sampleExpectedOutput": "checksum=5032;evenBytes=1",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"1D25ED92\"",
+      "dữ liệu không dấu: [5,7,10]",
+      "checksum=5032;evenBytes=1"
+    ],
+    "allCodeTags": [
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"1D25ED92\"",
+      "requestData(studentCode, qCode)",
+      "byte[]",
+      "[5,7,10]",
+      "checksum = (checksum * 31 + value) mod 100000",
+      "submitData(studentCode, qCode, data)",
+      "byte[]",
+      "checksum=;evenBytes=",
+      "checksum=5032;evenBytes=1"
+    ]
+  },
+  "1921": {
+    "code": 1921,
+    "alias": "Q1921",
+    "title": "[RMI Data] Tìm vị trí đỉnh cục bộ",
+    "protocolType": "RMI_DATA",
+    "port": null,
+    "handshakeFormat": "requestData(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "[3,8,5,10,7]",
+    "sampleExpectedOutput": "[2,4]",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"A1B2C3D4\"",
+      "[3,8,5,10,7]",
+      "[2,4]"
+    ],
+    "allCodeTags": [
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"A1B2C3D4\"",
+      "requestData(studentCode, qCode)",
+      "[3,8,5,10,7]",
+      "submitData(studentCode, qCode, data)",
+      "[2,4]"
+    ]
+  },
+  "1922": {
+    "code": 1922,
+    "alias": "Q1922",
+    "title": "[RMI Data] Thống kê số thực nâng cao",
+    "protocolType": "RMI_DATA",
+    "port": null,
+    "handshakeFormat": "requestData(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "10.00,20.00,30.00,40.00",
+    "sampleExpectedOutput": "average=25.00;stddev=11.18;p95=40.00",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"A1B2C3D4\"",
+      "10.00,20.00,30.00,40.00",
+      "average=25.00;stddev=11.18;p95=40.00"
+    ],
+    "allCodeTags": [
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"A1B2C3D4\"",
+      "requestData(studentCode, qCode)",
+      "10.00,20.00,30.00,40.00",
+      "ceil(n * 0.95) - 1",
+      "submitData(studentCode, qCode, data)",
+      "average=;stddev=;p95=",
+      "average=25.00;stddev=11.18;p95=40.00"
+    ]
+  },
+  "1932": {
+    "code": 1932,
+    "alias": "Q1932",
+    "title": "[RMI Character] Đếm mức log và token",
+    "protocolType": "RMI_CHARACTER",
+    "port": null,
+    "handshakeFormat": "requestCharacter(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "ERROR user=a token=abc||INFO user=b token=def",
+    "sampleExpectedOutput": "ERROR=1;INFO=1;WARN=0;TOKEN=2",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"BAA62945\"",
+      "ERROR user=a token=abc||INFO user=b token=def",
+      "ERROR=1;INFO=1;WARN=0;TOKEN=2"
+    ],
+    "allCodeTags": [
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"BAA62945\"",
+      "requestCharacter(studentCode, qCode)",
+      "||",
+      "ERROR user=a token=abc||INFO user=b token=def",
+      "ERROR",
+      "INFO",
+      "WARN",
+      "token=",
+      "submitCharacter(studentCode, qCode, strSubmit)",
+      "ERROR=n;INFO=n;WARN=n;TOKEN=n",
+      "ERROR=1;INFO=1;WARN=0;TOKEN=2"
+    ]
+  },
+  "1941": {
+    "code": 1941,
+    "alias": "Q1941",
+    "title": "[RMI Object] Phân tầng xử lý SLA ticket",
+    "protocolType": "RMI_OBJECT",
+    "port": null,
+    "handshakeFormat": "requestObject(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "priority=HIGH; openedHoursAgo=10",
+    "sampleExpectedOutput": "breached=true; action=ESCALATE_L1",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"5AD2B818\"",
+      "priority=HIGH; openedHoursAgo=10",
+      "breached=true; action=ESCALATE_L1"
+    ],
+    "allCodeTags": [
+      "ObjectService",
+      "RMIObjectService",
+      "RMI",
+      "serialVersionUID",
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"5AD2B818\"",
+      "requestObject(studentCode, qCode)",
+      "RMI.TicketSla",
+      "priority=HIGH; openedHoursAgo=10",
+      "breached = true",
+      "priority",
+      "CRITICAL",
+      "openedHoursAgo > 2",
+      "HIGH",
+      "openedHoursAgo > 8",
+      "MEDIUM",
+      "openedHoursAgo > 24",
+      "LOW",
+      "openedHoursAgo > 72",
+      "action",
+      "MONITOR",
+      "ESCALATE_L2",
+      "priority",
+      "CRITICAL",
+      "openedHoursAgo > 96",
+      "ESCALATE_L1",
+      "submitObject(studentCode, qCode, object)",
+      "breached=true; action=ESCALATE_L1"
+    ]
+  },
+  "1942": {
+    "code": 1942,
+    "alias": "Q1942",
+    "title": "[RMI Object] Tổng tiền và trạng thái rà soát đơn hàng",
+    "protocolType": "RMI_OBJECT",
+    "port": null,
+    "handshakeFormat": "requestObject(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "itemsSubtotal=1200; shippingFee=20; discountRate=10",
+    "sampleExpectedOutput": "total=1100.00; status=REVIEW",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"5AD2B818\"",
+      "itemsSubtotal=1200; shippingFee=20; discountRate=10",
+      "total=1100.00; status=REVIEW"
+    ],
+    "allCodeTags": [
+      "ObjectService",
+      "RMIObjectService",
+      "RMI",
+      "serialVersionUID",
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"5AD2B818\"",
+      "requestObject(studentCode, qCode)",
+      "RMI.OrderTotal",
+      "itemsSubtotal=1200; shippingFee=20; discountRate=10",
+      "total = round2(itemsSubtotal * (1 - discountRate/100) + shippingFee)",
+      "status",
+      "VIP_REVIEW",
+      "total >= 1500",
+      "REVIEW",
+      "800 <= total < 1500",
+      "READY",
+      "submitObject(studentCode, qCode, object)",
+      "total=1100.00; status=REVIEW"
+    ]
+  },
+  "2011": {
+    "code": 2011,
+    "alias": "Q2011",
+    "title": "REST Data — Sum of Integers",
+    "protocolType": "REST_DATA",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/data?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu data là [1,2,3,4] thì answer là 10",
+    "sampleExpectedOutput": "10",
+    "allExamples": [
+      "nếu data là [1,2,3,4] thì answer là 10"
+    ],
+    "allCodeTags": [
+      "http://:2230/api/rest/data",
+      "GET /api/rest/data?studentCode=&qCode=",
+      "2230",
+      "qCode",
+      "requestId",
+      "data",
+      "data",
+      "POST /api/rest/data/submit",
+      "studentCode",
+      "qCode",
+      "requestId",
+      "answer",
+      "data",
+      "[1,2,3,4]",
+      "answer",
+      "10"
+    ]
+  },
+  "2021": {
+    "code": 2021,
+    "alias": "Q2021",
+    "title": "REST Character — Sort Words Alphabetically",
+    "protocolType": "REST_CHARACTER",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/character?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "\"banana apple cherry\" được submit thành \"apple banana cherry\"",
+    "sampleExpectedOutput": "\"apple banana cherry\"",
+    "allExamples": [
+      "\"banana apple cherry\" được submit thành \"apple banana cherry\""
+    ],
+    "allCodeTags": [
+      "http://:2230/api/rest/character",
+      "GET /api/rest/character?studentCode=&qCode=",
+      "qCode",
+      "requestId",
+      "data",
+      "POST /api/rest/character/submit",
+      "studentCode",
+      "qCode",
+      "requestId",
+      "answer",
+      "\"banana apple cherry\"",
+      "\"apple banana cherry\""
+    ]
+  },
+  "2032": {
+    "code": 2032,
+    "alias": "Q2032",
+    "title": "[REST Object] Chọn báo giá vận chuyển SLA",
+    "protocolType": "REST_OBJECT",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/object?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "http://:2230/api/rest/object",
+    "sampleExpectedOutput": "qCode",
+    "allExamples": [],
+    "allCodeTags": [
+      "http://:2230/api/rest/object",
+      "GET /api/rest/object?studentCode=&qCode=",
+      "qCode",
+      "requestId",
+      "data",
+      "orderId",
+      "weightKg",
+      "maxEtaDays",
+      "quotes",
+      "carrier",
+      "baseFee",
+      "perKgFee",
+      "etaDays",
+      "reliability",
+      "etaDays <= maxEtaDays",
+      "totalFee = baseFee + weightKg * perKgFee",
+      "totalFee",
+      "reliability",
+      "POST /api/rest/object/submit",
+      "studentCode",
+      "qCode",
+      "requestId",
+      "answer",
+      "carrier",
+      "totalFee",
+      "etaDays"
+    ]
+  },
+  "2072": {
+    "code": 2072,
+    "alias": "Q2072",
+    "title": "[REST Method] PATCH ticket với If-Match",
+    "protocolType": "REST_METHOD",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/method?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "http://:2230/api/rest/method",
+    "sampleExpectedOutput": "qCode",
+    "allExamples": [],
+    "allCodeTags": [
+      "http://:2230/api/rest/method",
+      "GET /api/rest/method?studentCode=&qCode=",
+      "qCode",
+      "requestId",
+      "data",
+      "ticketId",
+      "status",
+      "targetStatus",
+      "version",
+      "etag",
+      "PATCH",
+      "/api/rest/method/{requestId}",
+      "If-Match",
+      "etag",
+      "studentCode",
+      "qCode",
+      "answer",
+      "answer.status",
+      "RESOLVED",
+      "If-Match",
+      "etag"
+    ]
+  },
+  "2082": {
+    "code": 2082,
+    "alias": "Q2082",
+    "title": "[REST Header] Chữ ký HMAC request",
+    "protocolType": "REST_HEADER",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/header?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "http://:2230/api/rest/header",
+    "sampleExpectedOutput": "qCode",
+    "allExamples": [],
+    "allCodeTags": [
+      "http://:2230/api/rest/header",
+      "GET /api/rest/header?studentCode=&qCode=",
+      "qCode",
+      "requestId",
+      "data",
+      "nonce",
+      "events",
+      "signingKey",
+      "nonce:event1|event2|...:STUDENT_CODE_UPPER",
+      "signingKey",
+      "POST /api/rest/header/submit",
+      "studentCode",
+      "qCode",
+      "requestId",
+      "X-Signature",
+      "X-Signature"
+    ]
+  },
+  "2112": {
+    "code": 2112,
+    "alias": "Q2112",
+    "title": "[gRPC Data] Batch đánh giá rủi ro giao dịch",
+    "protocolType": "GRPC_DATA",
+    "port": 2240,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "",
+    "sampleExpectedOutput": "",
+    "allExamples": [],
+    "allCodeTags": []
+  },
+  "2113": {
+    "code": 2113,
+    "alias": "Q2113",
+    "title": "[gRPC Data] Cửa sổ telemetry cảm biến",
+    "protocolType": "GRPC_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "TypedJudgeService",
+    "sampleExpectedOutput": ":2240",
+    "allExamples": [],
+    "allCodeTags": [
+      "TypedJudgeService",
+      ":2240",
+      "2240",
+      "TypedJudgeService.RequestTyped",
+      "request_id",
+      "threshold",
+      "readings",
+      "sensor_id",
+      "timestamp",
+      "value",
+      "average",
+      "value",
+      "p95",
+      "ceil(n * 0.95) - 1",
+      "anomaly_count",
+      "value > threshold",
+      "TypedJudgeService.SubmitTyped",
+      "average",
+      "p95",
+      "anomaly_count"
+    ]
+  },
+  "2121": {
+    "code": 2121,
+    "alias": "Q2121",
+    "title": "gRPC Character — Sort Words Alphabetically",
+    "protocolType": "GRPC_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "data=\"banana,apple,cherry\" thì answer=\"apple,banana,cherry\"",
+    "sampleExpectedOutput": "answer=\"apple,banana,cherry\"",
+    "allExamples": [
+      "data=\"banana,apple,cherry\" thì answer=\"apple,banana,cherry\""
+    ],
+    "allCodeTags": [
+      "JudgeService",
+      ":2240",
+      "2240",
+      "JudgeService.Request",
+      "request_id",
+      "data",
+      "JudgeService.Submit",
+      "answer",
+      "data=\"banana,apple,cherry\"",
+      "answer=\"apple,banana,cherry\""
+    ]
+  },
+  "2122": {
+    "code": 2122,
+    "alias": "Q2122",
+    "title": "[gRPC Character] Gắn tag ticket hỗ trợ",
+    "protocolType": "GRPC_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "TypedJudgeService",
+    "sampleExpectedOutput": ":2240",
+    "allExamples": [],
+    "allCodeTags": [
+      "TypedJudgeService",
+      ":2240",
+      "2240",
+      "TypedJudgeService.RequestTyped",
+      "request_id",
+      "ticket_tags",
+      "entries",
+      "account",
+      "payment",
+      "refund",
+      "shipping",
+      "TypedJudgeService.SubmitTyped",
+      "counts",
+      "values",
+      "0"
+    ]
+  },
+  "2131": {
+    "code": 2131,
+    "alias": "Q2131",
+    "title": "gRPC Object — Calculate Final Price",
+    "protocolType": "GRPC_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "JudgeService",
+    "sampleExpectedOutput": ":2240",
+    "allExamples": [],
+    "allCodeTags": [
+      "JudgeService",
+      ":2240",
+      "2240",
+      "JudgeService.Request",
+      "request_id",
+      "data",
+      "name",
+      "price",
+      "taxRate",
+      "discount",
+      "finalPrice = price * (1 + taxRate / 100) - discount",
+      "discount",
+      "JudgeService.Submit",
+      "answer",
+      "finalPrice",
+      "0.01"
+    ]
+  },
+  "2133": {
+    "code": 2133,
+    "alias": "Q2133",
+    "title": "[gRPC Object] Kiểm tra điều kiện đăng ký học phần",
+    "protocolType": "GRPC_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "TypedJudgeService",
+    "sampleExpectedOutput": ":2240",
+    "allExamples": [],
+    "allCodeTags": [
+      "TypedJudgeService",
+      ":2240",
+      "2240",
+      "TypedJudgeService.RequestTyped",
+      "request_id",
+      "completed_courses",
+      "required_courses",
+      "gpa",
+      "min_gpa",
+      "missing_courses",
+      "gpa_gap = max(0, min_gpa - gpa)",
+      "eligible",
+      "gpa_gap",
+      "0",
+      "TypedJudgeService.SubmitTyped",
+      "eligible",
+      "missing_courses",
+      "gpa_gap"
+    ]
+  },
+  "2142": {
+    "code": 2142,
+    "alias": "Q2142",
+    "title": "[REST Data] Top-K mã giao dịch xuất hiện nhiều nhất",
+    "protocolType": "REST_DATA",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/data?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu `codes=[\"TX-10\",\"TX-20\",\"TX-10\"]` và `k=1` thì `answer` là `TX-10=2",
+    "sampleExpectedOutput": "answer",
+    "allExamples": [
+      "nếu `codes=[\"TX-10\",\"TX-20\",\"TX-10\"]` và `k=1` thì `answer` là `TX-10=2`"
+    ],
+    "allCodeTags": [
+      "GET /api/rest/data?studentCode=&qCode=",
+      "requestId",
+      "data",
+      "POST /api/rest/data/submit",
+      "studentCode",
+      "qCode",
+      "requestId",
+      "answer"
+    ]
+  },
+  "2151": {
+    "code": 2151,
+    "alias": "Q2151",
+    "title": "[REST Character] Tìm mẫu trong log bằng KMP",
+    "protocolType": "REST_CHARACTER",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/character?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu `text=\"alpha beta gamma\"` và `pattern=\"beta\"` thì `answer` là `6",
+    "sampleExpectedOutput": "answer",
+    "allExamples": [
+      "nếu `text=\"alpha beta gamma\"` và `pattern=\"beta\"` thì `answer` là `6`"
+    ],
+    "allCodeTags": [
+      "GET /api/rest/character?studentCode=&qCode=",
+      "requestId",
+      "data",
+      "POST /api/rest/character/submit",
+      "studentCode",
+      "qCode",
+      "requestId",
+      "answer"
+    ]
+  },
+  "2162": {
+    "code": 2162,
+    "alias": "Q2162",
+    "title": "[REST Object] Lập lịch công việc theo deadline",
+    "protocolType": "REST_OBJECT",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/object?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu chọn được `J1`, `J3`, `J5` thì `answer` là `J1,J3,J5",
+    "sampleExpectedOutput": "answer",
+    "allExamples": [
+      "nếu chọn được `J1`, `J3`, `J5` thì `answer` là `J1,J3,J5`"
+    ],
+    "allCodeTags": [
+      "GET /api/rest/object?studentCode=&qCode=",
+      "requestId",
+      "data",
+      "POST /api/rest/object/submit",
+      "studentCode",
+      "qCode",
+      "requestId",
+      "answer"
+    ]
+  },
+  "2172": {
+    "code": 2172,
+    "alias": "Q2172",
+    "title": "[REST Method] Chống gửi trùng theo idempotency key",
+    "protocolType": "REST_METHOD",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/method?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu chỉ nhận được `REQ-101,REQ-205` thì `answer` là `REQ-101,REQ-205",
+    "sampleExpectedOutput": "requestId",
+    "allExamples": [
+      "nếu chỉ nhận được `REQ-101,REQ-205` thì `answer` là `REQ-101,REQ-205`"
+    ],
+    "allCodeTags": [
+      "GET /api/rest/method?studentCode=&qCode=",
+      "requestId",
+      "data",
+      "PUT /api/rest/method/{requestId}",
+      "studentCode",
+      "qCode",
+      "answer",
+      "requestId"
+    ]
+  },
+  "2184": {
+    "code": 2184,
+    "alias": "Q2184",
+    "title": "[REST Header] Tính gốc Merkle của danh sách lá",
+    "protocolType": "REST_HEADER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu root hex là `abcd1234...` thì `answer` là chuỗi hex đó",
+    "sampleExpectedOutput": "",
+    "allExamples": [
+      "nếu root hex là `abcd1234...` thì `answer` là chuỗi hex đó"
+    ],
+    "allCodeTags": []
+  },
+  "2193": {
+    "code": 2193,
+    "alias": "Q2193",
+    "title": "[REST Path] Tìm đường ngắn nhất bằng Dijkstra",
+    "protocolType": "REST_PATH",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/path?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu chi phí là `21` và đường đi là `P1->P2->P5` thì `answer` là `21|P1->P2->P5",
+    "sampleExpectedOutput": "answer",
+    "allExamples": [
+      "nếu chi phí là `21` và đường đi là `P1->P2->P5` thì `answer` là `21|P1->P2->P5`"
+    ],
+    "allCodeTags": [
+      "GET /api/rest/path?studentCode=&qCode=",
+      "requestId",
+      "data",
+      "POST /api/rest/path/submit",
+      "studentCode",
+      "qCode",
+      "requestId",
+      "answer"
+    ]
+  },
+  "2194": {
+    "code": 2194,
+    "alias": "Q2194",
+    "title": "[REST Path] Lập kế hoạch ghé điểm bắt buộc bằng bitmask DP",
+    "protocolType": "REST_PATH",
+    "port": null,
+    "handshakeFormat": "GET /api/rest/path?studentCode=&qCode=",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu lộ trình tốt nhất là `P1->P3->P4->P6` với chi phí `32` thì `answer` là `32|P1->P3->P4->P6",
+    "sampleExpectedOutput": "answer",
+    "allExamples": [
+      "nếu lộ trình tốt nhất là `P1->P3->P4->P6` với chi phí `32` thì `answer` là `32|P1->P3->P4->P6`"
+    ],
+    "allCodeTags": [
+      "GET /api/rest/path?studentCode=&qCode=",
+      "requestId",
+      "data",
+      "POST /api/rest/path/submit",
+      "studentCode",
+      "qCode",
+      "requestId",
+      "answer"
+    ]
+  },
+  "2213": {
+    "code": 2213,
+    "alias": "Q2213",
+    "title": "[SOAP Data] Đếm số chẵn và số lẻ",
+    "protocolType": "SOAP_DATA",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu dữ liệu nhận được là [652, 139, 822, 95, 755, 70, 809, 165, 580, 514, 921, 995, 97, 988, 666, 654] thì dữ liệu nộp lại là [EVEN=8, ODD=8]",
+    "sampleExpectedOutput": "[EVEN=8, ODD=8]",
+    "allExamples": [
+      "studentCode=\"B15DCCN999\", qCode=\"A1B2C3D4\"",
+      "nếu dữ liệu nhận được là [652, 139, 822, 95, 755, 70, 809, 165, 580, 514, 921, 995, 97, 988, 666, 654] thì dữ liệu nộp lại là [EVEN=8, ODD=8]"
+    ],
+    "allCodeTags": [
+      "[652, 139, 822, 95, 755, 70, 809, 165, 580, 514, 921, 995, 97, 988, 666, 654]",
+      "[EVEN=8, ODD=8]"
+    ]
+  },
+  "2221": {
+    "code": 2221,
+    "alias": "Q2221",
+    "title": "SOAP Character — Reverse a String",
+    "protocolType": "SOAP_CHARACTER",
+    "port": null,
+    "handshakeFormat": "requestString(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "Server trả về \"HelloWorld\"",
+    "sampleExpectedOutput": "\"HelloWorld\" -> \"dlroWolleH\"",
+    "allExamples": [
+      "Server trả về \"HelloWorld\"",
+      "\"HelloWorld\" -> \"dlroWolleH\"",
+      "submitString(\"B21DCCN001\", \" \", \"dlroWolleH\")"
+    ],
+    "allCodeTags": [
+      "CharacterService",
+      "http://:2221/CharacterService?wsdl",
+      "requestString(studentCode, qCode)",
+      "qCode = \"\"",
+      "\"HelloWorld\"",
+      "\"HelloWorld\"",
+      "\"dlroWolleH\"",
+      "submitString(studentCode, qCode, reversedString)",
+      "submitString(\"B21DCCN001\", \"\", \"dlroWolleH\")",
+      "\"AC\"",
+      "\"WA\""
+    ]
+  },
+  "2222": {
+    "code": 2222,
+    "alias": "Q2222",
+    "title": "[SOAP Character] Chuẩn hóa slug",
+    "protocolType": "SOAP_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu dữ liệu nhận được là ticket Payment shipping Payment customer REFUND Payment REFUND. thì dữ liệu nộp lại là ticket-payment-shipping-payment-customer-refund-payment-refund",
+    "sampleExpectedOutput": "ticket-payment-shipping-payment-customer-refund-payment-refund",
+    "allExamples": [
+      "studentCode=\"B15DCCN999\", qCode=\"BAA62945\"",
+      "nếu dữ liệu nhận được là ticket Payment shipping Payment customer REFUND Payment REFUND. thì dữ liệu nộp lại là ticket-payment-shipping-payment-customer-refund-payment-refund"
+    ],
+    "allCodeTags": [
+      "ticket Payment shipping Payment customer REFUND Payment REFUND",
+      "ticket-payment-shipping-payment-customer-refund-payment-refund"
+    ]
+  },
+  "2223": {
+    "code": 2223,
+    "alias": "Q2223",
+    "title": "[SOAP Character] Che dữ liệu nhạy cảm trong mảng log",
+    "protocolType": "SOAP_CHARACTER",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu dữ liệu nhận được là INFO user=minh email=minh0@example.com phone=0166658754 token=WXSGPi57SI action=login thì dữ liệu nộp lại là INFO user=minh email=[EMAIL] phone=[PHONE] token=[TOKEN] action=login",
+    "sampleExpectedOutput": "INFO user=minh email=[EMAIL] phone=[PHONE] token=[TOKEN] action=login",
+    "allExamples": [
+      "studentCode=\"B15DCCN999\", qCode=\"BAA62945\"",
+      "nếu dữ liệu nhận được là INFO user=minh email=minh0@example.com phone=0166658754 token=WXSGPi57SI action=login thì dữ liệu nộp lại là INFO user=minh email=[EMAIL] phone=[PHONE] token=[TOKEN] action=login"
+    ],
+    "allCodeTags": [
+      "INFO user=minh email=minh0@example.com phone=0166658754 token=WXSGPi57SI action=login",
+      "INFO user=minh email=[EMAIL] phone=[PHONE] token=[TOKEN] action=login"
+    ]
+  },
+  "2231": {
+    "code": 2231,
+    "alias": "Q2231",
+    "title": "SOAP Object — Calculate Final Price",
+    "protocolType": "SOAP_OBJECT",
+    "port": null,
+    "handshakeFormat": "requestProductY(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "ProductY{name=\"Laptop\", price=1000.0, taxRate=10.0, discount=5.0, finalPrice=0.0}",
+    "sampleExpectedOutput": "price=1000, taxRate=10, discount=5 -> finalPrice = 1000 * 1.10 * 0.95 = 1045.0",
+    "allExamples": [
+      "ProductY{name=\"Laptop\", price=1000.0, taxRate=10.0, discount=5.0, finalPrice=0.0}",
+      "price=1000, taxRate=10, discount=5 -> finalPrice = 1000 * 1.10 * 0.95 = 1045.0",
+      "submitProductY(\"B21DCCN001\", \" \", updatedProductY)"
+    ],
+    "allCodeTags": [
+      "ObjectService",
+      "http://:2221/ObjectService?wsdl",
+      "requestProductY(studentCode, qCode)",
+      "qCode = \"\"",
+      "ProductY",
+      "name",
+      "price",
+      "taxRate",
+      "discount",
+      "finalPrice",
+      "ProductY{name=\"Laptop\", price=1000.0, taxRate=10.0, discount=5.0, finalPrice=0.0}",
+      "price=1000, taxRate=10, discount=5",
+      "finalPrice = 1000 * 1.10 * 0.95 = 1045.0",
+      "finalPrice",
+      "ProductY",
+      "submitProductY(studentCode, qCode, productY)",
+      "submitProductY(\"B21DCCN001\", \"\", updatedProductY)",
+      "\"AC\"",
+      "\"WA\""
+    ]
+  },
+  "2232": {
+    "code": 2232,
+    "alias": "Q2232",
+    "title": "[SOAP Object] Tính finalPrice của ProductY",
+    "protocolType": "SOAP_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu dữ liệu nhận được là price=227.02;taxRate=17.0;discount=8.0 thì dữ liệu nộp lại là finalPrice=257.61",
+    "sampleExpectedOutput": "finalPrice=257.61",
+    "allExamples": [
+      "studentCode=\"B15DCCN999\", qCode=\"5AD2B818\"",
+      "nếu dữ liệu nhận được là price=227.02;taxRate=17.0;discount=8.0 thì dữ liệu nộp lại là finalPrice=257.61"
+    ],
+    "allCodeTags": [
+      "price=227.02;taxRate=17.0;discount=8.0",
+      "finalPrice=257.61"
+    ]
+  },
+  "2233": {
+    "code": 2233,
+    "alias": "Q2233",
+    "title": "[SOAP Object] Lọc khách hàng tiềm năng",
+    "protocolType": "SOAP_OBJECT",
+    "port": null,
+    "handshakeFormat": "studentCode;qCode",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "nếu dữ liệu nhận được là customers=8 thì dữ liệu nộp lại là selected=2",
+    "sampleExpectedOutput": "selected=2",
+    "allExamples": [
+      "studentCode=\"B15DCCN999\", qCode=\"5AD2B818\"",
+      "nếu dữ liệu nhận được là customers=8 thì dữ liệu nộp lại là selected=2"
+    ],
+    "allCodeTags": [
+      "customers=8",
+      "selected=2"
+    ]
+  },
+  "2241": {
+    "code": 2241,
+    "alias": "Q2241",
+    "title": "[SOAP Data] Đếm số nguyên tố và checksum",
+    "protocolType": "SOAP_DATA",
+    "port": null,
+    "handshakeFormat": "getData(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "[11,12,13,20]",
+    "sampleExpectedOutput": "primeCount=2;checksum=154",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"A1B2C3D4\"",
+      "[11,12,13,20]",
+      "primeCount=2;checksum=154"
+    ],
+    "allCodeTags": [
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"A1B2C3D4\"",
+      "getData(studentCode, qCode)",
+      "List",
+      "[11,12,13,20]",
+      "sum((i + 1) * value[i]) mod 100000",
+      "submitDataString(studentCode, qCode, data)",
+      "primeCount=;checksum=",
+      "primeCount=2;checksum=154"
+    ]
+  },
+  "2251": {
+    "code": 2251,
+    "alias": "Q2251",
+    "title": "[SOAP Character] Top cụm hai từ",
+    "protocolType": "SOAP_CHARACTER",
+    "port": null,
+    "handshakeFormat": "requestString(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "payment ticket payment ticket refund",
+    "sampleExpectedOutput": "payment_ticket=2|ticket_payment=1|ticket_refund=1",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"BAA62945\"",
+      "payment ticket payment ticket refund.",
+      "payment_ticket=2|ticket_payment=1|ticket_refund=1"
+    ],
+    "allCodeTags": [
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"BAA62945\"",
+      "requestString(studentCode, qCode)",
+      "payment ticket payment ticket refund",
+      "[a-z0-9 ]",
+      "submitString(studentCode, qCode, data)",
+      "word_word=count|word_word=count",
+      "payment_ticket=2|ticket_payment=1|ticket_refund=1"
+    ]
+  },
+  "2252": {
+    "code": 2252,
+    "alias": "Q2252",
+    "title": "[SOAP Character] Che và sắp xếp mảng log",
+    "protocolType": "SOAP_CHARACTER",
+    "port": null,
+    "handshakeFormat": "requestStringArray(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "một phần tử: ERROR user=a email=a@example.com phone=0123456789 token=abc",
+    "sampleExpectedOutput": "phần tử nộp lại: ERROR user=a email=[EMAIL] phone=[PHONE] token=[TOKEN]",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"BAA62945\"",
+      "một phần tử: ERROR user=a email=a@example.com phone=0123456789 token=abc",
+      "phần tử nộp lại: ERROR user=a email=[EMAIL] phone=[PHONE] token=[TOKEN]"
+    ],
+    "allCodeTags": [
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"BAA62945\"",
+      "requestStringArray(studentCode, qCode)",
+      "List",
+      "ERROR user=a email=a@example.com phone=0123456789 token=abc",
+      "ERROR",
+      "WARN",
+      "INFO",
+      "submitStringArray(studentCode, qCode, data)",
+      "ERROR user=a email=[EMAIL] phone=[PHONE] token=[TOKEN]"
+    ]
+  },
+  "2261": {
+    "code": 2261,
+    "alias": "Q2261",
+    "title": "[SOAP Object] Tính giá ProductY sau thuế và giảm giá",
+    "protocolType": "SOAP_OBJECT",
+    "port": null,
+    "handshakeFormat": "requestProductY(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "price=100;taxRate=10;discount=5",
+    "sampleExpectedOutput": "finalPrice=104.50",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"5AD2B818\"",
+      "price=100;taxRate=10;discount=5",
+      "finalPrice=104.50"
+    ],
+    "allCodeTags": [
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"5AD2B818\"",
+      "requestProductY(studentCode, qCode)",
+      "ProductY",
+      "price",
+      "taxRate",
+      "discount",
+      "finalPrice",
+      "price=100;taxRate=10;discount=5",
+      "finalPrice = round2(price * (1 + taxRate/100) * (1 - discount/100))",
+      "finalPrice",
+      "submitProductY(studentCode, qCode, data)",
+      "ProductY",
+      "finalPrice=104.50"
+    ]
+  },
+  "2262": {
+    "code": 2262,
+    "alias": "Q2262",
+    "title": "[SOAP Object] Lọc và sắp xếp khách hàng VIP",
+    "protocolType": "SOAP_OBJECT",
+    "port": null,
+    "handshakeFormat": "requestListCustomer(studentCode, qCode)",
+    "handshakeExample": "B23DCDT024;EXAMPLE",
+    "sampleInput": "một phần tử: customerId=HC700;purchaseCount=8;totalSpent=9000",
+    "sampleExpectedOutput": "danh sách nộp lại bắt đầu bằng khách hàng có tổng chi tiêu cao nhất",
+    "allExamples": [
+      "studentCode=\"B21DCCN001\" , qCode=\"5AD2B818\"",
+      "một phần tử: customerId=HC700;purchaseCount=8;totalSpent=9000",
+      "danh sách nộp lại bắt đầu bằng khách hàng có tổng chi tiêu cao nhất"
+    ],
+    "allCodeTags": [
+      "studentCode=\"B21DCCN001\"",
+      "qCode=\"5AD2B818\"",
+      "requestListCustomer(studentCode, qCode)",
+      "Customer",
+      "customerId=HC700;purchaseCount=8;totalSpent=9000",
+      "purchaseCount >= 6",
+      "totalSpent >= 4000",
+      "totalSpent",
+      "customerId",
+      "submitListCustomer(studentCode, qCode, data)",
+      "Customer"
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "B23DCCE012": {
+    "status": "success",
+    "fullName": "Đặng Văn Chiến",
+    "userUuid": "dc2c0e52-6ff4-41e3-b380-5f8594b9bcb8",
+    "contests": {
+      "f66109d7-a13e-4f54-8fdb-d98e6c521617": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 02 - UDP - 02",
+        "questionsCount": 5,
+        "newAdded": 5,
+        "questions": [
+          {
+            "id": "72b115d5-834b-4894-99e3-f3d1838d6d7e",
+            "code": 987,
+            "alias": "JNP-987",
+            "title": "UDP - Data Type",
+            "protocolType": "UDP_DATA",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "abbb36f7-5f09-4c33-b57e-034f7c1d2fd4",
+            "code": 933,
+            "alias": "JNP-933",
+            "title": "UDP - Object",
+            "protocolType": "UDP_OBJECT",
+            "level": "EASY"
+          },
+          {
+            "id": "93274030-f820-4f40-8305-6dd760e28e16",
+            "code": 1622,
+            "alias": "Q1622",
+            "title": "[UDP String] Che dữ liệu nhạy cảm",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "a1a49f6c-5f29-4223-8292-26fe43577fc0",
+            "code": 1621,
+            "alias": "Q1621",
+            "title": "[UDP String] Chuẩn hóa slug",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "3afd4783-5f01-4ed7-99c6-29aac2d7348e",
+            "code": 802,
+            "alias": "JNP-802",
+            "title": "UDP - Data Type",
+            "protocolType": "UDP_DATA",
+            "level": "EASY"
+          }
+        ]
+      },
+      "cd57b1ba-a746-46df-afe6-fd50b8f55267": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 03 - RMI + WS 02",
+        "questionsCount": 6,
+        "newAdded": 6,
+        "questions": [
+          {
+            "id": "e9dfd449-c77d-45ed-bed0-69a46bea33c5",
+            "code": 1921,
+            "alias": "Q1921",
+            "title": "[RMI Data] Tìm vị trí đỉnh cục bộ",
+            "protocolType": "RMI_DATA",
+            "level": "HARD"
+          },
+          {
+            "id": "12845354-bd8a-42df-a4f8-1c1e7bca1b5b",
+            "code": 1338,
+            "alias": "JNP-1338",
+            "title": "RMI - Character",
+            "protocolType": "RMI_CHARACTER",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "21cf313c-7212-4489-a59b-55b22a43b8ec",
+            "code": 1311,
+            "alias": "JNP-1311",
+            "title": "RMI - Byte",
+            "protocolType": "RMI_BYTE",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "6393aace-30ee-444b-b6f2-8077ba78c0ed",
+            "code": 2261,
+            "alias": "Q2261",
+            "title": "[SOAP Object] Tính giá ProductY sau thuế và giảm giá",
+            "protocolType": "SOAP_OBJECT",
+            "level": "HARD"
+          },
+          {
+            "id": "19a7f1c2-6184-408c-a932-50f1fbded282",
+            "code": 1341,
+            "alias": "JNP-1341",
+            "title": "RMI - Object",
+            "protocolType": "RMI_OBJECT",
+            "level": "MEDIUM"
+          },
+          {
+            "id": "7b5fecbf-366b-4579-83c8-a0ea1cf427dd",
+            "code": 2252,
+            "alias": "Q2252",
+            "title": "[SOAP Character] Che và sắp xếp mảng log",
+            "protocolType": "SOAP_CHARACTER",
+            "level": "HARD"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,5706 @@
+[
+  {
+    "id": "f7c4953d-554f-4ba8-a99b-d58671879c49",
+    "createdAt": "2023-01-01T10:59:30",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2026-09-16T14:19:45.023064",
+    "lastModifiedBy": "3fbcedd5-362b-454c-a4a1-647263e0978e",
+    "questionCode": "SQL132",
+    "title": "Làm quen với LearnSQL",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 12723,
+    "acceptance": 53.53,
+    "level": "EASY",
+    "prefixCode": "hiqEBg",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "39079865-cc9a-4143-8ae6-522d3d60bc29",
+        "lastModifiedAt": "2025-09-26T14:53:10.002268",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6b3ec22e-7dde-46e1-83c3-0c44622faefe",
+    "createdAt": "2024-09-08T20:51:09.556943",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T14:57:28.375405",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL094",
+    "title": "Consecutive number",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 14575,
+    "acceptance": 27.14,
+    "level": "EASY",
+    "prefixCode": "sQucjZ",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "36f753c3-adf8-4ece-bf1c-14e4cc0fb306",
+        "lastModifiedAt": "2025-11-01T10:12:10.633793",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "8e67251c-8649-4119-ae90-123d733b10d1",
+        "lastModifiedAt": "2025-11-01T10:12:10.633812",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5a948be2-3de7-4985-b94b-06d6db1c4163",
+    "createdAt": "2024-09-08T21:11:51.739265",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T14:57:34.189344",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL095",
+    "title": "Big Countries",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 6976,
+    "acceptance": 61.63,
+    "level": "MEDIUM",
+    "prefixCode": "m6N0Q5",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "ace51124-91b2-44a8-bae6-3c41e250b483",
+        "lastModifiedAt": "2024-12-23T11:00:42.246984",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "6f19585d-07b6-4143-80b3-b6abb30107e2",
+        "lastModifiedAt": "2024-12-23T11:00:42.247094",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5f64fb51-eea8-46ec-865d-97f3e992575b",
+    "createdAt": "2024-09-08T22:12:57.279933",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T14:57:40.505728",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL096",
+    "title": " Replace Employee ID with unique identify",
+    "point": 8.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 7229,
+    "acceptance": 60.35,
+    "level": "MEDIUM",
+    "prefixCode": "SfgrOH",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "c51f3f1b-e5f1-44f6-8ddd-084268a61fd0",
+        "lastModifiedAt": "2024-12-23T11:04:16.454715",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "f3536131-c1ad-42d1-9181-d4ad19b2f459",
+        "lastModifiedAt": "2024-12-23T11:04:16.454389",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "df5664b3-a36a-4078-92f2-e42a9edc4861",
+    "createdAt": "2024-09-08T22:18:21.982318",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T14:57:45.956159",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL097",
+    "title": "Average time of process per machine",
+    "point": 9.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 4831,
+    "acceptance": 66.16,
+    "level": "MEDIUM",
+    "prefixCode": "KNreNo",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "9c0dbeef-0a48-49d5-b6ae-fb3629e19940",
+        "lastModifiedAt": "2025-11-23T12:04:35.983944",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "1b658655-9cf0-4d70-93d8-f17d350ee915",
+        "lastModifiedAt": "2025-11-23T12:04:35.983969",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c30da897-442d-445e-9153-3f0818862286",
+    "createdAt": "2024-09-08T22:23:13.356832",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T14:57:51.183491",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL098",
+    "title": "Delete duplicate emails",
+    "point": 5.0,
+    "type": "DELETE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 5471,
+    "acceptance": 67.1,
+    "level": "EASY",
+    "prefixCode": "E11COB",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "f0d0319a-74e7-4b01-86b1-ee927b206222",
+        "lastModifiedAt": "2024-12-08T17:00:43.466491",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "6236487a-fbe1-4886-8dfd-2dd4c8a10ace",
+        "lastModifiedAt": "2024-12-08T17:00:43.46697",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5f06da94-ad81-4241-80b3-4acad7cc6414",
+    "createdAt": "2024-09-08T23:03:25.42976",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T14:57:56.749832",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL099",
+    "title": "Find custom referee",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 9370,
+    "acceptance": 46.48,
+    "level": "EASY",
+    "prefixCode": "SJslyz",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "cb1a524a-7e4d-4b22-baa0-fda54e2618bb",
+        "lastModifiedAt": "2025-11-20T22:51:50.210314",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "e34ac6a9-ad1d-4efe-a954-b1a043208fb0",
+        "lastModifiedAt": "2025-11-20T22:51:50.210356",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "242cc8a1-17d1-49ef-9153-9b43f097d379",
+    "createdAt": "2024-09-13T17:07:16.553907",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T14:58:02.061477",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL100",
+    "title": "Recycle and low fat product",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 4856,
+    "acceptance": 84.99,
+    "level": "EASY",
+    "prefixCode": "RfyY6U",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "2ffee638-a236-4d30-87a7-4dd5384b6450",
+        "lastModifiedAt": "2024-12-23T10:47:14.792752",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "a5512efa-17d9-4440-99a6-9a4c6feb50b1",
+        "lastModifiedAt": "2024-12-23T10:47:14.781664",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f4818a0c-4b6e-4b52-804a-d29bab7f0b20",
+    "createdAt": "2024-09-13T17:07:28.143605",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-12-25T15:07:56.911683",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL101",
+    "title": "Not boring movie",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 5623,
+    "acceptance": 55.68,
+    "level": "HARD",
+    "prefixCode": "p4bJSY",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "ba9fbe18-03c4-4e41-9acf-c9a3cef4f217",
+        "lastModifiedAt": "2024-12-23T11:11:54.532662",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6381ce26-8c37-4b93-ae00-65825d844122",
+    "createdAt": "2024-09-13T17:18:25.541558",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T14:58:16.113707",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL102",
+    "title": "Rising temperature",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 6633,
+    "acceptance": 57.85,
+    "level": "EASY",
+    "prefixCode": "TlHBaw",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "cbb72329-62ce-463c-920c-07832131ed86",
+        "lastModifiedAt": "2024-12-23T11:17:50.566614",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "b0fe9e24-ebdd-4cd1-8057-7a26a09af43a",
+        "lastModifiedAt": "2024-12-23T11:17:50.566411",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "13581b1a-583d-465c-a9d2-25a4794930ba",
+    "createdAt": "2024-09-19T05:39:06.083174",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T14:58:23.586857",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL103",
+    "title": "Liệt kê 2 khóa học theo tên giảng viên (sắp xếp theo tên giảm dần) ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 10467,
+    "acceptance": 32.13,
+    "level": "EASY",
+    "prefixCode": "g9rt2t",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "66fb4f6c-47d9-4707-b218-7fe9eb8968c6",
+        "lastModifiedAt": "2025-10-16T10:28:52.656457",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "729091b5-80b5-40d1-8407-77971305c179",
+    "createdAt": "2024-09-20T06:38:39.952723",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T14:58:32.956639",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL104",
+    "title": "Tìm các lớp học đang được mở",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 14728,
+    "acceptance": 15.04,
+    "level": "EASY",
+    "prefixCode": "9brYYF",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "bfc89766-41a8-4e9f-bf05-e2d39a99cae2",
+        "lastModifiedAt": "2024-12-08T16:54:33.444695",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "90c52ccb-6e5f-4dec-8829-9606d2c4e0ed",
+        "lastModifiedAt": "2024-12-08T16:54:33.44435",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4a20f9bb-fea7-4020-a3fd-2b610b8a7050",
+    "createdAt": "2024-09-20T06:53:47.946365",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-02T14:05:36.691147",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "SQL105",
+    "title": "Liệt kê 2 khóa học theo tên giảng viên (sắp xếp tăng dần)",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 8703,
+    "acceptance": 22.43,
+    "level": "MEDIUM",
+    "prefixCode": "cUHo9W",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "8db8465d-2344-46ea-9b11-bc5403259774",
+        "lastModifiedAt": "2025-11-02T14:05:36.691197",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "48655e83-8b1e-42f1-ac2f-0ce95e9ddec0",
+    "createdAt": "2024-09-20T06:58:38.520124",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-08-28T00:39:48.00479",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "SQL106",
+    "title": "Tìm firstname của Instructor",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 4014,
+    "acceptance": 84.83,
+    "level": "EASY",
+    "prefixCode": "hLgJ9R",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "0b18b837-cf5f-4b58-a1a3-67e8ee4606c3",
+        "lastModifiedAt": "2024-12-08T16:44:34.078797",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "52588ff2-74f7-4a91-8339-f8ae871631e5",
+    "createdAt": "2024-09-20T07:04:48.461589",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-08T16:45:23.994097",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL107",
+    "title": "Các khóa học cấp độ 400 (4xx) của CSE đang mở là gì",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 4151,
+    "acceptance": 70.54,
+    "level": "EASY",
+    "prefixCode": "UXkbOm",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "19f55849-9c26-45d4-8f3e-54e7c94977c5",
+        "lastModifiedAt": "2024-12-08T16:45:23.99493",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "83396c1c-7bc4-41de-8b41-830216cb38ab",
+    "createdAt": "2024-09-20T07:07:55.965661",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-08T16:55:37.318746",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL108",
+    "title": "Tìm lớp học của thầy Levy",
+    "point": 0.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3869,
+    "acceptance": 62.52,
+    "level": "EASY",
+    "prefixCode": "dPFeQ7",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "3590798f-70e9-4f17-8dc8-818af0688809",
+        "lastModifiedAt": "2024-12-08T16:55:37.319164",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b10573f0-6714-46e2-9522-6eb4fd063b25",
+    "createdAt": "2024-09-20T07:08:36.231991",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-02T13:37:42.112958",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "SQL109",
+    "title": "Quản lý product",
+    "point": 5.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 8844,
+    "acceptance": 26.91,
+    "level": "EASY",
+    "prefixCode": "XgXvsJ",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "00522116-6dcd-4289-bee9-c009419598b3",
+        "lastModifiedAt": "2025-11-27T10:05:54.793229",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0b75f4d0-9406-43f0-b31a-06aed53ba2cc",
+    "createdAt": "2024-09-20T07:09:48.507163",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-08T16:38:25.31891",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL110",
+    "title": " Những khóa học nào có tên bắt đầu bằng \"Introduction\"",
+    "point": 0.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 4750,
+    "acceptance": 77.28,
+    "level": "EASY",
+    "prefixCode": "E9UYV3",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "fd1ed8e7-f26b-4faf-a789-e83ebba7462e",
+        "lastModifiedAt": "2024-12-08T16:38:25.319284",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "31dc7b4f-b612-47d7-bfb5-74138611fb0b",
+    "createdAt": "2024-09-20T07:11:09.319031",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-08T16:38:55.242277",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL111",
+    "title": "Sửa tiêu đề gõ sai",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3993,
+    "acceptance": 73.85,
+    "level": "EASY",
+    "prefixCode": "U7RnwI",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "c5aca2c4-8f4b-46a3-8125-d3aa9a47cfd5",
+        "lastModifiedAt": "2024-12-08T16:38:55.242923",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "726b03c1-87ae-4fec-8354-058924f590db",
+    "createdAt": "2024-09-20T07:13:47.576398",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-08-27T22:18:27.14293",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "SQL112",
+    "title": "Hiển thị tên khóa học và độ dài của nó",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 6936,
+    "acceptance": 24.06,
+    "level": "EASY",
+    "prefixCode": "yab4OW",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "b0d6b18e-2d06-4da1-8e3d-11896b42f5b6",
+        "lastModifiedAt": "2025-08-27T22:18:27.14315",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2dce3ac9-4859-47db-b424-3ea9c58af5d6",
+    "createdAt": "2024-09-20T07:15:33.861726",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-08T16:40:42.536201",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL113",
+    "title": "Chuẩn hóa tên các khóa học",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3406,
+    "acceptance": 81.97,
+    "level": "MEDIUM",
+    "prefixCode": "lh0FjG",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "7455d660-5f83-4f4f-b2bd-92c4ad7e2b7f",
+        "lastModifiedAt": "2024-12-28T20:58:49.439604",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a2d41934-2730-4e54-bc40-a3e8cbc7cc85",
+    "createdAt": "2024-09-20T07:16:36.468228",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-08T16:56:41.243102",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL114",
+    "title": "Những instructors nào bắt đầu dạy trước 1990",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 4648,
+    "acceptance": 60.52,
+    "level": "EASY",
+    "prefixCode": "EJz1S1",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "36d601e8-cdc0-4b9a-8776-df41c39de5ea",
+        "lastModifiedAt": "2024-12-08T16:56:57.366399",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "11066809-500e-4c09-833e-7fdafaa7544d",
+    "createdAt": "2024-09-20T07:17:36.001019",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-10T11:44:34.428857",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL115",
+    "title": "Những instructors nào bắt đầu dạy trước thời điểm hiện tại",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2698,
+    "acceptance": 88.25,
+    "level": "EASY",
+    "prefixCode": "ST1JMK",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "a17267ab-ca05-4815-98e6-9ee4f5b5aa08",
+        "lastModifiedAt": "2024-12-10T11:44:34.438511",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ce9b9e82-8e52-4594-be7d-6b4d47f0238f",
+    "createdAt": "2024-09-20T07:19:00.61251",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-08T17:01:16.79092",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL116",
+    "title": "Những instructors bắt đầu dạy vào hoặc sau ngày 1 tháng 1 của 20 năm trước",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 4794,
+    "acceptance": 52.04,
+    "level": "MEDIUM",
+    "prefixCode": "zKECTA",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "6b076521-5d57-466b-a6e0-ae1b23753418",
+        "lastModifiedAt": "2024-12-08T17:01:16.791473",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "23289965-0b9a-43af-80f0-a469dbd9ad89",
+    "createdAt": "2024-09-28T04:53:30.432359",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-19T17:14:38.755683",
+    "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+    "questionCode": "SQL117",
+    "title": "Sửa dữ liệu sai trong bảng",
+    "point": 3.0,
+    "type": "ALTER",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 4937,
+    "acceptance": 35.99,
+    "level": "EASY",
+    "prefixCode": "Ud1479",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "07b9df29-2f11-4869-9c57-cf29f21ee094",
+        "lastModifiedAt": "2025-11-19T17:14:38.756102",
+        "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e91d40fc-c564-4a91-9eeb-969aa9beceeb",
+    "createdAt": "2024-10-17T23:16:45.858363",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-08T08:30:34.363543",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL118",
+    "title": "Thiết kế cơ sở dữ liệu với bảng đăng ký khóa học",
+    "point": 10.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 6358,
+    "acceptance": 41.85,
+    "level": "EASY",
+    "prefixCode": "yGaFwb",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "8dbfff40-bf50-4575-bab8-3ce82fba4dcb",
+        "lastModifiedAt": "2025-11-27T10:06:29.244276",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "6aac3870-f4aa-41b9-920d-63271d164814",
+        "lastModifiedAt": "2025-11-27T10:06:29.244531",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d9aa19ed-28a7-4a8d-bacb-09bf6640c272",
+    "createdAt": "2024-10-17T23:21:32.127034",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-08-28T01:00:10.856666",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "SQL119",
+    "title": "Chỉnh sửa bảng cơ sở dữ liệu với kiểu dữ liệu sai",
+    "point": 10.0,
+    "type": "ALTER",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3043,
+    "acceptance": 51.92,
+    "level": "EASY",
+    "prefixCode": "MHLoNi",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "81dca59e-99ab-4d17-9e29-e04862c26bcc",
+        "lastModifiedAt": "2025-08-28T01:03:34.556913",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c1e44881-57a1-4a24-9955-dc3bc1dce5d6",
+    "createdAt": "2024-10-17T23:24:06.991128",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-08T16:58:29.131003",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL120",
+    "title": "Tạo procedure lấy danh sách nhân viên",
+    "point": 10.0,
+    "type": "PROCEDURE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3355,
+    "acceptance": 43.73,
+    "level": "EASY",
+    "prefixCode": "FktSnz",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "3702ed11-8c4c-40a8-9ed1-5c9e71193332",
+        "lastModifiedAt": "2024-12-08T16:58:51.327765",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "d452ad40-09f3-4f3a-bfac-9cb5caa2b370",
+        "lastModifiedAt": "2024-12-08T16:58:51.327923",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a4a6a754-742d-478d-8fd2-5b1098f70137",
+    "createdAt": "2024-11-03T10:20:54.58794",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-08T16:37:34.859988",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL125",
+    "title": "Cập nhật kết quả sinh viên",
+    "point": 5.0,
+    "type": "UPDATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 4679,
+    "acceptance": 43.3,
+    "level": "EASY",
+    "prefixCode": "MJRLME",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "e017d313-ae50-4e42-8cb4-22399c5af0a9",
+        "lastModifiedAt": "2024-12-08T16:37:34.867371",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "381fd68a-456e-4545-aa45-e2d4b322a82e",
+    "createdAt": "2024-11-04T07:37:38.077566",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-23T11:22:57.486794",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL126",
+    "title": "Confirmation Rate",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 4231,
+    "acceptance": 47.36,
+    "level": "MEDIUM",
+    "prefixCode": "GOOSpT",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "4e3b3587-16c1-4e2b-967a-7bcaebedba22",
+        "lastModifiedAt": "2024-12-23T11:22:57.487425",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "49c96c3a-d461-47ae-ad5e-712493b0f9bb",
+    "createdAt": "2024-11-04T07:37:44.03551",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-23T10:55:04.921476",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL127",
+    "title": "Number of Unique Subject taught by each teacher",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3103,
+    "acceptance": 64.2,
+    "level": "EASY",
+    "prefixCode": "zZPHqV",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "e01ef7ea-409d-4534-8cc3-907b3adc23ed",
+        "lastModifiedAt": "2024-12-23T10:55:04.921847",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6f6422d4-1eaa-4c37-b787-13e6668ac932",
+    "createdAt": "2024-11-04T10:47:46.189004",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-08T16:48:55.168758",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL128",
+    "title": "Class more than 5 student",
+    "point": 7.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2612,
+    "acceptance": 64.55,
+    "level": "EASY",
+    "prefixCode": "HHClBa",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "415a6661-66f5-4393-a4cd-b3ff49df7bf9",
+        "lastModifiedAt": "2024-12-08T16:48:55.171873",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "33a30a6c-b248-46fb-b8ba-540493ce8290",
+    "createdAt": "2024-11-04T23:04:37.962558",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-23T10:50:15.449531",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL129",
+    "title": "Invalid Tweets",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2439,
+    "acceptance": 74.99,
+    "level": "EASY",
+    "prefixCode": "nOebym",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "ffc550b7-289c-43c0-9a8a-3dc0f2e246db",
+        "lastModifiedAt": "2024-12-23T10:50:15.450304",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "360518cb-fb15-47bb-9b98-b76e01a39f40",
+    "createdAt": "2024-11-07T10:18:27.441921",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-23T11:29:03.488174",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL130",
+    "title": "Product  Sales Anaysis",
+    "point": 8.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2709,
+    "acceptance": 60.72,
+    "level": "EASY",
+    "prefixCode": "RWvmsF",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "4a03c4ed-4b4e-43f4-afce-4f6ff8d7b4be",
+        "lastModifiedAt": "2024-12-23T11:29:03.490094",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "00315685-bcaa-444c-8100-2c8c34f88a45",
+    "createdAt": "2024-11-07T10:48:45.696842",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-23T11:32:18.112502",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL131",
+    "title": "Customer who bought all product",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3012,
+    "acceptance": 67.76,
+    "level": "MEDIUM",
+    "prefixCode": "WcfdxL",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "45f73913-f767-497c-b73f-161422460be4",
+        "lastModifiedAt": "2024-12-23T11:32:18.112958",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0302d83c-97ef-494c-aebe-ef1d871f67bf",
+    "createdAt": "2024-11-07T22:51:29.853193",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-23T11:36:51.34658",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL133",
+    "title": "Average Selling Price",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 8012,
+    "acceptance": 10.96,
+    "level": "MEDIUM",
+    "prefixCode": "vHFpTH",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "95fb34b8-f77f-441c-8a31-6c05a2801aab",
+        "lastModifiedAt": "2024-12-23T11:36:51.347004",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "16233627-ab8d-4757-9c9a-bec118308510",
+    "createdAt": "2024-11-09T10:37:04.298809",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-09-12T12:46:08.462373",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "SQL134",
+    "title": "Movie rating",
+    "point": 20.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2287,
+    "acceptance": 49.06,
+    "level": "HARD",
+    "prefixCode": "daIaxL",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "25c66d68-cf70-4499-b296-d30ef4adfab8",
+        "lastModifiedAt": "2025-09-12T12:46:08.462441",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f1e0ae26-bb38-42d4-aa3d-356da7974fbf",
+    "createdAt": "2024-11-16T08:46:30.120564",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-23T11:33:47.22693",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL136",
+    "title": "Students and examinations",
+    "point": 8.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3199,
+    "acceptance": 47.89,
+    "level": "MEDIUM",
+    "prefixCode": "hZYDZd",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "bb90b04f-de65-443f-a0ef-891b3785500f",
+        "lastModifiedAt": "2024-12-23T11:33:47.227198",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "57f89e1d-16b0-40a2-a1df-93a076101d6a",
+    "createdAt": "2024-11-16T08:51:25.743033",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-23T11:39:52.412176",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL137",
+    "title": "Managers with at least 5 direction report",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2529,
+    "acceptance": 75.52,
+    "level": "EASY",
+    "prefixCode": "qdUgCl",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "c56d1ecb-7619-4ed7-a682-48fd0428721a",
+        "lastModifiedAt": "2024-12-23T11:39:52.412404",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d8fa37e7-3bff-4742-b597-59c52f662023",
+    "createdAt": "2024-11-16T09:00:11.993892",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2024-12-23T11:40:54.896852",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL138",
+    "title": "Fix name in a table",
+    "point": 5.0,
+    "type": "UPDATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3267,
+    "acceptance": 54.3,
+    "level": "EASY",
+    "prefixCode": "ukhGAd",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "c2f98380-40b6-4bc9-b028-57697d40ed3e",
+        "lastModifiedAt": "2024-12-23T11:40:54.897363",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "f601dbde-4978-427b-9309-82eff364a754",
+        "lastModifiedAt": "2024-12-23T11:40:54.897233",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fde581a6-ff53-42c1-9c1c-4e7c8a7b16cc",
+    "createdAt": "2024-11-16T09:06:56.954045",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T17:38:46.464169",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL139",
+    "title": "Empoyee bonus",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3581,
+    "acceptance": 41.36,
+    "level": "EASY",
+    "prefixCode": "vMJYLq",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "dfb1e9df-d716-4f65-b1ce-1082c0b2bd68",
+        "lastModifiedAt": "2024-12-23T11:44:06.95487",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5098dddf-5b44-4596-9049-b8d650cf8700",
+    "createdAt": "2024-11-27T12:29:53.060227",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T17:39:05.388988",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL147",
+    "title": "Danh sách các đối tác cung cấp hàng cho công ty",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1458,
+    "acceptance": 77.57,
+    "level": "EASY",
+    "prefixCode": "WpjWpe",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "862a9915-4be1-4bcc-8493-ec8d12454381",
+        "lastModifiedAt": "2024-12-28T20:56:17.39991",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f47a11e6-5d3a-4713-b922-d2dc18739b2c",
+    "createdAt": "2024-11-27T14:30:45.509871",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T17:39:14.144875",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL148",
+    "title": "Mã hàng, tên hàng và số lượng của các mặt hàng hiện có trong công ty",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 5075,
+    "acceptance": 10.33,
+    "level": "EASY",
+    "prefixCode": "KenpyT",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "cd5fdff8-289d-42e4-a2a2-de4100320ae2",
+        "lastModifiedAt": "2024-12-08T16:58:45.486641",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3f7e7e5a-bce0-4318-afaa-6e1e614d4099",
+    "createdAt": "2024-11-27T14:32:17.579673",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2026-09-04T09:30:20.527217",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL149",
+    "title": "Họ tên, địa chỉ và năm bắt đầu làm việc của các nhân viên trong cty",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 5017,
+    "acceptance": 8.01,
+    "level": "EASY",
+    "prefixCode": "xLIpcd",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "8bbe78de-743d-4629-9d69-8b0a72591d61",
+        "lastModifiedAt": "2026-09-04T09:30:20.527327",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0b9d1a61-bf04-4ad7-897e-80a57cdd7317",
+    "createdAt": "2024-11-27T14:34:19.962113",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T17:39:39.056273",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL150",
+    "title": "Cho biết mỗi mặt hàng trong công ty do ai cung cấp",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2296,
+    "acceptance": 30.49,
+    "level": "EASY",
+    "prefixCode": "hOaurU",
+    "isShare": false,
+    "questionDetails": [
+      {
+        "id": "d351490e-9fd2-498d-8733-582acfe2aa30",
+        "lastModifiedAt": "2024-12-10T10:00:07.467541",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e727cf96-1132-4454-bd49-473ad963bbf1",
+    "createdAt": "2024-11-27T14:36:34.113565",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T23:24:30.750405",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL151",
+    "title": "Loại hàng \"furniture\" do những công ty nào cung cấp, địa chỉ của công ty đó",
+    "point": 8.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2154,
+    "acceptance": 31.2,
+    "level": "MEDIUM",
+    "prefixCode": "lijvdt",
+    "isShare": true,
+    "questionDetails": [
+      {
+        "id": "d31e04e2-2b06-4ee5-8f0c-ebd9f9bec796",
+        "lastModifiedAt": "2025-11-29T23:24:30.750601",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e15d3bcb-9603-4bd3-908b-7efd047de9e7",
+    "createdAt": "2025-05-03T21:53:16.97468",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T23:33:31.498077",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL1634",
+    "title": "Tỷ lệ phụ nữ được tiêm vắc xin ngừa COVID-19 ở Sydney là bao nhiêu?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2894,
+    "acceptance": 28.4,
+    "level": "EASY",
+    "prefixCode": "LGyCkO",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "ddae3da4-a881-46cc-aa55-359ba6579633",
+        "createdAt": "2025-05-03T21:53:16.974908",
+        "lastModifiedAt": "2025-11-29T23:40:25.358124",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0c83d6a7-83a5-4313-9033-c92b8c64bf3f",
+    "createdAt": "2025-05-05T11:04:24.008445",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T21:45:36.523749",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL1758",
+    "title": "Tìm các tác phẩm nghệ thuật được trưng bày",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1844,
+    "acceptance": 38.02,
+    "level": "HARD",
+    "prefixCode": "ZwvmDK",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "40415b0d-1c70-47ad-9ddf-1650188d1081",
+        "createdAt": "2025-05-05T11:04:24.008599",
+        "lastModifiedAt": "2025-11-03T21:45:36.523881",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5da762ba-aca7-4e1b-8582-45eefba19cbd",
+    "createdAt": "2025-05-13T15:23:10.105188",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-12-25T17:49:43.039425",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "SQL2220",
+    "title": "Liệt kê tất cả các bệnh viện ở bang New York, cùng với số lượng giường có sẵn và tỷ lệ phần trăm giường đã được chiếm dụng, theo thứ tự giảm dần của tỷ lệ phần trăm giường chiếm dụng.",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2859,
+    "acceptance": 25.81,
+    "level": "MEDIUM",
+    "prefixCode": "znUylz",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "5c6fa914-cc28-4136-8edd-fdb906a4e552",
+        "createdAt": "2025-05-13T15:23:10.105306",
+        "lastModifiedAt": "2025-12-25T17:49:43.039468",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5106645e-0aa8-4313-a225-40b42069bb09",
+    "createdAt": "2025-05-13T15:23:11.176452",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T21:38:45.460188",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2267",
+    "title": "Liệt kê tên và ID của những sinh viên đã nhận được chỗ ở nhiều hơn 1 khoa.",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1021,
+    "acceptance": 77.08,
+    "level": "MEDIUM",
+    "prefixCode": "SmdhpX",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "e92619d0-774e-459f-a2a6-dabb5356b431",
+        "createdAt": "2025-05-13T15:23:11.176587",
+        "lastModifiedAt": "2025-11-03T21:38:45.460263",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a042e855-76a3-43e7-a7ab-d10f47a51974",
+    "createdAt": "2025-05-13T15:23:11.666993",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T21:32:13.257518",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2288",
+    "title": "Các quốc gia nào có vi phạm chuỗi cung ứng và đồng thời sản xuất các sản phẩm sử dụng vật liệu tái chế?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1056,
+    "acceptance": 59.56,
+    "level": "MEDIUM",
+    "prefixCode": "sXNOVG",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "4b07cc67-8f61-4661-af9d-266c48f32184",
+        "createdAt": "2025-05-13T15:23:11.667209",
+        "lastModifiedAt": "2025-11-03T21:32:13.257633",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ecb99876-ebce-4c41-ad3e-0ec2ffc40a43",
+    "createdAt": "2025-05-13T15:23:12.026428",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T21:05:39.902537",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2303",
+    "title": "Liệt kê tất cả các sáng kiến vận động chính sách đã tác động đến các cộng đồng lịch sử chưa được đại diện đầy đủ, kèm theo số lượng sinh viên bị ảnh hưởng, và hiển thị 5 sáng kiến có số lượng sinh viên bị ảnh hưởng cao nhất",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3607,
+    "acceptance": 11.2,
+    "level": "MEDIUM",
+    "prefixCode": "cOSBHb",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "b339b153-d3b3-45c2-acf9-1b4cd9d248b7",
+        "createdAt": "2025-05-13T15:23:12.026627",
+        "lastModifiedAt": "2025-11-03T21:05:39.902605",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f18f79e8-8179-4c66-9634-abf3355298ee",
+    "createdAt": "2025-05-13T15:23:13.757702",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T21:48:12.915243",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2372",
+    "title": "Tìm ngân sách trung bình hàng năm cho nghiên cứu AI ở Hoa Kỳ, Anh và Nhật Bản trong giai đoạn 2018-2020.",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1402,
+    "acceptance": 39.94,
+    "level": "MEDIUM",
+    "prefixCode": "NgCPQa",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "d3b63c96-9908-438b-9794-702d37476970",
+        "createdAt": "2025-05-13T15:23:13.757867",
+        "lastModifiedAt": "2025-11-03T21:48:12.915318",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ceb2698f-c824-4734-9058-70034251a797",
+    "createdAt": "2025-05-13T15:23:14.662469",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:47:51.164077",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2408",
+    "title": "Công suất tối đa của sedan điện ra mắt từ năm 2020 là bao nhiêu?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1639,
+    "acceptance": 32.4,
+    "level": "MEDIUM",
+    "prefixCode": "nRtvgM",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "f5c66066-44c5-480c-943b-c315a8b55ca2",
+        "createdAt": "2025-05-13T15:23:14.662604",
+        "lastModifiedAt": "2025-11-03T00:33:02.657357",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "29f3800d-8afc-4ee1-b727-8c8d1b12d8a8",
+    "createdAt": "2025-05-13T15:23:15.13191",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T21:46:02.092803",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2426",
+    "title": "Tổng doanh thu được tạo ra từ thuê bao di động và băng thông rộng trong tháng trước là bao nhiêu?",
+    "point": 7.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 743,
+    "acceptance": 61.24,
+    "level": "HARD",
+    "prefixCode": "VcSEnE",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "fd7ccbb5-5fb7-42b1-80ae-34f231884b1a",
+        "createdAt": "2025-05-13T15:23:15.132027",
+        "lastModifiedAt": "2025-11-03T21:46:02.092894",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b577964b-107a-4ad1-8bf1-4e34cdb24dd5",
+    "createdAt": "2025-05-13T15:23:15.240363",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:46:24.39343",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2430",
+    "title": "Hiển thị số liệu giới tính cho từng công ty, bao gồm tỷ lệ nhân viên nữ và nam",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1801,
+    "acceptance": 17.38,
+    "level": "HARD",
+    "prefixCode": "gyiFNH",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "b57f0d88-0e8d-4131-9307-e864d4ee1226",
+        "createdAt": "2025-05-13T15:23:15.240523",
+        "lastModifiedAt": "2025-11-02T21:50:43.683042",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8688a08e-c8f0-4ce1-a09b-54de6fe3a76b",
+    "createdAt": "2025-05-13T15:23:15.36658",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:47:42.429745",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2435",
+    "title": "Đếm số lượng sản phẩm chăm sóc tóc thuần chay được bán trong 6 tháng qua",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 3755,
+    "acceptance": 2.77,
+    "level": "MEDIUM",
+    "prefixCode": "THvgQh",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "3ab54c8d-f7c2-4053-82ac-a866ea953a26",
+        "createdAt": "2025-05-13T15:23:15.366707",
+        "lastModifiedAt": "2025-11-03T00:17:52.016509",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7b21caff-ee48-4a61-888d-b79d63f15b11",
+    "createdAt": "2025-05-13T15:23:15.504171",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:47:33.311993",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2440",
+    "title": "Sự thay đổi về tỷ lệ tái chế kính giữa năm 2018 và 2019 là gì?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1199,
+    "acceptance": 46.21,
+    "level": "MEDIUM",
+    "prefixCode": "UbkRfN",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "8c1f4ce1-59e5-4eab-ae7a-6b24eb6f2488",
+        "createdAt": "2025-05-13T15:23:15.504286",
+        "lastModifiedAt": "2025-11-03T00:07:16.627513",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a71a5cb7-5024-4fb4-8389-6a1ad58d78b3",
+    "createdAt": "2025-05-13T15:23:15.528382",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:47:24.610833",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2441",
+    "title": "Chi tiết về các khoản đầu tư có điểm ESG lớn hơn 7,5 trong lĩnh vực năng lượng tái tạo là gì?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 732,
+    "acceptance": 66.39,
+    "level": "MEDIUM",
+    "prefixCode": "DqUQoH",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "392ef7fe-7941-43da-a878-e93ded3a9cdd",
+        "createdAt": "2025-05-13T15:23:15.528495",
+        "lastModifiedAt": "2025-11-03T00:02:17.778863",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "70edd4e0-9ef9-4fb2-9aaf-025d3b550b74",
+    "createdAt": "2025-05-13T15:23:15.583086",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:47:14.461961",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2443",
+    "title": "Những con tàu nào đã đi tới Bắc Cực và chở hơn 5000 tấn hàng hóa?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 937,
+    "acceptance": 55.6,
+    "level": "MEDIUM",
+    "prefixCode": "nhqsHi",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "79b27e97-0dc6-4126-aed3-7525e39c1fd0",
+        "createdAt": "2025-05-13T15:23:15.583229",
+        "lastModifiedAt": "2025-11-02T23:37:40.777456",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e54df7b8-5de0-4de0-b4f0-243ab55eddac",
+    "createdAt": "2025-05-13T15:23:15.752793",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:47:05.351408",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2450",
+    "title": "Có bao nhiêu sản phẩm may mặc cỡ 36 dành cho nữ đã được bán trong tháng trước?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 736,
+    "acceptance": 56.11,
+    "level": "MEDIUM",
+    "prefixCode": "ljKxNj",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "83452009-1c77-4ffb-97b8-136c0dc819c0",
+        "createdAt": "2025-05-13T15:23:15.752935",
+        "lastModifiedAt": "2025-11-02T23:33:32.462325",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e71c59b3-2742-4d91-8325-5d433a43bfb0",
+    "createdAt": "2025-05-13T15:23:15.82826",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:46:54.796907",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2453",
+    "title": "Liệt kê tổng số sự cố an toàn lao động theo tình trạng công đoàn trong ngành xây dựng năm 2021 và 2022?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1370,
+    "acceptance": 25.55,
+    "level": "MEDIUM",
+    "prefixCode": "QDIwNU",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "6c623009-f1e3-4fd7-9c0f-ceb31c55c8ee",
+        "createdAt": "2025-05-13T15:23:15.828359",
+        "lastModifiedAt": "2025-11-02T23:26:40.043952",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e0f35519-1461-4e83-8eab-6cad38156fc2",
+    "createdAt": "2025-06-02T14:25:50.088671",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:46:46.145439",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2540",
+    "title": "Liệt kê các bệnh viện ở Nairobi với năng lực phục vụ và số lượng bệnh nhân được tiêm chủng tại mỗi nơi.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 836,
+    "acceptance": 47.73,
+    "level": "MEDIUM",
+    "prefixCode": "wbPZRh",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "154c06e0-0978-4e3a-8622-93b97e3a67ad",
+        "createdAt": "2025-06-02T14:25:50.089239",
+        "lastModifiedAt": "2025-11-02T23:05:49.160481",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cfc753dd-8a33-4ea1-8cb0-f4766c6c6695",
+    "createdAt": "2025-06-02T14:25:53.057564",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:46:14.23668",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2717",
+    "title": "Ai là 5 nhà cung cấp năng lượng gió hàng đầu theo mức công suất được tạo ra trong khu vực Midwest cho Quý 2 năm 2021?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 808,
+    "acceptance": 44.06,
+    "level": "HARD",
+    "prefixCode": "jBDKAW",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "b8e8f2a1-c4c8-43fe-b8c6-86cb3c1a0298",
+        "createdAt": "2025-06-02T14:25:53.057842",
+        "lastModifiedAt": "2025-11-02T21:29:55.914514",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0dd38e90-0210-49c0-ae47-a5db4b467699",
+    "createdAt": "2025-06-02T14:25:53.278896",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T09:46:34.358979",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2731",
+    "title": "Xác định trung bình khán giả",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 575,
+    "acceptance": 67.13,
+    "level": "MEDIUM",
+    "prefixCode": "EsmbvE",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "69d9c361-25ea-40ae-b711-a6fae641e068",
+        "createdAt": "2025-06-02T14:25:53.279107",
+        "lastModifiedAt": "2025-11-02T22:44:30.480588",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "62fe3d6e-74f8-4940-a435-491b9001923c",
+    "createdAt": "2025-06-02T14:25:53.598846",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T23:31:18.652822",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2750",
+    "title": "Có bao nhiêu tổng số khoản quyên góp đã được thực hiện theo giới tính?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1784,
+    "acceptance": 33.63,
+    "level": "EASY",
+    "prefixCode": "YUkMsC",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "ffddb025-b0e7-4eb3-bdab-c5a23f558c66",
+        "createdAt": "2025-06-02T14:25:53.599032",
+        "lastModifiedAt": "2025-11-29T23:31:08.489919",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d70a5312-3e91-4a8e-a384-baa23ef4c25a",
+    "createdAt": "2025-06-02T14:25:54.330247",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T21:47:31.634996",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL2792",
+    "title": "Tổng số vé đã bán cho các sự kiện trong các hạng mục 'âm nhạc' và 'nhà hát' là bao nhiêu?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1235,
+    "acceptance": 43.16,
+    "level": "EASY",
+    "prefixCode": "IYpiJq",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "e1b597cd-7a03-4d4a-81d6-c99b19e7c5c3",
+        "createdAt": "2025-06-02T14:25:54.330411",
+        "lastModifiedAt": "2025-11-03T21:47:31.635066",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "21a7b228-9163-4055-be29-1eba64cf2694",
+    "createdAt": "2025-08-29T11:41:16.919342",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-03T21:44:57.192224",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2829",
+    "title": "Ai là nhà nghiên cứu chính cho dự án có số lượng gen tham gia nhiều nhất?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 682,
+    "acceptance": 65.4,
+    "level": "MEDIUM",
+    "prefixCode": "lxTDda",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "b77a6c36-74cb-42ae-9e44-862c5ade16bd",
+        "createdAt": "2025-08-29T11:45:19.98627",
+        "lastModifiedAt": "2025-11-03T21:44:57.192287",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "00db97a0-335a-48fa-979c-ecac89648b29",
+    "createdAt": "2025-08-29T11:50:05.710705",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T23:28:35.657212",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2831",
+    "title": "Số lượng bệnh viện và phòng khám nông thôn ở mỗi vùng lãnh thổ là bao nhiêu, và bao nhiêu bệnh viện có sân bay trực thăng?",
+    "point": 3.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2481,
+    "acceptance": 11.85,
+    "level": "EASY",
+    "prefixCode": "HPnUlD",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "eab495c1-110c-4745-b74b-19dc6ef68367",
+        "createdAt": "2025-08-29T11:54:25.600915",
+        "lastModifiedAt": "2025-11-29T23:28:35.657334",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a96f0617-4306-414d-bdea-9d2bedee2518",
+    "createdAt": "2025-08-29T12:08:27.471308",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-29T23:09:51.363697",
+    "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+    "questionCode": "SQL-2836",
+    "title": "Những công đoàn nào có hơn 5000 thành viên và có trụ sở tại California?",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 891,
+    "acceptance": 64.31,
+    "level": "EASY",
+    "prefixCode": "BLoXWc",
+    "isShare": true,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "6f8a2bd1-5de0-43af-b996-ea1563188553",
+        "createdAt": "2025-08-29T12:19:04.953903",
+        "lastModifiedAt": "2025-11-29T23:09:51.363806",
+        "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fe21af25-62f9-40a0-9ace-958160d30c21",
+    "createdAt": "2025-11-09T10:28:57.949089",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T10:57:36.947612",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2850",
+    "title": "Tìm 3 nhà cung cấp năng lượng nhiều nhất",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1006,
+    "acceptance": 29.62,
+    "level": "HARD",
+    "prefixCode": "kWzMtg",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "d6e30b95-f15b-4df4-b882-0489da87c748",
+        "createdAt": "2025-11-09T10:57:36.756242",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T10:57:36.947708",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "26a87b89-4f53-4fd8-b2c4-817de6cba96a",
+    "createdAt": "2025-11-09T10:57:56.165647",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T11:06:03.091754",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2851",
+    "title": "Xác định tổng sản lượng điện nhà cung cấp",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 505,
+    "acceptance": 49.7,
+    "level": "HARD",
+    "prefixCode": "JELyKX",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "07ac1498-43d1-41b3-8d59-93ce54d1f062",
+        "createdAt": "2025-11-09T14:56:45.652839",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T14:56:45.782525",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5c20bfd3-6f13-4659-8c22-9102e395d272",
+    "createdAt": "2025-11-09T14:56:50.748998",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T15:03:03.009908",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2852",
+    "title": "Tính tổng sản lượng năng lượng",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1488,
+    "acceptance": 20.56,
+    "level": "HARD",
+    "prefixCode": "vtAlSO",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "846730cf-de90-4afa-ab8b-66d641f0fc6d",
+        "createdAt": "2025-11-09T15:03:02.964103",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T15:03:03.010043",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "506994b5-490e-47ab-a0dc-3633bf7e5a55",
+    "createdAt": "2025-11-09T15:03:07.036255",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T15:08:35.557115",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2853",
+    "title": "Tìm nhà cung cấp, sản lượng năng lượng và ngày cung cấp",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 615,
+    "acceptance": 43.25,
+    "level": "HARD",
+    "prefixCode": "Cekmva",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "09e09f82-1020-494c-a2a4-9b02c784cadc",
+        "createdAt": "2025-11-09T15:08:35.484496",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T15:08:35.55718",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "bb86a4dd-d616-41a6-9b99-3e7c3b6e28b6",
+    "createdAt": "2025-11-09T19:57:55.728832",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:02:57.810921",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2856",
+    "title": "Xác định số trung bình nhân viên",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 453,
+    "acceptance": 60.71,
+    "level": "HARD",
+    "prefixCode": "tvWcaQ",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "b19ac805-c7cf-44f4-a5e5-8ca8e60d2e7f",
+        "createdAt": "2025-11-09T20:02:57.762984",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:02:57.810999",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d8c214d7-bcd4-42ef-89b2-71b3c61653aa",
+    "createdAt": "2025-11-09T20:03:10.579014",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:06:13.302216",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2857",
+    "title": "Liệt kê các phòng ban có tỷ lệ nhân viên nữ ≥ 60%",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 984,
+    "acceptance": 30.08,
+    "level": "HARD",
+    "prefixCode": "pUAbbp",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "3989e4e5-427d-44d2-b0bb-49553a21e3fe",
+        "createdAt": "2025-11-09T20:06:13.255524",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:06:13.30231",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5c6822b7-9185-4052-989a-0b3781e12201",
+    "createdAt": "2025-11-09T20:06:17.59897",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:09:39.517353",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2858",
+    "title": "Tìm các công ty mà mọi phòng ban đều có ít nhất 1 nhân viên nữ. Trả về kèm số phòng ban của công ty.",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1411,
+    "acceptance": 6.38,
+    "level": "HARD",
+    "prefixCode": "pSbPzz",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "811b1540-8d04-47b5-b640-0196aeb5b78e",
+        "createdAt": "2025-11-09T20:09:39.463297",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:09:39.517428",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "bd162451-6b4c-4c68-8704-f5300572117e",
+    "createdAt": "2025-11-09T20:11:07.105375",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:15:37.973134",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2859",
+    "title": "Tìm 3 công ty có trung bình quy mô phòng ban cao nhất",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1213,
+    "acceptance": 5.61,
+    "level": "HARD",
+    "prefixCode": "brxqNs",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "3962124d-14d2-4c54-8874-68d5decc25aa",
+        "createdAt": "2025-11-09T20:15:37.914798",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:15:37.973201",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "eefecbde-273b-4b01-b15f-1ee83204c3b1",
+    "createdAt": "2025-11-09T20:18:30.280035",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:22:20.000454",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2860",
+    "title": "Tìm 3 đội có trung bình khán giả khi đá sân nhà cao nhất.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 478,
+    "acceptance": 70.29,
+    "level": "MEDIUM",
+    "prefixCode": "kJmgtd",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "4308845b-9301-4492-b5fc-484ba59c78ed",
+        "createdAt": "2025-11-09T20:22:19.939431",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:22:20.000547",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1ddb0993-ebeb-41d8-95ae-aa3174e42b1b",
+    "createdAt": "2025-11-09T20:22:27.590271",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:25:23.684332",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2861",
+    "title": "Tính trung bình tổng khán giả mỗi trận và trả về 3 cặp cao nhất.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 584,
+    "acceptance": 57.53,
+    "level": "MEDIUM",
+    "prefixCode": "GoIjUs",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "a90e1925-dfa3-4a67-bbc7-46c92a08abb9",
+        "createdAt": "2025-11-09T20:25:23.323642",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:25:23.684399",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6f2faeb5-c471-47cd-843e-debe13516e08",
+    "createdAt": "2025-11-09T20:25:32.078478",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:31:04.588091",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2862",
+    "title": "Ttính trung bình khán giả khi đội đó đá sân nhà và khi đội đó đá sân khách.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 564,
+    "acceptance": 52.84,
+    "level": "MEDIUM",
+    "prefixCode": "cbFFkl",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "4ec57acd-34f5-4a79-9f0e-f1dedb122c4a",
+        "createdAt": "2025-11-09T20:31:04.278296",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:31:04.588181",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d77b5678-d04e-44aa-91db-cb76f8f31b55",
+    "createdAt": "2025-11-09T20:31:12.674517",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:33:50.766103",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2863",
+    "title": "Tính tổng khán giả theo từng đội",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 456,
+    "acceptance": 64.04,
+    "level": "MEDIUM",
+    "prefixCode": "xEeSln",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "b1415812-f274-48de-af84-aa36e0f80d0b",
+        "createdAt": "2025-11-09T20:34:09.398885",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:34:09.598958",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3be509b0-340e-410b-a1ec-ba8204c034b4",
+    "createdAt": "2025-11-09T20:41:48.066224",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:48:15.437993",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2864",
+    "title": "Liệt kê các bệnh viện ở Nairobi theo khoảng thời gian",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1893,
+    "acceptance": 15.0,
+    "level": "MEDIUM",
+    "prefixCode": "ntEBkH",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "2142c504-0343-4118-aab8-236e35443e94",
+        "createdAt": "2025-11-09T20:48:15.388206",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:48:15.438057",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7637c9ba-a590-4e8e-92d7-324ec5e81945",
+    "createdAt": "2025-11-09T20:42:49.011571",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:58:01.621134",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2865",
+    "title": "Tính tổng số lượt tiêm trong tháng 03/2022",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 795,
+    "acceptance": 33.33,
+    "level": "MEDIUM",
+    "prefixCode": "nybRfb",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "b8360688-08eb-47ef-9073-ed2aaf45dfe0",
+        "createdAt": "2025-11-09T20:58:01.587508",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:58:01.62121",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cbe8236e-d00c-408b-8d05-ce7bb7479c01",
+    "createdAt": "2025-11-09T20:48:40.14025",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T20:51:24.213302",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2866",
+    "title": "Liệt kê các bệnh viện không có bất kỳ lượt tiêm nào trong khoảng 2022-03-01 đến 2022-03-31, kèm sức chứa.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 532,
+    "acceptance": 49.81,
+    "level": "MEDIUM",
+    "prefixCode": "zhOmAg",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "68e380e0-6167-4bab-a645-c4aebc0fbe47",
+        "createdAt": "2025-11-09T20:51:24.181119",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:51:24.213391",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "9449f547-a9ec-414b-b7f8-a91c680d1a64",
+    "createdAt": "2025-11-09T20:51:37.443315",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-12-26T23:19:12.666171",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "SQL-2867",
+    "title": "Tìm 3 bệnh viện có ngày bận rộn nhất ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 816,
+    "acceptance": 25.74,
+    "level": "HARD",
+    "prefixCode": "ETTjkg",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "8ac150ce-2f5f-4e22-9d5e-f9b02f8ba38b",
+        "createdAt": "2025-11-09T20:54:39.157411",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T20:54:39.18975",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "47720d5a-2e83-4193-a96a-0be220d08ad3",
+    "createdAt": "2025-11-09T20:58:29.192583",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T21:14:07.617836",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2868",
+    "title": "Liệt kê tổng số sự cố theo ngành và trạng thái công đoàn trong các năm 2021 và 2022.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 305,
+    "acceptance": 68.85,
+    "level": "MEDIUM",
+    "prefixCode": "SEdrJc",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "851a5a36-a477-4374-a7f6-09103f059527",
+        "createdAt": "2025-11-09T21:14:07.529229",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T21:14:07.61797",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ca95e058-bd53-497b-940e-0a3341ad0fc8",
+    "createdAt": "2025-11-09T21:01:33.524987",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T21:16:06.903511",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2869",
+    "title": "Tính biến động năm theo trạng thái công đoàn: tổng sự cố 2022 trừ 2021 cho từng union_status.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 329,
+    "acceptance": 65.35,
+    "level": "MEDIUM",
+    "prefixCode": "tNncbQ",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "e71966cc-b0fc-41c4-aeae-3d5d8f3d6e6c",
+        "createdAt": "2025-11-09T21:16:06.867797",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T21:16:06.903572",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8f851bff-59ea-4e29-a04d-b3db0635b8f9",
+    "createdAt": "2025-11-09T21:02:10.234213",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T22:23:46.30637",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2870",
+    "title": "Tính bình quân sự cố mỗi năm",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 274,
+    "acceptance": 81.02,
+    "level": "MEDIUM",
+    "prefixCode": "pGCCdG",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "34b32f9a-8c37-446a-964f-9155f38cb680",
+        "createdAt": "2025-11-09T22:23:46.258033",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T22:23:46.30646",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6ff9f8f2-5d36-4581-8709-d8c8534c2b5c",
+    "createdAt": "2025-11-09T21:02:52.066466",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T22:26:01.812559",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2871",
+    "title": "Tính tỷ trọng (%) sự cố của nhóm Union trong tổng sự cố của từng ngành (gộp năm 2021 và 2022).",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1265,
+    "acceptance": 14.07,
+    "level": "MEDIUM",
+    "prefixCode": "uDIMeF",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "d032fa58-f5e0-4863-ad3e-5a37d447d0b8",
+        "createdAt": "2025-11-09T22:26:01.775996",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T22:26:01.812622",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d10e839a-a958-4793-b461-464384efe0ea",
+    "createdAt": "2025-11-09T22:27:51.116357",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T22:33:14.097997",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2872",
+    "title": "Tính tổng số sản phẩm dành cho nam (‘Men’) với Size = 32 trong quý 1 năm 2025 (từ 2025-01-01 đến 2025-03-31).",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 266,
+    "acceptance": 69.17,
+    "level": "MEDIUM",
+    "prefixCode": "olTTRc",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "89c0be75-7232-4ecf-93eb-f9ae8b680cc6",
+        "createdAt": "2025-11-09T22:33:14.053167",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T22:33:14.098037",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "81065a9b-64c8-4f9a-8a0a-7fbf748e976f",
+    "createdAt": "2025-11-09T22:28:51.73225",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T22:35:05.55382",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2873",
+    "title": "Tính tổng số bán theo ProductID cho ‘Women’ (không giới hạn Size)",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 329,
+    "acceptance": 54.41,
+    "level": "MEDIUM",
+    "prefixCode": "kklXLF",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "eaa52a0c-a884-4199-af8f-c65a2fe72f87",
+        "createdAt": "2025-11-09T22:35:05.527113",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T22:35:05.553916",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "29bbc40d-8b7b-448c-8a0d-093bc6bd3f04",
+    "createdAt": "2025-11-09T22:29:34.939369",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T22:36:57.913459",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2874",
+    "title": "Tính trung bình số lượng bán ra",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 236,
+    "acceptance": 77.97,
+    "level": "MEDIUM",
+    "prefixCode": "keQkBR",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "ea6e9022-4b2b-42b0-b088-d20a2895158a",
+        "createdAt": "2025-11-09T22:36:57.879943",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T22:36:57.913515",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "935dedaf-d556-4625-b4b2-39de21a0e189",
+    "createdAt": "2025-11-09T22:30:29.728124",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T22:38:51.801884",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2875",
+    "title": "Tính tổng số bán theo Size và trả về Size có tổng cao nhất ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 283,
+    "acceptance": 59.72,
+    "level": "MEDIUM",
+    "prefixCode": "FzSboA",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "ddbe16f7-6e1c-4623-a1c8-7d7ff50be98d",
+        "createdAt": "2025-11-09T22:38:51.763878",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T22:38:51.801946",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a00c2186-1db7-4e02-b67f-633a60d241fc",
+    "createdAt": "2025-11-09T22:41:08.375414",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T22:46:44.066941",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2876",
+    "title": "Liệt kê các tàu có tổng khối lượng hàng hóa chở ở khu vực ‘Arctic’ > 10000.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 272,
+    "acceptance": 66.54,
+    "level": "MEDIUM",
+    "prefixCode": "pfGYgR",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "3b19a3fd-8353-4d3f-adf2-a477298099e3",
+        "createdAt": "2025-11-09T22:46:44.016095",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T22:46:44.067036",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f32867c5-b69b-4e77-b56f-76d67b39d72f",
+    "createdAt": "2025-11-09T22:41:52.561805",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T22:48:45.188656",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2877",
+    "title": "Tính tổng quãng đường đã đi ở khu vực ‘Atlantic’",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 273,
+    "acceptance": 63.74,
+    "level": "MEDIUM",
+    "prefixCode": "GttcJO",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "ad410313-3f54-4930-ba8b-e50f20c268a2",
+        "createdAt": "2025-11-09T22:48:45.16154",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T22:48:45.188721",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f8cfc5da-c934-40ab-bca7-eec1f032a674",
+    "createdAt": "2025-11-09T22:42:34.890663",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T22:50:50.636217",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2878",
+    "title": "Liệt kê các chuyến đi vi phạm sức chở: cargo_weight > max_cargo_weight.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 227,
+    "acceptance": 73.13,
+    "level": "MEDIUM",
+    "prefixCode": "qQxXrh",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "aa6f9424-fd0b-4f25-9b37-709b3acf8ba8",
+        "createdAt": "2025-11-09T22:50:50.578867",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T22:50:50.636276",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1cc0f765-a657-4d91-b123-4c22178a3b77",
+    "createdAt": "2025-11-09T22:44:10.325059",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T22:58:03.583427",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2879",
+    "title": "Tính số khu vực khác nhau đã hoạt động và tổng khối lượng hàng hóa đã chở",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 227,
+    "acceptance": 70.04,
+    "level": "MEDIUM",
+    "prefixCode": "pVZKkM",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "9f7f48da-74ae-4e8a-825b-af26a5b9cf43",
+        "createdAt": "2025-11-09T22:58:03.521027",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T22:58:03.583485",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "447b57f3-a0b6-48b5-873c-759b0cba48ab",
+    "createdAt": "2025-11-09T23:06:55.984154",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:11:35.63671",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2881",
+    "title": "Liệt kê các dự án thuộc ‘Renewable Energy’ có điểm ESG trung bình ≥ 2.7 và số tiền đầu tư ≥ 5000000.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 328,
+    "acceptance": 54.88,
+    "level": "MEDIUM",
+    "prefixCode": "NboUuf",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "a431b110-556b-47c3-bc6a-428b5fbe0004",
+        "createdAt": "2025-11-09T23:11:35.593586",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:11:35.636779",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3c2bbcf9-0a49-4da4-bb46-b722035eb8e6",
+    "createdAt": "2025-11-09T23:07:33.46061",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:13:14.338842",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2882",
+    "title": "Tính tổng số tiền đầu tư theo location cho các công ty mà mỗi thành phần ESG đều > 2.0; chỉ hiển thị những location có tổng ≥ 10000000.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 219,
+    "acceptance": 74.89,
+    "level": "MEDIUM",
+    "prefixCode": "aJtosy",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "ff186fd2-b399-49db-a91b-db7f31e0156f",
+        "createdAt": "2025-11-09T23:13:14.309931",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:13:14.338968",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "002e974f-effa-46dc-9b44-0917209091a8",
+    "createdAt": "2025-11-09T23:07:55.774608",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:19:45.692339",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2883",
+    "title": "Tính tổng vốn đầu tư của các dự án có sector chứa từ “Energy” và kèm tổng điểm ESG",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 891,
+    "acceptance": 33.0,
+    "level": "MEDIUM",
+    "prefixCode": "ExxeOm",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "24fb4bdf-9d76-466e-9893-73c459a9e28e",
+        "createdAt": "2025-11-09T23:18:03.493701",
+        "lastModifiedAt": "2025-11-09T23:19:45.692389",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c4d1cd2a-ff63-43f5-bfd6-a747e4ea56e4",
+    "createdAt": "2025-11-09T23:08:51.348954",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:26:11.617641",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2884",
+    "title": "Liệt kê các dự án mà mức vốn trên mỗi điểm ESG đạt ≥ 2000000",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 482,
+    "acceptance": 32.78,
+    "level": "MEDIUM",
+    "prefixCode": "SwTCSL",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "0f90063b-c8d9-4850-8b84-3da039a4e4a3",
+        "createdAt": "2025-11-09T23:26:11.571071",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:26:11.617699",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c90e0ed6-6b7b-4aa7-a73a-5005499acd71",
+    "createdAt": "2025-11-09T23:28:54.830396",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:33:31.397248",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2885",
+    "title": "Tính mức thay đổi tỷ lệ tái chế của vật liệu ‘paper’ giữa năm 2017 và năm 2019: rate_2019 - rate_2017.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 199,
+    "acceptance": 81.41,
+    "level": "MEDIUM",
+    "prefixCode": "jIRMmo",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "0ee0923e-2890-446e-af4d-8ec5a9b1c08c",
+        "createdAt": "2025-11-09T23:33:31.36577",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:33:31.397331",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "27b7293b-dcee-4516-abe3-f4d2cf43c8e2",
+    "createdAt": "2025-11-09T23:29:36.60993",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:34:55.90443",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2886",
+    "title": "Tm vật liệu có trung bình tỷ lệ tái chế cao nhất.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 208,
+    "acceptance": 73.08,
+    "level": "MEDIUM",
+    "prefixCode": "fKRzgS",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "7b5b48d1-4e29-4edc-aa15-0649f6db83da",
+        "createdAt": "2025-11-09T23:34:55.862327",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:34:55.904479",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "877e46e5-254c-4d07-9750-5032efe9846e",
+    "createdAt": "2025-11-09T23:30:12.42134",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:36:07.509545",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2887",
+    "title": "Tính tốc độ tăng trưởng theo năm của vật liệu",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 205,
+    "acceptance": 74.15,
+    "level": "MEDIUM",
+    "prefixCode": "TArYOL",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "f0b55dd1-fd76-4d96-b5ed-e6864e00c160",
+        "createdAt": "2025-11-09T23:36:07.483413",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:36:07.509593",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0f471870-cf58-48bb-a22d-475768c91529",
+    "createdAt": "2025-11-09T23:30:46.025936",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:37:50.825773",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2888",
+    "title": "Liệt kê các vật liệu có tỷ lệ tái chế tăng đều qua từng năm",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 313,
+    "acceptance": 53.35,
+    "level": "MEDIUM",
+    "prefixCode": "zvesjJ",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "37ccaf4a-39a5-4f38-8513-dbdbba1d8e40",
+        "createdAt": "2025-11-09T23:37:50.784124",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:37:50.825829",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6724c97f-a4b6-4e51-99f1-5429ddf2aa4a",
+    "createdAt": "2025-11-09T23:40:25.793717",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:45:18.776199",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2889",
+    "title": "Liệt kê tổng số lượng bán theo mỗi sản phẩm thuần chay ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 180,
+    "acceptance": 77.78,
+    "level": "MEDIUM",
+    "prefixCode": "QdNeVU",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "8634f1ec-0452-4642-bae1-42446cf62d6a",
+        "createdAt": "2025-11-09T23:45:18.721977",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:45:18.776285",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "625ea65a-6f4a-45da-a530-2e11d6dd4859",
+    "createdAt": "2025-11-09T23:41:19.439417",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:47:15.259078",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2890",
+    "title": "Tính số sản phẩm khác nhau đã có giao dịch",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 240,
+    "acceptance": 57.92,
+    "level": "MEDIUM",
+    "prefixCode": "uKIgdy",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "44e5f875-4e7c-42ad-8a1a-c6c6e633dc3f",
+        "createdAt": "2025-11-09T23:47:15.219942",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:47:15.259132",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f063267c-5309-41a1-b655-b6395894974a",
+    "createdAt": "2025-11-09T23:42:00.313333",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:48:55.087168",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2891",
+    "title": "Liệt kê Top 3 sản phẩm theo tổng số lượng bán trong 30 ngày gần nhất tính từ ngày lớn nhất trong bảng time.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 234,
+    "acceptance": 74.79,
+    "level": "MEDIUM",
+    "prefixCode": "NLkavJ",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "c09ec71a-1ed7-442f-98e5-2437ca066219",
+        "createdAt": "2025-11-09T23:48:55.046673",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:48:55.087263",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8a7ab9ec-6f1e-4996-af34-a2a3fa023973",
+    "createdAt": "2025-11-09T23:42:32.826916",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-09T23:54:13.215466",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2892",
+    "title": "Tnh tổng số lượng bán thuần chay",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 205,
+    "acceptance": 68.29,
+    "level": "MEDIUM",
+    "prefixCode": "XnppUJ",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "39fbc564-3948-4c87-8cac-2c63b34574b0",
+        "createdAt": "2025-11-09T23:53:16.218242",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-09T23:53:16.282565",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a305cb10-efdd-4ac6-9dac-a0abbed75c10",
+    "createdAt": "2025-11-09T23:56:20.113951",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-10T00:00:46.62911",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2893",
+    "title": "Tìm công suất lớn nhất trong giai đoạn ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 221,
+    "acceptance": 66.97,
+    "level": "MEDIUM",
+    "prefixCode": "vGfBqv",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "1ca44469-c568-4c43-872c-a4649daf2bee",
+        "createdAt": "2025-11-10T00:00:46.584953",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-10T00:00:46.629167",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "634573fd-e593-4705-ab97-51b3a5a7c566",
+    "createdAt": "2025-11-09T23:57:04.748886",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-10T00:02:15.838046",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2894",
+    "title": "Đếm số mẫu (model) theo quốc gia sản xuất ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 346,
+    "acceptance": 45.95,
+    "level": "MEDIUM",
+    "prefixCode": "RrpXHQ",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "1990deb5-95a5-4acd-aeb8-451d5ae5365a",
+        "createdAt": "2025-11-10T00:02:15.810554",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-10T00:02:15.838118",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7c2bac24-f053-4521-b6b6-ff935498fb2b",
+    "createdAt": "2025-11-09T23:57:44.941783",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-10T00:03:55.519524",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2895",
+    "title": "Liệt kê mẫu mới nhất cho từng loại phương tiện",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 383,
+    "acceptance": 31.59,
+    "level": "MEDIUM",
+    "prefixCode": "hYrgOa",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "c65d5b3e-f60e-4646-92bd-60a030cfbbc2",
+        "createdAt": "2025-11-10T00:03:55.463525",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-10T00:03:55.51961",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8c076229-34bd-4258-ac24-c69d4a459d62",
+    "createdAt": "2025-11-09T23:58:46.8841",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-10T00:05:27.193713",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2896",
+    "title": "Tính công suất trung bình cho các mẫu",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 195,
+    "acceptance": 70.26,
+    "level": "MEDIUM",
+    "prefixCode": "DETnRS",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "ebb3013a-6036-4bba-be87-d24b6f7a3464",
+        "createdAt": "2025-11-10T00:05:27.162012",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-10T00:05:27.1938",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "279355f5-8df6-47e3-bf0a-88e65cc02183",
+    "createdAt": "2025-11-10T00:06:30.092292",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-10T00:10:58.630516",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2897",
+    "title": "Tính tổng số vé đã bán ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 686,
+    "acceptance": 70.7,
+    "level": "EASY",
+    "prefixCode": "JGYEkS",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "87235f39-518d-43cb-a008-f444a7fd0284",
+        "createdAt": "2025-11-10T00:10:58.586035",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-10T00:10:58.630612",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a8ed8ee5-67e1-4baa-9380-198aadc452f6",
+    "createdAt": "2025-11-10T00:07:36.088701",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-10T00:12:27.810676",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2898",
+    "title": "Liệt kê các sự kiện thuộc thể loại music ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 707,
+    "acceptance": 56.01,
+    "level": "EASY",
+    "prefixCode": "UetZBM",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "f4edaafd-4ebd-4fc3-895c-c5295d59f0de",
+        "createdAt": "2025-11-10T00:12:27.776807",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-10T00:12:27.810735",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6879dc32-34f0-43a8-a734-19707d76bff6",
+    "createdAt": "2025-11-10T00:08:20.874784",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-10T00:13:54.252104",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2899",
+    "title": "Đếm số sự kiện theo thể loại",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1665,
+    "acceptance": 21.86,
+    "level": "EASY",
+    "prefixCode": "bCmpuE",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "e1d273ca-0980-4b17-8538-2f9034771a19",
+        "createdAt": "2025-11-10T00:13:54.220309",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-10T00:13:54.252189",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e5fd87ac-ad77-4938-80c3-81f707529bab",
+    "createdAt": "2025-11-10T00:08:59.283587",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-10T00:15:26.17836",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2900",
+    "title": "Lấy Top 3 sự kiện trong các thể loại ('music','theater') có vé bán nhiều nhất.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 480,
+    "acceptance": 73.13,
+    "level": "EASY",
+    "prefixCode": "xQSkNk",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "6a7ca6a4-2423-4620-9258-1b977d449ab5",
+        "createdAt": "2025-11-10T00:15:26.150362",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-10T00:15:26.178419",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d7390262-d5b1-434f-8076-ffef3b70d4b4",
+    "createdAt": "2025-11-11T20:48:14.890782",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T20:52:13.966987",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2901",
+    "title": "Liệt kê 3 đề tài nghiên cứu có số gene tham gia nhiều nhất, kèm số gene",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 273,
+    "acceptance": 54.58,
+    "level": "MEDIUM",
+    "prefixCode": "Dnyxyy",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "361e0627-d395-4fb1-bda5-714705cc9877",
+        "createdAt": "2025-11-11T20:52:13.797142",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T20:52:13.967056",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "53afa590-013c-4888-9fa3-f304d152de63",
+    "createdAt": "2025-11-11T20:48:59.487061",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T20:53:53.436879",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2902",
+    "title": "Tìm công ty có số lượng gene khác nhau được nghiên cứu nhiều nhất",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 219,
+    "acceptance": 64.84,
+    "level": "MEDIUM",
+    "prefixCode": "EPIEUm",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "781c3102-d747-4b07-9b88-c4a010f66804",
+        "createdAt": "2025-11-11T20:53:53.369902",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T20:53:53.436937",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2745f75e-5f3b-49ac-bd33-9c665b692d81",
+    "createdAt": "2025-11-11T20:55:15.17528",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:01:13.076412",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2903",
+    "title": "Liệt kê các tác phẩm được trưng bày ít nhất ở 2 triển lãm khác nhau.",
+    "point": 10.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 304,
+    "acceptance": 46.71,
+    "level": "MEDIUM",
+    "prefixCode": "IfhwBd",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "9d45d8e9-9cf5-4ec6-9912-cc318d8d0b0c",
+        "createdAt": "2025-11-11T21:01:12.963363",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T21:01:13.07648",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e1a846b6-ecfb-4e1d-803b-2ae78809fd7e",
+    "createdAt": "2025-11-11T20:58:18.125103",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:03:49.59658",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2904",
+    "title": "Tìm các cặp tác phẩm từng được trưng bày cùng một triển lãm ít nhất 1 lần",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 351,
+    "acceptance": 36.47,
+    "level": "MEDIUM",
+    "prefixCode": "JRdkXO",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "611c7715-2fa5-408d-8812-23a7e2495bd8",
+        "createdAt": "2025-11-11T21:03:49.507802",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T21:03:49.596651",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5079dc7f-4c70-4875-963f-cabdbbdea9ad",
+    "createdAt": "2025-11-11T21:04:11.662927",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:14:26.272288",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2905",
+    "title": "Tính doanh thu tháng 03/2025 theo từng loại dịch vụ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 194,
+    "acceptance": 67.53,
+    "level": "MEDIUM",
+    "prefixCode": "BEmPzr",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "0624f26f-2ccd-49ce-b08c-fa9060c111b8",
+        "createdAt": "2025-11-11T21:14:26.228012",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T21:14:26.272357",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7c84eaf1-dbe2-4030-908e-3b6aec5b425c",
+    "createdAt": "2025-11-11T21:10:22.532709",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:12:48.714689",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2906",
+    "title": "Tìm Top 3 khách hàng theo tổng phí ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 214,
+    "acceptance": 62.62,
+    "level": "MEDIUM",
+    "prefixCode": "WxrAlh",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "9eaa58bb-3e0a-4a52-a7b8-c0aedb86b744",
+        "createdAt": "2025-11-11T21:12:48.631715",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T21:12:48.714743",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d3547ee4-a1f8-48ff-97a5-fdba85a446c7",
+    "createdAt": "2025-11-11T21:19:27.526639",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:22:47.578649",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2907",
+    "title": "Tính tổng số giường theo từng territory, tách riêng giường bệnh viện và giường phòng khám, kèm tổng cộng.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 326,
+    "acceptance": 43.87,
+    "level": "MEDIUM",
+    "prefixCode": "UMqPkx",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "110d1445-87fa-499e-8831-40c1bcfbfc25",
+        "createdAt": "2025-11-11T21:22:47.524044",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T21:22:47.578694",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3e2fcf80-3fd9-4c8f-a2fd-bc7ef36e669c",
+    "createdAt": "2025-11-11T21:20:02.925268",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:25:20.975155",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2908",
+    "title": "Tính tỷ lệ (%) bệnh viện có sân bay trực thăng theo từng territory (chỉ xét những territory có ít nhất 1 bệnh viện).",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 222,
+    "acceptance": 59.46,
+    "level": "MEDIUM",
+    "prefixCode": "wGTlsH",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "d0e691a1-c9de-4bc5-87c8-a6a0b1683239",
+        "createdAt": "2025-11-11T21:25:20.932325",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T21:25:20.975203",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1b447cca-90ae-4a94-8d16-a586c0c183e2",
+    "createdAt": "2025-11-11T21:29:48.304586",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:34:32.086661",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2909",
+    "title": "Tính tổng số vé đã bán theo từng thể loại trong tập ('music','theater')",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 465,
+    "acceptance": 75.05,
+    "level": "EASY",
+    "prefixCode": "Ysigwu",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "da3f101c-d8df-43fd-8f77-1fd6263577bc",
+        "createdAt": "2025-11-11T21:32:42.063961",
+        "lastModifiedAt": "2025-11-11T21:34:32.086728",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f9645015-c038-4c5e-ba21-c6a119a8b5fc",
+    "createdAt": "2025-11-11T21:30:39.39871",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:36:17.38731",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2910",
+    "title": "Liệt kê các sự kiện thuộc music hoặc theater có tickets_sold lớn hơn mức trung bình của chính thể loại đó.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 710,
+    "acceptance": 55.77,
+    "level": "EASY",
+    "prefixCode": "ijTypr",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "1f012552-2795-4faf-a007-af3fed4030e0",
+        "createdAt": "2025-11-11T21:36:17.341181",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T21:36:17.387356",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "bb8c2e5e-5c7e-4b93-b90e-2be5bbfcb27e",
+    "createdAt": "2025-11-11T21:37:42.889865",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:43:51.310142",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2911",
+    "title": "Tính tổng ngân sách AI theo từng quốc gia cho các năm từ 2019 trở đi.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 177,
+    "acceptance": 79.66,
+    "level": "MEDIUM",
+    "prefixCode": "xznpgV",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "8fd704aa-6397-43fc-a57f-48462c4a126a",
+        "createdAt": "2025-11-11T21:43:51.228043",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T21:43:51.310209",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0b305b0e-c4a1-4114-ae02-5e0e27e5a5d9",
+    "createdAt": "2025-11-11T21:41:38.273356",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:49:43.933134",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2912",
+    "title": "Tìm năm có tổng ngân sách AI kết hợp lớn nhất (cộng của USA + UK + Japan) trong giai đoạn 2018–2021.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 170,
+    "acceptance": 84.71,
+    "level": "MEDIUM",
+    "prefixCode": "aaVqoI",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "25d69092-f96b-484f-b453-f4828637993a",
+        "createdAt": "2025-11-11T21:49:43.81973",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T21:49:43.93318",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "81991591-d531-4426-bdbd-63e473df7391",
+    "createdAt": "2025-11-11T21:56:04.432974",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T21:59:20.850684",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2913",
+    "title": "Liệt kê các sáng kiến triển khai trong năm 2024, kèm số sinh viên bị ảnh hưởng.",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 598,
+    "acceptance": 26.42,
+    "level": "MEDIUM",
+    "prefixCode": "OElCxP",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "dfc5b2a9-5129-4728-aabd-edfbdaa254a0",
+        "createdAt": "2025-11-11T21:59:20.816939",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T21:59:20.850726",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "687d8eaa-2bf9-4175-940b-fb5eb9592dd6",
+    "createdAt": "2025-11-11T21:56:45.376453",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T22:00:45.647014",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2914",
+    "title": "Tính số sinh viên bị ảnh hưởng ",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 416,
+    "acceptance": 38.46,
+    "level": "MEDIUM",
+    "prefixCode": "MsoXPu",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "0ec8456e-0858-4c3a-966f-87fd06054267",
+        "createdAt": "2025-11-11T22:00:45.610741",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T22:00:45.647082",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "9bcca840-2a05-4819-a986-09ef8d8705e8",
+    "createdAt": "2025-11-11T22:02:19.365421",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T22:11:00.811867",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2915",
+    "title": "Liệt kê mỗi quốc gia có ít nhất 1 vi phạm",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 435,
+    "acceptance": 41.61,
+    "level": "MEDIUM",
+    "prefixCode": "dqiSlJ",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "7e8f653c-19f6-417a-99ee-54d103b3d481",
+        "createdAt": "2025-11-11T22:11:00.763046",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T22:11:00.811915",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "e3ad5471-018e-40b5-a5db-37e4f9efd5b7",
+    "createdAt": "2025-11-11T22:09:04.138597",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-11-11T22:12:27.533178",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "questionCode": "SQL-2916",
+    "title": "Tính tỷ lệ (%) sản phẩm sử dụng",
+    "point": 5.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 516,
+    "acceptance": 36.63,
+    "level": "MEDIUM",
+    "prefixCode": "nGbXaL",
+    "isShare": false,
+    "status": "REVIEW",
+    "questionDetails": [
+      {
+        "id": "505c6b88-2fef-49ef-9430-df6018bb7e4e",
+        "createdAt": "2025-11-11T22:12:27.488011",
+        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "lastModifiedAt": "2025-11-11T22:12:27.533227",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d9bb1716-ab2f-4b18-bf1d-3c6b431f7337",
+    "createdAt": "2025-11-15T17:07:23.413525",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:02:55.666957",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-001",
+    "title": "Liệt kê sản phẩm",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1141,
+    "acceptance": 64.42,
+    "level": "EASY",
+    "prefixCode": "lNlIMf",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "b9feb774-7529-44f6-ad09-6c9053f8ad56",
+        "createdAt": "2025-11-15T17:26:52.269433",
+        "lastModifiedAt": "2025-11-15T18:08:51.322151",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a7a4b21f-ceac-4389-87db-e98b5f782c9a",
+    "createdAt": "2025-11-15T17:28:05.853094",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:09:19.839349",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-002",
+    "title": "Danh sách đơn hàng và tên khách hàng",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 655,
+    "acceptance": 76.03,
+    "level": "MEDIUM",
+    "prefixCode": "kzZLHL",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "b360e616-4661-42cc-b42c-cf3946004661",
+        "createdAt": "2025-11-15T18:01:06.443093",
+        "lastModifiedAt": "2025-11-15T20:29:27.981721",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "93588896-cc1b-4dd4-8894-ff0dc19fd0dc",
+    "createdAt": "2025-11-15T18:08:59.647544",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:09:11.638148",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-003",
+    "title": "Tính tổng doanh thu theo khách hàng",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 638,
+    "acceptance": 75.55,
+    "level": "MEDIUM",
+    "prefixCode": "qHEgrx",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "ce560698-e6c0-4c13-a55e-44b1ea14e4f8",
+        "createdAt": "2025-11-15T18:21:15.927895",
+        "lastModifiedAt": "2025-11-16T08:22:25.658358",
+        "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5eb929f2-1c63-4edf-8659-5b102e0e847c",
+    "createdAt": "2025-11-15T19:55:50.869376",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:09:02.889875",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-008",
+    "title": "Tăng lương cho nhân viên phòng IT",
+    "point": 1.0,
+    "type": "UPDATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1318,
+    "acceptance": 86.49,
+    "level": "EASY",
+    "prefixCode": "rftcgN",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "923204e7-75e6-473e-a0a9-82ea06a23eb7",
+        "createdAt": "2025-11-15T20:03:54.426519",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-15T20:03:54.471838",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d11eb0f8-9a15-4d70-88b2-07d6ac680088",
+    "createdAt": "2025-11-15T21:02:38.102614",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T13:39:52.620956",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-011",
+    "title": "Tạo bảng hệ thống quản lý đăng ký học phần",
+    "point": 1.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2425,
+    "acceptance": 54.85,
+    "level": "EASY",
+    "prefixCode": "wXVrsC",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "c4ef7dda-5635-456c-8e51-ef195822ca27",
+        "createdAt": "2025-11-15T21:04:26.760651",
+        "lastModifiedAt": "2025-12-08T13:39:52.621147",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1f95589f-8a16-4c4d-91ff-22176ff7dbaf",
+    "createdAt": "2025-11-15T21:44:06.908215",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:08:46.128912",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-012",
+    "title": "Tạo bảng quản lý đơn hàng",
+    "point": 1.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2600,
+    "acceptance": 48.38,
+    "level": "EASY",
+    "prefixCode": "HtGcFP",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "d31a0b39-8d52-4a9f-b2ec-2d7abb5ca2e9",
+        "createdAt": "2025-11-15T22:00:01.39062",
+        "lastModifiedAt": "2025-11-27T10:09:24.138216",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "89cc9f67-e7d9-4106-8627-2650ef9ce47a",
+    "createdAt": "2025-11-15T22:14:39.092876",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:08:37.496081",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-013",
+    "title": "Tạo bảng hệ thống quản lý linh kiện",
+    "point": 1.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1950,
+    "acceptance": 56.46,
+    "level": "EASY",
+    "prefixCode": "Rrtyup",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "ba721d35-dda1-4f2a-abfb-b8fd880cb138",
+        "createdAt": "2025-11-15T22:25:35.707955",
+        "lastModifiedAt": "2025-11-27T10:08:57.936051",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4374784f-0906-44e1-9575-7f5d725ae33e",
+    "createdAt": "2025-11-15T22:33:21.501024",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T14:22:59.410788",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-014",
+    "title": "Tạo bảng hệ thống quản lý giao dịch tài khoản",
+    "point": 1.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2672,
+    "acceptance": 41.73,
+    "level": "EASY",
+    "prefixCode": "iLLWNU",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "f862bbff-07aa-4d0f-9de9-8d436915eb80",
+        "createdAt": "2025-11-15T22:37:16.080014",
+        "lastModifiedAt": "2025-12-08T14:22:59.411031",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4f9b616f-639b-4158-bf16-20e32fdaea29",
+    "createdAt": "2025-11-15T23:05:01.14891",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:08:24.274387",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-015",
+    "title": "Chỉnh sửa thông tin sinh viên",
+    "point": 1.0,
+    "type": "ALTER",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1585,
+    "acceptance": 54.2,
+    "level": "MEDIUM",
+    "prefixCode": "abStPD",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "88e8a407-270d-43c1-897a-c20c2c0e8880",
+        "createdAt": "2025-11-15T23:13:35.798734",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-15T23:13:35.830424",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "bc9d38d2-7d25-44d8-b97c-431586ae3d73",
+    "createdAt": "2025-11-15T23:18:13.163287",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:08:17.124553",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-016",
+    "title": "Chính sửa thông tin đơn hàng",
+    "point": 1.0,
+    "type": "ALTER",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1442,
+    "acceptance": 46.88,
+    "level": "MEDIUM",
+    "prefixCode": "ryyDII",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "fcc0e2c0-3a0b-4dc4-8b02-66a1d548c876",
+        "createdAt": "2025-11-15T23:32:01.363903",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-15T23:32:01.401927",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3b6bcdd8-ceee-469c-bbc1-bba380a8490b",
+    "createdAt": "2025-11-15T23:48:43.134883",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:08:10.916752",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-017",
+    "title": "Chính sửa thông tin sản phẩm",
+    "point": 1.0,
+    "type": "ALTER",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2859,
+    "acceptance": 20.04,
+    "level": "MEDIUM",
+    "prefixCode": "XcYrix",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "e894d18b-ba3a-4f39-b8de-b041d602f1c1",
+        "createdAt": "2025-11-16T00:00:56.982815",
+        "lastModifiedAt": "2025-12-24T21:29:50.513832",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d13ff2f2-2b58-4586-81ab-e6b067269690",
+    "createdAt": "2025-11-16T01:18:29.590431",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:08:04.162687",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-018",
+    "title": "Chỉnh sửa thông tin nhân viên",
+    "point": 1.0,
+    "type": "ALTER",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 961,
+    "acceptance": 63.27,
+    "level": "MEDIUM",
+    "prefixCode": "tBQpdQ",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "a700e0a9-98c5-45e0-a719-9edf52c4df9c",
+        "createdAt": "2025-11-16T01:26:04.802739",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-16T01:26:04.831679",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "76c99d50-b214-4b45-8942-478918fe58ae",
+    "createdAt": "2025-11-16T01:45:22.529486",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:07:58.021689",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-019",
+    "title": "Tạo bảng hệ thống quản lý thư viện",
+    "point": 1.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1796,
+    "acceptance": 57.68,
+    "level": "EASY",
+    "prefixCode": "IGnWZi",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "379e0d2d-e216-45d0-b926-3adb055ee7d5",
+        "createdAt": "2025-11-16T01:49:48.018736",
+        "lastModifiedAt": "2025-11-27T10:10:30.546373",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6a6e4761-f8d1-4f37-a93f-29b71fa42734",
+    "createdAt": "2025-11-16T01:51:39.632775",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:07:52.073254",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-020",
+    "title": "Tạo bảng hệ thống quản lý bán hàng",
+    "point": 1.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1793,
+    "acceptance": 60.85,
+    "level": "MEDIUM",
+    "prefixCode": "nXhIxf",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "ca2fba24-3a71-426b-9f28-24fcc91c7ea3",
+        "createdAt": "2025-11-16T01:54:22.953907",
+        "lastModifiedAt": "2025-11-27T10:10:43.447199",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "242b82d1-87fc-48a1-b4af-f3fd8f6d6d3b",
+    "createdAt": "2025-11-16T01:56:16.261323",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:07:45.365533",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-009",
+    "title": "Xóa khách hàng không có bất kỳ đơn hàng nào",
+    "point": 1.0,
+    "type": "DELETE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1439,
+    "acceptance": 75.12,
+    "level": "MEDIUM",
+    "prefixCode": "sWyBkT",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "1cd84c9b-f486-465f-b547-d56af4a6b6aa",
+        "createdAt": "2025-11-16T02:01:42.802095",
+        "lastModifiedAt": "2025-11-16T02:02:14.291101",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c3b40e6d-2d9d-4e74-acd1-4044f56fbbab",
+    "createdAt": "2025-11-16T02:03:46.850679",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:07:38.77302",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-010",
+    "title": "Xóa bản ghi chi tiết đơn hàng cho sản phẩm đã ngừng kinh doanh hoặc thuộc nhóm \"Obsolete\"",
+    "point": 1.0,
+    "type": "DELETE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1402,
+    "acceptance": 63.34,
+    "level": "MEDIUM",
+    "prefixCode": "yNtIoI",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "a45040ab-82e3-40e2-a027-2e7f4cb5a772",
+        "createdAt": "2025-11-16T02:15:38.924598",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-16T02:15:39.001395",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "76f0a73d-f6ad-47c2-80a3-7f069df42856",
+    "createdAt": "2025-11-16T02:20:07.853686",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:07:22.73469",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-006",
+    "title": "Tăng lương cho nhân viên có tổng doanh số hoàn tất vượt ngưỡng",
+    "point": 1.0,
+    "type": "UPDATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1287,
+    "acceptance": 64.34,
+    "level": "HARD",
+    "prefixCode": "cmEmac",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "281c686e-c853-4d66-ac56-ebafd4ea08b2",
+        "createdAt": "2025-11-16T02:26:12.149302",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-16T02:26:12.228839",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "aa508f18-9e9c-4d48-8e9b-ac9f768b770d",
+    "createdAt": "2025-11-16T02:30:50.514226",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-09T23:48:41.326554",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-007",
+    "title": "Đánh dấu đơn hàng đã thanh toán",
+    "point": 1.0,
+    "type": "UPDATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1358,
+    "acceptance": 75.99,
+    "level": "MEDIUM",
+    "prefixCode": "DUHLsC",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "9aee5977-508c-485d-8fd3-e0ea22b263fe",
+        "createdAt": "2025-11-16T02:35:08.633228",
+        "lastModifiedAt": "2025-12-09T23:48:41.326692",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "96bcc914-ca04-457b-a0d2-c33a20633d05",
+    "createdAt": "2025-11-16T02:36:49.594116",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-24T17:46:26.110674",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-005",
+    "title": "Tìm khách hàng chưa từng có đơn hàng",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 929,
+    "acceptance": 46.93,
+    "level": "MEDIUM",
+    "prefixCode": "BnUbYu",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "f3a2f072-7057-46e2-babc-14d4703e2832",
+        "createdAt": "2025-11-16T02:43:55.16499",
+        "lastModifiedAt": "2025-12-24T17:46:26.11072",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5a4a4c45-8e4f-41d0-834b-64a295248af2",
+    "createdAt": "2025-11-16T02:48:28.72259",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:07:00.799925",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-004",
+    "title": "Tổng số tiền đã thanh toán thành công của mỗi khách",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1887,
+    "acceptance": 34.18,
+    "level": "MEDIUM",
+    "prefixCode": "wQGsCq",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "f43ccf9f-50f4-46c0-8230-72e2a82f5dc3",
+        "createdAt": "2025-11-16T02:59:28.670475",
+        "lastModifiedAt": "2025-11-16T03:01:12.853985",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "7f89b2e4-04e2-4f01-b235-153ce0f6b941",
+    "createdAt": "2025-11-23T01:05:44.564603",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:06:19.928099",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-021",
+    "title": "Thêm cựu sinh viên vào bảng ALUMNI",
+    "point": 1.0,
+    "type": "INSERT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1439,
+    "acceptance": 91.59,
+    "level": "EASY",
+    "prefixCode": "elXIrS",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "758cc829-b8e0-4404-b06c-73d025a31e3f",
+        "createdAt": "2025-11-23T01:11:44.456062",
+        "lastModifiedAt": "2025-11-26T18:35:05.884516",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "25732f55-77f9-4989-8128-1e44e7ff8e4e",
+        "createdAt": "2025-11-26T18:35:05.817349",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T18:35:05.884597",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "a88ab707-42a4-4bc4-a1f3-a4d6a01dbc83",
+    "createdAt": "2025-11-25T18:56:43.452047",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-24T17:23:12.066272",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-022",
+    "title": "Chỉnh sửa thông tin bảng điểm khách hàng",
+    "point": 1.0,
+    "type": "ALTER",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2188,
+    "acceptance": 27.93,
+    "level": "EASY",
+    "prefixCode": "skoLhF",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "34d425c4-d1a0-4d9f-825c-4bac35188a8c",
+        "createdAt": "2025-11-25T20:58:47.010262",
+        "lastModifiedAt": "2025-12-24T17:23:12.066336",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "bfc25a96-8419-4e56-b183-8c2a7657af59",
+    "createdAt": "2025-11-25T19:23:21.029271",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:06:05.649301",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-023",
+    "title": "Chỉnh sửa thông tin tồn kho",
+    "point": 1.0,
+    "type": "ALTER",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1283,
+    "acceptance": 46.22,
+    "level": "EASY",
+    "prefixCode": "BqEsgp",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "781f951d-36d3-477f-9d5f-ba8438e6462f",
+        "createdAt": "2025-11-25T19:53:05.085368",
+        "lastModifiedAt": "2025-11-25T19:59:21.535018",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8f2eef00-8ad4-4832-a590-cedb3423a5f7",
+    "createdAt": "2025-11-25T21:00:25.378837",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-24T21:45:29.088578",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-024",
+    "title": "Chỉnh sửa thông tin giao hàng",
+    "point": 1.0,
+    "type": "ALTER",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2395,
+    "acceptance": 27.72,
+    "level": "EASY",
+    "prefixCode": "fPWyhO",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "f4bef852-1d05-40ea-bba0-11e5817c00c7",
+        "createdAt": "2025-11-25T21:07:00.213793",
+        "lastModifiedAt": "2025-12-24T21:45:29.088639",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4cb2d27b-1f6b-4903-8ff2-fb459aed9f39",
+    "createdAt": "2025-11-25T21:59:26.12833",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-24T17:48:15.084714",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-025",
+    "title": "Tạo bảng đánh giá đơn hàng",
+    "point": 1.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 6000,
+    "acceptance": 18.58,
+    "level": "EASY",
+    "prefixCode": "MnIhBx",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "d61b9e01-60f5-45fb-9053-7840a5251819",
+        "createdAt": "2025-11-25T22:04:22.009718",
+        "lastModifiedAt": "2025-12-24T17:48:15.084766",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      },
+      {
+        "id": "ecea45c6-6268-4e20-91e8-4002a095b4f1",
+        "createdAt": "2025-11-25T22:04:22.006173",
+        "lastModifiedAt": "2025-12-24T17:48:15.084778",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b4e1a6cb-3688-44b6-8e5c-fa5c77beeb0f",
+    "createdAt": "2025-11-26T15:21:32.080936",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:05:51.010247",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-026",
+    "title": "Đếm số dòng hàng của từng đơn",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 764,
+    "acceptance": 64.4,
+    "level": "MEDIUM",
+    "prefixCode": "EFRXIv",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "35cda327-5bac-4bd1-94e2-233df90e4568",
+        "createdAt": "2025-11-26T16:00:06.662217",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T16:00:06.714604",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "7d64c0ef-939c-4669-8462-12f0744e841e",
+        "createdAt": "2025-11-26T16:00:06.665092",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T16:00:06.714652",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "d3305b57-7e32-4c4b-b1a3-8ed3c8971b88",
+    "createdAt": "2025-11-26T16:02:27.111323",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:05:43.194717",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-027",
+    "title": "Cập nhật trạng thái thanh toán theo tổng tiền đơn hàng",
+    "point": 1.0,
+    "type": "UPDATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1605,
+    "acceptance": 37.26,
+    "level": "HARD",
+    "prefixCode": "WNnXxe",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "c482752e-6ca6-4a14-bcb9-5c8163af3dfe",
+        "createdAt": "2025-11-26T16:27:21.018479",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T16:27:21.053358",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      }
+    ]
+  },
+  {
+    "id": "95d6e7dc-c8bb-4946-a657-82c61135f4c7",
+    "createdAt": "2025-11-26T16:27:29.245737",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-26T23:29:52.137293",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-028",
+    "title": "Supplier cung cấp nhiều sản phẩm Electronics",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 914,
+    "acceptance": 60.94,
+    "level": "EASY",
+    "prefixCode": "ftSIOz",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "7f290035-9dc6-4885-8b6d-b3c55c4e886b",
+        "createdAt": "2025-11-26T16:35:11.78972",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T16:35:11.866836",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "8cf98bbc-6d58-496e-9c82-24ba01a3f8c2",
+        "createdAt": "2025-11-26T16:35:11.795425",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T16:35:11.866909",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2dd4321d-b175-4f95-9f4b-e620fb2aa5b8",
+    "createdAt": "2025-11-26T16:35:26.402611",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-26T23:29:33.242881",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-029",
+    "title": "Khách hàng có tổng chi tiêu lớn và có đơn giá trị cao trong năm 2024",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1011,
+    "acceptance": 48.57,
+    "level": "HARD",
+    "prefixCode": "EBhzNc",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "60b42f7c-d743-4a6d-853c-b7eada13558f",
+        "createdAt": "2025-11-26T16:54:15.351938",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T16:54:15.399092",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "e8e38ba6-2e75-49b2-8e31-4aca617f44b9",
+        "createdAt": "2025-11-26T16:54:15.353831",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T16:54:15.399166",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "937f7ee9-c25f-4c9e-a568-2c9c93d71cff",
+    "createdAt": "2025-11-26T16:55:22.013718",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:05:17.382709",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-030",
+    "title": "Khách hàng chi tiêu lớn nhưng không có đơn bị hủy",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 838,
+    "acceptance": 51.43,
+    "level": "HARD",
+    "prefixCode": "xqKvEB",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "854b26db-9ee3-459f-b1e0-faabf6c75b4e",
+        "createdAt": "2025-11-26T17:02:48.192523",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T17:02:48.259109",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "b1ccaba3-7998-47e3-8388-67aa9687fa48",
+        "createdAt": "2025-11-26T17:02:48.194697",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T17:02:48.259144",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f9f1b77b-91fb-47d3-9e00-324b802f4d89",
+    "createdAt": "2025-11-26T17:07:32.251825",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:05:09.626928",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-031",
+    "title": "Thêm danh sách khách hàng VIP theo tổng chi tiêu năm 2024",
+    "point": 1.0,
+    "type": "INSERT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1808,
+    "acceptance": 66.54,
+    "level": "MEDIUM",
+    "prefixCode": "ZQvpjk",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "c3151d45-1378-43ab-99c2-e104b55cfae5",
+        "createdAt": "2025-11-26T17:17:04.236224",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T17:17:04.290551",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "d0d62552-79ce-4cbe-ae79-fceca0f4c1de",
+        "createdAt": "2025-11-26T17:17:04.238622",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T17:17:04.290601",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c1be7c4a-7d6d-46eb-b636-55143239fa93",
+    "createdAt": "2025-11-26T17:59:34.025336",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:04:55.344021",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-033",
+    "title": "Xóa khách hàng lưu trữ có lịch sử mua hàng quá ít",
+    "point": 1.0,
+    "type": "DELETE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2794,
+    "acceptance": 22.66,
+    "level": "HARD",
+    "prefixCode": "OtexzC",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "22f0222b-7ca7-4efb-a187-8ce29c2846c0",
+        "createdAt": "2025-11-26T18:03:29.30578",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T18:03:29.363483",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "1f2619ba-3117-4920-ac57-d831db8d7507",
+        "createdAt": "2025-11-26T18:03:29.308385",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T18:03:29.36352",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "171f76fc-7bee-4a8f-897c-b528677a99c6",
+    "createdAt": "2025-11-26T18:15:47.601268",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:04:47.574383",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-034",
+    "title": "Xóa log điểm thưởng welcome trùng lặp cho khách chi tiêu thấp",
+    "point": 1.0,
+    "type": "DELETE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 756,
+    "acceptance": 53.04,
+    "level": "HARD",
+    "prefixCode": "dRlQJL",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "04e5f6db-6733-4b53-a59e-440a8a3755ea",
+        "createdAt": "2025-11-26T18:31:01.412782",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T18:31:01.468939",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "059281d8-3767-4a72-9d93-d0dc0c15f98d",
+        "createdAt": "2025-11-26T18:31:01.416896",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T18:31:01.468976",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0113b463-c4cc-4bce-9981-2c3a6aca1779",
+    "createdAt": "2025-11-26T18:40:01.495823",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:04:38.874621",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-032",
+    "title": "Cập nhật Tier cho khách chi tiêu cao nhất trong từng thành phố",
+    "point": 1.0,
+    "type": "UPDATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1049,
+    "acceptance": 59.39,
+    "level": "HARD",
+    "prefixCode": "lwcvdQ",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "304f7143-1b57-4c4d-a0dd-76bba2fa24fb",
+        "createdAt": "2025-11-26T18:56:48.601435",
+        "lastModifiedAt": "2025-11-26T23:28:14.501064",
+        "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "95770d5e-444a-41dd-8a94-70a691503ecf",
+        "createdAt": "2025-11-26T23:28:14.445701",
+        "createdBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+        "lastModifiedAt": "2025-11-26T23:28:14.501158",
+        "lastModifiedBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "dd1e86b2-e87c-4cb9-b5dc-3d9b9d703bd8",
+    "createdAt": "2025-11-26T18:57:26.795939",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:04:27.164081",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-035",
+    "title": "Tổng doanh thu theo thành phố từ 2 kênh bán hàng",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1168,
+    "acceptance": 51.97,
+    "level": "EASY",
+    "prefixCode": "Oncqax",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "5f743e02-ba3a-4501-a418-039adfe8bb5b",
+        "createdAt": "2025-11-26T19:09:22.494214",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T19:09:22.541055",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "55d6e945-469f-4760-b134-013524444a5b",
+        "createdAt": "2025-11-26T19:09:22.496498",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T19:09:22.541087",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "21869b8f-93fb-401a-82de-fc3f6a47b063",
+    "createdAt": "2025-11-26T19:16:28.635335",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:04:17.857043",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-036",
+    "title": "Khách hàng chi tiêu cao trong cả năm 2023 và 2024",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2440,
+    "acceptance": 23.36,
+    "level": "EASY",
+    "prefixCode": "MMZnyJ",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "420d8089-56fc-48cf-ae90-1131c419c630",
+        "createdAt": "2025-11-26T19:23:28.562934",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T19:23:28.618324",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "2faf5a45-a078-4f61-8dd9-5a716381762f",
+        "createdAt": "2025-11-26T19:23:28.565652",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T19:23:28.618366",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "595dff28-574b-4f4c-81e9-1b0aa490e54d",
+    "createdAt": "2025-11-26T19:32:02.943567",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:04:07.794562",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-037",
+    "title": "Liệt kê đơn hàng kèm tên khách hàng",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1348,
+    "acceptance": 31.68,
+    "level": "EASY",
+    "prefixCode": "tYDYIh",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "283847bc-d980-4030-a720-4aa335e87f47",
+        "createdAt": "2025-11-26T19:36:29.294028",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T19:36:29.353249",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "6d7f56e0-0fd1-4504-ba08-abf6ce1c3e9f",
+        "createdAt": "2025-11-26T19:36:29.296148",
+        "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "lastModifiedAt": "2025-11-26T19:36:29.353291",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cb6ec651-c73e-451b-afa2-e3c057c719e0",
+    "createdAt": "2025-11-26T19:37:02.304205",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:03:57.799637",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-038",
+    "title": "Liệt kê đơn hàng theo thành phố",
+    "point": 1.0,
+    "type": "SELECT",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1455,
+    "acceptance": 30.86,
+    "level": "EASY",
+    "prefixCode": "XHrgRe",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "94dab746-fc51-4311-96f3-dfc8c05cdc69",
+        "createdAt": "2025-11-26T19:46:34.549329",
+        "lastModifiedAt": "2025-11-26T19:48:21.615056",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "19874b21-9f3d-4be7-b101-0437492d1f5e",
+        "createdAt": "2025-11-26T19:46:34.551035",
+        "lastModifiedAt": "2025-11-26T19:48:21.615081",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "13e19b4c-8913-4103-b533-704f929d648c",
+    "createdAt": "2025-11-26T19:42:43.620922",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:03:47.870927",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-039",
+    "title": "Tạo bảng quản lý nhân sự",
+    "point": 1.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1900,
+    "acceptance": 53.84,
+    "level": "EASY",
+    "prefixCode": "CiZfwp",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "81d81853-c0a4-4b82-97ec-a83b410d9ab6",
+        "createdAt": "2025-11-26T19:52:07.644557",
+        "lastModifiedAt": "2025-11-27T10:09:39.492148",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "bb2cfc5f-aef9-48c9-b019-1fc359893676",
+        "createdAt": "2025-11-26T19:52:07.645595",
+        "lastModifiedAt": "2025-11-27T10:09:39.492296",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2744bcfd-eb89-47c0-a1c4-697354c4e9aa",
+    "createdAt": "2025-11-26T19:57:42.80973",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-24T17:21:11.074115",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-040",
+    "title": "Tạo bảng hệ thống ghi log",
+    "point": 1.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 2798,
+    "acceptance": 32.52,
+    "level": "EASY",
+    "prefixCode": "nZyYcy",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "f22add41-6221-4f33-b8c5-ea632db46334",
+        "createdAt": "2025-11-26T19:59:36.873812",
+        "lastModifiedAt": "2025-12-24T17:21:11.074164",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "1a73158a-a5f0-4ea9-bd71-490baa06da17",
+        "createdAt": "2025-11-26T19:59:36.875469",
+        "lastModifiedAt": "2025-12-24T17:21:11.074178",
+        "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3f790fa4-307c-4de4-bfd9-5fd831c623c3",
+    "createdAt": "2025-11-26T20:08:54.790965",
+    "createdBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "lastModifiedAt": "2025-12-08T12:03:21.39135",
+    "lastModifiedBy": "70ded9bf-7232-4a09-9073-988e1f857ea7",
+    "questionCode": "DEMO-041",
+    "title": "Tạo bảng quản lý đặt phòng khách sạn",
+    "point": 1.0,
+    "type": "CREATE",
+    "enable": true,
+    "isSynchorus": true,
+    "totalSub": 1834,
+    "acceptance": 48.47,
+    "level": "EASY",
+    "prefixCode": "YJyVcT",
+    "isShare": true,
+    "status": "APPROVED",
+    "questionDetails": [
+      {
+        "id": "aada645e-c46e-4b62-8666-f031b8173959",
+        "createdAt": "2025-11-26T20:14:37.448005",
+        "lastModifiedAt": "2025-11-27T10:10:00.158522",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "name": "Mysql"
+        }
+      },
+      {
+        "id": "b5d2b76a-a10e-4e07-bac3-47de94eff64e",
+        "createdAt": "2025-11-26T20:14:37.450407",
+        "lastModifiedAt": "2025-11-27T10:10:00.158686",
+        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+        "typeDatabase": {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "name": "Sql Server"
+        }
+      }
+    ]
+  }
+]

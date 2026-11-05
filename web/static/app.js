@@ -8,6 +8,7 @@ let allProblems = [];
 let filteredProblems = [];
 let currentProblem = null;
 let savedCreds = [];
+let mockTestcases = {};
 
 const STORAGE_KEY_PREFIX = "jnp_code_";
 const STUDENT_CODE_KEY = "jnp_student_code";
@@ -466,6 +467,13 @@ async function loadQuestions() {
         });
 
         document.getElementById("app-badge").textContent = `${allProblems.length} Bài Tập`;
+        try {
+            const tcRes = await fetch("/api/testcases");
+            if (tcRes.ok) mockTestcases = await tcRes.json();
+        } catch (_err) {
+            console.warn("Could not load mock testcases:", _err);
+        }
+
         filteredProblems = [...allProblems];
         renderProblemList();
 
@@ -615,11 +623,21 @@ function selectProblem(problem) {
     const isUDP = (problem.protocolType || "").toUpperCase().includes("UDP");
     document.getElementById("sock-proto").value = isUDP ? "UDP" : "TCP";
 
+    // Update Mock Testcase box
+    const qCodeStr = String(problem.code || "");
+    const tc = mockTestcases[qCodeStr] || {};
+    const inputValEl = document.getElementById("mock-input-val");
+    const outputValEl = document.getElementById("mock-output-val");
+    const protoBadge = document.getElementById("mock-proto-badge");
+    const isUDPProto = (problem.protocolType || "").toUpperCase().includes("UDP");
+    if (protoBadge) protoBadge.textContent = isUDPProto ? "UDP" : "TCP";
+    if (inputValEl) inputValEl.value = tc.sampleInput || "";
+    if (outputValEl) outputValEl.textContent = tc.sampleExpectedOutput || "(Tùy biến / Chưa có mẫu)";
+
     // Toggle Quick Mock Test Button
     const quickMockBtn = document.getElementById("btn-quick-mock-test");
     if (quickMockBtn) {
-        const is701 = problem.code === 701 || (problem.alias && problem.alias.includes("701"));
-        quickMockBtn.textContent = is701 ? "Debug Mock 701" : "Debug Mock Server";
+        quickMockBtn.textContent = `Debug Mock ${problem.code || 'Server'}`;
     }
 
     // Format and render description HTML
@@ -752,12 +770,19 @@ async function runMockDebug() {
     const qCodeNum = currentProblem ? (currentProblem.code || 701) : 701;
 
     try {
+        const customInput = document.getElementById("mock-input-val")?.value || "";
+        const expText = document.getElementById("mock-output-val")?.textContent || "";
+        const expectedOutput = (expText.includes("Chưa có mẫu") || expText.includes("Tùy biến")) ? "" : expText;
+
         const res = await fetch("/api/mock-test", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 code: code,
                 questionCode: qCodeNum,
+                protocol: currentProblem ? currentProblem.protocolType : "TCP",
+                customInput: customInput,
+                expectedOutput: expectedOutput,
                 timeoutSeconds: 8
             })
         });

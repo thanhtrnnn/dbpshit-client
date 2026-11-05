@@ -1,0 +1,116 @@
+[
+  {
+    "id": "2c48ee40-f0dc-4e3b-a572-1681d9cdd4db",
+    "contestId": "[[REDACTED]]",
+    "question": {
+      "id": "2c48ee40-f0dc-4e3b-a572-1681d9cdd4db",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 701,
+      "alias": "JNP-701",
+      "title": "TCP - Byte Stream",
+      "description": "<p>Một chương trình server hỗ trợ kết nối qua giao thức TCP tại cổng 2206 (hỗ trợ thời gian giao tiếp tối đa cho mỗi yêu cầu là 5s). Yêu cầu xây dựng chương trình client thực hiện kết nối tới server trên sử dụng luồng byte dữ liệu (InputStream/OutputStream) để trao đổi thông tin theo thứ tự:</p>\r\n<p>a. Gửi mã sinh viên và mã câu hỏi theo định dạng <code>studentCode;qCode</code>.</p>\r\n<p><strong>Ví dụ:</strong> <code>B16DCCN999;FF49DC02</code></p>\r\n<p>b. Nhận dữ liệu từ server là một chuỗi các giá trị số nguyên được phân tách nhau bởi ký tự <code>,</code></p>\r\n<p><strong>Ví dụ:</strong> <code>1,3,9,19,33,20</code></p>\r\n<p>c. Thực hiện tìm giá trị khoảng cách nhỏ nhất của các phần tử nằm trong chuỗi và hai giá trị lớn nhất tạo nên khoảng cách đó. Gửi lên server chuỗi gồm \"khoảng cách nhỏ nhất, số thứ nhất, số thứ hai\".</p>\r\n<p><strong>Ví dụ:</strong> <code>1,19,20</code></p>\r\n<p>d. Đóng kết nối và kết thúc</p>",
+      "protocolType": "TCP_BYTE_RAW",
+      "level": "EASY",
+      "status": "APPROVED",
+      "isPublic": true,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "iarHiZ07",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 1
+  },
+  {
+    "id": "92385c26-d5f5-405a-a6db-de5fcbd7a88d",
+    "contestId": "[[REDACTED]]",
+    "question": {
+      "id": "92385c26-d5f5-405a-a6db-de5fcbd7a88d",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "code": 989,
+      "alias": "JNP-989",
+      "title": "TCP - Character Stream",
+      "description": "<p>Một chương trình server cho phép kết nối qua giao thức TCP tại cổng 2208 (hỗ trợ thời gian giao tiếp tối đa cho mỗi yêu cầu là 5 giây). Yêu cầu là xây dựng một chương trình client thực hiện kết nối tới server và sử dụng luồng ký tự (BufferedWriter/BufferedReader) để trao đổi thông tin theo kịch bản sau:</p>\r\n<p>a. Gửi một chuỗi gồm mã sinh viên và mã câu hỏi với định dạng <code>studentCode;qCode</code>.</p>\r\n<p><strong>Ví dụ:</strong> <code>B15DCCN999;A1B2C3D4</code></p>\r\n<p>b. Nhận từ server một chuỗi ngẫu nhiên.</p>\r\n<p>c. Xử lý chuỗi đã nhận theo các bước sau:</p>\r\n<p>Bước 1: Tìm từ dài nhất trong trong chuỗi ngẫu nhiên (từ là chuỗi con phân tách bởi khoảng trắng).</p>\r\n<p>Bước 2: Xác định vị trí bắt đầu của từ dài nhất đó trong chuỗi ban đầu.</p>\r\n<p>d. Gửi lần lượt hai giá trị lên server:</p>\r\n<ul><li>Từ dài nhất xuất hiện trong chuỗi.</li><li>Vị trí bắt đầu của từ trong chuỗi ban đầu.</li></ul>\r\n<p>e. Đóng kết nối và kết thúc chương trình.</p>",
+      "protocolType": "TCP_CHARACTER",
+      "level": "HARD",
+      "status": "APPROVED",
+      "isPublic": false,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "GQ2WEPCA",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 2
+  },
+  {
+    "id": "40a4640f-eba5-4d66-b84e-71c9b2163be9",
+    "contestId": "[[REDACTED]]",
+    "question": {
+      "id": "40a4640f-eba5-4d66-b84e-71c9b2163be9",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 983,
+      "alias": "JNP-983",
+      "title": "TCP - Object Stream",
+      "description": "<p>Một chương trình server cho phép kết nối qua giao thức TCP tại cổng 2209 (hỗ trợ thời gian giao tiếp tối đa cho mỗi yêu cầu là 5 giây). Yêu cầu là xây dựng một chương trình client tương tác với server sử dụng các luồng đối tượng (ObjectOutputStream/ObjectInputStream) theo kịch bản dưới đây:</p>\r\n<p>Biết lớp TCP.Product gồm các thuộc tính (id int, name String, price double, int discount) và private static final long serialVersionUID = 20231107;</p>\r\n<p>a. Gửi đối tượng là một chuỗi gồm mã sinh viên và mã câu hỏi với định dạng <code>studentCode;qCode</code>.</p>\r\n<p><strong>Ví dụ:</strong> <code>B15DCCN999;1E08CA31</code></p>\r\n<p>b. Nhận một đối tượng là thể hiện của lớp TCP.Product từ server.</p>\r\n<p>c. Tính toán giá trị giảm giá theo price theo nguyên tắc: Giá trị giảm giá (discount) bằng tổng các chữ số trong phần nguyên của giá sản phẩm (price). Thực hiện gán giá trị cho thuộc tính discount và gửi lên đối tượng nhận được lên server.</p>\r\n<p>d. Đóng kết nối và kết thúc chương trình.</p>",
+      "protocolType": "TCP_OBJECT",
+      "level": "HARD",
+      "status": "APPROVED",
+      "isPublic": false,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "12mzNtb2",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 3
+  },
+  {
+    "id": "03d21d0c-1b01-42b6-9d40-ac2a8cc132f8",
+    "contestId": "[[REDACTED]]",
+    "question": {
+      "id": "03d21d0c-1b01-42b6-9d40-ac2a8cc132f8",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 1452,
+      "alias": "JNP-1452",
+      "title": "TCP - NIO Stream",
+      "description": "<p>Một chương trình server cho phép kết nối qua giao thức TCP tại cổng 2211 (thời gian giao tiếp tối đa cho mỗi yêu cầu là 5s). Yêu cầu là xây dựng một chương trình client tương tác tới server ở trên sử dụng SocketChannel và ByteBuffer để trao đổi thông tin theo giao thức frame: 4 byte độ dài (int32) + payload (UTF-8).</p>\r\n<p><strong>Lưu ý:</strong> server &amp; client đều phải đọc đủ dữ liệu bằng vòng lặp (readFully) do server luôn chia nhỏ dữ liệu khi gửi. Trình tự trao đổi như sau:</p>\r\n<p>a. Gửi mã sinh viên và mã câu hỏi theo định dạng <code>studentCode;qCode</code>.</p>\r\n<p><strong>Ví dụ:</strong> <code>B16DCCN999;2wyy4DBL</code></p>\r\n<p>b. Nhận dữ liệu từ server gồm đúng 2 frame liên tiếp. Payload của mỗi frame là một phần của cùng một query-string, client phải nối 2 payload theo đúng thứ tự để thu được chuỗi query-string hoàn chỉnh dạng <code>k1=v1&amp;k2=v2&amp;...</code>; các key có thể không theo thứ tự và value có thể được URL-encode.</p>\r\n<p>c. Giải mã URL-encoding và gửi lại chuỗi chuẩn hóa theo định dạng <code>k1=v1;k2=v2;...</code> với các key được sắp xếp tăng dần theo thứ tự từ điển.</p>\r\n<p>d. Đóng kết nối và kết thúc chương trình.</p>",
+      "protocolType": "TCP_NIO",
+      "level": "EASY",
+      "status": "APPROVED",
+      "isPublic": false,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "n4HvJqtQ",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 4
+  },
+  {
+    "id": "b77de884-eea0-466f-9541-17d0978f14ae",
+    "contestId": "[[REDACTED]]",
+    "question": {
+      "id": "b77de884-eea0-466f-9541-17d0978f14ae",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 914,
+      "alias": "JNP-914",
+      "title": "TCP - Data Stream",
+      "description": "<p>Mật mã caesar, còn gọi là mật mã dịch chuyển, để giải mã thì mỗi ký tự nhận được sẽ được thay thế bằng một ký tự cách nó một đoạn s.</p>\r\n<p><strong>Ví dụ:</strong> với s = 3 thì ký tự <code>A</code> sẽ được thay thế bằng ký tự <code>D</code></p>\r\n<p>Một chương trình server cho phép kết nối qua giao thức TCP tại cổng 2207 (hỗ trợ thời gian giao tiếp tối đa cho mỗi yêu cầu là 5s). Yêu cầu là xây dựng chương trình client tương tác với server trên, sử dụng các luồng byte (DataInputStream/DataOutputStream) để trao đổi thông tin theo thứ tự:</p>\r\n<p>a. Gửi một chuỗi gồm mã sinh viên và mã câu hỏi theo định dạng <code>studentCode;qCode</code>.</p>\r\n<p><strong>Ví dụ:</strong> <code>B15DCCN999;D68C93F7</code></p>\r\n<p>b. Nhận lần lượt chuỗi đã bị mã hóa caesar và giá trị dịch chuyển s nguyên</p>\r\n<p>c. Thực hiện giải mã ra thông điệp ban đầu và gửi lên Server</p>\r\n<p>d. Đóng kết nối và kết thúc chương trình.</p>",
+      "protocolType": "TCP_DATA",
+      "level": "EASY",
+      "status": "APPROVED",
+      "isPublic": true,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "WdL2aKxX",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 5
+  }
+]

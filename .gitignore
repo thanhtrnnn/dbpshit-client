@@ -7,3 +7,4 @@ hmm.js
 api_tester.py
 exams/
 *exam*.json
+ptit.env

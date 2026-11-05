@@ -1,0 +1,17 @@
+{
+  "id": "[[REDACTED]]",
+  "createdAt": "2026-09-18T09:02:35.935833",
+  "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+  "lastModifiedAt": "2026-10-15T15:56:24.189004",
+  "lastModifiedBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+  "contestCode": "CST-0473",
+  "name": "[INT1433-CLC-HKI-2627] Kiểm tra TH 01 - TCP - 02",
+  "startDatetime": "2026-10-16T13:00:00",
+  "endDatetime": "2026-10-16T14:00:00",
+  "mode": "EXAM",
+  "status": "CLOSE",
+  "isTracker": false,
+  "contestQuestionType": "JNP",
+  "distributionMode": "RANDOM_BY_GROUP",
+  "ipList": "103.238.69.131;113.190.44.221"
+}

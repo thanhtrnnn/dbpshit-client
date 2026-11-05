@@ -25,6 +25,14 @@ PROJECT_ROOT = BASE_DIR.parent
 STATIC_DIR = BASE_DIR / "static"
 QUESTIONS_FILE = PROJECT_ROOT / "sample_responses" / "master_jnp_questions_bank.json"
 LTM_MAP_FILE = PROJECT_ROOT / "sample_responses" / "ltm_solution_map.json"
+MOCK_TESTCASES_FILE = PROJECT_ROOT / "sample_responses" / "mock_testcases.json"
+MOCK_TESTCASES = {}
+if MOCK_TESTCASES_FILE.exists():
+    try:
+        with open(MOCK_TESTCASES_FILE, "r", encoding="utf-8") as f_tc:
+            MOCK_TESTCASES = json.load(f_tc)
+    except Exception as _e:
+        print(f"Error loading mock testcases: {_e}")
 PTIT_ENV_FILE = PROJECT_ROOT / "ptit.env"
 ENV_FILE = PROJECT_ROOT / ".env"
 
@@ -103,9 +111,11 @@ class RefreshRequest(BaseModel):
 
 class MockTestRequest(BaseModel):
     code: str
-    questionCode: Optional[int] = 701
+    questionCode: Optional[int] = None
+    protocol: Optional[str] = None
     customInput: Optional[str] = None
-    timeoutSeconds: Optional[int] = 10
+    expectedOutput: Optional[str] = None
+    timeoutSeconds: Optional[float] = 10.0
 
 # Routes
 @app.get("/api/status")
@@ -437,8 +447,10 @@ def submit_to_ptit(req: PtitSubmitRequest, authorization: Optional[str] = Header
     # Khớp payload mà db.ptit.edu.vn gửi ở nút "Nộp mã nguồn"
     payload = {
         "questionAlias": req.questionAlias,
+        "source": req.code,
+        "sourceCode": req.code,
         "courseId": req.courseId,
-        "sourceCode": req.code
+        "examId": req.examId
     }
 
     try:
@@ -578,23 +590,44 @@ def solve_701_expected(data_str: str) -> str:
                 best_a, best_b = nums[i], nums[i + 1]
     return f"{min_diff},{best_a},{best_b}"
 
+@app.get("/api/testcases")
+def get_testcases(code: Optional[int] = None):
+    """Lấy danh sách testcase mẫu cho các bài tập phục vụ kiểm thử Mock Server"""
+    if code is not None:
+        tc = MOCK_TESTCASES.get(str(code))
+        if not tc:
+            raise HTTPException(status_code=404, detail=f"Không tìm thấy testcase cho bài {code}")
+        return tc
+    return MOCK_TESTCASES
+
 @app.post("/api/mock-test")
 def run_mock_test(req: MockTestRequest):
     code = req.code.strip()
     if not code:
         raise HTTPException(status_code=400, detail="Mã nguồn Java trống")
     
-    # 1. Bind free local port for mock server
-    sock_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock_server.bind(("127.0.0.1", 0))
-    mock_port = sock_server.getsockname()[1]
-    sock_server.listen(1)
-    sock_server.settimeout(req.timeoutSeconds or 8.0)
+    q_str = str(req.questionCode) if req.questionCode else ""
+    tc = MOCK_TESTCASES.get(q_str, {})
+    
+    # 1. Xác định giao thức (TCP hay UDP)
+    proto = (req.protocol or tc.get("protocolType") or "TCP").upper()
+    is_udp = "UDP" in proto
 
-    test_input = req.customInput.strip() if req.customInput and req.customInput.strip() else "1,3,9,19,33,20"
-    expected_ans = solve_701_expected(test_input) if req.questionCode == 701 else ""
+    # 2. Xác định input test
+    test_input = req.customInput.strip() if req.customInput and req.customInput.strip() else tc.get("sampleInput", "")
+    if not test_input:
+        test_input = "1,3,9,19,33,20" if req.questionCode == 701 else "TEST_DATA"
+
+    # 3. Xác định expected output
+    if req.expectedOutput and req.expectedOutput.strip():
+        expected_ans = req.expectedOutput.strip()
+    elif req.questionCode == 701:
+        expected_ans = solve_701_expected(test_input)
+    else:
+        expected_ans = tc.get("sampleExpectedOutput", "")
 
     server_result = {
+        "protocol": "UDP" if is_udp else "TCP",
         "connected": False,
         "handshake": "",
         "sentData": test_input,
@@ -604,53 +637,106 @@ def run_mock_test(req: MockTestRequest):
         "error": None
     }
 
-    def mock_server_thread():
-        try:
-            conn, addr = sock_server.accept()
-            conn.settimeout(5.0)
-            server_result["connected"] = True
+    if is_udp:
+        # Mock Server qua giao thức UDP Datagram
+        sock_udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock_udp.bind(("127.0.0.1", 0))
+        mock_port = sock_udp.getsockname()[1]
+        sock_udp.settimeout(req.timeoutSeconds or 8.0)
 
-            # a. Read studentCode;qCode
-            handshake_raw = conn.recv(1024)
-            server_result["handshake"] = handshake_raw.decode("utf-8", errors="replace").strip()
-
-            # b. Send test string
-            conn.sendall(test_input.encode("utf-8"))
-
-            # c. Read client answer
-            ans_raw = conn.recv(1024)
-            ans = ans_raw.decode("utf-8", errors="replace").strip()
-            server_result["receivedAnswer"] = ans
-
-            # Verify
-            if req.questionCode == 701:
-                server_result["isCorrect"] = (ans == expected_ans)
-                if server_result["isCorrect"]:
-                    conn.sendall(b"ACK_OK: Ket qua hoan toan chinh xac!")
-                else:
-                    conn.sendall(f"ACK_FAIL: Sai ket qua (Nhan duoc: {ans}, Ky vong: {expected_ans})".encode("utf-8"))
-            else:
-                conn.sendall(b"ACK_OK")
-
-            conn.close()
-        except Exception as err:
-            server_result["error"] = str(err)
-        finally:
+        def mock_udp_thread():
             try:
-                sock_server.close()
-            except:
-                pass
+                # Phase 1: Nhận gói tin handshake (;studentCode;qCode)
+                data1, client_addr = sock_udp.recvfrom(4096)
+                server_result["connected"] = True
+                server_result["handshake"] = data1.decode("utf-8", errors="replace").strip()
 
-    t = threading.Thread(target=mock_server_thread, daemon=True)
-    t.start()
+                # Phase 2: Gửi test input datagram
+                sock_udp.sendto(test_input.encode("utf-8"), client_addr)
 
-    # 2. Rewrite host and port in Java code to point to 127.0.0.1:mock_port
+                # Phase 3: Nhận gói tin kết quả từ client
+                data2, _ = sock_udp.recvfrom(4096)
+                ans = data2.decode("utf-8", errors="replace").strip()
+                server_result["receivedAnswer"] = ans
+
+                # Phase 4: So khớp kết quả
+                if expected_ans:
+                    server_result["isCorrect"] = (ans.strip() == expected_ans.strip())
+                else:
+                    server_result["isCorrect"] = True
+            except Exception as err:
+                server_result["error"] = str(err)
+            finally:
+                try:
+                    sock_udp.close()
+                except:
+                    pass
+
+        t = threading.Thread(target=mock_udp_thread, daemon=True)
+        t.start()
+
+    else:
+        # Mock Server qua giao thức TCP Stream
+        sock_tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock_tcp.bind(("127.0.0.1", 0))
+        mock_port = sock_tcp.getsockname()[1]
+        sock_tcp.listen(1)
+        sock_tcp.settimeout(req.timeoutSeconds or 8.0)
+
+        def mock_tcp_thread():
+            try:
+                conn, addr = sock_tcp.accept()
+                conn.settimeout(req.timeoutSeconds or 8.0)
+                server_result["connected"] = True
+
+                # Phase 1: Nhận handshake (studentCode;qCode)
+                handshake_raw = conn.recv(1024)
+                server_result["handshake"] = handshake_raw.decode("utf-8", errors="replace").strip()
+
+                # Phase 2: Gửi test input
+                send_payload = test_input
+                if "CHARACTER" in proto and not send_payload.endswith("\n"):
+                    send_payload += "\n"
+                conn.sendall(send_payload.encode("utf-8"))
+
+                # Phase 3: Nhận đáp án từ client
+                ans_raw = conn.recv(4096)
+                ans = ans_raw.decode("utf-8", errors="replace").strip()
+                server_result["receivedAnswer"] = ans
+
+                # Phase 4: So khớp kết quả
+                if expected_ans:
+                    server_result["isCorrect"] = (ans.strip() == expected_ans.strip())
+                    if server_result["isCorrect"]:
+                        conn.sendall(b"ACK_OK: Ket qua hoan toan chinh xac!")
+                    else:
+                        conn.sendall(f"ACK_FAIL: Sai ket qua (Nhan duoc: {ans}, Ky vong: {expected_ans})".encode("utf-8"))
+                else:
+                    server_result["isCorrect"] = True
+                    conn.sendall(b"ACK_OK")
+
+                conn.close()
+            except Exception as err:
+                server_result["error"] = str(err)
+            finally:
+                try:
+                    sock_tcp.close()
+                except:
+                    pass
+
+        t = threading.Thread(target=mock_tcp_thread, daemon=True)
+        t.start()
+
+    # 4. Tự động chuyển hướng host và port trong mã nguồn Java sang 127.0.0.1:mock_port
     code_modified = re.sub(r'SERVER_HOST\s*=\s*"[^"]*"', 'SERVER_HOST = "127.0.0.1"', code)
+    code_modified = re.sub(r'serverHost\s*=\s*"[^"]*"', 'serverHost = "127.0.0.1"', code_modified)
     code_modified = re.sub(r'SERVER_PORT\s*=\s*[0-9]+', f'SERVER_PORT = {mock_port}', code_modified)
+    code_modified = re.sub(r'serverPort\s*=\s*[0-9]+', f'serverPort = {mock_port}', code_modified)
     code_modified = re.sub(r'new\s+Socket\(\s*"[^"]*"\s*,\s*[0-9]+\s*\)', f'new Socket("127.0.0.1", {mock_port})', code_modified)
+    code_modified = re.sub(r'InetAddress\.getByName\(\s*"[^"]*"\s*\)', 'InetAddress.getByName("127.0.0.1")', code_modified)
 
-    # 3. Run Java code
-    run_req = JavaRunRequest(code=code_modified, timeoutSeconds=req.timeoutSeconds)
+    # 5. Thực thi mã nguồn Java
+    run_req = JavaRunRequest(code=code_modified, timeoutSeconds=int(req.timeoutSeconds or 10))
     exec_res = run_java_code(run_req)
 
     t.join(timeout=2.0)

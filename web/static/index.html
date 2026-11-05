@@ -158,6 +158,24 @@
                             </div>
                         </div>
 
+                        <!-- KHUNG TESTCASE CHO MOCK SERVER -->
+                        <div class="mock-testcase-box" id="view-mock-box" style="margin-bottom: 12px; background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 10px; font-size: 12px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                                <span style="color: #f59e0b; font-weight: 600; display: flex; align-items: center; gap: 4px;">
+                                    [Mock Testcase] Dữ liệu giả lập
+                                </span>
+                                <span id="mock-proto-badge" class="meta-chip" style="font-size: 10px; padding: 1px 6px;">TCP</span>
+                            </div>
+                            <div style="margin-bottom: 6px;">
+                                <div style="color: #94a3b8; font-size: 11px; margin-bottom: 2px;">Dữ liệu server gửi (Sample Input):</div>
+                                <textarea id="mock-input-val" rows="2" style="width: 100%; background: #0f172a; border: 1px solid #475569; color: #f8fafc; font-family: monospace; font-size: 11px; padding: 4px; border-radius: 4px; resize: vertical;" placeholder="Nhập chuỗi input test..."></textarea>
+                            </div>
+                            <div>
+                                <div style="color: #94a3b8; font-size: 11px; margin-bottom: 2px;">Đáp án mẫu kỳ vọng (Expected Output):</div>
+                                <div id="mock-output-val" style="background: #0f172a; border: 1px solid #334155; color: #38bdf8; font-family: monospace; font-size: 11px; padding: 4px 6px; border-radius: 4px; word-break: break-all;">(Chưa có mẫu)</div>
+                            </div>
+                        </div>
+
                         <div class="problem-description-body" id="view-description">
                             Chọn một câu hỏi trong danh sách bên trái để xem nội dung đề bài, định dạng trao đổi gói tin
                             và sinh mã nguồn Java tương ứng.

@@ -1,0 +1,420 @@
+{
+    "id": "649c17ae-0b41-4ee8-a4e9-ee5e375a9e6b",
+    "createdAt": "2025-12-13T12:46:41.482351",
+    "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "lastModifiedAt": "2025-12-13T12:49:21.991826",
+    "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+    "contestCode": "CST-0271",
+    "name": "609-A3.2",
+    "startDatetime": "2025-12-14T17:30:00",
+    "endDatetime": "2025-12-14T19:20:00",
+    "mode": "EXAM",
+    "status": "OPEN",
+    "isTracker": true,
+    "allowedUserAgent": "SEB",
+    "ipList": "103.238.69.131;113.190.44.221",
+    "questions": [
+        {
+            "id": "ed039099-e04b-44e7-b24f-80349373055f",
+            "createdAt": "2025-12-14T09:31:37.769732",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-12-14T09:31:37.769732",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "question": {
+                "id": "8526751d-912f-45db-b758-26863b34dbdd",
+                "createdAt": "2025-12-13T21:48:50.890846",
+                "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "lastModifiedAt": "2025-12-13T21:58:28.928993",
+                "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "questionCode": "SQL-3017",
+                "title": "Tạo bảng khách hàng",
+                "point": 1.0,
+                "type": "CREATE",
+                "enable": false,
+                "isSynchorus": true,
+                "totalSub": 0,
+                "acceptance": 0.0,
+                "level": "EASY",
+                "prefixCode": "uSXCGq",
+                "isShare": false,
+                "status": "REVIEW",
+                "questionDetails": [
+                    {
+                        "id": "9b7c6290-5230-4bbe-8675-285aeacdde76",
+                        "createdAt": "2025-12-13T21:52:28.809918",
+                        "lastModifiedAt": "2025-12-13T21:58:32.177608",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "11111111-1111-1111-1111-111111111111",
+                            "name": "Mysql"
+                        }
+                    },
+                    {
+                        "id": "fbfbeb26-1929-4fee-8b7e-23113dd0b76d",
+                        "createdAt": "2025-12-13T21:52:28.811645",
+                        "lastModifiedAt": "2025-12-13T21:58:32.177631",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "22222222-2222-2222-2222-222222222222",
+                            "name": "Sql Server"
+                        }
+                    }
+                ]
+            },
+            "point": 1.0
+        },
+        {
+            "id": "55d6333d-922a-429d-ab8e-f0390c443939",
+            "createdAt": "2025-12-14T09:31:37.76981",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-12-14T09:31:37.76981",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "question": {
+                "id": "ae1ad4ec-8bd1-41d2-b4b1-177b49c2bf5b",
+                "createdAt": "2025-12-13T21:52:37.544187",
+                "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "lastModifiedAt": "2025-12-13T21:57:37.731164",
+                "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "questionCode": "SQL-3018",
+                "title": "Thêm bảng payment",
+                "point": 1.0,
+                "type": "CREATE",
+                "enable": false,
+                "isSynchorus": true,
+                "totalSub": 0,
+                "acceptance": 0.0,
+                "level": "EASY",
+                "prefixCode": "XMjDmR",
+                "isShare": false,
+                "status": "REVIEW",
+                "questionDetails": [
+                    {
+                        "id": "04dfd6b9-a272-43ca-8faf-c4761238b400",
+                        "createdAt": "2025-12-13T21:57:37.261395",
+                        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "lastModifiedAt": "2025-12-13T21:57:37.731231",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "11111111-1111-1111-1111-111111111111",
+                            "name": "Mysql"
+                        }
+                    },
+                    {
+                        "id": "31a05f62-1de0-4adc-9329-38081c8052c7",
+                        "createdAt": "2025-12-13T21:57:37.264089",
+                        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "lastModifiedAt": "2025-12-13T21:57:37.731269",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "22222222-2222-2222-2222-222222222222",
+                            "name": "Sql Server"
+                        }
+                    }
+                ]
+            },
+            "point": 1.0
+        },
+        {
+            "id": "fa48da21-5d8f-4c40-8424-1a6bae1f97af",
+            "createdAt": "2025-12-14T09:31:37.769845",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-12-14T09:31:37.769845",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "question": {
+                "id": "1d4cd54f-a95a-4b40-aa35-2c38fc04fba7",
+                "createdAt": "2025-12-11T17:02:57.557929",
+                "createdBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+                "lastModifiedAt": "2025-12-13T16:05:06.597787",
+                "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "questionCode": "SQL-3010",
+                "title": "Tạo bảng chi tiết đơn hàng",
+                "point": 1.0,
+                "type": "CREATE",
+                "enable": false,
+                "isSynchorus": true,
+                "totalSub": 0,
+                "acceptance": 0.0,
+                "level": "EASY",
+                "prefixCode": "AYUxeW",
+                "isShare": false,
+                "status": "REVIEW",
+                "questionDetails": [
+                    {
+                        "id": "645255a2-9ebe-44bb-845e-5472da818199",
+                        "createdAt": "2025-12-11T18:33:39.513796",
+                        "lastModifiedAt": "2025-12-13T16:05:06.597834",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "22222222-2222-2222-2222-222222222222",
+                            "name": "Sql Server"
+                        }
+                    },
+                    {
+                        "id": "75abba93-4ed3-4c40-8234-169d595d8e0c",
+                        "createdAt": "2025-12-11T18:33:39.491621",
+                        "lastModifiedAt": "2025-12-13T16:05:06.597868",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "11111111-1111-1111-1111-111111111111",
+                            "name": "Mysql"
+                        }
+                    }
+                ]
+            },
+            "point": 1.0
+        },
+        {
+            "id": "7f1ae62c-bb18-4e70-91ec-38e09077d633",
+            "createdAt": "2025-12-14T09:31:37.76987",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-12-14T09:31:37.76987",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "question": {
+                "id": "5b868996-16a1-4c8d-b398-160f0a34f25e",
+                "createdAt": "2025-12-13T22:00:27.01444",
+                "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "lastModifiedAt": "2025-12-13T22:23:20.385878",
+                "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "questionCode": "SQL-3019",
+                "title": "Lưu thông tin thanh toán",
+                "point": 1.0,
+                "type": "INSERT",
+                "enable": false,
+                "isSynchorus": true,
+                "totalSub": 0,
+                "acceptance": 0.0,
+                "level": "MEDIUM",
+                "prefixCode": "wCpcOE",
+                "isShare": false,
+                "status": "REVIEW",
+                "questionDetails": [
+                    {
+                        "id": "88e3672a-e2c4-42b8-9a92-9769d0927dec",
+                        "createdAt": "2025-12-13T22:23:20.307279",
+                        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "lastModifiedAt": "2025-12-13T22:23:20.385951",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "11111111-1111-1111-1111-111111111111",
+                            "name": "Mysql"
+                        }
+                    },
+                    {
+                        "id": "1ab2a013-fe4e-4555-aed4-0ca1e74ed5a6",
+                        "createdAt": "2025-12-13T22:23:20.311814",
+                        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "lastModifiedAt": "2025-12-13T22:23:20.38609",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "22222222-2222-2222-2222-222222222222",
+                            "name": "Sql Server"
+                        }
+                    }
+                ]
+            },
+            "point": 1.0
+        },
+        {
+            "id": "44bca52d-bd25-44a9-b835-8f6a55f58184",
+            "createdAt": "2025-12-14T09:31:37.7699",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-12-14T09:31:37.7699",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "question": {
+                "id": "3920fa64-261d-4369-abb5-69f650fd1c39",
+                "createdAt": "2025-12-11T18:20:28.314789",
+                "createdBy": "8c2015b6-fb15-4845-910b-d761c8797e7e",
+                "lastModifiedAt": "2025-12-13T16:11:34.628328",
+                "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "questionCode": "SQL-3015",
+                "title": "Thêm chi tiết đơn hàng",
+                "point": 1.0,
+                "type": "INSERT",
+                "enable": false,
+                "isSynchorus": true,
+                "totalSub": 0,
+                "acceptance": 0.0,
+                "level": "MEDIUM",
+                "prefixCode": "GAAkVp",
+                "isShare": false,
+                "status": "REVIEW",
+                "questionDetails": [
+                    {
+                        "id": "999cd709-ad99-4633-8c60-8577f0c5a81d",
+                        "createdAt": "2025-12-11T21:03:31.168319",
+                        "lastModifiedAt": "2025-12-13T16:11:34.628404",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "11111111-1111-1111-1111-111111111111",
+                            "name": "Mysql"
+                        }
+                    },
+                    {
+                        "id": "c9d9c176-7dd7-4f2b-94b9-051e326e0c29",
+                        "createdAt": "2025-12-11T21:03:31.172768",
+                        "lastModifiedAt": "2025-12-13T16:11:34.628435",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "22222222-2222-2222-2222-222222222222",
+                            "name": "Sql Server"
+                        }
+                    }
+                ]
+            },
+            "point": 1.0
+        },
+        {
+            "id": "77d536a3-5ae7-4ae7-bf92-4ac8dbc16959",
+            "createdAt": "2025-12-14T09:31:37.769925",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-12-14T09:31:37.769925",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "question": {
+                "id": "5f108f32-6b94-4f4c-b208-dc3ce52d4200",
+                "createdAt": "2025-12-13T22:24:28.456009",
+                "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "lastModifiedAt": "2025-12-13T22:35:34.126715",
+                "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "questionCode": "SQL-3020",
+                "title": "Hiển thị trạng thái thanh toán",
+                "point": 1.0,
+                "type": "SELECT",
+                "enable": false,
+                "isSynchorus": true,
+                "totalSub": 0,
+                "acceptance": 0.0,
+                "level": "MEDIUM",
+                "prefixCode": "DEYWto",
+                "isShare": false,
+                "status": "REVIEW",
+                "questionDetails": [
+                    {
+                        "id": "6ed517b2-f253-4a87-876b-4fc96f2aa065",
+                        "createdAt": "2025-12-13T22:35:34.05672",
+                        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "lastModifiedAt": "2025-12-13T22:35:34.126769",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "11111111-1111-1111-1111-111111111111",
+                            "name": "Mysql"
+                        }
+                    },
+                    {
+                        "id": "1d3fa16b-e97d-42c5-bd94-8c7782f3d08d",
+                        "createdAt": "2025-12-13T22:35:34.060656",
+                        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "lastModifiedAt": "2025-12-13T22:35:34.126815",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "22222222-2222-2222-2222-222222222222",
+                            "name": "Sql Server"
+                        }
+                    }
+                ]
+            },
+            "point": 1.0
+        },
+        {
+            "id": "f3f86cd1-65a2-4a92-9745-9aa1b4d7ced5",
+            "createdAt": "2025-12-14T09:31:37.769954",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-12-14T09:31:37.769954",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "question": {
+                "id": "a7481d51-09f0-4361-82b2-3c5737e828da",
+                "createdAt": "2025-12-13T22:36:13.435972",
+                "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "lastModifiedAt": "2025-12-13T22:46:56.062956",
+                "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "questionCode": "SQL-3021",
+                "title": "Thông kê đơn hàng đã thanh toán",
+                "point": 1.0,
+                "type": "SELECT",
+                "enable": false,
+                "isSynchorus": true,
+                "totalSub": 0,
+                "acceptance": 0.0,
+                "level": "HARD",
+                "prefixCode": "rDxTbx",
+                "isShare": false,
+                "status": "REVIEW",
+                "questionDetails": [
+                    {
+                        "id": "b660af29-cbb4-4afc-ac85-5b26caeacca4",
+                        "createdAt": "2025-12-13T22:46:55.998036",
+                        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "lastModifiedAt": "2025-12-13T22:46:56.063044",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "11111111-1111-1111-1111-111111111111",
+                            "name": "Mysql"
+                        }
+                    },
+                    {
+                        "id": "463da0cd-4c04-4c56-9c87-38d942facca0",
+                        "createdAt": "2025-12-13T22:46:56.001183",
+                        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "lastModifiedAt": "2025-12-13T22:46:56.063179",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "22222222-2222-2222-2222-222222222222",
+                            "name": "Sql Server"
+                        }
+                    }
+                ]
+            },
+            "point": 1.0
+        },
+        {
+            "id": "0c9effa4-89ba-454b-be2f-e5fc9a03a3e0",
+            "createdAt": "2025-12-14T09:31:37.769978",
+            "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "lastModifiedAt": "2025-12-14T09:31:37.769978",
+            "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+            "question": {
+                "id": "a6d38a84-856e-46d2-9820-4e5a834250a4",
+                "createdAt": "2025-12-13T23:39:54.081382",
+                "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "lastModifiedAt": "2025-12-13T23:47:58.624623",
+                "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                "questionCode": "SQL-3023",
+                "title": "Thống kê tất cả đơn hàng theo tổng số lượng ",
+                "point": 1.0,
+                "type": "SELECT",
+                "enable": false,
+                "isSynchorus": true,
+                "totalSub": 0,
+                "acceptance": 0.0,
+                "level": "HARD",
+                "prefixCode": "jyvKBC",
+                "isShare": false,
+                "status": "REVIEW",
+                "questionDetails": [
+                    {
+                        "id": "ac49654f-0cc2-4677-9558-9ec283cd51fd",
+                        "createdAt": "2025-12-13T23:47:58.560212",
+                        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "lastModifiedAt": "2025-12-13T23:47:58.624676",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "11111111-1111-1111-1111-111111111111",
+                            "name": "Mysql"
+                        }
+                    },
+                    {
+                        "id": "938353eb-c621-404d-b039-39798c1794ab",
+                        "createdAt": "2025-12-13T23:47:58.56376",
+                        "createdBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "lastModifiedAt": "2025-12-13T23:47:58.624719",
+                        "lastModifiedBy": "af39ddb2-8d3a-40f8-8e84-c3bae6e96958",
+                        "typeDatabase": {
+                            "id": "22222222-2222-2222-2222-222222222222",
+                            "name": "Sql Server"
+                        }
+                    }
+                ]
+            },
+            "point": 1.0
+        }
+    ]
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "id": "3afd4783-5f01-4ed7-99c6-29aac2d7348e",
+    "contestId": "f66109d7-a13e-4f54-8fdb-d98e6c521617",
+    "question": {
+      "id": "3afd4783-5f01-4ed7-99c6-29aac2d7348e",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 802,
+      "alias": "JNP-802",
+      "title": "UDP - Data Type",
+      "description": "<p>Một chương trình server cho phép giao tiếp qua giao thức UDP tại cổng 2207. Yêu cầu là xây dựng một chương trình client trao đổi thông tin với server theo kịch bản:</p>\r\n<p>a. Gửi thông điệp là một chuỗi chứa mã sinh viên và mã câu hỏi theo định dạng <code>;studentCode;qCode</code>.</p>\r\n<p><strong>Ví dụ:</strong> <code>;B15DCCN001;73457A17</code></p>\r\n<p>b. Nhận thông điệp là một chuỗi từ server theo định dạng <code>requestId;n;A1,A2,...An</code> , với</p>\r\n<ul><li>requestId là chuỗi ngẫu nhiên duy nhất</li><li>n là một số ngẫu nhiên nhỏ hơn 100.</li><li>A1, A2 ... Am (m &lt;= n) là các giá trị ngẫu nhiên nhỏ hơn hoặc bằng n và có thể trùng nhau.</li></ul>\r\n<p><strong>Ví dụ:</strong> <code>requestId;10;2,3,5,6,5</code></p>\r\n<p>c. Tìm kiếm các giá trị còn thiếu và gửi lên server theo định dạng <code>requestId;B1,B2,...,Bm</code></p>\r\n<p><strong>Ví dụ:</strong> <code>requestId;1,4,7,8,9,10</code></p>\r\n<p>d. Đóng socket và kết thúc chương trình.</p>",
+      "protocolType": "UDP_DATA",
+      "level": "EASY",
+      "status": "APPROVED",
+      "isPublic": true,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "c5Q2v3xI",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 5
+  },
+  {
+    "id": "abbb36f7-5f09-4c33-b57e-034f7c1d2fd4",
+    "contestId": "f66109d7-a13e-4f54-8fdb-d98e6c521617",
+    "question": {
+      "id": "abbb36f7-5f09-4c33-b57e-034f7c1d2fd4",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-18T20:50:29.729126",
+      "lastModifiedBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "code": 933,
+      "alias": "JNP-933",
+      "title": "UDP - Object",
+      "description": "<p>Một chương trình server cho phép giao tiếp qua giao thức UDP tại cổng 2209. Yêu cầu là xây dựng một chương trình client trao đổi thông tin với server theo kịch bản sau: Đối tượng trao đổi là thể hiện của lớp UDP.Student được mô tả:</p>\r\n<ul><li><strong>Tên đầy đủ lớp:</strong> UDP.Student</li><li><strong>Các thuộc tính:</strong> id String,code String, name String, email String</li><li>02 Hàm khởi tạo:</li><li>public Student(String id, String code, String name, String email)</li><li>public Student(String code)</li><li><strong>Trường dữ liệu:</strong> private static final long serialVersionUID = 20171107</li></ul>\r\n<p><strong>Thực hiện:</strong></p>\r\n<p>a. Gửi thông điệp là một chuỗi chứa mã sinh viên và mã câu hỏi theo định dạng <code>;studentCode;qCode</code>.</p>\r\n<p><strong>Ví dụ:</strong> <code>;B15DCCN001;EE29C059</code></p>\r\n<p>b. Nhận thông điệp chứa: 08 byte đầu chứa chuỗi requestId, các byte còn lại chứa một đối tượng là thể hiện của lớp Student từ server. Trong đó, các thông tin được thiết lập gồm id và name.</p>\r\n<p>c. Yêu cầu:</p>\r\n<ul><li>Chuẩn hóa tên theo quy tắc: Chữ cái đầu tiên in hoa, các chữ cái còn lại in thường và gán lại thuộc tính name của đối tượng</li><li>Tạo email ptit.edu.vn từ tên người dùng bằng cách lấy tên và các chữ cái bắt đầu của họ và tên đệm.</li></ul>\r\n<p><strong>Ví dụ:</strong> nguyen van tuan nam -&gt; namnvt@ptit.edu.vn. Gán giá trị này cho thuộc tính email của đối tượng nhận được</p>\r\n<ul><li>Gửi thông điệp chứa đối tượng xử lý ở bước c lên Server với cấu trúc: 08 byte đầu chứa chuỗi requestId và các byte còn lại chứa đối tượng Student đã được sửa đổi.</li></ul>\r\n<p>d. Đóng socket và kết thúc chương trình.</p>",
+      "protocolType": "UDP_OBJECT",
+      "level": "EASY",
+      "status": "APPROVED",
+      "isPublic": true,
+      "isShared": false,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "iXpdKhHP",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 2
+  },
+  {
+    "id": "72b115d5-834b-4894-99e3-f3d1838d6d7e",
+    "contestId": "f66109d7-a13e-4f54-8fdb-d98e6c521617",
+    "question": {
+      "id": "72b115d5-834b-4894-99e3-f3d1838d6d7e",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "code": 987,
+      "alias": "JNP-987",
+      "title": "UDP - Data Type",
+      "description": "<p>Một chương trình server cho phép giao tiếp qua giao thức UDP tại cổng 2207. Yêu cầu là xây dựng một chương trình client trao đổi thông tin với server theo kịch bản:</p>\r\n<p>a. Gửi thông điệp là một chuỗi chứa mã sinh viên và mã câu hỏi theo định dạng <code>;studentCode;qCode</code>.</p>\r\n<p><strong>Ví dụ:</strong> <code>;B15DCCN004;99D9F604</code></p>\r\n<p>b. Nhận thông điệp là một chuỗi từ server theo định dạng <code>requestId;z1,z2,...,z50</code> requestId là chuỗi ngẫu nhiên duy nhất</p>\r\n<ul><li>z1 -&gt; z50 là 50 số nguyên ngẫu nhiên</li></ul>\r\n<p>c. Thực hiện tính số lớn thứ hai và số nhỏ thứ hai của thông điệp trong z1 -&gt; z50 và gửi thông điệp lên server theo định dạng <code>requestId;secondMax,secondMin</code></p>\r\n<p>d. Đóng socket và kết thúc chương trình</p>",
+      "protocolType": "UDP_DATA",
+      "level": "MEDIUM",
+      "status": "APPROVED",
+      "isPublic": false,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "G8GVfxJA",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 1
+  },
+  {
+    "id": "a1a49f6c-5f29-4223-8292-26fe43577fc0",
+    "contestId": "f66109d7-a13e-4f54-8fdb-d98e6c521617",
+    "question": {
+      "id": "a1a49f6c-5f29-4223-8292-26fe43577fc0",
+      "createdAt": "2026-05-18T13:24:01.221537",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 1621,
+      "alias": "Q1621",
+      "title": "[UDP String] Chuẩn hóa slug",
+      "description": "<div>\r\n  <p>Một chương trình server cho phép giao tiếp qua giao thức UDP tại cổng 2208 theo cơ chế hai pha.</p>\r\n  <h4>Yêu cầu</h4>\r\n  <p>a. Gửi datagram đầu tiên chứa chuỗi theo định dạng <code>;studentCode;qCode</code>. Ví dụ: <code>;B15DCCN001;EE29C059</code>.</p>\r\n  <p>b. Nhận phản hồi từ server theo định dạng <code>requestId;data</code>. Ví dụ: <code>7Brz6QQA;REFUND ticket Payment Payment customer Payment customer ticket REFUND customer shipping shipping Payment.</code>.</p>\r\n  <p>c. Chuyển chuỗi về chữ thường, loại bỏ dấu câu, gom nhiều khoảng trắng thành một khoảng trắng và thay khoảng trắng bằng dấu gạch ngang.</p>\r\n  <p>d. Gửi datagram nộp kết quả theo định dạng <code>requestId;answer</code>. Ví dụ: <code>7Brz6QQA;refund-ticket-payment-payment-customer-payment-customer-ticket-refund-customer-shipping-shipping-payment</code>.</p>\r\n  <p>e. Đóng kết nối hoặc kết thúc client sau khi nộp kết quả.</p>\r\n</div>",
+      "protocolType": "UDP_STRING",
+      "level": "MEDIUM",
+      "status": "APPROVED",
+      "isPublic": false,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "jHl6Z3EP",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 4
+  },
+  {
+    "id": "93274030-f820-4f40-8305-6dd760e28e16",
+    "contestId": "f66109d7-a13e-4f54-8fdb-d98e6c521617",
+    "question": {
+      "id": "93274030-f820-4f40-8305-6dd760e28e16",
+      "createdAt": "2026-05-18T13:24:01.311068",
+      "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+      "lastModifiedAt": "2026-07-02T19:09:16.411721",
+      "code": 1622,
+      "alias": "Q1622",
+      "title": "[UDP String] Che dữ liệu nhạy cảm",
+      "description": "<div>\r\n  <p>Một chương trình server cho phép giao tiếp qua giao thức UDP tại cổng 2208 theo cơ chế hai pha.</p>\r\n  <h4>Yêu cầu</h4>\r\n  <p>a. Gửi datagram đầu tiên chứa chuỗi theo định dạng <code>;studentCode;qCode</code>. Ví dụ: <code>;B15DCCN001;EE29C059</code>.</p>\r\n  <p>b. Nhận phản hồi từ server theo định dạng <code>requestId;data</code>. Ví dụ: <code>rBhDz2JJ;INFO user=minh email=minh0@example.com phone=0309453907 token=bDzj8Olxc9 action=refund</code>.</p>\r\n  <p>c. Che email, số điện thoại và token theo quy tắc <code>[EMAIL]</code>, <code>[PHONE]</code>, <code>token=[TOKEN]</code>, giữ nguyên thứ tự các dòng log.</p>\r\n  <p>d. Gửi datagram nộp kết quả theo định dạng <code>requestId;answer</code>. Ví dụ: <code>rBhDz2JJ;INFO user=minh email=[EMAIL] phone=[PHONE] token=[TOKEN] action=refund</code>.</p>\r\n  <p>e. Đóng kết nối hoặc kết thúc client sau khi nộp kết quả.</p>\r\n</div>",
+      "protocolType": "UDP_STRING",
+      "level": "MEDIUM",
+      "status": "APPROVED",
+      "isPublic": false,
+      "isShared": true,
+      "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01",
+      "userAlias": "rOGKaiGd",
+      "examServerHost": "36.50.135.242"
+    },
+    "point": 1.0,
+    "orderNum": 3
+  }
+]

@@ -1,0 +1,665 @@
+{
+  "B23DCTT031": {
+    "status": "success",
+    "fullName": "Nguyễn Thùy Dung",
+    "userUuid": "5eeb04d5-d1b2-4bdd-b6bb-dcf8344ee88f",
+    "contests": {
+      "f66109d7-a13e-4f54-8fdb-d98e6c521617": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 02 - UDP - 02",
+        "questionsCount": 5,
+        "newAdded": 5,
+        "questions": [
+          {
+            "id": "62a47461-7a2a-4ace-96a5-81881ab971ae",
+            "code": 993,
+            "alias": "JNP-993",
+            "title": "UDP - String",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM",
+            "userAlias": "r78v2qpQ",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "6c2afebb-7e60-4ad6-860e-342161dd4f81",
+            "code": 1001,
+            "alias": "JNP-1001",
+            "title": "UDP - Object",
+            "protocolType": "UDP_OBJECT",
+            "level": "MEDIUM",
+            "userAlias": "behYgBj0",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "c77626d6-bbc2-4371-9325-a3db4b1a825e",
+            "code": 997,
+            "alias": "JNP-997",
+            "title": "UDP - Data Type",
+            "protocolType": "UDP_DATA",
+            "level": "MEDIUM",
+            "userAlias": "YVRnAE9a",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "a1a49f6c-5f29-4223-8292-26fe43577fc0",
+            "code": 1621,
+            "alias": "Q1621",
+            "title": "[UDP String] Chuẩn hóa slug",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM",
+            "userAlias": "sC0rpAjj",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "3afd4783-5f01-4ed7-99c6-29aac2d7348e",
+            "code": 802,
+            "alias": "JNP-802",
+            "title": "UDP - Data Type",
+            "protocolType": "UDP_DATA",
+            "level": "EASY",
+            "userAlias": "REZYWPKI",
+            "examServerHost": "36.50.135.242"
+          }
+        ]
+      },
+      "cd57b1ba-a746-46df-afe6-fd50b8f55267": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 03 - RMI + WS 02",
+        "questionsCount": 6,
+        "newAdded": 6,
+        "questions": [
+          {
+            "id": "21cf313c-7212-4489-a59b-55b22a43b8ec",
+            "code": 1311,
+            "alias": "JNP-1311",
+            "title": "RMI - Byte",
+            "protocolType": "RMI_BYTE",
+            "level": "MEDIUM",
+            "userAlias": "XjMzUPyR",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "bd858165-1ea1-4354-8fc1-dca9565b4061",
+            "code": 1742,
+            "alias": "Q1742",
+            "title": "[RMI Object] Cập nhật tổng tiền đơn hàng",
+            "protocolType": "RMI_OBJECT",
+            "level": "HARD",
+            "userAlias": "nQHOVeZZ",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "9def0409-dff6-414e-b718-da012fdf0ec3",
+            "code": 1335,
+            "alias": "JNP-1335",
+            "title": "RMI - Character",
+            "protocolType": "RMI_CHARACTER",
+            "level": "MEDIUM",
+            "userAlias": "cbIzvfZs",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "958e362b-330c-4d8c-9d64-8d4374713dc6",
+            "code": 2233,
+            "alias": "Q2233",
+            "title": "[SOAP Object] Lọc khách hàng tiềm năng",
+            "protocolType": "SOAP_OBJECT",
+            "level": "HARD",
+            "userAlias": "PKKjOULb",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "18458c91-c978-47b1-bd39-b810418804bc",
+            "code": 1329,
+            "alias": "JNP-1329",
+            "title": "RMI - Data",
+            "protocolType": "RMI_DATA",
+            "level": "MEDIUM",
+            "userAlias": "PXUfTCYq",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "7b5fecbf-366b-4579-83c8-a0ea1cf427dd",
+            "code": 2252,
+            "alias": "Q2252",
+            "title": "[SOAP Character] Che và sắp xếp mảng log",
+            "protocolType": "SOAP_CHARACTER",
+            "level": "HARD",
+            "userAlias": "OuCUarD8",
+            "examServerHost": "36.50.135.242"
+          }
+        ]
+      }
+    }
+  },
+  "B23DCTT027": {
+    "status": "login_failed",
+    "error": "{\"status\":0,\"description\":\"PTIT login failed: Invalid username or password\"}"
+  },
+  "B23DCTM101": {
+    "status": "success",
+    "fullName": "Hoàng Vạn Phúc",
+    "userUuid": "6b47cd6d-93c1-4851-9f87-2b54b22765d7",
+    "contests": {
+      "f66109d7-a13e-4f54-8fdb-d98e6c521617": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 02 - UDP - 02",
+        "questionsCount": 5,
+        "newAdded": 4,
+        "questions": [
+          {
+            "id": "ba9406f3-c83f-4e10-a8de-8251386d2b30",
+            "code": 1631,
+            "alias": "Q1631",
+            "title": "[UDP Object] Cập nhật lương nhân viên",
+            "protocolType": "UDP_OBJECT",
+            "level": "HARD",
+            "userAlias": "XWJmRA4q",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "b6dab725-2b2a-48a2-9a94-3ae8ca107b98",
+            "code": 1612,
+            "alias": "Q1612",
+            "title": "[UDP Data] Tính weighted checksum",
+            "protocolType": "UDP_DATA",
+            "level": "MEDIUM",
+            "userAlias": "QczwxuFG",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "93274030-f820-4f40-8305-6dd760e28e16",
+            "code": 1622,
+            "alias": "Q1622",
+            "title": "[UDP String] Che dữ liệu nhạy cảm",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM",
+            "userAlias": "aw2NnS81",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "a1a49f6c-5f29-4223-8292-26fe43577fc0",
+            "code": 1621,
+            "alias": "Q1621",
+            "title": "[UDP String] Chuẩn hóa slug",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM",
+            "userAlias": "U0W46Uh6",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "a2a06fd2-41ac-4425-9ac7-3027bc4f88bd",
+            "code": 931,
+            "alias": "JNP-931",
+            "title": "UDP - Data Type",
+            "protocolType": "UDP_DATA",
+            "level": "EASY",
+            "userAlias": "pmMyblco",
+            "examServerHost": "36.50.135.242"
+          }
+        ]
+      },
+      "cd57b1ba-a746-46df-afe6-fd50b8f55267": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 03 - RMI + WS 02",
+        "questionsCount": 6,
+        "newAdded": 4,
+        "questions": [
+          {
+            "id": "af661c9b-5221-415b-9d29-35a222d936ec",
+            "code": 1721,
+            "alias": "Q1721",
+            "title": "[RMI Data] Liệt kê số nguyên tố trong khoảng",
+            "protocolType": "RMI_DATA",
+            "level": "MEDIUM",
+            "userAlias": "6NXNnsTG",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "141c7b1e-f1ee-4394-ba3a-37d976901dea",
+            "code": 1002,
+            "alias": "JNP-1002",
+            "title": "RMI - Object",
+            "protocolType": "RMI_OBJECT",
+            "level": "MEDIUM",
+            "userAlias": "k6ikKEUE",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "21cf313c-7212-4489-a59b-55b22a43b8ec",
+            "code": 1311,
+            "alias": "JNP-1311",
+            "title": "RMI - Byte",
+            "protocolType": "RMI_BYTE",
+            "level": "MEDIUM",
+            "userAlias": "pvk0HX2N",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "9def0409-dff6-414e-b718-da012fdf0ec3",
+            "code": 1335,
+            "alias": "JNP-1335",
+            "title": "RMI - Character",
+            "protocolType": "RMI_CHARACTER",
+            "level": "MEDIUM",
+            "userAlias": "34bi8K9M",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "e8016bef-9516-405a-b518-41656374fbd9",
+            "code": 2262,
+            "alias": "Q2262",
+            "title": "[SOAP Object] Lọc và sắp xếp khách hàng VIP",
+            "protocolType": "SOAP_OBJECT",
+            "level": "HARD",
+            "userAlias": "2iGEY7MK",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "2de84e4b-70ef-4a77-bb6b-ba387e10ec75",
+            "code": 2221,
+            "alias": "Q2221",
+            "title": "SOAP Character — Reverse a String",
+            "protocolType": "SOAP_CHARACTER",
+            "level": "EASY",
+            "userAlias": "yYGd6XwN",
+            "examServerHost": "36.50.135.242"
+          }
+        ]
+      }
+    }
+  },
+  "B23DCAT144": {
+    "status": "success",
+    "fullName": "Nguyễn Thế Khải",
+    "userUuid": "dec9ada3-1fa8-4c9d-99da-a29b66669347",
+    "contests": {
+      "f66109d7-a13e-4f54-8fdb-d98e6c521617": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 02 - UDP - 02",
+        "questionsCount": 5,
+        "newAdded": 2,
+        "questions": [
+          {
+            "id": "8396832d-01e7-46ca-a3fa-796070448bff",
+            "code": 998,
+            "alias": "JNP-998",
+            "title": "UDP - String",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM",
+            "userAlias": "iSEmGDXn",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "b6dab725-2b2a-48a2-9a94-3ae8ca107b98",
+            "code": 1612,
+            "alias": "Q1612",
+            "title": "[UDP Data] Tính weighted checksum",
+            "protocolType": "UDP_DATA",
+            "level": "MEDIUM",
+            "userAlias": "3EwYLdSA",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "93274030-f820-4f40-8305-6dd760e28e16",
+            "code": 1622,
+            "alias": "Q1622",
+            "title": "[UDP String] Che dữ liệu nhạy cảm",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM",
+            "userAlias": "P0yo9FhC",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "fe5d9a56-2415-48b1-8757-13b0fa24877c",
+            "code": 1000,
+            "alias": "JNP-1000",
+            "title": "UDP - Object",
+            "protocolType": "UDP_OBJECT",
+            "level": "MEDIUM",
+            "userAlias": "uc8wrqqr",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "a2a06fd2-41ac-4425-9ac7-3027bc4f88bd",
+            "code": 931,
+            "alias": "JNP-931",
+            "title": "UDP - Data Type",
+            "protocolType": "UDP_DATA",
+            "level": "EASY",
+            "userAlias": "GHGROaOv",
+            "examServerHost": "36.50.135.242"
+          }
+        ]
+      },
+      "cd57b1ba-a746-46df-afe6-fd50b8f55267": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 03 - RMI + WS 02",
+        "questionsCount": 6,
+        "newAdded": 4,
+        "questions": [
+          {
+            "id": "3c46cb91-bd1f-4f4d-a3db-f1ac5d21964f",
+            "code": 1333,
+            "alias": "JNP-1333",
+            "title": "RMI - Character",
+            "protocolType": "RMI_CHARACTER",
+            "level": "MEDIUM",
+            "userAlias": "agFDUyBv",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "2791e947-6219-4c84-8ed7-c098cddbe2e6",
+            "code": 1741,
+            "alias": "Q1741",
+            "title": "[RMI Object] Cập nhật SLA ticket",
+            "protocolType": "RMI_OBJECT",
+            "level": "HARD",
+            "userAlias": "FExYCUya",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "e8016bef-9516-405a-b518-41656374fbd9",
+            "code": 2262,
+            "alias": "Q2262",
+            "title": "[SOAP Object] Lọc và sắp xếp khách hàng VIP",
+            "protocolType": "SOAP_OBJECT",
+            "level": "HARD",
+            "userAlias": "mwxjIkGc",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "ff6c9abf-f32b-4029-828b-4b5b3ad091a5",
+            "code": 1330,
+            "alias": "JNP-1330",
+            "title": "RMI - Data",
+            "protocolType": "RMI_DATA",
+            "level": "MEDIUM",
+            "userAlias": "DPDIlQZA",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "2453a915-fc3f-41bf-839e-44304ab7b739",
+            "code": 1712,
+            "alias": "Q1712",
+            "title": "[RMI Byte] Tính XOR checksum",
+            "protocolType": "RMI_BYTE",
+            "level": "MEDIUM",
+            "userAlias": "aTHkGBDN",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "7b5fecbf-366b-4579-83c8-a0ea1cf427dd",
+            "code": 2252,
+            "alias": "Q2252",
+            "title": "[SOAP Character] Che và sắp xếp mảng log",
+            "protocolType": "SOAP_CHARACTER",
+            "level": "HARD",
+            "userAlias": "nWwBN2bS",
+            "examServerHost": "36.50.135.242"
+          }
+        ]
+      }
+    }
+  },
+  "B23DCVT311": {
+    "status": "login_failed",
+    "error": "{\"status\":0,\"description\":\"PTIT login failed: Invalid username or password\"}"
+  },
+  "B23DCDT158": {
+    "status": "success",
+    "fullName": "Cao Ngọc Quang Linh",
+    "userUuid": "39d919dc-26de-4f93-b6ab-5a4ae4ae8244",
+    "contests": {
+      "f66109d7-a13e-4f54-8fdb-d98e6c521617": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 02 - UDP - 02",
+        "questionsCount": 5,
+        "newAdded": 3,
+        "questions": [
+          {
+            "id": "62a47461-7a2a-4ace-96a5-81881ab971ae",
+            "code": 993,
+            "alias": "JNP-993",
+            "title": "UDP - String",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM",
+            "userAlias": "P1Tas85U",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "a1a49f6c-5f29-4223-8292-26fe43577fc0",
+            "code": 1621,
+            "alias": "Q1621",
+            "title": "[UDP String] Chuẩn hóa slug",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM",
+            "userAlias": "9lQySIrI",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "5ece8b0b-f2b6-4d19-a660-12ad27535d00",
+            "code": 991,
+            "alias": "JNP-991",
+            "title": "UDP - Data Type",
+            "protocolType": "UDP_DATA",
+            "level": "MEDIUM",
+            "userAlias": "SOTvJXbM",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "f6f6385b-9caf-4525-99b6-82c7ac5fe0f5",
+            "code": 1892,
+            "alias": "Q1892",
+            "title": "[UDP Object] Giá sản phẩm sau thuế, giảm giá và phụ phí",
+            "protocolType": "UDP_OBJECT",
+            "level": "HARD",
+            "userAlias": "7QL91VjT",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "cddb9ec6-f60e-4353-9c8c-19f75eceb755",
+            "code": 934,
+            "alias": "JNP-934",
+            "title": "UDP - Data Type",
+            "protocolType": "UDP_DATA",
+            "level": "EASY",
+            "userAlias": "PGW9btDz",
+            "examServerHost": "36.50.135.242"
+          }
+        ]
+      },
+      "cd57b1ba-a746-46df-afe6-fd50b8f55267": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 03 - RMI + WS 02",
+        "questionsCount": 6,
+        "newAdded": 5,
+        "questions": [
+          {
+            "id": "fe69211f-ec58-408b-bd41-868ac58bf731",
+            "code": 1322,
+            "alias": "JNP-1322",
+            "title": "RMI - Data",
+            "protocolType": "RMI_DATA",
+            "level": "MEDIUM",
+            "userAlias": "xH9rKa4E",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "7f16208d-c2f8-45e5-a8a3-c6ff75b957a2",
+            "code": 1317,
+            "alias": "JNP-1317",
+            "title": "RMI - Byte",
+            "protocolType": "RMI_BYTE",
+            "level": "MEDIUM",
+            "userAlias": "cdJLc0At",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "88add6ce-1c1f-4c5f-b673-eb36731e6a7a",
+            "code": 2231,
+            "alias": "Q2231",
+            "title": "SOAP Object — Calculate Final Price",
+            "protocolType": "SOAP_OBJECT",
+            "level": "MEDIUM",
+            "userAlias": "tWqoqVZP",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "2de84e4b-70ef-4a77-bb6b-ba387e10ec75",
+            "code": 2221,
+            "alias": "Q2221",
+            "title": "SOAP Character — Reverse a String",
+            "protocolType": "SOAP_CHARACTER",
+            "level": "EASY",
+            "userAlias": "AU7vYEcI",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "7f2ec930-ccb7-43cb-bb4a-58833baf8510",
+            "code": 1332,
+            "alias": "JNP-1332",
+            "title": "RMI - Character",
+            "protocolType": "RMI_CHARACTER",
+            "level": "MEDIUM",
+            "userAlias": "zsZ7Hdow",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "34683720-a702-4c5e-8eef-0c9c634a56e7",
+            "code": 1942,
+            "alias": "Q1942",
+            "title": "[RMI Object] Tổng tiền và trạng thái rà soát đơn hàng",
+            "protocolType": "RMI_OBJECT",
+            "level": "HARD",
+            "userAlias": "xdzmI3rt",
+            "examServerHost": "36.50.135.242"
+          }
+        ]
+      }
+    }
+  },
+  "B23DCDT024": {
+    "status": "success",
+    "fullName": "Nguyễn Sơn Bách",
+    "userUuid": "ae72a946-4785-4729-9f59-8b71e20f475e",
+    "contests": {
+      "f66109d7-a13e-4f54-8fdb-d98e6c521617": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 02 - UDP - 02",
+        "questionsCount": 5,
+        "newAdded": 1,
+        "questions": [
+          {
+            "id": "04530283-c73b-4066-9611-88f6b55b6d2b",
+            "code": 801,
+            "alias": "JNP-801",
+            "title": "UDP - Data Type",
+            "protocolType": "UDP_DATA",
+            "level": "MEDIUM",
+            "userAlias": "szf5ducF",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "93274030-f820-4f40-8305-6dd760e28e16",
+            "code": 1622,
+            "alias": "Q1622",
+            "title": "[UDP String] Che dữ liệu nhạy cảm",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM",
+            "userAlias": "Stpr1AbW",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "a1a49f6c-5f29-4223-8292-26fe43577fc0",
+            "code": 1621,
+            "alias": "Q1621",
+            "title": "[UDP String] Chuẩn hóa slug",
+            "protocolType": "UDP_STRING",
+            "level": "MEDIUM",
+            "userAlias": "GnEaY0JW",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "a2a06fd2-41ac-4425-9ac7-3027bc4f88bd",
+            "code": 931,
+            "alias": "JNP-931",
+            "title": "UDP - Data Type",
+            "protocolType": "UDP_DATA",
+            "level": "EASY",
+            "userAlias": "oMKa6OSA",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "f6f6385b-9caf-4525-99b6-82c7ac5fe0f5",
+            "code": 1892,
+            "alias": "Q1892",
+            "title": "[UDP Object] Giá sản phẩm sau thuế, giảm giá và phụ phí",
+            "protocolType": "UDP_OBJECT",
+            "level": "HARD",
+            "userAlias": "qLdXt9cM",
+            "examServerHost": "36.50.135.242"
+          }
+        ]
+      },
+      "cd57b1ba-a746-46df-afe6-fd50b8f55267": {
+        "contestName": "[INT1433-CLC-HKI-2627] Kiểm tra TH 03 - RMI + WS 02",
+        "questionsCount": 6,
+        "newAdded": 4,
+        "questions": [
+          {
+            "id": "141c7b1e-f1ee-4394-ba3a-37d976901dea",
+            "code": 1002,
+            "alias": "JNP-1002",
+            "title": "RMI - Object",
+            "protocolType": "RMI_OBJECT",
+            "level": "MEDIUM",
+            "userAlias": "MIucFz7B",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "8692f9b1-7b13-411b-b5db-2387335d890e",
+            "code": 1324,
+            "alias": "JNP-1324",
+            "title": "RMI - Data",
+            "protocolType": "RMI_DATA",
+            "level": "MEDIUM",
+            "userAlias": "dJurPz0w",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "43603915-cff0-4c07-a835-f702c1df77cd",
+            "code": 1336,
+            "alias": "JNP-1336",
+            "title": "RMI - Character",
+            "protocolType": "RMI_CHARACTER",
+            "level": "MEDIUM",
+            "userAlias": "ZJWhSB3j",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "f44216fa-deaf-4870-99da-040864910fc6",
+            "code": 1312,
+            "alias": "JNP-1312",
+            "title": "RMI - Byte",
+            "protocolType": "RMI_BYTE",
+            "level": "MEDIUM",
+            "userAlias": "VqBnPV8y",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "6393aace-30ee-444b-b6f2-8077ba78c0ed",
+            "code": 2261,
+            "alias": "Q2261",
+            "title": "[SOAP Object] Tính giá ProductY sau thuế và giảm giá",
+            "protocolType": "SOAP_OBJECT",
+            "level": "HARD",
+            "userAlias": "DHFtdXxE",
+            "examServerHost": "36.50.135.242"
+          },
+          {
+            "id": "7b5fecbf-366b-4579-83c8-a0ea1cf427dd",
+            "code": 2252,
+            "alias": "Q2252",
+            "title": "[SOAP Character] Che và sắp xếp mảng log",
+            "protocolType": "SOAP_CHARACTER",
+            "level": "HARD",
+            "userAlias": "qBXnlHhV",
+            "examServerHost": "36.50.135.242"
+          }
+        ]
+      }
+    }
+  }
+}

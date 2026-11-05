@@ -1,0 +1,92 @@
+{
+  "B23DCTT031": {
+    "status": "success",
+    "fullName": "Nguyễn Thùy Dung",
+    "userUuid": "5eeb04d5-d1b2-4bdd-b6bb-dcf8344ee88f",
+    "questions": [
+      {
+        "id": "15b7d957-85a4-41a7-a49e-16c3e93d6d40",
+        "alias": "Q1841",
+        "code": 1841,
+        "title": "[TCP Object Stream] Giá sau chiết khấu, VAT và phí xử lý",
+        "protocol": "TCP_OBJECT"
+      },
+      {
+        "id": "99fe98bd-07ff-4031-8da0-405fc34228bb",
+        "alias": "Q1861",
+        "code": 1861,
+        "title": "[TCP NIO] Tính tổng hóa đơn từ nhiều frame",
+        "protocol": "TCP_NIO"
+      },
+      {
+        "id": "6ada36b1-846d-4a1f-8799-d4318e33048e",
+        "alias": "Q1831",
+        "code": 1831,
+        "title": "[TCP Character Stream] Lọc giao dịch rủi ro",
+        "protocol": "TCP_CHARACTER"
+      },
+      {
+        "id": "7caa5138-a80f-433e-9734-a32d850e1f92",
+        "alias": "Q1511",
+        "code": 1511,
+        "title": "[TCP Byte Raw] Checksum byte payload",
+        "protocol": "TCP_BYTE_RAW"
+      },
+      {
+        "id": "b77de884-eea0-466f-9541-17d0978f14ae",
+        "alias": "JNP-914",
+        "code": 914,
+        "title": "TCP - Data Stream",
+        "protocol": "TCP_DATA"
+      }
+    ],
+    "newQuestionsAdded": 2
+  },
+  "B23DCTT027": {
+    "status": "login_failed",
+    "error": "{\"status\":0,\"description\":\"PTIT login failed: Invalid username or password\"}"
+  },
+  "B23DCTM101": {
+    "status": "success",
+    "fullName": "Hoàng Vạn Phúc",
+    "userUuid": "6b47cd6d-93c1-4851-9f87-2b54b22765d7",
+    "questions": [
+      {
+        "id": "2e2b6d21-2f50-43b8-a28c-61a8106f429b",
+        "alias": "Q1542",
+        "code": 1542,
+        "title": "[TCP Object Stream] Chuẩn hóa mã sinh viên và xếp loại GPA",
+        "protocol": "TCP_OBJECT"
+      },
+      {
+        "id": "39c3c094-0848-4381-bbf1-cbc9c2794936",
+        "alias": "JNP-700",
+        "code": 700,
+        "title": "TCP - Byte Stream",
+        "protocol": "TCP_BYTE_RAW"
+      },
+      {
+        "id": "eaca8b29-7b07-49f7-afb1-6a794bc0e186",
+        "alias": "Q1821",
+        "code": 1821,
+        "title": "[TCP Data Stream] Tổng doanh thu theo nhóm",
+        "protocol": "TCP_DATA"
+      },
+      {
+        "id": "9999c871-8719-428b-9bf3-ab7e699276c0",
+        "alias": "Q1562",
+        "code": 1562,
+        "title": "[TCP NIO] Phân loại bản ghi theo trạng thái",
+        "protocol": "TCP_NIO"
+      },
+      {
+        "id": "a9d4fb27-45fa-472f-8b12-caceefc25c54",
+        "alias": "JNP-600",
+        "code": 600,
+        "title": "TCP - Character Stream",
+        "protocol": "TCP_CHARACTER"
+      }
+    ],
+    "newQuestionsAdded": 1
+  }
+}
