@@ -448,6 +448,58 @@ def submit_to_ptit(req: PtitSubmitRequest, authorization: Optional[str] = Header
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+def _ptit_get(path: str, token: str, params: Optional[dict] = None):
+    headers = {"Authorization": f"Bearer {token}", "User-Agent": PTIT_USER_AGENT}
+    try:
+        r = requests.get(f"{PTIT_API_HOST}/api{path}", headers=headers, params=params, timeout=15)
+    except requests.RequestException as e:
+        raise HTTPException(status_code=502, detail=f"Không kết nối được dbapi.ptit.edu.vn: {e}")
+    if not r.ok:
+        try:
+            err = r.json()
+            message = (err.get("description") or err.get("message")) if isinstance(err, dict) else None
+        except ValueError:
+            message = None
+        raise HTTPException(status_code=r.status_code, detail=message or f"PTIT API lỗi {r.status_code}")
+    return r.json()
+
+def _fetch_qcodes(course_id: str, token: str) -> Dict[int, str]:
+    qcodes: Dict[int, str] = {}
+    page = 0
+    while True:
+        body = _ptit_get("/app/jnp-question/student", token, {"page": page, "size": 100, "courseId": course_id})
+        items = body.get("content", []) if isinstance(body, dict) else body
+        for q in items:
+            if q.get("code") is not None and q.get("userAlias"):
+                qcodes[q["code"]] = q["userAlias"]
+        page += 1
+        if not isinstance(body, dict) or page >= body.get("totalPages", 1):
+            return qcodes
+
+@app.get("/api/ptit/qcodes")
+def get_ptit_qcodes(courseId: Optional[str] = None, authorization: Optional[str] = Header(None)):
+    # qCode riêng của sinh viên = userAlias trong danh sách câu hỏi của khóa học
+    token = _bearer(authorization)
+    if not token:
+        raise HTTPException(status_code=401, detail="Missing PTIT Bearer token")
+    if courseId:
+        try:
+            return {"courseId": courseId, "qcodes": _fetch_qcodes(courseId, token)}
+        except HTTPException as e:
+            # courseId cũ của tài khoản khác -> tự tìm khóa học của tài khoản hiện tại
+            if e.status_code == 401 or e.status_code >= 500:
+                raise
+    # Khóa học Lập trình mạng của sinh viên là khóa có exerciseTypes chứa JNP
+    courses = _ptit_get("/assignment/course/current-student", token)
+    jnp = [c for c in courses if "JNP" in (c.get("exerciseTypes") or [])
+           or (c.get("subjectCode") or "").startswith("INT1433") or "Lập trình mạng" in (c.get("name") or "")]
+    for c in jnp:
+        qcodes = _fetch_qcodes(c["id"], token)
+        if qcodes:
+            return {"courseId": c["id"], "courseName": c.get("name"), "qcodes": qcodes}
+    names = ", ".join(c.get("name") or "?" for c in courses) or "không có"
+    raise HTTPException(status_code=404, detail=f"Tài khoản không có khóa học JNP nào (khóa học: {names})")
+
 def solve_701_expected(data_str: str) -> str:
     nums = sorted([int(x.strip()) for x in data_str.strip().split(",") if x.strip()])
     min_diff = float("inf")

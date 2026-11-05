@@ -13,6 +13,7 @@ const STORAGE_KEY_PREFIX = "jnp_code_";
 const STUDENT_CODE_KEY = "jnp_student_code";
 const Q_CODE_KEY = "jnp_q_code";
 const COURSE_ID_KEY = "jnp_course_id";
+let qCodesLoaded = false;
 
 document.addEventListener("DOMContentLoaded", async () => {
     if (!(await Auth.requireAuth())) return;
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initMonaco();
     await loadSystemStatus();
     await loadQuestions();
+    loadQCodes();
     await loadCredentials();
     bindEvents();
 });
@@ -61,6 +63,7 @@ function initInputs() {
     courseInput.addEventListener("input", (e) => {
         localStorage.setItem(COURSE_ID_KEY, e.target.value.trim());
     });
+    courseInput.addEventListener("change", () => loadQCodes());
 
     document.getElementById("input-q-code").addEventListener("input", (e) => {
         localStorage.setItem(Q_CODE_KEY, e.target.value.trim());
@@ -476,6 +479,47 @@ async function loadQuestions() {
     }
 }
 
+// 4b. Load student's real qCodes (userAlias) for the course from PTIT
+async function loadQCodes() {
+    const courseId = document.getElementById("input-course-id").value.trim();
+    if (allProblems.length === 0) return;
+    // Token nhập tay (tài khoản khác) được ưu tiên, để trống thì dùng token của phiên đăng nhập
+    const manualToken = document.getElementById("input-ptit-token").value.trim();
+    // Để trống courseId thì backend tự tìm khóa học JNP của tài khoản
+    const url = courseId ? `/api/ptit/qcodes?courseId=${encodeURIComponent(courseId)}` : "/api/ptit/qcodes";
+    try {
+        const res = manualToken
+            ? await fetch(url, { headers: { Authorization: `Bearer ${manualToken}` } })
+            : await Auth.authFetch(url);
+        if (!res.ok) {
+            const err = await res.json().catch(() => ({}));
+            throw new Error(err.detail || `HTTP ${res.status}`);
+        }
+        const { qcodes, courseId: resolvedCourseId } = await res.json();
+        document.getElementById("input-course-id").value = resolvedCourseId;
+        localStorage.setItem(COURSE_ID_KEY, resolvedCourseId);
+        allProblems.forEach(p => { p.qCode = qcodes[p.code] || null; });
+        qCodesLoaded = true;
+        const count = allProblems.filter(p => p.qCode).length;
+        document.getElementById("app-badge").textContent = `${allProblems.length} Bài Tập · ${count} qCode`;
+        renderProblemList();
+        if (currentProblem && currentProblem.qCode) {
+            setQCode(currentProblem.qCode);
+            // Code mẫu sinh trước khi có qCode thật thì sinh lại; code đã lưu giữ nguyên
+            if (!localStorage.getItem(STORAGE_KEY_PREFIX + (currentProblem.alias || currentProblem.id))) generateStarterCode();
+        }
+    } catch (e) {
+        console.error("Failed to load qCodes:", e);
+        document.getElementById("app-badge").textContent = `${allProblems.length} Bài Tập · không lấy được qCode`;
+        document.getElementById("app-badge").title = e.message;
+    }
+}
+
+function setQCode(qCode) {
+    document.getElementById("input-q-code").value = qCode;
+    localStorage.setItem(Q_CODE_KEY, qCode);
+}
+
 // 5. Render Problem List Sidebar
 function renderProblemList() {
     const listEl = document.getElementById("problem-list");
@@ -505,6 +549,7 @@ function renderProblemList() {
             <div class="problem-item-footer">
                 <span class="proto-tag">${protoText}</span>
                 ${p.code ? `<span class="proto-tag">Code: ${p.code}</span>` : ""}
+                ${p.qCode ? `<span class="proto-tag" title="qCode của bạn">${p.qCode}</span>` : ""}
                 ${p.ltmFile ? `<span class="proto-tag solved-tag" title="${p.ltmFile}">Đã giải</span>` : ""}
             </div>
         `;
@@ -517,6 +562,9 @@ function renderProblemList() {
 // 6. Select Problem and Update UI
 function selectProblem(problem) {
     currentProblem = problem;
+    // Bài không thuộc khóa học thì không có qCode, xóa để khỏi dùng nhầm qCode bài trước
+    if (problem.qCode) setQCode(problem.qCode);
+    else if (qCodesLoaded) setQCode("");
 
     // Update active highlight in list
     document.querySelectorAll(".problem-item").forEach(el => el.classList.remove("active"));
