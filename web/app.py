@@ -10,7 +10,7 @@ import subprocess
 import threading
 from pathlib import Path
 from typing import Optional, Dict, Any, List
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Header
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -24,6 +24,10 @@ STATIC_DIR = BASE_DIR / "static"
 QUESTIONS_FILE = PROJECT_ROOT / "sample_responses" / "master_jnp_questions_bank.json"
 PTIT_ENV_FILE = PROJECT_ROOT / "ptit.env"
 ENV_FILE = PROJECT_ROOT / ".env"
+
+PTIT_API_HOST = "https://dbapi.ptit.edu.vn"
+PTIT_AUTH_URL = f"{PTIT_API_HOST}/api/auth"
+PTIT_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
 # Detect Java/Javac binaries
 def find_jdk():
@@ -88,6 +92,13 @@ class PtitSubmitRequest(BaseModel):
     courseId: Optional[str] = None
     examId: Optional[str] = None
 
+class LoginRequest(BaseModel):
+    username: str
+    password: str
+
+class RefreshRequest(BaseModel):
+    refreshToken: str
+
 class MockTestRequest(BaseModel):
     code: str
     questionCode: Optional[int] = 701
@@ -131,8 +142,9 @@ def get_saved_credentials():
     if ENV_FILE.exists():
         with open(ENV_FILE, "r", encoding="utf-8") as f:
             content = f.read()
-        m_u = re.search(r"QLDT_USERNAME=([^\r\n#]+)", content)
-        m_p = re.search(r"QLDT_PASSWORD=([^\r\n#]+)", content)
+        # Chấp nhận cả QLDT_USERNAME=... lẫn USERNAME = ...
+        m_u = re.search(r"^\s*(?:QLDT_)?USERNAME\s*=\s*([^\r\n#]+)", content, re.MULTILINE)
+        m_p = re.search(r"^\s*(?:QLDT_)?PASSWORD\s*=\s*([^\r\n#]+)", content, re.MULTILINE)
         if m_u and m_p:
             creds.append({
                 "username": m_u.group(1).strip(),
@@ -140,6 +152,66 @@ def get_saved_credentials():
                 "source": ".env (Default)"
             })
     return creds
+
+# --- Auth proxy (dbapi.ptit.edu.vn) ---
+# Trình duyệt không gọi thẳng dbapi.ptit.edu.vn được (CORS) nên backend đứng giữa,
+# giống api/proxy.js của db-pshit-remastered.
+def _ptit_auth_call(method: str, path: str, token: Optional[str] = None, payload: Optional[dict] = None):
+    headers = {"Content-Type": "application/json", "User-Agent": PTIT_USER_AGENT}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    try:
+        r = requests.request(method, f"{PTIT_AUTH_URL}{path}", headers=headers, json=payload, timeout=15)
+    except requests.RequestException as e:
+        raise HTTPException(status_code=502, detail=f"Không kết nối được dbapi.ptit.edu.vn: {e}")
+    try:
+        body = r.json()
+    except ValueError:
+        body = {"message": r.text}
+    if not r.ok:
+        # dbapi trả lỗi dạng {"status": 0, "description": "..."}
+        message = (body.get("description") or body.get("message")) if isinstance(body, dict) else None
+        raise HTTPException(status_code=r.status_code, detail=message or f"PTIT API lỗi {r.status_code}")
+    return body
+
+def _extract_tokens(data: dict) -> Dict[str, Optional[str]]:
+    return {
+        "accessToken": data.get("accessToken") or data.get("access_token") or data.get("access"),
+        "refreshToken": data.get("refreshToken") or data.get("refresh_token") or data.get("refresh"),
+    }
+
+def _bearer(authorization: Optional[str]) -> Optional[str]:
+    if authorization and authorization.lower().startswith("bearer "):
+        return authorization.split(" ", 1)[1].strip() or None
+    return None
+
+@app.post("/api/auth/login")
+def auth_login(req: LoginRequest):
+    if not req.username.strip() or not req.password:
+        raise HTTPException(status_code=400, detail="Thiếu tên đăng nhập hoặc mật khẩu")
+    data = _ptit_auth_call("POST", "/auth/ptit-login", payload={
+        "username": req.username.strip(),
+        "password": req.password,
+    })
+    tokens = _extract_tokens(data)
+    if not tokens["accessToken"]:
+        raise HTTPException(status_code=502, detail="PTIT API không trả về accessToken")
+    return tokens
+
+@app.post("/api/auth/refresh")
+def auth_refresh(req: RefreshRequest):
+    data = _ptit_auth_call("POST", "/auth/refresh-token", payload={"refreshToken": req.refreshToken})
+    tokens = _extract_tokens(data)
+    if not tokens["accessToken"]:
+        raise HTTPException(status_code=401, detail="Refresh token không hợp lệ")
+    return tokens
+
+@app.get("/api/auth/me")
+def auth_me(authorization: Optional[str] = Header(None)):
+    token = _bearer(authorization)
+    if not token:
+        raise HTTPException(status_code=401, detail="Thiếu Bearer token")
+    return _ptit_auth_call("GET", "/users/info", token=token)
 
 @app.post("/api/run-java")
 def run_java_code(req: JavaRunRequest):
@@ -342,15 +414,16 @@ def test_socket_connection(req: SocketTestRequest):
         }
 
 @app.post("/api/submit-ptit")
-def submit_to_ptit(req: PtitSubmitRequest):
-    if not req.token:
+def submit_to_ptit(req: PtitSubmitRequest, authorization: Optional[str] = Header(None)):
+    token = req.token or _bearer(authorization)
+    if not token:
         raise HTTPException(status_code=400, detail="Missing PTIT Bearer token")
-    
-    url = "https://dbapi.ptit.edu.vn/api/app/jnp-submission/source"
+
+    url = f"{PTIT_API_HOST}/api/app/jnp-submission/source"
     headers = {
-        "Authorization": f"Bearer {req.token}",
+        "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        "User-Agent": PTIT_USER_AGENT
     }
     payload = {
         "questionAlias": req.questionAlias,

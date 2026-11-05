@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Lập Chình Mạng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="login-page">
+    <main class="login-card">
+        <div class="login-header">
+            <span class="brand-icon">UCP TDP</span>
+            <h1 class="login-title">Lập Chình Mạng</h1>
+            <p class="login-subtitle">Đăng nhập bằng tài khoản DB PTIT (mã sinh viên)</p>
+        </div>
+
+        <form id="login-form" class="login-form" novalidate>
+            <div class="login-field" id="saved-creds-field" hidden>
+                <label for="select-login-creds">Tài khoản đã lưu</label>
+                <select id="select-login-creds" class="login-input"></select>
+            </div>
+
+            <div class="login-field">
+                <label for="login-username">Tên đăng nhập</label>
+                <input id="login-username" class="login-input" type="text" autocomplete="username"
+                    placeholder="B23DCAT144" autofocus>
+            </div>
+
+            <div class="login-field">
+                <label for="login-password">Mật khẩu</label>
+                <input id="login-password" class="login-input" type="password" autocomplete="current-password"
+                    placeholder="Mật khẩu QLDT">
+            </div>
+
+            <div class="login-error" id="login-error" role="alert" hidden></div>
+
+            <button type="submit" class="btn btn-primary login-submit" id="btn-login">Đăng nhập</button>
+        </form>
+
+        <p class="login-footnote">
+            Thông tin đăng nhập được gửi qua backend cục bộ tới <code>dbapi.ptit.edu.vn</code>.
+        </p>
+    </main>
+
+    <script src="auth.js"></script>
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const rawNext = params.get("next") || "/";
+            // Chỉ cho phép đường dẫn nội bộ để tránh open redirect
+            const next = rawNext.startsWith("/") && !rawNext.startsWith("//") ? rawNext : "/";
+
+            const token = Auth.getToken();
+            if (token && !Auth.isExpired(token)) {
+                window.location.replace(next);
+                return;
+            }
+
+            const form = document.getElementById("login-form");
+            const usernameEl = document.getElementById("login-username");
+            const passwordEl = document.getElementById("login-password");
+            const errorEl = document.getElementById("login-error");
+            const submitBtn = document.getElementById("btn-login");
+
+            function showError(msg) {
+                errorEl.textContent = msg;
+                errorEl.hidden = !msg;
+            }
+
+            // Tài khoản lưu trong ptit.env / .env (endpoint /api/creds có sẵn)
+            fetch("/api/creds")
+                .then((res) => (res.ok ? res.json() : []))
+                .then((creds) => {
+                    if (!creds.length) return;
+                    const select = document.getElementById("select-login-creds");
+                    select.innerHTML = `<option value="">-- Chọn (${creds.length} tài khoản) --</option>`;
+                    creds.forEach((c, idx) => {
+                        const opt = document.createElement("option");
+                        opt.value = idx;
+                        opt.textContent = `${c.username} [${c.source}]`;
+                        select.appendChild(opt);
+                    });
+                    select.addEventListener("change", () => {
+                        const c = creds[select.value];
+                        if (!c) return;
+                        usernameEl.value = c.username;
+                        passwordEl.value = c.password;
+                    });
+                    document.getElementById("saved-creds-field").hidden = false;
+                })
+                .catch(() => { /* không có tài khoản lưu sẵn */ });
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                showError("");
+
+                const username = usernameEl.value.trim();
+                const password = passwordEl.value;
+                if (!username || !password) {
+                    showError("Vui lòng nhập tên đăng nhập và mật khẩu.");
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Đang đăng nhập...";
+                try {
+                    const user = await Auth.login(username, password);
+                    localStorage.setItem("jnp_student_code", (user && (user.userCode || user.username)) || username);
+                    window.location.replace(next);
+                } catch (err) {
+                    showError(err.message || "Đăng nhập thất bại.");
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Đăng nhập";
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

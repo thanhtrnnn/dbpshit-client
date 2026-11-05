@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lập Chình Mạng - Môi trường Lập trình mạng Java</title>
+    <script>
+        if (!localStorage.getItem("db_ptit_token") && !localStorage.getItem("db_ptit_refresh")) {
+            window.location.replace("/login.html?next=" + encodeURIComponent(location.pathname + location.search));
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,6 +68,10 @@
                 title="Công cụ kiểm tra kết nối Socket trực tiếp">
                 [Socket] Dò Kết Nối
             </button>
+            <div class="nav-user">
+                <span class="nav-user-name" id="nav-user-name" title="Tài khoản DB PTIT đang đăng nhập">Đang tải...</span>
+                <button class="btn btn-outline" id="btn-logout" title="Đăng xuất tài khoản DB PTIT">Đăng xuất</button>
+            </div>
         </div>
     </header>
 
@@ -260,7 +269,7 @@
                                 <option value="">-- Chọn tài khoản từ ptit.env --</option>
                             </select>
                             <input type="password" id="input-ptit-token" class="socket-input" style="flex: 1;"
-                                placeholder="Hoặc nhập Bearer token thủ công...">
+                                placeholder="Để trống = dùng token phiên đăng nhập hiện tại (hoặc dán token khác)">
                             <button class="btn btn-primary" id="btn-submit-code-ptit">
                                 Nộp bài lên PTIT
                             </button>
@@ -280,6 +289,7 @@
     <div id="drag-overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 99999; cursor: inherit;"></div>
 
     <!-- Scripts -->
+    <script src="auth.js"></script>
     <script src="java_templates.js"></script>
     <script src="app.js"></script>
 </body>
