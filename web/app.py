@@ -22,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 STATIC_DIR = BASE_DIR / "static"
 QUESTIONS_FILE = PROJECT_ROOT / "sample_responses" / "master_jnp_questions_bank.json"
+LTM_MAP_FILE = PROJECT_ROOT / "sample_responses" / "ltm_solution_map.json"
 PTIT_ENV_FILE = PROJECT_ROOT / "ptit.env"
 ENV_FILE = PROJECT_ROOT / ".env"
 
@@ -86,11 +87,10 @@ class SocketTestRequest(BaseModel):
     timeoutSeconds: Optional[float] = 5.0
 
 class PtitSubmitRequest(BaseModel):
-    questionAlias: str
+    questionAlias: str  # qCode riêng của sinh viên (userAlias), không phải JNP-xxx
     code: str
+    courseId: str
     token: Optional[str] = None
-    courseId: Optional[str] = None
-    examId: Optional[str] = None
 
 class LoginRequest(BaseModel):
     username: str
@@ -121,6 +121,13 @@ def get_questions():
         raise HTTPException(status_code=404, detail="Questions database not found")
     with open(QUESTIONS_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
+    # Đánh dấu bài đã có lời giải trong ltm/ (ltmFile = null nếu chưa giải)
+    solved = {}
+    if LTM_MAP_FILE.exists():
+        with open(LTM_MAP_FILE, "r", encoding="utf-8") as f:
+            solved = {s["code"]: s["file"] for s in json.load(f).get("solved", [])}
+    for q in data:
+        q["ltmFile"] = solved.get(q.get("code"))
     return data
 
 @app.get("/api/creds")
@@ -425,11 +432,11 @@ def submit_to_ptit(req: PtitSubmitRequest, authorization: Optional[str] = Header
         "Content-Type": "application/json",
         "User-Agent": PTIT_USER_AGENT
     }
+    # Khớp payload mà db.ptit.edu.vn gửi ở nút "Nộp mã nguồn"
     payload = {
         "questionAlias": req.questionAlias,
-        "source": req.code,
         "courseId": req.courseId,
-        "examId": req.examId
+        "sourceCode": req.code
     }
 
     try:

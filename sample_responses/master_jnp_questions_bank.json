@@ -2260,5 +2260,20 @@
     "isPublic": true,
     "isShared": true,
     "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01"
+  },
+  {
+    "id": "ad5cb911-b78e-4a42-9dd4-7fa295eacf33",
+    "createdBy": "e2b0f476-9ff0-4566-94d1-e2d659ecb9ee",
+    "lastModifiedAt": "2026-07-02T19:09:16.411721",
+    "code": 1732,
+    "alias": "Q1732",
+    "title": "[RMI Character] Đếm mức độ log",
+    "description": "<div>\r\n  <p>Một chương trình RMI Server cung cấp giao diện CharacterService trong package RMI, được đăng ký với RegistryServer bằng tên RMICharacterService.</p>\r\n  <h4>Yêu cầu</h4>\r\n  <p>a. Sử dụng mã sinh viên và mã câu hỏi làm tham số khi gọi RMI. Ví dụ: studentCode=&quot;B15DCCN999&quot;, qCode=&quot;BAA62945&quot;.</p>\r\n  <p>b. Triệu gọi requestCharacter(studentCode, qCode) để nhận chuỗi log gồm nhiều dòng được nối bằng ký tự ||.</p>\r\n  <p>c. Đếm số dòng bắt đầu bằng INFO, WARN và ERROR.</p>\r\n  <p>d. Triệu gọi submitCharacter(studentCode, qCode, strSubmit) để gửi kết quả theo định dạng ERROR=n;INFO=n;WARN=n.</p>\r\n  <p>e. Đóng kết nối hoặc kết thúc client sau khi nộp kết quả.</p>\r\n  <p><strong>Ví dụ:</strong> nếu dữ liệu nhận được là <code>ERROR service=api0 code=E017||WARN service=api1 code=NONE||INFO service=api2 code=NONE</code> thì dữ liệu nộp lại là <code>ERROR=1;INFO=1;WARN=1</code>.</p>\r\n</div>",
+    "protocolType": "RMI_CHARACTER",
+    "level": "MEDIUM",
+    "status": "APPROVED",
+    "isPublic": false,
+    "isShared": true,
+    "subjectId": "48b14a2d-7ad7-41d6-9350-93b7d2036b01"
   }
 ]

@@ -12,6 +12,7 @@ let savedCreds = [];
 const STORAGE_KEY_PREFIX = "jnp_code_";
 const STUDENT_CODE_KEY = "jnp_student_code";
 const Q_CODE_KEY = "jnp_q_code";
+const COURSE_ID_KEY = "jnp_course_id";
 
 document.addEventListener("DOMContentLoaded", async () => {
     if (!(await Auth.requireAuth())) return;
@@ -55,6 +56,12 @@ function initInputs() {
         localStorage.setItem(STUDENT_CODE_KEY, e.target.value.trim());
         updateSocketPayloadPlaceholder();
     });
+    const courseInput = document.getElementById("input-course-id");
+    courseInput.value = localStorage.getItem(COURSE_ID_KEY) || "";
+    courseInput.addEventListener("input", (e) => {
+        localStorage.setItem(COURSE_ID_KEY, e.target.value.trim());
+    });
+
     document.getElementById("input-q-code").addEventListener("input", (e) => {
         localStorage.setItem(Q_CODE_KEY, e.target.value.trim());
         updateSocketPayloadPlaceholder();
@@ -498,6 +505,7 @@ function renderProblemList() {
             <div class="problem-item-footer">
                 <span class="proto-tag">${protoText}</span>
                 ${p.code ? `<span class="proto-tag">Code: ${p.code}</span>` : ""}
+                ${p.ltmFile ? `<span class="proto-tag solved-tag" title="${p.ltmFile}">Đã giải</span>` : ""}
             </div>
         `;
 
@@ -970,15 +978,23 @@ function bindEvents() {
         const manualToken = document.getElementById("input-ptit-token").value.trim();
         const code = editor.getValue();
         const resBox = document.getElementById("submit-response-area");
+        // Hệ thống nhận qCode riêng của sinh viên (vd tf04IzUW) + courseId, không nhận JNP-xxx
+        const qCode = document.getElementById("input-q-code").value.trim();
+        const courseId = document.getElementById("input-course-id").value.trim();
+        if (!qCode || !courseId) {
+            resBox.innerHTML = `<span style="color:var(--accent-red);">[-] Cần nhập Mã câu hỏi (qCode) và Course ID trước khi nộp.</span>`;
+            return;
+        }
 
-        resBox.textContent = `Đang nộp mã nguồn cho bài [${currentProblem.alias || "JNP"}] lên hệ thống PTIT...`;
+        resBox.textContent = `Đang nộp mã nguồn cho bài [${currentProblem.alias || "JNP"} / ${qCode}] lên hệ thống PTIT...`;
 
         const submitWith = async (token) => {
             const res = await fetch("/api/submit-ptit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    questionAlias: currentProblem.alias || "",
+                    questionAlias: qCode,
+                    courseId: courseId,
                     code: code,
                     token: token
                 })
@@ -1026,13 +1042,19 @@ function applyFilter(protoFilter, searchQuery) {
         // Protocol filter
         if (protoFilter !== "ALL") {
             const pt = (p.protocolType || "").toUpperCase();
-            if (protoFilter === "TCP_BYTE" && !pt.includes("BYTE")) return false;
-            if (protoFilter === "TCP_DATA" && !pt.includes("DATA")) return false;
-            if (protoFilter === "TCP_CHAR" && !pt.includes("CHARACTER")) return false;
-            if (protoFilter === "TCP_OBJ" && !pt.includes("OBJECT")) return false;
-            if (protoFilter === "TCP_NIO" && !pt.includes("NIO")) return false;
-            if (protoFilter === "UDP" && !pt.includes("UDP")) return false;
-            if (protoFilter === "RMI" && !pt.includes("RMI")) return false;
+            const isTcp = pt.startsWith("TCP");
+            if (protoFilter === "TCP_BYTE" && !(isTcp && pt.includes("BYTE"))) return false;
+            if (protoFilter === "TCP_DATA" && !(isTcp && pt.includes("DATA"))) return false;
+            if (protoFilter === "TCP_CHAR" && !(isTcp && pt.includes("CHARACTER"))) return false;
+            if (protoFilter === "TCP_OBJ" && !(isTcp && pt.includes("OBJECT"))) return false;
+            if (protoFilter === "TCP_NIO" && !(isTcp && pt.includes("NIO"))) return false;
+            if (protoFilter === "TCP_GZIP" && !(isTcp && pt.includes("GZIP"))) return false;
+            if (protoFilter === "UDP" && !pt.startsWith("UDP")) return false;
+            if (protoFilter === "RMI" && !pt.startsWith("RMI")) return false;
+            if (protoFilter === "SOAP" && !(pt.startsWith("SOAP") || pt.startsWith("WS"))) return false;
+            if (protoFilter === "REST" && !pt.startsWith("REST")) return false;
+            if (protoFilter === "GRPC" && !pt.startsWith("GRPC")) return false;
+            if (protoFilter === "UNSOLVED" && p.ltmFile) return false;
         }
 
         // Search query

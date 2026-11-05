@@ -1,0 +1,876 @@
+{
+  "solved": [
+    {
+      "code": 1443,
+      "alias": "JNP-1443",
+      "protocolType": "TCP_GZIP",
+      "file": "ltm/JNP1443_TcpGzipReverseBase64.java"
+    },
+    {
+      "code": 1444,
+      "alias": "JNP-1444",
+      "protocolType": "TCP_GZIP",
+      "file": "ltm/JNP1444_TcpGzipSortChars.java"
+    },
+    {
+      "code": 1451,
+      "alias": "JNP-1451",
+      "protocolType": "TCP_NIO",
+      "file": "ltm/JNP1451_TcpNioHttpFrames.java"
+    },
+    {
+      "code": 1455,
+      "alias": "JNP-1455",
+      "protocolType": "TCP_NIO",
+      "file": "ltm/JNP1455_TcpNioJsonFrames.java"
+    },
+    {
+      "code": 600,
+      "alias": "JNP-600",
+      "protocolType": "TCP_CHARACTER",
+      "file": "ltm/JNP600_TcpCharDomains.java"
+    },
+    {
+      "code": 701,
+      "alias": "JNP-701",
+      "protocolType": "TCP_BYTE_RAW",
+      "file": "ltm/JNP701_TcpByteMinGap.java"
+    },
+    {
+      "code": 702,
+      "alias": "JNP-702",
+      "protocolType": "TCP_BYTE_RAW",
+      "file": "ltm/JNP702_TcpByteSecondMax.java"
+    },
+    {
+      "code": 721,
+      "alias": "JNP-721",
+      "protocolType": "TCP_CHARACTER",
+      "file": "ltm/JNP721_TcpCharRepeatCount.java"
+    },
+    {
+      "code": 800,
+      "alias": "JNP-800",
+      "protocolType": "TCP_DATA",
+      "file": "ltm/JNP800_TcpDataSumProduct.java"
+    },
+    {
+      "code": 802,
+      "alias": "JNP-802",
+      "protocolType": "UDP_DATA",
+      "file": "ltm/JNP802_UdpDataMissingNumbers.java"
+    },
+    {
+      "code": 803,
+      "alias": "JNP-803",
+      "protocolType": "UDP_STRING",
+      "file": "ltm/JNP803_UdpStringMostFrequentChar.java"
+    },
+    {
+      "code": 914,
+      "alias": "JNP-914",
+      "protocolType": "TCP_DATA",
+      "file": "ltm/JNP914_TcpDataCaesarDecode.java"
+    },
+    {
+      "code": 917,
+      "alias": "JNP-917",
+      "protocolType": "TCP_OBJECT",
+      "file": "ltm/JNP917_TcpObjectLaptop.java"
+    },
+    {
+      "code": 918,
+      "alias": "JNP-918",
+      "protocolType": "TCP_OBJECT",
+      "file": "ltm/JNP918_TcpObjectCustomer.java"
+    },
+    {
+      "code": 931,
+      "alias": "JNP-931",
+      "protocolType": "UDP_DATA",
+      "file": "ltm/JNP931_UdpDataMinMax.java"
+    },
+    {
+      "code": 932,
+      "alias": "JNP-932",
+      "protocolType": "UDP_STRING",
+      "file": "ltm/JNP932_UdpStringTitleCase.java"
+    },
+    {
+      "code": 933,
+      "alias": "JNP-933",
+      "protocolType": "UDP_OBJECT",
+      "file": "ltm/JNP933_UdpObjectStudent.java"
+    },
+    {
+      "code": 938,
+      "alias": "JNP-938",
+      "protocolType": "UDP_OBJECT",
+      "file": "ltm/JNP938_UdpObjectCustomer.java"
+    },
+    {
+      "code": 934,
+      "alias": "JNP-934",
+      "protocolType": "UDP_DATA",
+      "file": "ltm/JNP934_UdpDataCaesarDecode.java"
+    },
+    {
+      "code": 998,
+      "alias": "JNP-998",
+      "protocolType": "UDP_STRING",
+      "file": "ltm/JNP998_UdpStringBinarySum.java"
+    },
+    {
+      "code": 1001,
+      "alias": "JNP-1001",
+      "protocolType": "UDP_OBJECT",
+      "file": "ltm/JNP1001_UdpObjectEmployee.java"
+    },
+    {
+      "code": 1002,
+      "alias": "JNP-1002",
+      "protocolType": "RMI_OBJECT",
+      "file": "ltm/JNP1002_RmiObjectProductX.java"
+    },
+    {
+      "code": 1326,
+      "alias": "JNP-1326",
+      "protocolType": "RMI_DATA",
+      "file": "ltm/JNP1326_RmiDataPerfectSquares.java"
+    },
+    {
+      "code": 1612,
+      "alias": "Q1612",
+      "protocolType": "UDP_DATA",
+      "file": "ltm/Q1612_UdpDataWeightedChecksum.java"
+    },
+    {
+      "code": 1622,
+      "alias": "Q1622",
+      "protocolType": "UDP_STRING",
+      "file": "ltm/Q1622_UdpStringMaskSensitive.java"
+    },
+    {
+      "code": 1732,
+      "alias": "Q1732",
+      "protocolType": "RMI_CHARACTER",
+      "file": "ltm/Q1732_RmiCharLogLevels.java"
+    },
+    {
+      "code": 2222,
+      "alias": "Q2222",
+      "protocolType": "SOAP_CHARACTER",
+      "file": "ltm/Q2222_SoapCharSlug.java"
+    },
+    {
+      "code": 2233,
+      "alias": "Q2233",
+      "protocolType": "SOAP_OBJECT",
+      "file": "ltm/Q2233_SoapObjectCustomerFilter.java"
+    }
+  ],
+  "unsolved": [
+    {
+      "code": 700,
+      "alias": "JNP-700",
+      "protocolType": "TCP_BYTE_RAW",
+      "title": "TCP - Byte Stream"
+    },
+    {
+      "code": 704,
+      "alias": "JNP-704",
+      "protocolType": "TCP_BYTE_RAW",
+      "title": "TCP - Byte Stream"
+    },
+    {
+      "code": 705,
+      "alias": "JNP-705",
+      "protocolType": "TCP_BYTE_RAW",
+      "title": "TCP - Byte Stream"
+    },
+    {
+      "code": 801,
+      "alias": "JNP-801",
+      "protocolType": "UDP_DATA",
+      "title": "UDP - Data Type"
+    },
+    {
+      "code": 915,
+      "alias": "JNP-915",
+      "protocolType": "TCP_CHARACTER",
+      "title": "TCP - Character Stream"
+    },
+    {
+      "code": 937,
+      "alias": "JNP-937",
+      "protocolType": "UDP_OBJECT",
+      "title": "UDP - Object"
+    },
+    {
+      "code": 953,
+      "alias": "JNP-953",
+      "protocolType": "MIXED",
+      "title": "RMI + UDP"
+    },
+    {
+      "code": 954,
+      "alias": "JNP-954",
+      "protocolType": "MIXED",
+      "title": "RMI + TCP"
+    },
+    {
+      "code": 961,
+      "alias": "JNP-961",
+      "protocolType": "WS_DATA",
+      "title": "WS - DataService"
+    },
+    {
+      "code": 981,
+      "alias": "JNP-981",
+      "protocolType": "TCP_DATA",
+      "title": "TCP - Data Stream"
+    },
+    {
+      "code": 983,
+      "alias": "JNP-983",
+      "protocolType": "TCP_OBJECT",
+      "title": "TCP - Object Stream"
+    },
+    {
+      "code": 987,
+      "alias": "JNP-987",
+      "protocolType": "UDP_DATA",
+      "title": "UDP - Data Type"
+    },
+    {
+      "code": 988,
+      "alias": "JNP-988",
+      "protocolType": "TCP_DATA",
+      "title": "TCP - Data Stream"
+    },
+    {
+      "code": 989,
+      "alias": "JNP-989",
+      "protocolType": "TCP_CHARACTER",
+      "title": "TCP - Character Stream"
+    },
+    {
+      "code": 991,
+      "alias": "JNP-991",
+      "protocolType": "UDP_DATA",
+      "title": "UDP - Data Type"
+    },
+    {
+      "code": 992,
+      "alias": "JNP-992",
+      "protocolType": "UDP_DATA",
+      "title": "UDP - Data Type"
+    },
+    {
+      "code": 993,
+      "alias": "JNP-993",
+      "protocolType": "UDP_STRING",
+      "title": "UDP - String"
+    },
+    {
+      "code": 994,
+      "alias": "JNP-994",
+      "protocolType": "TCP_BYTE_RAW",
+      "title": "TCP - Byte Stream"
+    },
+    {
+      "code": 996,
+      "alias": "JNP-996",
+      "protocolType": "TCP_DATA",
+      "title": "TCP - Data Stream"
+    },
+    {
+      "code": 997,
+      "alias": "JNP-997",
+      "protocolType": "UDP_DATA",
+      "title": "UDP - Data Type"
+    },
+    {
+      "code": 1000,
+      "alias": "JNP-1000",
+      "protocolType": "UDP_OBJECT",
+      "title": "UDP - Object"
+    },
+    {
+      "code": 1311,
+      "alias": "JNP-1311",
+      "protocolType": "RMI_BYTE",
+      "title": "RMI - Byte"
+    },
+    {
+      "code": 1312,
+      "alias": "JNP-1312",
+      "protocolType": "RMI_BYTE",
+      "title": "RMI - Byte"
+    },
+    {
+      "code": 1313,
+      "alias": "JNP-1313",
+      "protocolType": "RMI_BYTE",
+      "title": "RMI - Byte"
+    },
+    {
+      "code": 1314,
+      "alias": "JNP-1314",
+      "protocolType": "RMI_BYTE",
+      "title": "RMI - Byte"
+    },
+    {
+      "code": 1315,
+      "alias": "JNP-1315",
+      "protocolType": "RMI_BYTE",
+      "title": "RMI - Byte"
+    },
+    {
+      "code": 1316,
+      "alias": "JNP-1316",
+      "protocolType": "RMI_BYTE",
+      "title": "RMI - Byte"
+    },
+    {
+      "code": 1317,
+      "alias": "JNP-1317",
+      "protocolType": "RMI_BYTE",
+      "title": "RMI - Byte"
+    },
+    {
+      "code": 1318,
+      "alias": "JNP-1318",
+      "protocolType": "RMI_BYTE",
+      "title": "RMI - Byte"
+    },
+    {
+      "code": 1319,
+      "alias": "JNP-1319",
+      "protocolType": "RMI_BYTE",
+      "title": "RMI - Byte"
+    },
+    {
+      "code": 1320,
+      "alias": "JNP-1320",
+      "protocolType": "RMI_BYTE",
+      "title": "RMI - Byte"
+    },
+    {
+      "code": 1322,
+      "alias": "JNP-1322",
+      "protocolType": "RMI_DATA",
+      "title": "RMI - Data"
+    },
+    {
+      "code": 1324,
+      "alias": "JNP-1324",
+      "protocolType": "RMI_DATA",
+      "title": "RMI - Data"
+    },
+    {
+      "code": 1325,
+      "alias": "JNP-1325",
+      "protocolType": "RMI_DATA",
+      "title": "RMI - Data"
+    },
+    {
+      "code": 1329,
+      "alias": "JNP-1329",
+      "protocolType": "RMI_DATA",
+      "title": "RMI - Data"
+    },
+    {
+      "code": 1330,
+      "alias": "JNP-1330",
+      "protocolType": "RMI_DATA",
+      "title": "RMI - Data"
+    },
+    {
+      "code": 1332,
+      "alias": "JNP-1332",
+      "protocolType": "RMI_CHARACTER",
+      "title": "RMI - Character"
+    },
+    {
+      "code": 1333,
+      "alias": "JNP-1333",
+      "protocolType": "RMI_CHARACTER",
+      "title": "RMI - Character"
+    },
+    {
+      "code": 1334,
+      "alias": "JNP-1334",
+      "protocolType": "RMI_CHARACTER",
+      "title": "RMI - Character"
+    },
+    {
+      "code": 1335,
+      "alias": "JNP-1335",
+      "protocolType": "RMI_CHARACTER",
+      "title": "RMI - Character"
+    },
+    {
+      "code": 1336,
+      "alias": "JNP-1336",
+      "protocolType": "RMI_CHARACTER",
+      "title": "RMI - Character"
+    },
+    {
+      "code": 1337,
+      "alias": "JNP-1337",
+      "protocolType": "RMI_CHARACTER",
+      "title": "RMI - Character"
+    },
+    {
+      "code": 1338,
+      "alias": "JNP-1338",
+      "protocolType": "RMI_CHARACTER",
+      "title": "RMI - Character"
+    },
+    {
+      "code": 1339,
+      "alias": "JNP-1339",
+      "protocolType": "RMI_CHARACTER",
+      "title": "RMI - Character"
+    },
+    {
+      "code": 1341,
+      "alias": "JNP-1341",
+      "protocolType": "RMI_OBJECT",
+      "title": "RMI - Object"
+    },
+    {
+      "code": 1342,
+      "alias": "JNP-1342",
+      "protocolType": "RMI_OBJECT",
+      "title": "RMI - Object"
+    },
+    {
+      "code": 1343,
+      "alias": "JNP-1343",
+      "protocolType": "RMI_OBJECT",
+      "title": "RMI - Object"
+    },
+    {
+      "code": 1345,
+      "alias": "JNP-1345",
+      "protocolType": "RMI_OBJECT",
+      "title": "RMI - Object"
+    },
+    {
+      "code": 1346,
+      "alias": "JNP-1346",
+      "protocolType": "RMI_OBJECT",
+      "title": "RMI - Object"
+    },
+    {
+      "code": 1411,
+      "alias": "JNP-1411",
+      "protocolType": "WS_DATA",
+      "title": "WS - DataService"
+    },
+    {
+      "code": 1422,
+      "alias": "JNP-1422",
+      "protocolType": "WS_CHARACTER",
+      "title": "WS - CharacterService"
+    },
+    {
+      "code": 1428,
+      "alias": "JNP-1428",
+      "protocolType": "WS_CHARACTER",
+      "title": "WS - CharacterService"
+    },
+    {
+      "code": 1433,
+      "alias": "JNP-1433",
+      "protocolType": "WS_OBJECT",
+      "title": "WS - ObjectService"
+    },
+    {
+      "code": 1439,
+      "alias": "JNP-1439",
+      "protocolType": "WS_OBJECT",
+      "title": "WS - ObjectService"
+    },
+    {
+      "code": 1452,
+      "alias": "JNP-1452",
+      "protocolType": "TCP_NIO",
+      "title": "TCP - NIO Stream"
+    },
+    {
+      "code": 1453,
+      "alias": "JNP-1453",
+      "protocolType": "TCP_NIO",
+      "title": "TCP - NIO Stream"
+    },
+    {
+      "code": 1511,
+      "alias": "Q1511",
+      "protocolType": "TCP_BYTE_RAW",
+      "title": "[TCP Byte Raw] Checksum byte payload"
+    },
+    {
+      "code": 1521,
+      "alias": "Q1521",
+      "protocolType": "TCP_DATA",
+      "title": "[TCP Data Stream] Thống kê min max sum"
+    },
+    {
+      "code": 1522,
+      "alias": "Q1522",
+      "protocolType": "TCP_DATA",
+      "title": "[TCP Data Stream] Thống kê telemetry average p95"
+    },
+    {
+      "code": 1531,
+      "alias": "Q1531",
+      "protocolType": "TCP_CHARACTER",
+      "title": "[TCP Character Stream] Che dữ liệu nhạy cảm trong log"
+    },
+    {
+      "code": 1541,
+      "alias": "Q1541",
+      "protocolType": "TCP_OBJECT",
+      "title": "[TCP Object Stream] Tính giá cuối cùng của sản phẩm"
+    },
+    {
+      "code": 1542,
+      "alias": "Q1542",
+      "protocolType": "TCP_OBJECT",
+      "title": "[TCP Object Stream] Chuẩn hóa mã sinh viên và xếp loại GPA"
+    },
+    {
+      "code": 1561,
+      "alias": "Q1561",
+      "protocolType": "TCP_NIO",
+      "title": "[TCP NIO] Nối frame và tính checksum"
+    },
+    {
+      "code": 1562,
+      "alias": "Q1562",
+      "protocolType": "TCP_NIO",
+      "title": "[TCP NIO] Phân loại bản ghi theo trạng thái"
+    },
+    {
+      "code": 1621,
+      "alias": "Q1621",
+      "protocolType": "UDP_STRING",
+      "title": "[UDP String] Chuẩn hóa slug"
+    },
+    {
+      "code": 1631,
+      "alias": "Q1631",
+      "protocolType": "UDP_OBJECT",
+      "title": "[UDP Object] Cập nhật lương nhân viên"
+    },
+    {
+      "code": 1632,
+      "alias": "Q1632",
+      "protocolType": "UDP_OBJECT",
+      "title": "[UDP Object] Cập nhật giá sản phẩm sau thuế và giảm giá"
+    },
+    {
+      "code": 1712,
+      "alias": "Q1712",
+      "protocolType": "RMI_BYTE",
+      "title": "[RMI Byte] Tính XOR checksum"
+    },
+    {
+      "code": 1721,
+      "alias": "Q1721",
+      "protocolType": "RMI_DATA",
+      "title": "[RMI Data] Liệt kê số nguyên tố trong khoảng"
+    },
+    {
+      "code": 1731,
+      "alias": "Q1731",
+      "protocolType": "RMI_CHARACTER",
+      "title": "[RMI Character] Chuẩn hóa câu"
+    },
+    {
+      "code": 1741,
+      "alias": "Q1741",
+      "protocolType": "RMI_OBJECT",
+      "title": "[RMI Object] Cập nhật SLA ticket"
+    },
+    {
+      "code": 1742,
+      "alias": "Q1742",
+      "protocolType": "RMI_OBJECT",
+      "title": "[RMI Object] Cập nhật tổng tiền đơn hàng"
+    },
+    {
+      "code": 1811,
+      "alias": "Q1811",
+      "protocolType": "TCP_BYTE_RAW",
+      "title": "[TCP Byte Raw] Checksum vị trí nguyên tố"
+    },
+    {
+      "code": 1821,
+      "alias": "Q1821",
+      "protocolType": "TCP_DATA",
+      "title": "[TCP Data Stream] Tổng doanh thu theo nhóm"
+    },
+    {
+      "code": 1822,
+      "alias": "Q1822",
+      "protocolType": "TCP_DATA",
+      "title": "[TCP Data Stream] Thống kê độ trễ loại ngoại lệ"
+    },
+    {
+      "code": 1831,
+      "alias": "Q1831",
+      "protocolType": "TCP_CHARACTER",
+      "title": "[TCP Character Stream] Lọc giao dịch rủi ro"
+    },
+    {
+      "code": 1832,
+      "alias": "Q1832",
+      "protocolType": "TCP_CHARACTER",
+      "title": "[TCP Character Stream] Thống kê cụm hai từ"
+    },
+    {
+      "code": 1841,
+      "alias": "Q1841",
+      "protocolType": "TCP_OBJECT",
+      "title": "[TCP Object Stream] Giá sau chiết khấu, VAT và phí xử lý"
+    },
+    {
+      "code": 1842,
+      "alias": "Q1842",
+      "protocolType": "TCP_OBJECT",
+      "title": "[TCP Object Stream] Chuẩn hóa mã và xếp hạng GPA nâng cao"
+    },
+    {
+      "code": 1861,
+      "alias": "Q1861",
+      "protocolType": "TCP_NIO",
+      "title": "[TCP NIO] Tính tổng hóa đơn từ nhiều frame"
+    },
+    {
+      "code": 1862,
+      "alias": "Q1862",
+      "protocolType": "TCP_NIO",
+      "title": "[TCP NIO] Phân loại điểm xử lý bản ghi"
+    },
+    {
+      "code": 1891,
+      "alias": "Q1891",
+      "protocolType": "UDP_OBJECT",
+      "title": "[UDP Object] Điều chỉnh lương theo năm tuyển dụng"
+    },
+    {
+      "code": 1892,
+      "alias": "Q1892",
+      "protocolType": "UDP_OBJECT",
+      "title": "[UDP Object] Giá sản phẩm sau thuế, giảm giá và phụ phí"
+    },
+    {
+      "code": 1912,
+      "alias": "Q1912",
+      "protocolType": "RMI_BYTE",
+      "title": "[RMI Byte] Rolling checksum và số byte chẵn"
+    },
+    {
+      "code": 1921,
+      "alias": "Q1921",
+      "protocolType": "RMI_DATA",
+      "title": "[RMI Data] Tìm vị trí đỉnh cục bộ"
+    },
+    {
+      "code": 1922,
+      "alias": "Q1922",
+      "protocolType": "RMI_DATA",
+      "title": "[RMI Data] Thống kê số thực nâng cao"
+    },
+    {
+      "code": 1932,
+      "alias": "Q1932",
+      "protocolType": "RMI_CHARACTER",
+      "title": "[RMI Character] Đếm mức log và token"
+    },
+    {
+      "code": 1941,
+      "alias": "Q1941",
+      "protocolType": "RMI_OBJECT",
+      "title": "[RMI Object] Phân tầng xử lý SLA ticket"
+    },
+    {
+      "code": 1942,
+      "alias": "Q1942",
+      "protocolType": "RMI_OBJECT",
+      "title": "[RMI Object] Tổng tiền và trạng thái rà soát đơn hàng"
+    },
+    {
+      "code": 2011,
+      "alias": "Q2011",
+      "protocolType": "REST_DATA",
+      "title": "REST Data — Sum of Integers"
+    },
+    {
+      "code": 2021,
+      "alias": "Q2021",
+      "protocolType": "REST_CHARACTER",
+      "title": "REST Character — Sort Words Alphabetically"
+    },
+    {
+      "code": 2032,
+      "alias": "Q2032",
+      "protocolType": "REST_OBJECT",
+      "title": "[REST Object] Chọn báo giá vận chuyển SLA"
+    },
+    {
+      "code": 2072,
+      "alias": "Q2072",
+      "protocolType": "REST_METHOD",
+      "title": "[REST Method] PATCH ticket với If-Match"
+    },
+    {
+      "code": 2082,
+      "alias": "Q2082",
+      "protocolType": "REST_HEADER",
+      "title": "[REST Header] Chữ ký HMAC request"
+    },
+    {
+      "code": 2112,
+      "alias": "Q2112",
+      "protocolType": "GRPC_DATA",
+      "title": "[gRPC Data] Batch đánh giá rủi ro giao dịch"
+    },
+    {
+      "code": 2113,
+      "alias": "Q2113",
+      "protocolType": "GRPC_DATA",
+      "title": "[gRPC Data] Cửa sổ telemetry cảm biến"
+    },
+    {
+      "code": 2121,
+      "alias": "Q2121",
+      "protocolType": "GRPC_CHARACTER",
+      "title": "gRPC Character — Sort Words Alphabetically"
+    },
+    {
+      "code": 2122,
+      "alias": "Q2122",
+      "protocolType": "GRPC_CHARACTER",
+      "title": "[gRPC Character] Gắn tag ticket hỗ trợ"
+    },
+    {
+      "code": 2131,
+      "alias": "Q2131",
+      "protocolType": "GRPC_OBJECT",
+      "title": "gRPC Object — Calculate Final Price"
+    },
+    {
+      "code": 2133,
+      "alias": "Q2133",
+      "protocolType": "GRPC_OBJECT",
+      "title": "[gRPC Object] Kiểm tra điều kiện đăng ký học phần"
+    },
+    {
+      "code": 2142,
+      "alias": "Q2142",
+      "protocolType": "REST_DATA",
+      "title": "[REST Data] Top-K mã giao dịch xuất hiện nhiều nhất"
+    },
+    {
+      "code": 2151,
+      "alias": "Q2151",
+      "protocolType": "REST_CHARACTER",
+      "title": "[REST Character] Tìm mẫu trong log bằng KMP"
+    },
+    {
+      "code": 2162,
+      "alias": "Q2162",
+      "protocolType": "REST_OBJECT",
+      "title": "[REST Object] Lập lịch công việc theo deadline"
+    },
+    {
+      "code": 2172,
+      "alias": "Q2172",
+      "protocolType": "REST_METHOD",
+      "title": "[REST Method] Chống gửi trùng theo idempotency key"
+    },
+    {
+      "code": 2184,
+      "alias": "Q2184",
+      "protocolType": "REST_HEADER",
+      "title": "[REST Header] Tính gốc Merkle của danh sách lá"
+    },
+    {
+      "code": 2193,
+      "alias": "Q2193",
+      "protocolType": "REST_PATH",
+      "title": "[REST Path] Tìm đường ngắn nhất bằng Dijkstra"
+    },
+    {
+      "code": 2194,
+      "alias": "Q2194",
+      "protocolType": "REST_PATH",
+      "title": "[REST Path] Lập kế hoạch ghé điểm bắt buộc bằng bitmask DP"
+    },
+    {
+      "code": 2213,
+      "alias": "Q2213",
+      "protocolType": "SOAP_DATA",
+      "title": "[SOAP Data] Đếm số chẵn và số lẻ"
+    },
+    {
+      "code": 2221,
+      "alias": "Q2221",
+      "protocolType": "SOAP_CHARACTER",
+      "title": "SOAP Character — Reverse a String"
+    },
+    {
+      "code": 2223,
+      "alias": "Q2223",
+      "protocolType": "SOAP_CHARACTER",
+      "title": "[SOAP Character] Che dữ liệu nhạy cảm trong mảng log"
+    },
+    {
+      "code": 2231,
+      "alias": "Q2231",
+      "protocolType": "SOAP_OBJECT",
+      "title": "SOAP Object — Calculate Final Price"
+    },
+    {
+      "code": 2232,
+      "alias": "Q2232",
+      "protocolType": "SOAP_OBJECT",
+      "title": "[SOAP Object] Tính finalPrice của ProductY"
+    },
+    {
+      "code": 2241,
+      "alias": "Q2241",
+      "protocolType": "SOAP_DATA",
+      "title": "[SOAP Data] Đếm số nguyên tố và checksum"
+    },
+    {
+      "code": 2251,
+      "alias": "Q2251",
+      "protocolType": "SOAP_CHARACTER",
+      "title": "[SOAP Character] Top cụm hai từ"
+    },
+    {
+      "code": 2252,
+      "alias": "Q2252",
+      "protocolType": "SOAP_CHARACTER",
+      "title": "[SOAP Character] Che và sắp xếp mảng log"
+    },
+    {
+      "code": 2261,
+      "alias": "Q2261",
+      "protocolType": "SOAP_OBJECT",
+      "title": "[SOAP Object] Tính giá ProductY sau thuế và giảm giá"
+    },
+    {
+      "code": 2262,
+      "alias": "Q2262",
+      "protocolType": "SOAP_OBJECT",
+      "title": "[SOAP Object] Lọc và sắp xếp khách hàng VIP"
+    }
+  ]
+}

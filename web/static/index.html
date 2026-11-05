@@ -92,13 +92,18 @@
                     <span class="filter-chip" data-filter="TCP_CHAR">TCP Char</span>
                     <span class="filter-chip" data-filter="TCP_OBJ">TCP Object</span>
                     <span class="filter-chip" data-filter="TCP_NIO">TCP NIO</span>
+                    <span class="filter-chip" data-filter="TCP_GZIP">TCP GZIP</span>
                     <span class="filter-chip" data-filter="UDP">UDP</span>
                     <span class="filter-chip" data-filter="RMI">RMI</span>
+                    <span class="filter-chip" data-filter="SOAP">SOAP/WS</span>
+                    <span class="filter-chip" data-filter="REST">REST</span>
+                    <span class="filter-chip" data-filter="GRPC">gRPC</span>
+                    <span class="filter-chip" data-filter="UNSOLVED">Chưa giải</span>
                 </div>
             </div>
 
             <div class="sidebar-meta">
-                <span id="filtered-count">Hiển thị: 86/86</span>
+                <span id="filtered-count">Hiển thị: 145/145</span>
                 <span id="system-status">OpenJDK 17 Sẵn sàng</span>
             </div>
 
@@ -268,6 +273,8 @@
                             <select id="select-saved-creds" class="socket-input" style="width: 250px;">
                                 <option value="">-- Chọn tài khoản từ ptit.env --</option>
                             </select>
+                            <input type="text" id="input-course-id" class="socket-input" style="width: 290px;"
+                                placeholder="Course ID (UUID trong URL /exercise/jnp/...)">
                             <input type="password" id="input-ptit-token" class="socket-input" style="flex: 1;"
                                 placeholder="Để trống = dùng token phiên đăng nhập hiện tại (hoặc dán token khác)">
                             <button class="btn btn-primary" id="btn-submit-code-ptit">

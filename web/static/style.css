@@ -372,6 +372,11 @@ body {
     border: 1px solid var(--border-subtle);
 }
 
+.proto-tag.solved-tag {
+    color: var(--accent-green);
+    border-color: var(--accent-green);
+}
+
 /* WORKSPACE: SPLIT VIEW */
 .workspace-area {
     flex: 1;
