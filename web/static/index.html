@@ -82,7 +82,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <div class="search-box">
-                    <input type="text" id="search-input" class="search-input"
+                    <input type="text" id="search-input" autocomplete="off" class="search-input"
                         placeholder="Tìm kiếm bài tập (mã, tên, giao thức)...">
                 </div>
                 <div class="filter-chips">
@@ -98,6 +98,8 @@
                     <span class="filter-chip" data-filter="SOAP">SOAP/WS</span>
                     <span class="filter-chip" data-filter="REST">REST</span>
                     <span class="filter-chip" data-filter="GRPC">gRPC</span>
+                    <span class="filter-chip" data-filter="PUBLIC">Public</span>
+                    <span class="filter-chip" data-filter="PRIVATE">Không public</span>
                     <span class="filter-chip" data-filter="UNSOLVED">Chưa giải</span>
                 </div>
             </div>
@@ -229,6 +231,7 @@
                         <div class="panel-tab active" data-tab="tab-terminal">Cửa sổ Terminal</div>
                         <div class="panel-tab" data-tab="tab-socket">Dò kết nối Socket trực tiếp</div>
                         <div class="panel-tab" data-tab="tab-submit">Nộp bài PTIT API</div>
+                        <div class="panel-tab" data-tab="tab-judge">Lịch sử chấm</div>
                     </div>
 
                     <div class="panel-controls">
@@ -293,7 +296,7 @@
                             </select>
                             <input type="text" id="input-course-id" class="socket-input" style="width: 290px;"
                                 placeholder="Course ID (UUID trong URL /exercise/jnp/...)">
-                            <input type="password" id="input-ptit-token" class="socket-input" style="flex: 1;" autocomplete="off"
+                            <input type="password" id="input-ptit-token" class="socket-input" style="flex: 1;" autocomplete="new-password"
                                 placeholder="Để trống = dùng token phiên đăng nhập hiện tại (hoặc dán token khác)">
                             <button class="btn btn-primary" id="btn-submit-code-ptit">
                                 Nộp bài lên PTIT
@@ -302,6 +305,16 @@
                         <div class="socket-response-box" id="submit-response-area">
                             Trạng thái nộp bài lên hệ thống dbapi.ptit.edu.vn sẽ hiển thị tại đây...
                         </div>
+                    </div>
+
+
+                    <!-- TAB 4: JUDGE LOG -->
+                    <div class="tab-pane" id="tab-judge">
+                        <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: center;">
+                            <span style="font-size: 12px; color: var(--text-secondary);" id="judge-log-title">Lịch sử chấm của server cho bài đang chọn</span>
+                            <button class="btn btn-outline" id="btn-refresh-judge-log" style="padding: 2px 8px; font-size: 11px;">Tải lại</button>
+                        </div>
+                        <div id="judge-log-area" class="socket-response-box">Chọn bài có qCode để xem lịch sử chấm.</div>
                     </div>
 
                 </div>

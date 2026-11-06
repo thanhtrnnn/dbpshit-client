@@ -167,6 +167,84 @@
       "alias": "Q2233",
       "protocolType": "SOAP_OBJECT",
       "file": "ltm/Q2233_SoapObjectCustomerFilter.java"
+    },
+    {
+      "code": 801,
+      "alias": "JNP-801",
+      "protocolType": "UDP_DATA",
+      "file": "ltm/JNP801_UdpDataMissingNumbers.java"
+    },
+    {
+      "code": 937,
+      "alias": "JNP-937",
+      "protocolType": "UDP_OBJECT",
+      "file": "ltm/JNP937_UdpObjectProduct.java"
+    },
+    {
+      "code": 987,
+      "alias": "JNP-987",
+      "protocolType": "UDP_DATA",
+      "file": "ltm/JNP987_UdpDataSecondMaxMin.java"
+    },
+    {
+      "code": 991,
+      "alias": "JNP-991",
+      "protocolType": "UDP_DATA",
+      "file": "ltm/JNP991_UdpDataDigitSum.java"
+    },
+    {
+      "code": 992,
+      "alias": "JNP-992",
+      "protocolType": "UDP_DATA",
+      "file": "ltm/JNP992_UdpDataFirstPrimes.java"
+    },
+    {
+      "code": 993,
+      "alias": "JNP-993",
+      "protocolType": "UDP_STRING",
+      "file": "ltm/JNP993_UdpStringCharCount.java"
+    },
+    {
+      "code": 997,
+      "alias": "JNP-997",
+      "protocolType": "UDP_DATA",
+      "file": "ltm/JNP997_UdpDataReorderTokens.java"
+    },
+    {
+      "code": 1000,
+      "alias": "JNP-1000",
+      "protocolType": "UDP_OBJECT",
+      "file": "ltm/JNP1000_UdpObjectBook.java"
+    },
+    {
+      "code": 1621,
+      "alias": "Q1621",
+      "protocolType": "UDP_STRING",
+      "file": "ltm/Q1621_UdpStringSlug.java"
+    },
+    {
+      "code": 1631,
+      "alias": "Q1631",
+      "protocolType": "UDP_OBJECT",
+      "file": "ltm/Q1631_UdpObjectEmployeeRaise.java"
+    },
+    {
+      "code": 1632,
+      "alias": "Q1632",
+      "protocolType": "UDP_OBJECT",
+      "file": "ltm/Q1632_UdpObjectPricedProduct.java"
+    },
+    {
+      "code": 1891,
+      "alias": "Q1891",
+      "protocolType": "UDP_OBJECT",
+      "file": "ltm/Q1891_UdpObjectEmployeeYearRaise.java"
+    },
+    {
+      "code": 1892,
+      "alias": "Q1892",
+      "protocolType": "UDP_OBJECT",
+      "file": "ltm/Q1892_UdpObjectPricedProductFee.java"
     }
   ],
   "unsolved": [
@@ -189,22 +267,10 @@
       "title": "TCP - Byte Stream"
     },
     {
-      "code": 801,
-      "alias": "JNP-801",
-      "protocolType": "UDP_DATA",
-      "title": "UDP - Data Type"
-    },
-    {
       "code": 915,
       "alias": "JNP-915",
       "protocolType": "TCP_CHARACTER",
       "title": "TCP - Character Stream"
-    },
-    {
-      "code": 937,
-      "alias": "JNP-937",
-      "protocolType": "UDP_OBJECT",
-      "title": "UDP - Object"
     },
     {
       "code": 953,
@@ -237,12 +303,6 @@
       "title": "TCP - Object Stream"
     },
     {
-      "code": 987,
-      "alias": "JNP-987",
-      "protocolType": "UDP_DATA",
-      "title": "UDP - Data Type"
-    },
-    {
       "code": 988,
       "alias": "JNP-988",
       "protocolType": "TCP_DATA",
@@ -255,24 +315,6 @@
       "title": "TCP - Character Stream"
     },
     {
-      "code": 991,
-      "alias": "JNP-991",
-      "protocolType": "UDP_DATA",
-      "title": "UDP - Data Type"
-    },
-    {
-      "code": 992,
-      "alias": "JNP-992",
-      "protocolType": "UDP_DATA",
-      "title": "UDP - Data Type"
-    },
-    {
-      "code": 993,
-      "alias": "JNP-993",
-      "protocolType": "UDP_STRING",
-      "title": "UDP - String"
-    },
-    {
       "code": 994,
       "alias": "JNP-994",
       "protocolType": "TCP_BYTE_RAW",
@@ -283,18 +325,6 @@
       "alias": "JNP-996",
       "protocolType": "TCP_DATA",
       "title": "TCP - Data Stream"
-    },
-    {
-      "code": 997,
-      "alias": "JNP-997",
-      "protocolType": "UDP_DATA",
-      "title": "UDP - Data Type"
-    },
-    {
-      "code": 1000,
-      "alias": "JNP-1000",
-      "protocolType": "UDP_OBJECT",
-      "title": "UDP - Object"
     },
     {
       "code": 1311,
@@ -555,24 +585,6 @@
       "title": "[TCP NIO] Phân loại bản ghi theo trạng thái"
     },
     {
-      "code": 1621,
-      "alias": "Q1621",
-      "protocolType": "UDP_STRING",
-      "title": "[UDP String] Chuẩn hóa slug"
-    },
-    {
-      "code": 1631,
-      "alias": "Q1631",
-      "protocolType": "UDP_OBJECT",
-      "title": "[UDP Object] Cập nhật lương nhân viên"
-    },
-    {
-      "code": 1632,
-      "alias": "Q1632",
-      "protocolType": "UDP_OBJECT",
-      "title": "[UDP Object] Cập nhật giá sản phẩm sau thuế và giảm giá"
-    },
-    {
       "code": 1712,
       "alias": "Q1712",
       "protocolType": "RMI_BYTE",
@@ -655,18 +667,6 @@
       "alias": "Q1862",
       "protocolType": "TCP_NIO",
       "title": "[TCP NIO] Phân loại điểm xử lý bản ghi"
-    },
-    {
-      "code": 1891,
-      "alias": "Q1891",
-      "protocolType": "UDP_OBJECT",
-      "title": "[UDP Object] Điều chỉnh lương theo năm tuyển dụng"
-    },
-    {
-      "code": 1892,
-      "alias": "Q1892",
-      "protocolType": "UDP_OBJECT",
-      "title": "[UDP Object] Giá sản phẩm sau thuế, giảm giá và phụ phí"
     },
     {
       "code": 1912,

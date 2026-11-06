@@ -640,6 +640,8 @@ function selectProblem(problem) {
         quickMockBtn.textContent = `Debug Mock ${problem.code || 'Server'}`;
     }
 
+    if (document.getElementById("tab-judge").classList.contains("active")) loadJudgeLog();
+
     // Format and render description HTML
     document.getElementById("view-description").innerHTML = problem.description || "Chưa có mô tả chi tiết cho bài tập này.";
 
@@ -737,6 +739,92 @@ async function runJavaCode() {
     } finally {
         runBtn.disabled = false;
         runBtn.textContent = "[Chạy] Chạy Code Java";
+    }
+    printLatestVerdict(termContent);
+}
+
+// 8a. Judge log từ PTIT: processLog có dạng "| Input: ...\n| Expected: ...\n| Submitted: ..."
+//     (bản ghi PENDING chỉ chứa dữ liệu server đã gửi)
+async function fetchJudgeLog() {
+    const courseId = document.getElementById("input-course-id").value.trim();
+    if (!currentProblem || !currentProblem.qCode || !courseId) return null;
+    const manualToken = getManualToken();
+    const url = `/api/ptit/log?qCode=${encodeURIComponent(currentProblem.qCode)}&courseId=${encodeURIComponent(courseId)}`;
+    const res = manualToken
+        ? await fetch(url, { headers: { Authorization: `Bearer ${manualToken}` } })
+        : await Auth.authFetch(url);
+    if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.detail || `HTTP ${res.status}`);
+    }
+    const data = await res.json();
+    const logs = Array.isArray(data) ? data : (data.content || []);
+    return logs.sort((a, b) => (b.createdAt || "").localeCompare(a.createdAt || ""));
+}
+
+function parseProcessLog(text) {
+    const fields = {};
+    (text || "").split("\n").forEach(line => {
+        const m = line.match(/^\|\s*(\w+):\s?(.*)$/);
+        if (m) fields[m[1]] = m[2];
+    });
+    return fields;
+}
+
+function formatVerdict(entry) {
+    const f = parseProcessLog(entry.processLog);
+    const lines = [`[${entry.status}] ${(entry.createdAt || "").replace("T", " ").slice(0, 19)}  requestId=${entry.requestId || "-"}`];
+    if (Object.keys(f).length) {
+        Object.entries(f).forEach(([k, v]) => lines.push(`  ${k.padEnd(9)}: ${v}`));
+    } else if (entry.processLog) {
+        lines.push(`  Server gửi: ${entry.processLog}`);
+    }
+    return lines.join("\n");
+}
+
+async function loadJudgeLog() {
+    const area = document.getElementById("judge-log-area");
+    if (!currentProblem || !currentProblem.qCode) {
+        area.textContent = "Chọn bài có qCode để xem lịch sử chấm.";
+        return;
+    }
+    document.getElementById("judge-log-title").textContent = `Lịch sử chấm: ${currentProblem.alias} / ${currentProblem.qCode}`;
+    area.textContent = "Đang tải...";
+    try {
+        const logs = await fetchJudgeLog();
+        if (!logs || logs.length === 0) {
+            area.textContent = "Chưa có lần chạy nào trên server.";
+            return;
+        }
+        area.innerHTML = logs.map(entry => {
+            const f = parseProcessLog(entry.processLog);
+            const cls = entry.status === "AC" ? "success" : entry.status === "PENDING" ? "timeout" : "error";
+            const mismatch = f.Expected !== undefined && f.Expected !== f.Submitted;
+            const rows = Object.keys(f).length
+                ? Object.entries(f).map(([k, v]) => `<div class="judge-row${mismatch && k !== "Input" ? " judge-mismatch" : ""}"><span class="judge-key">${escapeHtml(k)}</span><span>${escapeHtml(v)}</span></div>`).join("")
+                : `<div class="judge-row"><span class="judge-key">Server gửi</span><span>${escapeHtml(entry.processLog || "")}</span></div>`;
+            return `<div class="judge-entry">
+                <div><span class="status-badge ${cls}">${escapeHtml(entry.status || "?")}</span>
+                <span class="judge-meta">${escapeHtml((entry.createdAt || "").replace("T", " ").slice(0, 19))} · requestId ${escapeHtml(entry.requestId || "-")}</span></div>
+                ${rows}
+            </div>`;
+        }).join("");
+    } catch (e) {
+        area.textContent = `[-] Không tải được lịch sử chấm: ${e.message}`;
+    }
+}
+
+// Sau khi chạy, server cần chút thời gian để ghi log; in bản ghi mới nhất vào terminal
+async function printLatestVerdict(termContent) {
+    if (!currentProblem || !currentProblem.qCode) return;
+    await new Promise(r => setTimeout(r, 1500));
+    try {
+        const logs = await fetchJudgeLog();
+        if (!logs || logs.length === 0) return;
+        termContent.textContent += `\n\n===== Kết quả chấm PTIT (${currentProblem.qCode}) =====\n${formatVerdict(logs[0])}`;
+        if (document.getElementById("tab-judge").classList.contains("active")) loadJudgeLog();
+    } catch (e) {
+        termContent.textContent += `\n\n[-] Không lấy được kết quả chấm: ${e.message}`;
     }
 }
 
@@ -1010,8 +1098,12 @@ function bindEvents() {
 
     // Panel Tab click
     document.querySelectorAll(".panel-tab").forEach(tab => {
-        tab.addEventListener("click", () => switchTab(tab.dataset.tab));
+        tab.addEventListener("click", () => {
+            switchTab(tab.dataset.tab);
+            if (tab.dataset.tab === "tab-judge") loadJudgeLog();
+        });
     });
+    document.getElementById("btn-refresh-judge-log").addEventListener("click", () => loadJudgeLog());
 
     // Search filter
     document.getElementById("search-input").addEventListener("input", (e) => {
@@ -1155,6 +1247,8 @@ function applyFilter(protoFilter, searchQuery) {
             if (protoFilter === "REST" && !pt.startsWith("REST")) return false;
             if (protoFilter === "GRPC" && !pt.startsWith("GRPC")) return false;
             if (protoFilter === "UNSOLVED" && p.ltmFile) return false;
+            if (protoFilter === "PUBLIC" && !p.isPublic) return false;
+            if (protoFilter === "PRIVATE" && p.isPublic) return false;
         }
 
         // Search query

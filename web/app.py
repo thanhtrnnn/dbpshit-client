@@ -576,6 +576,14 @@ def get_ptit_completion(qCode: str, courseId: str, authorization: Optional[str] 
         raise HTTPException(status_code=401, detail="Missing PTIT Bearer token")
     return _ptit_get("/app/jnp-submission/completion-status", token, {"questionAlias": qCode, "courseId": courseId})
 
+@app.get("/api/ptit/log")
+def get_ptit_log(qCode: str, courseId: str, authorization: Optional[str] = Header(None)):
+    # Lịch sử chấm của server: kết quả, đáp án mong đợi / nhận được, các gói tin trao đổi
+    token = _bearer(authorization)
+    if not token:
+        raise HTTPException(status_code=401, detail="Missing PTIT Bearer token")
+    return _ptit_get("/app/jnp-submission/log", token, {"questionAlias": qCode, "courseId": courseId})
+
 def solve_701_expected(data_str: str) -> str:
     nums = sorted([int(x.strip()) for x in data_str.strip().split(",") if x.strip()])
     min_diff = float("inf")

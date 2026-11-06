@@ -701,6 +701,38 @@ body {
     color: #f2c55c;
 }
 
+/* JUDGE LOG */
+.judge-entry {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.judge-entry:last-child {
+    border-bottom: none;
+}
+
+.judge-meta {
+    margin-left: 8px;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.judge-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+}
+
+.judge-key {
+    flex: 0 0 80px;
+    color: var(--text-secondary);
+}
+
+.judge-mismatch {
+    color: var(--accent-red);
+}
+
 /* SOCKET TESTER FORM */
 .socket-test-grid {
     display: grid;
